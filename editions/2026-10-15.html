@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="The Gayzette: a newspaper if news was actually real."><title>The Gayzette: Daily 2026-10-15</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F3EFE6; --paper-2:#EAE3D3; --paper-3:#E0D7C2; --ink:#221F19; --ink-2:#5A5346; --ink-3:#8B8272;
+  --rule:#CBBFA4; --rule-2:#A99A79; --stamp:#A6304A; --stamp-2:#3A6B5C; --stamp-soft:rgba(166,48,74,.10);
+  --focus:#2F5D8A;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --display:"Old Standard TT","Fraunces","Iowan Old Style",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased;font-optical-sizing:auto}
+a{color:inherit;text-decoration-color:var(--rule-2);text-underline-offset:3px}
+a:hover{text-decoration-color:var(--stamp)}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+img,svg{max-width:100%}
+.wrap{max-width:64rem;margin:0 auto;padding:1.25rem 1rem 5rem}
+
+/* ---- Masthead ---- */
+header.mast{border-bottom:4px double var(--ink-2);padding-bottom:.7rem;margin-bottom:.4rem}
+.mast-top{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;border-bottom:1px solid var(--rule-2);padding-bottom:.5rem;margin-bottom:.5rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.mast-top .dateline{white-space:nowrap}
+.mast-top .weather-box{border:1px solid var(--ink-2);padding:.3rem .6rem;font-size:.66rem;letter-spacing:.05em}
+.mast-name{display:flex;align-items:baseline;justify-content:center;gap:.6rem;flex-wrap:wrap;text-align:center;padding:.3rem 0 .15rem}
+.mast-name h1{font-family:var(--display);font-weight:700;font-size:clamp(2.6rem,10vw,5rem);line-height:.92;margin:0;letter-spacing:-.01em}
+.mast-sub{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);text-align:center;margin:.1rem 0 0}
+.mast-row2{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2);padding-top:.55rem;border-top:1px solid var(--rule-2)}
+.mast-row2 b{color:var(--stamp);font-weight:600}
+
+/* ---- Today's Receipts index box ---- */
+.index-box{border:1.5px solid var(--ink);margin:1rem 0 1.5rem;padding:.85rem 1rem;background:var(--paper-2)}
+.index-box h2{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin:0 0 .55rem;text-align:center;border-bottom:1px solid var(--rule-2);padding-bottom:.5rem}
+.index-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.25rem 1.2rem;font-family:var(--mono);font-size:.76rem}
+.index-list a{display:flex;justify-content:space-between;gap:.5rem;padding:.18rem 0;text-decoration:none;border-bottom:1px dotted var(--rule)}
+.index-list a:hover{color:var(--stamp)}
+
+/* ---- Editor's note ---- */
+.ednote{margin:1.3rem 0 1.2rem;padding:0 0 1.3rem;border-bottom:1px solid var(--rule)}
+.ednote .byline{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--stamp);margin:0 0 .55rem}
+.ednote p{margin:0 0 .85rem;font-size:1.01em}
+.ednote .byline + p::first-letter{font-family:var(--display);font-size:2.9em;float:left;line-height:.8;padding:.06em .08em 0 0;font-weight:700}
+
+/* ---- Section / column layout ---- */
+.beat-head{font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin:2.4rem 0 0;padding:.45rem 0;border-top:1px solid var(--rule-2);border-bottom:1px solid var(--rule);display:flex;align-items:center;gap:.55rem}
+.beat-head::before{content:"";width:.5rem;height:.5rem;background:var(--stamp);display:inline-block;transform:rotate(45deg)}
+.cols{display:grid;grid-template-columns:1fr;gap:0 2.1rem}
+@media(min-width:640px){.cols.cols-2{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.cols.cols-3{grid-template-columns:1fr 1fr 1fr}}
+.cols .col{min-width:0}
+.cols.cols-2 .col:first-child,.cols.cols-3 .col:not(:last-child){border-right:0}
+@media(min-width:640px){.cols.cols-2 .col:first-child{border-right:1px solid var(--rule);padding-right:1.4rem}}
+@media(min-width:900px){.cols.cols-3 .col:not(:last-child){border-right:1px solid var(--rule);padding-right:1.4rem}}
+.story{padding:1.5rem 0 1.2rem;border-bottom:1px solid var(--rule)}
+.cols .story:last-child{border-bottom:0}
+.story.lead{padding:0 0 1.6rem;border-bottom:2px solid var(--ink-2);margin-bottom:1.2rem}
+.leads-row{display:grid;grid-template-columns:1fr;gap:0 2.2rem}
+@media(min-width:760px){.leads-row{grid-template-columns:1fr 1fr}.leads-row .story.lead:first-child{border-right:1px solid var(--rule-2);padding-right:2.2rem}}
+.story.lead h2{font-size:clamp(1.7rem,5.6vw,2.3rem)}
+.story h2{font-family:var(--display);font-weight:700;font-size:clamp(1.35rem,4.4vw,1.65rem);line-height:1.12;margin:.4rem 0 .5rem;letter-spacing:-.008em;text-wrap:balance}
+.story h3{font-family:var(--display);font-weight:700;font-size:1.18rem;line-height:1.18;margin:.3rem 0 .4rem;text-wrap:balance}
+.dek{font-style:italic;color:var(--ink-2);margin:0 0 1rem;font-size:1.03em;line-height:1.4}
+.story p{margin:0 0 .9rem}
+.eyebrow{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem .8rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.wonder{color:var(--stamp);letter-spacing:.1em;font-size:.68rem}
+.conf{border:1px solid var(--rule-2);padding:.05rem .4rem;border-radius:2px;color:var(--ink-3)}
+.desk{background:var(--paper-2);border-left:3px solid var(--stamp);padding:.7rem .9rem;margin:1.1rem 0 .85rem;font-size:.93em;line-height:1.5}
+.desk-label{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--stamp);margin-right:.4rem}
+.cal-pill{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.02em;border:1px solid var(--rule-2);padding:.1rem .5rem;border-radius:999px;margin-left:.3rem;white-space:nowrap;vertical-align:middle}
+.sources{font-family:var(--mono);font-size:.74rem;color:var(--ink-2);margin:.55rem 0}
+.sources summary{cursor:pointer;letter-spacing:.03em}
+.sources ul{margin:.4rem 0 0;padding-left:1.1rem;line-height:1.5}
+.src-date{color:var(--ink-3)}
+.react{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:.65rem}
+.react button{font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;background:transparent;color:var(--ink-2);border:1px solid var(--rule-2);border-radius:999px;padding:.35rem .8rem;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.react button:hover{border-color:var(--ink-2);color:var(--ink)}
+.react button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.react button[disabled]{opacity:.55;cursor:default}
+.react-note,.prop-state{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+
+/* ---- Illustrations (comic-style inline SVG) ---- */
+.illo{width:100%;margin:0 0 .8rem;border:2px solid var(--ink);background:var(--paper-2);line-height:0}
+.illo svg{display:block;width:100%;height:auto}
+.illo-fallback{display:block}
+
+/* ---- Crop Circle Watch sidebar ---- */
+.crop-box{border:1.5px dashed var(--rule-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
+.crop-box .crop-head{display:flex;align-items:center;gap:.55rem;margin:0 0 .6rem}
+.crop-box .crop-glyph{width:2.2rem;height:2.2rem;flex:none}
+.crop-box h4{margin:0;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
+.crop-box .crop-latest{margin:0 0 .5rem;line-height:1.45}
+.crop-box .crop-latest b{font-family:var(--display)}
+.crop-box ul.crop-facts{margin:.3rem 0 .6rem;padding-left:1.1rem}
+.crop-box ul.crop-facts li{margin:.25rem 0;font-size:.95em}
+.crop-box .crop-history{margin:.5rem 0 0;font-style:italic;color:var(--ink-2);font-size:.93em}
+.crop-box .crop-sources{margin:.5rem 0 0;font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+.crop-box .crop-sources a{color:inherit}
+.house-box{border:1.5px dashed var(--stamp-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
+.house-box .house-glyph{width:2.2rem;height:2.2rem;flex:none}
+.house-box .house-note{margin:0 0 .7rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.03em;color:var(--ink-3);text-transform:uppercase}
+.house-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+@media(max-width:640px){.house-grid{grid-template-columns:1fr}}
+.house-sub h5{margin:0 0 .4rem;font-family:var(--display);font-size:.95rem}
+.house-sub ul{margin:0;padding-left:1.1rem}
+.house-sub li{margin:.3rem 0;font-size:.95em;line-height:1.4}
+.house-tie{display:block;font-style:italic;color:var(--ink-2);font-size:.88em;margin-top:.1rem}
+.house-empty{margin:0;color:var(--ink-3);font-style:italic}
+.tv-box{border:1.5px dashed var(--rule-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
+.tv-box .couch-glyph{width:2.2rem;height:2.2rem;flex:none}
+.tv-box ul.tv-tonight{margin:.3rem 0 .6rem;padding-left:1.1rem}
+.tv-box ul.tv-tonight li{margin:.3rem 0;font-size:.95em;line-height:1.4}
+.tv-box .tv-empty{margin:0;color:var(--ink-3);font-style:italic}
+.tv-box .tv-news{margin:.5rem 0 0;font-size:.92em}
+.tv-box .tv-alert{margin:.5rem 0 0;font-weight:600}
+.tv-box .tv-src{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+.tv-week{display:flex;flex-direction:column;gap:.5rem;margin:.4rem 0}
+.tv-week-row{display:grid;grid-template-columns:3.4rem 1fr;gap:.6rem;align-items:baseline}
+.tv-week-day{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3)}
+.tv-week-item{font-size:.93em;line-height:1.4;margin:.15rem 0}
+.tv-try{margin-top:.6rem}
+.tv-try h5{margin:0 0 .3rem;font-family:var(--display);font-size:.95rem}
+.tv-try ul{margin:0;padding-left:1.1rem}
+.tv-try li{margin:.25rem 0;font-size:.92em}
+.specials-box{border:1.5px dashed var(--stamp-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
+.specials-box .specials-glyph{width:2.2rem;height:2.2rem;flex:none}
+.specials-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+@media(max-width:640px){.specials-grid{grid-template-columns:1fr}}
+.special-col h5{margin:0 0 .4rem;font-family:var(--display);font-size:.95rem}
+.special-col ul{margin:0;padding-left:1.1rem}
+.special-col li{margin:.3rem 0;font-size:.95em;line-height:1.4}
+.special-empty{margin:0;color:var(--ink-3);font-style:italic}
+.special-src{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+.storm-box{border:1.5px dashed var(--rule-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
+.storm-box .storm-glyph{width:2.2rem;height:2.2rem;flex:none}
+.storm-box ul.storm-active{margin:.3rem 0 .6rem;padding-left:1.1rem}
+.storm-box ul.storm-active li{margin:.35rem 0;font-size:.95em;line-height:1.45}
+.storm-box .storm-empty{margin:0;color:var(--ink-3);font-style:italic}
+.storm-box .storm-outlook{margin:.5rem 0 0;font-size:.92em;line-height:1.45}
+.storm-box .storm-sources{margin:.5rem 0 0;font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+.storm-box .storm-sources a{color:inherit}
+.sky-box{border:1.5px dashed var(--stamp-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
+.sky-box .sky-glyph{width:2.2rem;height:2.2rem;flex:none}
+.sky-box .sky-moon{margin:0 0 .4rem}
+.sky-box .sky-tonight{margin:.2rem 0 .4rem;line-height:1.45}
+.sky-box .sky-src{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+.sky-hd{margin-top:.5rem}
+.sky-hd h5{margin:0 0 .3rem;font-family:var(--display);font-size:.9rem}
+.sky-hd ul{margin:0;padding-left:1.1rem}
+.sky-hd li{margin:.3rem 0;font-size:.92em;line-height:1.4}
+
+
+/* ---- Briefly / receipt box ---- */
+.receipt{margin:2.6rem 0 0;padding:1.1rem 1rem 1.3rem;border:1px dashed var(--rule-2);background:var(--paper-2);font-family:var(--mono);font-size:.79rem;line-height:1.5;color:var(--ink)}
+.receipt h3{margin:0 0 .85rem;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;text-align:center;font-weight:600}
+.receipt ul{list-style:none;margin:0;padding:0}
+.receipt li{display:grid;grid-template-columns:5rem 1fr;gap:.1rem .6rem;padding:.5rem 0;border-top:1px dotted var(--rule-2)}
+.receipt li:first-child{border-top:0}
+.b-date{color:var(--ink-2);font-variant-numeric:tabular-nums}
+.b-beat{grid-column:2;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.b-line{grid-column:2;font-family:var(--serif);font-size:.96rem;line-height:1.45}
+.receipt .total{margin:1rem 0 0;padding-top:.65rem;border-top:1px dotted var(--rule-2);display:flex;justify-content:space-between;letter-spacing:.06em;text-transform:uppercase}
+
+/* ---- Calendar ---- */
+.calendar ul{list-style:none;margin:1rem 0 0;padding:0}
+.calendar li{display:grid;grid-template-columns:5rem 1fr;gap:0 .8rem;padding:.5rem 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.c-date{font-family:var(--mono);font-size:.76rem;color:var(--stamp);font-variant-numeric:tabular-nums}
+.c-label{font-size:1em}
+.c-beat{grid-column:2;font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+
+/* ---- Beats page ---- */
+.beats ul{list-style:none;margin:0;padding:0}
+.beats li{padding:1.05rem 0;border-bottom:1px solid var(--rule)}
+.beats li p{margin:.32rem 0 .55rem;font-size:.96em;color:var(--ink-2)}
+.prop-head{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap}
+.beats strong{font-family:var(--display);font-weight:700;font-size:1.12em;letter-spacing:-.005em}
+.stand{display:grid;grid-template-columns:1fr auto;gap:.6rem 1rem;align-items:start}
+.stand .react{margin-top:.2rem}
+.stand strong{margin-right:.5rem}
+@media(max-width:560px){.stand{grid-template-columns:1fr}}
+
+/* ---- Good Ten ---- */
+.good-ten{list-style:none;margin:1rem 0 0;padding:0}
+.good{padding:1rem 0;border-bottom:1px dotted var(--rule-2)}
+.good:last-child{border-bottom:0}
+.good-head{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.good-num{font-family:var(--mono);color:var(--stamp);font-weight:600;font-size:.85rem}
+.good strong{font-family:var(--display);font-weight:700}
+.good p{margin:.35rem 0}
+.good-src{font-family:var(--mono);font-size:.72rem;color:var(--ink-2)}
+
+/* ---- The World, Straight ---- */
+.world-straight{list-style:none;margin:1rem 0 0;padding:0}
+.ws-item{padding:1.1rem 0;border-bottom:1px solid var(--rule)}
+.ws-item h3{font-family:var(--display);font-weight:700;font-size:1.2rem;margin:0 0 .5rem}
+.ws-label{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--stamp);margin-right:.4rem}
+.ws-known{margin:0 0 .4rem}
+.ws-claimed{margin:0 0 .4rem;color:var(--ink-2)}
+.ws-sides{list-style:none;margin:.3rem 0 .5rem;padding:.6rem .8rem;background:var(--paper-2);border-left:3px solid var(--stamp-2)}
+.ws-sides li{margin:.25rem 0;font-size:.94em}
+.ws-note{font-family:var(--mono);font-size:.74rem;color:var(--ink-3);margin:0 0 1rem;padding:.6rem .8rem;border:1px dashed var(--rule-2)}
+
+/* ---- How it's made ---- */
+.made p{margin:.85rem 0}
+.tablewrap{overflow-x:auto;margin:1rem 0}
+table{border-collapse:collapse;width:100%;font-size:.88rem;min-width:32rem}
+th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
+td:nth-child(2){font-family:var(--mono);font-size:.78rem;white-space:nowrap}
+.num{text-align:right;font-family:var(--mono);font-size:.78rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+footer{margin-top:2.8rem;padding-top:1rem;border-top:4px double var(--ink-2);font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;color:var(--ink-3);line-height:1.7}
+.intro{margin:1rem 0 0;color:var(--ink-2)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+.site-banner{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-align:center;padding:.4rem 1rem;background:var(--paper-2);color:var(--ink-2);border-bottom:1px solid var(--rule-2)}.site-foot{max-width:60rem;margin:2rem auto 2.5rem;padding:1rem 1rem 0;border-top:1px solid var(--rule-2);font-family:var(--mono);font-size:.7rem;line-height:1.7;color:var(--ink-3);text-align:center}.site-foot a{color:inherit}</style></head><body>
+<div class="wrap">
+
+<header class="mast">
+  <div class="mast-top">
+    <span class="dateline">Thursday, October 15, 2026 &middot; Los Angeles</span>
+    <span class="weather-box">Sunny and hot, high near 89, low near 68 · heat advisory 10 AM PDT Oct 15 to 8 PM PDT Oct 17 · Los Angeles</span>
+  </div>
+  <div class="mast-name"><h1>The Gayzette</h1></div>
+  <p class="mast-sub">A newspaper if news was actually real</p>
+  <div class="mast-row2"><b>Daily Edition</b><span></span><span>thegayzette.news</span></div>
+</header>
+<nav class="toc" aria-label="Sections"><div class="index-box"><h2>Today's Receipts</h2><div class="index-list"><a href="#lead"><span>The lead</span><span>&rarr;</span></a><a href="#ai"><span>AI Builder</span><span>&rarr;</span></a><a href="#spirit"><span>Spirit</span><span>&rarr;</span></a><a href="#good-ten"><span>The Good Ten</span><span>&rarr;</span></a><a href="#world"><span>The World, Straight</span><span>&rarr;</span></a><a href="#made"><span>How it&#x27;s made</span><span>&rarr;</span></a></div></div></nav>
+
+<section class="ednote" aria-label="Editor's note">
+  <p class="byline">The managing editor</p>
+  <p>Good morning, and happy Thursday. Today&#x27;s lead: the Claude API now sends traces (step-by-step records of what a request did) to standard OpenTelemetry tracing tools, in beta. Then two short AI items: Claude Code tightens hooks and adds usage warnings, and Google&#x27;s Gemini API deprecates two more Flash models. It was a quiet window for launches. Sonnet wrote the lead today; the Opus lead was dropped for budget.</p><p>Spirit runs two small, early psychedelic-science studies, both from secondary reports and labelled that way: brain &quot;entropy&quot; during a psilocybin trip, and a low-dose LSD pilot that sharpened attention in women only. Crop Circle Watch: nothing new since July 21 at Fox Hill. The Droplet Desk and Grant Watch were quiet, so neither box runs.</p><p>The Good Ten runs eight, not ten: only eight stories cleared the bar with a page we could open. The World, Straight runs two, below its usual three: AP and Reuters pages were blocked for the scouts, and other leads (Congo&#x27;s Ebola count, a China–North Korea bridge) couldn&#x27;t be confirmed on an article page, so they stay out. Storm Watch tracks Tropical Storms Simon and Trudy off Mexico; Trudy is forecast to become a major hurricane Friday. On the Couch is empty because we couldn&#x27;t confirm tonight&#x27;s Traitors: New Blood time from NBC.</p><p>No new reactions or beat decisions on the page, so the lineup is unchanged. The fact-checker graded 136 claims; we applied 22 fixes and cut the unconfirmed TV line. LA is under a heat advisory through Saturday evening.</p>
+</section>
+
+<section id="lead" class="beat">
+  <h3 class="beat-head">The lead</h3>
+  
+<article class="story lead" id="ai-otel-tracing-beta" data-beat="The AI Builder">
+  <div class="illo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="h1" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.5" fill="#2b6cb0"/></pattern></defs><rect x="14" y="14" width="292" height="172" fill="#fff3c4" stroke="#000" stroke-width="3"/><rect x="16" y="112" width="288" height="72" fill="url(#h1)"/><rect x="30" y="124" width="52" height="38" fill="#f6c445" stroke="#000" stroke-width="3"/><rect x="134" y="124" width="52" height="38" fill="#f6c445" stroke="#000" stroke-width="3"/><rect x="238" y="124" width="52" height="38" fill="#f6c445" stroke="#000" stroke-width="3"/><path d="M82 143H134M186 143H238" stroke="#000" stroke-width="3"/><circle cx="160" cy="70" r="30" fill="#fff" fill-opacity=".7" stroke="#000" stroke-width="3"/><path d="M182 92L205 115" stroke="#000" stroke-width="8"/><rect x="200" y="24" width="96" height="30" rx="8" fill="#fff" stroke="#000" stroke-width="3"/><text x="248.0" y="44" font-size="13" font-family="Comic Sans MS,sans-serif" text-anchor="middle" fill="#000">Every step!</text></svg></div>
+  <div class="eyebrow"><span class="beat-tag">The AI Builder</span><span class="wonder" aria-label="wonder 2 of 5">◆◆◇◇◇</span></div>
+  <h2>Claude API now shows its work in tracing tools</h2>
+  <p class="dek">OpenTelemetry export, in beta, covers Messages API requests and Managed Agents sessions.</p>
+  <p>Anthropic has launched OpenTelemetry export in beta for the Claude API. OpenTelemetry is a common format for recording what a program did, step by step (each step is called a span), so any tracing tool can display it. The October 14 release notes say it covers Messages API requests and Claude Managed Agents sessions.</p><p>The Claude SDK emits spans in Python, TypeScript, C#, Go, Java, PHP and Ruby. To get spans from the API itself, you add an OpenTelemetry destination in the Claude Console. The same day, Managed Agents scheduled deployments became available on Claude Platform on AWS.</p><p>This is developer plumbing, not a headline launch, but plumbing is exactly what you want when something breaks at 6 a.m. and nobody is awake to explain it.</p><p>On your desk: when an n8n workflow that calls Claude misbehaves, a trace lets you see what each call did instead of guessing. Try it on your busiest automation first.</p>
+  <aside class="desk"><span class="desk-label">On your desk</span> Beta plumbing, but it makes debugging Claude-powered automations much less of a guessing game. </aside>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank" rel="noopener">Claude Platform release notes, October 14, 2026</a> <span class="src-date">2026-10-14</span></li></ul></details>
+  
+</article>
+</section>
+
+<section id="ai" class="beat">
+  <h3 class="beat-head">The AI Builder &middot; briefly</h3>
+  <div class="cols cols-2"><div class="col">
+<article class="story short" id="ai-claude-code-2-1-300" data-beat="The AI Builder">
+  <div class="illo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="h2" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.5" fill="#e8553a"/></pattern></defs><rect x="14" y="14" width="292" height="172" fill="#fff3c4" stroke="#000" stroke-width="3"/><rect x="16" y="150" width="288" height="34" fill="url(#h2)"/><rect x="150" y="50" width="14" height="130" fill="#b9854a" stroke="#000" stroke-width="3"/><path d="M164 50H270L285 68L270 86H164Z" fill="#f6c445" stroke="#000" stroke-width="3"/><path d="M150 100H50L35 118L50 136H150Z" fill="#e8553a" stroke="#000" stroke-width="3"/><text x="222" y="73" font-size="12" text-anchor="middle" fill="#000">new model</text><text x="95" y="123" font-size="12" text-anchor="middle" fill="#000">old name</text></svg></div>
+  <h3>Claude Code tightens hooks and adds usage warnings</h3>
+  <p>Claude Code 2.1.299 adds a setting, CLAUDE_CODE_DISABLE_FILE_MENTIONS, so @ file mentions pass the file&#x27;s path for Claude to read instead of pasting its contents into your message. UserPromptSubmit hooks (small scripts that run when you send a prompt) now run before a skill or slash command expands, so a hook that blocks a prompt also stops the shell commands embedded in it. And /usage now warns about max effort, workflows, always-on context and large tool results.</p><p>Version 2.1.300 adds /advisor on Claude Platform on AWS and splits OpenTelemetry cache-write counts into 5-minute and 1-hour tokens. Hook updatedInput from PreToolUse and PermissionRequest is now validated: unknown keys are dropped and rejected input denies the call. Claude Tag in Slack gains Slack Connect channel support (off until an Owner or admin enables it). On your desk: re-test any skill hook that rewrites tool input, and glance at /usage before your next long session.</p>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Claude Code changelog, versions 2.1.299 and 2.1.300</a> <span class="src-date">2026-10-14</span></li></ul></details>
+  
+</article></div><div class="col">
+<article class="story short" id="ai-gemini-deprecations" data-beat="The AI Builder">
+  
+  <h3>Gemini API deprecates two more Flash models</h3>
+  <p>Google&#x27;s Gemini API changelog lists two deprecations on October 8. The gemini-3.7-flash model is deprecated and replaced by gemini-3.8-flash, with old requests automatically routed to the new model. Likewise gemini-3.5-flash is deprecated, with requests routed to gemini-3.6-flash, and the changelog says to update your model strings. &quot;Deprecated&quot; means the vendor is retiring a model; auto-routing means your calls keep working but land on a different model.</p><p>A related October 6 entry deprecates gemini-3.1-flash-image, with no shutdown date announced. A different model answering under an old name can change your outputs without any error to warn you. On your desk: search your n8n Gemini nodes and scripts for those three model names and repoint them on purpose, so the swap happens when you choose and not when Google does.</p>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Gemini API changelog</a> <span class="src-date">2026-10-08</span></li></ul></details>
+  
+</article></div></div>
+</section>
+
+<section id="spirit" class="beat">
+  <h3 class="beat-head">Spirit</h3>
+  <div class="cols cols-2"><div class="col">
+<article class="story short" id="spirit-psilocybin-entropy" data-beat="Consciousness &amp; The Nonphysical">
+  <div class="illo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="h3" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.5" fill="#2b6cb0"/></pattern></defs><rect x="14" y="14" width="292" height="172" fill="#fff3c4" stroke="#000" stroke-width="3"/><circle cx="130" cy="105" r="48" fill="#f6c445" stroke="#000" stroke-width="3"/><circle cx="130" cy="88" r="26" fill="url(#h3)"/><path d="M108 108q8 6 16 0M138 108q8 6 16 0M120 130q10 6 20 0" fill="none" stroke="#000" stroke-width="3"/><circle cx="230" cy="115" r="7" fill="#2b6cb0" stroke="#000" stroke-width="3"/><circle cx="257" cy="140" r="9" fill="#e8553a" stroke="#000" stroke-width="3"/><circle cx="215" cy="158" r="6" fill="#2b6cb0" stroke="#000" stroke-width="3"/><rect x="190" y="24" width="104" height="30" rx="8" fill="#fff" stroke="#000" stroke-width="3"/><text x="242.0" y="44" font-size="13" font-family="Comic Sans MS,sans-serif" text-anchor="middle" fill="#000">Hmm, maybe.</text></svg></div>
+  <h3>Brain &quot;entropy&quot; in a psilocybin trip tracked later insight</h3>
+  <p>This comes from PsyPost&#x27;s report on a Nature Communications paper from Imperial College London; we read the report, not the paper. Twenty-eight healthy adults who had never used a psychedelic took 1 mg (placebo-like) and then, a month later, 25 mg of psilocybin, always in that order. Brain entropy, a measure of how unpredictable the EEG signal is, rose sharply after 25 mg. Insight scores were about 51 points higher the next day (0-100 scale) and stayed elevated a month later.</p><p>The caveats are big: fixed dose order, no randomization, a small group, and the study is described as highly exploratory. Outside expert Katrin Preller noted that &quot;one month after psilocybin administration only very marginal changes were detected,&quot; and Martin Korsbak Madsen said &quot;psychedelics can have long-term effects but underlying mechanisms are unknown.&quot; On your desk: it is a nice prompt for a Universe Year note on what &quot;expanded awareness&quot; can be measured as, and a good reminder to teach it as a hypothesis.</p>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.psypost.org/brain-entropy-during-a-psychedelic-trip-tracks-later-gains-in-insight-and-well-being/" target="_blank" rel="noopener">PsyPost: Brain entropy during a psychedelic trip tracks later gains in insight and well-being</a> <span class="src-date">2026-10-12</span></li></ul></details>
+  
+</article></div><div class="col">
+<article class="story short" id="spirit-lsd-microdose-pilot" data-beat="Consciousness &amp; The Nonphysical">
+  
+  <h3>Low-dose LSD sharpened attention in women, not men, in a pilot</h3>
+  <p>The Debrief reports a presentation at the ECNP congress in Munich; no journal paper or DOI is cited, so treat this as early. Researchers from the University of Southern Denmark and Maastricht University gave 48 healthy volunteers (24 men, 24 women) four doses of 15 micrograms of LSD or placebo over two weeks, double-blind. That dose is about a quarter of the 60 micrograms typically associated with a full LSD experience.</p><p>Women on LSD had faster reaction times (335 to 308 milliseconds, about 8%) and fewer attention lapses (2.3 versus 4.7 on placebo). Men showed no comparable improvement on any measure. The authors say this does not show low-dose LSD improves thinking in general, and the group was small. On your desk: a useful example for your meditation notes of why &quot;it worked for some people&quot; is not the same as &quot;it works,&quot; and why small samples deserve a raised eyebrow.</p>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://thedebrief.org/lsd-microdosing-experiments-reveal-a-completely-different-cognitive-effect-on-half-the-population/" target="_blank" rel="noopener">The Debrief: LSD microdosing experiments</a> <span class="src-date">2026-10-13</span></li></ul></details>
+  
+</article></div></div>
+</section>
+
+<aside class="crop-box" id="crop-circle-watch" aria-label="Crop Circle Watch">
+  <div class="crop-head"><svg class="crop-glyph" viewBox="0 0 60 60" role="img" aria-label="crop circle glyph">
+<circle cx="30" cy="30" r="27" fill="none" stroke="var(--ink)" stroke-width="2.5"/>
+<circle cx="30" cy="30" r="18" fill="none" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="30" cy="30" r="8" fill="none" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="30" cy="7" r="3" fill="var(--ink)"/>
+</svg><h4>Crop Circle Watch</h4></div>
+  <p class="crop-latest"><b>Latest formation</b> &mdash; Tue Jul 21 &middot; Fox Hill. Still the latest formation on the Temporary Temples 2026 list; nothing newer logged. That list also shows Roundway (2) on 18 Jul, Wayland&#x27;s Smithy on 16 Jul and Avebury on 14 Jul.</p>
+  <ul class="crop-facts"><li>Temporary Temples&#x27; recent posts note &quot;One more anonymous circle?&quot; with no details.</li><li>Crop Circle Connector counts 16 formations for 2026 (6 in Jan-Jun, 10 in Jul-Dec, none for Aug-Dec); its logging differs from Temporary Temples&#x27; list of 20.</li></ul>
+  <p class="crop-history">From the history: On 9 September 1991 the British tabloid Today reported that Doug Bower and Dave Chorley, two Hampshire men, said they began the phenomenon in 1978 as a prank, using boards, string and a wire-loop cap, and made a circle in front of a Today journalist.</p>
+  <p class="crop-sources"><a href="https://temporarytemples.co.uk/crop-circles/2026-crop-circles" target="_blank" rel="noopener">Temporary Temples 2026 crop circles</a> &middot; <a href="https://www.cropcircleconnector.com/2026/2026.html" target="_blank" rel="noopener">Crop Circle Connector 2026 index</a> &middot; <a href="https://hoaxes.org/weblog/comments/september_9" target="_blank" rel="noopener">Museum of Hoaxes: This Day in the History of Hoaxes, September 9</a></p>
+</aside>
+
+<section id="good-ten" class="beat">
+  <h3 class="beat-head">The Good Ten</h3>
+  <p class="intro">Ten people doing excellent, verified work in their fields this week.</p>
+  <div class="cols cols-2"><div class="col"><ul class="good-ten"><li class="good" id="gt-pedal-forward">
+  <div class="good-head"><span class="good-num">01</span><strong>A 17-year-old&#x27;s bike charity has donated 400 bicycles</strong> <span class="src-date">Wed Oct 14</span></div>
+  <p>Jonathan Thai, 17, of Alpharetta, Georgia, was inspired to start Pedal Forward when the local REI closed a community bike-riding workshop. He has raised $30,000, donated 400 bicycles and handed out 500 helmets. The group has run more than a dozen free clinics, each teaching 30 to 45 children, with chapters in New York and Tennessee.</p>
+  <p class="good-src"><a href="https://www.goodnewsnetwork.org/teen-triathlete-raises-more-than-30000-to-donate-bikes-and-riding-lessons-to-low-income-families/" target="_blank" rel="noopener">Good News Network</a></p>
+  
+</li><li class="good" id="gt-pittsburgh-water">
+  <div class="good-head"><span class="good-num">02</span><strong>Pittsburgh Water forgives unpaid bills for about 4,300 households</strong> <span class="src-date">Wed Oct 14</span></div>
+  <p>Pittsburgh Water&#x27;s new Arrearage Forgiveness Program wipes out unpaid water debt over 24 months. About 4,300 households below 200% of the Federal Poverty Line are enrolled automatically. As an example, roughly $42 a month is forgiven on a $1,000 debt, and up to two missed payments are allowed.</p>
+  <p class="good-src"><a href="https://www.goodnewsnetwork.org/pittsburgh-water-launches-debt-forgiveness-program-to-help-families-with-rising-costs/" target="_blank" rel="noopener">Good News Network</a></p>
+  
+</li><li class="good" id="gt-roman-temple">
+  <div class="good-head"><span class="good-num">03</span><strong>Archaeologists find a Roman temple, likely to Mars, in Germany</strong> <span class="src-date">Wed Oct 14</span></div>
+  <p>Hessian state archaeologists and the University of Frankfurt, digging at the Kapersburg fort since 2024, uncovered a rectangular temple, now believed to be dedicated to Mars, about 16 feet long just below the forest floor. The fort sat on a 342-mile frontier line and held a garrison of about 160 soldiers, plus perhaps as many as 700 support staff and hangers-on.</p>
+  <p class="good-src"><a href="https://www.goodnewsnetwork.org/inches-below-the-forest-floor-archeologists-in-germany-unearthed-a-roman-temple-to-the-war-god/" target="_blank" rel="noopener">Good News Network</a></p>
+  
+</li><li class="good" id="gt-record-pumpkin">
+  <div class="good-head"><span class="good-num">04</span><strong>A 2,856.8-pound pumpkin sets a new record</strong> <span class="src-date">Wed Oct 14</span></div>
+  <p>Ian Paton, 65, of Lymington grew &quot;Bagheera&quot; at 2,856.8 pounds (1,295.8 kg), the largest ever grown by a man, at the Wargrave Nursery Giant Pumpkin Weigh-Off in England. It was his first solo attempt after 50 years of growing with his brother Stuart. The pumpkin needed 130 gallons of water a day.</p>
+  <p class="good-src"><a href="https://www.goodnewsnetwork.org/worlds-heaviest-pumpkin-sets-incredible-new-record-at-2856-lbs/" target="_blank" rel="noopener">Good News Network</a></p>
+  
+</li></ul></div><div class="col"><ul class="good-ten"><li class="good" id="gt-statins-glaucoma">
+  <div class="good-head"><span class="good-num">05</span><strong>Statins linked to lower glaucoma surgery rates</strong> <span class="src-date">Sun Oct 11</span></div>
+  <p>A UC San Diego team led by Dr. Robert Weinreb compared more than 210,000 statin users with about 210,000 matched people in a 165-million-person database (British Journal of Ophthalmology, Sep 18). Over five years, statin users had 36% lower risk of incisional glaucoma surgery and 12% lower risk of needing eye drops. It is an observational study, so it shows a link, not a cause.</p>
+  <p class="good-src"><a href="https://www.goodnewsnetwork.org/statin-drugs-may-protect-people-from-glaucoma/" target="_blank" rel="noopener">Good News Network</a></p>
+  
+</li><li class="good" id="gt-wpoty-2026">
+  <div class="good-head"><span class="good-num">06</span><strong>Wildlife Photographer of the Year 2026 winners announced</strong> <span class="src-date">Wed Oct 14</span></div>
+  <p>Federico Veronesi won with &quot;The Aftermath,&quot; an elephant carrying a dead calf in Namibia&#x27;s Huab River Valley. Oscar Whitfield won the youth prize with &quot;Labour of Love,&quot; a dung beetle. A record 65,403 entries came from 121 countries, and for the first time both overall winners are black-and-white.</p>
+  <p class="good-src"><a href="https://www.positive.news/society/wildlife-photographer-of-the-year-2026-the-winning-images/" target="_blank" rel="noopener">Positive News</a></p>
+  
+</li><li class="good" id="gt-dance-magazine-awards">
+  <div class="good-head"><span class="good-num">07</span><strong>Dance Magazine Award honorees for 2026 announced</strong> <span class="src-date">Thu Oct 1</span></div>
+  <p>Honorees include Germaine Acogny, Ayodele Casel, Cleo Parker Robinson, Alice Sheppard of Kinetic Light, and Final Bow for Yellowface (Phil Chan and Georgina Pazcoguin). Posthumous honors go to Balasaraswati, Choo San Goh, Steve Paxton, Eleo Pomare and Charles H. Williams. The ceremony is Monday, Nov 23, 7pm EST, at the Ailey Citigroup Theater in New York.</p>
+  <p class="good-src"><a href="https://dancemagazine.com/2026-dance-magazine-award-honorees/" target="_blank" rel="noopener">Dance Magazine</a></p>
+  
+</li><li class="good" id="gt-unplastify">
+  <div class="good-head"><span class="good-num">08</span><strong>Students in 25 countries are tackling plastic waste</strong> <span class="src-date">Wed Oct 14</span></div>
+  <p>A Singapore school of 2,000 had been using 72,000 pieces of Styrofoam and plastic a year, and its lunch-box campaign won the 2026 Unplastify Challenge. Unplastify now reaches 3,000+ students at 400 schools in 25 countries. Separately, an Argentine operator that manages 24 airports says it cut its plastic footprint 28% in three years.</p>
+  <p class="good-src"><a href="https://reasonstobecheerful.world/teenagers-worldwide-are-tackling-the-plastics-crisis/" target="_blank" rel="noopener">Reasons to be Cheerful</a></p>
+  
+</li></ul></div></div>
+</section>
+
+<section id="world" class="beat">
+  <h3 class="beat-head">The World, Straight</h3>
+  <p class="ws-note">Facts first. What's known vs. claimed, named sources, each side's framing in one neutral line, no persuasive adjectives. If there's no verified fact, it doesn't run.</p>
+  <ul class="world-straight"><li class="ws-item" id="w-gaza-westbank">
+  <h3>Gaza strike and West Bank raids reported since the truce</h3>
+  <p class="ws-known"><span class="ws-label">Confirmed</span> Reported by Al Jazeera: On Oct 13 an Israeli air strike hit a vehicle in Tuffah, northeast Gaza City, killing one and wounding several, per emergency services quoted by Al Jazeera. The Palestinian Ministry of Health said a child was wounded by live ammunition in Ramallah and el-Bireh, and Al Jazeera reports Israeli forces raided several Palestinian NGO offices. Al Jazeera&#x27;s own figures: more than 74,382 Palestinians killed since Oct 2023 and at least 1,400 since the truce began.</p>
+  <p class="ws-claimed"><span class="ws-label">Claimed by Gaza Civil Defence; Benjamin Netanyahu</span> Claimed by Gaza Civil Defence: repeated forced displacement near the &quot;Yellow Line&quot; and tents damaged by Israeli explosions and gunfire. Claimed by Benjamin Netanyahu (in a video): Israel is preparing for Palestinian Authority forces to &quot;turn their guns against Israel in the West Bank,&quot; and will extend its control across the territory.</p>
+  <ul class="ws-sides"><li><strong>Palestinian bodies:</strong> They describe continuing strikes and displacement under the truce.</li><li><strong>Israeli government:</strong> The prime minister says Israel is preparing for security threats in the West Bank; the article carries no Israeli military response to these specific strikes or raids.</li></ul>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.aljazeera.com/news/2026/10/14/israeli-attacks-kill-one-in-gaza-wound-journalists-in-occupied-west-bank" target="_blank" rel="noopener">Al Jazeera: Israeli attacks kill one in Gaza, wound journalists in occupied West Bank</a> <span class="src-date">2026-10-14</span></li></ul></details>
+  
+</li><li class="ws-item" id="w-ethiopia-zalambessa">
+  <h3>Ethiopian troops enter Zalambessa near the Eritrean border</h3>
+  <p class="ws-known"><span class="ws-label">Confirmed</span> Reuters reports, citing six sources: Ethiopian government troops reached Zalambessa, a town of about 15,000 near the Eritrean border that Tigrayan rebels had held. Fighting resumed last month when a TPLF-led rebel alliance went on the offensive, the first major fighting since a 2020-22 war that killed hundreds of thousands. Not confirmed: a pro-government militia spokesperson did not confirm the military took the town, and Ethiopia&#x27;s military and PM Abiy Ahmed&#x27;s office did not respond to Reuters.</p>
+  <p class="ws-claimed"><span class="ws-label">Claimed by Ethiopia&#x27;s government; Eritrea; witnesses and a conflict monitor</span> Claimed by Ethiopia: Eritrea backs the rebels, and Eritrean troops advanced up to 60 km (37 miles) into Ethiopia. Claimed by Eritrea: it has not entered Ethiopia, and the accusation amounts to a &quot;declaration of war.&quot; Claimed by witnesses and a conflict monitor: Eritrean troops crossed into the area last week to support the rebels.</p>
+  <ul class="ws-sides"><li><strong>Ethiopia:</strong> Says it is repelling Eritrean-backed TPLF-led rebels.</li><li><strong>Eritrea:</strong> Denies any incursion and asked the UN to take deterrent measures.</li></ul>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.thestar.com.my/news/world/2026/10/14/ethiopian-troops-enter-town-on-border-with-eritrea-stoking-war-fears" target="_blank" rel="noopener">The Star (Reuters): Ethiopian troops enter town on border with Eritrea, stoking war fears</a> <span class="src-date">2026-10-14</span></li></ul></details>
+  
+</li></ul>
+</section>
+
+
+
+
+<aside class="tv-box" id="on-the-couch" aria-label="On the Couch">
+  <div class="crop-head"><svg class="couch-glyph" viewBox="0 0 60 60" role="img" aria-label="television glyph">
+<rect x="8" y="14" width="44" height="28" rx="2" fill="none" stroke="var(--ink)" stroke-width="2.5"/>
+<path d="M22 46l-6 8M38 46l6 8" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="30" cy="28" r="7" fill="none" stroke="var(--ink)" stroke-width="2"/>
+</svg><h4>On the Couch</h4></div>
+  <p class="tv-empty">Nothing on tonight.</p>
+  
+</aside>
+
+
+<aside class="storm-box" id="storm-watch" aria-label="Storm Watch">
+  <div class="crop-head"><svg class="storm-glyph" viewBox="0 0 60 60" role="img" aria-label="storm watch glyph">
+<path d="M30 8a18 18 0 1 0 0.01 0" fill="none" stroke="var(--ink)" stroke-width="2.5"/>
+<path d="M30 8c8 4 12 10 12 16s-6 10-12 10" fill="none" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="30" cy="30" r="3.5" fill="var(--ink)"/>
+</svg><h4>Storm Watch</h4></div>
+  <ul class="storm-active"><li><b>Tropical Storm Simon</b> (Eastern Pacific) &mdash; Tropical storm &middot; 65 mph peak &middot; 991 mb. 19.1N 108.6W, about 275 mi SSE of Cabo San Lucas, moving SW at 5 mph No watches. 1-2 inches of rain; surf and rip currents for Baja California Sur and west-central Mexico.. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP5+shtml/150231.shtml" target="_blank" rel="noopener">NHC advisory, 8:00 PM MST Oct 14</a></li><li><b>Tropical Storm Trudy</b> (Eastern Pacific) &mdash; Tropical storm &middot; 70 mph peak &middot; 994 mb. About 315 mi S of Acapulco, moving NW at 8 mph Approaches southwest and west-central Mexico this weekend; 4-8 inches of rain (isolated 12) in Colima and Jalisco. No watches yet.. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP1+shtml/150234.shtml" target="_blank" rel="noopener">NHC advisory, 9:00 PM CST Oct 14</a></li></ul>
+  <p class="storm-outlook"><b>Winter outlook:</b> CPC&#x27;s October 8 discussion is still the latest: El Nino Advisory, with strong to very strong El Nino likely through Jan-Mar 2027 (over 83% chance).</p>
+  <p class="storm-sources"><a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO diagnostic discussion</a></p>
+</aside>
+
+
+<aside class="sky-box" id="sky" aria-label="Sky">
+  <div class="crop-head"><svg class="sky-glyph" viewBox="0 0 60 60" role="img" aria-label="sky glyph">
+<path d="M38 12a16 16 0 1 0 10 27 13 13 0 0 1-10-27z" fill="none" stroke="var(--ink)" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="14" cy="16" r="1.6" fill="var(--ink)"/>
+<circle cx="20" cy="9" r="1.2" fill="var(--ink)"/>
+<circle cx="10" cy="26" r="1.2" fill="var(--ink)"/>
+</svg><h4>Sky</h4></div>
+  <p class="sky-moon"><b>Moon:</b> Waxing crescent (23% illuminated)</p>
+  <p class="sky-tonight"><b>Tonight's sky:</b> Mercury sits low in the west-southwest after sunset until about the 22nd. The Orionid meteor shower peaks the night of Oct 21-22, though moonlight will interfere. First quarter moon is Oct 18; full moon Oct 25. <span class="sky-src"><a href="https://www.moongiant.com/phase/10/15/2026/" target="_blank" rel="noopener">Moongiant: moon phase Oct 15, 2026</a> &middot; <a href="https://griffithobservatory.lacity.gov/explore/observing-the-sky/sky-report/" target="_blank" rel="noopener">Griffith Observatory sky report, October 2026</a></span></p>
+  <div class="sky-hd"><h5>Human Design transits</h5><ul><li><b>Patrick:</b> Saturn sits in Gate 21 (The Hunter, Heart), one of your own gates, completing your 21–45 channel; Uranus in your Gate 20 (The Now, Throat) completes 20–34; Neptune in Gate 25 and Pluto in Gate 41 complete your 25–51 and 30–41 channels; the North Node is in your Gate 30 (Recognition of Feelings).</li><li><b>Travis:</b> Neptune is in Gate 25 (The Spirit of the Self, G centre), one of your own gates, and has been since Sep 10, 2025.</li></ul></div>
+</aside>
+
+
+<section class="made" id="made">
+  <h3 class="beat-head">How this paper is made</h3>
+  <p>Who made today&#x27;s paper, and roughly what it cost in tokens (the chunks of text models read and write).</p>
+  <div class="tablewrap"><table><thead><tr><th>Stage</th><th>Model</th><th class="num">Tokens (this issue)</th><th>Plain words</th></tr></thead><tbody><tr><td>Scouts ×6 (AI, Spirit + Crop Circle + Droplet + Grant, Good Ten, World + a World follow-up, TV/Almanac)</td><td>Sonnet</td><td class="num">≈436k</td><td>AI quiet; Good Ten verified 8; World verified 2 (AP/Reuters blocked)</td></tr><tr><td>Writer (incl. lead)</td><td>Sonnet</td><td class="num">≈77k</td><td>Opus lead dropped: budget already used after scouting</td></tr><tr><td>Fact-checker, fresh context</td><td>Sonnet</td><td class="num">≈84k</td><td>136 claims: 1 wrong, 10 unsupported, 9 unverifiable; 22 fixes applied, TV line cut</td></tr><tr><td>Managing editor (plan, HD transits, fixes, build, publish, file, email)</td><td>Opus 5.5 session</td><td class="num">≈180k</td><td></td></tr></tbody></table></div>
+  <p>Total ≈780k tokens, over the 300k daily target. Scouting is still where the budget goes.</p>
+</section>
+
+<footer>Made by Patrick &amp; Travis. Daily edition, closed 2026-10-15. Every story links to its source; every number was checked by a second model that did not write it.</footer>
+
+</div>
+<footer class="site-foot">The Gayzette &middot; Patrick &amp; Travis &middot; Everyone else collects your data to sell you something. We collect your data to empower you.<br><a href="/editions/">Past editions</a></footer>
+</body></html>

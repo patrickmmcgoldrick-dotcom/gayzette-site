@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="The Gayzette: a newspaper if news was actually real."><title>The Gayzette: Sunday 2026-09-20</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F3EFE6; --paper-2:#EAE3D3; --paper-3:#E0D7C2; --ink:#221F19; --ink-2:#5A5346; --ink-3:#8B8272;
+  --rule:#CBBFA4; --rule-2:#A99A79; --stamp:#A6304A; --stamp-2:#3A6B5C; --stamp-soft:rgba(166,48,74,.10);
+  --focus:#2F5D8A;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --display:"Old Standard TT","Fraunces","Iowan Old Style",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased;font-optical-sizing:auto}
+a{color:inherit;text-decoration-color:var(--rule-2);text-underline-offset:3px}
+a:hover{text-decoration-color:var(--stamp)}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+img,svg{max-width:100%}
+.wrap{max-width:64rem;margin:0 auto;padding:1.25rem 1rem 5rem}
+
+/* ---- Masthead ---- */
+header.mast{border-bottom:4px double var(--ink-2);padding-bottom:.7rem;margin-bottom:.4rem}
+.mast-top{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;border-bottom:1px solid var(--rule-2);padding-bottom:.5rem;margin-bottom:.5rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.mast-top .dateline{white-space:nowrap}
+.mast-top .weather-box{border:1px solid var(--ink-2);padding:.3rem .6rem;font-size:.66rem;letter-spacing:.05em}
+.mast-name{display:flex;align-items:baseline;justify-content:center;gap:.6rem;flex-wrap:wrap;text-align:center;padding:.3rem 0 .15rem}
+.mast-name h1{font-family:var(--display);font-weight:700;font-size:clamp(2.6rem,10vw,5rem);line-height:.92;margin:0;letter-spacing:-.01em}
+.mast-sub{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);text-align:center;margin:.1rem 0 0}
+.mast-row2{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2);padding-top:.55rem;border-top:1px solid var(--rule-2)}
+.mast-row2 b{color:var(--stamp);font-weight:600}
+
+/* ---- Today's Receipts index box ---- */
+.index-box{border:1.5px solid var(--ink);margin:1rem 0 1.5rem;padding:.85rem 1rem;background:var(--paper-2)}
+.index-box h2{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin:0 0 .55rem;text-align:center;border-bottom:1px solid var(--rule-2);padding-bottom:.5rem}
+.index-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.25rem 1.2rem;font-family:var(--mono);font-size:.76rem}
+.index-list a{display:flex;justify-content:space-between;gap:.5rem;padding:.18rem 0;text-decoration:none;border-bottom:1px dotted var(--rule)}
+.index-list a:hover{color:var(--stamp)}
+
+/* ---- Editor's note ---- */
+.ednote{margin:1.3rem 0 1.2rem;padding:0 0 1.3rem;border-bottom:1px solid var(--rule)}
+.ednote .byline{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--stamp);margin:0 0 .55rem}
+.ednote p{margin:0 0 .85rem;font-size:1.01em}
+.ednote .byline + p::first-letter{font-family:var(--display);font-size:2.9em;float:left;line-height:.8;padding:.06em .08em 0 0;font-weight:700}
+
+/* ---- Section / column layout ---- */
+.beat-head{font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin:2.4rem 0 0;padding:.45rem 0;border-top:1px solid var(--rule-2);border-bottom:1px solid var(--rule);display:flex;align-items:center;gap:.55rem}
+.beat-head::before{content:"";width:.5rem;height:.5rem;background:var(--stamp);display:inline-block;transform:rotate(45deg)}
+.cols{display:grid;grid-template-columns:1fr;gap:0 2.1rem}
+@media(min-width:640px){.cols.cols-2{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.cols.cols-3{grid-template-columns:1fr 1fr 1fr}}
+.cols .col{min-width:0}
+.cols.cols-2 .col:first-child,.cols.cols-3 .col:not(:last-child){border-right:0}
+@media(min-width:640px){.cols.cols-2 .col:first-child{border-right:1px solid var(--rule);padding-right:1.4rem}}
+@media(min-width:900px){.cols.cols-3 .col:not(:last-child){border-right:1px solid var(--rule);padding-right:1.4rem}}
+.story{padding:1.5rem 0 1.2rem;border-bottom:1px solid var(--rule)}
+.cols .story:last-child{border-bottom:0}
+.story.lead{padding:0 0 1.6rem;border-bottom:2px solid var(--ink-2);margin-bottom:1.2rem}
+.leads-row{display:grid;grid-template-columns:1fr;gap:0 2.2rem}
+@media(min-width:760px){.leads-row{grid-template-columns:1fr 1fr}.leads-row .story.lead:first-child{border-right:1px solid var(--rule-2);padding-right:2.2rem}}
+.story.lead h2{font-size:clamp(1.7rem,5.6vw,2.3rem)}
+.story h2{font-family:var(--display);font-weight:700;font-size:clamp(1.35rem,4.4vw,1.65rem);line-height:1.12;margin:.4rem 0 .5rem;letter-spacing:-.008em;text-wrap:balance}
+.story h3{font-family:var(--display);font-weight:700;font-size:1.18rem;line-height:1.18;margin:.3rem 0 .4rem;text-wrap:balance}
+.dek{font-style:italic;color:var(--ink-2);margin:0 0 1rem;font-size:1.03em;line-height:1.4}
+.story p{margin:0 0 .9rem}
+.eyebrow{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem .8rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.wonder{color:var(--stamp);letter-spacing:.1em;font-size:.68rem}
+.conf{border:1px solid var(--rule-2);padding:.05rem .4rem;border-radius:2px;color:var(--ink-3)}
+.desk{background:var(--paper-2);border-left:3px solid var(--stamp);padding:.7rem .9rem;margin:1.1rem 0 .85rem;font-size:.93em;line-height:1.5}
+.desk-label{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--stamp);margin-right:.4rem}
+.cal-pill{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.02em;border:1px solid var(--rule-2);padding:.1rem .5rem;border-radius:999px;margin-left:.3rem;white-space:nowrap;vertical-align:middle}
+.sources{font-family:var(--mono);font-size:.74rem;color:var(--ink-2);margin:.55rem 0}
+.sources summary{cursor:pointer;letter-spacing:.03em}
+.sources ul{margin:.4rem 0 0;padding-left:1.1rem;line-height:1.5}
+.src-date{color:var(--ink-3)}
+.react{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:.65rem}
+.react button{font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;background:transparent;color:var(--ink-2);border:1px solid var(--rule-2);border-radius:999px;padding:.35rem .8rem;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.react button:hover{border-color:var(--ink-2);color:var(--ink)}
+.react button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.react button[disabled]{opacity:.55;cursor:default}
+.react-note,.prop-state{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+
+/* ---- Illustrations (comic-style inline SVG) ---- */
+.illo{width:100%;margin:0 0 .8rem;border:2px solid var(--ink);background:var(--paper-2);line-height:0}
+.illo svg{display:block;width:100%;height:auto}
+.illo-fallback{display:block}
+
+/* ---- Crop Circle Watch sidebar ---- */
+.crop-box{border:1.5px dashed var(--rule-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
+.crop-box .crop-head{display:flex;align-items:center;gap:.55rem;margin:0 0 .6rem}
+.crop-box .crop-glyph{width:2.2rem;height:2.2rem;flex:none}
+.crop-box h4{margin:0;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
+.crop-box .crop-latest{margin:0 0 .5rem;line-height:1.45}
+.crop-box .crop-latest b{font-family:var(--display)}
+.crop-box ul.crop-facts{margin:.3rem 0 .6rem;padding-left:1.1rem}
+.crop-box ul.crop-facts li{margin:.25rem 0;font-size:.95em}
+.crop-box .crop-history{margin:.5rem 0 0;font-style:italic;color:var(--ink-2);font-size:.93em}
+.crop-box .crop-sources{margin:.5rem 0 0;font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+.crop-box .crop-sources a{color:inherit}
+.house-box{border:1.5px dashed var(--stamp-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
+.house-box .house-glyph{width:2.2rem;height:2.2rem;flex:none}
+.house-box .house-note{margin:0 0 .7rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.03em;color:var(--ink-3);text-transform:uppercase}
+.house-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+@media(max-width:640px){.house-grid{grid-template-columns:1fr}}
+.house-sub h5{margin:0 0 .4rem;font-family:var(--display);font-size:.95rem}
+.house-sub ul{margin:0;padding-left:1.1rem}
+.house-sub li{margin:.3rem 0;font-size:.95em;line-height:1.4}
+.house-tie{display:block;font-style:italic;color:var(--ink-2);font-size:.88em;margin-top:.1rem}
+.house-empty{margin:0;color:var(--ink-3);font-style:italic}
+.tv-box{border:1.5px dashed var(--rule-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
+.tv-box .couch-glyph{width:2.2rem;height:2.2rem;flex:none}
+.tv-box ul.tv-tonight{margin:.3rem 0 .6rem;padding-left:1.1rem}
+.tv-box ul.tv-tonight li{margin:.3rem 0;font-size:.95em;line-height:1.4}
+.tv-box .tv-empty{margin:0;color:var(--ink-3);font-style:italic}
+.tv-box .tv-news{margin:.5rem 0 0;font-size:.92em}
+.tv-box .tv-alert{margin:.5rem 0 0;font-weight:600}
+.tv-box .tv-src{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+.tv-week{display:flex;flex-direction:column;gap:.5rem;margin:.4rem 0}
+.tv-week-row{display:grid;grid-template-columns:3.4rem 1fr;gap:.6rem;align-items:baseline}
+.tv-week-day{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3)}
+.tv-week-item{font-size:.93em;line-height:1.4;margin:.15rem 0}
+.tv-try{margin-top:.6rem}
+.tv-try h5{margin:0 0 .3rem;font-family:var(--display);font-size:.95rem}
+.tv-try ul{margin:0;padding-left:1.1rem}
+.tv-try li{margin:.25rem 0;font-size:.92em}
+.specials-box{border:1.5px dashed var(--stamp-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
+.specials-box .specials-glyph{width:2.2rem;height:2.2rem;flex:none}
+.specials-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+@media(max-width:640px){.specials-grid{grid-template-columns:1fr}}
+.special-col h5{margin:0 0 .4rem;font-family:var(--display);font-size:.95rem}
+.special-col ul{margin:0;padding-left:1.1rem}
+.special-col li{margin:.3rem 0;font-size:.95em;line-height:1.4}
+.special-empty{margin:0;color:var(--ink-3);font-style:italic}
+.special-src{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+.storm-box{border:1.5px dashed var(--rule-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
+.storm-box .storm-glyph{width:2.2rem;height:2.2rem;flex:none}
+.storm-box ul.storm-active{margin:.3rem 0 .6rem;padding-left:1.1rem}
+.storm-box ul.storm-active li{margin:.35rem 0;font-size:.95em;line-height:1.45}
+.storm-box .storm-empty{margin:0;color:var(--ink-3);font-style:italic}
+.storm-box .storm-outlook{margin:.5rem 0 0;font-size:.92em;line-height:1.45}
+.storm-box .storm-sources{margin:.5rem 0 0;font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+.storm-box .storm-sources a{color:inherit}
+.sky-box{border:1.5px dashed var(--stamp-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
+.sky-box .sky-glyph{width:2.2rem;height:2.2rem;flex:none}
+.sky-box .sky-moon{margin:0 0 .4rem}
+.sky-box .sky-tonight{margin:.2rem 0 .4rem;line-height:1.45}
+.sky-box .sky-src{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+.sky-hd{margin-top:.5rem}
+.sky-hd h5{margin:0 0 .3rem;font-family:var(--display);font-size:.9rem}
+.sky-hd ul{margin:0;padding-left:1.1rem}
+.sky-hd li{margin:.3rem 0;font-size:.92em;line-height:1.4}
+
+
+/* ---- Briefly / receipt box ---- */
+.receipt{margin:2.6rem 0 0;padding:1.1rem 1rem 1.3rem;border:1px dashed var(--rule-2);background:var(--paper-2);font-family:var(--mono);font-size:.79rem;line-height:1.5;color:var(--ink)}
+.receipt h3{margin:0 0 .85rem;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;text-align:center;font-weight:600}
+.receipt ul{list-style:none;margin:0;padding:0}
+.receipt li{display:grid;grid-template-columns:5rem 1fr;gap:.1rem .6rem;padding:.5rem 0;border-top:1px dotted var(--rule-2)}
+.receipt li:first-child{border-top:0}
+.b-date{color:var(--ink-2);font-variant-numeric:tabular-nums}
+.b-beat{grid-column:2;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.b-line{grid-column:2;font-family:var(--serif);font-size:.96rem;line-height:1.45}
+.receipt .total{margin:1rem 0 0;padding-top:.65rem;border-top:1px dotted var(--rule-2);display:flex;justify-content:space-between;letter-spacing:.06em;text-transform:uppercase}
+
+/* ---- Calendar ---- */
+.calendar ul{list-style:none;margin:1rem 0 0;padding:0}
+.calendar li{display:grid;grid-template-columns:5rem 1fr;gap:0 .8rem;padding:.5rem 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.c-date{font-family:var(--mono);font-size:.76rem;color:var(--stamp);font-variant-numeric:tabular-nums}
+.c-label{font-size:1em}
+.c-beat{grid-column:2;font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+
+/* ---- Beats page ---- */
+.beats ul{list-style:none;margin:0;padding:0}
+.beats li{padding:1.05rem 0;border-bottom:1px solid var(--rule)}
+.beats li p{margin:.32rem 0 .55rem;font-size:.96em;color:var(--ink-2)}
+.prop-head{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap}
+.beats strong{font-family:var(--display);font-weight:700;font-size:1.12em;letter-spacing:-.005em}
+.stand{display:grid;grid-template-columns:1fr auto;gap:.6rem 1rem;align-items:start}
+.stand .react{margin-top:.2rem}
+.stand strong{margin-right:.5rem}
+@media(max-width:560px){.stand{grid-template-columns:1fr}}
+
+/* ---- Good Ten ---- */
+.good-ten{list-style:none;margin:1rem 0 0;padding:0}
+.good{padding:1rem 0;border-bottom:1px dotted var(--rule-2)}
+.good:last-child{border-bottom:0}
+.good-head{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.good-num{font-family:var(--mono);color:var(--stamp);font-weight:600;font-size:.85rem}
+.good strong{font-family:var(--display);font-weight:700}
+.good p{margin:.35rem 0}
+.good-src{font-family:var(--mono);font-size:.72rem;color:var(--ink-2)}
+
+/* ---- The World, Straight ---- */
+.world-straight{list-style:none;margin:1rem 0 0;padding:0}
+.ws-item{padding:1.1rem 0;border-bottom:1px solid var(--rule)}
+.ws-item h3{font-family:var(--display);font-weight:700;font-size:1.2rem;margin:0 0 .5rem}
+.ws-label{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--stamp);margin-right:.4rem}
+.ws-known{margin:0 0 .4rem}
+.ws-claimed{margin:0 0 .4rem;color:var(--ink-2)}
+.ws-sides{list-style:none;margin:.3rem 0 .5rem;padding:.6rem .8rem;background:var(--paper-2);border-left:3px solid var(--stamp-2)}
+.ws-sides li{margin:.25rem 0;font-size:.94em}
+.ws-note{font-family:var(--mono);font-size:.74rem;color:var(--ink-3);margin:0 0 1rem;padding:.6rem .8rem;border:1px dashed var(--rule-2)}
+
+/* ---- How it's made ---- */
+.made p{margin:.85rem 0}
+.tablewrap{overflow-x:auto;margin:1rem 0}
+table{border-collapse:collapse;width:100%;font-size:.88rem;min-width:32rem}
+th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
+td:nth-child(2){font-family:var(--mono);font-size:.78rem;white-space:nowrap}
+.num{text-align:right;font-family:var(--mono);font-size:.78rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+footer{margin-top:2.8rem;padding-top:1rem;border-top:4px double var(--ink-2);font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;color:var(--ink-3);line-height:1.7}
+.intro{margin:1rem 0 0;color:var(--ink-2)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+.site-banner{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-align:center;padding:.4rem 1rem;background:var(--paper-2);color:var(--ink-2);border-bottom:1px solid var(--rule-2)}.site-foot{max-width:60rem;margin:2rem auto 2.5rem;padding:1rem 1rem 0;border-top:1px solid var(--rule-2);font-family:var(--mono);font-size:.7rem;line-height:1.7;color:var(--ink-3);text-align:center}.site-foot a{color:inherit}</style></head><body>
+<div class="wrap">
+
+<header class="mast">
+  <div class="mast-top">
+    <span class="dateline">Sunday, September 20, 2026 &middot; Los Angeles</span>
+    <span class="weather-box">Fair, low 60s</span>
+  </div>
+  <div class="mast-name"><h1>The Gayzette</h1></div>
+  <p class="mast-sub">A newspaper if news was actually real</p>
+  <div class="mast-row2"><b>Sunday Edition</b><span>No. 3</span><span>thegayzette.news</span></div>
+</header>
+<nav class="toc" aria-label="Sections"><div class="index-box"><h2>Today's Receipts</h2><div class="index-list"><a href="#lead"><span>The lead</span><span>&rarr;</span></a><a href="#beat-0"><span>Consciousness &amp; The Nonphysical</span><span>&rarr;</span></a><a href="#beat-1"><span>The Universe</span><span>&rarr;</span></a><a href="#beat-2"><span>The Dance World</span><span>&rarr;</span></a><a href="#beat-3"><span>Comedy, Puppetry &amp; TV</span><span>&rarr;</span></a><a href="#beat-4"><span>Books &amp; Publishing</span><span>&rarr;</span></a><a href="#beat-5"><span>The Operator</span><span>&rarr;</span></a><a href="#beat-6"><span>The AI Builder</span><span>&rarr;</span></a><a href="#beat-7"><span>Music &amp; Guitar</span><span>&rarr;</span></a><a href="#briefly"><span>Briefly</span><span>&rarr;</span></a><a href="#calendar"><span>Calendar</span><span>&rarr;</span></a></div></div></nav>
+
+<section class="ednote" aria-label="Editor's note">
+  <p class="byline">From the editor&#x27;s desk</p>
+  <p>Two leads this week, and they are both about a door being unlocked. The Pentagon issued a legal waiver releasing service members and contractors from their nondisclosure agreements, including the toughest secrecy tier, when they take UAP material to the PURSUE task force. And the FDA approved the first therapy that changes the course of Sanfilippo syndrome rather than managing it, which in practice means a group of two-to-five-year-olds kept skills they were supposed to be losing.</p><p>Underneath those: a 21-year-old graph theory conjecture proved by building one edge at a time, comb jellies that look like a second independent invention of the nervous system, a model that answers in calibrated probabilities instead of sentences, the Muppets taking four craft Emmys fifty years on, and world-class ballet for thirty dollars a seat. Thirteen articles, twenty-one short items behind them.</p><p>On feedback: no reactions or beat decisions were saved on the page this week, so all nine standing beats ran unchanged and the six proposed beats are still waiting for a tap. One tap on any article is enough to start steering this.</p><p>The calendar is at the bottom, twenty-two dated things between Tuesday and November. Four of them are Puppet Up! within driving distance of a train.</p>
+</section>
+
+<section id="lead" class="beat">
+  <h3 class="beat-head">The lead</h3>
+  <div class="leads-row">
+<article class="story lead" id="pentagon-uap-disclosure-waiver" data-beat="Consciousness &amp; The Nonphysical">
+  
+  <div class="eyebrow"><span class="beat-tag">Consciousness &amp; The Nonphysical</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
+  <h2>The Pentagon just made it legal to talk about UFOs</h2>
+  <p class="dek">A Department of War waiver lets service members and contractors hand classified UAP material to the PURSUE task force without breaking their agreements.</p>
+  <p>Two pieces of paper explain this one. A nondisclosure agreement is the ordinary contract that says you will not repeat what you learned on the job. A Special Access Program Indoctrination Agreement, or SAPIA, is the version you sign for the government&#x27;s most closely held programs, the tier where even acknowledging that the program exists is a violation. Break either and the penalty is not a stern talk; it is a breach of a legal agreement with the federal government, with your clearance, your pension and possibly your freedom sitting on the table.</p><p>On September 14 the Department of War issued a legal waiver releasing current and former military personnel, civilians and contractors from those penalties when they disclose classified UAP information directly to the PURSUE task force. The waiver names both ordinary NDAs and SAPIAs explicitly.</p><p>Here is why that is the whole ballgame. The argument about UAP whistleblowers has always been staged as a question of credibility, as though the obstacle were that nobody believes them. It was never only that. A person who signed a SAPIA and wanted to testify faced a choice between a story and a career, and most people choose the career, which is not cowardice, it is arithmetic. Removing the penalty does not make anyone tell the truth. It removes the reason a truthful person had to stay quiet.</p><p>The honest limit: this waiver opens a channel to a government task force, not to the public or the press. It changes who someone may lawfully talk to, not what eventually gets published, and no count of people using it exists yet.</p>
+  <aside class="desk"><span class="desk-label">On your desk</span> your remote-viewing year is built on the military CRV protocol, scored without flinching, and this is the same institution quietly removing the legal reason its own people could not describe what they worked on. Watch the next few PURSUE tranches for testimony that could not have existed a month ago. </aside>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.globalsecurity.org/military/library/news/2026/09/mil-260914-dod01.htm" target="_blank" rel="noopener">Department of War press release via GlobalSecurity.org</a> <span class="src-date">2026-09-14</span></li></ul></details>
+  
+</article>
+<article class="story lead" id="sanfilippo-gene-therapy-approved" data-beat="Human Flourishing">
+  
+  <div class="eyebrow"><span class="beat-tag">Human Flourishing</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
+  <h2>FDA approves the first therapy that changes Sanfilippo&#x27;s course</h2>
+  <p class="dek">Children aged two to five held onto cognitive function they would otherwise have been losing, and on September 17 that became an approved medicine.</p>
+  <p>Sanfilippo syndrome type A, also written MPS IIIA, works like a garbage strike inside a cell. A missing enzyme means long sugar chains the body routinely breaks down instead pile up, including in brain cells, and the child slowly loses skills they had already learned. It is fatal, it is inherited, and until this week every available option managed symptoms while the underlying strike went on.</p><p>On September 17 the FDA approved Fayuvi, generic name rebisufligene etisparvovec-hopf, from Ultragenyx. It is a gene therapy, meaning the treatment delivers a working copy of the broken gene so the cell can make the enzyme itself rather than waiting for a delivery from outside.</p><p>The number that matters is not a lab value. In the pivotal trial, treated children aged two to five maintained or improved cognitive function against an untreated comparison group that, in that exact window, would normally be going backward. Holding still is the achievement. This is the first therapy shown to alter the disease&#x27;s course rather than soften its edges.</p><p>The caveat, stated plainly because the approval rests on it: the trial was open-label and compared treated children against an untreated historical-control cohort rather than a randomized placebo group. That is a reasonable design for a rare fatal childhood disease, where randomizing children to nothing is hard to defend, and it is also a looser form of evidence than a blinded trial. Both things are true.</p><p>It is also the second Ultragenyx approval this paper has logged in two issues, which is the more quietly astonishing fact: a pipeline, not a one-off.</p>
+  <aside class="desk"><span class="desk-label">On your desk</span> the Universe Year biology half keeps asking what a cell actually does all day, and this is the answer at its most consequential, one missing enzyme measured in a child&#x27;s vocabulary. It is also a receipt for the thesis in its least arguable form. </aside>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapy-pediatric-patients-sanfilippo-syndrome-type" target="_blank" rel="noopener">FDA</a> <span class="src-date">2026-09-17</span></li></ul></details>
+  
+</article></div>
+</section>
+
+<section class="beat" id="beat-0"><h3 class="beat-head">Consciousness &amp; The Nonphysical</h3><div class="cols cols-1"><div class="col">
+<article class="story" id="fda-psychedelics-hearing-speakers" data-beat="Consciousness &amp; The Nonphysical">
+  
+  <div class="eyebrow"><span class="beat-tag">Consciousness &amp; The Nonphysical</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
+  <h2>Nearly 80 speakers, four hours, and almost no pushback</h2>
+  <p class="dek">The FDA&#x27;s September 14 public hearing on psychedelic therapy drew over 1,800 registrants, and more than 90% of speakers argued for moving forward.</p>
+  <p>A public hearing is the part of American drug regulation where the agency stops reading and starts listening: anyone who registers can speak on the record, and the record becomes part of what the FDA weighs. It is procedural, slightly dull, and a decent thermometer for where a field actually sits, because the room is not curated.</p><p>On September 14 the FDA held one on psychedelic therapies at its White Oak campus. Four hours, nearly 80 speakers, more than 1,800 registrants. More than 90% of the speakers favored moving these therapies forward. Dissent was scattered rather than organized, and the notable holdout, Kevin Sabet of the Foundation for Drug Policy Solutions, did not argue that the therapies were worthless. He argued they should advance &quot;through science and trials, not politics or podcasters,&quot; which is a caution about method, not a verdict on the drug.</p><p>Watch what the ratio means. Ten years ago this hearing&#x27;s composition would have been the story. Now the story is that a federal regulator convened a formal proceeding and the overwhelming weight of testimony treated the therapeutic case as settled enough to argue about logistics. The fight has moved from whether to how.</p><p>MAPS used the occasion to hand federal health officials its new Ibogaine Investigator&#x27;s Brochure, the document a sponsor files to tell regulators everything known about a compound before human trials. That is the unglamorous paperwork layer where this actually advances.</p><p>The FDA is accepting written public comments through early October. Speaker ratios are not approvals, and nothing here is a treatment recommendation.</p>
+  <aside class="desk"><span class="desk-label">On your desk</span> your media-literacy instinct is to read the primary proceeding rather than the recap, and this is a proceeding worth reading. It is also the regulatory frame around the consciousness questions Universe Year keeps poking at. </aside>
+  <details class="sources"><summary>Receipts (2)</summary><ul><li><a href="https://mugglehead.com/four-hour-fda-psychedelics-hearing-draws-little-pushback-on-future-therapeutic-use/" target="_blank" rel="noopener">Mugglehead Investment Magazine</a> <span class="src-date">2026-09-15</span></li><li><a href="https://www.globenewswire.com/news-release/2026/09/17/3364358/0/en/maps-attends-historic-fda-hearing-on-psychedelics.html" target="_blank" rel="noopener">MAPS via GlobeNewswire</a> <span class="src-date">2026-09-15</span></li></ul></details>
+  
+</article></div></div></section><section class="beat" id="beat-1"><h3 class="beat-head">The Universe</h3><div class="cols cols-2"><div class="col">
+<article class="story" id="graph-sandwich-conjecture-proved" data-beat="The Universe">
+  
+  <div class="eyebrow"><span class="beat-tag">The Universe</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
+  <h2>A 21-year-old conjecture about random networks finally fell</h2>
+  <p class="dek">Richard Montgomery&#x27;s team proved the Kim-Vu sandwich conjecture by building graphs one edge at a time instead of in layers.</p>
+  <p>A graph, in math, is just dots and the lines between them: people and friendships, cities and roads, neurons and connections. Mathematicians study two species of random graph and have for decades. A binomial random graph flips a coin for every possible line and keeps the winners, which makes it beautifully easy to reason about. A random regular graph insists every dot have exactly the same number of lines, which makes it far more useful for modeling real networks and far more annoying to prove anything about.</p><p>In 2004, Jeong Han Kim and Van Vu conjectured that the annoying one could be sandwiched between two copies of the easy one, the way a number you cannot compute can be pinned down by showing it sits between two numbers you can. On September 18, Quanta reported that Richard Montgomery of the University of Warwick, with postdoc Natalie Behague and PhD student Daniel Iľkovič, proved it.</p><p>The trick is the good part. Earlier attempts built the graph in complete layers, all at once, and the layers kept refusing to line up. Montgomery&#x27;s team built edge by edge, adding one line at a time and keeping the structure honest at every step. Slow beat clever.</p><p>What it buys is not a single theorem but a bridge. Decades of results proved for binomial graphs now transfer automatically to regular graphs, so an entire shelf of existing work quietly becomes usable on a new class of objects. That is the part worth sitting with: one proof, and a whole toolbox changes hands.</p>
+  <aside class="desk"><span class="desk-label">On your desk</span> Universe Year&#x27;s math half needs proof that mathematics is a live construction site, not a museum. This is a 21-year gap closed by a professor, a postdoc and a graduate student choosing a patient method, which is also a fair description of how your curriculum is supposed to work. </aside>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.quantamagazine.org/mathematicians-build-long-awaited-graph-sandwich-20260918/" target="_blank" rel="noopener">Quanta Magazine</a> <span class="src-date">2026-09-18</span></li></ul></details>
+  
+</article></div><div class="col">
+<article class="story" id="comb-jellies-second-nervous-system" data-beat="The Universe">
+  
+  <div class="eyebrow"><span class="beat-tag">The Universe</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
+  <h2>Nervous systems may have been invented twice on this planet</h2>
+  <p class="dek">Comb jellies wire their neurons together with shared cytoplasm instead of synapses, which makes them look like a separate experiment in being aware.</p>
+  <p>A synapse is the tiny gap between two nerve cells where a chemical signal jumps across, and it is the design every nervous system you have ever heard of uses, from a fruit fly to you. Ctenophores, the comb jellies, one of the earliest-branching animal lineages at roughly 700 million years old, do not use it. Their neurons are joined by continuous cytoplasm, the cell&#x27;s interior fluid running straight through from one cell into the next. No gap. No jump. A different machine doing the same job.</p><p>Quanta reported the case on September 16. If the comb jellies&#x27; wiring is not a modified version of everyone else&#x27;s, the most economical reading is that nervous systems evolved twice, independently, in the animal kingdom. Nature ran the experiment, got two answers, and kept both.</p><p>The same lineage is strange further down. A March 2026 study of Mnemiopsis leidyi found more than 4,000 DNA loops packed into a genome of only 100 million base pairs. Loops are how a genome folds so that a control switch on one stretch can reach a gene far away, a filing system made of geometry. Finding that many here pushes the origin of looped genome architecture back 150 million years.</p><p>The honest caveat sits in the word may. Where ctenophores fall on the animal family tree is still argued over, and the independent-origin reading depends on that placement. What is not argued is the wiring itself, which is visibly, physically not the design the rest of us got.</p><p>Two nervous systems. One planet. It only had to happen once.</p>
+  <aside class="desk"><span class="desk-label">On your desk</span> Universe Year exists to test consciousness claims against hard biology, and this is biology handing you the better question. If awareness has more than one possible hardware, asking what it is made of gets more interesting, not less. </aside>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.quantamagazine.org/ctenophores-arent-just-beautiful-theyre-biological-wonders-20260916/" target="_blank" rel="noopener">Quanta Magazine</a> <span class="src-date">2026-09-16</span></li></ul></details>
+  
+</article></div></div></section><section class="beat" id="beat-2"><h3 class="beat-head">The Dance World</h3><div class="cols cols-1"><div class="col">
+<article class="story" id="fall-for-dance-thirty-dollar-tickets" data-beat="The Dance World">
+  
+  <div class="eyebrow"><span class="beat-tag">The Dance World</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
+  <h2>The Royal Ballet for thirty dollars, and eleven world premieres</h2>
+  <p class="dek">New York City Center&#x27;s Fall for Dance runs September 22 to October 3 with five mixed programs and one price for every seat.</p>
+  <p>Every ticket is $30. That is the whole design, and it is worth understanding as a mechanism rather than a discount. A mixed program means one evening is assembled from several short works by different companies, so no single company carries the night, and the house can put American Ballet Theatre, San Francisco Ballet, The Royal Ballet, The Australian Ballet, Stuttgart Ballet and Miami City Ballet in front of the same audience across five programs without any one of them having to sell out a full-length run on its own.</p><p>The 2026 edition runs September 22 through October 3 and includes 11 world premieres, which is the part that makes the pricing more than charity. New work is where a festival takes its risk, and putting the risk behind a flat $30 door means the people seeing it first are whoever showed up, not whoever could afford a subscription.</p><p>Two items to watch inside it: Robbie Fairchild, the former New York City Ballet principal, makes his directorial debut with &quot;Lord Chamberlain&#x27;s Men,&quot; and Friedemann Vogel dances a solo, &quot;ECHO:SOG,&quot; set to Bach.</p><p>The honest note on access: $30 is the price, and the supply is still a finite number of seats in one building in one city over twelve days. Cheap is not the same as available.</p><p>Still, the argument that world-class concert dance is structurally a luxury good has a counterexample running right now, with a start date.</p>
+  <aside class="desk"><span class="desk-label">On your desk</span> Travis Wall Studio&#x27;s premium positioning depends on knowing exactly where the price floor sits in the rest of the dance world. A festival proving that a flat cheap ticket fills a house for eleven premieres is useful pricing intelligence, and a good night out. <span class="cal-pill">Tue Sep 22 · Fall for Dance Festival opens at New York City Center, all tickets $30 (also 2026-10-03)</span></aside>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://pointemagazine.com/2026-fall-for-dance-festival/" target="_blank" rel="noopener">Pointe Magazine</a> <span class="src-date">2026-09-18</span></li></ul></details>
+  
+</article></div></div></section><section class="beat" id="beat-3"><h3 class="beat-head">Comedy, Puppetry &amp; TV</h3><div class="cols cols-2"><div class="col">
+<article class="story" id="muppet-show-emmy-sweep" data-beat="Comedy, Puppetry &amp; TV">
+  
+  <div class="eyebrow"><span class="beat-tag">Comedy, Puppetry &amp; TV</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
+  <h2>The Muppet Show won four Emmys fifty years after it premiered</h2>
+  <p class="dek">Disney+&#x27;s 2026 special took variety special, writing, picture editing and production design at the Creative Arts Emmys.</p>
+  <p>Fifty years is a long time for a format to stay funny. The Muppet Show premiered in 1976 as a variety show whose hook was that the variety show was falling apart backstage, and on September 5 the 2026 Disney+ special built on it won four Creative Arts Emmys: Outstanding Variety Special (Pre-Recorded), Writing for a Variety Special, Picture Editing for a Variety Special, and Production Design for a Variety Special.</p><p>Look at which four. Not a performance award, not a sentimental lifetime nod. Writing, editing, production design and the special itself, which is to say the categories voted on by the people who do that job for a living, judging craft against everything else that aired this year. Puppetry tends to get patted on the head as a children&#x27;s medium. This is the industry&#x27;s own technicians saying the thing was well made.</p><p>Matt Vogel&#x27;s Kermit was nominated for Outstanding Character Voice-Over Performance and lost to Julie Andrews, which is about the most gracious way to lose available.</p><p>The structural point underneath the trophies: the Muppets&#x27; original bet was that a puppet could hold a variety-show frame as well as a person could, because the audience forgives a felt performer almost anything as long as the timing is right. That bet is now a half-century old and still returning craft awards on a streaming service that did not exist for most of its run. Formats age. Timing does not.</p>
+  <aside class="desk"><span class="desk-label">On your desk</span> The Stacy Show is a puppet property in a market that keeps being told puppets are for kids, and here is the Television Academy paying out in writing and production design. That is the exact evidence to keep in the pitch folder. </aside>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.toughpigs.com/tms-emmy-wins/" target="_blank" rel="noopener">ToughPigs</a> <span class="src-date">2026-09-07</span></li></ul></details>
+  
+</article></div><div class="col">
+<article class="story" id="dimension-20-toylight" data-beat="Comedy, Puppetry &amp; TV">
+  
+  <div class="eyebrow"><span class="beat-tag">Comedy, Puppetry &amp; TV</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
+  <h2>A comedy show sent toys to defend a dying child&#x27;s imagination</h2>
+  <p class="dek">Dimension 20&#x27;s six-episode season Toylight began its weekly run on Dropout on September 16 with Brennan Lee Mulligan running the table.</p>
+  <p>Dimension 20 is a tabletop roleplaying show: comedians build characters, roll dice, and a game master narrates the world around whatever they do, which means the story is improvised in public with no retakes. Dropout, the platform it lives on, is the subscriber-funded successor to CollegeHumor, owned by the people who make the shows. Small operation. No network notes.</p><p>The new season, Toylight, premiered September 16 and runs six weekly episodes. Brennan Lee Mulligan runs the table with Emily Axford, Ally Beardsley, Brian Murphy, Zac Oyama, Siobhan Thompson and Lou Wilson. The premise: a band of toys defending the last flicker of a dying child&#x27;s imagination.</p><p>Read that premise again and notice what it asks of a comedy cast. Toys are a comedy engine, small voices and silly proportions, and the situation underneath is a child who is not going to be okay. The whole season lives or dies on holding both at once, in improv, on camera, in front of an audience that paid for a subscription. A network would have sanded one side of that down inside a week, usually the sad side.</p><p>The reason a platform this size can attempt it is ownership. When the people making the show also own the distribution, the premise does not have to survive a meeting. It only has to survive the table.</p><p>Six episodes is a small commitment and an honest one. Whether it lands is a question the run answers weekly, in public.</p>
+  <aside class="desk"><span class="desk-label">On your desk</span> The Stacy Show&#x27;s whole bet is that a puppet can carry material too heavy for a person to say out loud. This is somebody else running that experiment on a subscriber platform, with a release schedule you can study while it happens. </aside>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://bleedingcool.com/tv/dropout-announces-dimension-20-toylight-premiering-september-16/" target="_blank" rel="noopener">Bleeding Cool</a> <span class="src-date">2026-08-12</span></li></ul></details>
+  
+</article></div></div></section><section class="beat" id="beat-4"><h3 class="beat-head">Books &amp; Publishing</h3><div class="cols cols-1"><div class="col">
+<article class="story" id="sao-paulo-book-biennial-record" data-beat="Books &amp; Publishing">
+  
+  <div class="eyebrow"><span class="beat-tag">Books &amp; Publishing</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
+  <h2>A book fair drew 760,000 people and broke its own record</h2>
+  <p class="dek">São Paulo&#x27;s Biennial grew its audience, its floor space and its daily revenue, and handed out $3.9 million in book vouchers.</p>
+  <p>The story publishing tells about itself is a slow contraction: fewer readers, shorter attention, print as heritage craft. São Paulo did not get the memo.</p><p>The 2026 São Paulo Book Biennial drew 760,000 visitors over ten days, up from 722,000 in 2024. Average daily revenue rose 57%. The venue footprint grew 28% to 87,000 square meters, which is roughly the floor area of a dozen city blocks given over entirely to books. Individual publishers did better than the average: Rocco reported revenue up 121% against 2024.</p><p>The number that explains some of the rest is the voucher program. Organizers distributed R$20 million, about $3.9 million, in book vouchers to more than 52,000 students and 154,000 public-sector workers. That is not a marketing giveaway, it is demand manufactured on purpose, and it points at something the contraction story usually skips. Reading is not only a taste, it is a budget line. Move the budget line and attendance moves with it.</p><p>One caveat on reading too much into it: a voucher-boosted revenue figure is measuring a subsidized market, and the honest comparison in two years will be what happens to the same numbers without the program. Growth bought is still growth, but it is a different claim than growth earned.</p><p>What survives either reading is the footprint. Nobody expands a venue 28% for a dying format.</p>
+  <aside class="desk"><span class="desk-label">On your desk</span> you are ghostwriting a memoir into a market you have been told is shrinking, and here is a market that grew by every measure it tracks. Worth knowing which continent the appetite is on. </aside>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://publishingperspectives.com/2026/09/a-record-breaking-sao-paulo-book-biennial/" target="_blank" rel="noopener">Publishing Perspectives</a> <span class="src-date">2026-09-14</span></li></ul></details>
+  
+</article></div></div></section><section class="beat" id="beat-5"><h3 class="beat-head">The Operator</h3><div class="cols cols-1"><div class="col">
+<article class="story" id="acuity-native-appointment-waitlist" data-beat="The Operator">
+  
+  <div class="eyebrow"><span class="beat-tag">The Operator</span><span class="wonder" aria-label="wonder 3 of 5">◆◆◆◇◇</span></div>
+  <h2>Acuity now texts the waitlist the second a slot opens</h2>
+  <p class="dek">Squarespace&#x27;s booking tool built a native appointment waitlist with one-click SMS backfill, live on the paid tiers.</p>
+  <p>A waitlist is the premium-pricing mechanism most small operators never build, because building it correctly is tedious. Somebody cancels, and the value of that slot decays by the hour. Fill it in ten minutes and you have kept the revenue and rewarded a loyal client. Fill it tomorrow and you have an empty hour and a spreadsheet of people you meant to email.</p><p>Acuity Scheduling, Squarespace&#x27;s booking tool, now does it natively. When a business is fully booked, clients can join a waitlist for specific times or for any date within the next 14 days. When a cancellation opens a slot, Acuity sends an automatic SMS with a one-click booking link. It is live on the Standard/Growing and Premium/Powerhouse plans.</p><p>Notice what this quietly encodes. A visibly full calendar is one of the few honest scarcity signals a coaching business has, and the usual cost of protecting it is lost revenue every time someone drops. The waitlist separates those two things: the calendar stays full-looking, and the hole gets filled by whoever answers a text fastest. The urgency is real rather than manufactured, which is the only kind worth using.</p><p>The limit worth knowing before you plan around it: the any-date option only looks 14 days ahead, so this fills near-term gaps rather than managing a season.</p><p>It is a small feature. It is also the exact small feature you would otherwise have built in n8n over a weekend, and now do not have to.</p>
+  <aside class="desk"><span class="desk-label">On your desk</span> Travis Wall Studio books coaching sessions through Acuity already, so this is a scarcity-and-backfill mechanic you can switch on rather than engineer. It also removes one more custom automation from the pile you personally maintain. </aside>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://help.acuityscheduling.com/hc/en-us/articles/45351314004109-Offer-an-appointment-waitlist" target="_blank" rel="noopener">Acuity Scheduling Help Center</a> <span class="src-date">2026-08-31</span></li></ul></details>
+  
+</article></div></div></section><section class="beat" id="beat-6"><h3 class="beat-head">The AI Builder</h3><div class="cols cols-2"><div class="col">
+<article class="story" id="typesafe-jev-calibrated-model" data-beat="The AI Builder">
+  
+  <div class="eyebrow"><span class="beat-tag">The AI Builder</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
+  <h2>A new model type answers with decisions instead of words</h2>
+  <p class="dek">Jev outputs typed, calibrated probabilities rather than text, which means it structurally cannot hallucinate a classification.</p>
+  <p>Almost every model you have ever prompted is a text machine. Ask it to sort a support ticket into one of five buckets and it does not really sort; it writes a sentence that looks like sorting, and you parse the sentence and hope. That gap is where most of the annoying failures live. The model invents a sixth bucket. It hedges. It returns beautiful prose where you needed one word.</p><p>TypeSafe AI, founded by Diogo Almeida, a former OpenAI researcher who worked on ChatGPT and invented RLHF, released Jev on September 18. It is a transformer, the same underlying architecture, but its output is not text. It emits typed, calibrated probabilities: this ticket is 0.91 billing, 0.06 bug, and so on, over a set of options you defined. Calibrated means the numbers are meant to behave like real probabilities, so a thing it calls 80% likely should be right about 80% of the time.</p><p>The consequence is not that it hallucinates less. It is that on a classification task it structurally cannot, because there is no free-text channel in which to invent anything. You cannot make up a category that was never in the type.</p><p>The early field report: Vercel engineer Pranit Sharma swapped Jev in for GPT-based classification and reported results five to 18 times faster with better accuracy. It is already live on Vercel&#x27;s AI Gateway. One engineer&#x27;s benchmark is one engineer&#x27;s benchmark, and a 5x-to-18x range is a wide one.</p><p>Still, a new output type is rarer than a new model.</p>
+  <aside class="desk"><span class="desk-label">On your desk</span> your n8n pipelines are full of routing steps where a heavy text model is being asked to say one word, and every one of those is a candidate. Cheaper triage also means more of your weekly Claude Code budget stays available for work that needs actual writing. </aside>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://techcrunch.com/2026/09/18/a-new-kind-of-ai-model-from-a-chatgpt-inventor-is-thrilling-developers/" target="_blank" rel="noopener">TechCrunch</a> <span class="src-date">2026-09-18</span></li></ul></details>
+  
+</article></div><div class="col">
+<article class="story" id="claude-code-projects-beta" data-beat="The AI Builder">
+  
+  <div class="eyebrow"><span class="beat-tag">The AI Builder</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
+  <h2>Claude Code adds a coordinator that directs its own worker threads</h2>
+  <p class="dek">A persistent conversation now spins up parallel cloud sessions, remembers decisions across them, and decides on its own where a new request belongs.</p>
+  <p>Anthropic launched a redesigned Claude Code Projects in beta on September 17, and the shape is worth naming precisely because the word &quot;project&quot; undersells it. A project here is a coordinator: one long-running conversation that does not do the work itself so much as hand pieces of it to separate cloud worker threads, keep a shared memory of what was decided, and route the next request either to a thread already on that topic or to a fresh one, using its own judgment about which.</p><p>The old model was a folder with context in it. This is a small org chart. You describe a job, it splits the job, and you supervise from an overview panel or from your phone rather than from inside any one session.</p><p>Three honest limits. It is open only to selected Claude Pro and Max subscribers using cloud sessions, so it is a preview rather than a rollout. Local-file access for the worker threads is described as coming very soon, which in practice means the threads cannot yet touch your machine. And a system that decides for itself which thread a request belongs to is a system that can decide wrong, which you will discover by reading the overview panel rather than by being told.</p><p>The reason to care now, before it is finished: this is the first time the delegation you have been hand-rolling, parallel jobs with shared context, arrives as a supported primitive instead of a pattern you maintain yourself.</p>
+  <aside class="desk"><span class="desk-label">On your desk</span> The Receipts itself is an orchestration, a managing editor spawning nine scouts and merging their work, and so is every Wall McGoldrick Digital client automation. This is that architecture becoming a product feature rather than your scaffolding. </aside>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://venturebeat.com/orchestration/anthropic-launches-claude-code-projects-an-always-on-conversation-that-remembers-and-delegates-your-long-running-dev-work" target="_blank" rel="noopener">VentureBeat</a> <span class="src-date">2026-09-17</span></li></ul></details>
+  
+</article></div></div></section><section class="beat" id="beat-7"><h3 class="beat-head">Music &amp; Guitar</h3><div class="cols cols-1"><div class="col">
+<article class="story" id="music-stress-recovery-brain-imaging" data-beat="Music &amp; Guitar">
+  
+  <div class="eyebrow"><span class="beat-tag">Music &amp; Guitar</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
+  <h2>Music works on the way down, not the way up</h2>
+  <p class="dek">A 120-person study found music sped physiological recovery after stress and strengthened three brain regions&#x27; communication while doing it.</p>
+  <p>Here is the experiment, which is pleasingly blunt. A team led by Yi Du at the Chinese Academy of Sciences put 120 healthy volunteers through a stressful math test, the standard laboratory way to reliably ruin someone&#x27;s afternoon. Afterward, participants listened either to music or to water sounds while the researchers tracked mood, heart rate, skin conductance, which is the sweat-driven electrical change in the skin that tracks arousal, and cortisol, the hormone the body releases under stress. A subset went into an fMRI scanner, which maps activity by following blood flow through the brain.</p><p>Music produced faster recovery across nearly every physiological measure. In the scanner, it strengthened communication between the auditory cortex, which handles sound, the insula, which tracks the body&#x27;s internal state, and the thalamus, the brain&#x27;s routing station for incoming signals.</p><p>The finding with the sharpest edge is about timing. The benefit showed up in the recovery phase, after the stress, not before it. Music in this study was not armor. It was the thing that shortened the aftermath, which is a different and more testable claim than the usual one.</p><p>Worth saying plainly what this is and is not. It is one study of 120 people, published in PNAS, measuring physiological recovery in a laboratory. It is not a treatment, a protocol or a reason to change anything you are doing. It is evidence that a familiar effect has a visible mechanism.</p><p>Water sounds, for the record, lost.</p>
+  <aside class="desk"><span class="desk-label">On your desk</span> you are a year into building a guitar practice, and this is the closest thing yet to a mechanism under the part of it that feels like regulation rather than skill. Useful too as a hard-science checkpoint against the Hawkins and Dispenza material you listen to. </aside>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.auntminnie.com/clinical-news/mri/article/15834365/mri-reveals-brain-patterns-as-music-reduces-stress" target="_blank" rel="noopener">PNAS via AuntMinnie</a> <span class="src-date">2026-09-07</span></li></ul></details>
+  
+</article></div></div></section>
+
+<section class="receipt" id="briefly">
+  <h3>Briefly &middot; 21 items</h3>
+  <ul><li><span class="b-date">Sun Sep 20</span><span class="b-beat">Consciousness &amp; The Nonphysical</span><span class="b-line">AARO&#x27;s sixth PURSUE tranche released roughly 70 files, including 37 declassified reports from the 2008-2012 AAWSAP program on topics like warp drives, plus a March 1952 audio recording of Capt. Edward Ruppelt describing about 800 reviewed cases, roughly 20% of which he called very good reports with no conventional explanation. <a href="https://earthsky.org/human-world/6th-batch-of-pentagon-uap-files-ufos-pursue/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Thu Aug 6</span><span class="b-beat">Consciousness &amp; The Nonphysical</span><span class="b-line">A 60-person randomized trial run inside England&#x27;s National Health Service found a single 25mg psilocybin dose produced a 43% response rate against 3% for placebo in treatment-resistant depression at three weeks, with gains holding at six weeks. <a href="https://www.nature.com/articles/s41591-026-04541-0" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Thu Aug 20</span><span class="b-beat">Consciousness &amp; The Nonphysical</span><span class="b-line">Monash University&#x27;s five-year PsiConnect study, the largest single-site psilocybin brain-imaging study to date at 62 adults scanned with combined fMRI and EEG, found the drug reorganizes brain activity into structured context-specific patterns rather than generic chaos, and that stronger reorganization predicted better mood the next day. <a href="https://www.monash.edu/medicine/news/latest/2026-articles/worlds-largest-study-on-psychedelic-psilocybin-finds-organisation-hidden-in-the-chaos-of-the-brain" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Mon Sep 14</span><span class="b-beat">The Universe</span><span class="b-line">A September 8 analysis by Rohan Naidu, Anna de Graaff and collaborators puts the hidden black-hole seeds inside Webb&#x27;s little red dots at up to 1 million solar masses, cloaked by a hydrogen shell about 12 times wider than Pluto&#x27;s orbit at roughly 5,000 Kelvin, with Cambridge&#x27;s Roberto Maiolino publicly arguing ordinary black-hole physics explains it instead. <a href="https://www.quantamagazine.org/black-holes-or-black-hole-stars-astronomers-spar-over-webb-telescopes-little-red-dots-20260914/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Fri Sep 4</span><span class="b-beat">The Universe</span><span class="b-line">A Broad Institute and MIT team led by Paul Blainey&#x27;s lab built cellular self-reporting, using engineered virus-like particles to export RNA out of living cells so a population&#x27;s full gene-activity profile can be sampled repeatedly without killing it, already tested across cancer lines, stem cells, neurons and organ-on-chip devices. <a href="https://news.mit.edu/2026/new-method-allows-following-gene-activity-over-time-same-cells-0904" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Wed Sep 16</span><span class="b-beat">The Universe</span><span class="b-line">JWST released one of the largest public images in its history, a panorama of the IC 348 star-forming region about 1,000 light-years away, taken as part of a hunt for brown dwarfs, objects too small to ignite hydrogen fusion. <a href="https://www.space.com/astronomy/james-webb-space-telescope/colossal-cosmic-cloud-revealed-in-insane-new-image-from-the-james-webb-space-telescope-space-photo-of-the-day-for-sept-16-2026" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Fri Sep 18</span><span class="b-beat">The Universe</span><span class="b-line">Starship Flight 14 slipped again, from September 22 to no earlier than September 28 with a window opening at 07:23 Texas time, carrying 26 Starlink V3 satellites, with both booster and ship planned for ocean splashdowns and no tower catch attempt. <a href="https://www.advanced-television.com/2026/09/18/spacex-delays-starship-14-again/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Sat Sep 5</span><span class="b-beat">The Dance World</span><span class="b-line">Brooke Lipton won the 2026 Emmy for Outstanding Choreography for Scripted Programming for &quot;Palm Royale,&quot; a separate category from the variety choreography Emmy, beating nominees from &quot;Bridgerton,&quot; &quot;Wednesday,&quot; &quot;Will Trent,&quot; &quot;Stumble&quot; and &quot;Noah&#x27;s Arc: The Movie.&quot; <a href="https://www.televisionacademy.com/awards/nominees-winners/2026/outstanding-choreography-for-scripted-programming" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Mon Sep 14</span><span class="b-beat">The Dance World</span><span class="b-line">Sonya Tayeh&#x27;s &quot;The Surge: An Ode to Sinéad O&#x27;Connor,&quot; an evening-length work for ten female dancers all over 40 built from O&#x27;Connor&#x27;s audiobook memoir, opened its New York run at the Joyce on September 16 after premiering in Manchester. <a href="https://dancemagazine.com/sonya-tayeh/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Wed Sep 2</span><span class="b-beat">Comedy, Puppetry &amp; TV</span><span class="b-line">Hasbro and Sesame Workshop released &quot;Elmo and Peppa&#x27;s Muddy Puddles (Dance Remix),&quot; the first joint content in either franchise&#x27;s history, with two more videos dated September 24 and October 28. <a href="https://sesameworkshop.org/about-us/press-room/peppa-pig-and-elmo-splash-into-each-others-worlds-in-a-first-ever-music-video-collaboration-for-peppa-pig-sesame-street/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Tue Sep 15</span><span class="b-beat">Comedy, Puppetry &amp; TV</span><span class="b-line">Sesame Street for Military Families marked 20 years with the Department of Defense by launching &quot;Move with Elmo,&quot; an interactive exercise game, for a program that reaches military-connected families in more than 190 countries. <a href="https://sesameworkshop.org/about-us/press-room/sesame-street-for-military-families-celebrates-20-years-with-new-resources-to-help-families-stay-healthy-active-and-ready/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Wed Sep 16</span><span class="b-beat">Books &amp; Publishing</span><span class="b-line">The National Book Foundation&#x27;s 2026 Translated Literature longlist was drawn from 159 submissions in seven languages, with Indonesian appearing in the category for the first time; that list and Young People&#x27;s Literature run ten titles each, and finalists in all five categories are due October 6. <a href="https://publishingperspectives.com/2026/09/u-s-national-book-awards-announces-longlists-for-translated-works-young-peoples-literature/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Mon Sep 14</span><span class="b-beat">Books &amp; Publishing</span><span class="b-line">Japanese distributor Nippan agreed to supply books to Anthropic as licensed AI training data, in the same week the Independent Publishers Guild found 76% of surveyed independent publishers using AI in 2026, up from 42% in 2023. <a href="https://publishingperspectives.com/2026/09/around-the-book-world-monday-september-14th-2026/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Wed Sep 2</span><span class="b-beat">The Operator</span><span class="b-line">n8n Cloud release 2.36 added Gateway credits, a shared prepaid balance that lets a workflow call OpenAI, Anthropic, Google Gemini, Qwen, Kimi, Firecrawl and Browserbase without opening an account with each, chosen per node with spend tracked by model and workflow. <a href="https://docs.n8n.io/changelog/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Wed Sep 16</span><span class="b-beat">The Operator</span><span class="b-line">Resend shipped a Headless Webhook API covering five previously dashboard-only operations, including replaying an event and rotating the signing secret, usable from the API, SDKs, CLI and Resend&#x27;s MCP server so an agent can debug delivery failures unattended. <a href="https://resend.com/changelog/headless-webhook-api" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Mon Sep 14</span><span class="b-beat">The AI Builder</span><span class="b-line">Anthropic&#x27;s summer boost of 50% above baseline expired September 13 and the permanent replacement sits 25% above the original baseline, which Anthropic confirmed works out to a 17% reduction in Claude Code weekly limits against what subscribers had all summer; five-hour session limits are unchanged. <a href="https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-is-cutting-claude-codes-current-weekly-limits-by-17-percent/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Fri Sep 18</span><span class="b-beat">The AI Builder</span><span class="b-line">xAI&#x27;s Grok Voice Transcribe 2.0 cut multilingual word error rate on short phrases from 20.6% to 6.8% and took first place for accuracy among 32 streaming models, at unchanged pricing of $0.10 per hour batch and $0.20 streaming with diarization included. <a href="https://x.ai/news/grok-voice-transcribe-2" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Sun Sep 20</span><span class="b-beat">Music &amp; Guitar</span><span class="b-line">Martin refreshed its all-solid-wood 16 Series with the DSS-16E, the company&#x27;s first short-scale 24.9-inch sloped-shoulder Dreadnought, alongside new 00L, Jumbo and Grand Jumbo 12-string models built in Nazareth, Pennsylvania. <a href="https://www.thatericalper.com/2026/09/20/martin-guitar-refreshes-its-16-series-with-bold-colors-and-new-body-shapes/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Tue Aug 25</span><span class="b-beat">Music &amp; Guitar</span><span class="b-line">Luminate, the data arm behind the Billboard charts, unveiled a framework combining audio-signature detection, platform data partnerships and direct attribution deals to tag tracks as AI Generated, AI or Human; the labels are not user-visible yet but have already flagged thousands of items, with rollout promised later in 2026. <a href="https://luminatedata.com/blog/luminate-unveils-global-framework-to-identify-and-measure-ai-generated-music" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Fri Sep 4</span><span class="b-beat">Human Flourishing</span><span class="b-line">WHO validated Bhutan as the first country in its South-East Asia Region to eliminate dog-transmitted human rabies, with zero human deaths since June 2023 across all 20 districts, confirmed by a field mission that ran August 17-22, 2026. <a href="https://www.who.int/news/item/04-09-2026-who-validates-bhutan-for-eliminating-dog-transmitted-human-rabies" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Thu Sep 3</span><span class="b-beat">Human Flourishing</span><span class="b-line">Timor-Leste became the 33rd country to eliminate trachoma as a public health problem, on the strength of a 2025 survey of 4,949 children across all 13 municipalities, making WHO&#x27;s South-East Asia Region trachoma-free. <a href="https://www.who.int/news/item/03-09-2026-who-validates-timor-leste-s-elimination-of-trachoma-as-a-public-health-problem" target="_blank" rel="noopener">source</a></span></li></ul>
+  <p class="total"><span>Stories this issue</span><span>13 &middot; 14 receipts</span></p>
+</section>
+
+<section class="calendar" id="calendar">
+  <h3 class="beat-head">On the calendar</h3>
+  <p class="intro">Dated things from this week's reporting. Pacific unless noted.</p>
+  <ul><li><span class="c-date">Tue Sep 22</span><span class="c-label">Booker Prize shortlist announced live from the Southbank Centre, London</span><span class="c-beat">Books &amp; Publishing</span></li><li><span class="c-date">Tue Sep 22</span><span class="c-label">Fall for Dance Festival opens at New York City Center, all tickets $30</span><span class="c-beat">The Dance World</span></li><li><span class="c-date">Thu Sep 24</span><span class="c-label">Second Peppa Pig and Sesame Street collaboration video released</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Sat Sep 26</span><span class="c-label">SNL season 52 premiere, Jalen Brunson hosts and Katseye performs</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Sun Sep 27</span><span class="c-label">Puppet Up! plays Boston&#x27;s Boch Center Shubert Theatre</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Mon Sep 28</span><span class="c-label">Starship Flight 14 window opens at 07:23 Texas time, no tower catch attempt</span><span class="c-beat">The Universe</span></li><li><span class="c-date">Tue Sep 29</span><span class="c-label">Puppet Up! plays Philadelphia&#x27;s Miller Theatre</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Wed Sep 30</span><span class="c-label">Puppet Up! plays DC&#x27;s Lincoln Theatre</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Thu Oct 1</span><span class="c-label">IRVA annual conference opens in Dayton, Ohio, running through October 4</span><span class="c-beat">Consciousness &amp; The Nonphysical</span></li><li><span class="c-date">Thu Oct 1</span><span class="c-label">NYCB Fall Fashion Gala with three world premieres</span><span class="c-beat">The Dance World</span></li><li><span class="c-date">Thu Oct 1</span><span class="c-label">SXSW 2027 episodic and TV pilot submissions close, cheaper door through October 15</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Fri Oct 2</span><span class="c-label">Puppet Up! plays NYC&#x27;s Tribeca PAC, October 2-3</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Sat Oct 3</span><span class="c-label">Fall for Dance Festival closes after five programs and 11 world premieres</span><span class="c-beat">The Dance World</span></li><li><span class="c-date">Tue Oct 6</span><span class="c-label">National Book Award finalists announced across all five categories</span><span class="c-beat">Books &amp; Publishing</span></li><li><span class="c-date">Tue Oct 6</span><span class="c-label">Limón Dance Company&#x27;s 80th-anniversary run opens at the Joyce, through October 11</span><span class="c-beat">The Dance World</span></li><li><span class="c-date">Tue Oct 6</span><span class="c-label">Slamdance 2027 extended submission window closes for shorts and episodic</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Wed Oct 7</span><span class="c-label">Frankfurt Book Fair opens through October 11, with a new Audio Business Center in Hall 4.1</span><span class="c-beat">Books &amp; Publishing</span></li><li><span class="c-date">Wed Oct 7</span><span class="c-label">Kirkus Prize winners announced at Tribeca Rooftop, $150,000 across three categories</span><span class="c-beat">Books &amp; Publishing</span></li><li><span class="c-date">Tue Oct 27</span><span class="c-label">London City Ballet returns to the Joyce, through November 1</span><span class="c-beat">The Dance World</span></li><li><span class="c-date">Fri Oct 30</span><span class="c-label">FDA Expedited IND pilot applications close for the first 8-10 sponsor-institution pairs</span><span class="c-beat">Human Flourishing</span></li><li><span class="c-date">Tue Nov 17</span><span class="c-label">Scribner reissues Don DeLillo&#x27;s pseudonymous 1980 novel Amazons</span><span class="c-beat">Books &amp; Publishing</span></li><li><span class="c-date">Wed Nov 18</span><span class="c-label">77th National Book Awards ceremony, winners announced</span><span class="c-beat">Books &amp; Publishing</span></li></ul>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="made" id="made">
+  <h3 class="beat-head">How this paper is made</h3>
+  <p>A newsroom has a lot of jobs and only a few of them need a big brain. The trick is to give each job the cheapest model that can do it well, and to keep the one that writes and the one that checks separate so the paper never grades its own homework. Here is exactly what ran to make this issue, with the token counts. A token is a chunk of text about three quarters of a word; it&#x27;s the unit these models are metered in.</p><p>Third edition, second one made entirely by the scheduled task. The reactions and beat collections on this page were both still empty, so nothing was reweighted; all nine standing beats ran.</p>
+  <div class="tablewrap"><table><thead><tr><th>Stage</th><th>Model</th><th class="num">Tokens (this issue)</th><th>Plain words</th></tr></thead><tbody><tr><td>Read the charter and your reactions</td><td>Sonnet (managing editor)</td><td class="num">≈60,000</td><td>Read the Editorial Charter, the scout brief, the last two issues for dedupe, this week&#x27;s six AI digests, and the reaction and beat collections on this page (both empty).</td></tr><tr><td>Scout the beats</td><td>Sonnet ×9</td><td class="num">≈847,000</td><td>One scout per standing beat, in parallel. Each opened every source to confirm date and facts. 51 leads came back; the AI Builder scout worked from your daily digests and only searched to confirm, and dropped three digest items it could not source to a real page.</td></tr><tr><td>Write the articles</td><td>Opus ×1</td><td class="num">≈113,000</td><td>Worked only from the scout notes, in the charter&#x27;s voice rules. 13 articles, 21 briefly, 22 calendar dates.</td></tr><tr><td>Check every claim</td><td>Sonnet ×1, fresh context</td><td class="num">≈100,000</td><td>Never saw the scout notes or the writing. Opened every source, graded 94 claims: 88 OK, 3 wrong, 1 unsupported, 2 unverifiable. 6 fixes applied before publishing (an Emmy date, a satellite count, a missing Emmy nominee, a re-sourced book-prize line, and two re-verifications).</td></tr><tr><td>Fix, build, publish, file</td><td>Sonnet (managing editor)</td><td class="num">≈40,000</td><td>Applied the checker&#x27;s fixes with small code edits, re-verified the two unverifiable items itself, built the page, republished it here, and filed the issue, scout notes and fact-check in the vault.</td></tr></tbody></table></div>
+  <p>Total for this edition: about 1.16 million tokens, again over the 900,000 target, and again the overrun is scouting: nine scouts at roughly 94,000 tokens each. The charter&#x27;s fix only kicks in when &#x27;more&#x27; votes tell it which five beats to keep, and there are no votes yet. So the cheapest way to lower next week&#x27;s bill is still to tap &#x27;more&#x27; on the beats you want.</p><p>Fable is not in the weekly loop at all; it shows up only when you want to rethink the paper.</p>
+</section>
+
+<footer>Made by Patrick &amp; Travis. Issue 3 closed 2026-09-20. Every story links to its source; every number was checked by a second model that did not write it. </footer>
+
+</div>
+<footer class="site-foot">The Gayzette &middot; Patrick &amp; Travis &middot; Everyone else collects your data to sell you something. We collect your data to empower you.<br><a href="/editions/">Past editions</a></footer>
+</body></html>

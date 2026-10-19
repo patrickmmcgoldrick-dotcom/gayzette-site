@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="The Gayzette: a newspaper if news was actually real."><title>The Gayzette: Daily 2026-10-08</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F3EFE6; --paper-2:#EAE3D3; --paper-3:#E0D7C2; --ink:#221F19; --ink-2:#5A5346; --ink-3:#8B8272;
+  --rule:#CBBFA4; --rule-2:#A99A79; --stamp:#A6304A; --stamp-2:#3A6B5C; --stamp-soft:rgba(166,48,74,.10);
+  --focus:#2F5D8A;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --display:"Old Standard TT","Fraunces","Iowan Old Style",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased;font-optical-sizing:auto}
+a{color:inherit;text-decoration-color:var(--rule-2);text-underline-offset:3px}
+a:hover{text-decoration-color:var(--stamp)}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+img,svg{max-width:100%}
+.wrap{max-width:64rem;margin:0 auto;padding:1.25rem 1rem 5rem}
+
+/* ---- Masthead ---- */
+header.mast{border-bottom:4px double var(--ink-2);padding-bottom:.7rem;margin-bottom:.4rem}
+.mast-top{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;border-bottom:1px solid var(--rule-2);padding-bottom:.5rem;margin-bottom:.5rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.mast-top .dateline{white-space:nowrap}
+.mast-top .weather-box{border:1px solid var(--ink-2);padding:.3rem .6rem;font-size:.66rem;letter-spacing:.05em}
+.mast-name{display:flex;align-items:baseline;justify-content:center;gap:.6rem;flex-wrap:wrap;text-align:center;padding:.3rem 0 .15rem}
+.mast-name h1{font-family:var(--display);font-weight:700;font-size:clamp(2.6rem,10vw,5rem);line-height:.92;margin:0;letter-spacing:-.01em}
+.mast-sub{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);text-align:center;margin:.1rem 0 0}
+.mast-row2{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2);padding-top:.55rem;border-top:1px solid var(--rule-2)}
+.mast-row2 b{color:var(--stamp);font-weight:600}
+
+/* ---- Today's Receipts index box ---- */
+.index-box{border:1.5px solid var(--ink);margin:1rem 0 1.5rem;padding:.85rem 1rem;background:var(--paper-2)}
+.index-box h2{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin:0 0 .55rem;text-align:center;border-bottom:1px solid var(--rule-2);padding-bottom:.5rem}
+.index-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.25rem 1.2rem;font-family:var(--mono);font-size:.76rem}
+.index-list a{display:flex;justify-content:space-between;gap:.5rem;padding:.18rem 0;text-decoration:none;border-bottom:1px dotted var(--rule)}
+.index-list a:hover{color:var(--stamp)}
+
+/* ---- Editor's note ---- */
+.ednote{margin:1.3rem 0 1.2rem;padding:0 0 1.3rem;border-bottom:1px solid var(--rule)}
+.ednote .byline{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--stamp);margin:0 0 .55rem}
+.ednote p{margin:0 0 .85rem;font-size:1.01em}
+.ednote .byline + p::first-letter{font-family:var(--display);font-size:2.9em;float:left;line-height:.8;padding:.06em .08em 0 0;font-weight:700}
+
+/* ---- Section / column layout ---- */
+.beat-head{font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin:2.4rem 0 0;padding:.45rem 0;border-top:1px solid var(--rule-2);border-bottom:1px solid var(--rule);display:flex;align-items:center;gap:.55rem}
+.beat-head::before{content:"";width:.5rem;height:.5rem;background:var(--stamp);display:inline-block;transform:rotate(45deg)}
+.cols{display:grid;grid-template-columns:1fr;gap:0 2.1rem}
+@media(min-width:640px){.cols.cols-2{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.cols.cols-3{grid-template-columns:1fr 1fr 1fr}}
+.cols .col{min-width:0}
+.cols.cols-2 .col:first-child,.cols.cols-3 .col:not(:last-child){border-right:0}
+@media(min-width:640px){.cols.cols-2 .col:first-child{border-right:1px solid var(--rule);padding-right:1.4rem}}
+@media(min-width:900px){.cols.cols-3 .col:not(:last-child){border-right:1px solid var(--rule);padding-right:1.4rem}}
+.story{padding:1.5rem 0 1.2rem;border-bottom:1px solid var(--rule)}
+.cols .story:last-child{border-bottom:0}
+.story.lead{padding:0 0 1.6rem;border-bottom:2px solid var(--ink-2);margin-bottom:1.2rem}
+.leads-row{display:grid;grid-template-columns:1fr;gap:0 2.2rem}
+@media(min-width:760px){.leads-row{grid-template-columns:1fr 1fr}.leads-row .story.lead:first-child{border-right:1px solid var(--rule-2);padding-right:2.2rem}}
+.story.lead h2{font-size:clamp(1.7rem,5.6vw,2.3rem)}
+.story h2{font-family:var(--display);font-weight:700;font-size:clamp(1.35rem,4.4vw,1.65rem);line-height:1.12;margin:.4rem 0 .5rem;letter-spacing:-.008em;text-wrap:balance}
+.story h3{font-family:var(--display);font-weight:700;font-size:1.18rem;line-height:1.18;margin:.3rem 0 .4rem;text-wrap:balance}
+.dek{font-style:italic;color:var(--ink-2);margin:0 0 1rem;font-size:1.03em;line-height:1.4}
+.story p{margin:0 0 .9rem}
+.eyebrow{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem .8rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.wonder{color:var(--stamp);letter-spacing:.1em;font-size:.68rem}
+.conf{border:1px solid var(--rule-2);padding:.05rem .4rem;border-radius:2px;color:var(--ink-3)}
+.desk{background:var(--paper-2);border-left:3px solid var(--stamp);padding:.7rem .9rem;margin:1.1rem 0 .85rem;font-size:.93em;line-height:1.5}
+.desk-label{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--stamp);margin-right:.4rem}
+.cal-pill{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.02em;border:1px solid var(--rule-2);padding:.1rem .5rem;border-radius:999px;margin-left:.3rem;white-space:nowrap;vertical-align:middle}
+.sources{font-family:var(--mono);font-size:.74rem;color:var(--ink-2);margin:.55rem 0}
+.sources summary{cursor:pointer;letter-spacing:.03em}
+.sources ul{margin:.4rem 0 0;padding-left:1.1rem;line-height:1.5}
+.src-date{color:var(--ink-3)}
+.react{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:.65rem}
+.react button{font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;background:transparent;color:var(--ink-2);border:1px solid var(--rule-2);border-radius:999px;padding:.35rem .8rem;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.react button:hover{border-color:var(--ink-2);color:var(--ink)}
+.react button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.react button[disabled]{opacity:.55;cursor:default}
+.react-note,.prop-state{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+
+/* ---- Illustrations (comic-style inline SVG) ---- */
+.illo{width:100%;margin:0 0 .8rem;border:2px solid var(--ink);background:var(--paper-2);line-height:0}
+.illo svg{display:block;width:100%;height:auto}
+.illo-fallback{display:block}
+
+/* ---- Crop Circle Watch sidebar ---- */
+.crop-box{border:1.5px dashed var(--rule-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
+.crop-box .crop-head{display:flex;align-items:center;gap:.55rem;margin:0 0 .6rem}
+.crop-box .crop-glyph{width:2.2rem;height:2.2rem;flex:none}
+.crop-box h4{margin:0;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
+.crop-box .crop-latest{margin:0 0 .5rem;line-height:1.45}
+.crop-box .crop-latest b{font-family:var(--display)}
+.crop-box ul.crop-facts{margin:.3rem 0 .6rem;padding-left:1.1rem}
+.crop-box ul.crop-facts li{margin:.25rem 0;font-size:.95em}
+.crop-box .crop-history{margin:.5rem 0 0;font-style:italic;color:var(--ink-2);font-size:.93em}
+.crop-box .crop-sources{margin:.5rem 0 0;font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+.crop-box .crop-sources a{color:inherit}
+.house-box{border:1.5px dashed var(--stamp-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
+.house-box .house-glyph{width:2.2rem;height:2.2rem;flex:none}
+.house-box .house-note{margin:0 0 .7rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.03em;color:var(--ink-3);text-transform:uppercase}
+.house-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+@media(max-width:640px){.house-grid{grid-template-columns:1fr}}
+.house-sub h5{margin:0 0 .4rem;font-family:var(--display);font-size:.95rem}
+.house-sub ul{margin:0;padding-left:1.1rem}
+.house-sub li{margin:.3rem 0;font-size:.95em;line-height:1.4}
+.house-tie{display:block;font-style:italic;color:var(--ink-2);font-size:.88em;margin-top:.1rem}
+.house-empty{margin:0;color:var(--ink-3);font-style:italic}
+.tv-box{border:1.5px dashed var(--rule-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
+.tv-box .couch-glyph{width:2.2rem;height:2.2rem;flex:none}
+.tv-box ul.tv-tonight{margin:.3rem 0 .6rem;padding-left:1.1rem}
+.tv-box ul.tv-tonight li{margin:.3rem 0;font-size:.95em;line-height:1.4}
+.tv-box .tv-empty{margin:0;color:var(--ink-3);font-style:italic}
+.tv-box .tv-news{margin:.5rem 0 0;font-size:.92em}
+.tv-box .tv-alert{margin:.5rem 0 0;font-weight:600}
+.tv-box .tv-src{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+.tv-week{display:flex;flex-direction:column;gap:.5rem;margin:.4rem 0}
+.tv-week-row{display:grid;grid-template-columns:3.4rem 1fr;gap:.6rem;align-items:baseline}
+.tv-week-day{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3)}
+.tv-week-item{font-size:.93em;line-height:1.4;margin:.15rem 0}
+.tv-try{margin-top:.6rem}
+.tv-try h5{margin:0 0 .3rem;font-family:var(--display);font-size:.95rem}
+.tv-try ul{margin:0;padding-left:1.1rem}
+.tv-try li{margin:.25rem 0;font-size:.92em}
+.specials-box{border:1.5px dashed var(--stamp-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
+.specials-box .specials-glyph{width:2.2rem;height:2.2rem;flex:none}
+.specials-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+@media(max-width:640px){.specials-grid{grid-template-columns:1fr}}
+.special-col h5{margin:0 0 .4rem;font-family:var(--display);font-size:.95rem}
+.special-col ul{margin:0;padding-left:1.1rem}
+.special-col li{margin:.3rem 0;font-size:.95em;line-height:1.4}
+.special-empty{margin:0;color:var(--ink-3);font-style:italic}
+.special-src{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+.storm-box{border:1.5px dashed var(--rule-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
+.storm-box .storm-glyph{width:2.2rem;height:2.2rem;flex:none}
+.storm-box ul.storm-active{margin:.3rem 0 .6rem;padding-left:1.1rem}
+.storm-box ul.storm-active li{margin:.35rem 0;font-size:.95em;line-height:1.45}
+.storm-box .storm-empty{margin:0;color:var(--ink-3);font-style:italic}
+.storm-box .storm-outlook{margin:.5rem 0 0;font-size:.92em;line-height:1.45}
+.storm-box .storm-sources{margin:.5rem 0 0;font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+.storm-box .storm-sources a{color:inherit}
+.sky-box{border:1.5px dashed var(--stamp-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
+.sky-box .sky-glyph{width:2.2rem;height:2.2rem;flex:none}
+.sky-box .sky-moon{margin:0 0 .4rem}
+.sky-box .sky-tonight{margin:.2rem 0 .4rem;line-height:1.45}
+.sky-box .sky-src{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+.sky-hd{margin-top:.5rem}
+.sky-hd h5{margin:0 0 .3rem;font-family:var(--display);font-size:.9rem}
+.sky-hd ul{margin:0;padding-left:1.1rem}
+.sky-hd li{margin:.3rem 0;font-size:.92em;line-height:1.4}
+
+
+/* ---- Briefly / receipt box ---- */
+.receipt{margin:2.6rem 0 0;padding:1.1rem 1rem 1.3rem;border:1px dashed var(--rule-2);background:var(--paper-2);font-family:var(--mono);font-size:.79rem;line-height:1.5;color:var(--ink)}
+.receipt h3{margin:0 0 .85rem;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;text-align:center;font-weight:600}
+.receipt ul{list-style:none;margin:0;padding:0}
+.receipt li{display:grid;grid-template-columns:5rem 1fr;gap:.1rem .6rem;padding:.5rem 0;border-top:1px dotted var(--rule-2)}
+.receipt li:first-child{border-top:0}
+.b-date{color:var(--ink-2);font-variant-numeric:tabular-nums}
+.b-beat{grid-column:2;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.b-line{grid-column:2;font-family:var(--serif);font-size:.96rem;line-height:1.45}
+.receipt .total{margin:1rem 0 0;padding-top:.65rem;border-top:1px dotted var(--rule-2);display:flex;justify-content:space-between;letter-spacing:.06em;text-transform:uppercase}
+
+/* ---- Calendar ---- */
+.calendar ul{list-style:none;margin:1rem 0 0;padding:0}
+.calendar li{display:grid;grid-template-columns:5rem 1fr;gap:0 .8rem;padding:.5rem 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.c-date{font-family:var(--mono);font-size:.76rem;color:var(--stamp);font-variant-numeric:tabular-nums}
+.c-label{font-size:1em}
+.c-beat{grid-column:2;font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+
+/* ---- Beats page ---- */
+.beats ul{list-style:none;margin:0;padding:0}
+.beats li{padding:1.05rem 0;border-bottom:1px solid var(--rule)}
+.beats li p{margin:.32rem 0 .55rem;font-size:.96em;color:var(--ink-2)}
+.prop-head{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap}
+.beats strong{font-family:var(--display);font-weight:700;font-size:1.12em;letter-spacing:-.005em}
+.stand{display:grid;grid-template-columns:1fr auto;gap:.6rem 1rem;align-items:start}
+.stand .react{margin-top:.2rem}
+.stand strong{margin-right:.5rem}
+@media(max-width:560px){.stand{grid-template-columns:1fr}}
+
+/* ---- Good Ten ---- */
+.good-ten{list-style:none;margin:1rem 0 0;padding:0}
+.good{padding:1rem 0;border-bottom:1px dotted var(--rule-2)}
+.good:last-child{border-bottom:0}
+.good-head{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.good-num{font-family:var(--mono);color:var(--stamp);font-weight:600;font-size:.85rem}
+.good strong{font-family:var(--display);font-weight:700}
+.good p{margin:.35rem 0}
+.good-src{font-family:var(--mono);font-size:.72rem;color:var(--ink-2)}
+
+/* ---- The World, Straight ---- */
+.world-straight{list-style:none;margin:1rem 0 0;padding:0}
+.ws-item{padding:1.1rem 0;border-bottom:1px solid var(--rule)}
+.ws-item h3{font-family:var(--display);font-weight:700;font-size:1.2rem;margin:0 0 .5rem}
+.ws-label{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--stamp);margin-right:.4rem}
+.ws-known{margin:0 0 .4rem}
+.ws-claimed{margin:0 0 .4rem;color:var(--ink-2)}
+.ws-sides{list-style:none;margin:.3rem 0 .5rem;padding:.6rem .8rem;background:var(--paper-2);border-left:3px solid var(--stamp-2)}
+.ws-sides li{margin:.25rem 0;font-size:.94em}
+.ws-note{font-family:var(--mono);font-size:.74rem;color:var(--ink-3);margin:0 0 1rem;padding:.6rem .8rem;border:1px dashed var(--rule-2)}
+
+/* ---- How it's made ---- */
+.made p{margin:.85rem 0}
+.tablewrap{overflow-x:auto;margin:1rem 0}
+table{border-collapse:collapse;width:100%;font-size:.88rem;min-width:32rem}
+th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
+td:nth-child(2){font-family:var(--mono);font-size:.78rem;white-space:nowrap}
+.num{text-align:right;font-family:var(--mono);font-size:.78rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+footer{margin-top:2.8rem;padding-top:1rem;border-top:4px double var(--ink-2);font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;color:var(--ink-3);line-height:1.7}
+.intro{margin:1rem 0 0;color:var(--ink-2)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+.site-banner{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-align:center;padding:.4rem 1rem;background:var(--paper-2);color:var(--ink-2);border-bottom:1px solid var(--rule-2)}.site-foot{max-width:60rem;margin:2rem auto 2.5rem;padding:1rem 1rem 0;border-top:1px solid var(--rule-2);font-family:var(--mono);font-size:.7rem;line-height:1.7;color:var(--ink-3);text-align:center}.site-foot a{color:inherit}</style></head><body>
+<div class="wrap">
+
+<header class="mast">
+  <div class="mast-top">
+    <span class="dateline">Thursday, October 8, 2026 &middot; Los Angeles</span>
+    <span class="weather-box">Hot again: NWS Extreme Heat Warning in effect for Los Angeles</span>
+  </div>
+  <div class="mast-name"><h1>The Gayzette</h1></div>
+  <p class="mast-sub">A newspaper if news was actually real</p>
+  <div class="mast-row2"><b>Daily Edition</b><span></span><span>thegayzette.news</span></div>
+</header>
+<nav class="toc" aria-label="Sections"><div class="index-box"><h2>Today's Receipts</h2><div class="index-list"><a href="#lead"><span>The lead</span><span>&rarr;</span></a><a href="#ai"><span>AI Builder</span><span>&rarr;</span></a><a href="#spirit"><span>Spirit</span><span>&rarr;</span></a><a href="#good-ten"><span>The Good Ten</span><span>&rarr;</span></a><a href="#world"><span>The World, Straight</span><span>&rarr;</span></a><a href="#made"><span>How it&#x27;s made</span><span>&rarr;</span></a></div></div></nav>
+
+<section class="ednote" aria-label="Editor's note">
+  <p class="byline">The managing editor</p>
+  <p>Good morning. Today&#x27;s lead is small and free: Google&#x27;s EmbeddingGemma 2, a search-by-meaning model light enough to run on a laptop. Then cheaper Nano Banana images, a bigger Claude Startups program, and OpenAI&#x27;s contract-review test for computer-use agents.</p><p>Spirit is down to one item. Nothing new and verifiable turned up from Oct 6 to 8, so we ran mid-September news on the FDA&#x27;s psychedelics hearing and said so up top. The Good Ten is six today; the scout could only verify six, and with the budget already over we didn&#x27;t send it back for more. The World, Straight has three items, because only three cleared the bar. No reactions changed anything this time: the one &quot;less&quot; vote on a dance story is still below the two the rule needs.</p><p>Housekeeping: Sonnet wrote the lead because scouting alone went past the 300k budget. Nothing on the watchlist was confirmed for tonight, and the network pages couldn&#x27;t be checked, so treat the empty Couch box as unconfirmed. Tropical Storm Rachel is out of Storm Watch because the checker couldn&#x27;t load a fresh advisory for it. Grant Watch was quiet. The fact-checker graded 105 claims, and we applied 15 fixes before publishing.</p>
+</section>
+
+<section id="lead" class="beat">
+  <h3 class="beat-head">The lead</h3>
+  
+<article class="story lead" id="embeddinggemma-2-laptop-search" data-beat="ai">
+  <div class="illo"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="ht-lead" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.5" fill="#111"/></pattern></defs><rect width="320" height="200" fill="#fff4cc"/><rect width="320" height="200" fill="url(#ht-lead)" opacity=".18"/><rect x="80" y="55" width="160" height="95" rx="6" fill="#fff" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M60 150h200l-14 14H74z" fill="#2a6fdb" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><g fill="#2a6fdb" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><circle cx="110" cy="85" r="7"/><circle cx="128" cy="100" r="7"/><circle cx="118" cy="120" r="7"/></g><g fill="#ff5a5f" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><circle cx="180" cy="80" r="7"/><circle cx="200" cy="96" r="7"/></g><circle cx="215" cy="118" r="24" fill="#fff" fill-opacity=".6" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M233 136l26 26" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-width="6"/><path d="M24 14h96a8 8 0 0 1 8 8v16a8 8 0 0 1-8 8H60l-14 12v-12H24a8 8 0 0 1-8-8V22a8 8 0 0 1 8-8z" fill="#fff" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><text x="34" y="36" font-family="Comic Sans MS,sans-serif" font-size="14" font-weight="bold" fill="#111">Found it!</text></svg></div>
+  <div class="eyebrow"><span class="beat-tag">ai</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
+  <h2>Google&#x27;s new free search model fits on a laptop</h2>
+  <p class="dek">EmbeddingGemma 2 lets a small, free model search text, code, images, video and audio by meaning.</p>
+  <p>Google released EmbeddingGemma 2 on October 6. An embedding model turns a piece of content into a list of numbers, so things with similar meaning end up with similar numbers. That is what lets a computer search by meaning instead of exact words. This one puts text, code, images, video and audio into the same shared list format, so a sentence can find a matching picture or clip.</p><p>The size is the news. The full model has 740M parameters (the adjustable settings inside a model), under an Apache 2.0 license, which is an open license anyone can read. Text-only use needs as few as 270M parameters; the vision (170M) and audio (300M) parts are optional add-ons. With quantization, which means storing the model&#x27;s numbers in a smaller form, the text-only weights use about 191MB of memory on a Pixel 11 Pro phone. Each item&#x27;s list can also be trimmed from 768 numbers to 512, 256 or 128, for up to 6x less storage.</p><p>Google also reports its code-search score on MTEB Code, a standard benchmark, rose from 68.76 to 78.68. Caveat: that is Google&#x27;s own announcement, and we have not seen outside tests. The weights are on Hugging Face and Kaggle and work with Ollama, LM Studio, llama.cpp, sentence-transformers and Qdrant.</p><p>On your desk: this is the missing piece for searching your Obsidian vault by meaning, including images and the dance-class audio and video, with no API bill because it runs on your own machine. Worth an afternoon of trying it on a small folder first.</p>
+  <aside class="desk"><span class="desk-label">On your desk</span> A search tool that small and free means your own notes and class recordings can become searchable without paying anyone per query. </aside>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/" target="_blank" rel="noopener">Google blog: EmbeddingGemma 2</a> <span class="src-date"></span></li></ul></details>
+  
+</article>
+</section>
+
+<section id="ai" class="beat">
+  <h3 class="beat-head">The AI Builder &middot; briefly</h3>
+  <div class="cols cols-2"><div class="col">
+<article class="story short" id="nano-banana-21-prices" data-beat="ai">
+  <div class="illo"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="ht-ai" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.5" fill="#111"/></pattern></defs><rect width="320" height="200" fill="#d9ecff"/><rect width="320" height="200" fill="url(#ht-ai)" opacity=".18"/><rect x="60" y="45" width="130" height="100" rx="6" fill="#fff" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M60 145l45-45 30 30 20-20 35 35z" fill="#ffd84d" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="160" cy="75" r="12" fill="#ffd84d" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M215 70h50l25 25-25 25h-50z" fill="#ff5a5f" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="225" cy="95" r="5" fill="#fff" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M245 115l30-40" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-width="5"/><path d="M30 160h60" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><text x="200" y="165" font-family="Comic Sans MS,sans-serif" font-size="14" font-weight="bold" fill="#111">half price</text></svg></div>
+  <h3>Google cuts Nano Banana image prices roughly in half</h3>
+  <p>Google&#x27;s image maker got a new version, Nano Banana 2.1, on October 7. A 1K image (about 1,000 pixels on a side) now costs $0.0336, down from $0.067, and a 4K image costs $0.0756, down from $0.151. It is built on Gemini 3.6 Flash, takes up to 14 reference images per prompt, and has minimal, medium and high thinking levels. It is rolling out in the Gemini app, AI Studio, Flow, Stitch and Google Ads.</p><p>Two caveats. Google says the pricier Nano Banana Pro still &quot;often&quot; makes noticeably better images, at $0.134 per 1K image. And the new API drops function calling, structured outputs, caching and Live API support the older one had. This comes from AI Weekly citing The Decoder, a secondary source; we did not open the original.</p><p>On your desk: cheap batch images for Squarespace pages, Skool course thumbnails and Travis Wall Studio promos, called from n8n. Check whether your workflows lean on any of the dropped features first.</p>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://aiweekly.co/alerts/googles-nano-banana-21-halves-image-prices-on-gemini-36-flash" target="_blank" rel="noopener">AI Weekly: Nano Banana 2.1 halves image prices</a> <span class="src-date"></span></li></ul></details>
+  
+</article>
+<article class="story short" id="claude-startups-program" data-beat="ai">
+  
+  <h3>Anthropic widens its Claude Startups program</h3>
+  <p>Anthropic expanded its Claude Startups program on October 6. Companies new to Claude Team get one free year for up to five Premium seats (about $6,000, per the page) plus a one-time $1,000 API credit once approved. There are also partner offers worth up to $45,000 combined, virtual office hours with Anthropic&#x27;s Applied AI team, and help building and submitting a connector or plugin to the Claude Marketplace.</p><p>Eligibility: founded in the last five years or funded in the last two. Read the page&#x27;s fine print before counting on any of it.</p><p>On your desk: Travis Wall Studio may qualify, and the open question is its founding date. If it does, free seats for a small team could cover the coaching business&#x27;s AI tools for a year.</p>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://claude.com/resources/articles/were-expanding-the-claude-startups-program-to-help-founders-build" target="_blank" rel="noopener">Claude: expanding the Claude Startups program</a> <span class="src-date"></span></li></ul></details>
+  
+</article></div><div class="col">
+<article class="story short" id="openai-ironclad-contract-agents" data-beat="ai">
+  
+  <h3>OpenAI tests computer-use agents on contract-review work</h3>
+  <p>OpenAI and Ironclad, a contract software company, built 11 research tasks across legal, commercial and procurement work, each scored against 8 to 50 criteria. A computer-use agent is an AI that operates software the way a person would, by looking at the screen and clicking. GPT-6 Astra (Max reasoning) averaged 55.0%, against 41.6% for GPT-5.6 Sol (High reasoning). An internal model scored 63.7%.</p><p>Estimated time per attempt fell from 37.0 to 19.2 minutes, but the page says those are simulated estimates, not measured. Training used synthetic tasks built from public SEC EDGAR contracts. There is no product or API release; OpenAI invites software companies to apply for a research collaboration.</p><p>On your desk: roughly 55% on messy multi-step office work is a good lesson in why a human should still read contracts and vendor paperwork for the studio and the memoir.</p>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://openai.com/index/advancing-computer-use-with-ironclad/" target="_blank" rel="noopener">OpenAI: Advancing computer use with Ironclad</a> <span class="src-date"></span></li></ul></details>
+  
+</article></div></div>
+</section>
+
+<section id="spirit" class="beat">
+  <h3 class="beat-head">Spirit</h3>
+  <div class="cols cols-1"><div class="col">
+<article class="story short" id="fda-psychedelics-hearing" data-beat="spirit">
+  <div class="illo"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="ht-spirit" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.5" fill="#111"/></pattern></defs><rect width="320" height="200" fill="#e8dcff"/><rect width="320" height="200" fill="url(#ht-spirit)" opacity=".18"/><circle cx="160" cy="100" r="80" fill="none" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="2 10"/><circle cx="160" cy="100" r="55" fill="none" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="2 8"/><circle cx="160" cy="68" r="16" fill="#ffd84d" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M138 130c0-22 44-22 44 0l16 14c-14 10-62 10-76 0z" fill="#7a4fd6" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M120 148c20 14 60 14 80 0" fill="none" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M154 66h4M164 66h4" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M154 74q6 5 12 0" fill="none" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M222 20h72a8 8 0 0 1 8 8v14a8 8 0 0 1-8 8h-48l-12 10v-10h-12a8 8 0 0 1-8-8V28a8 8 0 0 1 8-8z" fill="#fff" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><text x="214" y="41" font-family="Comic Sans MS,sans-serif" font-size="14" font-weight="bold" fill="#111">Mmmm.</text></svg></div>
+  <h3>FDA psychedelics hearing shows a field divided on approval</h3>
+  <p>Plain note first: this is mid-September news (the Psychiatric Times byline says 2026-09-15, though the page data conflicts), run today because nothing newer cleared the bar this week. The hearing followed an April 2026 executive order, finalized FDA guidance on clinical investigations, and 3 national priority vouchers for sponsors studying psilocybin and methylone.</p><p>Compass Pathways&#x27; COMP360 has durability data through 6 months in treatment-resistant depression and is in a rolling FDA submission, meaning it sends the paperwork in pieces. Definium&#x27;s DT120 completed its third positive phase 3 readout, with a pre-NDA meeting expected in late 2026. A JAMA Psychiatry meta-analysis cited at the hearing found serious adverse events in roughly 4% of trial participants with pre-existing psychiatric conditions. Presenters disagreed on the road to approval.</p><p>On your desk: for your meditation and consciousness study, this is a useful look at how a field argues over evidence for altered states. Note which claims come from trial data and which are opinions.</p>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.psychiatrictimes.com/view/fda-hearing-on-psychedelic-medicine-reveals-a-field-divided-on-the-road-to-approval" target="_blank" rel="noopener">Psychiatric Times: FDA hearing on psychedelic medicine</a> <span class="src-date"></span></li></ul></details>
+  
+</article></div></div>
+</section>
+
+<aside class="crop-box" id="crop-circle-watch" aria-label="Crop Circle Watch">
+  <div class="crop-head"><svg class="crop-glyph" viewBox="0 0 60 60" role="img" aria-label="crop circle glyph">
+<circle cx="30" cy="30" r="27" fill="none" stroke="var(--ink)" stroke-width="2.5"/>
+<circle cx="30" cy="30" r="18" fill="none" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="30" cy="30" r="8" fill="none" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="30" cy="7" r="3" fill="var(--ink)"/>
+</svg><h4>Crop Circle Watch</h4></div>
+  <p class="crop-latest"><b>Latest formation</b> &mdash; Tue Jul 21 &middot; Wanborough Plain, Nr Liddington. No design description was given in the log.</p>
+  <ul class="crop-facts"><li>The 2026 index (updated 11/08/2026) lists 6 formations for January to June and 10 for July.</li><li>July&#x27;s 10 entries run 3 Jul to 21 Jul, nearly all in Wiltshire, with Oxfordshire entries at Odstone Barn (16 Jul) and Alfred&#x27;s Settlement (3 Jul); nothing newer is logged.</li></ul>
+  <p class="crop-history">From the history: In 1991 Doug Bower and Dave Chorley said they had started the phenomenon in 1978 using a plank of wood, rope, and a baseball cap fitted with a loop of wire, and made a circle in front of journalists to show it; that is their account, and it covers the circles they say they made.</p>
+  <p class="crop-sources"><a href="https://cropcircleconnector.com/2026/July2026.html" target="_blank" rel="noopener">Crop Circle Connector: July 2026</a> &middot; <a href="https://cropcircleconnector.com/2026/2026.html" target="_blank" rel="noopener">Crop Circle Connector: 2026 index</a> &middot; <a href="https://en.wikipedia.org/wiki/Crop_circle" target="_blank" rel="noopener">Wikipedia: Crop circle</a></p>
+</aside>
+
+<section id="good-ten" class="beat">
+  <h3 class="beat-head">The Good Ten</h3>
+  <p class="intro">Ten people doing excellent, verified work in their fields this week.</p>
+  <div class="cols cols-2"><div class="col"><ul class="good-ten"><li class="good" id="tcip3-lymphoma-mice">
+  <div class="good-head"><span class="good-num">01</span><strong>Stanford molecule makes lymphoma tumors vanish in mice</strong> <span class="src-date">Wed Oct 7</span></div>
+  <p>TCIP3 is a two-part molecule aimed at BCL6, a protein in diffuse large B-cell lymphoma, the most common non-Hodgkin lymphoma. In mice, &quot;By 11 days, the tumors that had been treated with TCIP3 were completely gone,&quot; with no obvious toxicity (Cell, 2026). Caveat: mice, and it is &quot;not yet ready for use in people.&quot;</p>
+  <p class="good-src"><a href="https://www.sciencedaily.com/releases/2026/10/261005071533.htm" target="_blank" rel="noopener">ScienceDaily (Stanford Medicine)</a></p>
+  
+</li><li class="good" id="crispr-car-t-in-body">
+  <div class="good-head"><span class="good-num">02</span><strong>CRISPR builds cancer-fighting CAR-T cells inside the body</strong> <span class="src-date">Wed Oct 7</span></div>
+  <p>UCSF&#x27;s Justin Eyquem and colleagues used two injected particles to engineer CAR-T cells (immune cells trained to hunt cancer) inside the body. Today&#x27;s versions typically cost $400,000 to $500,000 because cells are removed, engineered and put back. In mice with humanized immune systems, one injection cleared detectable leukemia in nearly all animals within two weeks (Nature, 2026); it still needs clinical trials.</p>
+  <p class="good-src"><a href="https://www.sciencedaily.com/releases/2026/10/261005071532.htm" target="_blank" rel="noopener">ScienceDaily (UCSF)</a></p>
+  
+</li><li class="good" id="saudi-solar-sand-gazelles">
+  <div class="good-head"><span class="good-num">03</span><strong>Saudi solar park becomes a refuge for threatened sand gazelles</strong> <span class="src-date">Wed Oct 7</span></div>
+  <p>A 250-megawatt solar plant serving the Amaala resort sits on a fenced 1,200-acre site inside a 24,500-square-mile nature reserve. Gazelles at the site now number 38; about 3,000 Arabian sand gazelles are left in the wild, and the goal is of more than 500 before reintroduction. The panels&#x27; shade runs 8 to 18 degrees cooler.</p>
+  <p class="good-src"><a href="https://www.goodnewsnetwork.org/saudi-solar-park-proves-brilliant-breeding-ground-for-threatened-sand-gazelles/" target="_blank" rel="noopener">Good News Network</a></p>
+  
+</li></ul></div><div class="col"><ul class="good-ten"><li class="good" id="kansas-strangers-tarp">
+  <div class="good-head"><span class="good-num">04</span><strong>Strangers rebuild shelter for Kansas man after televised plea</strong> <span class="src-date">Wed Oct 7</span></div>
+  <p>Gilbert Kirk, 71, of Wyandotte County, Kansas, and his dog Beetle were trapped for hours when a storm dropped a silver maple through his roof. Two days later a stranger promised to return within 30 minutes with a tarp, lumber and a crew. Kirk said, &quot;it&#x27;s unbelievable, the way the community has come together.&quot;</p>
+  <p class="good-src"><a href="https://www.goodnewsnetwork.org/strangers-showed-up-to-mans-destroyed-house-to-put-up-a-tarp-having-seen-his-televised-plea/" target="_blank" rel="noopener">Good News Network</a></p>
+  
+</li><li class="good" id="dance-magazine-awards-2026">
+  <div class="good-head"><span class="good-num">05</span><strong>Dance Magazine names its 2026 award honorees</strong> <span class="src-date">Thu Oct 1</span></div>
+  <p>This one is a week old (announced October 1). Honorees include Germaine Acogny, Ayodele Casel, Cleo Parker Robinson, Alice Sheppard and Final Bow for Yellowface (Phil Chan and Georgina Pazcoguin). The ceremony is Monday, November 23, at 7 pm EST at the Ailey Citigroup Theater in New York.</p>
+  <p class="good-src"><a href="https://dancemagazine.com/2026-dance-magazine-award-honorees/" target="_blank" rel="noopener">Dance Magazine</a></p>
+  
+</li><li class="good" id="norway-andfjorden-mpa">
+  <div class="good-head"><span class="good-num">06</span><strong>Norway creates Andfjorden, its largest marine protected area</strong> <span class="src-date">Fri Oct 2</span></div>
+  <p>This is from October 2, via a weekly roundup. The new area is about 260,000 football pitches in size and covers cold-water coral reefs and kelp forests. It will be managed by a dedicated board that includes Sámi representatives, and was announced by climate and environment minister Sigrun Aasland.</p>
+  <p class="good-src"><a href="https://www.positive.news/society/democracy/good-news-stories-from-week-40-of-2026/" target="_blank" rel="noopener">Positive News</a></p>
+  
+</li></ul></div></div>
+</section>
+
+<section id="world" class="beat">
+  <h3 class="beat-head">The World, Straight</h3>
+  <p class="ws-note">Facts first. What's known vs. claimed, named sources, each side's framing in one neutral line, no persuasive adjectives. If there's no verified fact, it doesn't run.</p>
+  <ul class="world-straight"><li class="ws-item" id="irkutsk-plague-institute-who">
+  <h3>Russia&#x27;s plague-institute death draws a WHO request for information</h3>
+  <p class="ws-known"><span class="ws-label">Confirmed</span> Russia acknowledged on Sunday (Oct 4) that a 28-year-old employee of a plague research institute in Irkutsk died; she had been diagnosed with &quot;pneumonia of unknown aetiology&quot; (Al Jazeera, with AP and Reuters). WHO&#x27;s Maria Van Kerkhove said the agency does not know the causative agent or how she was infected (Al Jazeera). Russia&#x27;s health regulator said no infections were detected among staff (Al Jazeera).</p>
+  <p class="ws-claimed"><span class="ws-label">Claimed by The Kremlin (spokesman Dmitry Peskov) and the WHO (chief Tedros).</span> Peskov said Oct 7 that &quot;the vast majority of what the media is reporting&quot; about a second case &quot;is false information,&quot; and that facts should come from Rospotrebnadzor. Tedros said reports from two outlets, one Russian, describe a second employee with pneumonia of undetermined cause, and that Russia should respond. The second case is unconfirmed.</p>
+  <ul class="ws-sides"><li><strong>Russia:</strong> Says the reporting is largely inaccurate and that the regulator is the valid source.</li><li><strong>WHO:</strong> Says it cannot ignore the reports and asks Russia for transparency.</li><li><strong>US CDC (Director Erica Schwartz):</strong> Schwartz said Wednesday the risk to the US is &quot;extremely low&quot;; the CDC also said there was &quot;no indication of a broader threat.&quot;</li></ul>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.aljazeera.com/news/2026/10/8/russia-dismisses-reports-of-second-plague-case-as-false-information" target="_blank" rel="noopener">Al Jazeera, Oct 8</a> <span class="src-date"></span></li></ul></details>
+  
+</li><li class="ws-item" id="qatar-tanker-iran-terms">
+  <h3>Tanker hit off Qatar as US sets terms for an Iran deal</h3>
+  <p class="ws-known"><span class="ws-label">Confirmed</span> UKMTO (the UK&#x27;s maritime trade monitoring office) said a tanker was hit by several projectiles about 94 km north of Madinat ash Shamal, off Qatar&#x27;s north coast, and reported casualties without numbers; Qatar had not commented (Al Jazeera, Oct 8). UKMTO said Tuesday there had been nine tanker attacks in the Strait of Hormuz in October so far. No party has been named as responsible for the attacks.</p>
+  <p class="ws-claimed"><span class="ws-label">Claimed by The US (Vice President JD Vance, Secretary of State Marco Rubio) and Iran (President Pezeshkian, via IRNA).</span> Vice President JD Vance has called for a &quot;meaningful&quot; reduction in Iran&#x27;s enrichment capacity. Rubio said Iran has &quot;lost complete control&quot; of the strait and &quot;Iran cannot have a nuclear weapon.&quot; Pezeshkian, via IRNA on Monday, said negotiations are &quot;futile&quot; because the US attacked after previous talks.</p>
+  <ul class="ws-sides"><li><strong>United States:</strong> Iran must not have a nuclear weapon and must reduce enrichment.</li><li><strong>Iran:</strong> Proposed reopening Hormuz after seven days, with the US lifting its blockade and sanctions and releasing frozen assets, then nuclear talks; Trump later rejected it.</li></ul>
+  <details class="sources"><summary>Receipts (2)</summary><ul><li><a href="https://www.aljazeera.com/news/2026/10/8/tanker-hit-by-multiple-projectiles-off-north-coast-of-qatar-ukmto-says" target="_blank" rel="noopener">Al Jazeera, Oct 8</a> <span class="src-date"></span></li><li><a href="https://www.aljazeera.com/news/2026/10/7/us-sets-new-demands-for-iran-deal-what-are-they" target="_blank" rel="noopener">Al Jazeera, Oct 7</a> <span class="src-date"></span></li></ul></details>
+  
+</li><li class="ws-item" id="uk-jerusalem-mission">
+  <h3>UK keeps Jerusalem consulate open as a smaller &quot;Mission&quot;</h3>
+  <p class="ws-known"><span class="ws-label">Confirmed</span> Israel ordered the UK consulate general in East Jerusalem closed by Oct 8 over UK sanctions on Israeli settlements (Al Jazeera). Reuters journalists saw workers remove the &quot;British Consulate General&quot; plaque Thursday while the UK flag still flew. The building continues as the &quot;UK Mission, Jerusalem.&quot;</p>
+  <p class="ws-claimed"><span class="ws-label">Claimed by The UK government (Foreign Secretary Ed Miliband) and the Israeli government (Foreign Minister Gideon Saar).</span> Miliband said the UK does not accept that Israel has the legal right to close it and that the building &quot;will not be closing.&quot; Saar said Israel authorised seven UK diplomats to stay while 20, including the consul general, leave, and said on X that no action against Israel goes without retaliation.</p>
+  <ul class="ws-sides"><li><strong>United Kingdom:</strong> Sanctions stand, no reciprocal action while talks continue, and the mission keeps serving Palestinians.</li><li><strong>Israel:</strong> The closure responds to UK sanctions, and a reduced presence is permitted.</li></ul>
+  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.aljazeera.com/news/2026/10/8/signage-at-uk-consulate-in-east-jerusalem-removed-as-israels-deadline-over" target="_blank" rel="noopener">Al Jazeera, Oct 8</a> <span class="src-date"></span></li></ul></details>
+  
+</li></ul>
+</section>
+
+
+
+
+<aside class="tv-box" id="on-the-couch" aria-label="On the Couch">
+  <div class="crop-head"><svg class="couch-glyph" viewBox="0 0 60 60" role="img" aria-label="television glyph">
+<rect x="8" y="14" width="44" height="28" rx="2" fill="none" stroke="var(--ink)" stroke-width="2.5"/>
+<path d="M22 46l-6 8M38 46l6 8" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="30" cy="28" r="7" fill="none" stroke="var(--ink)" stroke-width="2"/>
+</svg><h4>On the Couch</h4></div>
+  <p class="tv-empty">Nothing on tonight.</p>
+  
+</aside>
+
+
+<aside class="storm-box" id="storm-watch" aria-label="Storm Watch">
+  <div class="crop-head"><svg class="storm-glyph" viewBox="0 0 60 60" role="img" aria-label="storm watch glyph">
+<path d="M30 8a18 18 0 1 0 0.01 0" fill="none" stroke="var(--ink)" stroke-width="2.5"/>
+<path d="M30 8c8 4 12 10 12 16s-6 10-12 10" fill="none" stroke="var(--ink)" stroke-width="2"/>
+<circle cx="30" cy="30" r="3.5" fill="var(--ink)"/>
+</svg><h4>Storm Watch</h4></div>
+  <ul class="storm-active"><li><b>Hurricane Isaias</b> (Atlantic (Gulf of Mexico)) &mdash; Hurricane &middot; 80 mph peak &middot; 979 mb. Central Gulf of Mexico, 23.3N 91.2W NHC urges rushing protection of life and property from storm surge and damaging winds along the Gulf Coast warning area. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPAT4+shtml/080854.shtml" target="_blank" rel="noopener">NHC Public Advisory #7, 4:00 AM CDT Oct 8</a></li><li><b>Tropical Storm Simon</b> (Eastern Pacific) &mdash; Tropical storm &middot; 50 mph peak &middot; 1000 mb. Off southwestern Mexico, 15.4N 103.1W Tropical Storm Watch for the coast of southwestern Mexico. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP5+shtml/080929.shtml" target="_blank" rel="noopener">NHC Public Advisory #4, 3:00 AM CST Oct 8</a></li></ul>
+  <p class="storm-outlook"><b>Winter outlook:</b> El Niño Advisory in effect: NOAA CPC says &quot;El Niño is strengthening, with a greater than 90% chance of a very strong event&quot; this fall and winter. (Still the Sept 10 discussion; the October one had not posted at press time.)</p>
+  <p class="storm-sources"><a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a> &middot; <a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO Diagnostic Discussion, 10 Sep 2026</a></p>
+</aside>
+
+
+<aside class="sky-box" id="sky" aria-label="Sky">
+  <div class="crop-head"><svg class="sky-glyph" viewBox="0 0 60 60" role="img" aria-label="sky glyph">
+<path d="M38 12a16 16 0 1 0 10 27 13 13 0 0 1-10-27z" fill="none" stroke="var(--ink)" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="14" cy="16" r="1.6" fill="var(--ink)"/>
+<circle cx="20" cy="9" r="1.2" fill="var(--ink)"/>
+<circle cx="10" cy="26" r="1.2" fill="var(--ink)"/>
+</svg><h4>Sky</h4></div>
+  <p class="sky-moon"><b>Moon:</b> Waning crescent; new moon Oct 10-11 (sources differ by a day)</p>
+  <p class="sky-tonight"><b>Tonight's sky:</b> The Draconid meteor shower peaks overnight Oct 8-9 under nearly moonless skies. Look in the evening after dark; expect only about 5 meteors an hour, no outburst predicted. <span class="sky-src"><a href="https://www.space.com/draconid-meteor-shower-2026-guide-where-when-how-to-see-draconids" target="_blank" rel="noopener">Space.com: Draconid meteor shower 2026</a> &middot; <a href="https://catalina.lpl.arizona.edu/moon-phases/month/2026-10" target="_blank" rel="noopener">LPL Catalina: Moon phases, October 2026</a></span></p>
+  <div class="sky-hd"><h5>Human Design transits</h5><ul><li><b>Patrick:</b> From the HD Toolkit: Saturn is still in your own Gate 21 (The Hunter, Heart), completing your 21-45 channel; Uranus in your Gate 20 (The Now) completes 20-34; Neptune in Gate 25 completes 25-51, Pluto in Gate 41 completes 30-41, and the North Node sits in your Gate 30 (Recognition of Feelings) since July 25.</li><li><b>Travis:</b> From the HD Toolkit: Neptune is still in Gate 25 (The Spirit of the Self, G centre), one of your own gates, where it has been since Sept 3, 2025.</li></ul></div>
+</aside>
+
+
+<section class="made" id="made">
+  <h3 class="beat-head">How this paper is made</h3>
+  <p>Who made today&#x27;s paper, and roughly what it cost in tokens (the chunks of text models read and write).</p>
+  <div class="tablewrap"><table><thead><tr><th>Stage</th><th>Model</th><th class="num">Tokens (this issue)</th><th>Plain words</th></tr></thead><tbody><tr><td>Scouts ×5 (AI, Spirit + Crop Circle + Grant Watch, Good Ten, World, TV/Almanac)</td><td>Sonnet</td><td class="num">≈323k</td><td>Spirit found nothing in the window; Good Ten verified 6; World verified 3</td></tr><tr><td>Writer (incl. lead)</td><td>Sonnet</td><td class="num">≈66k</td><td>Opus lead dropped: budget already exceeded after scouting</td></tr><tr><td>Fact-checker, fresh context</td><td>Sonnet</td><td class="num">≈81k</td><td>105 claims: 94 OK, 2 wrong, 6 unsupported, 3 unverifiable; 15 fixes applied (incl. 3 style), Rachel cut</td></tr><tr><td>Managing editor (plan, Personal News, HD transits, fixes, build, publish, file, email)</td><td>Opus 5.5 session</td><td class="num">≈130k</td><td></td></tr></tbody></table></div>
+  <p>Total ≈600k tokens, over the 300k daily target. Scouting is still where the budget goes.</p>
+</section>
+
+<footer>Made by Patrick &amp; Travis. Daily edition, closed 2026-10-08. Every story links to its source; every number was checked by a second model that did not write it.</footer>
+
+</div>
+<footer class="site-foot">The Gayzette &middot; Patrick &amp; Travis &middot; Everyone else collects your data to sell you something. We collect your data to empower you.<br><a href="/editions/">Past editions</a></footer>
+</body></html>
