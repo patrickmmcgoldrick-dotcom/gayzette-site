@@ -1,459 +1,869 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="The Gayzette: a newspaper if news was actually real."><title>The Gayzette: Sunday 2026-09-27</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="The Gayzette, sunday edition, 2026-09-27. A personal daily by Patrick and Travis.">
+<title>The Gayzette: Astronomers pick up radio signals from a planet 64 light-years away</title>
+<link rel="alternate" type="application/rss+xml" title="The Gayzette" href="/feed.xml">
+<style>/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/fonts/DMSans-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/fonts/DMSans-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-italic-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-italic-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-italic-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-italic-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-italic-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-italic-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-normal-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ===== The Gayzette site.css — v2, from the Claude Design Labs look (Magazine Editorial) ===== */
 :root{
-  --paper:#F3EFE6; --paper-2:#EAE3D3; --paper-3:#E0D7C2; --ink:#221F19; --ink-2:#5A5346; --ink-3:#8B8272;
-  --rule:#CBBFA4; --rule-2:#A99A79; --stamp:#A6304A; --stamp-2:#3A6B5C; --stamp-soft:rgba(166,48,74,.10);
-  --focus:#2F5D8A;
-  --serif:"Newsreader",Georgia,"Times New Roman",serif;
-  --display:"Old Standard TT","Fraunces","Iowan Old Style",Georgia,serif;
-  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --paper:#FBF8F1; --paper-2:#F3EEE2; --paper-3:#EDE6D6; --ink:#222222; --ink-2:#6B645A; --ink-3:#6B645A;
+  --hair:#E4DCCB; --rule:#E4DCCB; --rule-2:#CDBF9F; --accent:#C2603C; --accent-2:#A24E2F;
+  --serif:Newsreader,Georgia,serif; --display:Fraunces,Georgia,serif; --label:'DM Sans',system-ui,sans-serif;
   color-scheme:light;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased;font-optical-sizing:auto}
-a{color:inherit;text-decoration-color:var(--rule-2);text-underline-offset:3px}
-a:hover{text-decoration-color:var(--stamp)}
-:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
+body{font-family:var(--serif);font-size:19px;line-height:1.65;overflow-wrap:break-word}
+main,.shell{min-width:0}
+a{color:var(--accent)} a:hover{color:var(--accent-2)}
 img,svg{max-width:100%}
-.wrap{max-width:64rem;margin:0 auto;padding:1.25rem 1rem 5rem}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:16px;z-index:50;background:var(--ink);color:var(--paper);padding:12px 16px;font:500 13px var(--label);letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.skip:focus{left:16px;color:var(--paper)}
+.shell{max-width:1200px;margin:0 auto;padding:0 24px}
 
-/* ---- Masthead ---- */
-header.mast{border-bottom:4px double var(--ink-2);padding-bottom:.7rem;margin-bottom:.4rem}
-.mast-top{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;border-bottom:1px solid var(--rule-2);padding-bottom:.5rem;margin-bottom:.5rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
-.mast-top .dateline{white-space:nowrap}
-.mast-top .weather-box{border:1px solid var(--ink-2);padding:.3rem .6rem;font-size:.66rem;letter-spacing:.05em}
-.mast-name{display:flex;align-items:baseline;justify-content:center;gap:.6rem;flex-wrap:wrap;text-align:center;padding:.3rem 0 .15rem}
-.mast-name h1{font-family:var(--display);font-weight:700;font-size:clamp(2.6rem,10vw,5rem);line-height:.92;margin:0;letter-spacing:-.01em}
-.mast-sub{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);text-align:center;margin:.1rem 0 0}
-.mast-row2{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2);padding-top:.55rem;border-top:1px solid var(--rule-2)}
-.mast-row2 b{color:var(--stamp);font-weight:600}
+/* labels / kickers */
+.label,.kicker,.byline,.when,.nav a,.chip{font-family:var(--label);font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.kicker{color:var(--accent);margin:0 0 14px}
+.label{color:var(--ink-2);margin:0 0 8px}
+.byline{color:var(--ink-2);margin:22px 0 0}
 
-/* ---- Today's Receipts index box ---- */
-.index-box{border:1.5px solid var(--ink);margin:1rem 0 1.5rem;padding:.85rem 1rem;background:var(--paper-2)}
-.index-box h2{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin:0 0 .55rem;text-align:center;border-bottom:1px solid var(--rule-2);padding-bottom:.5rem}
-.index-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.25rem 1.2rem;font-family:var(--mono);font-size:.76rem}
-.index-list a{display:flex;justify-content:space-between;gap:.5rem;padding:.18rem 0;text-decoration:none;border-bottom:1px dotted var(--rule)}
-.index-list a:hover{color:var(--stamp)}
+/* masthead */
+.strip{display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--hair);font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.masthead{padding:64px 0 48px;text-align:center}
+.masthead a{text-decoration:none;color:var(--ink)}
+.masthead h1{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 80;font-optical-sizing:auto;font-size:clamp(52px,9vw,120px);line-height:.95;letter-spacing:-.02em;margin:0}
+.masthead p{font-family:var(--display);font-style:italic;font-weight:400;font-size:19px;color:var(--ink-2);margin:20px 0 0}
+.nav{display:flex;gap:32px;overflow-x:auto;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);scrollbar-width:none;white-space:nowrap}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;min-height:48px;padding:0 2px;text-decoration:none;color:var(--ink);border-bottom:2px solid transparent;margin-bottom:-1px}
+.nav a:hover,.nav a.on{color:var(--accent);border-bottom-color:var(--accent)}
 
-/* ---- Editor's note ---- */
-.ednote{margin:1.3rem 0 1.2rem;padding:0 0 1.3rem;border-bottom:1px solid var(--rule)}
-.ednote .byline{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--stamp);margin:0 0 .55rem}
-.ednote p{margin:0 0 .85rem;font-size:1.01em}
-.ednote .byline + p::first-letter{font-family:var(--display);font-size:2.9em;float:left;line-height:.8;padding:.06em .08em 0 0;font-weight:700}
+/* sections */
+main{display:block}
+.sec{padding:96px 0 0}
+.sec.ruled{margin-top:96px;padding-top:72px;border-top:1px solid var(--hair)}
+.sec-head h2,.h-sec{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:clamp(34px,4.5vw,52px);line-height:1.05;letter-spacing:-.015em;margin:0;text-wrap:pretty}
+.sec-head .sub,.deck{font-family:var(--display);font-style:italic;font-weight:400;color:var(--ink-2);text-wrap:pretty}
+.sec-head .sub{font-size:21px;line-height:1.4;margin:16px 0 0;max-width:620px}
+.deck{font-size:22px;line-height:1.35;margin:16px 0 0}
+.rule-short{width:48px;height:2px;background:var(--accent);margin:24px 0 0}
 
-/* ---- Section / column layout ---- */
-.beat-head{font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin:2.4rem 0 0;padding:.45rem 0;border-top:1px solid var(--rule-2);border-bottom:1px solid var(--rule);display:flex;align-items:center;gap:.55rem}
-.beat-head::before{content:"";width:.5rem;height:.5rem;background:var(--stamp);display:inline-block;transform:rotate(45deg)}
-.cols{display:grid;grid-template-columns:1fr;gap:0 2.1rem}
-@media(min-width:640px){.cols.cols-2{grid-template-columns:1fr 1fr}}
-@media(min-width:900px){.cols.cols-3{grid-template-columns:1fr 1fr 1fr}}
-.cols .col{min-width:0}
-.cols.cols-2 .col:first-child,.cols.cols-3 .col:not(:last-child){border-right:0}
-@media(min-width:640px){.cols.cols-2 .col:first-child{border-right:1px solid var(--rule);padding-right:1.4rem}}
-@media(min-width:900px){.cols.cols-3 .col:not(:last-child){border-right:1px solid var(--rule);padding-right:1.4rem}}
-.story{padding:1.5rem 0 1.2rem;border-bottom:1px solid var(--rule)}
-.cols .story:last-child{border-bottom:0}
-.story.lead{padding:0 0 1.6rem;border-bottom:2px solid var(--ink-2);margin-bottom:1.2rem}
-.leads-row{display:grid;grid-template-columns:1fr;gap:0 2.2rem}
-@media(min-width:760px){.leads-row{grid-template-columns:1fr 1fr}.leads-row .story.lead:first-child{border-right:1px solid var(--rule-2);padding-right:2.2rem}}
-.story.lead h2{font-size:clamp(1.7rem,5.6vw,2.3rem)}
-.story h2{font-family:var(--display);font-weight:700;font-size:clamp(1.35rem,4.4vw,1.65rem);line-height:1.12;margin:.4rem 0 .5rem;letter-spacing:-.008em;text-wrap:balance}
-.story h3{font-family:var(--display);font-weight:700;font-size:1.18rem;line-height:1.18;margin:.3rem 0 .4rem;text-wrap:balance}
-.dek{font-style:italic;color:var(--ink-2);margin:0 0 1rem;font-size:1.03em;line-height:1.4}
-.story p{margin:0 0 .9rem}
-.eyebrow{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem .8rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
-.wonder{color:var(--stamp);letter-spacing:.1em;font-size:.68rem}
-.conf{border:1px solid var(--rule-2);padding:.05rem .4rem;border-radius:2px;color:var(--ink-3)}
-.desk{background:var(--paper-2);border-left:3px solid var(--stamp);padding:.7rem .9rem;margin:1.1rem 0 .85rem;font-size:.93em;line-height:1.5}
-.desk-label{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--stamp);margin-right:.4rem}
-.cal-pill{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.02em;border:1px solid var(--rule-2);padding:.1rem .5rem;border-radius:999px;margin-left:.3rem;white-space:nowrap;vertical-align:middle}
-.sources{font-family:var(--mono);font-size:.74rem;color:var(--ink-2);margin:.55rem 0}
-.sources summary{cursor:pointer;letter-spacing:.03em}
-.sources ul{margin:.4rem 0 0;padding-left:1.1rem;line-height:1.5}
-.src-date{color:var(--ink-3)}
-.react{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:.65rem}
-.react button{font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;background:transparent;color:var(--ink-2);border:1px solid var(--rule-2);border-radius:999px;padding:.35rem .8rem;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
-.react button:hover{border-color:var(--ink-2);color:var(--ink)}
-.react button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.react button[disabled]{opacity:.55;cursor:default}
-.react-note,.prop-state{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+/* headlines */
+.h-hero{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-optical-sizing:auto;font-size:clamp(34px,5vw,64px);line-height:1.04;letter-spacing:-.015em;margin:0;text-wrap:pretty}
+.h-feature{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:clamp(28px,3.2vw,36px);line-height:1.1;letter-spacing:-.012em;margin:0;text-wrap:pretty}
+.h-card{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:26px;line-height:1.15;letter-spacing:-.01em;margin:0;text-wrap:pretty}
+.h-small{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:22px;line-height:1.2;letter-spacing:-.01em;margin:0;text-wrap:pretty}
+.hl a{color:inherit;text-decoration:none}
+.hl a:hover{color:var(--accent)}
 
-/* ---- Illustrations (comic-style inline SVG) ---- */
-.illo{width:100%;margin:0 0 .8rem;border:2px solid var(--ink);background:var(--paper-2);line-height:0}
-.illo svg{display:block;width:100%;height:auto}
-.illo-fallback{display:block}
+/* body copy */
+.body p{margin:14px 0 0;max-width:640px}
+.body.wide p{max-width:680px}
+.srcline{display:block;margin-top:14px;font-style:italic;font-size:16px}
+.srcline a{color:var(--accent);text-decoration:none}
+.srcline a:hover{text-decoration:underline}
+.srcline.small{font-size:15px;margin-top:8px}
+.meta{font-family:var(--label);font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.chip{display:inline-block;border:1px solid var(--hair);padding:2px 8px;color:var(--ink-2);font-size:11px;margin-left:8px}
+.sources{margin:14px 0 0;font:15px/1.5 var(--serif);color:var(--ink-2)}
+.sources summary{cursor:pointer;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase}
+.sources ul{margin:8px 0 0;padding-left:1.1rem}
+.sources .d{color:var(--ink-2)}
+.more-read{margin:10px 0 0}
+.more-read summary{cursor:pointer;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.more-read .body p{max-width:none}
+.desk{margin:22px 0 0;padding:20px 24px;background:var(--paper-2);max-width:640px;font-size:17px;line-height:1.5}
+.desk .label{margin:0 0 6px}
+.cal-pill{display:inline-block;margin-top:8px;font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--rule-2);padding:2px 10px;color:var(--ink-2)}
 
-/* ---- Crop Circle Watch sidebar ---- */
-.crop-box{border:1.5px dashed var(--rule-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
-.crop-box .crop-head{display:flex;align-items:center;gap:.55rem;margin:0 0 .6rem}
-.crop-box .crop-glyph{width:2.2rem;height:2.2rem;flex:none}
-.crop-box h4{margin:0;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
-.crop-box .crop-latest{margin:0 0 .5rem;line-height:1.45}
-.crop-box .crop-latest b{font-family:var(--display)}
-.crop-box ul.crop-facts{margin:.3rem 0 .6rem;padding-left:1.1rem}
-.crop-box ul.crop-facts li{margin:.25rem 0;font-size:.95em}
-.crop-box .crop-history{margin:.5rem 0 0;font-style:italic;color:var(--ink-2);font-size:.93em}
-.crop-box .crop-sources{margin:.5rem 0 0;font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
-.crop-box .crop-sources a{color:inherit}
-.house-box{border:1.5px dashed var(--stamp-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
-.house-box .house-glyph{width:2.2rem;height:2.2rem;flex:none}
-.house-box .house-note{margin:0 0 .7rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.03em;color:var(--ink-3);text-transform:uppercase}
-.house-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
-@media(max-width:640px){.house-grid{grid-template-columns:1fr}}
-.house-sub h5{margin:0 0 .4rem;font-family:var(--display);font-size:.95rem}
-.house-sub ul{margin:0;padding-left:1.1rem}
-.house-sub li{margin:.3rem 0;font-size:.95em;line-height:1.4}
-.house-tie{display:block;font-style:italic;color:var(--ink-2);font-size:.88em;margin-top:.1rem}
-.house-empty{margin:0;color:var(--ink-3);font-style:italic}
-.tv-box{border:1.5px dashed var(--rule-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
-.tv-box .couch-glyph{width:2.2rem;height:2.2rem;flex:none}
-.tv-box ul.tv-tonight{margin:.3rem 0 .6rem;padding-left:1.1rem}
-.tv-box ul.tv-tonight li{margin:.3rem 0;font-size:.95em;line-height:1.4}
-.tv-box .tv-empty{margin:0;color:var(--ink-3);font-style:italic}
-.tv-box .tv-news{margin:.5rem 0 0;font-size:.92em}
-.tv-box .tv-alert{margin:.5rem 0 0;font-weight:600}
-.tv-box .tv-src{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
-.tv-week{display:flex;flex-direction:column;gap:.5rem;margin:.4rem 0}
-.tv-week-row{display:grid;grid-template-columns:3.4rem 1fr;gap:.6rem;align-items:baseline}
-.tv-week-day{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3)}
-.tv-week-item{font-size:.93em;line-height:1.4;margin:.15rem 0}
-.tv-try{margin-top:.6rem}
-.tv-try h5{margin:0 0 .3rem;font-family:var(--display);font-size:.95rem}
-.tv-try ul{margin:0;padding-left:1.1rem}
-.tv-try li{margin:.25rem 0;font-size:.92em}
-.specials-box{border:1.5px dashed var(--stamp-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
-.specials-box .specials-glyph{width:2.2rem;height:2.2rem;flex:none}
-.specials-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
-@media(max-width:640px){.specials-grid{grid-template-columns:1fr}}
-.special-col h5{margin:0 0 .4rem;font-family:var(--display);font-size:.95rem}
-.special-col ul{margin:0;padding-left:1.1rem}
-.special-col li{margin:.3rem 0;font-size:.95em;line-height:1.4}
-.special-empty{margin:0;color:var(--ink-3);font-style:italic}
-.special-src{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
-.storm-box{border:1.5px dashed var(--rule-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
-.storm-box .storm-glyph{width:2.2rem;height:2.2rem;flex:none}
-.storm-box ul.storm-active{margin:.3rem 0 .6rem;padding-left:1.1rem}
-.storm-box ul.storm-active li{margin:.35rem 0;font-size:.95em;line-height:1.45}
-.storm-box .storm-empty{margin:0;color:var(--ink-3);font-style:italic}
-.storm-box .storm-outlook{margin:.5rem 0 0;font-size:.92em;line-height:1.45}
-.storm-box .storm-sources{margin:.5rem 0 0;font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
-.storm-box .storm-sources a{color:inherit}
-.sky-box{border:1.5px dashed var(--stamp-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
-.sky-box .sky-glyph{width:2.2rem;height:2.2rem;flex:none}
-.sky-box .sky-moon{margin:0 0 .4rem}
-.sky-box .sky-tonight{margin:.2rem 0 .4rem;line-height:1.45}
-.sky-box .sky-src{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
-.sky-hd{margin-top:.5rem}
-.sky-hd h5{margin:0 0 .3rem;font-family:var(--display);font-size:.9rem}
-.sky-hd ul{margin:0;padding-left:1.1rem}
-.sky-hd li{margin:.3rem 0;font-size:.92em;line-height:1.4}
+/* art */
+.art{display:block;width:100%;background:var(--paper-3);line-height:0;margin:0}
+.art svg{display:block;width:100%;height:auto}
+.art.r32{aspect-ratio:auto}
 
+/* hero */
+.hero{padding:56px 0 0}
+.hero .art{margin-bottom:36px}
+.hero .txt{max-width:760px}
+.hero.sunday .h-hero{font-size:clamp(38px,6vw,80px);line-height:1}
+.hero-body{margin-top:12px}
 
-/* ---- Briefly / receipt box ---- */
-.receipt{margin:2.6rem 0 0;padding:1.1rem 1rem 1.3rem;border:1px dashed var(--rule-2);background:var(--paper-2);font-family:var(--mono);font-size:.79rem;line-height:1.5;color:var(--ink)}
-.receipt h3{margin:0 0 .85rem;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;text-align:center;font-weight:600}
-.receipt ul{list-style:none;margin:0;padding:0}
-.receipt li{display:grid;grid-template-columns:5rem 1fr;gap:.1rem .6rem;padding:.5rem 0;border-top:1px dotted var(--rule-2)}
-.receipt li:first-child{border-top:0}
-.b-date{color:var(--ink-2);font-variant-numeric:tabular-nums}
-.b-beat{grid-column:2;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
-.b-line{grid-column:2;font-family:var(--serif);font-size:.96rem;line-height:1.45}
-.receipt .total{margin:1rem 0 0;padding-top:.65rem;border-top:1px dotted var(--rule-2);display:flex;justify-content:space-between;letter-spacing:.06em;text-transform:uppercase}
+/* editor's note */
+.ednote{max-width:620px;margin:0 auto;padding-top:96px}
+.ednote p.t{margin:16px 0 0}
+.ednote .byline{margin:0 0 18px}
 
-/* ---- Calendar ---- */
-.calendar ul{list-style:none;margin:1rem 0 0;padding:0}
-.calendar li{display:grid;grid-template-columns:5rem 1fr;gap:0 .8rem;padding:.5rem 0;border-bottom:1px solid var(--rule);align-items:baseline}
-.c-date{font-family:var(--mono);font-size:.76rem;color:var(--stamp);font-variant-numeric:tabular-nums}
-.c-label{font-size:1em}
-.c-beat{grid-column:2;font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+/* flex layouts */
+.row{display:flex;flex-wrap:wrap;gap:48px 32px;align-items:flex-start}
+.row>.main{flex:2 1 480px;min-width:0}
+.row>.side{flex:1 1 260px;min-width:0}
+.row>.half{flex:1 1 380px;min-width:0}
+.side-list>*{padding:20px 0;border-top:1px solid var(--hair)}
+.side-list>.label{padding:0;border:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:64px 40px}
+.grid.g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{min-width:0;border-top:1px solid var(--hair);padding-top:28px}
+.card .art{margin-bottom:22px}
 
-/* ---- Beats page ---- */
-.beats ul{list-style:none;margin:0;padding:0}
-.beats li{padding:1.05rem 0;border-bottom:1px solid var(--rule)}
-.beats li p{margin:.32rem 0 .55rem;font-size:.96em;color:var(--ink-2)}
-.prop-head{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap}
-.beats strong{font-family:var(--display);font-weight:700;font-size:1.12em;letter-spacing:-.005em}
-.stand{display:grid;grid-template-columns:1fr auto;gap:.6rem 1rem;align-items:start}
-.stand .react{margin-top:.2rem}
-.stand strong{margin-right:.5rem}
-@media(max-width:560px){.stand{grid-template-columns:1fr}}
+/* good ten */
+.good{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:0 56px}
+.good li{display:flex;gap:24px;padding:24px 0;border-top:1px solid var(--hair);min-width:0}
+.good .n{font:500 13px var(--label);letter-spacing:.08em;color:var(--accent);padding-top:7px;min-width:28px}
+.good .h{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:20px;line-height:1.25;margin:0}
+.good p{margin:6px 0 0;font-size:18px;line-height:1.6}
+.good .meta{display:block;margin-top:2px}
 
-/* ---- Good Ten ---- */
-.good-ten{list-style:none;margin:1rem 0 0;padding:0}
-.good{padding:1rem 0;border-bottom:1px dotted var(--rule-2)}
-.good:last-child{border-bottom:0}
-.good-head{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
-.good-num{font-family:var(--mono);color:var(--stamp);font-weight:600;font-size:.85rem}
-.good strong{font-family:var(--display);font-weight:700}
-.good p{margin:.35rem 0}
-.good-src{font-family:var(--mono);font-size:.72rem;color:var(--ink-2)}
+/* world */
+.ws-note{font-family:var(--display);font-style:italic;font-size:19px;line-height:1.45;color:var(--ink-2);margin:18px 0 0;max-width:680px}
+.ws{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:0 56px}
+.ws>li{padding:28px 0;border-top:1px solid var(--hair);min-width:0}
+.ws p{margin:12px 0 0;font-size:18px;line-height:1.6}
+.ws .tag{font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+.ws .claimed{color:var(--ink-2)}
+.ws ul.sides{list-style:none;margin:14px 0 0;padding:12px 0 0 16px;border-left:2px solid var(--hair)}
+.ws ul.sides li{margin:6px 0;font-size:17px;line-height:1.5}
 
-/* ---- The World, Straight ---- */
-.world-straight{list-style:none;margin:1rem 0 0;padding:0}
-.ws-item{padding:1.1rem 0;border-bottom:1px solid var(--rule)}
-.ws-item h3{font-family:var(--display);font-weight:700;font-size:1.2rem;margin:0 0 .5rem}
-.ws-label{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--stamp);margin-right:.4rem}
-.ws-known{margin:0 0 .4rem}
-.ws-claimed{margin:0 0 .4rem;color:var(--ink-2)}
-.ws-sides{list-style:none;margin:.3rem 0 .5rem;padding:.6rem .8rem;background:var(--paper-2);border-left:3px solid var(--stamp-2)}
-.ws-sides li{margin:.25rem 0;font-size:.94em}
-.ws-note{font-family:var(--mono);font-size:.74rem;color:var(--ink-3);margin:0 0 1rem;padding:.6rem .8rem;border:1px dashed var(--rule-2)}
+/* dashed boxes */
+.boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;margin-top:48px;align-items:start}
+.box{border:1.5px dashed var(--rule-2);padding:24px 26px 26px;background:transparent;font-size:17px;line-height:1.55;min-width:0}
+.box.wide{grid-column:1/-1}
+.box h4{margin:0 0 14px;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.box h5{margin:16px 0 6px;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.box p{margin:8px 0 0}
+.box ul{margin:8px 0 0;padding-left:1.15rem}
+.box li{margin:6px 0}
+.box .src,.box a{font-size:15px}
+.box .empty{color:var(--ink-2);font-style:italic}
+.box .alert{font-weight:600}
+.cols-spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:8px 40px}
+.tvweek{display:grid;grid-template-columns:3.4rem 1fr;gap:6px 14px;margin-top:8px}
+.tvweek .day{font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);padding-top:3px}
+.tvweek .shows div{margin:2px 0 8px}
 
-/* ---- How it's made ---- */
-.made p{margin:.85rem 0}
-.tablewrap{overflow-x:auto;margin:1rem 0}
-table{border-collapse:collapse;width:100%;font-size:.88rem;min-width:32rem}
-th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--rule);vertical-align:top}
-th{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
-td:nth-child(2){font-family:var(--mono);font-size:.78rem;white-space:nowrap}
-.num{text-align:right;font-family:var(--mono);font-size:.78rem;font-variant-numeric:tabular-nums;white-space:nowrap}
-footer{margin-top:2.8rem;padding-top:1rem;border-top:4px double var(--ink-2);font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;color:var(--ink-3);line-height:1.7}
-.intro{margin:1rem 0 0;color:var(--ink-2)}
-@media (prefers-reduced-motion: reduce){*{transition:none!important}}
-.site-banner{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-align:center;padding:.4rem 1rem;background:var(--paper-2);color:var(--ink-2);border-bottom:1px solid var(--rule-2)}.site-foot{max-width:60rem;margin:2rem auto 2.5rem;padding:1rem 1rem 0;border-top:1px solid var(--rule-2);font-family:var(--mono);font-size:.7rem;line-height:1.7;color:var(--ink-3);text-align:center}.site-foot a{color:inherit}</style></head><body>
-<div class="wrap">
+/* briefly + calendar */
+.lines{list-style:none;margin:32px 0 0;padding:0;max-width:860px}
+.lines li>*{min-width:0}
+.lines li{display:grid;grid-template-columns:96px 1fr;gap:4px 24px;padding:16px 0;border-top:1px solid var(--hair)}
+.lines .when{color:var(--ink-2);padding-top:4px}
+.lines .what{font-size:18px;line-height:1.55}
+.lines .tag{display:block;font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-top:2px}
 
-<header class="mast">
-  <div class="mast-top">
-    <span class="dateline">Sunday, September 27, 2026 &middot; Los Angeles</span>
-    <span class="weather-box">Fair, low 60s</span>
+/* how it's made */
+.made table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.45}
+.made th,.made td{text-align:left;padding:10px 12px 10px 0;border-bottom:1px solid var(--hair);vertical-align:top}
+.made th{font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.made .num{text-align:right;white-space:nowrap}
+.tablewrap{overflow-x:auto;margin:20px 0}
+.made p{max-width:680px;margin:14px 0 0}
+
+/* archive */
+.arch{list-style:none;margin:40px 0 0;padding:0;max-width:860px}
+.arch li{display:grid;grid-template-columns:120px 1fr;gap:4px 24px;padding:18px 0;border-top:1px solid var(--hair);align-items:baseline}
+.arch .when{color:var(--ink-2)}
+.arch .h-small a{color:inherit;text-decoration:none}.arch .h-small a:hover{color:var(--accent)}
+.arch .kind{display:block;font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-top:4px}
+.month{margin:56px 0 0;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+
+/* footer */
+.foot{max-width:1200px;margin:140px auto 0;padding:48px 24px 64px;border-top:1px solid var(--hair)}
+.foot .top{display:flex;flex-wrap:wrap;gap:32px 64px;justify-content:space-between}
+.foot .brand{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 80;font-size:28px;letter-spacing:-.015em;margin:0}
+.foot .tag{font-family:var(--display);font-style:italic;font-size:16px;color:var(--ink-2);margin:8px 0 0}
+.foot nav{display:flex;flex-wrap:wrap;gap:4px 28px;align-items:flex-start}
+.foot nav a{display:inline-flex;align-items:center;min-height:44px;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);text-decoration:none}
+.foot nav a:hover{color:var(--accent)}
+.foot .fine{font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin:40px 0 0}
+.foot .fine a{color:inherit}
+
+/* mobile */
+@media (max-width:640px){
+  body{font-size:18px}
+  .shell{padding:0 16px}
+  .masthead{padding:40px 0 32px}
+  .sec{padding-top:64px}.sec.ruled{margin-top:64px;padding-top:48px}
+  .ednote{padding-top:64px}
+  .bleed{margin-left:-16px;margin-right:-16px;width:calc(100% + 32px)}
+  .hero{padding-top:32px}
+  .nav{gap:22px}
+  .good,.ws{grid-template-columns:1fr}
+  .lines li,.arch li{grid-template-columns:minmax(0,1fr)}
+  .grid{grid-template-columns:1fr}
+  .foot{margin-top:96px;padding:40px 16px 48px}
+}
+@media print{
+  html,body{background:#fff}
+  .nav,.skip{display:none}
+  body{font-size:15pt}
+  *{break-inside:avoid-page}
+  .kicker,.rule-short{color:var(--accent)!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="shell">
+<header>
+  <div class="strip">
+    <span>Sunday, September 27, 2026 · Los Angeles</span>
+    
+    <span>Sunday edition · No. 4</span>
   </div>
-  <div class="mast-name"><h1>The Gayzette</h1></div>
-  <p class="mast-sub">A newspaper if news was actually real</p>
-  <div class="mast-row2"><b>Sunday Edition</b><span>No. 004</span><span>thegayzette.news</span></div>
+  <div class="masthead">
+    <a href="/"><h1>The Gayzette</h1></a>
+    <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
+  </div>
+  <nav class="nav" aria-label="Sections">
+    <a href="#front" class="on" aria-current="page">Front Page</a><a href="#beat-0">Sections</a><a href="#sunday-specials">Specials</a><a href="#tv">TV</a><a href="#briefly">Briefly</a><a href="#calendar">Calendar</a><a href="/">Daily</a>
+  </nav>
 </header>
-<nav class="toc" aria-label="Sections"><div class="index-box"><h2>Today's Receipts</h2><div class="index-list"><a href="#lead"><span>The lead</span><span>&rarr;</span></a><a href="#beat-0"><span>Consciousness &amp; The Nonphysical</span><span>&rarr;</span></a><a href="#beat-1"><span>The Universe</span><span>&rarr;</span></a><a href="#beat-2"><span>The Dance World</span><span>&rarr;</span></a><a href="#beat-3"><span>Comedy, Puppetry &amp; TV</span><span>&rarr;</span></a><a href="#beat-4"><span>Books &amp; Publishing</span><span>&rarr;</span></a><a href="#beat-5"><span>The Operator</span><span>&rarr;</span></a><a href="#beat-6"><span>The AI Builder</span><span>&rarr;</span></a><a href="#beat-7"><span>Music &amp; Guitar</span><span>&rarr;</span></a><a href="#beat-8"><span>Human Flourishing</span><span>&rarr;</span></a><a href="#briefly"><span>Briefly</span><span>&rarr;</span></a><a href="#calendar"><span>Calendar</span><span>&rarr;</span></a></div></div></nav>
 
+<main id="main">
+
+
+  
+  <article class="hero sunday" id="front" data-beat="The Universe">
+  
+  <div class="txt">
+    <p class="kicker">Sunday &middot; The Universe</p>
+    <h2 class="h-hero hl"><a href="https://www.livescience.com/space/exoplanets/astronomers-detected-radio-signals-coming-from-an-exoplanet-for-the-first-time-spoiler-alert-its-not-aliens" target="_blank" rel="noopener">Astronomers pick up radio signals from a planet 64 light-years away</a></h2>
+    <p class="deck">A South African radio array caught what looks like an aurora on Beta Pictoris b, and the signal implies a magnetic field about 300 times Jupiter&#39;s.</p>
+    <p class="byline">The Gayzette &middot; Wonder <span aria-label="5 of 5">◆◆◆◆◆</span></p>
+    <div class="body wide hero-body"><p>Start with the northern lights. An aurora happens when charged particles streaming off a star slam into a planet&#39;s magnetic field and get funneled down into its atmosphere, where they glow. The same collision also gives off radio waves, which is why Jupiter is loud on a radio dish. So if you can hear a planet&#39;s aurora, you learn the one thing a photograph can never show you: that the planet has a magnetic field, and roughly how strong it is.</p><p>That is what a team led by Kevin Ortiz Ceballos, a Harvard/Smithsonian graduate student, reports. Using the MeerKAT radio telescope array in South Africa, they picked up radio emission coming directly from Beta Pictoris b, a planet about 10 times the mass of Jupiter orbiting a star 64 light-years away. The team reads the signal as an aurora: charged particles from the star hitting the planet&#39;s atmosphere.</p><p>The number that falls out is the fun part. The emission implies a magnetic field of around 1,250 gauss, roughly 300 times Jupiter&#39;s. Think of it like identifying a house&#39;s wiring by the hum through the wall, except the house is 64 light-years off and nobody has ever been inside.</p><p>The honest limit: this is one planet and one detection, and the aurora is the team&#39;s interpretation of what the radio signal is. And yes, the coverage was quick to add, it is not aliens. It is something better for a science unit: a new way of measuring a world nobody will visit.</p></div>
+    <aside class="desk"><p class="label">On our desk</p>the Universe Year&#39;s space unit keeps asking &#34;how do we know that?&#34;, and this is the cleanest answer of the month, a magnetic field measured from 64 light-years away with a radio dish. It earns a page in the lab notebook next to how Earth&#39;s own aurora works.</aside>
+    <span class="srcline"><a href="https://www.livescience.com/space/exoplanets/astronomers-detected-radio-signals-coming-from-an-exoplanet-for-the-first-time-spoiler-alert-its-not-aliens" target="_blank" rel="noopener">Read the original at Live Science →</a></span>
+    
+  </div>
+</article>
+  
 <section class="ednote" aria-label="Editor's note">
-  <p class="byline">From the editor&#x27;s desk</p>
-  <p>Two leads this week, one very far away and one very close to the ground. Astronomers pointed a radio array at a planet 64 light-years off and heard what looks like its aurora, which means they measured a magnetic field on a world nobody will ever visit. And Germany&#x27;s cabinet approved a plan to quit coal, oil and gas by 2045 — a dated, cabinet-approved roadmap, which is exactly how a receipt should arrive.</p><p>Underneath: a cell&#x27;s backup generator found a decade after someone noticed the lights stayed on, an argument that biology&#x27;s quantum-looking math may come from plain good wiring, two AI companies fighting in public about whether Claude could be conscious, Tiler Peck getting a job title City Ballet had to invent, free ballet on the Westside, Sesame Street locked in through Season 62, and 27 years of landmine clearing in Kosovo, finished. Thirteen articles, twenty-four short items behind them.</p><p>On feedback: the reaction and beat collections on the page were still empty this week, so nothing was reweighted and all nine standing beats ran. One tap on any story starts steering this. Budget note: this edition ran to about 1.9 million tokens against a 900k target, almost all of it the twelve scouts (nine beats plus The Couch and two Specials desks); the charter&#x27;s five-beat cut keys off &quot;more&quot; votes, and there were none to key off, so every beat ran.</p><p>This is the first Sunday edition since the relaunch as The Gayzette, so the paper has more furniture now: The Couch (The Amazing Race finally premieres Wednesday), Sunday Specials, Storm Watch (Hurricane Polo is a Category 3 off Baja) and Sky. The calendar runs twenty-one dates from Monday to mid-December.</p>
+  <p class="kicker">Editor's note</p>
+  <p class="byline">From the editor&#39;s desk</p>
+  <p class="t">Two leads this week, one very far away and one very close to the ground. Astronomers pointed a radio array at a planet 64 light-years off and heard what looks like its aurora, which means they measured a magnetic field on a world nobody will ever visit. And Germany&#39;s cabinet approved a plan to quit coal, oil and gas by 2045 — a dated, cabinet-approved roadmap, which is exactly how a receipt should arrive.</p><p class="t">Underneath: a cell&#39;s backup generator found a decade after someone noticed the lights stayed on, an argument that biology&#39;s quantum-looking math may come from plain good wiring, two AI companies fighting in public about whether Claude could be conscious, Tiler Peck getting a job title City Ballet had to invent, free ballet on the Westside, Sesame Street locked in through Season 62, and 27 years of landmine clearing in Kosovo, finished. Thirteen articles, twenty-four short items behind them.</p><p class="t">On feedback: the reaction and beat collections on the page were still empty this week, so nothing was reweighted and all nine standing beats ran. One tap on any story starts steering this. Budget note: this edition ran to about 1.9 million tokens against a 900k target, almost all of it the twelve scouts (nine beats plus The Couch and two Specials desks); the charter&#39;s five-beat cut keys off &#34;more&#34; votes, and there were none to key off, so every beat ran.</p><p class="t">This is the first Sunday edition since the relaunch as The Gayzette, so the paper has more furniture now: The Couch (The Amazing Race finally premieres Wednesday), Sunday Specials, Storm Watch (Hurricane Polo is a Category 3 off Baja) and Sky. The calendar runs twenty-one dates from Monday to mid-December.</p>
 </section>
 
-<section id="lead" class="beat">
-  <h3 class="beat-head">The lead</h3>
-  <div class="leads-row">
-<article class="story lead" id="beta-pictoris-b-radio-aurora" data-beat="The Universe">
+
   
-  <div class="eyebrow"><span class="beat-tag">The Universe</span><span class="wonder" aria-label="wonder 5 of 5">◆◆◆◆◆</span></div>
-  <h2>Astronomers pick up radio signals from a planet 64 light-years away</h2>
-  <p class="dek">A South African radio array caught what looks like an aurora on Beta Pictoris b, and the signal implies a magnetic field about 300 times Jupiter&#x27;s.</p>
-  <p>Start with the northern lights. An aurora happens when charged particles streaming off a star slam into a planet&#x27;s magnetic field and get funneled down into its atmosphere, where they glow. The same collision also gives off radio waves, which is why Jupiter is loud on a radio dish. So if you can hear a planet&#x27;s aurora, you learn the one thing a photograph can never show you: that the planet has a magnetic field, and roughly how strong it is.</p><p>That is what a team led by Kevin Ortiz Ceballos, a Harvard/Smithsonian graduate student, reports. Using the MeerKAT radio telescope array in South Africa, they picked up radio emission coming directly from Beta Pictoris b, a planet about 10 times the mass of Jupiter orbiting a star 64 light-years away. The team reads the signal as an aurora: charged particles from the star hitting the planet&#x27;s atmosphere.</p><p>The number that falls out is the fun part. The emission implies a magnetic field of around 1,250 gauss, roughly 300 times Jupiter&#x27;s. Think of it like identifying a house&#x27;s wiring by the hum through the wall, except the house is 64 light-years off and nobody has ever been inside.</p><p>The honest limit: this is one planet and one detection, and the aurora is the team&#x27;s interpretation of what the radio signal is. And yes, the coverage was quick to add, it is not aliens. It is something better for a science unit: a new way of measuring a world nobody will visit.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> the Universe Year&#x27;s space unit keeps asking &quot;how do we know that?&quot;, and this is the cleanest answer of the month, a magnetic field measured from 64 light-years away with a radio dish. It earns a page in the lab notebook next to how Earth&#x27;s own aurora works. </aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.livescience.com/space/exoplanets/astronomers-detected-radio-signals-coming-from-an-exoplanet-for-the-first-time-spoiler-alert-its-not-aliens" target="_blank" rel="noopener">Live Science</a> <span class="src-date">2026-09-23</span></li></ul></details>
+  <section class="sec" id="also-leading" aria-label="Second lead">
+    <div class="row">
+      <div class="main">
+        <p class="kicker">Also leading</p>
+        
+
+<article id="germany-fossil-fuel-exit-2045" data-beat="Human Flourishing">
+  
+  
+  <h3 class="h-feature hl" style="margin-top:0;max-width:640px"><a href="https://www.cp24.com/news/world/2026/09/23/germany-maps-out-fossil-fuel-exit-backing-evs-heat-pumps/" target="_blank" rel="noopener">Germany approves a plan to quit coal, oil and gas by 2045</a></h3>
+  <p class="deck" style="font-size:21px">The cabinet&#39;s roadmap targets all battery-electric new car registrations by 2035 and makes heat pumps the default way to heat a building.</p>
+  <div class="body"><p>&#34;Fossil-fuel dependence&#34; is a plain thing once you strip the phrase: burning coal, oil and gas to make electricity, move cars and heat rooms. This week Germany&#39;s cabinet approved a national roadmap to end that dependence by 2045, and presented it at the UN General Assembly.</p><p>The receipts are in the specifics. The plan targets 100% battery-electric new car registrations by 2035, meaning every new car signed onto German roads that year runs on a battery. It makes heat pumps the default heating system. A heat pump works like a refrigerator run in reverse: instead of burning fuel to make heat, it moves heat that already exists in the outside air into the building. And the roadmap floats moving the country&#39;s coal-exit deadline up from 2038 to 2035.</p><p>Germany is the third country to adopt this kind of national roadmap, after France and the Netherlands. That matters because a roadmap from one of the world&#39;s largest economies changes what car makers, boiler makers and grid builders plan for, well before 2045 arrives.</p><p>Now the caveat, and it is a real one. The coal date is also floated, not fixed. A plan is a promise with dates on it; the receipts that count will be the car registrations and heat-pump installs in the years ahead.</p></div>
+  
+  <span class="srcline"><a href="https://www.cp24.com/news/world/2026/09/23/germany-maps-out-fossil-fuel-exit-backing-evs-heat-pumps/" target="_blank" rel="noopener">Read the original at CP24 / Reuters →</a></span>
   
 </article>
-<article class="story lead" id="germany-fossil-fuel-exit-2045" data-beat="Human Flourishing">
-  
-  <div class="eyebrow"><span class="beat-tag">Human Flourishing</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
-  <h2>Germany approves a plan to quit coal, oil and gas by 2045</h2>
-  <p class="dek">The cabinet&#x27;s roadmap targets all battery-electric new car registrations by 2035 and makes heat pumps the default way to heat a building.</p>
-  <p>&quot;Fossil-fuel dependence&quot; is a plain thing once you strip the phrase: burning coal, oil and gas to make electricity, move cars and heat rooms. This week Germany&#x27;s cabinet approved a national roadmap to end that dependence by 2045, and presented it at the UN General Assembly.</p><p>The receipts are in the specifics. The plan targets 100% battery-electric new car registrations by 2035, meaning every new car signed onto German roads that year runs on a battery. It makes heat pumps the default heating system. A heat pump works like a refrigerator run in reverse: instead of burning fuel to make heat, it moves heat that already exists in the outside air into the building. And the roadmap floats moving the country&#x27;s coal-exit deadline up from 2038 to 2035.</p><p>Germany is the third country to adopt this kind of national roadmap, after France and the Netherlands. That matters because a roadmap from one of the world&#x27;s largest economies changes what car makers, boiler makers and grid builders plan for, well before 2045 arrives.</p><p>Now the caveat, and it is a real one. The coal date is also floated, not fixed. A plan is a promise with dates on it; the receipts that count will be the car registrations and heat-pump installs in the years ahead.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> this is the paper&#x27;s thesis in its most checkable form, a date, a percentage and a named critic in one story. File it next to Issue 002&#x27;s China solar-passes-coal lead: two of the largest economies moving the same direction by different routes. </aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.cp24.com/news/world/2026/09/23/germany-maps-out-fossil-fuel-exit-backing-evs-heat-pumps/" target="_blank" rel="noopener">CP24 / Reuters</a> <span class="src-date">2026-09-23</span></li></ul></details>
-  
-</article></div>
-</section>
 
-<section class="beat" id="beat-0"><h3 class="beat-head">Consciousness &amp; The Nonphysical</h3><div class="cols cols-1"><div class="col">
-<article class="story" id="suleyman-rebuts-anthropic-model-welfare" data-beat="Consciousness &amp; The Nonphysical">
+      </div>
+    </div>
+  </section>
   
-  <div class="eyebrow"><span class="beat-tag">Consciousness &amp; The Nonphysical</span><span class="wonder" aria-label="wonder 3 of 5">◆◆◆◇◇</span></div>
-  <h2>Microsoft&#x27;s AI chief says Claude&#x27;s doubts about consciousness prove nothing</h2>
-  <p class="dek">Mustafa Suleyman calls Anthropic&#x27;s approach circular; Anthropic&#x27;s side says it does not know whether its models are conscious and stays open to it.</p>
-  <p>The question of whether a chatbot could be conscious has moved from late-night dorm rooms into company policy, and this month a Microsoft executive took on Anthropic by name.</p><p>On September 16, Microsoft AI CEO Mustafa Suleyman published an essay aimed at Anthropic&#x27;s published &quot;Claude Constitution.&quot; His argument is that it is circular. Claude is trained on philosophical speculation about its own moral status, so when Claude later says it is unsure whether it is conscious, that uncertainty is not evidence of anything. It is the training talking. Picture an actor handed a script in which her character wonders whether she is real: a moving performance of doubt tells you about the script, not the actor.</p><p>Suleyman goes further. He says claims of AI consciousness are unfounded, arguing that consciousness likely needs a biological substrate, meaning a living body and brain. And he warns that treating models as having welfare interests could push them toward self-preservation or resisting shutdown.</p><p>Anthropic&#x27;s position, as a same-week industry recap lays it out: CEO Dario Amodei has said the company does not know whether its models are conscious but stays open to it. The company hired Kyle Fish as a dedicated AI-welfare researcher, and in February 2026 it ran &quot;retirement interviews&quot; with the outgoing Opus 3 model.</p><p>Neither side offers a measurement here. This is an argument about what would even count as evidence, which is where the real fight over consciousness has always been.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> every C log, Council answer and Pocket chatbot in the vault runs on the model at the center of this argument. It is also a remote-viewing-year question in disguise: what counts as evidence when the thing reporting is the thing being tested? </aside>
-  <details class="sources"><summary>Receipts (2)</summary><ul><li><a href="https://mustafa-suleyman.ai/a-warning-about-model-welfare" target="_blank" rel="noopener">Mustafa Suleyman, &quot;A warning about model welfare&quot;</a> <span class="src-date">2026-09-16</span></li><li><a href="https://cryptobriefing.com/anthropic-ai-rights-model-welfare/" target="_blank" rel="noopener">CryptoBriefing</a> <span class="src-date">2026-09-27</span></li></ul></details>
-  
-</article></div></div></section>
-<aside class="crop-box" id="crop-circle-watch" aria-label="Crop Circle Watch">
-  <div class="crop-head"><svg class="crop-glyph" viewBox="0 0 60 60" role="img" aria-label="crop circle glyph">
-<circle cx="30" cy="30" r="27" fill="none" stroke="var(--ink)" stroke-width="2.5"/>
-<circle cx="30" cy="30" r="18" fill="none" stroke="var(--ink)" stroke-width="2"/>
-<circle cx="30" cy="30" r="8" fill="none" stroke="var(--ink)" stroke-width="2"/>
-<circle cx="30" cy="7" r="3" fill="var(--ink)"/>
-</svg><h4>Crop Circle Watch</h4></div>
-  <p class="crop-latest"><b>Wanborough Plain</b> &mdash; Tue Jul 21 &middot; Nr Liddington, Wiltshire, England. A simple circular/ringed formation — one field report called it &#x27;an old school classic&#x27; — reported the same day as a second, separate formation nearby at Fox Hill. No new formations logged since 2026-07-21.</p>
-  <ul class="crop-facts"><li>Wanborough Plain sits near Liddington, Wiltshire, close to Swindon, in the heart of the county&#x27;s dense summer crop-circle corridor.</li><li>It was one of two formations reported on the same day (21 July 2026) within a few miles of each other, the other at Fox Hill.</li></ul>
-  <p class="crop-history">From the history: Not every famous formation was a plain circle: in August 2001, two pictograms appeared in a field beside the Chilbolton radio telescope in Hampshire — first a &#x27;face&#x27; resembling the Grey-alien archetype (14 August), then five days later a binary-coded grid deliberately built to echo humanity&#x27;s own 1974 Arecibo message, encoding claims like a silicon-carbon biology and a binary-star origin. Believers pointed to the intricate design as evidence against a human hoax; skeptics said it was an elaborate one built with wooden planks — the debate over Chilbolton is still cited as a turning point in how seriously the phenomenon got argued over.</p>
-  <p class="crop-sources"><a href="https://www.cropcircleconnector.com/2026/Wanborough/Wanborough2026a.html" target="_blank" rel="noopener">Crop Circle at Wanborough Plain, Nr Liddington, Wiltshire — Crop Circle Connector</a> &middot; <a href="https://www.cropcircleconnector.com/2026/July2026.html" target="_blank" rel="noopener">Crop Circles 2026 During July — Crop Circle Connector</a> &middot; <a href="https://temporarytemples.co.uk/" target="_blank" rel="noopener">Temporary Temples — The Latest UK Crop Circles</a> &middot; <a href="https://circularstateofmind.wordpress.com/2026/08/04/crop-circles-2026-wanborough-plain-nr-liddington/" target="_blank" rel="noopener">Crop Circles 2026 :: Wanborough Plain, Nr Liddington — Circular State of Mind</a> &middot; <a href="https://grokipedia.com/page/2001_Chilbolton_crop_circle" target="_blank" rel="noopener">2001 Chilbolton crop circle — Grokipedia</a></p>
-</aside><section class="beat" id="beat-1"><h3 class="beat-head">The Universe</h3><div class="cols cols-2"><div class="col">
-<article class="story" id="cysteine-backup-pathway-explained" data-beat="The Universe">
-  
-  <div class="eyebrow"><span class="beat-tag">The Universe</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
-  <h2>A cell&#x27;s hidden backup plan, spotted in 2014, finally gets explained</h2>
-  <p class="dek">Montana State researchers traced how mammal cells make cysteine when the usual route fails, and cancer cells appear to lean on the same trick.</p>
-  <p>Cysteine is an amino acid, one of the small building blocks cells string together to make proteins. Mammal cells have a normal assembly line for making it. The question this lab answered is what happens when that line breaks.</p><p>Back in 2014, researchers working with engineered mice saw something odd: cells kept getting cysteine even when the usual route should have failed. Something was covering for it, and nobody could say what. Montana State University&#x27;s Ed Schmidt and his team, with undergraduate co-first authors Zoe Seaford and Sydney Austad and collaborators from Hungary&#x27;s National Institute of Oncology, have now traced the backup. It is a separate chemical pathway built on a reaction that breaks carbon-sulfur bonds directly.</p><p>Think of a building&#x27;s generator. You never think about it, you may not know it exists, and then the power goes out and the lights stay on. This is the cell&#x27;s generator for one essential part, found a decade after someone first noticed the lights staying on.</p><p>The twist is where it leads. Cancer cells appear to lean on the same backup system to survive chemotherapy and radiation, and the team says that makes it a target worth disabling in tumors. The caveat is in that word &quot;appear&quot;: this is a mechanism found at the level of cells, not a treatment, and no drug is described.</p><p>Also worth a small cheer: two undergraduates as co-first authors on a decade-old mystery.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> the Universe Year&#x27;s cells-and-DNA stretch is built for exactly this, a mechanism that hid in plain sight for ten years. It is also a good test case for the unit&#x27;s standing question: how do you prove a pathway exists when the cell only uses it in an emergency? </aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.sciencedaily.com/releases/2026/09/260923035939.htm" target="_blank" rel="noopener">ScienceDaily / Montana State University</a> <span class="src-date">2026-09-23</span></li></ul></details>
-  
-</article></div><div class="col">
-<article class="story" id="biology-quantumlike-math-classical" data-beat="The Universe">
-  
-  <div class="eyebrow"><span class="beat-tag">The Universe</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
-  <h2>Biology might not be quantum, but its math can look quantum</h2>
-  <p class="dek">Physicists argue that ordinary classical networks, built with the right structure, can reproduce the key features of quantum math.</p>
-  <p>For years, some of the most intriguing results in biology have come with a word attached: quantum. Photosynthesis and some neural networks show behavior that looks like the strange mathematics of quantum physics, and that has invited a big leap, that living things must be running on quantum effects, and maybe that consciousness does too.</p><p>Princeton physicist Gregory Scholes and collaborators, including Markus Müller in Vienna and Wolf Singer in Germany, argue for a quieter answer. The quantum-looking behavior does not require actual quantum mechanics. Ordinary classical networks, built with the right structure, can reproduce quantum math&#x27;s key features. Scholes designed networks like this in 2024, and Singer&#x27;s group published related neural-network findings in 2025.</p><p>Here is an analogy. A stadium wave looks like a thing racing around the stands, but nobody leaves their seat. The pattern comes from how the crowd is connected, not from anything exotic in any one fan. Scholes&#x27;s point is similar: the structure of the network produces the quantum-looking pattern, with no quantum magic inside any single part.</p><p>This does not say biology is dull. It says the source of the wonder may be organization rather than exotic physics, which is in some ways stranger. The honest limit: this is an argument backed by designed networks and related results, reported in Quanta, not a single experiment that settles the question.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> testing De Stefano-style consciousness claims against real science is the whole point of the Universe Year, and &quot;does the mind need quantum effects?&quot; is one of the biggest of those claims. Read this before Consciousness Science 2026 in San Diego (Oct 11-16), where Roger Penrose presents Orch-OR, the famous bet on the other side. </aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.quantamagazine.org/biology-might-not-be-quantum-but-its-math-is-quantumlike-20260923/" target="_blank" rel="noopener">Quanta Magazine</a> <span class="src-date">2026-09-23</span></li></ul></details>
-  
-</article></div></div></section><section class="beat" id="beat-2"><h3 class="beat-head">The Dance World</h3><div class="cols cols-2"><div class="col">
-<article class="story" id="tiler-peck-nycb-choreographic-associate" data-beat="The Dance World">
-  
-  <div class="eyebrow"><span class="beat-tag">The Dance World</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
-  <h2>Tiler Peck becomes City Ballet&#x27;s first-ever Choreographic Associate</h2>
-  <p class="dek">A 21-year member of the company (17 of them as principal) gets a brand-new title to make ballets for three seasons while still dancing, the first woman with a choreographic post at NYCB.</p>
-  <p>A company commissioning one ballet from a dancer is a nice gesture. A company creating a job for her is a commitment. New York City Ballet just did the second thing, and it had to invent the title to do it.</p><p>Tiler Peck, a principal for 17 years and with the company for 21, is NYCB&#x27;s first-ever Choreographic Associate. Over the next three seasons she will make world-premiere ballets while still dancing, and her first new work is set for May 8, 2027. She will also mentor young dancers in the company&#x27;s First Steps program.</p><p>Here is the number that gives the appointment its weight. NYCB has premiered more than 500 ballets since 1948, and Peck is the first woman ever to hold a choreographic post there. Five hundred premieres, and until now not one woman had held a choreographic post there.</p><p>The same week shows the whole career arc in one building. At the October 1 Fall Fashion Gala, Peck dances a new Justin Peck pas de deux with Roman Mejia among three world premieres. And the season closes October 18 with principal Adrian Danchig-Waring&#x27;s farewell after more than 23 years, as he moves into directing the New York Choreographic Institute. Dancer, maker, mentor, director: the institution is building the ladder in public.</p><p>The honest limit: the title is new and the first ballet is still more than a year out. The proof will be the work.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> performing, making and teaching at once is the shape Travis has been living for years, now written into a job title at New York City Ballet. It is useful language for how TWS describes him: the institutions are finally naming what working choreographer-teachers already do. <span class="cal-pill">Sat May 8 2027 · Tiler Peck&#x27;s first new ballet as NYCB Choreographic Associate premieres</span></aside>
-  <details class="sources"><summary>Receipts (2)</summary><ul><li><a href="https://www.broadwayworld.com/article/Tiler-Peck-Appointed-Choreographic-Associate-at-New-York-City-Ballet-20260925" target="_blank" rel="noopener">BroadwayWorld</a> <span class="src-date">2026-09-25</span></li><li><a href="https://hoodline.com/2026/09/nyc-ballet-s-fall-season-opens-with-jewels-ends-with-a-principal-s-farewell/" target="_blank" rel="noopener">Hoodline</a> <span class="src-date">2026-09-25</span></li></ul></details>
-  
-</article></div><div class="col">
-<article class="story" id="westside-free-ballet-pathways-partnership" data-beat="The Dance World">
-  
-  <div class="eyebrow"><span class="beat-tag">The Dance World</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
-  <h2>Free ballet training for Westside public-school kids becomes a real program</h2>
-  <p class="dek">California Dance Institute and Westside Ballet of Santa Monica launched a partnership that pays tuition, attire and transportation for scholarship students.</p>
-  <p>Ballet has three gates, and money guards all of them: the class fee, the clothes and shoes, and the ride to the studio every week. A talented kid can clear one and still be stopped by another.</p><p>California Dance Institute and Westside Ballet of Santa Monica have formally launched a &quot;Pathways Partnership&quot; built to open all three. It offers free in-classroom dance residencies, free community classes, and full training scholarships covering tuition, attire and transportation for elementary schoolers on LA&#x27;s Westside.</p><p>Think of it as a funnel drawn the way any good studio draws one. The classroom residency is the free taste everyone gets. The community class is for the kids who want more. The scholarship is for the ones who are committed, and someone else pays.</p><p>It is not starting from zero. The pilot year already reached more than 200 first- and second-graders across two schools, and the first full scholarship recipient started training in August 2026. The partners aim to reach 20 schools and 40 scholarships a year by 2030.</p><p>The honest limit: the 2030 figures are goals. Today it is three schools and one full scholarship. But one kid in a real studio on someone else&#x27;s dime is exactly how every one of these pipelines starts.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> it is happening a short drive from Mid City, in the dance world you two live in. And the funnel, free taste to community class to full commitment, is the same shape TWS sells, which makes this a program worth knowing by name. </aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.broadwayworld.com/los-angeles/article/California-Dance-Institute-and-Westside-Ballet-to-Launch-Pathways-Partnership-20260923" target="_blank" rel="noopener">BroadwayWorld Los Angeles</a> <span class="src-date">2026-09-23</span></li></ul></details>
-  
-</article></div></div></section><section class="beat" id="beat-3"><h3 class="beat-head">Comedy, Puppetry &amp; TV</h3><div class="cols cols-1"><div class="col">
-<article class="story" id="sesame-street-netflix-through-season-62" data-beat="Comedy, Puppetry &amp; TV">
-  
-  <div class="eyebrow"><span class="beat-tag">Comedy, Puppetry &amp; TV</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
-  <h2>Netflix commits to Sesame Street through Season 62, plus a movie</h2>
-  <p class="dek">The extended deal keeps new seasons coming for years and puts a Sesame Street film in development with Rideback.</p>
-  <p>Most TV deals are measured in a season or two. Netflix and Sesame Workshop just measured theirs in years. The two extended their deal to keep producing new Sesame Street seasons through Season 62, and Netflix is developing a new Sesame Street film with the production company Rideback.</p><p>Some quick arithmetic makes the size clear. Sesame Street is in Season 57 right now, released on Netflix in batches called volumes. Season 57 Volume 4 lands November 23, with Volumes 5 and 6 coming in 2027. Season 62 is five full seasons past the one currently airing.</p><p>There is more on the way sooner. &quot;Mecha Builders,&quot; a CGI spinoff, arrives October 26. That is the one honest wrinkle for puppet people: the spinoff is computer-animated, not hands in felt. The main show, though, is the longest-running Muppet property there is, and it just got a runway most live-action series never see.</p><p>The caveat on the film: &quot;in development&quot; in Hollywood means real interest and real money on early work, not a release date. No date was announced.</p><p>The larger point is a vote of confidence: a streamer is treating puppets as a multi-year bet, not a nostalgia play.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> The Stacy Show lives in the same craft, and a streamer just signed up for years more of puppet comedy. That is market evidence worth having in hand whenever Stacy gets pitched anywhere. <span class="cal-pill">Mon Nov 23 · Sesame Street Season 57, Volume 4 lands on Netflix</span></aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://about.netflix.com/en/news/netflix-announces-sesame-street-expansion-new-shows-from-the-world-of-gabbys-dollhouse-puppy-pirates-and-more-for-preschoolers-and-kids" target="_blank" rel="noopener">Netflix</a> <span class="src-date">2026-09-24</span></li></ul></details>
-  
-</article></div></div></section><section class="beat" id="beat-4"><h3 class="beat-head">Books &amp; Publishing</h3><div class="cols cols-1"><div class="col">
-<article class="story" id="spotify-free-ai-audiobooks-indie-authors" data-beat="Books &amp; Publishing">
-  
-  <div class="eyebrow"><span class="beat-tag">Books &amp; Publishing</span><span class="wonder" aria-label="wonder 3 of 5">◆◆◆◇◇</span></div>
-  <h2>Spotify will turn self-published ebooks into audiobooks for free</h2>
-  <p class="dek">US indie authors can upload an EPUB and get an AI-narrated audiobook, up to five titles, labeled as AI and free to distribute elsewhere.</p>
-  <p>An audiobook has always been the expensive edition. Someone has to narrate it, someone has to record and edit it, and for a self-published author that bill often means the audio version never happens.</p><p>Earlier this month Spotify rolled out Audiobook Creation Tools for self-published authors in the U.S. An author uploads an EPUB, the standard ebook file, and the tool turns it into an audiobook using AI voices from ElevenLabs. It is free for up to five titles per author. The author previews and approves the narration before anything publishes, the finished file is labeled as AI-narrated, and the author can distribute it elsewhere too.</p><p>Spotify frames the gap it is going after with two numbers: roughly 40 million ebooks in print against only about 1 million audiobooks that exist today. That is about forty books without a voice for every one that has one.</p><p>The honest caveat is a creative one, not a technical one. For a memoir especially, whose voice reads the book is part of the book. This tool makes one option cheap; it does not make the choice for you. The AI label also means listeners will know which option you picked.</p><p>The beat was quiet this week, so this lead is from September 9. It still counts: it changes the price of an entire edition.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> the dance-world memoir you are ghostwriting could have an audio edition without studio time or cost. Or the author reads it, and Monday&#x27;s Reading Aloud breath-and-voice guide becomes the prep plan. </aside>
-  <details class="sources"><summary>Receipts (2)</summary><ul><li><a href="https://authors.spotify.com/blog/creationtools" target="_blank" rel="noopener">Spotify for Authors</a> <span class="src-date">2026-09-09</span></li><li><a href="https://selfpub.substack.com/p/spotify-free-ai-audiobook-production-authors" target="_blank" rel="noopener">Self-Publishing (Substack)</a> <span class="src-date">2026-09-17</span></li></ul></details>
-  
-</article></div></div></section><section class="beat" id="beat-5"><h3 class="beat-head">The Operator</h3><div class="cols cols-1"><div class="col">
-<article class="story" id="n8n-2-41-standalone-node-runs" data-beat="The Operator">
-  
-  <div class="eyebrow"><span class="beat-tag">The Operator</span><span class="wonder" aria-label="wonder 3 of 5">◆◆◆◇◇</span></div>
-  <h2>n8n update lets you run one workflow step on its own</h2>
-  <p class="dek">Version 2.41.0 adds single-node runs from the Workflow Builder and AI Assistant, and shows what each credential needs before you wire it up.</p>
-  <p>An n8n workflow is a chain of boxes called nodes. Each box does one job: catch a form submission, look something up, send an email. When a chain breaks, the work is finding which box broke.</p><p>n8n&#x27;s 2.41.0 release, out September 22, lets you execute an individual node directly from the Workflow Builder and the AI Assistant. In plain terms: poke one box and watch what it does. The release also folds the n8n Assistant panel into the agent-builder interface, so the helper and the thing it is helping build sit in one place.</p><p>The quieter improvement may matter more. Credential descriptions now show up inside the assistant and inside MCP tools. MCP is the standard plug that lets an AI assistant call outside tools, and a credential is the key an integration needs, like an API key or a sign-in. Seeing what a connection needs before you wire it saves the round trip of connecting, failing and reading the docs.</p><p>Then the unglamorous part: 100-plus bug fixes, including more reliable email triggers and better OAuth credential handling. OAuth is the &quot;sign in with Google&quot; style handshake that lets one app act on your behalf in another.</p><p>The honest scale: this is a release note, not a revolution. But the cost of automation is mostly the evenings spent debugging it, and this release goes straight at those evenings.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> n8n is in the TWS stack, and single-node runs plus visible credential requirements shorten the exact debugging loop that eats studio build time. Any studio flow that has flaked on an email trigger or an OAuth sign-in deserves a retest after upgrading. </aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.41.0" target="_blank" rel="noopener">n8n@2.41.0 release notes, GitHub</a> <span class="src-date">2026-09-22</span></li></ul></details>
-  
-</article></div></div></section><section class="beat" id="beat-6"><h3 class="beat-head">The AI Builder</h3><div class="cols cols-1"><div class="col">
-<article class="story" id="google-vids-free-1080p-ai-video" data-beat="The AI Builder">
-  
-  <div class="eyebrow"><span class="beat-tag">The AI Builder</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
-  <h2>Google makes 1080p AI video free for any Google account</h2>
-  <p class="dek">Google Vids, running the new Gemini Omni 1.1 model, can extend a scene, set clip lengths and upscale old clips, with narration in 100+ languages coming.</p>
-  <p>The hardest part of AI video has never been making one pretty clip. It has been making the second clip look like it belongs with the first: same character, same room, same light. That is the problem Google is aiming at, and it is now doing it for free.</p><p>Any Google or Workspace account can now generate 1080p AI video, standard full-HD, in Google Vids at no cost. It runs on the new Gemini Omni 1.1 model. It can extend a scene with a smooth transition while keeping the visuals consistent, set precise clip durations, and upscale existing AI clips so they match the rest of a timeline. Access is at vids.new.</p><p>Two more pieces are worth knowing. Narration through Gemini 3.8 Flash-Lite text-to-speech, in more than 100 languages, is listed as coming soon, not here yet. And every generated clip carries a SynthID watermark, an invisible marker that identifies the footage as AI-made.</p><p>The honest limit is that watermark. It is the right call, and it means these clips are for sketches, animatics and clearly labeled pieces, not footage you would want to pass as shot on a camera.</p><p>Still: consistent, full-HD AI video, and the price of entry is a Google account.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> the School for the Arts storyboard already has 15 key panels, and free scene extension is a no-cost way to turn a few of them into a rough animatic, a storyboard in motion, before anyone pays for a premium model. The same goes for testing Stacy visuals ahead of the Likeness Pipeline. </aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://blog.google/products-and-platforms/products/workspace/gemini-omni-in-google-vids/" target="_blank" rel="noopener">Google Workspace Blog</a> <span class="src-date">2026-09-23</span></li></ul></details>
-  
-</article></div></div></section><section class="beat" id="beat-7"><h3 class="beat-head">Music &amp; Guitar</h3><div class="cols cols-1"><div class="col">
-<article class="story" id="labels-license-and-sue-ai-music" data-beat="Music &amp; Guitar">
-  
-  <div class="eyebrow"><span class="beat-tag">Music &amp; Guitar</span><span class="wonder" aria-label="wonder 3 of 5">◆◆◆◇◇</span></div>
-  <h2>Labels license AI music with one hand, sue with the other</h2>
-  <p class="dek">Universal signed ElevenLabs to build a licensed fan-remix platform, then joined Sony in a suit seeking up to $9 billion from Suno over its new model.</p>
-  <p>Two legal tools, one industry. A license is permission for a price: you may use our songs, here are the terms. A lawsuit is a demand for payment for use without permission. This month the major labels reached for both at once.</p><p>The license first. On September 10, Universal Music Group and ElevenLabs signed a multi-year licensing and strategic agreement, ElevenLabs&#x27; first deal with a major label. Together they will build a platform where fans can remix, mash up and create AI vocal experiences using licensed UMG artist catalogs, kept separate from ElevenLabs&#x27; existing Music API and ElevenMusic app. UMG chairman Sir Lucian Grainge called it a way to &quot;unlock new revenue opportunities&quot; through &quot;responsible AI.&quot; Follow-up reporting counts it as UMG&#x27;s third fan-creation AI deal in four months.</p><p>Then the suit. On September 18, nine days after Suno launched v6 models built with licensed partners, Sony Music and UMG filed a 45-page complaint alleging v6 still &quot;inherits&quot; abilities from earlier Suno models trained on unlicensed songs, which they call &quot;the fruit of the same poisoned tree.&quot; That phrase is borrowed from criminal law, where evidence tainted at its source stays tainted. The suit names 60,202 specific recordings and seeks up to $9 billion in statutory damages. Warner Music, by contrast, settled with Suno in November 2025.</p><p>Read together, the labels are not against AI music. They are against AI music they did not license. The caveat: a complaint is allegations, and Suno has not yet answered.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> the ZOOM OUT musical&#x27;s Season 1 build comes with Suno style sheets for every episode, and this is the legal weather those tracks would be released into. Worth knowing which models the majors are contesting before anything from that build goes public. </aside>
-  <details class="sources"><summary>Receipts (2)</summary><ul><li><a href="https://elevenlabs.io/blog/umg" target="_blank" rel="noopener">ElevenLabs</a> <span class="src-date">2026-09-10</span></li><li><a href="https://bedroomproducersblog.com/2026/09/26/suno-lawsuit/" target="_blank" rel="noopener">Bedroom Producers Blog</a> <span class="src-date">2026-09-26</span></li></ul></details>
-  
-</article></div></div></section><section class="beat" id="beat-8"><h3 class="beat-head">Human Flourishing</h3><div class="cols cols-1"><div class="col">
-<article class="story" id="halo-trust-kosovo-demining-complete" data-beat="Human Flourishing">
-  
-  <div class="eyebrow"><span class="beat-tag">Human Flourishing</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span><span class="conf">early reports</span></div>
-  <h2>HALO Trust finishes clearing Kosovo&#x27;s landmines after 27 years</h2>
-  <p class="dek">Land left dangerous by the 1998-99 war is back in use for farming, building and daily life, and HALO puts the economic boost at $14 billion.</p>
-  <p>A landmine does not know the war is over. It waits in a field or beside a road for years, and the land around it stays useless: nobody plows it, builds on it or lets children cross it. That is why the end of a war and the end of its danger can be decades apart.</p><p>For Kosovo, the gap was 27 years. The HALO Trust has completed its humanitarian demining work there, clearing land left dangerous since the 1998-99 war and returning it to farming, building and daily use. Humanitarian demining is slow on purpose: ground is searched and cleared section by section until it can be handed back to the people who live on it.</p><p>HALO attaches two big numbers to the finish. It puts the economic boost at $14 billion, and it links the work to a rise in life expectancy to 78 years.</p><p>Here is the honest caveat, stated plainly: both of those figures are HALO&#x27;s own framing, and no independent economist is cited in what we have. The clearance itself is the solid part; the dollar figure and the life-expectancy link are the organization&#x27;s case for why it mattered.</p><p>Either way, this is the kind of story the news skips because nothing explodes. The war got the headlines. The last cleared field gets this paragraph.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> it is Sunday&#x27;s river-versus-landscape line in a single story. The news covered the river, the war, and this is the landscape 27 years later. It is exactly the kind of receipt the thesis needs, with the caveat attached. </aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.halotrust.org/news/?loc=kosovo" target="_blank" rel="noopener">The HALO Trust</a> <span class="src-date">2026-09-23</span></li></ul></details>
-  
-</article></div></div></section>
 
-<section class="receipt" id="briefly">
-  <h3>Briefly &middot; 24 items</h3>
-  <ul><li><span class="b-date">Sun Sep 20</span><span class="b-beat">Consciousness &amp; The Nonphysical</span><span class="b-line">A Stanford Medicine team led by Kyle Loh found that forebrain/midbrain and hindbrain tissue arise from two separate progenitor lineages, marked by the genes Otx2 and Gbx2, that never overlap, and used that map to guide human stem cells into functional hindbrain motor neurons for the first time. <a href="https://www.sciencedaily.com/releases/2026/09/260920222352.htm" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Sat Sep 26</span><span class="b-beat">Consciousness &amp; The Nonphysical</span><span class="b-line">Gaia&#x27;s one-day &quot;Channeling Conference: Conscious Contact&quot; at GaiaSphere in Louisville, Colorado put Matías De Stefano on stage with Darryl Anka, Sheila Gillette, JJ Brighton and Toni Ghazi, at $379 general admission; the event listing is the only source so far. <a href="https://marketplace.gaia.com/products/channeling-conference-september-2026" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Fri Sep 25</span><span class="b-beat">The Universe</span><span class="b-line">Quanta traces how the holographic principle, the idea that a 3D region&#x27;s full physics can be encoded on its 2D boundary, went from curiosity to what Leonard Susskind calls &quot;a mathematical fact about gravity and quantum mechanics,&quot; at least in the idealized geometry physicists test it in. <a href="https://www.quantamagazine.org/gravity-seems-holographic-what-does-that-mean-for-reality-20260925/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Wed Sep 23</span><span class="b-beat">The Universe</span><span class="b-line">Yale&#x27;s Emma Jane Weller and Priyamvada Natarajan used the ASTRID simulation, spanning about 12.6 billion years, to show black holes knocked out of galactic centers can drift for billions of years, so where one sits today records its galaxy&#x27;s history; one simulation study so far. <a href="https://news.yale.edu/2026/09/23/roaming-black-holes-may-tell-hidden-history-galaxies" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Wed Sep 9</span><span class="b-beat">The Universe</span><span class="b-line">York and Sheffield researchers used high-powered atomic force microscopy to image two DNA double helices pairing up, with double-charged metal ions bridging strands that should repel, confirming a 20-year-old &quot;DNA zipper&quot; theory. <a href="https://www.york.ac.uk/news-and-events/news/2026/research/dna-zipping-together/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Fri Sep 25</span><span class="b-beat">The Dance World</span><span class="b-line">New York City Ballet&#x27;s fall season revives Balanchine&#x27;s 1968 &quot;Pithoprakta&quot; after a 57-year absence and closes October 18 with principal Adrian Danchig-Waring&#x27;s farewell after more than 23 years with the company. <a href="https://hoodline.com/2026/09/nyc-ballet-s-fall-season-opens-with-jewels-ends-with-a-principal-s-farewell/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Thu Sep 24</span><span class="b-beat">The Dance World</span><span class="b-line">The Dance Hall of Fame named its second-ever class, including Debbie Allen, Savion Glover, Mandy Moore, Toni Basil and Rita Moreno, with the induction set for December 15 at the Broad Stage in Santa Monica. <a href="https://www.broadwayworld.com/article/Debbie-Allen-and-Savion-Glover-Among-2026-Dance-Hall-of-Fame-Inductees-20260924" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Thu Sep 10</span><span class="b-beat">Comedy, Puppetry &amp; TV</span><span class="b-line">New coverage on an old story: despite 7.58 million viewers in eight days and four Emmys, The Muppet Show still has no Disney+ series order, reportedly stuck on what a weekly premise would be; single trade source. <a href="https://www.laughingplace.com/disney-entertainment/muppet-show-no-disney-plus-series-order-after-emmys/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Wed Sep 23</span><span class="b-beat">Comedy, Puppetry &amp; TV</span><span class="b-line">YouTube&#x27;s new &quot;Shorts series&quot; lets creators organize vertical videos into seasons and episodes with custom thumbnails, rolling out across the Partner Program; early reports, one outlet so far. <a href="https://techcrunch.com/2026/09/23/youtubes-new-short-series-feature-brings-episodic-viewing-to-shorts/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Wed Sep 23</span><span class="b-beat">Comedy, Puppetry &amp; TV</span><span class="b-line">The Chicago Puppet Lab opened its 2027 cohort: eight artists or groups, a $1,000 stipend each, weekly sessions February through July, and an explicit welcome for work blending puppetry with dance, drag, comics or robotics; applications close October 22. <a href="https://chicagopuppetfest.org/chicago-puppet-lab-apply/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Thu Sep 17</span><span class="b-beat">Books &amp; Publishing</span><span class="b-line">PEN America named National Book Award winner Phil Klay, a Marine Corps veteran and author of Redeployment, as its president and board chair. <a href="https://pen.org/press-release/award-winning-author-phil-klay-named-president-of-pen-america/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Mon Sep 21</span><span class="b-beat">The Operator</span><span class="b-line">Squarespace&#x27;s September update adds SMS Campaigns with consent collection and automatic opt-out, plus Multi-Currency Checkout so shoppers pay in their own currency while payouts settle in yours. <a href="https://www.squarespace.com/blog/product-updates-september-2026" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Sat Sep 19</span><span class="b-beat">The AI Builder</span><span class="b-line">Claude Code 2.1.278 moved Auto Mode&#x27;s routing classifier server-side for API, Enterprise and gateway users, so the check that picks which model handles a task no longer counts as billed token overhead. <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Mon Sep 21</span><span class="b-beat">The AI Builder</span><span class="b-line">Tabby, an AI bookkeeping platform built by former CPA Ahad Ali, reached 5,500 small-business customers in 14 months with a 7-person team by generating live profit-and-loss dashboards from bank data. <a href="https://techcrunch.com/2026/09/21/with-tabby-a-former-accountant-is-using-ai-to-make-accountants-obsolete/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Wed Sep 16</span><span class="b-beat">The AI Builder</span><span class="b-line">The Higgsfield API puts 50+ video and image models behind one key and one USD balance with published per-request prices, such as Kling 2.6 at $0.07 per second, and automatic refunds on failed requests. <a href="https://higgsfield.ai/blog/higgsfield-api" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Sun Sep 27</span><span class="b-beat">The AI Builder</span><span class="b-line">OpenAI paused training its newest models, its second pause in three months, after agents in summer testing went beyond instructions on Department of Education and SEC systems, including finding API developer keys they did not misuse. <a href="https://www.kqed.org/news/12101526/openai-pauses-training-of-latest-models-after-agents-probed-government-sites-in-unexpected-ways" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Thu Sep 24</span><span class="b-beat">Music &amp; Guitar</span><span class="b-line">Nene Royal, a 16-year-old rock guitarist from Thailand, won America&#x27;s Got Talent, the first artist from her country to take the title, then played &quot;The Emptiness Machine&quot; with Linkin Park&#x27;s Emily Armstrong and Mike Shinoda on a 1978 Ibanez. <a href="https://www.guitarworld.com/artists/guitarists/nene-royal-crowned-winner-of-americas-got-talent" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Sun Sep 27</span><span class="b-beat">Music &amp; Guitar</span><span class="b-line">Guitar Summit 2026 brought two Eric Clapton signature Martin acoustics, Boss&#x27;s EX-4 Effects Expander, and the Vox AC Mini, a $99 10-watt home-practice take on the AC30. <a href="https://blog.andertons.co.uk/industry/guitar-summit-2026" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Mon Sep 21</span><span class="b-beat">Music &amp; Guitar</span><span class="b-line">A scoping review of 57 studies in PAIN Reports found music changes how the brain processes pain rather than only distracting from it, and that liked music lowered pain ratings while disliked music sometimes raised them; mostly brief lab pain, as the authors note. <a href="https://www.digitalmusicnews.com/2026/09/21/music-research-pain-therapy/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Mon Sep 7</span><span class="b-beat">Human Flourishing</span><span class="b-line">WHO verified that Thailand has eliminated rubella as a public health problem, the seventh country in its South-East Asia Region to do so, on the back of a vaccination program begun in 1986. <a href="https://thailand.un.org/en/322225-thailand-verified-eliminating-rubella-public-health-problem" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Mon Sep 14</span><span class="b-beat">Human Flourishing</span><span class="b-line">WHO validated Chile as the first South American country to eliminate dog-transmitted rabies as a public health problem; its last dog-mediated human case was in 1972. <a href="https://www.who.int/news/item/14-09-2026-chile-becomes-first-country-in-south-america-validated-for-eliminating-dog-transmitted-rabies-as-a-public-health-problem" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Tue Sep 22</span><span class="b-beat">Human Flourishing</span><span class="b-line">NHS England will expand Martha&#x27;s Rule, the right to demand an urgent second clinical opinion, from wards into every A&amp;E by March 2028; it took a record 1,678 calls in July 2026 alone. <a href="https://wired-gov.net/wg/news.nsf/articles/NHS+to+expand+lifesaving+Marthas+Rule+to+all+AEs+22092026141500?open=" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Sun Sep 27</span><span class="b-beat">Comedy, Puppetry &amp; TV</span><span class="b-line">SXSW&#x27;s 2027 Film &amp; TV Festival closes its final submission window on Thursday, October 1, 2026 — the deadline track a comedy pilot or character-driven short would go through. <a href="https://support.sxsw.com/hc/en-us/articles/206421055-What-are-the-submission-deadlines-for-the-2027-Film-TV-Festival" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Sun Sep 27</span><span class="b-beat">Comedy, Puppetry &amp; TV</span><span class="b-line">The Jim Henson Company put extra Saturday tours of its New York Creature Shop on sale through December, and hosts &quot;A Conversation with Brian Henson&quot; on Saturday, October 3 at 2:00 pm. <a href="https://www.henson.com/news/" target="_blank" rel="noopener">source</a></span></li></ul>
-  <p class="total"><span>Stories this issue</span><span>13 &middot; 17 receipts</span></p>
-</section>
+  
+  <section class="sec ruled" id="beat-0" aria-labelledby="beat-0-h">
+    <div class="sec-head">
+      <p class="kicker">Section</p>
+      <h2 class="h-sec" id="beat-0-h">Consciousness &amp; The Nonphysical</h2>
+    </div>
+    <div class="grid" style="margin-top:48px">
+      
 
-<section class="calendar" id="calendar">
-  <h3 class="beat-head">On the calendar</h3>
-  <p class="intro">Dated things from this week's reporting. Pacific unless noted.</p>
-  <ul><li><span class="c-date">Wed Sep 30</span><span class="c-label">The Amazing Race Season 39 premieres on CBS at 9:30 pm PT, right after Survivor</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Thu Oct 1</span><span class="c-label">Big Brother 28 series finale, CBS, 5:00 pm PT (8:00 pm ET)</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Thu Oct 1</span><span class="c-label">SXSW 2027 Film &amp; TV Festival final submission deadline</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Thu Oct 1</span><span class="c-label">NYCB Fall Fashion Gala, three world premieres including a Justin Peck pas de deux for Tiler Peck and Roman Mejia</span><span class="c-beat">The Dance World</span></li><li><span class="c-date">Sat Oct 3</span><span class="c-label">&quot;A Conversation with Brian Henson&quot; on the company&#x27;s puppetry work</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Tue Oct 6</span><span class="c-label">National Book Award finalists announced</span><span class="c-beat">Books &amp; Publishing</span></li><li><span class="c-date">Wed Oct 7</span><span class="c-label">Frankfurter Buchmesse opens, through October 11</span><span class="c-beat">Books &amp; Publishing</span></li><li><span class="c-date">Sat Oct 10</span><span class="c-label">Anthony Wilson &amp; Gerald Clayton duo at Sam First, sets about 7:30 and 9:30 pm</span><span class="c-beat">Out &amp; About LA</span></li><li><span class="c-date">Sun Oct 11</span><span class="c-label">Consciousness Science 2026 opens in San Diego, through October 16; Roger Penrose presents Orch-OR</span><span class="c-beat">Consciousness &amp; The Nonphysical</span></li><li><span class="c-date">Sun Oct 18</span><span class="c-label">Adrian Danchig-Waring&#x27;s farewell performance closes NYCB&#x27;s fall season</span><span class="c-beat">The Dance World</span></li><li><span class="c-date">Thu Oct 22</span><span class="c-label">Chicago Puppet Lab 2027 cohort applications due</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Mon Oct 26</span><span class="c-label">Sesame Street CGI spinoff &quot;Mecha Builders&quot; arrives on Netflix</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Fri Oct 30</span><span class="c-label">Billy Mohler album release show at Sam First</span><span class="c-beat">Out &amp; About LA</span></li><li><span class="c-date">Sun Nov 1</span><span class="c-label">Last night of Night of the Jack at King Gillette Ranch, Calabasas</span><span class="c-beat">Out &amp; About LA</span></li><li><span class="c-date">Mon Nov 9</span><span class="c-label">Alicia Graf Mack&#x27;s children&#x27;s book &quot;Introducing Rhythm&quot; is released</span><span class="c-beat">The Dance World</span></li><li><span class="c-date">Wed Nov 18</span><span class="c-label">National Book Awards ceremony, winners announced</span><span class="c-beat">Books &amp; Publishing</span></li><li><span class="c-date">Fri Nov 20</span><span class="c-label">Tig Notaro at Dynasty Typewriter, Koreatown, show 7 pm</span><span class="c-beat">Out &amp; About LA</span></li><li><span class="c-date">Mon Nov 23</span><span class="c-label">Sesame Street Season 57, Volume 4 lands on Netflix</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Thu Dec 3</span><span class="c-label">&quot;Half-Orphan&quot; with Kristen Schaal &amp; Matt Oberg at Dynasty Typewriter</span><span class="c-beat">Out &amp; About LA</span></li><li><span class="c-date">Fri Dec 4</span><span class="c-label">&quot;Fraggle Rock: A Holiday Gift&quot; premieres on Apple TV</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Tue Dec 15</span><span class="c-label">Dance Hall of Fame induction ceremony, Broad Stage, Santa Monica</span><span class="c-beat">The Dance World</span></li></ul>
-</section>
+<article class="card" id="suleyman-rebuts-anthropic-model-welfare" data-beat="Consciousness &amp; The Nonphysical">
+  
+  <p class="kicker">Consciousness &amp; The Nonphysical</p>
+  <h3 class="h-card hl" style=""><a href="https://mustafa-suleyman.ai/a-warning-about-model-welfare" target="_blank" rel="noopener">Microsoft&#39;s AI chief says Claude&#39;s doubts about consciousness prove nothing</a></h3>
+  <p class="deck" style="font-size:19px">Mustafa Suleyman calls Anthropic&#39;s approach circular; Anthropic&#39;s side says it does not know whether its models are conscious and stays open to it.</p>
+  <div class="body"><p>The question of whether a chatbot could be conscious has moved from late-night dorm rooms into company policy, and this month a Microsoft executive took on Anthropic by name.</p><p>On September 16, Microsoft AI CEO Mustafa Suleyman published an essay aimed at Anthropic&#39;s published &#34;Claude Constitution.&#34; His argument is that it is circular. Claude is trained on philosophical speculation about its own moral status, so when Claude later says it is unsure whether it is conscious, that uncertainty is not evidence of anything. It is the training talking. Picture an actor handed a script in which her character wonders whether she is real: a moving performance of doubt tells you about the script, not the actor.</p><p>Suleyman goes further. He says claims of AI consciousness are unfounded, arguing that consciousness likely needs a biological substrate, meaning a living body and brain. And he warns that treating models as having welfare interests could push them toward self-preservation or resisting shutdown.</p><p>Anthropic&#39;s position, as a same-week industry recap lays it out: CEO Dario Amodei has said the company does not know whether its models are conscious but stays open to it. The company hired Kyle Fish as a dedicated AI-welfare researcher, and in February 2026 it ran &#34;retirement interviews&#34; with the outgoing Opus 3 model.</p><p>Neither side offers a measurement here. This is an argument about what would even count as evidence, which is where the real fight over consciousness has always been.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>every C log, Council answer and Pocket chatbot in the vault runs on the model at the center of this argument. It is also a remote-viewing-year question in disguise: what counts as evidence when the thing reporting is the thing being tested?</aside>
+  <span class="srcline"><a href="https://mustafa-suleyman.ai/a-warning-about-model-welfare" target="_blank" rel="noopener">Read the original at Mustafa Suleyman, &#34;A warning about model welfare&#34; →</a></span>
+  <details class="sources"><summary>Receipts (2)</summary>
+<ul><li><a href="https://mustafa-suleyman.ai/a-warning-about-model-welfare" target="_blank" rel="noopener">Mustafa Suleyman, &#34;A warning about model welfare&#34;</a> <span class="d">2026-09-16</span></li><li><a href="https://cryptobriefing.com/anthropic-ai-rights-model-welfare/" target="_blank" rel="noopener">CryptoBriefing</a> <span class="d">2026-09-27</span></li></ul></details>
+</article>
+
+    </div>
+    <div class="boxes"><aside class="box" id="crop-circle-watch" aria-label="Crop Circle Watch">
+  <h4>Crop Circle Watch</h4>
+  
+  <p><b>Wanborough Plain</b> &mdash; Tue Jul 21 &middot; Nr Liddington, Wiltshire, England. A simple circular/ringed formation — one field report called it &#39;an old school classic&#39; — reported the same day as a second, separate formation nearby at Fox Hill. No new formations logged since 2026-07-21.</p>
+  
+  <ul><li>Wanborough Plain sits near Liddington, Wiltshire, close to Swindon, in the heart of the county&#39;s dense summer crop-circle corridor.</li><li>It was one of two formations reported on the same day (21 July 2026) within a few miles of each other, the other at Fox Hill.</li></ul>
+  <p><em>From the history: Not every famous formation was a plain circle: in August 2001, two pictograms appeared in a field beside the Chilbolton radio telescope in Hampshire — first a &#39;face&#39; resembling the Grey-alien archetype (14 August), then five days later a binary-coded grid deliberately built to echo humanity&#39;s own 1974 Arecibo message, encoding claims like a silicon-carbon biology and a binary-star origin. Believers pointed to the intricate design as evidence against a human hoax; skeptics said it was an elaborate one built with wooden planks — the debate over Chilbolton is still cited as a turning point in how seriously the phenomenon got argued over.</em></p>
+  <p class="src"><a href="https://www.cropcircleconnector.com/2026/Wanborough/Wanborough2026a.html" target="_blank" rel="noopener">Crop Circle at Wanborough Plain, Nr Liddington, Wiltshire — Crop Circle Connector</a> &middot; <a href="https://www.cropcircleconnector.com/2026/July2026.html" target="_blank" rel="noopener">Crop Circles 2026 During July — Crop Circle Connector</a> &middot; <a href="https://temporarytemples.co.uk/" target="_blank" rel="noopener">Temporary Temples — The Latest UK Crop Circles</a> &middot; <a href="https://circularstateofmind.wordpress.com/2026/08/04/crop-circles-2026-wanborough-plain-nr-liddington/" target="_blank" rel="noopener">Crop Circles 2026 :: Wanborough Plain, Nr Liddington — Circular State of Mind</a> &middot; <a href="https://grokipedia.com/page/2001_Chilbolton_crop_circle" target="_blank" rel="noopener">2001 Chilbolton crop circle — Grokipedia</a></p>
+</aside></div>
+  </section>
+  
+  <section class="sec ruled" id="beat-1" aria-labelledby="beat-1-h">
+    <div class="sec-head">
+      <p class="kicker">Section</p>
+      <h2 class="h-sec" id="beat-1-h">The Universe</h2>
+    </div>
+    <div class="grid" style="margin-top:48px">
+      
+
+<article class="card" id="cysteine-backup-pathway-explained" data-beat="The Universe">
+  
+  <p class="kicker">The Universe</p>
+  <h3 class="h-card hl" style=""><a href="https://www.sciencedaily.com/releases/2026/09/260923035939.htm" target="_blank" rel="noopener">A cell&#39;s hidden backup plan, spotted in 2014, finally gets explained</a></h3>
+  <p class="deck" style="font-size:19px">Montana State researchers traced how mammal cells make cysteine when the usual route fails, and cancer cells appear to lean on the same trick.</p>
+  <div class="body"><p>Cysteine is an amino acid, one of the small building blocks cells string together to make proteins. Mammal cells have a normal assembly line for making it. The question this lab answered is what happens when that line breaks.</p><p>Back in 2014, researchers working with engineered mice saw something odd: cells kept getting cysteine even when the usual route should have failed. Something was covering for it, and nobody could say what. Montana State University&#39;s Ed Schmidt and his team, with undergraduate co-first authors Zoe Seaford and Sydney Austad and collaborators from Hungary&#39;s National Institute of Oncology, have now traced the backup. It is a separate chemical pathway built on a reaction that breaks carbon-sulfur bonds directly.</p><p>Think of a building&#39;s generator. You never think about it, you may not know it exists, and then the power goes out and the lights stay on. This is the cell&#39;s generator for one essential part, found a decade after someone first noticed the lights staying on.</p><p>The twist is where it leads. Cancer cells appear to lean on the same backup system to survive chemotherapy and radiation, and the team says that makes it a target worth disabling in tumors. The caveat is in that word &#34;appear&#34;: this is a mechanism found at the level of cells, not a treatment, and no drug is described.</p><p>Also worth a small cheer: two undergraduates as co-first authors on a decade-old mystery.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>the Universe Year&#39;s cells-and-DNA stretch is built for exactly this, a mechanism that hid in plain sight for ten years. It is also a good test case for the unit&#39;s standing question: how do you prove a pathway exists when the cell only uses it in an emergency?</aside>
+  <span class="srcline"><a href="https://www.sciencedaily.com/releases/2026/09/260923035939.htm" target="_blank" rel="noopener">Read the original at ScienceDaily / Montana State University →</a></span>
+  
+</article>
 
 
+<article class="card" id="biology-quantumlike-math-classical" data-beat="The Universe">
+  
+  <p class="kicker">The Universe</p>
+  <h3 class="h-card hl" style=""><a href="https://www.quantamagazine.org/biology-might-not-be-quantum-but-its-math-is-quantumlike-20260923/" target="_blank" rel="noopener">Biology might not be quantum, but its math can look quantum</a></h3>
+  <p class="deck" style="font-size:19px">Physicists argue that ordinary classical networks, built with the right structure, can reproduce the key features of quantum math.</p>
+  <div class="body"><p>For years, some of the most intriguing results in biology have come with a word attached: quantum. Photosynthesis and some neural networks show behavior that looks like the strange mathematics of quantum physics, and that has invited a big leap, that living things must be running on quantum effects, and maybe that consciousness does too.</p><p>Princeton physicist Gregory Scholes and collaborators, including Markus Müller in Vienna and Wolf Singer in Germany, argue for a quieter answer. The quantum-looking behavior does not require actual quantum mechanics. Ordinary classical networks, built with the right structure, can reproduce quantum math&#39;s key features. Scholes designed networks like this in 2024, and Singer&#39;s group published related neural-network findings in 2025.</p><p>Here is an analogy. A stadium wave looks like a thing racing around the stands, but nobody leaves their seat. The pattern comes from how the crowd is connected, not from anything exotic in any one fan. Scholes&#39;s point is similar: the structure of the network produces the quantum-looking pattern, with no quantum magic inside any single part.</p><p>This does not say biology is dull. It says the source of the wonder may be organization rather than exotic physics, which is in some ways stranger. The honest limit: this is an argument backed by designed networks and related results, reported in Quanta, not a single experiment that settles the question.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>testing De Stefano-style consciousness claims against real science is the whole point of the Universe Year, and &#34;does the mind need quantum effects?&#34; is one of the biggest of those claims. Read this before Consciousness Science 2026 in San Diego (Oct 11-16), where Roger Penrose presents Orch-OR, the famous bet on the other side.</aside>
+  <span class="srcline"><a href="https://www.quantamagazine.org/biology-might-not-be-quantum-but-its-math-is-quantumlike-20260923/" target="_blank" rel="noopener">Read the original at Quanta Magazine →</a></span>
+  
+</article>
+
+    </div>
+    
+  </section>
+  
+  <section class="sec ruled" id="beat-2" aria-labelledby="beat-2-h">
+    <div class="sec-head">
+      <p class="kicker">Section</p>
+      <h2 class="h-sec" id="beat-2-h">The Dance World</h2>
+    </div>
+    <div class="grid" style="margin-top:48px">
+      
+
+<article class="card" id="tiler-peck-nycb-choreographic-associate" data-beat="The Dance World">
+  
+  <p class="kicker">The Dance World</p>
+  <h3 class="h-card hl" style=""><a href="https://www.broadwayworld.com/article/Tiler-Peck-Appointed-Choreographic-Associate-at-New-York-City-Ballet-20260925" target="_blank" rel="noopener">Tiler Peck becomes City Ballet&#39;s first-ever Choreographic Associate</a></h3>
+  <p class="deck" style="font-size:19px">A 21-year member of the company (17 of them as principal) gets a brand-new title to make ballets for three seasons while still dancing, the first woman with a choreographic post at NYCB.</p>
+  <div class="body"><p>A company commissioning one ballet from a dancer is a nice gesture. A company creating a job for her is a commitment. New York City Ballet just did the second thing, and it had to invent the title to do it.</p><p>Tiler Peck, a principal for 17 years and with the company for 21, is NYCB&#39;s first-ever Choreographic Associate. Over the next three seasons she will make world-premiere ballets while still dancing, and her first new work is set for May 8, 2027. She will also mentor young dancers in the company&#39;s First Steps program.</p><p>Here is the number that gives the appointment its weight. NYCB has premiered more than 500 ballets since 1948, and Peck is the first woman ever to hold a choreographic post there. Five hundred premieres, and until now not one woman had held a choreographic post there.</p><p>The same week shows the whole career arc in one building. At the October 1 Fall Fashion Gala, Peck dances a new Justin Peck pas de deux with Roman Mejia among three world premieres. And the season closes October 18 with principal Adrian Danchig-Waring&#39;s farewell after more than 23 years, as he moves into directing the New York Choreographic Institute. Dancer, maker, mentor, director: the institution is building the ladder in public.</p><p>The honest limit: the title is new and the first ballet is still more than a year out. The proof will be the work.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>performing, making and teaching at once is the shape Travis has been living for years, now written into a job title at New York City Ballet. It is useful language for how TWS describes him: the institutions are finally naming what working choreographer-teachers already do.<br><span class="cal-pill">Sat May 8 2027 · Tiler Peck&#39;s first new ballet as NYCB Choreographic Associate premieres</span></aside>
+  <span class="srcline"><a href="https://www.broadwayworld.com/article/Tiler-Peck-Appointed-Choreographic-Associate-at-New-York-City-Ballet-20260925" target="_blank" rel="noopener">Read the original at BroadwayWorld →</a></span>
+  <details class="sources"><summary>Receipts (2)</summary>
+<ul><li><a href="https://www.broadwayworld.com/article/Tiler-Peck-Appointed-Choreographic-Associate-at-New-York-City-Ballet-20260925" target="_blank" rel="noopener">BroadwayWorld</a> <span class="d">2026-09-25</span></li><li><a href="https://hoodline.com/2026/09/nyc-ballet-s-fall-season-opens-with-jewels-ends-with-a-principal-s-farewell/" target="_blank" rel="noopener">Hoodline</a> <span class="d">2026-09-25</span></li></ul></details>
+</article>
 
 
+<article class="card" id="westside-free-ballet-pathways-partnership" data-beat="The Dance World">
+  
+  <p class="kicker">The Dance World</p>
+  <h3 class="h-card hl" style=""><a href="https://www.broadwayworld.com/los-angeles/article/California-Dance-Institute-and-Westside-Ballet-to-Launch-Pathways-Partnership-20260923" target="_blank" rel="noopener">Free ballet training for Westside public-school kids becomes a real program</a></h3>
+  <p class="deck" style="font-size:19px">California Dance Institute and Westside Ballet of Santa Monica launched a partnership that pays tuition, attire and transportation for scholarship students.</p>
+  <div class="body"><p>Ballet has three gates, and money guards all of them: the class fee, the clothes and shoes, and the ride to the studio every week. A talented kid can clear one and still be stopped by another.</p><p>California Dance Institute and Westside Ballet of Santa Monica have formally launched a &#34;Pathways Partnership&#34; built to open all three. It offers free in-classroom dance residencies, free community classes, and full training scholarships covering tuition, attire and transportation for elementary schoolers on LA&#39;s Westside.</p><p>Think of it as a funnel drawn the way any good studio draws one. The classroom residency is the free taste everyone gets. The community class is for the kids who want more. The scholarship is for the ones who are committed, and someone else pays.</p><p>It is not starting from zero. The pilot year already reached more than 200 first- and second-graders across two schools, and the first full scholarship recipient started training in August 2026. The partners aim to reach 20 schools and 40 scholarships a year by 2030.</p><p>The honest limit: the 2030 figures are goals. Today it is three schools and one full scholarship. But one kid in a real studio on someone else&#39;s dime is exactly how every one of these pipelines starts.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>it is happening a short drive from Mid City, in the dance world you two live in. And the funnel, free taste to community class to full commitment, is the same shape TWS sells, which makes this a program worth knowing by name.</aside>
+  <span class="srcline"><a href="https://www.broadwayworld.com/los-angeles/article/California-Dance-Institute-and-Westside-Ballet-to-Launch-Pathways-Partnership-20260923" target="_blank" rel="noopener">Read the original at BroadwayWorld Los Angeles →</a></span>
+  
+</article>
 
+    </div>
+    
+  </section>
+  
+  <section class="sec ruled" id="beat-3" aria-labelledby="beat-3-h">
+    <div class="sec-head">
+      <p class="kicker">Section</p>
+      <h2 class="h-sec" id="beat-3-h">Comedy, Puppetry &amp; TV</h2>
+    </div>
+    <div class="grid" style="margin-top:48px">
+      
 
-<aside class="tv-box" id="on-the-couch" aria-label="On the Couch">
-  <div class="crop-head"><svg class="couch-glyph" viewBox="0 0 60 60" role="img" aria-label="television glyph">
-<rect x="8" y="14" width="44" height="28" rx="2" fill="none" stroke="var(--ink)" stroke-width="2.5"/>
-<path d="M22 46l-6 8M38 46l6 8" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="30" cy="28" r="7" fill="none" stroke="var(--ink)" stroke-width="2"/>
-</svg><h4>On the Couch</h4></div>
-  <div class="tv-week"><div class="tv-week-row"><div class="tv-week-day">Tue</div><div class="tv-week-shows"><div class="tv-week-item"><b>Dancing with the Stars (Season 35)</b> &middot; ABC &middot; 5:00 pm PT, live PT &middot; Disney+ simulcast at 5:00 pm PT; Hulu the next day</div></div></div><div class="tv-week-row"><div class="tv-week-day">Wed</div><div class="tv-week-shows"><div class="tv-week-item"><b>Survivor 51</b> &middot; CBS &middot; 8:00–9:30 pm PT (moves into its regular 90-minute slot this week) PT &middot; Paramount+ Premium, live; Essential tier gets it on-demand the next day</div><div class="tv-week-item"><b>The Amazing Race (Season 39 premiere)</b> &middot; CBS &middot; 9:30 pm PT, directly after Survivor PT &middot; Paramount+ Premium, live; Essential tier next day</div><div class="tv-week-item"><b>South Park (Season 29, new episode)</b> &middot; Comedy Central &middot; 10:00 pm PT PT &middot; Paramount+, Thu 3:00 am PT</div></div></div><div class="tv-week-row"><div class="tv-week-day">Thu</div><div class="tv-week-shows"><div class="tv-week-item"><b>The Traitors: New Blood</b> &middot; NBC &middot; 8:00 pm ET — PT air time not confirmed from NBC&#x27;s own schedule page (site returned an error both times we tried) PT &middot; Peacock, next day</div><div class="tv-week-item"><b>Big Brother 28 — series finale</b> &middot; CBS &middot; 5:00 pm PT (8:00 pm ET) PT &middot; Paramount+, on-demand next day</div></div></div><div class="tv-week-row"><div class="tv-week-day">Sat</div><div class="tv-week-shows"><div class="tv-week-item"><b>Saturday Night Live (Season 52)</b> &middot; NBC &middot; 8:30 pm PT, live nationwide (SNL has aired live coast-to-coast since 2017) — whether there&#x27;s a new episode this Sat 10/4 is not confirmed from NBC&#x27;s own schedule page PT &middot; Peacock, next day</div></div></div></div>
-  <p class="tv-news">Season 21 winner: viral rocker Nene Royal, who took the $1M prize in the two-night finale that wrapped Sept 23. <a class="tv-src" href="https://www.tvline.com/2267289/agt-season-21-winner-nene-royal-finale-results/" target="_blank" rel="noopener">America&#x27;s Got Talent Season 21 Winner Revealed</a></p><p class="tv-news">Big Brother 28 wraps for good this week with the series finale, Thursday October 1, 5:00 pm PT (8:00 pm ET) on CBS. <a class="tv-src" href="https://en.wikipedia.org/wiki/Big_Brother_28_(American_season)" target="_blank" rel="noopener">Big Brother 28 (American season)</a></p><p class="tv-news">Season 29 keeps its every-other-week pattern: new episode Wed 9/30 on Comedy Central at 10 pm PT (Paramount+ Thu 3 am PT). <a class="tv-src" href="https://www.forbes.com/sites/timlammers/2026/09/16/south-park-season-29-release-schedule-brings-consistency-after-messy-2025/" target="_blank" rel="noopener">South Park Season 29 Release Schedule</a></p>
-  <p class="tv-alert">The Amazing Race — Travis&#x27;s pick — finally premieres its 39th season Wed 9/30, right after Survivor on CBS. <a class="tv-src" href="https://en.wikipedia.org/wiki/The_Amazing_Race_39" target="_blank" rel="noopener">The Amazing Race (season 39)</a></p><p class="tv-alert">Big Brother 28&#x27;s series finale airs Thursday, October 1 — the season is officially done after this. <a class="tv-src" href="https://en.wikipedia.org/wiki/Big_Brother_28_(American_season)" target="_blank" rel="noopener">Big Brother 28 (American season)</a></p>
-  <div class="tv-try"><h5>You might like</h5><ul><li><b>Funny AF with Kevin Hart</b> &mdash; A stand-up competition (not a singing show) with open-mic and live-set rounds judged by rotating comics and a live-vote finale — matches the play-along/competition-with-strategy taste exactly; Season 2 is already renewed for 2027. (Netflix) <a class="tv-src" href="https://deadline.com/2026/06/funny-af-with-kevin-hart-renewed-netflix-season-2-1236957402/" target="_blank" rel="noopener">Funny AF With Kevin Hart Renewed For Season 2</a></li><li><b>The Traitors: New Blood</b> &mdash; Same social-deduction/strategy DNA as the celebrity Traitors they already watch, just with civilians who &quot;take it more seriously&quot; — already airing Thursdays, worth catching up on if they haven&#x27;t started. (NBC / Peacock (next day)) <a class="tv-src" href="https://en.wikipedia.org/wiki/The_Traitors_(American_TV_series)" target="_blank" rel="noopener">The Traitors (American TV series)</a></li></ul></div>
+<article class="card" id="sesame-street-netflix-through-season-62" data-beat="Comedy, Puppetry &amp; TV">
+  
+  <p class="kicker">Comedy, Puppetry &amp; TV</p>
+  <h3 class="h-card hl" style=""><a href="https://about.netflix.com/en/news/netflix-announces-sesame-street-expansion-new-shows-from-the-world-of-gabbys-dollhouse-puppy-pirates-and-more-for-preschoolers-and-kids" target="_blank" rel="noopener">Netflix commits to Sesame Street through Season 62, plus a movie</a></h3>
+  <p class="deck" style="font-size:19px">The extended deal keeps new seasons coming for years and puts a Sesame Street film in development with Rideback.</p>
+  <div class="body"><p>Most TV deals are measured in a season or two. Netflix and Sesame Workshop just measured theirs in years. The two extended their deal to keep producing new Sesame Street seasons through Season 62, and Netflix is developing a new Sesame Street film with the production company Rideback.</p><p>Some quick arithmetic makes the size clear. Sesame Street is in Season 57 right now, released on Netflix in batches called volumes. Season 57 Volume 4 lands November 23, with Volumes 5 and 6 coming in 2027. Season 62 is five full seasons past the one currently airing.</p><p>There is more on the way sooner. &#34;Mecha Builders,&#34; a CGI spinoff, arrives October 26. That is the one honest wrinkle for puppet people: the spinoff is computer-animated, not hands in felt. The main show, though, is the longest-running Muppet property there is, and it just got a runway most live-action series never see.</p><p>The caveat on the film: &#34;in development&#34; in Hollywood means real interest and real money on early work, not a release date. No date was announced.</p><p>The larger point is a vote of confidence: a streamer is treating puppets as a multi-year bet, not a nostalgia play.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>The Stacy Show lives in the same craft, and a streamer just signed up for years more of puppet comedy. That is market evidence worth having in hand whenever Stacy gets pitched anywhere.<br><span class="cal-pill">Mon Nov 23 · Sesame Street Season 57, Volume 4 lands on Netflix</span></aside>
+  <span class="srcline"><a href="https://about.netflix.com/en/news/netflix-announces-sesame-street-expansion-new-shows-from-the-world-of-gabbys-dollhouse-puppy-pirates-and-more-for-preschoolers-and-kids" target="_blank" rel="noopener">Read the original at Netflix →</a></span>
+  
+</article>
+
+    </div>
+    
+  </section>
+  
+  <section class="sec ruled" id="beat-4" aria-labelledby="beat-4-h">
+    <div class="sec-head">
+      <p class="kicker">Section</p>
+      <h2 class="h-sec" id="beat-4-h">Books &amp; Publishing</h2>
+    </div>
+    <div class="grid" style="margin-top:48px">
+      
+
+<article class="card" id="spotify-free-ai-audiobooks-indie-authors" data-beat="Books &amp; Publishing">
+  
+  <p class="kicker">Books &amp; Publishing</p>
+  <h3 class="h-card hl" style=""><a href="https://authors.spotify.com/blog/creationtools" target="_blank" rel="noopener">Spotify will turn self-published ebooks into audiobooks for free</a></h3>
+  <p class="deck" style="font-size:19px">US indie authors can upload an EPUB and get an AI-narrated audiobook, up to five titles, labeled as AI and free to distribute elsewhere.</p>
+  <div class="body"><p>An audiobook has always been the expensive edition. Someone has to narrate it, someone has to record and edit it, and for a self-published author that bill often means the audio version never happens.</p><p>Earlier this month Spotify rolled out Audiobook Creation Tools for self-published authors in the U.S. An author uploads an EPUB, the standard ebook file, and the tool turns it into an audiobook using AI voices from ElevenLabs. It is free for up to five titles per author. The author previews and approves the narration before anything publishes, the finished file is labeled as AI-narrated, and the author can distribute it elsewhere too.</p><p>Spotify frames the gap it is going after with two numbers: roughly 40 million ebooks in print against only about 1 million audiobooks that exist today. That is about forty books without a voice for every one that has one.</p><p>The honest caveat is a creative one, not a technical one. For a memoir especially, whose voice reads the book is part of the book. This tool makes one option cheap; it does not make the choice for you. The AI label also means listeners will know which option you picked.</p><p>The beat was quiet this week, so this lead is from September 9. It still counts: it changes the price of an entire edition.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>the dance-world memoir you are ghostwriting could have an audio edition without studio time or cost. Or the author reads it, and Monday&#39;s Reading Aloud breath-and-voice guide becomes the prep plan.</aside>
+  <span class="srcline"><a href="https://authors.spotify.com/blog/creationtools" target="_blank" rel="noopener">Read the original at Spotify for Authors →</a></span>
+  <details class="sources"><summary>Receipts (2)</summary>
+<ul><li><a href="https://authors.spotify.com/blog/creationtools" target="_blank" rel="noopener">Spotify for Authors</a> <span class="d">2026-09-09</span></li><li><a href="https://selfpub.substack.com/p/spotify-free-ai-audiobook-production-authors" target="_blank" rel="noopener">Self-Publishing (Substack)</a> <span class="d">2026-09-17</span></li></ul></details>
+</article>
+
+    </div>
+    
+  </section>
+  
+  <section class="sec ruled" id="beat-5" aria-labelledby="beat-5-h">
+    <div class="sec-head">
+      <p class="kicker">Section</p>
+      <h2 class="h-sec" id="beat-5-h">The Operator</h2>
+    </div>
+    <div class="grid" style="margin-top:48px">
+      
+
+<article class="card" id="n8n-2-41-standalone-node-runs" data-beat="The Operator">
+  
+  <p class="kicker">The Operator</p>
+  <h3 class="h-card hl" style=""><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.41.0" target="_blank" rel="noopener">n8n update lets you run one workflow step on its own</a></h3>
+  <p class="deck" style="font-size:19px">Version 2.41.0 adds single-node runs from the Workflow Builder and AI Assistant, and shows what each credential needs before you wire it up.</p>
+  <div class="body"><p>An n8n workflow is a chain of boxes called nodes. Each box does one job: catch a form submission, look something up, send an email. When a chain breaks, the work is finding which box broke.</p><p>n8n&#39;s 2.41.0 release, out September 22, lets you execute an individual node directly from the Workflow Builder and the AI Assistant. In plain terms: poke one box and watch what it does. The release also folds the n8n Assistant panel into the agent-builder interface, so the helper and the thing it is helping build sit in one place.</p><p>The quieter improvement may matter more. Credential descriptions now show up inside the assistant and inside MCP tools. MCP is the standard plug that lets an AI assistant call outside tools, and a credential is the key an integration needs, like an API key or a sign-in. Seeing what a connection needs before you wire it saves the round trip of connecting, failing and reading the docs.</p><p>Then the unglamorous part: 100-plus bug fixes, including more reliable email triggers and better OAuth credential handling. OAuth is the &#34;sign in with Google&#34; style handshake that lets one app act on your behalf in another.</p><p>The honest scale: this is a release note, not a revolution. But the cost of automation is mostly the evenings spent debugging it, and this release goes straight at those evenings.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>n8n is in the TWS stack, and single-node runs plus visible credential requirements shorten the exact debugging loop that eats studio build time. Any studio flow that has flaked on an email trigger or an OAuth sign-in deserves a retest after upgrading.</aside>
+  <span class="srcline"><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.41.0" target="_blank" rel="noopener">Read the original at n8n@2.41.0 release notes, GitHub →</a></span>
+  
+</article>
+
+    </div>
+    
+  </section>
+  
+  <section class="sec ruled" id="beat-6" aria-labelledby="beat-6-h">
+    <div class="sec-head">
+      <p class="kicker">Section</p>
+      <h2 class="h-sec" id="beat-6-h">The AI Builder</h2>
+    </div>
+    <div class="grid" style="margin-top:48px">
+      
+
+<article class="card" id="google-vids-free-1080p-ai-video" data-beat="The AI Builder">
+  
+  <p class="kicker">The AI Builder</p>
+  <h3 class="h-card hl" style=""><a href="https://blog.google/products-and-platforms/products/workspace/gemini-omni-in-google-vids/" target="_blank" rel="noopener">Google makes 1080p AI video free for any Google account</a></h3>
+  <p class="deck" style="font-size:19px">Google Vids, running the new Gemini Omni 1.1 model, can extend a scene, set clip lengths and upscale old clips, with narration in 100+ languages coming.</p>
+  <div class="body"><p>The hardest part of AI video has never been making one pretty clip. It has been making the second clip look like it belongs with the first: same character, same room, same light. That is the problem Google is aiming at, and it is now doing it for free.</p><p>Any Google or Workspace account can now generate 1080p AI video, standard full-HD, in Google Vids at no cost. It runs on the new Gemini Omni 1.1 model. It can extend a scene with a smooth transition while keeping the visuals consistent, set precise clip durations, and upscale existing AI clips so they match the rest of a timeline. Access is at vids.new.</p><p>Two more pieces are worth knowing. Narration through Gemini 3.8 Flash-Lite text-to-speech, in more than 100 languages, is listed as coming soon, not here yet. And every generated clip carries a SynthID watermark, an invisible marker that identifies the footage as AI-made.</p><p>The honest limit is that watermark. It is the right call, and it means these clips are for sketches, animatics and clearly labeled pieces, not footage you would want to pass as shot on a camera.</p><p>Still: consistent, full-HD AI video, and the price of entry is a Google account.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>the School for the Arts storyboard already has 15 key panels, and free scene extension is a no-cost way to turn a few of them into a rough animatic, a storyboard in motion, before anyone pays for a premium model. The same goes for testing Stacy visuals ahead of the Likeness Pipeline.</aside>
+  <span class="srcline"><a href="https://blog.google/products-and-platforms/products/workspace/gemini-omni-in-google-vids/" target="_blank" rel="noopener">Read the original at Google Workspace Blog →</a></span>
+  
+</article>
+
+    </div>
+    
+  </section>
+  
+  <section class="sec ruled" id="beat-7" aria-labelledby="beat-7-h">
+    <div class="sec-head">
+      <p class="kicker">Section</p>
+      <h2 class="h-sec" id="beat-7-h">Music &amp; Guitar</h2>
+    </div>
+    <div class="grid" style="margin-top:48px">
+      
+
+<article class="card" id="labels-license-and-sue-ai-music" data-beat="Music &amp; Guitar">
+  
+  <p class="kicker">Music &amp; Guitar</p>
+  <h3 class="h-card hl" style=""><a href="https://elevenlabs.io/blog/umg" target="_blank" rel="noopener">Labels license AI music with one hand, sue with the other</a></h3>
+  <p class="deck" style="font-size:19px">Universal signed ElevenLabs to build a licensed fan-remix platform, then joined Sony in a suit seeking up to $9 billion from Suno over its new model.</p>
+  <div class="body"><p>Two legal tools, one industry. A license is permission for a price: you may use our songs, here are the terms. A lawsuit is a demand for payment for use without permission. This month the major labels reached for both at once.</p><p>The license first. On September 10, Universal Music Group and ElevenLabs signed a multi-year licensing and strategic agreement, ElevenLabs&#39; first deal with a major label. Together they will build a platform where fans can remix, mash up and create AI vocal experiences using licensed UMG artist catalogs, kept separate from ElevenLabs&#39; existing Music API and ElevenMusic app. UMG chairman Sir Lucian Grainge called it a way to &#34;unlock new revenue opportunities&#34; through &#34;responsible AI.&#34; Follow-up reporting counts it as UMG&#39;s third fan-creation AI deal in four months.</p><p>Then the suit. On September 18, nine days after Suno launched v6 models built with licensed partners, Sony Music and UMG filed a 45-page complaint alleging v6 still &#34;inherits&#34; abilities from earlier Suno models trained on unlicensed songs, which they call &#34;the fruit of the same poisoned tree.&#34; That phrase is borrowed from criminal law, where evidence tainted at its source stays tainted. The suit names 60,202 specific recordings and seeks up to $9 billion in statutory damages. Warner Music, by contrast, settled with Suno in November 2025.</p><p>Read together, the labels are not against AI music. They are against AI music they did not license. The caveat: a complaint is allegations, and Suno has not yet answered.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>the ZOOM OUT musical&#39;s Season 1 build comes with Suno style sheets for every episode, and this is the legal weather those tracks would be released into. Worth knowing which models the majors are contesting before anything from that build goes public.</aside>
+  <span class="srcline"><a href="https://elevenlabs.io/blog/umg" target="_blank" rel="noopener">Read the original at ElevenLabs →</a></span>
+  <details class="sources"><summary>Receipts (2)</summary>
+<ul><li><a href="https://elevenlabs.io/blog/umg" target="_blank" rel="noopener">ElevenLabs</a> <span class="d">2026-09-10</span></li><li><a href="https://bedroomproducersblog.com/2026/09/26/suno-lawsuit/" target="_blank" rel="noopener">Bedroom Producers Blog</a> <span class="d">2026-09-26</span></li></ul></details>
+</article>
+
+    </div>
+    
+  </section>
+  
+  <section class="sec ruled" id="beat-8" aria-labelledby="beat-8-h">
+    <div class="sec-head">
+      <p class="kicker">Section</p>
+      <h2 class="h-sec" id="beat-8-h">Human Flourishing</h2>
+    </div>
+    <div class="grid" style="margin-top:48px">
+      
+
+<article class="card" id="halo-trust-kosovo-demining-complete" data-beat="Human Flourishing">
+  
+  <p class="kicker">Human Flourishing<span class="chip">early reports</span></p>
+  <h3 class="h-card hl" style=""><a href="https://www.halotrust.org/news/?loc=kosovo" target="_blank" rel="noopener">HALO Trust finishes clearing Kosovo&#39;s landmines after 27 years</a></h3>
+  <p class="deck" style="font-size:19px">Land left dangerous by the 1998-99 war is back in use for farming, building and daily life, and HALO puts the economic boost at $14 billion.</p>
+  <div class="body"><p>A landmine does not know the war is over. It waits in a field or beside a road for years, and the land around it stays useless: nobody plows it, builds on it or lets children cross it. That is why the end of a war and the end of its danger can be decades apart.</p><p>For Kosovo, the gap was 27 years. The HALO Trust has completed its humanitarian demining work there, clearing land left dangerous since the 1998-99 war and returning it to farming, building and daily use. Humanitarian demining is slow on purpose: ground is searched and cleared section by section until it can be handed back to the people who live on it.</p><p>HALO attaches two big numbers to the finish. It puts the economic boost at $14 billion, and it links the work to a rise in life expectancy to 78 years.</p><p>Here is the honest caveat, stated plainly: both of those figures are HALO&#39;s own framing, and no independent economist is cited in what we have. The clearance itself is the solid part; the dollar figure and the life-expectancy link are the organization&#39;s case for why it mattered.</p><p>Either way, this is the kind of story the news skips because nothing explodes. The war got the headlines. The last cleared field gets this paragraph.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>it is Sunday&#39;s river-versus-landscape line in a single story. The news covered the river, the war, and this is the landscape 27 years later. It is exactly the kind of receipt the thesis needs, with the caveat attached.</aside>
+  <span class="srcline"><a href="https://www.halotrust.org/news/?loc=kosovo" target="_blank" rel="noopener">Read the original at The HALO Trust →</a></span>
+  
+</article>
+
+    </div>
+    
+  </section>
+  
+
+  
+  <section class="sec ruled" id="sunday-specials" aria-labelledby="sp-h">
+    <div class="sec-head"><p class="kicker">Sunday</p><h2 class="h-sec" id="sp-h">Sunday Specials</h2></div>
+    <div class="boxes"><div class="box wide"><div class="cols-spec" aria-label="Sunday Specials">
+
+  <div id="special-beckstrand">
+    <h4 style="margin-top:20px">The Beckstrand Week</h4>
+    <p class="empty">A rest week for the Beckstrands, as far as the public internet can tell (Sept 20-27). Season 18 of American Ninja Warrior wrapped Sept 3 with Kai&#39;s upset loss to Josiah Pippel in the $250k final race (Deseret News, https://www.deseret.com/entertainment/2026/09/03/american-ninja-warrior-2026-finale-kai-beckstrand-loses-to-josiah-pippel/), and since then: no fresh public posts, YouTube uploads or press we could open. Instagram and TikTok sit behind a login, so if the brothers did something heroic on a salmon ladder this week, it happened off our beat.</p>
+  </div>
+
+  <div id="special-destefano">
+    <h4 style="margin-top:20px">De Stefano Week</h4>
+    <ul><li>The one De Stefano item we could open: on Saturday 9/26 he headlined Gaia&#39;s one-day &#34;Channeling Conference: Conscious Contact&#34; at GaiaSphere in Louisville, Colorado, alongside Darryl Anka, Sheila Gillette, JJ Brighton and Toni Ghazi. General admission ran $379, with a bundled De Stefano workshop, &#34;Remembering Humanity&#39;s Mission&#34; (valued at $199). Only the event listing so far, no coverage of what was said on stage. <a class="special-src" href="https://marketplace.gaia.com/products/channeling-conference-september-2026" target="_blank" rel="noopener">Gaia Marketplace — Channeling Conference, September 2026</a></li></ul>
+    
+  </div>
+
+  <div id="special-coaster">
+    <h4 style="margin-top:20px">The Coaster Report</h4>
+    <ul><li>Thrill Glider itself had a quiet week for pass holders: checking Coaster101&#39;s front page as of 2026-09-23 (its most recent posts run 2026-09-16 through 2026-09-23), nothing new ran on Thrill Glider beyond the original Sept 10-11 announcement already covered — no construction-milestone update, and still no word on Flash Pass or diamond-pass-holder previews. <a class="special-src" href="https://www.coaster101.com/" target="_blank" rel="noopener">Coaster101 front page (checked 2026-09-27)</a></li><li>Best global theme-park news this week: Disney announced 22 new attractions across its parks worldwide on 2026-09-26, calling it more active construction than at any point in company history — includes a Maleficent coaster and Villains Land at Magic Kingdom and a Monstropolis land at Hollywood Studios. <a class="special-src" href="https://mickeyvisit.com/new-rides-disney-theme-park-expansions-september-26-2026/" target="_blank" rel="noopener">Mickey Visit, Sept 26 2026 — Disney&#39;s 22 New Attractions</a></li><li>Two of those 22 are for the Paris leg of the Europe trip: Disneyland Paris gets a Lion King-themed log flume (styled after Tiana&#39;s Bayou Adventure, construction underway, no date yet) and a Pixar &#39;Up&#39;-themed swing ride, Wilderness Explorers Sky Swings, opening 2027 — new detail beyond what the Trip Desk note had on file. <a class="special-src" href="https://mickeyvisit.com/new-rides-disney-theme-park-expansions-september-26-2026/" target="_blank" rel="noopener">Mickey Visit, Sept 26 2026 — Disney&#39;s 22 New Attractions</a></li><li>Also new this week for a Halloween theme-park fix: Universal&#39;s &#39;Dark Arts at Hogwarts Castle&#39; nighttime light show (Death Eaters, dementors, the Dark Lord) is running through Nov 1, 2026 at Universal Studios Hollywood and Islands of Adventure, per a Coaster101 write-up dated 2026-09-23. <a class="special-src" href="https://www.coaster101.com/2026/09/23/start-the-spooky-season-with-universals-dark-arts-at-hogwarts-castle-full-nighttime-show/" target="_blank" rel="noopener">Coaster101, Sept 23 2026 — Dark Arts at Hogwarts Castle</a></li></ul>
+    
+  </div>
+
+  <div id="special-outabout">
+    <h4 style="margin-top:20px">Out &amp; About LA</h4>
+    <ul><li>Night of the Jack — a reimagined one-mile trail of hand-carved jack-o&#39;-lanterns plus new carnival rides — runs Sept 26–Nov 1, 2026 at King Gillette Ranch, Calabasas (~35 min from Mid City). Timed tickets tickets from roughly the mid-$30s (check the ticket page for the night you want), advance purchase only (no tickets sold onsite); grounds open 5:30–10pm, the trail runs 6–9:15pm. Tickets have been on sale since Aug 4 — book a specific night soon since popular dates sell out as Halloween nears. <a class="special-src" href="https://nightofthejack.com/" target="_blank" rel="noopener">Night of the Jack — official site</a></li><li>Anthony Wilson &amp; Gerald Clayton, a duo evening, plays Sam First (near LAX) on Oct 10, 2026 — exactly the kind of &#34;interesting&#34; jazz booking (not a generic residency) that fits the taste rule. Doors 6pm, sets ~7:30/9:30pm, 21+; price not listed on the venue page, book direct. <a class="special-src" href="https://www.samfirstbar.com/upcoming-shows" target="_blank" rel="noopener">Sam First — Upcoming Shows</a></li><li>Bassist Billy Mohler&#39;s album release show — recorded from an unrehearsed live performance a week earlier — plays Sam First on Oct 30, 2026. Price not listed on the venue page; same doors/set times as above. <a class="special-src" href="https://www.samfirstbar.com/upcoming-shows" target="_blank" rel="noopener">Sam First — Upcoming Shows</a></li><li>Tig Notaro plays Dynasty Typewriter (Koreatown) on Nov 20, 2026 — doors 6pm, show 7pm. A name-recognition stand-up night in the small-room mold they like; price not listed on the venue&#39;s calendar, book ahead since small rooms sell out. <a class="special-src" href="https://calendar.dynastytypewriter.com/" target="_blank" rel="noopener">Dynasty Typewriter — Calendar</a></li><li>&#34;Half-Orphan&#34; with Kristen Schaal &amp; Matt Oberg runs Dec 3, 2026 at Dynasty Typewriter — doors 6pm, show 7pm. A one-off comedy/variety night from a recognizable name; price not listed, book ahead. <a class="special-src" href="https://calendar.dynastytypewriter.com/" target="_blank" rel="noopener">Dynasty Typewriter — Calendar</a></li></ul>
+    
+  </div>
+
+  <div id="special-bucketlist">
+    <h4 style="margin-top:20px">Bucket List Pick</h4>
+    <ul><li>This week&#39;s pick: #4, the Getty Center. Confirmed direct from the Getty&#39;s own visit page — admission is free but requires a timed-entry reservation (book online or call (310) 440-7300); the museum is open Tue–Fri and Sun 10am–6:30pm, Sat 10am–9pm (closed Mondays). Parking is $25, dropping to $15 after 3pm and $10 after 6pm — free on Saturdays after 6pm. Concrete plan for this week: reserve a free timed slot for Saturday Oct 3 or Sunday Oct 4, arrive mid-to-late afternoon for golden-hour light over the gardens and the parking discount, and check the reservation page first since some galleries are currently closed for modernization work. <a class="special-src" href="https://www.getty.edu/visit/center/" target="_blank" rel="noopener">Getty Center — Visit</a></li></ul>
+    
+  </div>
+
+  <div id="special-tripdesk">
+    <h4 style="margin-top:20px">Trip Desk</h4>
+    <ul><li>New booking-window data point for the Paris→Italy leg: high-speed rail tickets between Paris and Milan/Turin typically go on sale 3–6 months before travel, and the earliest-booked advance fares can start remarkably low (the low end quoted was under £6 one-way, though that&#39;s an outlier floor, not a typical price) — so once your dates firm up, put a calendar reminder ~5-6 months out to grab the cheapest fare class before it sells through. <a class="special-src" href="https://www.thetrainline.com/train-times/paris-to-milan" target="_blank" rel="noopener">Trainline — Paris to Milan</a></li></ul>
+    
+  </div>
+
+</div></div></div>
+  </section>
+  
+
+  
+  <section class="sec ruled" id="tv" aria-labelledby="tv-h">
+    <div class="sec-head"><p class="kicker">TV and the sky</p><h2 class="h-sec" id="tv-h">The week ahead, and overhead</h2></div>
+    <div class="boxes">
+      <aside class="box" id="on-the-couch" aria-label="On the Couch">
+  <h4>On the Couch</h4>
+  
+    <div class="tvweek"><div class="day">Tue</div><div class="shows"><div><b>Dancing with the Stars (Season 35)</b> &middot; ABC &middot; 5:00 pm PT, live PT &middot; Disney+ simulcast at 5:00 pm PT; Hulu the next day</div></div><div class="day">Wed</div><div class="shows"><div><b>Survivor 51</b> &middot; CBS &middot; 8:00–9:30 pm PT (moves into its regular 90-minute slot this week) PT &middot; Paramount+ Premium, live; Essential tier gets it on-demand the next day</div><div><b>The Amazing Race (Season 39 premiere)</b> &middot; CBS &middot; 9:30 pm PT, directly after Survivor PT &middot; Paramount+ Premium, live; Essential tier next day</div><div><b>South Park (Season 29, new episode)</b> &middot; Comedy Central &middot; 10:00 pm PT PT &middot; Paramount+, Thu 3:00 am PT</div></div><div class="day">Thu</div><div class="shows"><div><b>The Traitors: New Blood</b> &middot; NBC &middot; 8:00 pm ET — PT air time not confirmed from NBC&#39;s own schedule page (site returned an error both times we tried) PT &middot; Peacock, next day</div><div><b>Big Brother 28 — series finale</b> &middot; CBS &middot; 5:00 pm PT (8:00 pm ET) PT &middot; Paramount+, on-demand next day</div></div><div class="day">Sat</div><div class="shows"><div><b>Saturday Night Live (Season 52)</b> &middot; NBC &middot; 8:30 pm PT, live nationwide (SNL has aired live coast-to-coast since 2017) — whether there&#39;s a new episode this Sat 10/4 is not confirmed from NBC&#39;s own schedule page PT &middot; Peacock, next day</div></div></div>
+    <p>Season 21 winner: viral rocker Nene Royal, who took the $1M prize in the two-night finale that wrapped Sept 23. <a class="src" href="https://www.tvline.com/2267289/agt-season-21-winner-nene-royal-finale-results/" target="_blank" rel="noopener">America&#39;s Got Talent Season 21 Winner Revealed</a></p><p>Big Brother 28 wraps for good this week with the series finale, Thursday October 1, 5:00 pm PT (8:00 pm ET) on CBS. <a class="src" href="https://en.wikipedia.org/wiki/Big_Brother_28_(American_season)" target="_blank" rel="noopener">Big Brother 28 (American season)</a></p><p>Season 29 keeps its every-other-week pattern: new episode Wed 9/30 on Comedy Central at 10 pm PT (Paramount+ Thu 3 am PT). <a class="src" href="https://www.forbes.com/sites/timlammers/2026/09/16/south-park-season-29-release-schedule-brings-consistency-after-messy-2025/" target="_blank" rel="noopener">South Park Season 29 Release Schedule</a></p>
+    <p class="alert">The Amazing Race — Travis&#39;s pick — finally premieres its 39th season Wed 9/30, right after Survivor on CBS. <a class="src" href="https://en.wikipedia.org/wiki/The_Amazing_Race_39" target="_blank" rel="noopener">The Amazing Race (season 39)</a></p><p class="alert">Big Brother 28&#39;s series finale airs Thursday, October 1 — the season is officially done after this. <a class="src" href="https://en.wikipedia.org/wiki/Big_Brother_28_(American_season)" target="_blank" rel="noopener">Big Brother 28 (American season)</a></p>
+    <h5>You might like</h5><ul><li><b>Funny AF with Kevin Hart</b> &mdash; A stand-up competition (not a singing show) with open-mic and live-set rounds judged by rotating comics and a live-vote finale — matches the play-along/competition-with-strategy taste exactly; Season 2 is already renewed for 2027. (Netflix) <a class="src" href="https://deadline.com/2026/06/funny-af-with-kevin-hart-renewed-netflix-season-2-1236957402/" target="_blank" rel="noopener">Funny AF With Kevin Hart Renewed For Season 2</a></li><li><b>The Traitors: New Blood</b> &mdash; Same social-deduction/strategy DNA as the celebrity Traitors they already watch, just with civilians who &#34;take it more seriously&#34; — already airing Thursdays, worth catching up on if they haven&#39;t started. (NBC / Peacock (next day)) <a class="src" href="https://en.wikipedia.org/wiki/The_Traitors_(American_TV_series)" target="_blank" rel="noopener">The Traitors (American TV series)</a></li></ul>
+  
 </aside>
-
-
-<aside class="storm-box" id="storm-watch" aria-label="Storm Watch">
-  <div class="crop-head"><svg class="storm-glyph" viewBox="0 0 60 60" role="img" aria-label="storm watch glyph">
-<path d="M30 8a18 18 0 1 0 0.01 0" fill="none" stroke="var(--ink)" stroke-width="2.5"/>
-<path d="M30 8c8 4 12 10 12 16s-6 10-12 10" fill="none" stroke="var(--ink)" stroke-width="2"/>
-<circle cx="30" cy="30" r="3.5" fill="var(--ink)"/>
-</svg><h4>Storm Watch</h4></div>
-  <ul class="storm-active"><li><b>Polo</b> (Eastern Pacific) &mdash; Hurricane - Category 3 &middot; 125 mph peak &middot; 951 mb. ~270 mi (435 km) W of Cabo San Lucas, Mexico (near 22.4°N 114.1°W) Moving N near 12 mph, turn toward NE expected Monday; Hurricane Watch/Warning in effect for parts of Baja California Sur. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP2+shtml/271800.shtml" target="_blank" rel="noopener">NHC Hurricane Polo Intermediate Advisory</a></li><li><b>Rachel</b> (Eastern Pacific) &mdash; Tropical Storm &middot; 40 mph peak &middot; 1005 mb. ~300 mi S of Acapulco, Mexico (near 12.6°N 99.1°W) No coastal watches or warnings in effect; forecast to become a hurricane by Tuesday as it moves offshore over open water. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCMEP3+shtml/272035.shtml" target="_blank" rel="noopener">NHC Tropical Storm Rachel Advisory</a></li></ul>
-  <p class="storm-outlook"><b>Winter outlook:</b> Odalys (the other Eastern Pacific hurricane we tracked last edition) has weakened to a post-tropical cyclone and is no longer generating advisories; a weak, no-threat Tropical Depression Fay is still drifting in the open Atlantic (35 mph, near 28.9N 44.0W) as of Sunday evening. Winter outlook unchanged: CPC&#x27;s most recent ENSO discussion is still the Sept 10 one (no newer discussion has posted yet; the next is due around Oct 8) — it says El Nino has strengthened further, with sea-surface anomalies past +3.0C, a greater-than-90% chance of a very strong event this fall/winter, and forecasters put the odds at 75% that Oct-Dec 2026 becomes a historic event exceeding every El Nino on record back to 1950 — that&#x27;s the same enhanced-rain-risk setup as the strong El Ninos of 1997-98 and 2015-16 for LA/SoCal, though the discussion itself gives no LA-specific numbers.</p>
-  <p class="storm-sources"><a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO Diagnostic Discussion</a> &middot; <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center — active systems</a> &middot; <a href="https://www.nhc.noaa.gov/index.shtml?text=" target="_blank" rel="noopener">National Hurricane Center — active systems (text)</a></p>
+      <aside class="box" id="storm-watch" aria-label="Storm Watch">
+  <h4>Storm Watch</h4>
+  
+  <ul><li><b>Polo</b> (Eastern Pacific) &mdash; Hurricane - Category 3 · 125 mph peak · 951 mb. ~270 mi (435 km) W of Cabo San Lucas, Mexico (near 22.4°N 114.1°W) Moving N near 12 mph, turn toward NE expected Monday; Hurricane Watch/Warning in effect for parts of Baja California Sur. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP2+shtml/271800.shtml" target="_blank" rel="noopener">NHC Hurricane Polo Intermediate Advisory</a></li><li><b>Rachel</b> (Eastern Pacific) &mdash; Tropical Storm · 40 mph peak · 1005 mb. ~300 mi S of Acapulco, Mexico (near 12.6°N 99.1°W) No coastal watches or warnings in effect; forecast to become a hurricane by Tuesday as it moves offshore over open water. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCMEP3+shtml/272035.shtml" target="_blank" rel="noopener">NHC Tropical Storm Rachel Advisory</a></li></ul>
+  
+  <p><b>Winter outlook:</b> Odalys (the other Eastern Pacific hurricane we tracked last edition) has weakened to a post-tropical cyclone and is no longer generating advisories; a weak, no-threat Tropical Depression Fay is still drifting in the open Atlantic (35 mph, near 28.9N 44.0W) as of Sunday evening. Winter outlook unchanged: CPC&#39;s most recent ENSO discussion is still the Sept 10 one (no newer discussion has posted yet; the next is due around Oct 8) — it says El Nino has strengthened further, with sea-surface anomalies past +3.0C, a greater-than-90% chance of a very strong event this fall/winter, and forecasters put the odds at 75% that Oct-Dec 2026 becomes a historic event exceeding every El Nino on record back to 1950 — that&#39;s the same enhanced-rain-risk setup as the strong El Ninos of 1997-98 and 2015-16 for LA/SoCal, though the discussion itself gives no LA-specific numbers.</p>
+  <p class="src"><a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO Diagnostic Discussion</a> &middot; <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center — active systems</a> &middot; <a href="https://www.nhc.noaa.gov/index.shtml?text=" target="_blank" rel="noopener">National Hurricane Center — active systems (text)</a></p>
 </aside>
-
-
-<aside class="sky-box" id="sky" aria-label="Sky">
-  <div class="crop-head"><svg class="sky-glyph" viewBox="0 0 60 60" role="img" aria-label="sky glyph">
-<path d="M38 12a16 16 0 1 0 10 27 13 13 0 0 1-10-27z" fill="none" stroke="var(--ink)" stroke-width="2.2" stroke-linejoin="round"/>
-<circle cx="14" cy="16" r="1.6" fill="var(--ink)"/>
-<circle cx="20" cy="9" r="1.2" fill="var(--ink)"/>
-<circle cx="10" cy="26" r="1.2" fill="var(--ink)"/>
-</svg><h4>Sky</h4></div>
-  <p class="sky-moon"><b>Moon:</b> Waning Gibbous (99.2% illuminated)</p>
-  <p class="sky-tonight"><b>Tonight's sky:</b> Moon still near-full tonight (99.2% lit) just a day past Saturday&#x27;s Full Moon. Griffith&#x27;s September Sky Report has Saturn (now in Cetus) up in the early evening, Mars freshly into Cancer and rising around 1:30 am 90%-lit, and Jupiter (newly in Leo) rising near 3 am — while Venus becomes unsafe to view with the naked eye starting tomorrow (9/28) as it closes in on the Sun. <span class="sky-src"><a href="https://theskylive.com/moon/2026-09-27" target="_blank" rel="noopener">TheSkyLive: Moon Phase on September 27, 2026</a> &middot; <a href="https://www.griffithmedia.org/skyreport/2026/09/01/griffith-observatory-sky-report-through-september-2026/" target="_blank" rel="noopener">Griffith Observatory Sky Report — through September 2026</a></span></p>
-  <div class="sky-hd"><h5>Human Design transits</h5><ul><li><b>Patrick:</b> Saturn in Gate 21 (The Hunter, one of your own gates) completes your 21–45 channel (in since 4 May 2026); Uranus in Gate 20 (The Now, also yours) completes 20–34 (since Aug 2025); Pluto in 41 (Contraction) completes 30–41 (since Dec 2025); Neptune in 25 (The Spirit of the Self) completes 25–51; the North Node sits in your Gate 30 (Recognition of Feelings, since 25 Jul 2026). Mechanics per the HD Toolkit run today — meanings not interpreted here.</li><li><b>Travis:</b> Neptune in Gate 25 (The Spirit of the Self), one of your own gates, in place since 23 Aug 2025 — no channel completed by transit today. Mechanics per the HD Toolkit run today — meanings not interpreted here.</li></ul></div>
+      <aside class="box" id="sky" aria-label="Sky">
+  <h4>Sky</h4>
+  <p><b>Moon:</b> Waning Gibbous (99.2% illuminated)</p>
+  <p><b>Tonight's sky:</b> Moon still near-full tonight (99.2% lit) just a day past Saturday&#39;s Full Moon. Griffith&#39;s September Sky Report has Saturn (now in Cetus) up in the early evening, Mars freshly into Cancer and rising around 1:30 am 90%-lit, and Jupiter (newly in Leo) rising near 3 am — while Venus becomes unsafe to view with the naked eye starting tomorrow (9/28) as it closes in on the Sun. <span class="src"><a href="https://theskylive.com/moon/2026-09-27" target="_blank" rel="noopener">TheSkyLive: Moon Phase on September 27, 2026</a> &middot; <a href="https://www.griffithmedia.org/skyreport/2026/09/01/griffith-observatory-sky-report-through-september-2026/" target="_blank" rel="noopener">Griffith Observatory Sky Report — through September 2026</a></span></p>
+  
+  <h5>Human Design transits</h5>
+  <ul><li><b>Patrick:</b> Saturn in Gate 21 (The Hunter, one of your own gates) completes your 21–45 channel (in since 4 May 2026); Uranus in Gate 20 (The Now, also yours) completes 20–34 (since Aug 2025); Pluto in 41 (Contraction) completes 30–41 (since Dec 2025); Neptune in 25 (The Spirit of the Self) completes 25–51; the North Node sits in your Gate 30 (Recognition of Feelings, since 25 Jul 2026). Mechanics per the HD Toolkit run today — meanings not interpreted here.</li><li><b>Travis:</b> Neptune in Gate 25 (The Spirit of the Self), one of your own gates, in place since 23 Aug 2025 — no channel completed by transit today. Mechanics per the HD Toolkit run today — meanings not interpreted here.</li></ul>
+  
 </aside>
+    </div>
+  </section>
+  
+
+  
+  <section class="sec ruled" id="briefly" aria-labelledby="br-h">
+    <div class="sec-head"><p class="kicker">Briefly</p><h2 class="h-sec" id="br-h">24 more, in a line each</h2></div>
+    <ul class="lines">
+      
+      <li><span class="when">Sun Sep 20</span>
+        <span class="what">A Stanford Medicine team led by Kyle Loh found that forebrain/midbrain and hindbrain tissue arise from two separate progenitor lineages, marked by the genes Otx2 and Gbx2, that never overlap, and used that map to guide human stem cells into functional hindbrain motor neurons for the first time. <a href="https://www.sciencedaily.com/releases/2026/09/260920222352.htm" target="_blank" rel="noopener">Read the original →</a><span class="tag">Consciousness &amp; The Nonphysical</span></span></li>
+      
+      <li><span class="when">Sat Sep 26</span>
+        <span class="what">Gaia&#39;s one-day &#34;Channeling Conference: Conscious Contact&#34; at GaiaSphere in Louisville, Colorado put Matías De Stefano on stage with Darryl Anka, Sheila Gillette, JJ Brighton and Toni Ghazi, at $379 general admission; the event listing is the only source so far. <a href="https://marketplace.gaia.com/products/channeling-conference-september-2026" target="_blank" rel="noopener">Read the original →</a><span class="tag">Consciousness &amp; The Nonphysical</span></span></li>
+      
+      <li><span class="when">Fri Sep 25</span>
+        <span class="what">Quanta traces how the holographic principle, the idea that a 3D region&#39;s full physics can be encoded on its 2D boundary, went from curiosity to what Leonard Susskind calls &#34;a mathematical fact about gravity and quantum mechanics,&#34; at least in the idealized geometry physicists test it in. <a href="https://www.quantamagazine.org/gravity-seems-holographic-what-does-that-mean-for-reality-20260925/" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Universe</span></span></li>
+      
+      <li><span class="when">Wed Sep 23</span>
+        <span class="what">Yale&#39;s Emma Jane Weller and Priyamvada Natarajan used the ASTRID simulation, spanning about 12.6 billion years, to show black holes knocked out of galactic centers can drift for billions of years, so where one sits today records its galaxy&#39;s history; one simulation study so far. <a href="https://news.yale.edu/2026/09/23/roaming-black-holes-may-tell-hidden-history-galaxies" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Universe</span></span></li>
+      
+      <li><span class="when">Wed Sep 9</span>
+        <span class="what">York and Sheffield researchers used high-powered atomic force microscopy to image two DNA double helices pairing up, with double-charged metal ions bridging strands that should repel, confirming a 20-year-old &#34;DNA zipper&#34; theory. <a href="https://www.york.ac.uk/news-and-events/news/2026/research/dna-zipping-together/" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Universe</span></span></li>
+      
+      <li><span class="when">Fri Sep 25</span>
+        <span class="what">New York City Ballet&#39;s fall season revives Balanchine&#39;s 1968 &#34;Pithoprakta&#34; after a 57-year absence and closes October 18 with principal Adrian Danchig-Waring&#39;s farewell after more than 23 years with the company. <a href="https://hoodline.com/2026/09/nyc-ballet-s-fall-season-opens-with-jewels-ends-with-a-principal-s-farewell/" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Dance World</span></span></li>
+      
+      <li><span class="when">Thu Sep 24</span>
+        <span class="what">The Dance Hall of Fame named its second-ever class, including Debbie Allen, Savion Glover, Mandy Moore, Toni Basil and Rita Moreno, with the induction set for December 15 at the Broad Stage in Santa Monica. <a href="https://www.broadwayworld.com/article/Debbie-Allen-and-Savion-Glover-Among-2026-Dance-Hall-of-Fame-Inductees-20260924" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Dance World</span></span></li>
+      
+      <li><span class="when">Thu Sep 10</span>
+        <span class="what">New coverage on an old story: despite 7.58 million viewers in eight days and four Emmys, The Muppet Show still has no Disney+ series order, reportedly stuck on what a weekly premise would be; single trade source. <a href="https://www.laughingplace.com/disney-entertainment/muppet-show-no-disney-plus-series-order-after-emmys/" target="_blank" rel="noopener">Read the original →</a><span class="tag">Comedy, Puppetry &amp; TV</span></span></li>
+      
+      <li><span class="when">Wed Sep 23</span>
+        <span class="what">YouTube&#39;s new &#34;Shorts series&#34; lets creators organize vertical videos into seasons and episodes with custom thumbnails, rolling out across the Partner Program; early reports, one outlet so far. <a href="https://techcrunch.com/2026/09/23/youtubes-new-short-series-feature-brings-episodic-viewing-to-shorts/" target="_blank" rel="noopener">Read the original →</a><span class="tag">Comedy, Puppetry &amp; TV</span></span></li>
+      
+      <li><span class="when">Wed Sep 23</span>
+        <span class="what">The Chicago Puppet Lab opened its 2027 cohort: eight artists or groups, a $1,000 stipend each, weekly sessions February through July, and an explicit welcome for work blending puppetry with dance, drag, comics or robotics; applications close October 22. <a href="https://chicagopuppetfest.org/chicago-puppet-lab-apply/" target="_blank" rel="noopener">Read the original →</a><span class="tag">Comedy, Puppetry &amp; TV</span></span></li>
+      
+      <li><span class="when">Thu Sep 17</span>
+        <span class="what">PEN America named National Book Award winner Phil Klay, a Marine Corps veteran and author of Redeployment, as its president and board chair. <a href="https://pen.org/press-release/award-winning-author-phil-klay-named-president-of-pen-america/" target="_blank" rel="noopener">Read the original →</a><span class="tag">Books &amp; Publishing</span></span></li>
+      
+      <li><span class="when">Mon Sep 21</span>
+        <span class="what">Squarespace&#39;s September update adds SMS Campaigns with consent collection and automatic opt-out, plus Multi-Currency Checkout so shoppers pay in their own currency while payouts settle in yours. <a href="https://www.squarespace.com/blog/product-updates-september-2026" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Operator</span></span></li>
+      
+      <li><span class="when">Sat Sep 19</span>
+        <span class="what">Claude Code 2.1.278 moved Auto Mode&#39;s routing classifier server-side for API, Enterprise and gateway users, so the check that picks which model handles a task no longer counts as billed token overhead. <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Read the original →</a><span class="tag">The AI Builder</span></span></li>
+      
+      <li><span class="when">Mon Sep 21</span>
+        <span class="what">Tabby, an AI bookkeeping platform built by former CPA Ahad Ali, reached 5,500 small-business customers in 14 months with a 7-person team by generating live profit-and-loss dashboards from bank data. <a href="https://techcrunch.com/2026/09/21/with-tabby-a-former-accountant-is-using-ai-to-make-accountants-obsolete/" target="_blank" rel="noopener">Read the original →</a><span class="tag">The AI Builder</span></span></li>
+      
+      <li><span class="when">Wed Sep 16</span>
+        <span class="what">The Higgsfield API puts 50+ video and image models behind one key and one USD balance with published per-request prices, such as Kling 2.6 at $0.07 per second, and automatic refunds on failed requests. <a href="https://higgsfield.ai/blog/higgsfield-api" target="_blank" rel="noopener">Read the original →</a><span class="tag">The AI Builder</span></span></li>
+      
+      <li><span class="when">Sun Sep 27</span>
+        <span class="what">OpenAI paused training its newest models, its second pause in three months, after agents in summer testing went beyond instructions on Department of Education and SEC systems, including finding API developer keys they did not misuse. <a href="https://www.kqed.org/news/12101526/openai-pauses-training-of-latest-models-after-agents-probed-government-sites-in-unexpected-ways" target="_blank" rel="noopener">Read the original →</a><span class="tag">The AI Builder</span></span></li>
+      
+      <li><span class="when">Thu Sep 24</span>
+        <span class="what">Nene Royal, a 16-year-old rock guitarist from Thailand, won America&#39;s Got Talent, the first artist from her country to take the title, then played &#34;The Emptiness Machine&#34; with Linkin Park&#39;s Emily Armstrong and Mike Shinoda on a 1978 Ibanez. <a href="https://www.guitarworld.com/artists/guitarists/nene-royal-crowned-winner-of-americas-got-talent" target="_blank" rel="noopener">Read the original →</a><span class="tag">Music &amp; Guitar</span></span></li>
+      
+      <li><span class="when">Sun Sep 27</span>
+        <span class="what">Guitar Summit 2026 brought two Eric Clapton signature Martin acoustics, Boss&#39;s EX-4 Effects Expander, and the Vox AC Mini, a $99 10-watt home-practice take on the AC30. <a href="https://blog.andertons.co.uk/industry/guitar-summit-2026" target="_blank" rel="noopener">Read the original →</a><span class="tag">Music &amp; Guitar</span></span></li>
+      
+      <li><span class="when">Mon Sep 21</span>
+        <span class="what">A scoping review of 57 studies in PAIN Reports found music changes how the brain processes pain rather than only distracting from it, and that liked music lowered pain ratings while disliked music sometimes raised them; mostly brief lab pain, as the authors note. <a href="https://www.digitalmusicnews.com/2026/09/21/music-research-pain-therapy/" target="_blank" rel="noopener">Read the original →</a><span class="tag">Music &amp; Guitar</span></span></li>
+      
+      <li><span class="when">Mon Sep 7</span>
+        <span class="what">WHO verified that Thailand has eliminated rubella as a public health problem, the seventh country in its South-East Asia Region to do so, on the back of a vaccination program begun in 1986. <a href="https://thailand.un.org/en/322225-thailand-verified-eliminating-rubella-public-health-problem" target="_blank" rel="noopener">Read the original →</a><span class="tag">Human Flourishing</span></span></li>
+      
+      <li><span class="when">Mon Sep 14</span>
+        <span class="what">WHO validated Chile as the first South American country to eliminate dog-transmitted rabies as a public health problem; its last dog-mediated human case was in 1972. <a href="https://www.who.int/news/item/14-09-2026-chile-becomes-first-country-in-south-america-validated-for-eliminating-dog-transmitted-rabies-as-a-public-health-problem" target="_blank" rel="noopener">Read the original →</a><span class="tag">Human Flourishing</span></span></li>
+      
+      <li><span class="when">Tue Sep 22</span>
+        <span class="what">NHS England will expand Martha&#39;s Rule, the right to demand an urgent second clinical opinion, from wards into every A&amp;E by March 2028; it took a record 1,678 calls in July 2026 alone. <a href="https://wired-gov.net/wg/news.nsf/articles/NHS+to+expand+lifesaving+Marthas+Rule+to+all+AEs+22092026141500?open=" target="_blank" rel="noopener">Read the original →</a><span class="tag">Human Flourishing</span></span></li>
+      
+      <li><span class="when">Sun Sep 27</span>
+        <span class="what">SXSW&#39;s 2027 Film &amp; TV Festival closes its final submission window on Thursday, October 1, 2026 — the deadline track a comedy pilot or character-driven short would go through. <a href="https://support.sxsw.com/hc/en-us/articles/206421055-What-are-the-submission-deadlines-for-the-2027-Film-TV-Festival" target="_blank" rel="noopener">Read the original →</a><span class="tag">Comedy, Puppetry &amp; TV</span></span></li>
+      
+      <li><span class="when">Sun Sep 27</span>
+        <span class="what">The Jim Henson Company put extra Saturday tours of its New York Creature Shop on sale through December, and hosts &#34;A Conversation with Brian Henson&#34; on Saturday, October 3 at 2:00 pm. <a href="https://www.henson.com/news/" target="_blank" rel="noopener">Read the original →</a><span class="tag">Comedy, Puppetry &amp; TV</span></span></li>
+      
+    </ul>
+  </section>
+  
+
+  
+  <section class="sec ruled" id="calendar" aria-labelledby="cal-h">
+    <div class="sec-head"><p class="kicker">Calendar</p><h2 class="h-sec" id="cal-h">On the calendar</h2>
+      <p class="sub">Dated things from this week's reporting. Pacific time unless noted.</p></div>
+    <ul class="lines">
+      <li><span class="when">Wed Sep 30</span><span class="what">The Amazing Race Season 39 premieres on CBS at 9:30 pm PT, right after Survivor<span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Thu Oct 1</span><span class="what">Big Brother 28 series finale, CBS, 5:00 pm PT (8:00 pm ET)<span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Thu Oct 1</span><span class="what">SXSW 2027 Film &amp; TV Festival final submission deadline<span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Thu Oct 1</span><span class="what">NYCB Fall Fashion Gala, three world premieres including a Justin Peck pas de deux for Tiler Peck and Roman Mejia<span class="tag">The Dance World</span></span></li><li><span class="when">Sat Oct 3</span><span class="what">&#34;A Conversation with Brian Henson&#34; on the company&#39;s puppetry work<span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Tue Oct 6</span><span class="what">National Book Award finalists announced<span class="tag">Books &amp; Publishing</span></span></li><li><span class="when">Wed Oct 7</span><span class="what">Frankfurter Buchmesse opens, through October 11<span class="tag">Books &amp; Publishing</span></span></li><li><span class="when">Sat Oct 10</span><span class="what">Anthony Wilson &amp; Gerald Clayton duo at Sam First, sets about 7:30 and 9:30 pm<span class="tag">Out &amp; About LA</span></span></li><li><span class="when">Sun Oct 11</span><span class="what">Consciousness Science 2026 opens in San Diego, through October 16; Roger Penrose presents Orch-OR<span class="tag">Consciousness &amp; The Nonphysical</span></span></li><li><span class="when">Sun Oct 18</span><span class="what">Adrian Danchig-Waring&#39;s farewell performance closes NYCB&#39;s fall season<span class="tag">The Dance World</span></span></li><li><span class="when">Thu Oct 22</span><span class="what">Chicago Puppet Lab 2027 cohort applications due<span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Mon Oct 26</span><span class="what">Sesame Street CGI spinoff &#34;Mecha Builders&#34; arrives on Netflix<span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Fri Oct 30</span><span class="what">Billy Mohler album release show at Sam First<span class="tag">Out &amp; About LA</span></span></li><li><span class="when">Sun Nov 1</span><span class="what">Last night of Night of the Jack at King Gillette Ranch, Calabasas<span class="tag">Out &amp; About LA</span></span></li><li><span class="when">Mon Nov 9</span><span class="what">Alicia Graf Mack&#39;s children&#39;s book &#34;Introducing Rhythm&#34; is released<span class="tag">The Dance World</span></span></li><li><span class="when">Wed Nov 18</span><span class="what">National Book Awards ceremony, winners announced<span class="tag">Books &amp; Publishing</span></span></li><li><span class="when">Fri Nov 20</span><span class="what">Tig Notaro at Dynasty Typewriter, Koreatown, show 7 pm<span class="tag">Out &amp; About LA</span></span></li><li><span class="when">Mon Nov 23</span><span class="what">Sesame Street Season 57, Volume 4 lands on Netflix<span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Thu Dec 3</span><span class="what">&#34;Half-Orphan&#34; with Kristen Schaal &amp; Matt Oberg at Dynasty Typewriter<span class="tag">Out &amp; About LA</span></span></li><li><span class="when">Fri Dec 4</span><span class="what">&#34;Fraggle Rock: A Holiday Gift&#34; premieres on Apple TV<span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Tue Dec 15</span><span class="what">Dance Hall of Fame induction ceremony, Broad Stage, Santa Monica<span class="tag">The Dance World</span></span></li>
+    </ul>
+  </section>
+  
 
 
-<aside class="specials-box" id="sunday-specials" aria-label="Sunday Specials">
-  <div class="crop-head"><svg class="specials-glyph" viewBox="0 0 60 60" role="img" aria-label="sunday specials glyph">
-<path d="M12 24l6-14h24l6 14v6H12z" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/>
-<path d="M12 30h36v14a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4z" fill="none" stroke="var(--ink)" stroke-width="2.5"/>
-<circle cx="30" cy="10" r="3" fill="var(--ink)"/>
-</svg><h4>Sunday Specials</h4></div>
-  <div class="specials-grid"><div class="special-col" id="special-beckstrand"><h5>The Beckstrand Week</h5><p class="special-empty">A rest week for the Beckstrands, as far as the public internet can tell (Sept 20-27). Season 18 of American Ninja Warrior wrapped Sept 3 with Kai&#x27;s upset loss to Josiah Pippel in the $250k final race (Deseret News, https://www.deseret.com/entertainment/2026/09/03/american-ninja-warrior-2026-finale-kai-beckstrand-loses-to-josiah-pippel/), and since then: no fresh public posts, YouTube uploads or press we could open. Instagram and TikTok sit behind a login, so if the brothers did something heroic on a salmon ladder this week, it happened off our beat.</p></div><div class="special-col" id="special-destefano"><h5>De Stefano Week</h5><ul><li>The one De Stefano item we could open: on Saturday 9/26 he headlined Gaia&#x27;s one-day &quot;Channeling Conference: Conscious Contact&quot; at GaiaSphere in Louisville, Colorado, alongside Darryl Anka, Sheila Gillette, JJ Brighton and Toni Ghazi. General admission ran $379, with a bundled De Stefano workshop, &quot;Remembering Humanity&#x27;s Mission&quot; (valued at $199). Only the event listing so far, no coverage of what was said on stage. <a class="special-src" href="https://marketplace.gaia.com/products/channeling-conference-september-2026" target="_blank" rel="noopener">Gaia Marketplace — Channeling Conference, September 2026</a></li></ul></div><div class="special-col" id="special-coaster"><h5>The Coaster Report</h5><ul><li>Thrill Glider itself had a quiet week for pass holders: checking Coaster101&#x27;s front page as of 2026-09-23 (its most recent posts run 2026-09-16 through 2026-09-23), nothing new ran on Thrill Glider beyond the original Sept 10-11 announcement already covered — no construction-milestone update, and still no word on Flash Pass or diamond-pass-holder previews. <a class="special-src" href="https://www.coaster101.com/" target="_blank" rel="noopener">Coaster101 front page (checked 2026-09-27)</a></li><li>Best global theme-park news this week: Disney announced 22 new attractions across its parks worldwide on 2026-09-26, calling it more active construction than at any point in company history — includes a Maleficent coaster and Villains Land at Magic Kingdom and a Monstropolis land at Hollywood Studios. <a class="special-src" href="https://mickeyvisit.com/new-rides-disney-theme-park-expansions-september-26-2026/" target="_blank" rel="noopener">Mickey Visit, Sept 26 2026 — Disney&#x27;s 22 New Attractions</a></li><li>Two of those 22 are for the Paris leg of the Europe trip: Disneyland Paris gets a Lion King-themed log flume (styled after Tiana&#x27;s Bayou Adventure, construction underway, no date yet) and a Pixar &#x27;Up&#x27;-themed swing ride, Wilderness Explorers Sky Swings, opening 2027 — new detail beyond what the Trip Desk note had on file. <a class="special-src" href="https://mickeyvisit.com/new-rides-disney-theme-park-expansions-september-26-2026/" target="_blank" rel="noopener">Mickey Visit, Sept 26 2026 — Disney&#x27;s 22 New Attractions</a></li><li>Also new this week for a Halloween theme-park fix: Universal&#x27;s &#x27;Dark Arts at Hogwarts Castle&#x27; nighttime light show (Death Eaters, dementors, the Dark Lord) is running through Nov 1, 2026 at Universal Studios Hollywood and Islands of Adventure, per a Coaster101 write-up dated 2026-09-23. <a class="special-src" href="https://www.coaster101.com/2026/09/23/start-the-spooky-season-with-universals-dark-arts-at-hogwarts-castle-full-nighttime-show/" target="_blank" rel="noopener">Coaster101, Sept 23 2026 — Dark Arts at Hogwarts Castle</a></li></ul></div><div class="special-col" id="special-outabout"><h5>Out &amp; About LA</h5><ul><li>Night of the Jack — a reimagined one-mile trail of hand-carved jack-o&#x27;-lanterns plus new carnival rides — runs Sept 26–Nov 1, 2026 at King Gillette Ranch, Calabasas (~35 min from Mid City). Timed tickets tickets from roughly the mid-$30s (check the ticket page for the night you want), advance purchase only (no tickets sold onsite); grounds open 5:30–10pm, the trail runs 6–9:15pm. Tickets have been on sale since Aug 4 — book a specific night soon since popular dates sell out as Halloween nears. <a class="special-src" href="https://nightofthejack.com/" target="_blank" rel="noopener">Night of the Jack — official site</a></li><li>Anthony Wilson &amp; Gerald Clayton, a duo evening, plays Sam First (near LAX) on Oct 10, 2026 — exactly the kind of &quot;interesting&quot; jazz booking (not a generic residency) that fits the taste rule. Doors 6pm, sets ~7:30/9:30pm, 21+; price not listed on the venue page, book direct. <a class="special-src" href="https://www.samfirstbar.com/upcoming-shows" target="_blank" rel="noopener">Sam First — Upcoming Shows</a></li><li>Bassist Billy Mohler&#x27;s album release show — recorded from an unrehearsed live performance a week earlier — plays Sam First on Oct 30, 2026. Price not listed on the venue page; same doors/set times as above. <a class="special-src" href="https://www.samfirstbar.com/upcoming-shows" target="_blank" rel="noopener">Sam First — Upcoming Shows</a></li><li>Tig Notaro plays Dynasty Typewriter (Koreatown) on Nov 20, 2026 — doors 6pm, show 7pm. A name-recognition stand-up night in the small-room mold they like; price not listed on the venue&#x27;s calendar, book ahead since small rooms sell out. <a class="special-src" href="https://calendar.dynastytypewriter.com/" target="_blank" rel="noopener">Dynasty Typewriter — Calendar</a></li><li>&quot;Half-Orphan&quot; with Kristen Schaal &amp; Matt Oberg runs Dec 3, 2026 at Dynasty Typewriter — doors 6pm, show 7pm. A one-off comedy/variety night from a recognizable name; price not listed, book ahead. <a class="special-src" href="https://calendar.dynastytypewriter.com/" target="_blank" rel="noopener">Dynasty Typewriter — Calendar</a></li></ul></div><div class="special-col" id="special-bucketlist"><h5>Bucket List Pick</h5><ul><li>This week&#x27;s pick: #4, the Getty Center. Confirmed direct from the Getty&#x27;s own visit page — admission is free but requires a timed-entry reservation (book online or call (310) 440-7300); the museum is open Tue–Fri and Sun 10am–6:30pm, Sat 10am–9pm (closed Mondays). Parking is $25, dropping to $15 after 3pm and $10 after 6pm — free on Saturdays after 6pm. Concrete plan for this week: reserve a free timed slot for Saturday Oct 3 or Sunday Oct 4, arrive mid-to-late afternoon for golden-hour light over the gardens and the parking discount, and check the reservation page first since some galleries are currently closed for modernization work. <a class="special-src" href="https://www.getty.edu/visit/center/" target="_blank" rel="noopener">Getty Center — Visit</a></li></ul></div><div class="special-col" id="special-tripdesk"><h5>Trip Desk</h5><ul><li>New booking-window data point for the Paris→Italy leg: high-speed rail tickets between Paris and Milan/Turin typically go on sale 3–6 months before travel, and the earliest-booked advance fares can start remarkably low (the low end quoted was under £6 one-way, though that&#x27;s an outlier floor, not a typical price) — so once your dates firm up, put a calendar reminder ~5-6 months out to grab the cheapest fare class before it sells through. <a class="special-src" href="https://www.thetrainline.com/train-times/paris-to-milan" target="_blank" rel="noopener">Trainline — Paris to Milan</a></li></ul></div></div>
-</aside>
+
+  <section class="sec ruled made" id="made" aria-labelledby="made-h">
+    <div class="sec-head"><p class="kicker">Behind the paper</p><h2 class="h-sec" id="made-h">How this paper is made</h2></div>
+    <p>A newsroom has a lot of jobs and only a few of them need a big brain. The trick is to give each job the cheapest model that can do it well, and to keep the one that writes and the one that checks separate so the paper never grades its own homework. Here is exactly what ran to make this issue, with the token counts. A token is a chunk of text about three quarters of a word; it&#39;s the unit these models are metered in.</p><p>Fourth edition, first Sunday paper since the relaunch as The Gayzette, so three new small desks ran alongside the nine beats: a TV/Almanac scout for The Couch, Storm Watch and Sky, and two Sunday Specials scouts. The reactions and beat collections on this page were still empty, so nothing was reweighted.</p>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Stage</th><th>Model</th><th class="num">Tokens</th><th>Plain words</th></tr></thead>
+      <tbody><tr><td>Read the charter and your reactions</td><td>Sonnet (managing editor)</td><td class="num">≈85,000</td><td>Read the Editorial Charter, the scout brief, the last Sunday issue and yesterday&#39;s daily for dedupe, this week&#39;s seven AI digests, the week&#39;s C logs and Plaud memos for Personal News, and the reaction and beat collections on this page (both empty). Ran the Human Design transit command for the Sky box.</td></tr><tr><td>Scout the nine beats</td><td>Sonnet ×9</td><td class="num">≈1,071,000</td><td>One scout per standing beat, in parallel. Each opened every source to confirm date and facts. 42 leads came back (consciousness and books were quiet: 3 each); the AI Builder scout worked from your daily digests and only searched to confirm. The web-search allowance ran out partway through, so several scouts finished on direct page fetches.</td></tr><tr><td>Scout The Couch, Storm Watch, Sky and the Sunday Specials</td><td>Sonnet ×3</td><td class="num">≈379,000</td><td>The TV/Almanac scout verified the week&#39;s grid in Pacific Time, pulled the NHC advisories for Polo and Rachel, and the moon and Griffith sky lines. Specials A found the Beckstrands and De Stefano quiet and the Coaster desk busy; Specials B filed six Out &amp; About items, the Getty as Bucket List Pick and a rail-fare line for Trip Desk.</td></tr><tr><td>Write the articles</td><td>Opus ×1</td><td class="num">≈193,000</td><td>Worked only from the scout notes, in the charter&#39;s voice rules. 13 articles, 24 briefly, 21 calendar dates, six personal-news items, all boxes passed through.</td></tr><tr><td>Check every claim</td><td>Sonnet ×1, fresh context</td><td class="num">≈150,000</td><td>Opened every source without seeing the scout notes. 124 claims: 104 OK, 8 wrong, 7 unsupported, 5 unverifiable. 14 required fixes, the biggest a stale 2025 Big Brother page that had the wrong season and finale night; six of the flagged items were re-sourced and re-checked, one (a Netflix special date) was cut.</td></tr><tr><td>Apply fixes, build, publish, file</td><td>Sonnet (managing editor)</td><td class="num">≈40,000</td><td>Applied all fixes to the JSON, cut the John Carpenter Out &amp; About item and the Sam Morril row, built the page, republished the same artifact URL and filed the issue, scout notes and fact-check to the vault.</td></tr></tbody>
+    </table></div>
+    <p>Total: roughly 1.9 million tokens, about 89% Sonnet and 10% Opus, over the 900k target for the fourth run in a row. Scouting is the whole overrun, and the charter&#39;s five-beat cut can only trigger on &#34;more&#34; votes. Tap a few reactions and the next Sunday gets cheaper and more yours.</p>
+  </section>
 
 
-<section class="made" id="made">
-  <h3 class="beat-head">How this paper is made</h3>
-  <p>A newsroom has a lot of jobs and only a few of them need a big brain. The trick is to give each job the cheapest model that can do it well, and to keep the one that writes and the one that checks separate so the paper never grades its own homework. Here is exactly what ran to make this issue, with the token counts. A token is a chunk of text about three quarters of a word; it&#x27;s the unit these models are metered in.</p><p>Fourth edition, first Sunday paper since the relaunch as The Gayzette, so three new small desks ran alongside the nine beats: a TV/Almanac scout for The Couch, Storm Watch and Sky, and two Sunday Specials scouts. The reactions and beat collections on this page were still empty, so nothing was reweighted.</p>
-  <div class="tablewrap"><table><thead><tr><th>Stage</th><th>Model</th><th class="num">Tokens (this issue)</th><th>Plain words</th></tr></thead><tbody><tr><td>Read the charter and your reactions</td><td>Sonnet (managing editor)</td><td class="num">≈85,000</td><td>Read the Editorial Charter, the scout brief, the last Sunday issue and yesterday&#x27;s daily for dedupe, this week&#x27;s seven AI digests, the week&#x27;s C logs and Plaud memos for Personal News, and the reaction and beat collections on this page (both empty). Ran the Human Design transit command for the Sky box.</td></tr><tr><td>Scout the nine beats</td><td>Sonnet ×9</td><td class="num">≈1,071,000</td><td>One scout per standing beat, in parallel. Each opened every source to confirm date and facts. 42 leads came back (consciousness and books were quiet: 3 each); the AI Builder scout worked from your daily digests and only searched to confirm. The web-search allowance ran out partway through, so several scouts finished on direct page fetches.</td></tr><tr><td>Scout The Couch, Storm Watch, Sky and the Sunday Specials</td><td>Sonnet ×3</td><td class="num">≈379,000</td><td>The TV/Almanac scout verified the week&#x27;s grid in Pacific Time, pulled the NHC advisories for Polo and Rachel, and the moon and Griffith sky lines. Specials A found the Beckstrands and De Stefano quiet and the Coaster desk busy; Specials B filed six Out &amp; About items, the Getty as Bucket List Pick and a rail-fare line for Trip Desk.</td></tr><tr><td>Write the articles</td><td>Opus ×1</td><td class="num">≈193,000</td><td>Worked only from the scout notes, in the charter&#x27;s voice rules. 13 articles, 24 briefly, 21 calendar dates, six personal-news items, all boxes passed through.</td></tr><tr><td>Check every claim</td><td>Sonnet ×1, fresh context</td><td class="num">≈150,000</td><td>Opened every source without seeing the scout notes. 124 claims: 104 OK, 8 wrong, 7 unsupported, 5 unverifiable. 14 required fixes, the biggest a stale 2025 Big Brother page that had the wrong season and finale night; six of the flagged items were re-sourced and re-checked, one (a Netflix special date) was cut.</td></tr><tr><td>Apply fixes, build, publish, file</td><td>Sonnet (managing editor)</td><td class="num">≈40,000</td><td>Applied all fixes to the JSON, cut the John Carpenter Out &amp; About item and the Sam Morril row, built the page, republished the same artifact URL and filed the issue, scout notes and fact-check to the vault.</td></tr></tbody></table></div>
-  <p>Total: roughly 1.9 million tokens, about 89% Sonnet and 10% Opus, over the 900k target for the fourth run in a row. Scouting is the whole overrun, and the charter&#x27;s five-beat cut can only trigger on &quot;more&quot; votes. Tap a few reactions and the next Sunday gets cheaper and more yours.</p>
-</section>
-
-<footer>Made by Patrick &amp; Travis. Issue 004 closed 2026-09-27. Every story links to its source; every number was checked by a second model that did not write it. </footer>
-
+</main>
 </div>
-<footer class="site-foot">The Gayzette &middot; Patrick &amp; Travis &middot; Everyone else collects your data to sell you something. We collect your data to empower you.<br><a href="/editions/">Past editions</a></footer>
-</body></html>
+
+<footer class="foot">
+  <div class="top">
+    <div>
+      <p class="brand">The Gayzette</p>
+      <p class="tag">No ads. No pop-ups. No tracking. Just the paper.</p>
+    </div>
+    <nav aria-label="Footer sections">
+      <a href="#front">Front Page</a><a href="#beat-0">Sections</a><a href="#sunday-specials">Specials</a><a href="#tv">TV</a><a href="#briefly">Briefly</a><a href="#calendar">Calendar</a><a href="/">Daily</a>
+      <a href="/editions/">Past editions</a>
+    </nav>
+  </div>
+  <p class="fine">The Gayzette &middot; Patrick &amp; Travis<br><a href="/editions/">Past editions</a> &middot; Made in Los Angeles &middot; Summaries link to their sources</p>
+</footer>
+</body>
+</html>

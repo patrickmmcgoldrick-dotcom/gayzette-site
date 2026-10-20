@@ -1,433 +1,666 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="The Gayzette: a newspaper if news was actually real."><title>The Gayzette</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="The Gayzette, daily edition, 2026-10-19. A personal daily by Patrick and Travis.">
+<title>The Gayzette: A 501-billion-parameter coding model, free to download, with a permissive license</title>
+<link rel="alternate" type="application/rss+xml" title="The Gayzette" href="/feed.xml">
+<style>/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/fonts/DMSans-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/fonts/DMSans-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-italic-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-italic-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-italic-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-italic-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-italic-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-italic-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-normal-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ===== The Gayzette site.css — v2, from the Claude Design Labs look (Magazine Editorial) ===== */
 :root{
-  --paper:#F3EFE6; --paper-2:#EAE3D3; --paper-3:#E0D7C2; --ink:#221F19; --ink-2:#5A5346; --ink-3:#8B8272;
-  --rule:#CBBFA4; --rule-2:#A99A79; --stamp:#A6304A; --stamp-2:#3A6B5C; --stamp-soft:rgba(166,48,74,.10);
-  --focus:#2F5D8A;
-  --serif:"Newsreader",Georgia,"Times New Roman",serif;
-  --display:"Old Standard TT","Fraunces","Iowan Old Style",Georgia,serif;
-  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --paper:#FBF8F1; --paper-2:#F3EEE2; --paper-3:#EDE6D6; --ink:#222222; --ink-2:#6B645A; --ink-3:#6B645A;
+  --hair:#E4DCCB; --rule:#E4DCCB; --rule-2:#CDBF9F; --accent:#C2603C; --accent-2:#A24E2F;
+  --serif:Newsreader,Georgia,serif; --display:Fraunces,Georgia,serif; --label:'DM Sans',system-ui,sans-serif;
   color-scheme:light;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased;font-optical-sizing:auto}
-a{color:inherit;text-decoration-color:var(--rule-2);text-underline-offset:3px}
-a:hover{text-decoration-color:var(--stamp)}
-:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
+body{font-family:var(--serif);font-size:19px;line-height:1.65;overflow-wrap:break-word}
+main,.shell{min-width:0}
+a{color:var(--accent)} a:hover{color:var(--accent-2)}
 img,svg{max-width:100%}
-.wrap{max-width:64rem;margin:0 auto;padding:1.25rem 1rem 5rem}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:16px;z-index:50;background:var(--ink);color:var(--paper);padding:12px 16px;font:500 13px var(--label);letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.skip:focus{left:16px;color:var(--paper)}
+.shell{max-width:1200px;margin:0 auto;padding:0 24px}
 
-/* ---- Masthead ---- */
-header.mast{border-bottom:4px double var(--ink-2);padding-bottom:.7rem;margin-bottom:.4rem}
-.mast-top{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;border-bottom:1px solid var(--rule-2);padding-bottom:.5rem;margin-bottom:.5rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
-.mast-top .dateline{white-space:nowrap}
-.mast-top .weather-box{border:1px solid var(--ink-2);padding:.3rem .6rem;font-size:.66rem;letter-spacing:.05em}
-.mast-name{display:flex;align-items:baseline;justify-content:center;gap:.6rem;flex-wrap:wrap;text-align:center;padding:.3rem 0 .15rem}
-.mast-name h1{font-family:var(--display);font-weight:700;font-size:clamp(2.6rem,10vw,5rem);line-height:.92;margin:0;letter-spacing:-.01em}
-.mast-sub{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);text-align:center;margin:.1rem 0 0}
-.mast-row2{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2);padding-top:.55rem;border-top:1px solid var(--rule-2)}
-.mast-row2 b{color:var(--stamp);font-weight:600}
+/* labels / kickers */
+.label,.kicker,.byline,.when,.nav a,.chip{font-family:var(--label);font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.kicker{color:var(--accent);margin:0 0 14px}
+.label{color:var(--ink-2);margin:0 0 8px}
+.byline{color:var(--ink-2);margin:22px 0 0}
 
-/* ---- Today's Receipts index box ---- */
-.index-box{border:1.5px solid var(--ink);margin:1rem 0 1.5rem;padding:.85rem 1rem;background:var(--paper-2)}
-.index-box h2{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin:0 0 .55rem;text-align:center;border-bottom:1px solid var(--rule-2);padding-bottom:.5rem}
-.index-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.25rem 1.2rem;font-family:var(--mono);font-size:.76rem}
-.index-list a{display:flex;justify-content:space-between;gap:.5rem;padding:.18rem 0;text-decoration:none;border-bottom:1px dotted var(--rule)}
-.index-list a:hover{color:var(--stamp)}
+/* masthead */
+.strip{display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--hair);font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.masthead{padding:64px 0 48px;text-align:center}
+.masthead a{text-decoration:none;color:var(--ink)}
+.masthead h1{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 80;font-optical-sizing:auto;font-size:clamp(52px,9vw,120px);line-height:.95;letter-spacing:-.02em;margin:0}
+.masthead p{font-family:var(--display);font-style:italic;font-weight:400;font-size:19px;color:var(--ink-2);margin:20px 0 0}
+.nav{display:flex;gap:32px;overflow-x:auto;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);scrollbar-width:none;white-space:nowrap}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;min-height:48px;padding:0 2px;text-decoration:none;color:var(--ink);border-bottom:2px solid transparent;margin-bottom:-1px}
+.nav a:hover,.nav a.on{color:var(--accent);border-bottom-color:var(--accent)}
 
-/* ---- Editor's note ---- */
-.ednote{margin:1.3rem 0 1.2rem;padding:0 0 1.3rem;border-bottom:1px solid var(--rule)}
-.ednote .byline{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--stamp);margin:0 0 .55rem}
-.ednote p{margin:0 0 .85rem;font-size:1.01em}
-.ednote .byline + p::first-letter{font-family:var(--display);font-size:2.9em;float:left;line-height:.8;padding:.06em .08em 0 0;font-weight:700}
+/* sections */
+main{display:block}
+.sec{padding:96px 0 0}
+.sec.ruled{margin-top:96px;padding-top:72px;border-top:1px solid var(--hair)}
+.sec-head h2,.h-sec{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:clamp(34px,4.5vw,52px);line-height:1.05;letter-spacing:-.015em;margin:0;text-wrap:pretty}
+.sec-head .sub,.deck{font-family:var(--display);font-style:italic;font-weight:400;color:var(--ink-2);text-wrap:pretty}
+.sec-head .sub{font-size:21px;line-height:1.4;margin:16px 0 0;max-width:620px}
+.deck{font-size:22px;line-height:1.35;margin:16px 0 0}
+.rule-short{width:48px;height:2px;background:var(--accent);margin:24px 0 0}
 
-/* ---- Section / column layout ---- */
-.beat-head{font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin:2.4rem 0 0;padding:.45rem 0;border-top:1px solid var(--rule-2);border-bottom:1px solid var(--rule);display:flex;align-items:center;gap:.55rem}
-.beat-head::before{content:"";width:.5rem;height:.5rem;background:var(--stamp);display:inline-block;transform:rotate(45deg)}
-.cols{display:grid;grid-template-columns:1fr;gap:0 2.1rem}
-@media(min-width:640px){.cols.cols-2{grid-template-columns:1fr 1fr}}
-@media(min-width:900px){.cols.cols-3{grid-template-columns:1fr 1fr 1fr}}
-.cols .col{min-width:0}
-.cols.cols-2 .col:first-child,.cols.cols-3 .col:not(:last-child){border-right:0}
-@media(min-width:640px){.cols.cols-2 .col:first-child{border-right:1px solid var(--rule);padding-right:1.4rem}}
-@media(min-width:900px){.cols.cols-3 .col:not(:last-child){border-right:1px solid var(--rule);padding-right:1.4rem}}
-.story{padding:1.5rem 0 1.2rem;border-bottom:1px solid var(--rule)}
-.cols .story:last-child{border-bottom:0}
-.story.lead{padding:0 0 1.6rem;border-bottom:2px solid var(--ink-2);margin-bottom:1.2rem}
-.leads-row{display:grid;grid-template-columns:1fr;gap:0 2.2rem}
-@media(min-width:760px){.leads-row{grid-template-columns:1fr 1fr}.leads-row .story.lead:first-child{border-right:1px solid var(--rule-2);padding-right:2.2rem}}
-.story.lead h2{font-size:clamp(1.7rem,5.6vw,2.3rem)}
-.story h2{font-family:var(--display);font-weight:700;font-size:clamp(1.35rem,4.4vw,1.65rem);line-height:1.12;margin:.4rem 0 .5rem;letter-spacing:-.008em;text-wrap:balance}
-.story h3{font-family:var(--display);font-weight:700;font-size:1.18rem;line-height:1.18;margin:.3rem 0 .4rem;text-wrap:balance}
-.dek{font-style:italic;color:var(--ink-2);margin:0 0 1rem;font-size:1.03em;line-height:1.4}
-.story p{margin:0 0 .9rem}
-.eyebrow{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem .8rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
-.wonder{color:var(--stamp);letter-spacing:.1em;font-size:.68rem}
-.conf{border:1px solid var(--rule-2);padding:.05rem .4rem;border-radius:2px;color:var(--ink-3)}
-.desk{background:var(--paper-2);border-left:3px solid var(--stamp);padding:.7rem .9rem;margin:1.1rem 0 .85rem;font-size:.93em;line-height:1.5}
-.desk-label{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--stamp);margin-right:.4rem}
-.cal-pill{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.02em;border:1px solid var(--rule-2);padding:.1rem .5rem;border-radius:999px;margin-left:.3rem;white-space:nowrap;vertical-align:middle}
-.sources{font-family:var(--mono);font-size:.74rem;color:var(--ink-2);margin:.55rem 0}
-.sources summary{cursor:pointer;letter-spacing:.03em}
-.sources ul{margin:.4rem 0 0;padding-left:1.1rem;line-height:1.5}
-.src-date{color:var(--ink-3)}
-.react{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:.65rem}
-.react button{font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;background:transparent;color:var(--ink-2);border:1px solid var(--rule-2);border-radius:999px;padding:.35rem .8rem;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
-.react button:hover{border-color:var(--ink-2);color:var(--ink)}
-.react button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.react button[disabled]{opacity:.55;cursor:default}
-.react-note,.prop-state{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+/* headlines */
+.h-hero{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-optical-sizing:auto;font-size:clamp(34px,5vw,64px);line-height:1.04;letter-spacing:-.015em;margin:0;text-wrap:pretty}
+.h-feature{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:clamp(28px,3.2vw,36px);line-height:1.1;letter-spacing:-.012em;margin:0;text-wrap:pretty}
+.h-card{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:26px;line-height:1.15;letter-spacing:-.01em;margin:0;text-wrap:pretty}
+.h-small{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:22px;line-height:1.2;letter-spacing:-.01em;margin:0;text-wrap:pretty}
+.hl a{color:inherit;text-decoration:none}
+.hl a:hover{color:var(--accent)}
 
-/* ---- Illustrations (comic-style inline SVG) ---- */
-.illo{width:100%;margin:0 0 .8rem;border:2px solid var(--ink);background:var(--paper-2);line-height:0}
-.illo svg{display:block;width:100%;height:auto}
-.illo-fallback{display:block}
+/* body copy */
+.body p{margin:14px 0 0;max-width:640px}
+.body.wide p{max-width:680px}
+.srcline{display:block;margin-top:14px;font-style:italic;font-size:16px}
+.srcline a{color:var(--accent);text-decoration:none}
+.srcline a:hover{text-decoration:underline}
+.srcline.small{font-size:15px;margin-top:8px}
+.meta{font-family:var(--label);font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.chip{display:inline-block;border:1px solid var(--hair);padding:2px 8px;color:var(--ink-2);font-size:11px;margin-left:8px}
+.sources{margin:14px 0 0;font:15px/1.5 var(--serif);color:var(--ink-2)}
+.sources summary{cursor:pointer;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase}
+.sources ul{margin:8px 0 0;padding-left:1.1rem}
+.sources .d{color:var(--ink-2)}
+.more-read{margin:10px 0 0}
+.more-read summary{cursor:pointer;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.more-read .body p{max-width:none}
+.desk{margin:22px 0 0;padding:20px 24px;background:var(--paper-2);max-width:640px;font-size:17px;line-height:1.5}
+.desk .label{margin:0 0 6px}
+.cal-pill{display:inline-block;margin-top:8px;font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--rule-2);padding:2px 10px;color:var(--ink-2)}
 
-/* ---- Crop Circle Watch sidebar ---- */
-.crop-box{border:1.5px dashed var(--rule-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
-.crop-box .crop-head{display:flex;align-items:center;gap:.55rem;margin:0 0 .6rem}
-.crop-box .crop-glyph{width:2.2rem;height:2.2rem;flex:none}
-.crop-box h4{margin:0;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
-.crop-box .crop-latest{margin:0 0 .5rem;line-height:1.45}
-.crop-box .crop-latest b{font-family:var(--display)}
-.crop-box ul.crop-facts{margin:.3rem 0 .6rem;padding-left:1.1rem}
-.crop-box ul.crop-facts li{margin:.25rem 0;font-size:.95em}
-.crop-box .crop-history{margin:.5rem 0 0;font-style:italic;color:var(--ink-2);font-size:.93em}
-.crop-box .crop-sources{margin:.5rem 0 0;font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
-.crop-box .crop-sources a{color:inherit}
-.house-box{border:1.5px dashed var(--stamp-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
-.house-box .house-glyph{width:2.2rem;height:2.2rem;flex:none}
-.house-box .house-note{margin:0 0 .7rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.03em;color:var(--ink-3);text-transform:uppercase}
-.house-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
-@media(max-width:640px){.house-grid{grid-template-columns:1fr}}
-.house-sub h5{margin:0 0 .4rem;font-family:var(--display);font-size:.95rem}
-.house-sub ul{margin:0;padding-left:1.1rem}
-.house-sub li{margin:.3rem 0;font-size:.95em;line-height:1.4}
-.house-tie{display:block;font-style:italic;color:var(--ink-2);font-size:.88em;margin-top:.1rem}
-.house-empty{margin:0;color:var(--ink-3);font-style:italic}
-.tv-box{border:1.5px dashed var(--rule-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
-.tv-box .couch-glyph{width:2.2rem;height:2.2rem;flex:none}
-.tv-box ul.tv-tonight{margin:.3rem 0 .6rem;padding-left:1.1rem}
-.tv-box ul.tv-tonight li{margin:.3rem 0;font-size:.95em;line-height:1.4}
-.tv-box .tv-empty{margin:0;color:var(--ink-3);font-style:italic}
-.tv-box .tv-news{margin:.5rem 0 0;font-size:.92em}
-.tv-box .tv-alert{margin:.5rem 0 0;font-weight:600}
-.tv-box .tv-src{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
-.tv-week{display:flex;flex-direction:column;gap:.5rem;margin:.4rem 0}
-.tv-week-row{display:grid;grid-template-columns:3.4rem 1fr;gap:.6rem;align-items:baseline}
-.tv-week-day{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3)}
-.tv-week-item{font-size:.93em;line-height:1.4;margin:.15rem 0}
-.tv-try{margin-top:.6rem}
-.tv-try h5{margin:0 0 .3rem;font-family:var(--display);font-size:.95rem}
-.tv-try ul{margin:0;padding-left:1.1rem}
-.tv-try li{margin:.25rem 0;font-size:.92em}
-.specials-box{border:1.5px dashed var(--stamp-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
-.specials-box .specials-glyph{width:2.2rem;height:2.2rem;flex:none}
-.specials-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
-@media(max-width:640px){.specials-grid{grid-template-columns:1fr}}
-.special-col h5{margin:0 0 .4rem;font-family:var(--display);font-size:.95rem}
-.special-col ul{margin:0;padding-left:1.1rem}
-.special-col li{margin:.3rem 0;font-size:.95em;line-height:1.4}
-.special-empty{margin:0;color:var(--ink-3);font-style:italic}
-.special-src{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
-.storm-box{border:1.5px dashed var(--rule-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
-.storm-box .storm-glyph{width:2.2rem;height:2.2rem;flex:none}
-.storm-box ul.storm-active{margin:.3rem 0 .6rem;padding-left:1.1rem}
-.storm-box ul.storm-active li{margin:.35rem 0;font-size:.95em;line-height:1.45}
-.storm-box .storm-empty{margin:0;color:var(--ink-3);font-style:italic}
-.storm-box .storm-outlook{margin:.5rem 0 0;font-size:.92em;line-height:1.45}
-.storm-box .storm-sources{margin:.5rem 0 0;font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
-.storm-box .storm-sources a{color:inherit}
-.sky-box{border:1.5px dashed var(--stamp-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
-.sky-box .sky-glyph{width:2.2rem;height:2.2rem;flex:none}
-.sky-box .sky-moon{margin:0 0 .4rem}
-.sky-box .sky-tonight{margin:.2rem 0 .4rem;line-height:1.45}
-.sky-box .sky-src{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
-.sky-hd{margin-top:.5rem}
-.sky-hd h5{margin:0 0 .3rem;font-family:var(--display);font-size:.9rem}
-.sky-hd ul{margin:0;padding-left:1.1rem}
-.sky-hd li{margin:.3rem 0;font-size:.92em;line-height:1.4}
+/* art */
+.art{display:block;width:100%;background:var(--paper-3);line-height:0;margin:0}
+.art svg{display:block;width:100%;height:auto}
+.art.r32{aspect-ratio:auto}
 
+/* hero */
+.hero{padding:56px 0 0}
+.hero .art{margin-bottom:36px}
+.hero .txt{max-width:760px}
+.hero.sunday .h-hero{font-size:clamp(38px,6vw,80px);line-height:1}
+.hero-body{margin-top:12px}
 
-/* ---- Briefly / receipt box ---- */
-.receipt{margin:2.6rem 0 0;padding:1.1rem 1rem 1.3rem;border:1px dashed var(--rule-2);background:var(--paper-2);font-family:var(--mono);font-size:.79rem;line-height:1.5;color:var(--ink)}
-.receipt h3{margin:0 0 .85rem;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;text-align:center;font-weight:600}
-.receipt ul{list-style:none;margin:0;padding:0}
-.receipt li{display:grid;grid-template-columns:5rem 1fr;gap:.1rem .6rem;padding:.5rem 0;border-top:1px dotted var(--rule-2)}
-.receipt li:first-child{border-top:0}
-.b-date{color:var(--ink-2);font-variant-numeric:tabular-nums}
-.b-beat{grid-column:2;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
-.b-line{grid-column:2;font-family:var(--serif);font-size:.96rem;line-height:1.45}
-.receipt .total{margin:1rem 0 0;padding-top:.65rem;border-top:1px dotted var(--rule-2);display:flex;justify-content:space-between;letter-spacing:.06em;text-transform:uppercase}
+/* editor's note */
+.ednote{max-width:620px;margin:0 auto;padding-top:96px}
+.ednote p.t{margin:16px 0 0}
+.ednote .byline{margin:0 0 18px}
 
-/* ---- Calendar ---- */
-.calendar ul{list-style:none;margin:1rem 0 0;padding:0}
-.calendar li{display:grid;grid-template-columns:5rem 1fr;gap:0 .8rem;padding:.5rem 0;border-bottom:1px solid var(--rule);align-items:baseline}
-.c-date{font-family:var(--mono);font-size:.76rem;color:var(--stamp);font-variant-numeric:tabular-nums}
-.c-label{font-size:1em}
-.c-beat{grid-column:2;font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+/* flex layouts */
+.row{display:flex;flex-wrap:wrap;gap:48px 32px;align-items:flex-start}
+.row>.main{flex:2 1 480px;min-width:0}
+.row>.side{flex:1 1 260px;min-width:0}
+.row>.half{flex:1 1 380px;min-width:0}
+.side-list>*{padding:20px 0;border-top:1px solid var(--hair)}
+.side-list>.label{padding:0;border:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:64px 40px}
+.grid.g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{min-width:0;border-top:1px solid var(--hair);padding-top:28px}
+.card .art{margin-bottom:22px}
 
-/* ---- Beats page ---- */
-.beats ul{list-style:none;margin:0;padding:0}
-.beats li{padding:1.05rem 0;border-bottom:1px solid var(--rule)}
-.beats li p{margin:.32rem 0 .55rem;font-size:.96em;color:var(--ink-2)}
-.prop-head{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap}
-.beats strong{font-family:var(--display);font-weight:700;font-size:1.12em;letter-spacing:-.005em}
-.stand{display:grid;grid-template-columns:1fr auto;gap:.6rem 1rem;align-items:start}
-.stand .react{margin-top:.2rem}
-.stand strong{margin-right:.5rem}
-@media(max-width:560px){.stand{grid-template-columns:1fr}}
+/* good ten */
+.good{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:0 56px}
+.good li{display:flex;gap:24px;padding:24px 0;border-top:1px solid var(--hair);min-width:0}
+.good .n{font:500 13px var(--label);letter-spacing:.08em;color:var(--accent);padding-top:7px;min-width:28px}
+.good .h{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:20px;line-height:1.25;margin:0}
+.good p{margin:6px 0 0;font-size:18px;line-height:1.6}
+.good .meta{display:block;margin-top:2px}
 
-/* ---- Good Ten ---- */
-.good-ten{list-style:none;margin:1rem 0 0;padding:0}
-.good{padding:1rem 0;border-bottom:1px dotted var(--rule-2)}
-.good:last-child{border-bottom:0}
-.good-head{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
-.good-num{font-family:var(--mono);color:var(--stamp);font-weight:600;font-size:.85rem}
-.good strong{font-family:var(--display);font-weight:700}
-.good p{margin:.35rem 0}
-.good-src{font-family:var(--mono);font-size:.72rem;color:var(--ink-2)}
+/* world */
+.ws-note{font-family:var(--display);font-style:italic;font-size:19px;line-height:1.45;color:var(--ink-2);margin:18px 0 0;max-width:680px}
+.ws{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:0 56px}
+.ws>li{padding:28px 0;border-top:1px solid var(--hair);min-width:0}
+.ws p{margin:12px 0 0;font-size:18px;line-height:1.6}
+.ws .tag{font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+.ws .claimed{color:var(--ink-2)}
+.ws ul.sides{list-style:none;margin:14px 0 0;padding:12px 0 0 16px;border-left:2px solid var(--hair)}
+.ws ul.sides li{margin:6px 0;font-size:17px;line-height:1.5}
 
-/* ---- The World, Straight ---- */
-.world-straight{list-style:none;margin:1rem 0 0;padding:0}
-.ws-item{padding:1.1rem 0;border-bottom:1px solid var(--rule)}
-.ws-item h3{font-family:var(--display);font-weight:700;font-size:1.2rem;margin:0 0 .5rem}
-.ws-label{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--stamp);margin-right:.4rem}
-.ws-known{margin:0 0 .4rem}
-.ws-claimed{margin:0 0 .4rem;color:var(--ink-2)}
-.ws-sides{list-style:none;margin:.3rem 0 .5rem;padding:.6rem .8rem;background:var(--paper-2);border-left:3px solid var(--stamp-2)}
-.ws-sides li{margin:.25rem 0;font-size:.94em}
-.ws-note{font-family:var(--mono);font-size:.74rem;color:var(--ink-3);margin:0 0 1rem;padding:.6rem .8rem;border:1px dashed var(--rule-2)}
+/* dashed boxes */
+.boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;margin-top:48px;align-items:start}
+.box{border:1.5px dashed var(--rule-2);padding:24px 26px 26px;background:transparent;font-size:17px;line-height:1.55;min-width:0}
+.box.wide{grid-column:1/-1}
+.box h4{margin:0 0 14px;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.box h5{margin:16px 0 6px;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.box p{margin:8px 0 0}
+.box ul{margin:8px 0 0;padding-left:1.15rem}
+.box li{margin:6px 0}
+.box .src,.box a{font-size:15px}
+.box .empty{color:var(--ink-2);font-style:italic}
+.box .alert{font-weight:600}
+.cols-spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:8px 40px}
+.tvweek{display:grid;grid-template-columns:3.4rem 1fr;gap:6px 14px;margin-top:8px}
+.tvweek .day{font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);padding-top:3px}
+.tvweek .shows div{margin:2px 0 8px}
 
-/* ---- How it's made ---- */
-.made p{margin:.85rem 0}
-.tablewrap{overflow-x:auto;margin:1rem 0}
-table{border-collapse:collapse;width:100%;font-size:.88rem;min-width:32rem}
-th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--rule);vertical-align:top}
-th{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
-td:nth-child(2){font-family:var(--mono);font-size:.78rem;white-space:nowrap}
-.num{text-align:right;font-family:var(--mono);font-size:.78rem;font-variant-numeric:tabular-nums;white-space:nowrap}
-footer{margin-top:2.8rem;padding-top:1rem;border-top:4px double var(--ink-2);font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;color:var(--ink-3);line-height:1.7}
-.intro{margin:1rem 0 0;color:var(--ink-2)}
-@media (prefers-reduced-motion: reduce){*{transition:none!important}}
-.site-banner{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-align:center;padding:.4rem 1rem;background:var(--paper-2);color:var(--ink-2);border-bottom:1px solid var(--rule-2)}.site-foot{max-width:60rem;margin:2rem auto 2.5rem;padding:1rem 1rem 0;border-top:1px solid var(--rule-2);font-family:var(--mono);font-size:.7rem;line-height:1.7;color:var(--ink-3);text-align:center}.site-foot a{color:inherit}</style></head><body>
-<div class="site-banner">Today's edition &middot; thegayzette.news</div><div class="wrap">
+/* briefly + calendar */
+.lines{list-style:none;margin:32px 0 0;padding:0;max-width:860px}
+.lines li>*{min-width:0}
+.lines li{display:grid;grid-template-columns:96px 1fr;gap:4px 24px;padding:16px 0;border-top:1px solid var(--hair)}
+.lines .when{color:var(--ink-2);padding-top:4px}
+.lines .what{font-size:18px;line-height:1.55}
+.lines .tag{display:block;font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-top:2px}
 
-<header class="mast">
-  <div class="mast-top">
-    <span class="dateline">Monday, October 19, 2026 &middot; Los Angeles</span>
-    <span class="weather-box">Sunny, high near 83, low around 62 · Los Angeles (NWS forecast)</span>
+/* how it's made */
+.made table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.45}
+.made th,.made td{text-align:left;padding:10px 12px 10px 0;border-bottom:1px solid var(--hair);vertical-align:top}
+.made th{font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.made .num{text-align:right;white-space:nowrap}
+.tablewrap{overflow-x:auto;margin:20px 0}
+.made p{max-width:680px;margin:14px 0 0}
+
+/* archive */
+.arch{list-style:none;margin:40px 0 0;padding:0;max-width:860px}
+.arch li{display:grid;grid-template-columns:120px 1fr;gap:4px 24px;padding:18px 0;border-top:1px solid var(--hair);align-items:baseline}
+.arch .when{color:var(--ink-2)}
+.arch .h-small a{color:inherit;text-decoration:none}.arch .h-small a:hover{color:var(--accent)}
+.arch .kind{display:block;font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-top:4px}
+.month{margin:56px 0 0;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+
+/* footer */
+.foot{max-width:1200px;margin:140px auto 0;padding:48px 24px 64px;border-top:1px solid var(--hair)}
+.foot .top{display:flex;flex-wrap:wrap;gap:32px 64px;justify-content:space-between}
+.foot .brand{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 80;font-size:28px;letter-spacing:-.015em;margin:0}
+.foot .tag{font-family:var(--display);font-style:italic;font-size:16px;color:var(--ink-2);margin:8px 0 0}
+.foot nav{display:flex;flex-wrap:wrap;gap:4px 28px;align-items:flex-start}
+.foot nav a{display:inline-flex;align-items:center;min-height:44px;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);text-decoration:none}
+.foot nav a:hover{color:var(--accent)}
+.foot .fine{font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin:40px 0 0}
+.foot .fine a{color:inherit}
+
+/* mobile */
+@media (max-width:640px){
+  body{font-size:18px}
+  .shell{padding:0 16px}
+  .masthead{padding:40px 0 32px}
+  .sec{padding-top:64px}.sec.ruled{margin-top:64px;padding-top:48px}
+  .ednote{padding-top:64px}
+  .bleed{margin-left:-16px;margin-right:-16px;width:calc(100% + 32px)}
+  .hero{padding-top:32px}
+  .nav{gap:22px}
+  .good,.ws{grid-template-columns:1fr}
+  .lines li,.arch li{grid-template-columns:minmax(0,1fr)}
+  .grid{grid-template-columns:1fr}
+  .foot{margin-top:96px;padding:40px 16px 48px}
+}
+@media print{
+  html,body{background:#fff}
+  .nav,.skip{display:none}
+  body{font-size:15pt}
+  *{break-inside:avoid-page}
+  .kicker,.rule-short{color:var(--accent)!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="shell">
+<header>
+  <div class="strip">
+    <span>Monday, October 19, 2026 · Los Angeles</span>
+    <span>Sunny, high near 83, low around 62 · Los Angeles (NWS forecast)</span>
+    <span>Daily edition</span>
   </div>
-  <div class="mast-name"><h1>The Gayzette</h1></div>
-  <p class="mast-sub">A newspaper if news was actually real</p>
-  <div class="mast-row2"><b>Daily Edition</b><span></span><span>thegayzette.news</span></div>
+  <div class="masthead">
+    <a href="/"><h1>The Gayzette</h1></a>
+    <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
+  </div>
+  <nav class="nav" aria-label="Sections">
+    <a href="#front" class="on" aria-current="page">Front Page</a><a href="#ai">AI</a><a href="#spirit">Spirit</a><a href="#feel-good">Feel-Good</a><a href="#world">World</a><a href="#tv">TV</a><a href="/editions/2026-10-18.html">Sunday</a>
+  </nav>
 </header>
-<nav class="toc" aria-label="Sections"><div class="index-box"><h2>Today's Receipts</h2><div class="index-list"><a href="#lead"><span>The lead</span><span>&rarr;</span></a><a href="#ai"><span>AI Builder</span><span>&rarr;</span></a><a href="#spirit"><span>Spirit</span><span>&rarr;</span></a><a href="#good-ten"><span>The Good Ten</span><span>&rarr;</span></a><a href="#world"><span>The World, Straight</span><span>&rarr;</span></a></div></div></nav>
 
+<main id="main">
+
+
+  
+  <article class="hero" id="front" data-beat="The AI Builder">
+  <div class="art bleed"><div class="illo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="hl1" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#e63946"/></pattern></defs><rect x="12" y="12" width="296" height="176" fill="#fff7e0" stroke="#111" stroke-width="3"/><rect x="12" y="12" width="296" height="176" fill="url(#hl1)"/><rect x="60" y="70" width="150" height="95" rx="6" fill="#ffd23f" stroke="#111" stroke-width="4"/><rect x="72" y="82" width="126" height="60" fill="#111"/><text x="82" y="104" font-family="monospace" font-size="13" fill="#ffd23f">$ beam run</text><text x="82" y="126" font-family="monospace" font-size="13" fill="#ffd23f">&gt; done_</text><path d="M110 165 h50 l8 10 h-66z" fill="#e63946" stroke="#111" stroke-width="3"/><polygon points="215,25 250,25 285,150 235,150" fill="#e63946" stroke="#111" stroke-width="3"/><rect x="30" y="26" width="120" height="26" rx="8" fill="#fff" stroke="#111" stroke-width="3"/><text x="90.0" y="44" font-family="Comic Sans MS,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">Apache 2.0</text></svg></div></div>
+  <div class="txt">
+    <p class="kicker">Front page &middot; The AI Builder</p>
+    <h2 class="h-hero hl"><a href="https://reflection.ai/blog/beam-is-available" target="_blank" rel="noopener">A 501-billion-parameter coding model, free to download, with a permissive license</a></h2>
+    <p class="deck">Reflection&#39;s Beam is its first open-weight model, and you can try it today through Ollama or OpenRouter.</p>
+    <p class="byline">The Gayzette &middot; Wonder <span aria-label="4 of 5">◆◆◆◆◇</span></p>
+    <div class="body wide hero-body"><p>Reflection, an AI lab, published the weights of a coding model called Beam on Hugging Face on October 16, under the Apache 2.0 license, which lets you use, change and sell things built on it. &#34;Open-weight&#34; means the finished model file is yours to download, like being handed the baked cake instead of just a slice at a restaurant. It is Reflection&#39;s first.</p><p>Beam is a sparse mixture-of-experts model. It has 501 billion parameters (the adjustable dials set during training) but uses only 23 billion on any given step, a bit like a big writers&#39; room where only the few writers who know the subject speak up on each joke. It targets coding, reasoning and long-running agent tasks. Weights come in three number formats (BF16, FP8 and NVFP4, each progressively more compact), plus a helper &#34;drafter&#34; model for speed. You can reach it through Reflection&#39;s API (free to start, in public beta), OpenRouter, Ollama, AWS, Google Cloud, Microsoft Foundry, Together AI and Fireworks.</p><p>The caveat: this is the vendor&#39;s own announcement. The post gives no benchmark numbers (it points to a separate model card) and no minimum hardware, and the release is about three days old, so treat the performance story as unproven until others test it.</p><p>On your desk: Patrick, try Beam through OpenRouter or Ollama as the model behind one of your n8n workflows, and see whether a coding model with no vendor lock-in can do a job your Claude Code routines handle today.</p></div>
+    <aside class="desk"><p class="label">On our desk</p>A permissively licensed, agent-focused model a solo builder can try today without lock-in.</aside>
+    <span class="srcline"><a href="https://reflection.ai/blog/beam-is-available" target="_blank" rel="noopener">Read the original at Reflection: Beam is available →</a></span>
+    
+  </div>
+</article>
+  
 <section class="ednote" aria-label="Editor's note">
+  <p class="kicker">Editor's note</p>
   <p class="byline">The Managing Editor (Opus) · Monday, October 19, 2026</p>
-  <p>Good morning. The open-weight crowd had a big week: Reflection put a 501-billion-parameter coding model out under the most permissive license there is, and Meta and NVIDIA shipped their own open models the same week. That&#x27;s the lead and the AI page.</p><p>Spirit is a quiet-week pair: a small French trial comparing two kinds of meditation, and the psilocybin drug COMP360 moving toward an FDA filing. Psi, remote viewing and UAP news were quiet, and the Droplet Desk has nothing new, so it sits out today.</p><p>You voted more for a giant pumpkin, a Roman temple, a teen&#x27;s bike charity and wildlife photos, and less for a statins study, so today&#x27;s Good stories lean toward digs, records and human-scale wins, with no clinical studies. The World, Straight runs five items.</p><p>Budget note: scouting ran over the 300k-token target (about 437k on its own), so per the charter Sonnet wrote the lead instead of Opus, and The Good Ten runs as seven today (an eighth, a Ukrainian repair festival, was cut because its date couldn&#x27;t be confirmed). The fact-checker graded 118 claims and asked for 15 fixes; all 15 are in.</p>
+  <p class="t">Good morning. The open-weight crowd had a big week: Reflection put a 501-billion-parameter coding model out under the most permissive license there is, and Meta and NVIDIA shipped their own open models the same week. That&#39;s the lead and the AI page.</p><p class="t">Spirit is a quiet-week pair: a small French trial comparing two kinds of meditation, and the psilocybin drug COMP360 moving toward an FDA filing. Psi, remote viewing and UAP news were quiet, and the Droplet Desk has nothing new, so it sits out today.</p><p class="t">You voted more for a giant pumpkin, a Roman temple, a teen&#39;s bike charity and wildlife photos, and less for a statins study, so today&#39;s Good stories lean toward digs, records and human-scale wins, with no clinical studies. The World, Straight runs five items.</p><p class="t">Budget note: scouting ran over the 300k-token target (about 437k on its own), so per the charter Sonnet wrote the lead instead of Opus, and The Good Ten runs as seven today (an eighth, a Ukrainian repair festival, was cut because its date couldn&#39;t be confirmed). The fact-checker graded 118 claims and asked for 15 fixes; all 15 are in.</p>
 </section>
 
-<section id="lead" class="beat">
-  <h3 class="beat-head">The lead</h3>
+
+  <section class="sec" id="ai" aria-labelledby="ai-h">
+    <div class="row">
+      <div class="main">
+        <p class="kicker" id="ai-h">AI Builder</p>
+        
+
+<article id="ai-2026-10-19-muse" data-beat="The AI Builder">
   
-<article class="story lead" id="lead-2026-10-19" data-beat="The AI Builder">
-  <div class="illo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="hl1" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#e63946"/></pattern></defs><rect x="12" y="12" width="296" height="176" fill="#fff7e0" stroke="#111" stroke-width="3"/><rect x="12" y="12" width="296" height="176" fill="url(#hl1)"/><rect x="60" y="70" width="150" height="95" rx="6" fill="#ffd23f" stroke="#111" stroke-width="4"/><rect x="72" y="82" width="126" height="60" fill="#111"/><text x="82" y="104" font-family="monospace" font-size="13" fill="#ffd23f">$ beam run</text><text x="82" y="126" font-family="monospace" font-size="13" fill="#ffd23f">&gt; done_</text><path d="M110 165 h50 l8 10 h-66z" fill="#e63946" stroke="#111" stroke-width="3"/><polygon points="215,25 250,25 285,150 235,150" fill="#e63946" stroke="#111" stroke-width="3"/><rect x="30" y="26" width="120" height="26" rx="8" fill="#fff" stroke="#111" stroke-width="3"/><text x="90.0" y="44" font-family="Comic Sans MS,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">Apache 2.0</text></svg></div>
-  <div class="eyebrow"><span class="beat-tag">The AI Builder</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span><span class="conf">early reports</span></div>
-  <h2>A 501-billion-parameter coding model, free to download, with a permissive license</h2>
-  <p class="dek">Reflection&#x27;s Beam is its first open-weight model, and you can try it today through Ollama or OpenRouter.</p>
-  <p>Reflection, an AI lab, published the weights of a coding model called Beam on Hugging Face on October 16, under the Apache 2.0 license, which lets you use, change and sell things built on it. &quot;Open-weight&quot; means the finished model file is yours to download, like being handed the baked cake instead of just a slice at a restaurant. It is Reflection&#x27;s first.</p><p>Beam is a sparse mixture-of-experts model. It has 501 billion parameters (the adjustable dials set during training) but uses only 23 billion on any given step, a bit like a big writers&#x27; room where only the few writers who know the subject speak up on each joke. It targets coding, reasoning and long-running agent tasks. Weights come in three number formats (BF16, FP8 and NVFP4, each progressively more compact), plus a helper &quot;drafter&quot; model for speed. You can reach it through Reflection&#x27;s API (free to start, in public beta), OpenRouter, Ollama, AWS, Google Cloud, Microsoft Foundry, Together AI and Fireworks.</p><p>The caveat: this is the vendor&#x27;s own announcement. The post gives no benchmark numbers (it points to a separate model card) and no minimum hardware, and the release is about three days old, so treat the performance story as unproven until others test it.</p><p>On your desk: Patrick, try Beam through OpenRouter or Ollama as the model behind one of your n8n workflows, and see whether a coding model with no vendor lock-in can do a job your Claude Code routines handle today.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> A permissively licensed, agent-focused model a solo builder can try today without lock-in. </aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://reflection.ai/blog/beam-is-available" target="_blank" rel="noopener">Reflection: Beam is available</a> <span class="src-date"></span></li></ul></details>
+  
+  <h3 class="h-feature hl" style="margin-top:0;max-width:640px"><a href="https://research.meta.ai/blog/muse-spark-open" target="_blank" rel="noopener">Meta releases Muse Spark Open, an 816B model with 1M-token memory</a></h3>
+  <p class="deck" style="font-size:21px">It reportedly runs on two Mac Studios, but read the license before building a product on it.</p>
+  <div class="body"><p>Meta released Muse Spark Open, an open-weight model with 816 billion parameters in total and 42 billion active at a time. It handles images natively and has a 1-million-token context window, which is how much text it can hold in mind at once. Meta calls it the most capable US open-weight model so far; that is Meta&#39;s own claim, with no benchmark figures listed.</p><p>The license is the Muse Model License, which has limited commercial terms, so it is not Apache-style free-for-anything. Meta says the model runs on two Apple M5 Ultra Mac Studios (512 GB of shared memory each) using MLX, Apple&#39;s machine-learning toolkit. Hosted versions are on Baseten, Fireworks, Groq, Modal, Nebius, OpenRouter and Together AI; pricing is not stated.</p><p>On your desk: Patrick, a 1M-token window on a pair of Macs makes it conceivable to process your whole Obsidian vault locally, though you would want to check the license terms first.</p></div>
+  
+  <span class="srcline"><a href="https://research.meta.ai/blog/muse-spark-open" target="_blank" rel="noopener">Read the original at Meta Research: Muse Spark Open →</a></span>
   
 </article>
-</section>
 
-<section id="ai" class="beat">
-  <h3 class="beat-head">The AI Builder &middot; briefly</h3>
-  <div class="cols cols-2"><div class="col">
-<article class="story short" id="ai-2026-10-19-muse" data-beat="The AI Builder">
-  
-  <h3>Meta releases Muse Spark Open, an 816B model with 1M-token memory</h3>
-  <p>Meta released Muse Spark Open, an open-weight model with 816 billion parameters in total and 42 billion active at a time. It handles images natively and has a 1-million-token context window, which is how much text it can hold in mind at once. Meta calls it the most capable US open-weight model so far; that is Meta&#x27;s own claim, with no benchmark figures listed.</p><p>The license is the Muse Model License, which has limited commercial terms, so it is not Apache-style free-for-anything. Meta says the model runs on two Apple M5 Ultra Mac Studios (512 GB of shared memory each) using MLX, Apple&#x27;s machine-learning toolkit. Hosted versions are on Baseten, Fireworks, Groq, Modal, Nebius, OpenRouter and Together AI; pricing is not stated.</p><p>On your desk: Patrick, a 1M-token window on a pair of Macs makes it conceivable to process your whole Obsidian vault locally, though you would want to check the license terms first.</p>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://research.meta.ai/blog/muse-spark-open" target="_blank" rel="noopener">Meta Research: Muse Spark Open</a> <span class="src-date"></span></li></ul></details>
+      </div>
+      
+      <aside class="side side-list" aria-label="More in AI">
+        <p class="label">More in AI</p>
+        
+
+<article id="ai-2026-10-19-nemotron" data-beat="The AI Builder">
+  <h4 class="h-small hl"><a href="https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/" target="_blank" rel="noopener">NVIDIA&#39;s Nemotron 3.5: a 120B vision model and a 24GB one</a></h4>
+  <p class="deck" style="font-size:17px;margin-top:8px">The smaller model squeezes into the memory of a single consumer graphics card.</p>
+  <div class="art" style="margin-top:14px"><div class="illo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="hl2" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#111"/></pattern></defs><rect x="12" y="12" width="296" height="176" fill="#fff7e0" stroke="#111" stroke-width="3"/><rect x="12" y="12" width="296" height="176" fill="url(#hl2)"/><rect x="80" y="60" width="130" height="90" rx="8" fill="#2a9d8f" stroke="#111" stroke-width="4"/><rect x="105" y="85" width="80" height="40" fill="#fff" stroke="#111" stroke-width="3"/><text x="145" y="112" font-family="Comic Sans MS,sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#111">24GB</text><path d="M100 60v-18M125 60v-18M165 60v-18M190 60v-18M100 150v18M125 150v18M165 150v18M190 150v18" stroke="#111" stroke-width="4"/><rect x="215" y="30" width="80" height="26" rx="8" fill="#fff" stroke="#111" stroke-width="3"/><text x="255.0" y="48" font-family="Comic Sans MS,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">It fits!</text></svg></div></div>
+  <details class="more-read"><summary>Read the brief</summary><div class="body"><p>NVIDIA released two models on October 15. Nemotron 3.5 Super VL is an open 120-billion-parameter model that reads images as well as text; it is on Hugging Face, OpenRouter, ModelScope and as an NVIDIA NIM package. Nemotron 3.5 Bolt (74B-A9B) uses native 2-bit quantization, storing each number with very few bits, like shrinking a photo file, so it fits in 24GB of memory. It runs through llama.cpp, Ollama, LM Studio, Unsloth and vLLM.</p><p>A 4GB Bolt E4B edge model is announced for October 23 and is not out yet. NVIDIA also says it is releasing open datasets and training environments. The page names no license, and the speed claims (up to 5x faster throughput than other models in its class, per NVIDIA&#39;s chart) are NVIDIA&#39;s own.</p><p>On your desk: Patrick, Bolt in Ollama or LM Studio is a cheap way to test a local helper for your scheduled vault routines, with nothing leaving your machine.</p></div></details>
+  <span class="srcline small"><a href="https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/" target="_blank" rel="noopener">Read the original at NVIDIA Blog: Nemotron 3.5 Super VL →</a></span>
   
 </article>
-<article class="story short" id="ai-2026-10-19-nemotron" data-beat="The AI Builder">
-  <div class="illo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="hl2" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#111"/></pattern></defs><rect x="12" y="12" width="296" height="176" fill="#fff7e0" stroke="#111" stroke-width="3"/><rect x="12" y="12" width="296" height="176" fill="url(#hl2)"/><rect x="80" y="60" width="130" height="90" rx="8" fill="#2a9d8f" stroke="#111" stroke-width="4"/><rect x="105" y="85" width="80" height="40" fill="#fff" stroke="#111" stroke-width="3"/><text x="145" y="112" font-family="Comic Sans MS,sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#111">24GB</text><path d="M100 60v-18M125 60v-18M165 60v-18M190 60v-18M100 150v18M125 150v18M165 150v18M190 150v18" stroke="#111" stroke-width="4"/><rect x="215" y="30" width="80" height="26" rx="8" fill="#fff" stroke="#111" stroke-width="3"/><text x="255.0" y="48" font-family="Comic Sans MS,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">It fits!</text></svg></div>
-  <h3>NVIDIA&#x27;s Nemotron 3.5: a 120B vision model and a 24GB one</h3>
-  <p>NVIDIA released two models on October 15. Nemotron 3.5 Super VL is an open 120-billion-parameter model that reads images as well as text; it is on Hugging Face, OpenRouter, ModelScope and as an NVIDIA NIM package. Nemotron 3.5 Bolt (74B-A9B) uses native 2-bit quantization, storing each number with very few bits, like shrinking a photo file, so it fits in 24GB of memory. It runs through llama.cpp, Ollama, LM Studio, Unsloth and vLLM.</p><p>A 4GB Bolt E4B edge model is announced for October 23 and is not out yet. NVIDIA also says it is releasing open datasets and training environments. The page names no license, and the speed claims (up to 5x faster throughput than other models in its class, per NVIDIA&#x27;s chart) are NVIDIA&#x27;s own.</p><p>On your desk: Patrick, Bolt in Ollama or LM Studio is a cheap way to test a local helper for your scheduled vault routines, with nothing leaving your machine.</p>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/" target="_blank" rel="noopener">NVIDIA Blog: Nemotron 3.5 Super VL</a> <span class="src-date"></span></li></ul></details>
-  
-</article></div><div class="col">
-<article class="story short" id="ai-2026-10-19-grokvoice" data-beat="The AI Builder">
-  
-  <h3>xAI&#x27;s Grok Voice 3.0 costs $0.08 a minute</h3>
-  <p>xAI released Grok Voice 3.0, a speech-to-speech model: audio goes in, audio comes out, with no separate text step in between. It sits in xAI&#x27;s Voice Agent API, and the grok-voice-latest alias switched over automatically. The price is $0.08 a minute ($4.80 an hour), the same as version 2.0.</p><p>xAI cites Artificial Analysis scores: 86.9 on its Speech-to-Speech Index (versus 83.2 for GPT-Live-1) and 98.5% on Big Bench Audio. On the tau-Voice agent test it scored 71.6%, slightly below GPT-Live-1&#x27;s 74.5%. xAI also says Starlink call centers handle 20,000 calls a day with about 70% resolved without a human. All of these numbers are vendor-reported.</p><p>On your desk: Travis, Travis Wall Studio could prototype a voice agent that answers prospective families&#x27; questions, at a per-minute cost you can calculate in advance.</p>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://x.ai/news/grok-voice-3" target="_blank" rel="noopener">xAI: Grok Voice 3.0</a> <span class="src-date"></span></li></ul></details>
-  
-</article></div></div>
-</section>
 
-<section id="spirit" class="beat">
-  <h3 class="beat-head">Spirit</h3>
-  <div class="cols cols-2"><div class="col">
-<article class="story short" id="sp-2026-10-19-meditation" data-beat="Consciousness &amp; The Nonphysical">
-  <div class="illo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="hl3" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#111"/></pattern></defs><rect x="12" y="12" width="296" height="176" fill="#fff7e0" stroke="#111" stroke-width="3"/><rect x="12" y="12" width="296" height="176" fill="url(#hl3)"/><circle cx="130" cy="105" r="62" fill="#9b5de5" stroke="#111" stroke-width="4"/><circle cx="130" cy="105" r="42" fill="#fff" stroke="#111" stroke-width="3"/><circle cx="130" cy="105" r="22" fill="#f6c453" stroke="#111" stroke-width="3"/><circle cx="130" cy="105" r="6" fill="#111"/><path d="M215 150 q30 -40 60 0" fill="none" stroke="#111" stroke-width="4"/><rect x="180" y="30" width="115" height="26" rx="8" fill="#fff" stroke="#111" stroke-width="3"/><text x="237.5" y="48" font-family="Comic Sans MS,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">Who is asking?</text></svg></div>
-  <h3>Two meditation styles lowered depression scores in a French trial</h3>
-  <p>Céline Stinus and Sophie Berjot randomized 147 French adults (49 per group) to focused-attention meditation (resting attention on one object, like the breath), self-inquiry meditation (examining thoughts, beliefs and the sense of self) and a wait-list. Each meditation group had five 60-minute online sessions over four weeks plus 20 minutes of individual practice five days a week (Mindfulness journal, via PsyPost).</p><p>Both meditation groups scored lower on depressive symptoms and identity threat than the wait-list; the two styles did not reliably differ. Only focused attention reduced dysfunctional attitudes, contrary to the authors&#x27; expectation that self-inquiry would. Caveats: participants were nonclinical with low starting scores, all outcomes were self-reported, one instructor taught both, it was not preregistered, and wait-list dropout was 20 people versus 4 to 5 per meditation group. Research reporting, not health advice.</p><p>On your desk: Patrick, self-inquiry is the practice closest to your consciousness beat, and a prediction that failed in the open fits the honest-scoring habit you bring to your remote viewing log.</p>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.psypost.org/two-styles-of-meditation-eased-depressive-symptoms-in-a-four-week-trial-possibly-through-different-routes/" target="_blank" rel="noopener">PsyPost: Two styles of meditation eased depressive symptoms in a four-week trial</a> <span class="src-date"></span></li></ul></details>
-  
-</article></div><div class="col">
-<article class="story short" id="sp-2026-10-19-compass" data-beat="Consciousness &amp; The Nonphysical">
-  
-  <h3>Compass Pathways plans to finish its psilocybin FDA filing this quarter</h3>
-  <p>At the STAT Summit in Boston, Compass Pathways CEO Kabir Nath said the company will &quot;go slow before we go fast.&quot; Compass plans to complete its rolling FDA submission for COMP360, a synthetic psilocybin for treatment-resistant depression, in the fourth quarter of 2026. It hopes to launch in early 2027. COMP360 is not approved; Nath expects a REMS (an FDA-required safety program) if it is.</p><p>Per STAT, about 25% of Phase 3 patients had a meaningful response after one roughly six-hour session, and about 40% after a second dose. Harvard&#x27;s Steven Hyman cautioned that blinding remains a problem (people can often tell they got the drug) and that it is unclear whether the psychedelic experience itself is needed for any benefit. These are company figures, not FDA findings; this is regulatory news, not health advice.</p><p>On your desk: Patrick, Hyman&#x27;s blinding point is the same measurement-honesty question you ask of your remote viewing scoring: how do you know the result is not expectation?</p>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.statnews.com/2026/10/14/compass-pathways-psychedelics-stat-summit/" target="_blank" rel="noopener">STAT: Compass Pathways at the STAT Summit</a> <span class="src-date"></span></li></ul></details>
-  
-</article></div></div>
-</section>
 
-<aside class="crop-box" id="crop-circle-watch" aria-label="Crop Circle Watch">
-  <div class="crop-head"><svg class="crop-glyph" viewBox="0 0 60 60" role="img" aria-label="crop circle glyph">
-<circle cx="30" cy="30" r="27" fill="none" stroke="var(--ink)" stroke-width="2.5"/>
-<circle cx="30" cy="30" r="18" fill="none" stroke="var(--ink)" stroke-width="2"/>
-<circle cx="30" cy="30" r="8" fill="none" stroke="var(--ink)" stroke-width="2"/>
-<circle cx="30" cy="7" r="3" fill="var(--ink)"/>
-</svg><h4>Crop Circle Watch</h4></div>
-  <p class="crop-latest"><b>Latest formation</b> &mdash; Tue Jul 21 &middot; Fox Hill. A roughly 300-foot pictogram of circles, rings and keys in wheat near Liddington/Wanborough Plain, with a woven floor lay in one circle. Temporary Temples says it resembles the 1990 East Field formation.</p>
-  <ul class="crop-facts"><li>Temporary Temples posted an anonymous image on 8 Aug of a four-fold knot in a ring, with no date or location; some have speculated it is AI-generated, and the site had no further information. Its season overview lists it as &#x27;4 Aug, location unknown&#x27;.</li><li>Fox Hill has since been harvested and was not flown, so Fox Hill remains the latest verified formation; none verified since 21 July (the unverified 4 Aug image aside).</li></ul>
-  <p class="crop-history">From the history: Wikipedia&#x27;s crop circle article states that by 2001, approximately 10,000 crop circles had been reported internationally, and notes they tend to appear near heritage monuments such as Stonehenge.</p>
-  <p class="crop-sources"><a href="https://temporarytemples.co.uk/project/fox-hill-2026" target="_blank" rel="noopener">Temporary Temples: Fox Hill 2026</a> &middot; <a href="https://temporarytemples.co.uk/2026-season-one-more" target="_blank" rel="noopener">Temporary Temples: One more anonymous circle?</a> &middot; <a href="https://temporarytemples.co.uk/project/crop-circles-2026-season-info" target="_blank" rel="noopener">Temporary Temples: 2026 season overview</a> &middot; <a href="https://en.wikipedia.org/wiki/Crop_circle" target="_blank" rel="noopener">Wikipedia: Crop circle</a></p>
+<article id="ai-2026-10-19-grokvoice" data-beat="The AI Builder">
+  <h4 class="h-small hl"><a href="https://x.ai/news/grok-voice-3" target="_blank" rel="noopener">xAI&#39;s Grok Voice 3.0 costs $0.08 a minute</a></h4>
+  <p class="deck" style="font-size:17px;margin-top:8px">A speech-to-speech model for building phone-style voice agents, with a price unchanged from 2.0.</p>
+  
+  <details class="more-read"><summary>Read the brief</summary><div class="body"><p>xAI released Grok Voice 3.0, a speech-to-speech model: audio goes in, audio comes out, with no separate text step in between. It sits in xAI&#39;s Voice Agent API, and the grok-voice-latest alias switched over automatically. The price is $0.08 a minute ($4.80 an hour), the same as version 2.0.</p><p>xAI cites Artificial Analysis scores: 86.9 on its Speech-to-Speech Index (versus 83.2 for GPT-Live-1) and 98.5% on Big Bench Audio. On the tau-Voice agent test it scored 71.6%, slightly below GPT-Live-1&#39;s 74.5%. xAI also says Starlink call centers handle 20,000 calls a day with about 70% resolved without a human. All of these numbers are vendor-reported.</p><p>On your desk: Travis, Travis Wall Studio could prototype a voice agent that answers prospective families&#39; questions, at a per-minute cost you can calculate in advance.</p></div></details>
+  <span class="srcline small"><a href="https://x.ai/news/grok-voice-3" target="_blank" rel="noopener">Read the original at xAI: Grok Voice 3.0 →</a></span>
+  
+</article>
+
+      </aside>
+      
+    </div>
+  </section>
+
+  <section class="sec" id="spirit" aria-labelledby="spirit-h">
+    <div class="row">
+      <div class="main">
+        <p class="kicker" id="spirit-h">Spirit</p>
+        
+
+<article id="sp-2026-10-19-meditation" data-beat="Consciousness &amp; The Nonphysical">
+  <div class="art bleed"><div class="illo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="hl3" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#111"/></pattern></defs><rect x="12" y="12" width="296" height="176" fill="#fff7e0" stroke="#111" stroke-width="3"/><rect x="12" y="12" width="296" height="176" fill="url(#hl3)"/><circle cx="130" cy="105" r="62" fill="#9b5de5" stroke="#111" stroke-width="4"/><circle cx="130" cy="105" r="42" fill="#fff" stroke="#111" stroke-width="3"/><circle cx="130" cy="105" r="22" fill="#f6c453" stroke="#111" stroke-width="3"/><circle cx="130" cy="105" r="6" fill="#111"/><path d="M215 150 q30 -40 60 0" fill="none" stroke="#111" stroke-width="4"/><rect x="180" y="30" width="115" height="26" rx="8" fill="#fff" stroke="#111" stroke-width="3"/><text x="237.5" y="48" font-family="Comic Sans MS,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">Who is asking?</text></svg></div></div>
+  
+  <h3 class="h-feature hl" style="margin-top:24px;max-width:640px"><a href="https://www.psypost.org/two-styles-of-meditation-eased-depressive-symptoms-in-a-four-week-trial-possibly-through-different-routes/" target="_blank" rel="noopener">Two meditation styles lowered depression scores in a French trial</a></h3>
+  <p class="deck" style="font-size:21px">Self-inquiry did not beat plain focused attention, which is the opposite of what the authors predicted.</p>
+  <div class="body"><p>Céline Stinus and Sophie Berjot randomized 147 French adults (49 per group) to focused-attention meditation (resting attention on one object, like the breath), self-inquiry meditation (examining thoughts, beliefs and the sense of self) and a wait-list. Each meditation group had five 60-minute online sessions over four weeks plus 20 minutes of individual practice five days a week (Mindfulness journal, via PsyPost).</p><p>Both meditation groups scored lower on depressive symptoms and identity threat than the wait-list; the two styles did not reliably differ. Only focused attention reduced dysfunctional attitudes, contrary to the authors&#39; expectation that self-inquiry would. Caveats: participants were nonclinical with low starting scores, all outcomes were self-reported, one instructor taught both, it was not preregistered, and wait-list dropout was 20 people versus 4 to 5 per meditation group. Research reporting, not health advice.</p><p>On your desk: Patrick, self-inquiry is the practice closest to your consciousness beat, and a prediction that failed in the open fits the honest-scoring habit you bring to your remote viewing log.</p></div>
+  
+  <span class="srcline"><a href="https://www.psypost.org/two-styles-of-meditation-eased-depressive-symptoms-in-a-four-week-trial-possibly-through-different-routes/" target="_blank" rel="noopener">Read the original at PsyPost: Two styles of meditation eased depressive symptoms in a four-week trial →</a></span>
+  
+</article>
+
+      </div>
+      
+      <aside class="side side-list" aria-label="More in Spirit">
+        <p class="label">More in Spirit</p>
+        
+
+<article id="sp-2026-10-19-compass" data-beat="Consciousness &amp; The Nonphysical">
+  <h4 class="h-small hl"><a href="https://www.statnews.com/2026/10/14/compass-pathways-psychedelics-stat-summit/" target="_blank" rel="noopener">Compass Pathways plans to finish its psilocybin FDA filing this quarter</a></h4>
+  <p class="deck" style="font-size:17px;margin-top:8px">The company hopes for a launch in early 2027; the drug is not approved.</p>
+  
+  <details class="more-read"><summary>Read the brief</summary><div class="body"><p>At the STAT Summit in Boston, Compass Pathways CEO Kabir Nath said the company will &#34;go slow before we go fast.&#34; Compass plans to complete its rolling FDA submission for COMP360, a synthetic psilocybin for treatment-resistant depression, in the fourth quarter of 2026. It hopes to launch in early 2027. COMP360 is not approved; Nath expects a REMS (an FDA-required safety program) if it is.</p><p>Per STAT, about 25% of Phase 3 patients had a meaningful response after one roughly six-hour session, and about 40% after a second dose. Harvard&#39;s Steven Hyman cautioned that blinding remains a problem (people can often tell they got the drug) and that it is unclear whether the psychedelic experience itself is needed for any benefit. These are company figures, not FDA findings; this is regulatory news, not health advice.</p><p>On your desk: Patrick, Hyman&#39;s blinding point is the same measurement-honesty question you ask of your remote viewing scoring: how do you know the result is not expectation?</p></div></details>
+  <span class="srcline small"><a href="https://www.statnews.com/2026/10/14/compass-pathways-psychedelics-stat-summit/" target="_blank" rel="noopener">Read the original at STAT: Compass Pathways at the STAT Summit →</a></span>
+  
+</article>
+
+      </aside>
+      
+    </div>
+    <div class="boxes"><aside class="box" id="crop-circle-watch" aria-label="Crop Circle Watch">
+  <h4>Crop Circle Watch</h4>
+  
+  <p><b>Latest formation</b> &mdash; Tue Jul 21 &middot; Fox Hill, Wiltshire, England. A roughly 300-foot pictogram of circles, rings and keys in wheat near Liddington/Wanborough Plain, with a woven floor lay in one circle. Temporary Temples says it resembles the 1990 East Field formation.</p>
+  
+  <ul><li>Temporary Temples posted an anonymous image on 8 Aug of a four-fold knot in a ring, with no date or location; some have speculated it is AI-generated, and the site had no further information. Its season overview lists it as &#39;4 Aug, location unknown&#39;.</li><li>Fox Hill has since been harvested and was not flown, so Fox Hill remains the latest verified formation; none verified since 21 July (the unverified 4 Aug image aside).</li></ul>
+  <p><em>From the history: Wikipedia&#39;s crop circle article states that by 2001, approximately 10,000 crop circles had been reported internationally, and notes they tend to appear near heritage monuments such as Stonehenge.</em></p>
+  <p class="src"><a href="https://temporarytemples.co.uk/project/fox-hill-2026" target="_blank" rel="noopener">Temporary Temples: Fox Hill 2026</a> &middot; <a href="https://temporarytemples.co.uk/2026-season-one-more" target="_blank" rel="noopener">Temporary Temples: One more anonymous circle?</a> &middot; <a href="https://temporarytemples.co.uk/project/crop-circles-2026-season-info" target="_blank" rel="noopener">Temporary Temples: 2026 season overview</a> &middot; <a href="https://en.wikipedia.org/wiki/Crop_circle" target="_blank" rel="noopener">Wikipedia: Crop circle</a></p>
+</aside></div>
+  </section>
+
+  <section class="sec ruled" id="feel-good" aria-labelledby="good-h">
+    <div class="sec-head">
+      <p class="kicker">Feel-Good</p>
+      <h2 class="h-sec" id="good-h">The Good Ten</h2>
+      <p class="sub">Ten people doing excellent, verified work in their fields this week.</p>
+    </div>
+    <ol class="good">
+      <li id="gt-ramesses-gharbia">
+  <span class="n">01</span>
+  <div>
+    <h3 class="h">A villager&#39;s granite block leads to two colossal Ramesses statues</h3>
+    <span class="meta">Fri Oct 16</span>
+    <p>A villager in Egypt&#39;s Gharbia Governorate spotted an inscribed granite block on his property and called the Supreme Council of Antiquities. They found a double-crowned head about five feet long and a second statue about eight feet long, thought to depict Ramesses II.</p>
+    <span class="srcline small"><a href="https://archaeology.org/news/2026/10/16/fragments-of-colossal-statues-uncovered-in-northern-egypt/" target="_blank" rel="noopener">Read the original at Archaeology Magazine →</a></span>
+  </div>
+</li><li id="gt-neanderthal-wood">
+  <span class="n">02</span>
+  <div>
+    <h3 class="h">Neanderthal wooden tools survived in a Spanish rock shelter</h3>
+    <span class="meta">Tue Oct 13</span>
+    <p>At Abric Romaní, about 30 miles west of Barcelona, researchers documented 597 wooden artifacts or imprints; 13 were clearly shaped by people, including bark trays, pointed sticks and a knife-shaped object. Minerals hardened into travertine and preserved the wood or its outline (Science Advances).</p>
+    <span class="srcline small"><a href="https://www.smithsonianmag.com/smart-news/an-unprecedented-trove-of-ancient-wooden-tools-uncovered-at-a-rock-shelter-in-spain-show-neanderthals-were-skilled-woodworkers-180989668/" target="_blank" rel="noopener">Read the original at Smithsonian Magazine →</a></span>
+  </div>
+</li><li id="gt-invictibellatrix">
+  <span class="n">03</span>
+  <div>
+    <h3 class="h">A fossil forgotten in a museum drawer is a new clawed dinosaur</h3>
+    <span class="meta">Wed Oct 14</span>
+    <p>Invictibellatrix amberina, a roughly 120-million-year-old megaraptoran from the Isle of Wight, was identified from part of a skull the Natural History Museum acquired in 1924. It was about 3 to 4 metres long; lead author Dr Cassius Morrison of UCL published it in Royal Society Open Science.</p>
+    <span class="srcline small"><a href="https://www.sciencedaily.com/releases/2026/10/261014015457.htm" target="_blank" rel="noopener">Read the original at ScienceDaily →</a></span>
+  </div>
+</li><li id="gt-wingwalker">
+  <span class="n">04</span>
+  <div>
+    <h3 class="h">A 99-year-old becomes the world&#39;s oldest wing-walker</h3>
+    <span class="meta">Sat Oct 17</span>
+    <p>Helga Duffy, 99, spent more than five minutes in the air at about 1,000 m over Rendcomb Airfield, Gloucestershire, taking the Guinness title from a 97-year-old. She raised over £1,600 for the regional Air Ambulance.</p>
+    <span class="srcline small"><a href="https://www.goodnewsnetwork.org/99-yo-woman-snags-worlds-oldest-wing-walker-title/" target="_blank" rel="noopener">Read the original at Good News Network →</a></span>
+  </div>
+</li><li id="gt-mysuru-peacock">
+  <span class="n">05</span>
+  <div>
+    <h3 class="h">3,473 drones paint a giant peacock over Mysuru</h3>
+    <span class="meta">Mon Oct 19</span>
+    <p>BotLab Dynamics set the Guinness record for the largest drone-formed display of a bird on the night of Oct 18, at Mysuru Dasara. Its drone count there has grown from 250 in 2022 to 1,500 in 2024 to 3,473 this year, with over 40,000 attending across the first two evenings.</p>
+    <span class="srcline small"><a href="https://www.tribuneindia.com/news/business/mysuru-dasara-drone-shows-by-botlab-dynamics-sets-guinness-world-record-with-a-spectacular-3473-drone-peacock" target="_blank" rel="noopener">Read the original at The Tribune (India) →</a></span>
+  </div>
+</li><li id="gt-knitted-cops">
+  <span class="n">06</span>
+  <div>
+    <h3 class="h">A village stations knitted traffic cops to slow speeders</h3>
+    <span class="meta">Sun Oct 18</span>
+    <p>The Knit and Natter group in Fillongley, Warwickshire, spent four months making the figures, installed Oct 13: a knitted officer under a 30mph sign with a mock speed gun, plus knitted speed cameras, near a primary school junction.</p>
+    <span class="srcline small"><a href="https://www.goodnewsnetwork.org/village-installs-knitted-traffic-cops-to-slow-speeding-drivers/" target="_blank" rel="noopener">Read the original at Good News Network →</a></span>
+  </div>
+</li><li id="gt-canaletto">
+  <span class="n">07</span>
+  <div>
+    <h3 class="h">A previously unseen Canaletto sketch heads to auction</h3>
+    <span class="meta">Thu Oct 15</span>
+    <p>Mallams in Oxford will sell a pencil-and-ink capriccio of a ruined arcade over a canal, estimated at up to $80,000. Canaletto likely made it between 1746 and 1755, during his stay in England; expert Charles Beddington authenticated it.</p>
+    <span class="srcline small"><a href="https://www.smithsonianmag.com/smart-news/venetian-artist-canaletto-merged-fantasy-and-architectural-detail-in-this-previously-unseen-sketch-heading-to-auction-this-month-180989692/" target="_blank" rel="noopener">Read the original at Smithsonian Magazine →</a></span>
+  </div>
+</li>
+    </ol>
+  </section>
+
+  <section class="sec ruled" id="world" aria-labelledby="world-h">
+    <div class="sec-head">
+      <p class="kicker">World</p>
+      <h2 class="h-sec" id="world-h">The World, Straight</h2>
+    </div>
+    <p class="ws-note">Facts first. What is known versus what is claimed, named sources, each side's framing in one neutral line, no persuasive adjectives. If there is no verified fact, it does not run.</p>
+    <ul class="ws">
+      <li id="w-france">
+  <h3 class="h-small hl"><a href="https://www.aljazeera.com/news/2026/10/18/macron-denounces-frances-nationwide-rioting-looting" target="_blank" rel="noopener">France: Macron addresses the nation after a night of unrest</a></h3>
+  <p><span class="tag">Confirmed</span>Macron gave a televised address on Sunday 18 Oct (Al Jazeera). Confirmed: he announced a &#34;crisis unit&#34; for urgent aid to people in difficulty and promised a government lessons-learned review; per the article he did not announce a state of emergency or curfew (Al Jazeera).</p>
+  <p class="claimed"><span class="tag">Claimed by France&#39;s Interior Ministry</span>nearly 2,400 people were arrested on Saturday 17 Oct and about 1,000 police and gendarmes were injured. Claimed by Macron: rioters and looters &#34;will pay for their crimes,&#34; and law enforcement faced &#34;unprecedented violence&#34; in several cities.</p>
+  <ul class="sides"><li><strong>Macron/government:</strong> Distinguishes legitimate protesters from those who destroyed and looted.</li><li><strong>Jean-Luc Mélenchon:</strong> Says the government is &#34;solely responsible&#34; for the destruction.</li><li><strong>Jordan Bardella:</strong> Called the speech &#34;lamentable&#34; and &#34;cowardly.&#34;</li></ul>
+  <span class="srcline small"><a href="https://www.aljazeera.com/news/2026/10/18/macron-denounces-frances-nationwide-rioting-looting" target="_blank" rel="noopener">Read the original at Al Jazeera: Macron denounces France&#39;s nationwide rioting, looting →</a></span>
+  
+</li><li id="w-sanctions">
+  <h3 class="h-small hl"><a href="https://www.aljazeera.com/news/2026/10/19/trump-defends-russian-sanctions-relief-lashes-out-at-zelenskyy" target="_blank" rel="noopener">Trump defends Russia sanctions waivers; Zelenskyy objects</a></h3>
+  <p><span class="tag">Confirmed</span>Trump posted on Truth Social on Sunday defending his decision to block numerous Russia sanctions days before they were due to take effect (Al Jazeera, citing AFP, AP, Reuters). Confirmed: Zelenskyy spoke on NBC&#39;s Meet the Press on Sunday and said on X that he spoke with US envoys Steve Witkoff and Jared Kushner. Confirmed: Trump announced on 9 Oct plans for Russia to supply over 300,000 metric tonnes of diesel to US and global markets.</p>
+  <p class="claimed"><span class="tag">Claimed by Donald Trump</span>he wants Russia at the bargaining table, Ukrainian strikes on Russian diesel refineries are &#34;seriously hurting the world diesel markets,&#34; and Zelenskyy &#34;doesn&#39;t want to end this war, and probably never did.&#34; Claimed by Zelenskyy: waiving sanctions &#34;will hurt Ukraine&#34; and strengthen Putin&#39;s war effort; he rejected a comparison of himself with Putin.</p>
+  <ul class="sides"><li><strong>US (Trump):</strong> Sanctions relief supports negotiation and fuel-price relief.</li><li><strong>Ukraine (Zelenskyy):</strong> Relief rewards Moscow and prolongs the war.</li><li><strong>Kyiv, European partners and many US officials:</strong> Per the article, they view the energy policy as rewarding Moscow.</li></ul>
+  <span class="srcline small"><a href="https://www.aljazeera.com/news/2026/10/19/trump-defends-russian-sanctions-relief-lashes-out-at-zelenskyy" target="_blank" rel="noopener">Read the original at Al Jazeera: Trump defends Russian sanctions relief, lashes out at Zelenskyy →</a></span>
+  
+</li><li id="w-yemen">
+  <h3 class="h-small hl"><a href="https://www.aljazeera.com/news/2026/10/18/gcc-condemns-houthi-attacks-on-saudi-arabia-as-yemen-fighting-intensifies" target="_blank" rel="noopener">GCC condemns Houthi attacks on Saudi Arabia as Yemen fighting grows</a></h3>
+  <p><span class="tag">Confirmed</span>GCC foreign ministers met in Manama, Bahrain, and issued a statement condemning Houthi attacks on Saudi Arabia, saying an attack on any member affects all six (Al Jazeera). Confirmed: the Saudi-led coalition said it shot down two drones near Riyadh and in the Eastern Province early Sunday (coalition statement, per Al Jazeera). Confirmed: US embassies in the Middle East issued a security alert for Americans (Al Jazeera live blog). Confirmed: IOM says more than 233,000 people are displaced (about 121,000 in Taiz), and WHO warned Taiz&#39;s 12 hospitals had fuel for four days (as reported by Al Jazeera).</p>
+  <p class="claimed"><span class="tag">Claimed by Yemeni government and GCC ministers</span>Houthis attacked the presidential palace in Aden (cited in a letter to the UN), and government forces killed 12 Houthi fighters in southern Taiz and gained ground there (Al Jazeera notes the figures are unconfirmed). Claimed by GCC ministers: Houthis carried out deadly strikes on civilian airports and vital facilities, and they called for a terrorist designation.</p>
+  <ul class="sides"><li><strong>GCC, Saudi Arabia and the Yemeni government:</strong> Say the Houthis are the aggressor and a UN arms embargo should be enforced.</li><li><strong>Houthis:</strong> No statement in the articles reviewed.</li></ul>
+  <span class="srcline small"><a href="https://www.aljazeera.com/news/2026/10/18/gcc-condemns-houthi-attacks-on-saudi-arabia-as-yemen-fighting-intensifies" target="_blank" rel="noopener">Read the original at Al Jazeera: GCC condemns Houthi attacks on Saudi Arabia →</a></span>
+  <details class="sources"><summary>Receipts (2)</summary>
+<ul><li><a href="https://www.aljazeera.com/news/2026/10/18/gcc-condemns-houthi-attacks-on-saudi-arabia-as-yemen-fighting-intensifies" target="_blank" rel="noopener">Al Jazeera: GCC condemns Houthi attacks on Saudi Arabia</a></li><li><a href="https://www.aljazeera.com/news/liveblog/2026/10/18/iran-war-live-tehran-says-netanyahu-seeks-more-war-yemen-fighting-flares" target="_blank" rel="noopener">Al Jazeera live blog, Oct 18</a></li></ul></details>
+</li><li id="w-ebola">
+  <h3 class="h-small hl"><a href="https://www.aljazeera.com/news/2026/10/19/kenya-confirms-eighth-ebola-case-amid-widening-regional-outbreak" target="_blank" rel="noopener">Kenya confirms an eighth Ebola case; DRC reports an eighth province</a></h3>
+  <p><span class="tag">Confirmed</span>Kenya&#39;s Director-General for Health, Patrick Amoth, told Citizen TV that 38 people were tested Sunday and one was positive, a 49-year-old patient attendant who is not a health worker (Al Jazeera). Confirmed: on Saturday Kenya&#39;s ministry reported four new cases, bringing the total to seven (ministry post on X, per Al Jazeera). Confirmed: Kenya&#39;s first case travelled from the DRC and died in Nairobi on 5 Oct. Confirmed: the strain is Bundibugyo, which has no vaccine or specific treatment (Al Jazeera).</p>
+  <p class="claimed"><span class="tag">Claimed by Al Jazeera reporting (figures not attributed in the article)</span>Al Jazeera reports, without attributing the figures, that the virus has reached an eighth province, North Ubangi, and the DRC has at least 9,400 cases and over 4,500 deaths since May. North Kivu announced a one-week ban on entry from Ituri (state agency ACP, per Al Jazeera).</p>
+  
+  <span class="srcline small"><a href="https://www.aljazeera.com/news/2026/10/19/kenya-confirms-eighth-ebola-case-amid-widening-regional-outbreak" target="_blank" rel="noopener">Read the original at Al Jazeera: Kenya confirms eighth Ebola case →</a></span>
+  
+</li><li id="w-alberta">
+  <h3 class="h-small hl"><a href="https://www.cp24.com/news/canada/2026/10/15/what-does-albertas-referendum-on-separation-from-canada-mean/" target="_blank" rel="noopener">Alberta votes today on 10 referendum questions, including separation</a></h3>
+  <p><span class="tag">Confirmed</span>polls close at 8 p.m. local (0200 GMT Tuesday), unofficial results are expected within 48 hours, and ballots are hand-counted (CP24). Results are not in yet. Confirmed: Question 10 asks whether Alberta should remain a province or begin the process toward a binding separation referendum, and the vote is nonbinding (CP24). Confirmed: under the Clarity Act, Parliament has said provinces have no unilateral right to leave (CP24).</p>
+  <p class="claimed"><span class="tag">Claimed by Premier Danielle Smith and PM Mark Carney</span>it is &#34;time to have a vote... and move on&#34;; she says she voted to remain. Claimed by PM Mark Carney: &#34;the best place for Alberta is in Canada.&#34; Polls cited by CP24 put support for staying at about 70% and for independence at roughly a quarter; those are CP24&#39;s figures, and polls are not results.</p>
+  <ul class="sides"><li><strong>Separatists:</strong> Say energy wealth subsidizes other regions and Ottawa stifles the economy.</li><li><strong>Federal government/Carney:</strong> Urges staying and warns against sending a &#34;message&#34; vote.</li><li><strong>First Nations groups:</strong> Object because their treaties predate Alberta&#39;s entry into Confederation.</li></ul>
+  <span class="srcline small"><a href="https://www.cp24.com/news/canada/2026/10/15/what-does-albertas-referendum-on-separation-from-canada-mean/" target="_blank" rel="noopener">Read the original at CP24: What does Alberta&#39;s referendum on separation from Canada mean →</a></span>
+  <details class="sources"><summary>Receipts (2)</summary>
+<ul><li><a href="https://www.cp24.com/news/canada/2026/10/15/what-does-albertas-referendum-on-separation-from-canada-mean/" target="_blank" rel="noopener">CP24: What does Alberta&#39;s referendum on separation from Canada mean</a></li><li><a href="https://www.aljazeera.com/news/2026/10/18/alberta-independence-referendum-will-separatists-survive-a-loss" target="_blank" rel="noopener">Al Jazeera: Alberta referendum, will separatists survive a loss</a></li></ul></details>
+</li>
+    </ul>
+  </section>
+
+  
+  <section class="sec ruled" id="tv" aria-labelledby="tv-h">
+    <div class="sec-head">
+      <p class="kicker">TV and the sky</p>
+      <h2 class="h-sec" id="tv-h">Tonight, and overhead</h2>
+    </div>
+    <div class="boxes">
+      <aside class="box" id="on-the-couch" aria-label="On the Couch">
+  <h4>On the Couch</h4>
+  
+    <p class="empty">Nothing on tonight.</p>
+    <p>Dedication Night is Tuesday, Oct 20 on ABC, streaming live on Disney+, and on Hulu the next day. <a class="src" href="https://whatsondisneyplus.com/dancing-with-the-stars-dedication-night-details-announced-3/" target="_blank" rel="noopener">What&#39;s On Disney+: DWTS Dedication Night details</a></p>
+  
 </aside>
-
-<section id="good-ten" class="beat">
-  <h3 class="beat-head">The Good Ten</h3>
-  <p class="intro">Ten people doing excellent, verified work in their fields this week.</p>
-  <div class="cols cols-2"><div class="col"><ul class="good-ten"><li class="good" id="gt-ramesses-gharbia">
-  <div class="good-head"><span class="good-num">01</span><strong>A villager&#x27;s granite block leads to two colossal Ramesses statues</strong> <span class="src-date">Fri Oct 16</span></div>
-  <p>A villager in Egypt&#x27;s Gharbia Governorate spotted an inscribed granite block on his property and called the Supreme Council of Antiquities. They found a double-crowned head about five feet long and a second statue about eight feet long, thought to depict Ramesses II.</p>
-  <p class="good-src"><a href="https://archaeology.org/news/2026/10/16/fragments-of-colossal-statues-uncovered-in-northern-egypt/" target="_blank" rel="noopener">Archaeology Magazine</a></p>
+      <aside class="box" id="storm-watch" aria-label="Storm Watch">
+  <h4>Storm Watch</h4>
   
-</li><li class="good" id="gt-neanderthal-wood">
-  <div class="good-head"><span class="good-num">02</span><strong>Neanderthal wooden tools survived in a Spanish rock shelter</strong> <span class="src-date">Tue Oct 13</span></div>
-  <p>At Abric Romaní, about 30 miles west of Barcelona, researchers documented 597 wooden artifacts or imprints; 13 were clearly shaped by people, including bark trays, pointed sticks and a knife-shaped object. Minerals hardened into travertine and preserved the wood or its outline (Science Advances).</p>
-  <p class="good-src"><a href="https://www.smithsonianmag.com/smart-news/an-unprecedented-trove-of-ancient-wooden-tools-uncovered-at-a-rock-shelter-in-spain-show-neanderthals-were-skilled-woodworkers-180989668/" target="_blank" rel="noopener">Smithsonian Magazine</a></p>
+  <ul><li><b>Tropical Storm Trudy</b> (Eastern Pacific) &mdash; Tropical storm, weakening · 60 mph peak · 999 mb. About 155 miles WSW of Cabo Corrientes, Mexico (19.7N 108.0W), moving west at 6 mph. No watches or warnings. Life-threatening surf and rip currents on the southwest and west-central Mexico coast through today. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP1+shtml/190831.shtml" target="_blank" rel="noopener">NHC Public Advisory 24, Tropical Storm Trudy</a></li></ul>
   
-</li><li class="good" id="gt-invictibellatrix">
-  <div class="good-head"><span class="good-num">03</span><strong>A fossil forgotten in a museum drawer is a new clawed dinosaur</strong> <span class="src-date">Wed Oct 14</span></div>
-  <p>Invictibellatrix amberina, a roughly 120-million-year-old megaraptoran from the Isle of Wight, was identified from part of a skull the Natural History Museum acquired in 1924. It was about 3 to 4 metres long; lead author Dr Cassius Morrison of UCL published it in Royal Society Open Science.</p>
-  <p class="good-src"><a href="https://www.sciencedaily.com/releases/2026/10/261014015457.htm" target="_blank" rel="noopener">ScienceDaily</a></p>
-  
-</li><li class="good" id="gt-wingwalker">
-  <div class="good-head"><span class="good-num">04</span><strong>A 99-year-old becomes the world&#x27;s oldest wing-walker</strong> <span class="src-date">Sat Oct 17</span></div>
-  <p>Helga Duffy, 99, spent more than five minutes in the air at about 1,000 m over Rendcomb Airfield, Gloucestershire, taking the Guinness title from a 97-year-old. She raised over £1,600 for the regional Air Ambulance.</p>
-  <p class="good-src"><a href="https://www.goodnewsnetwork.org/99-yo-woman-snags-worlds-oldest-wing-walker-title/" target="_blank" rel="noopener">Good News Network</a></p>
-  
-</li></ul></div><div class="col"><ul class="good-ten"><li class="good" id="gt-mysuru-peacock">
-  <div class="good-head"><span class="good-num">05</span><strong>3,473 drones paint a giant peacock over Mysuru</strong> <span class="src-date">Mon Oct 19</span></div>
-  <p>BotLab Dynamics set the Guinness record for the largest drone-formed display of a bird on the night of Oct 18, at Mysuru Dasara. Its drone count there has grown from 250 in 2022 to 1,500 in 2024 to 3,473 this year, with over 40,000 attending across the first two evenings.</p>
-  <p class="good-src"><a href="https://www.tribuneindia.com/news/business/mysuru-dasara-drone-shows-by-botlab-dynamics-sets-guinness-world-record-with-a-spectacular-3473-drone-peacock" target="_blank" rel="noopener">The Tribune (India)</a></p>
-  
-</li><li class="good" id="gt-knitted-cops">
-  <div class="good-head"><span class="good-num">06</span><strong>A village stations knitted traffic cops to slow speeders</strong> <span class="src-date">Sun Oct 18</span></div>
-  <p>The Knit and Natter group in Fillongley, Warwickshire, spent four months making the figures, installed Oct 13: a knitted officer under a 30mph sign with a mock speed gun, plus knitted speed cameras, near a primary school junction.</p>
-  <p class="good-src"><a href="https://www.goodnewsnetwork.org/village-installs-knitted-traffic-cops-to-slow-speeding-drivers/" target="_blank" rel="noopener">Good News Network</a></p>
-  
-</li><li class="good" id="gt-canaletto">
-  <div class="good-head"><span class="good-num">07</span><strong>A previously unseen Canaletto sketch heads to auction</strong> <span class="src-date">Thu Oct 15</span></div>
-  <p>Mallams in Oxford will sell a pencil-and-ink capriccio of a ruined arcade over a canal, estimated at up to $80,000. Canaletto likely made it between 1746 and 1755, during his stay in England; expert Charles Beddington authenticated it.</p>
-  <p class="good-src"><a href="https://www.smithsonianmag.com/smart-news/venetian-artist-canaletto-merged-fantasy-and-architectural-detail-in-this-previously-unseen-sketch-heading-to-auction-this-month-180989692/" target="_blank" rel="noopener">Smithsonian Magazine</a></p>
-  
-</li></ul></div></div>
-</section>
-
-<section id="world" class="beat">
-  <h3 class="beat-head">The World, Straight</h3>
-  <p class="ws-note">Facts first. What's known vs. claimed, named sources, each side's framing in one neutral line, no persuasive adjectives. If there's no verified fact, it doesn't run.</p>
-  <ul class="world-straight"><li class="ws-item" id="w-france">
-  <h3>France: Macron addresses the nation after a night of unrest</h3>
-  <p class="ws-known"><span class="ws-label">Confirmed</span> Confirmed: Macron gave a televised address on Sunday 18 Oct (Al Jazeera). Confirmed: he announced a &quot;crisis unit&quot; for urgent aid to people in difficulty and promised a government lessons-learned review; per the article he did not announce a state of emergency or curfew (Al Jazeera).</p>
-  <p class="ws-claimed"><span class="ws-label">Claimed by France&#x27;s Interior Ministry</span> Claimed by France&#x27;s Interior Ministry (per Al Jazeera): nearly 2,400 people were arrested on Saturday 17 Oct and about 1,000 police and gendarmes were injured. Claimed by Macron: rioters and looters &quot;will pay for their crimes,&quot; and law enforcement faced &quot;unprecedented violence&quot; in several cities.</p>
-  <ul class="ws-sides"><li><strong>Macron/government:</strong> Distinguishes legitimate protesters from those who destroyed and looted.</li><li><strong>Jean-Luc Mélenchon:</strong> Says the government is &quot;solely responsible&quot; for the destruction.</li><li><strong>Jordan Bardella:</strong> Called the speech &quot;lamentable&quot; and &quot;cowardly.&quot;</li></ul>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.aljazeera.com/news/2026/10/18/macron-denounces-frances-nationwide-rioting-looting" target="_blank" rel="noopener">Al Jazeera: Macron denounces France&#x27;s nationwide rioting, looting</a> <span class="src-date"></span></li></ul></details>
-  
-</li><li class="ws-item" id="w-sanctions">
-  <h3>Trump defends Russia sanctions waivers; Zelenskyy objects</h3>
-  <p class="ws-known"><span class="ws-label">Confirmed</span> Confirmed: Trump posted on Truth Social on Sunday defending his decision to block numerous Russia sanctions days before they were due to take effect (Al Jazeera, citing AFP, AP, Reuters). Confirmed: Zelenskyy spoke on NBC&#x27;s Meet the Press on Sunday and said on X that he spoke with US envoys Steve Witkoff and Jared Kushner. Confirmed: Trump announced on 9 Oct plans for Russia to supply over 300,000 metric tonnes of diesel to US and global markets.</p>
-  <p class="ws-claimed"><span class="ws-label">Claimed by Donald Trump</span> Claimed by Trump: he wants Russia at the bargaining table, Ukrainian strikes on Russian diesel refineries are &quot;seriously hurting the world diesel markets,&quot; and Zelenskyy &quot;doesn&#x27;t want to end this war, and probably never did.&quot; Claimed by Zelenskyy: waiving sanctions &quot;will hurt Ukraine&quot; and strengthen Putin&#x27;s war effort; he rejected a comparison of himself with Putin.</p>
-  <ul class="ws-sides"><li><strong>US (Trump):</strong> Sanctions relief supports negotiation and fuel-price relief.</li><li><strong>Ukraine (Zelenskyy):</strong> Relief rewards Moscow and prolongs the war.</li><li><strong>Kyiv, European partners and many US officials:</strong> Per the article, they view the energy policy as rewarding Moscow.</li></ul>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.aljazeera.com/news/2026/10/19/trump-defends-russian-sanctions-relief-lashes-out-at-zelenskyy" target="_blank" rel="noopener">Al Jazeera: Trump defends Russian sanctions relief, lashes out at Zelenskyy</a> <span class="src-date"></span></li></ul></details>
-  
-</li><li class="ws-item" id="w-yemen">
-  <h3>GCC condemns Houthi attacks on Saudi Arabia as Yemen fighting grows</h3>
-  <p class="ws-known"><span class="ws-label">Confirmed</span> Confirmed: GCC foreign ministers met in Manama, Bahrain, and issued a statement condemning Houthi attacks on Saudi Arabia, saying an attack on any member affects all six (Al Jazeera). Confirmed: the Saudi-led coalition said it shot down two drones near Riyadh and in the Eastern Province early Sunday (coalition statement, per Al Jazeera). Confirmed: US embassies in the Middle East issued a security alert for Americans (Al Jazeera live blog). Confirmed: IOM says more than 233,000 people are displaced (about 121,000 in Taiz), and WHO warned Taiz&#x27;s 12 hospitals had fuel for four days (as reported by Al Jazeera).</p>
-  <p class="ws-claimed"><span class="ws-label">Claimed by Yemeni government and GCC ministers</span> Claimed by the Yemeni government: Houthis attacked the presidential palace in Aden (cited in a letter to the UN), and government forces killed 12 Houthi fighters in southern Taiz and gained ground there (Al Jazeera notes the figures are unconfirmed). Claimed by GCC ministers: Houthis carried out deadly strikes on civilian airports and vital facilities, and they called for a terrorist designation.</p>
-  <ul class="ws-sides"><li><strong>GCC, Saudi Arabia and the Yemeni government:</strong> Say the Houthis are the aggressor and a UN arms embargo should be enforced.</li><li><strong>Houthis:</strong> No statement in the articles reviewed.</li></ul>
-  <details class="sources"><summary>Receipts (2)</summary><ul><li><a href="https://www.aljazeera.com/news/2026/10/18/gcc-condemns-houthi-attacks-on-saudi-arabia-as-yemen-fighting-intensifies" target="_blank" rel="noopener">Al Jazeera: GCC condemns Houthi attacks on Saudi Arabia</a> <span class="src-date"></span></li><li><a href="https://www.aljazeera.com/news/liveblog/2026/10/18/iran-war-live-tehran-says-netanyahu-seeks-more-war-yemen-fighting-flares" target="_blank" rel="noopener">Al Jazeera live blog, Oct 18</a> <span class="src-date"></span></li></ul></details>
-  
-</li><li class="ws-item" id="w-ebola">
-  <h3>Kenya confirms an eighth Ebola case; DRC reports an eighth province</h3>
-  <p class="ws-known"><span class="ws-label">Confirmed</span> Confirmed: Kenya&#x27;s Director-General for Health, Patrick Amoth, told Citizen TV that 38 people were tested Sunday and one was positive, a 49-year-old patient attendant who is not a health worker (Al Jazeera). Confirmed: on Saturday Kenya&#x27;s ministry reported four new cases, bringing the total to seven (ministry post on X, per Al Jazeera). Confirmed: Kenya&#x27;s first case travelled from the DRC and died in Nairobi on 5 Oct. Confirmed: the strain is Bundibugyo, which has no vaccine or specific treatment (Al Jazeera).</p>
-  <p class="ws-claimed"><span class="ws-label">Claimed by Al Jazeera reporting (figures not attributed in the article)</span> Al Jazeera reports, without attributing the figures, that the virus has reached an eighth province, North Ubangi, and the DRC has at least 9,400 cases and over 4,500 deaths since May. North Kivu announced a one-week ban on entry from Ituri (state agency ACP, per Al Jazeera).</p>
-  
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.aljazeera.com/news/2026/10/19/kenya-confirms-eighth-ebola-case-amid-widening-regional-outbreak" target="_blank" rel="noopener">Al Jazeera: Kenya confirms eighth Ebola case</a> <span class="src-date"></span></li></ul></details>
-  
-</li><li class="ws-item" id="w-alberta">
-  <h3>Alberta votes today on 10 referendum questions, including separation</h3>
-  <p class="ws-known"><span class="ws-label">Confirmed</span> Confirmed: polls close at 8 p.m. local (0200 GMT Tuesday), unofficial results are expected within 48 hours, and ballots are hand-counted (CP24). Results are not in yet. Confirmed: Question 10 asks whether Alberta should remain a province or begin the process toward a binding separation referendum, and the vote is nonbinding (CP24). Confirmed: under the Clarity Act, Parliament has said provinces have no unilateral right to leave (CP24).</p>
-  <p class="ws-claimed"><span class="ws-label">Claimed by Premier Danielle Smith and PM Mark Carney</span> Claimed by Premier Danielle Smith: it is &quot;time to have a vote... and move on&quot;; she says she voted to remain. Claimed by PM Mark Carney: &quot;the best place for Alberta is in Canada.&quot; Polls cited by CP24 put support for staying at about 70% and for independence at roughly a quarter; those are CP24&#x27;s figures, and polls are not results.</p>
-  <ul class="ws-sides"><li><strong>Separatists:</strong> Say energy wealth subsidizes other regions and Ottawa stifles the economy.</li><li><strong>Federal government/Carney:</strong> Urges staying and warns against sending a &quot;message&quot; vote.</li><li><strong>First Nations groups:</strong> Object because their treaties predate Alberta&#x27;s entry into Confederation.</li></ul>
-  <details class="sources"><summary>Receipts (2)</summary><ul><li><a href="https://www.cp24.com/news/canada/2026/10/15/what-does-albertas-referendum-on-separation-from-canada-mean/" target="_blank" rel="noopener">CP24: What does Alberta&#x27;s referendum on separation from Canada mean</a> <span class="src-date"></span></li><li><a href="https://www.aljazeera.com/news/2026/10/18/alberta-independence-referendum-will-separatists-survive-a-loss" target="_blank" rel="noopener">Al Jazeera: Alberta referendum, will separatists survive a loss</a> <span class="src-date"></span></li></ul></details>
-  
-</li></ul>
-</section>
-
-
-
-
-<aside class="tv-box" id="on-the-couch" aria-label="On the Couch">
-  <div class="crop-head"><svg class="couch-glyph" viewBox="0 0 60 60" role="img" aria-label="television glyph">
-<rect x="8" y="14" width="44" height="28" rx="2" fill="none" stroke="var(--ink)" stroke-width="2.5"/>
-<path d="M22 46l-6 8M38 46l6 8" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="30" cy="28" r="7" fill="none" stroke="var(--ink)" stroke-width="2"/>
-</svg><h4>On the Couch</h4></div>
-  <p class="tv-empty">Nothing on tonight.</p>
-  <p class="tv-news">Dedication Night is Tuesday, Oct 20 on ABC, streaming live on Disney+, and on Hulu the next day. <a class="tv-src" href="https://whatsondisneyplus.com/dancing-with-the-stars-dedication-night-details-announced-3/" target="_blank" rel="noopener">What&#x27;s On Disney+: DWTS Dedication Night details</a></p>
+  <p><b>Winter outlook:</b> CPC&#39;s Oct 8 discussion: an El Niño Advisory is in effect; a strong-to-very-strong El Niño is likely through Jan-Mar 2027 (over 83%), with about a 70% chance of a historic event (3-month RONI of +2.5C or more) for Nov-Jan, and it should keep strengthening through year-end.</p>
+  <p class="src"><a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP1+shtml/190831.shtml" target="_blank" rel="noopener">NHC Public Advisory 24, Tropical Storm Trudy</a> &middot; <a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO Diagnostic Discussion</a></p>
 </aside>
-
-
-<aside class="storm-box" id="storm-watch" aria-label="Storm Watch">
-  <div class="crop-head"><svg class="storm-glyph" viewBox="0 0 60 60" role="img" aria-label="storm watch glyph">
-<path d="M30 8a18 18 0 1 0 0.01 0" fill="none" stroke="var(--ink)" stroke-width="2.5"/>
-<path d="M30 8c8 4 12 10 12 16s-6 10-12 10" fill="none" stroke="var(--ink)" stroke-width="2"/>
-<circle cx="30" cy="30" r="3.5" fill="var(--ink)"/>
-</svg><h4>Storm Watch</h4></div>
-  <ul class="storm-active"><li><b>Tropical Storm Trudy</b> (Eastern Pacific) &mdash; Tropical storm, weakening &middot; 60 mph peak &middot; 999 mb. About 155 miles WSW of Cabo Corrientes, Mexico (19.7N 108.0W), moving west at 6 mph. No watches or warnings. Life-threatening surf and rip currents on the southwest and west-central Mexico coast through today.. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP1+shtml/190831.shtml" target="_blank" rel="noopener">NHC Public Advisory 24, Tropical Storm Trudy</a></li></ul>
-  <p class="storm-outlook"><b>Winter outlook:</b> CPC&#x27;s Oct 8 discussion: an El Niño Advisory is in effect; a strong-to-very-strong El Niño is likely through Jan-Mar 2027 (over 83%), with about a 70% chance of a historic event (3-month RONI of +2.5C or more) for Nov-Jan, and it should keep strengthening through year-end.</p>
-  <p class="storm-sources"><a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP1+shtml/190831.shtml" target="_blank" rel="noopener">NHC Public Advisory 24, Tropical Storm Trudy</a> &middot; <a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO Diagnostic Discussion</a></p>
+      <aside class="box" id="sky" aria-label="Sky">
+  <h4>Sky</h4>
+  <p><b>Moon:</b> Waxing gibbous (59% illuminated)</p>
+  <p><b>Tonight's sky:</b> The bright moon is up much of the night (full Oct 26). The Orionid meteor shower peaks about 18 UTC on Oct 21 (EarthSky, citing RASC), at 10 to 20 meteors an hour at best; the best viewing is before dawn after moonset, and moon glare will hurt. <span class="src"><a href="https://www.moongiant.com/phase/10/19/2026/" target="_blank" rel="noopener">Moon Giant, Oct 19 2026</a> &middot; <a href="https://earthsky.org/astronomy-essentials/everything-you-need-to-know-orionid-meteor-shower" target="_blank" rel="noopener">EarthSky: Orionid meteor shower</a></span></p>
+  
+  <h5>Human Design transits</h5>
+  <ul><li><b>Patrick:</b> Today&#39;s transits (Oct 19, noon UT): Saturn sits in gate 21 (The Hunter, Heart centre), one of his own gates, completing his channel 21-45; Uranus sits in gate 20 (The Now, Throat), also his own, completing channel 20-34. Neptune in gate 25 (The Spirit of the Self) and Pluto in gate 41 (Contraction) would complete his 25-51 and 30-41 channels. The North Node sits in his own gate 30 (Recognition of Feelings).</li><li><b>Travis:</b> Today&#39;s transits (Oct 19, noon UT): Neptune sits in gate 25 (The Spirit of the Self, G centre), one of his own gates, and completes no channel.</li></ul>
+  
 </aside>
-
-
-<aside class="sky-box" id="sky" aria-label="Sky">
-  <div class="crop-head"><svg class="sky-glyph" viewBox="0 0 60 60" role="img" aria-label="sky glyph">
-<path d="M38 12a16 16 0 1 0 10 27 13 13 0 0 1-10-27z" fill="none" stroke="var(--ink)" stroke-width="2.2" stroke-linejoin="round"/>
-<circle cx="14" cy="16" r="1.6" fill="var(--ink)"/>
-<circle cx="20" cy="9" r="1.2" fill="var(--ink)"/>
-<circle cx="10" cy="26" r="1.2" fill="var(--ink)"/>
-</svg><h4>Sky</h4></div>
-  <p class="sky-moon"><b>Moon:</b> Waxing gibbous (59% illuminated)</p>
-  <p class="sky-tonight"><b>Tonight's sky:</b> The bright moon is up much of the night (full Oct 26). The Orionid meteor shower peaks about 18 UTC on Oct 21 (EarthSky, citing RASC), at 10 to 20 meteors an hour at best; the best viewing is before dawn after moonset, and moon glare will hurt. <span class="sky-src"><a href="https://www.moongiant.com/phase/10/19/2026/" target="_blank" rel="noopener">Moon Giant, Oct 19 2026</a> &middot; <a href="https://earthsky.org/astronomy-essentials/everything-you-need-to-know-orionid-meteor-shower" target="_blank" rel="noopener">EarthSky: Orionid meteor shower</a></span></p>
-  <div class="sky-hd"><h5>Human Design transits</h5><ul><li><b>Patrick:</b> Today&#x27;s transits (Oct 19, noon UT): Saturn sits in gate 21 (The Hunter, Heart centre), one of his own gates, completing his channel 21-45; Uranus sits in gate 20 (The Now, Throat), also his own, completing channel 20-34. Neptune in gate 25 (The Spirit of the Self) and Pluto in gate 41 (Contraction) would complete his 25-51 and 30-41 channels. The North Node sits in his own gate 30 (Recognition of Feelings).</li><li><b>Travis:</b> Today&#x27;s transits (Oct 19, noon UT): Neptune sits in gate 25 (The Spirit of the Self, G centre), one of his own gates, and completes no channel.</li></ul></div>
-</aside>
+    </div>
+  </section>
+  
 
 
 
-<footer>Made by Patrick &amp; Travis. Daily edition, closed 2026-10-19. Every story links to its source; every number was checked by a second model that did not write it.</footer>
 
+
+</main>
 </div>
-<footer class="site-foot">The Gayzette &middot; Patrick &amp; Travis<br><a href="/editions/">Past editions</a></footer>
-</body></html>
+
+<footer class="foot">
+  <div class="top">
+    <div>
+      <p class="brand">The Gayzette</p>
+      <p class="tag">No ads. No pop-ups. No tracking. Just the paper.</p>
+    </div>
+    <nav aria-label="Footer sections">
+      <a href="#front">Front Page</a><a href="#ai">AI</a><a href="#spirit">Spirit</a><a href="#feel-good">Feel-Good</a><a href="#world">World</a><a href="#tv">TV</a><a href="/editions/2026-10-18.html">Sunday</a>
+      <a href="/editions/">Past editions</a>
+    </nav>
+  </div>
+  <p class="fine">The Gayzette &middot; Patrick &amp; Travis<br><a href="/editions/">Past editions</a> &middot; Made in Los Angeles &middot; Summaries link to their sources</p>
+</footer>
+</body>
+</html>

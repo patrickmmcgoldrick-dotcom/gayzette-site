@@ -1,407 +1,756 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="The Gayzette: a newspaper if news was actually real."><title>The Gayzette: Sunday 2026-09-13</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="The Gayzette, sunday edition, 2026-09-13. A personal daily by Patrick and Travis.">
+<title>The Gayzette: Ten thousand AI agents proved a million-dollar math problem</title>
+<link rel="alternate" type="application/rss+xml" title="The Gayzette" href="/feed.xml">
+<style>/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/fonts/DMSans-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/fonts/DMSans-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-italic-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-italic-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-italic-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-italic-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-italic-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-italic-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-normal-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ===== The Gayzette site.css — v2, from the Claude Design Labs look (Magazine Editorial) ===== */
 :root{
-  --paper:#F3EFE6; --paper-2:#EAE3D3; --paper-3:#E0D7C2; --ink:#221F19; --ink-2:#5A5346; --ink-3:#8B8272;
-  --rule:#CBBFA4; --rule-2:#A99A79; --stamp:#A6304A; --stamp-2:#3A6B5C; --stamp-soft:rgba(166,48,74,.10);
-  --focus:#2F5D8A;
-  --serif:"Newsreader",Georgia,"Times New Roman",serif;
-  --display:"Old Standard TT","Fraunces","Iowan Old Style",Georgia,serif;
-  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --paper:#FBF8F1; --paper-2:#F3EEE2; --paper-3:#EDE6D6; --ink:#222222; --ink-2:#6B645A; --ink-3:#6B645A;
+  --hair:#E4DCCB; --rule:#E4DCCB; --rule-2:#CDBF9F; --accent:#C2603C; --accent-2:#A24E2F;
+  --serif:Newsreader,Georgia,serif; --display:Fraunces,Georgia,serif; --label:'DM Sans',system-ui,sans-serif;
   color-scheme:light;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased;font-optical-sizing:auto}
-a{color:inherit;text-decoration-color:var(--rule-2);text-underline-offset:3px}
-a:hover{text-decoration-color:var(--stamp)}
-:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
+body{font-family:var(--serif);font-size:19px;line-height:1.65;overflow-wrap:break-word}
+main,.shell{min-width:0}
+a{color:var(--accent)} a:hover{color:var(--accent-2)}
 img,svg{max-width:100%}
-.wrap{max-width:64rem;margin:0 auto;padding:1.25rem 1rem 5rem}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:16px;z-index:50;background:var(--ink);color:var(--paper);padding:12px 16px;font:500 13px var(--label);letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.skip:focus{left:16px;color:var(--paper)}
+.shell{max-width:1200px;margin:0 auto;padding:0 24px}
 
-/* ---- Masthead ---- */
-header.mast{border-bottom:4px double var(--ink-2);padding-bottom:.7rem;margin-bottom:.4rem}
-.mast-top{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;border-bottom:1px solid var(--rule-2);padding-bottom:.5rem;margin-bottom:.5rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
-.mast-top .dateline{white-space:nowrap}
-.mast-top .weather-box{border:1px solid var(--ink-2);padding:.3rem .6rem;font-size:.66rem;letter-spacing:.05em}
-.mast-name{display:flex;align-items:baseline;justify-content:center;gap:.6rem;flex-wrap:wrap;text-align:center;padding:.3rem 0 .15rem}
-.mast-name h1{font-family:var(--display);font-weight:700;font-size:clamp(2.6rem,10vw,5rem);line-height:.92;margin:0;letter-spacing:-.01em}
-.mast-sub{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);text-align:center;margin:.1rem 0 0}
-.mast-row2{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2);padding-top:.55rem;border-top:1px solid var(--rule-2)}
-.mast-row2 b{color:var(--stamp);font-weight:600}
+/* labels / kickers */
+.label,.kicker,.byline,.when,.nav a,.chip{font-family:var(--label);font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.kicker{color:var(--accent);margin:0 0 14px}
+.label{color:var(--ink-2);margin:0 0 8px}
+.byline{color:var(--ink-2);margin:22px 0 0}
 
-/* ---- Today's Receipts index box ---- */
-.index-box{border:1.5px solid var(--ink);margin:1rem 0 1.5rem;padding:.85rem 1rem;background:var(--paper-2)}
-.index-box h2{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin:0 0 .55rem;text-align:center;border-bottom:1px solid var(--rule-2);padding-bottom:.5rem}
-.index-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.25rem 1.2rem;font-family:var(--mono);font-size:.76rem}
-.index-list a{display:flex;justify-content:space-between;gap:.5rem;padding:.18rem 0;text-decoration:none;border-bottom:1px dotted var(--rule)}
-.index-list a:hover{color:var(--stamp)}
+/* masthead */
+.strip{display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--hair);font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.masthead{padding:64px 0 48px;text-align:center}
+.masthead a{text-decoration:none;color:var(--ink)}
+.masthead h1{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 80;font-optical-sizing:auto;font-size:clamp(52px,9vw,120px);line-height:.95;letter-spacing:-.02em;margin:0}
+.masthead p{font-family:var(--display);font-style:italic;font-weight:400;font-size:19px;color:var(--ink-2);margin:20px 0 0}
+.nav{display:flex;gap:32px;overflow-x:auto;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);scrollbar-width:none;white-space:nowrap}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;min-height:48px;padding:0 2px;text-decoration:none;color:var(--ink);border-bottom:2px solid transparent;margin-bottom:-1px}
+.nav a:hover,.nav a.on{color:var(--accent);border-bottom-color:var(--accent)}
 
-/* ---- Editor's note ---- */
-.ednote{margin:1.3rem 0 1.2rem;padding:0 0 1.3rem;border-bottom:1px solid var(--rule)}
-.ednote .byline{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--stamp);margin:0 0 .55rem}
-.ednote p{margin:0 0 .85rem;font-size:1.01em}
-.ednote .byline + p::first-letter{font-family:var(--display);font-size:2.9em;float:left;line-height:.8;padding:.06em .08em 0 0;font-weight:700}
+/* sections */
+main{display:block}
+.sec{padding:96px 0 0}
+.sec.ruled{margin-top:96px;padding-top:72px;border-top:1px solid var(--hair)}
+.sec-head h2,.h-sec{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:clamp(34px,4.5vw,52px);line-height:1.05;letter-spacing:-.015em;margin:0;text-wrap:pretty}
+.sec-head .sub,.deck{font-family:var(--display);font-style:italic;font-weight:400;color:var(--ink-2);text-wrap:pretty}
+.sec-head .sub{font-size:21px;line-height:1.4;margin:16px 0 0;max-width:620px}
+.deck{font-size:22px;line-height:1.35;margin:16px 0 0}
+.rule-short{width:48px;height:2px;background:var(--accent);margin:24px 0 0}
 
-/* ---- Section / column layout ---- */
-.beat-head{font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin:2.4rem 0 0;padding:.45rem 0;border-top:1px solid var(--rule-2);border-bottom:1px solid var(--rule);display:flex;align-items:center;gap:.55rem}
-.beat-head::before{content:"";width:.5rem;height:.5rem;background:var(--stamp);display:inline-block;transform:rotate(45deg)}
-.cols{display:grid;grid-template-columns:1fr;gap:0 2.1rem}
-@media(min-width:640px){.cols.cols-2{grid-template-columns:1fr 1fr}}
-@media(min-width:900px){.cols.cols-3{grid-template-columns:1fr 1fr 1fr}}
-.cols .col{min-width:0}
-.cols.cols-2 .col:first-child,.cols.cols-3 .col:not(:last-child){border-right:0}
-@media(min-width:640px){.cols.cols-2 .col:first-child{border-right:1px solid var(--rule);padding-right:1.4rem}}
-@media(min-width:900px){.cols.cols-3 .col:not(:last-child){border-right:1px solid var(--rule);padding-right:1.4rem}}
-.story{padding:1.5rem 0 1.2rem;border-bottom:1px solid var(--rule)}
-.cols .story:last-child{border-bottom:0}
-.story.lead{padding:0 0 1.6rem;border-bottom:2px solid var(--ink-2);margin-bottom:1.2rem}
-.leads-row{display:grid;grid-template-columns:1fr;gap:0 2.2rem}
-@media(min-width:760px){.leads-row{grid-template-columns:1fr 1fr}.leads-row .story.lead:first-child{border-right:1px solid var(--rule-2);padding-right:2.2rem}}
-.story.lead h2{font-size:clamp(1.7rem,5.6vw,2.3rem)}
-.story h2{font-family:var(--display);font-weight:700;font-size:clamp(1.35rem,4.4vw,1.65rem);line-height:1.12;margin:.4rem 0 .5rem;letter-spacing:-.008em;text-wrap:balance}
-.story h3{font-family:var(--display);font-weight:700;font-size:1.18rem;line-height:1.18;margin:.3rem 0 .4rem;text-wrap:balance}
-.dek{font-style:italic;color:var(--ink-2);margin:0 0 1rem;font-size:1.03em;line-height:1.4}
-.story p{margin:0 0 .9rem}
-.eyebrow{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem .8rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
-.wonder{color:var(--stamp);letter-spacing:.1em;font-size:.68rem}
-.conf{border:1px solid var(--rule-2);padding:.05rem .4rem;border-radius:2px;color:var(--ink-3)}
-.desk{background:var(--paper-2);border-left:3px solid var(--stamp);padding:.7rem .9rem;margin:1.1rem 0 .85rem;font-size:.93em;line-height:1.5}
-.desk-label{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--stamp);margin-right:.4rem}
-.cal-pill{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.02em;border:1px solid var(--rule-2);padding:.1rem .5rem;border-radius:999px;margin-left:.3rem;white-space:nowrap;vertical-align:middle}
-.sources{font-family:var(--mono);font-size:.74rem;color:var(--ink-2);margin:.55rem 0}
-.sources summary{cursor:pointer;letter-spacing:.03em}
-.sources ul{margin:.4rem 0 0;padding-left:1.1rem;line-height:1.5}
-.src-date{color:var(--ink-3)}
-.react{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:.65rem}
-.react button{font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;background:transparent;color:var(--ink-2);border:1px solid var(--rule-2);border-radius:999px;padding:.35rem .8rem;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
-.react button:hover{border-color:var(--ink-2);color:var(--ink)}
-.react button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.react button[disabled]{opacity:.55;cursor:default}
-.react-note,.prop-state{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
+/* headlines */
+.h-hero{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-optical-sizing:auto;font-size:clamp(34px,5vw,64px);line-height:1.04;letter-spacing:-.015em;margin:0;text-wrap:pretty}
+.h-feature{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:clamp(28px,3.2vw,36px);line-height:1.1;letter-spacing:-.012em;margin:0;text-wrap:pretty}
+.h-card{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:26px;line-height:1.15;letter-spacing:-.01em;margin:0;text-wrap:pretty}
+.h-small{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:22px;line-height:1.2;letter-spacing:-.01em;margin:0;text-wrap:pretty}
+.hl a{color:inherit;text-decoration:none}
+.hl a:hover{color:var(--accent)}
 
-/* ---- Illustrations (comic-style inline SVG) ---- */
-.illo{width:100%;margin:0 0 .8rem;border:2px solid var(--ink);background:var(--paper-2);line-height:0}
-.illo svg{display:block;width:100%;height:auto}
-.illo-fallback{display:block}
+/* body copy */
+.body p{margin:14px 0 0;max-width:640px}
+.body.wide p{max-width:680px}
+.srcline{display:block;margin-top:14px;font-style:italic;font-size:16px}
+.srcline a{color:var(--accent);text-decoration:none}
+.srcline a:hover{text-decoration:underline}
+.srcline.small{font-size:15px;margin-top:8px}
+.meta{font-family:var(--label);font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.chip{display:inline-block;border:1px solid var(--hair);padding:2px 8px;color:var(--ink-2);font-size:11px;margin-left:8px}
+.sources{margin:14px 0 0;font:15px/1.5 var(--serif);color:var(--ink-2)}
+.sources summary{cursor:pointer;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase}
+.sources ul{margin:8px 0 0;padding-left:1.1rem}
+.sources .d{color:var(--ink-2)}
+.more-read{margin:10px 0 0}
+.more-read summary{cursor:pointer;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.more-read .body p{max-width:none}
+.desk{margin:22px 0 0;padding:20px 24px;background:var(--paper-2);max-width:640px;font-size:17px;line-height:1.5}
+.desk .label{margin:0 0 6px}
+.cal-pill{display:inline-block;margin-top:8px;font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--rule-2);padding:2px 10px;color:var(--ink-2)}
 
-/* ---- Crop Circle Watch sidebar ---- */
-.crop-box{border:1.5px dashed var(--rule-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
-.crop-box .crop-head{display:flex;align-items:center;gap:.55rem;margin:0 0 .6rem}
-.crop-box .crop-glyph{width:2.2rem;height:2.2rem;flex:none}
-.crop-box h4{margin:0;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
-.crop-box .crop-latest{margin:0 0 .5rem;line-height:1.45}
-.crop-box .crop-latest b{font-family:var(--display)}
-.crop-box ul.crop-facts{margin:.3rem 0 .6rem;padding-left:1.1rem}
-.crop-box ul.crop-facts li{margin:.25rem 0;font-size:.95em}
-.crop-box .crop-history{margin:.5rem 0 0;font-style:italic;color:var(--ink-2);font-size:.93em}
-.crop-box .crop-sources{margin:.5rem 0 0;font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
-.crop-box .crop-sources a{color:inherit}
-.house-box{border:1.5px dashed var(--stamp-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
-.house-box .house-glyph{width:2.2rem;height:2.2rem;flex:none}
-.house-box .house-note{margin:0 0 .7rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.03em;color:var(--ink-3);text-transform:uppercase}
-.house-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
-@media(max-width:640px){.house-grid{grid-template-columns:1fr}}
-.house-sub h5{margin:0 0 .4rem;font-family:var(--display);font-size:.95rem}
-.house-sub ul{margin:0;padding-left:1.1rem}
-.house-sub li{margin:.3rem 0;font-size:.95em;line-height:1.4}
-.house-tie{display:block;font-style:italic;color:var(--ink-2);font-size:.88em;margin-top:.1rem}
-.house-empty{margin:0;color:var(--ink-3);font-style:italic}
-.tv-box{border:1.5px dashed var(--rule-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
-.tv-box .couch-glyph{width:2.2rem;height:2.2rem;flex:none}
-.tv-box ul.tv-tonight{margin:.3rem 0 .6rem;padding-left:1.1rem}
-.tv-box ul.tv-tonight li{margin:.3rem 0;font-size:.95em;line-height:1.4}
-.tv-box .tv-empty{margin:0;color:var(--ink-3);font-style:italic}
-.tv-box .tv-news{margin:.5rem 0 0;font-size:.92em}
-.tv-box .tv-alert{margin:.5rem 0 0;font-weight:600}
-.tv-box .tv-src{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
-.tv-week{display:flex;flex-direction:column;gap:.5rem;margin:.4rem 0}
-.tv-week-row{display:grid;grid-template-columns:3.4rem 1fr;gap:.6rem;align-items:baseline}
-.tv-week-day{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3)}
-.tv-week-item{font-size:.93em;line-height:1.4;margin:.15rem 0}
-.tv-try{margin-top:.6rem}
-.tv-try h5{margin:0 0 .3rem;font-family:var(--display);font-size:.95rem}
-.tv-try ul{margin:0;padding-left:1.1rem}
-.tv-try li{margin:.25rem 0;font-size:.92em}
-.specials-box{border:1.5px dashed var(--stamp-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
-.specials-box .specials-glyph{width:2.2rem;height:2.2rem;flex:none}
-.specials-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
-@media(max-width:640px){.specials-grid{grid-template-columns:1fr}}
-.special-col h5{margin:0 0 .4rem;font-family:var(--display);font-size:.95rem}
-.special-col ul{margin:0;padding-left:1.1rem}
-.special-col li{margin:.3rem 0;font-size:.95em;line-height:1.4}
-.special-empty{margin:0;color:var(--ink-3);font-style:italic}
-.special-src{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
-.storm-box{border:1.5px dashed var(--rule-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
-.storm-box .storm-glyph{width:2.2rem;height:2.2rem;flex:none}
-.storm-box ul.storm-active{margin:.3rem 0 .6rem;padding-left:1.1rem}
-.storm-box ul.storm-active li{margin:.35rem 0;font-size:.95em;line-height:1.45}
-.storm-box .storm-empty{margin:0;color:var(--ink-3);font-style:italic}
-.storm-box .storm-outlook{margin:.5rem 0 0;font-size:.92em;line-height:1.45}
-.storm-box .storm-sources{margin:.5rem 0 0;font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
-.storm-box .storm-sources a{color:inherit}
-.sky-box{border:1.5px dashed var(--stamp-2);background:var(--paper-2);padding:.9rem 1rem 1rem;margin:1.4rem 0 1.8rem;font-size:.92em}
-.sky-box .sky-glyph{width:2.2rem;height:2.2rem;flex:none}
-.sky-box .sky-moon{margin:0 0 .4rem}
-.sky-box .sky-tonight{margin:.2rem 0 .4rem;line-height:1.45}
-.sky-box .sky-src{font-family:var(--mono);font-size:.7rem;color:var(--ink-3)}
-.sky-hd{margin-top:.5rem}
-.sky-hd h5{margin:0 0 .3rem;font-family:var(--display);font-size:.9rem}
-.sky-hd ul{margin:0;padding-left:1.1rem}
-.sky-hd li{margin:.3rem 0;font-size:.92em;line-height:1.4}
+/* art */
+.art{display:block;width:100%;background:var(--paper-3);line-height:0;margin:0}
+.art svg{display:block;width:100%;height:auto}
+.art.r32{aspect-ratio:auto}
 
+/* hero */
+.hero{padding:56px 0 0}
+.hero .art{margin-bottom:36px}
+.hero .txt{max-width:760px}
+.hero.sunday .h-hero{font-size:clamp(38px,6vw,80px);line-height:1}
+.hero-body{margin-top:12px}
 
-/* ---- Briefly / receipt box ---- */
-.receipt{margin:2.6rem 0 0;padding:1.1rem 1rem 1.3rem;border:1px dashed var(--rule-2);background:var(--paper-2);font-family:var(--mono);font-size:.79rem;line-height:1.5;color:var(--ink)}
-.receipt h3{margin:0 0 .85rem;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;text-align:center;font-weight:600}
-.receipt ul{list-style:none;margin:0;padding:0}
-.receipt li{display:grid;grid-template-columns:5rem 1fr;gap:.1rem .6rem;padding:.5rem 0;border-top:1px dotted var(--rule-2)}
-.receipt li:first-child{border-top:0}
-.b-date{color:var(--ink-2);font-variant-numeric:tabular-nums}
-.b-beat{grid-column:2;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
-.b-line{grid-column:2;font-family:var(--serif);font-size:.96rem;line-height:1.45}
-.receipt .total{margin:1rem 0 0;padding-top:.65rem;border-top:1px dotted var(--rule-2);display:flex;justify-content:space-between;letter-spacing:.06em;text-transform:uppercase}
+/* editor's note */
+.ednote{max-width:620px;margin:0 auto;padding-top:96px}
+.ednote p.t{margin:16px 0 0}
+.ednote .byline{margin:0 0 18px}
 
-/* ---- Calendar ---- */
-.calendar ul{list-style:none;margin:1rem 0 0;padding:0}
-.calendar li{display:grid;grid-template-columns:5rem 1fr;gap:0 .8rem;padding:.5rem 0;border-bottom:1px solid var(--rule);align-items:baseline}
-.c-date{font-family:var(--mono);font-size:.76rem;color:var(--stamp);font-variant-numeric:tabular-nums}
-.c-label{font-size:1em}
-.c-beat{grid-column:2;font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+/* flex layouts */
+.row{display:flex;flex-wrap:wrap;gap:48px 32px;align-items:flex-start}
+.row>.main{flex:2 1 480px;min-width:0}
+.row>.side{flex:1 1 260px;min-width:0}
+.row>.half{flex:1 1 380px;min-width:0}
+.side-list>*{padding:20px 0;border-top:1px solid var(--hair)}
+.side-list>.label{padding:0;border:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:64px 40px}
+.grid.g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{min-width:0;border-top:1px solid var(--hair);padding-top:28px}
+.card .art{margin-bottom:22px}
 
-/* ---- Beats page ---- */
-.beats ul{list-style:none;margin:0;padding:0}
-.beats li{padding:1.05rem 0;border-bottom:1px solid var(--rule)}
-.beats li p{margin:.32rem 0 .55rem;font-size:.96em;color:var(--ink-2)}
-.prop-head{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap}
-.beats strong{font-family:var(--display);font-weight:700;font-size:1.12em;letter-spacing:-.005em}
-.stand{display:grid;grid-template-columns:1fr auto;gap:.6rem 1rem;align-items:start}
-.stand .react{margin-top:.2rem}
-.stand strong{margin-right:.5rem}
-@media(max-width:560px){.stand{grid-template-columns:1fr}}
+/* good ten */
+.good{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:0 56px}
+.good li{display:flex;gap:24px;padding:24px 0;border-top:1px solid var(--hair);min-width:0}
+.good .n{font:500 13px var(--label);letter-spacing:.08em;color:var(--accent);padding-top:7px;min-width:28px}
+.good .h{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:20px;line-height:1.25;margin:0}
+.good p{margin:6px 0 0;font-size:18px;line-height:1.6}
+.good .meta{display:block;margin-top:2px}
 
-/* ---- Good Ten ---- */
-.good-ten{list-style:none;margin:1rem 0 0;padding:0}
-.good{padding:1rem 0;border-bottom:1px dotted var(--rule-2)}
-.good:last-child{border-bottom:0}
-.good-head{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
-.good-num{font-family:var(--mono);color:var(--stamp);font-weight:600;font-size:.85rem}
-.good strong{font-family:var(--display);font-weight:700}
-.good p{margin:.35rem 0}
-.good-src{font-family:var(--mono);font-size:.72rem;color:var(--ink-2)}
+/* world */
+.ws-note{font-family:var(--display);font-style:italic;font-size:19px;line-height:1.45;color:var(--ink-2);margin:18px 0 0;max-width:680px}
+.ws{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:0 56px}
+.ws>li{padding:28px 0;border-top:1px solid var(--hair);min-width:0}
+.ws p{margin:12px 0 0;font-size:18px;line-height:1.6}
+.ws .tag{font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+.ws .claimed{color:var(--ink-2)}
+.ws ul.sides{list-style:none;margin:14px 0 0;padding:12px 0 0 16px;border-left:2px solid var(--hair)}
+.ws ul.sides li{margin:6px 0;font-size:17px;line-height:1.5}
 
-/* ---- The World, Straight ---- */
-.world-straight{list-style:none;margin:1rem 0 0;padding:0}
-.ws-item{padding:1.1rem 0;border-bottom:1px solid var(--rule)}
-.ws-item h3{font-family:var(--display);font-weight:700;font-size:1.2rem;margin:0 0 .5rem}
-.ws-label{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--stamp);margin-right:.4rem}
-.ws-known{margin:0 0 .4rem}
-.ws-claimed{margin:0 0 .4rem;color:var(--ink-2)}
-.ws-sides{list-style:none;margin:.3rem 0 .5rem;padding:.6rem .8rem;background:var(--paper-2);border-left:3px solid var(--stamp-2)}
-.ws-sides li{margin:.25rem 0;font-size:.94em}
-.ws-note{font-family:var(--mono);font-size:.74rem;color:var(--ink-3);margin:0 0 1rem;padding:.6rem .8rem;border:1px dashed var(--rule-2)}
+/* dashed boxes */
+.boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;margin-top:48px;align-items:start}
+.box{border:1.5px dashed var(--rule-2);padding:24px 26px 26px;background:transparent;font-size:17px;line-height:1.55;min-width:0}
+.box.wide{grid-column:1/-1}
+.box h4{margin:0 0 14px;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.box h5{margin:16px 0 6px;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.box p{margin:8px 0 0}
+.box ul{margin:8px 0 0;padding-left:1.15rem}
+.box li{margin:6px 0}
+.box .src,.box a{font-size:15px}
+.box .empty{color:var(--ink-2);font-style:italic}
+.box .alert{font-weight:600}
+.cols-spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:8px 40px}
+.tvweek{display:grid;grid-template-columns:3.4rem 1fr;gap:6px 14px;margin-top:8px}
+.tvweek .day{font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);padding-top:3px}
+.tvweek .shows div{margin:2px 0 8px}
 
-/* ---- How it's made ---- */
-.made p{margin:.85rem 0}
-.tablewrap{overflow-x:auto;margin:1rem 0}
-table{border-collapse:collapse;width:100%;font-size:.88rem;min-width:32rem}
-th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--rule);vertical-align:top}
-th{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
-td:nth-child(2){font-family:var(--mono);font-size:.78rem;white-space:nowrap}
-.num{text-align:right;font-family:var(--mono);font-size:.78rem;font-variant-numeric:tabular-nums;white-space:nowrap}
-footer{margin-top:2.8rem;padding-top:1rem;border-top:4px double var(--ink-2);font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;color:var(--ink-3);line-height:1.7}
-.intro{margin:1rem 0 0;color:var(--ink-2)}
-@media (prefers-reduced-motion: reduce){*{transition:none!important}}
-.site-banner{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-align:center;padding:.4rem 1rem;background:var(--paper-2);color:var(--ink-2);border-bottom:1px solid var(--rule-2)}.site-foot{max-width:60rem;margin:2rem auto 2.5rem;padding:1rem 1rem 0;border-top:1px solid var(--rule-2);font-family:var(--mono);font-size:.7rem;line-height:1.7;color:var(--ink-3);text-align:center}.site-foot a{color:inherit}</style></head><body>
-<div class="wrap">
+/* briefly + calendar */
+.lines{list-style:none;margin:32px 0 0;padding:0;max-width:860px}
+.lines li>*{min-width:0}
+.lines li{display:grid;grid-template-columns:96px 1fr;gap:4px 24px;padding:16px 0;border-top:1px solid var(--hair)}
+.lines .when{color:var(--ink-2);padding-top:4px}
+.lines .what{font-size:18px;line-height:1.55}
+.lines .tag{display:block;font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-top:2px}
 
-<header class="mast">
-  <div class="mast-top">
-    <span class="dateline">Sunday, September 13, 2026 &middot; Los Angeles</span>
-    <span class="weather-box">Fair, low 60s</span>
+/* how it's made */
+.made table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.45}
+.made th,.made td{text-align:left;padding:10px 12px 10px 0;border-bottom:1px solid var(--hair);vertical-align:top}
+.made th{font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.made .num{text-align:right;white-space:nowrap}
+.tablewrap{overflow-x:auto;margin:20px 0}
+.made p{max-width:680px;margin:14px 0 0}
+
+/* archive */
+.arch{list-style:none;margin:40px 0 0;padding:0;max-width:860px}
+.arch li{display:grid;grid-template-columns:120px 1fr;gap:4px 24px;padding:18px 0;border-top:1px solid var(--hair);align-items:baseline}
+.arch .when{color:var(--ink-2)}
+.arch .h-small a{color:inherit;text-decoration:none}.arch .h-small a:hover{color:var(--accent)}
+.arch .kind{display:block;font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-top:4px}
+.month{margin:56px 0 0;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+
+/* footer */
+.foot{max-width:1200px;margin:140px auto 0;padding:48px 24px 64px;border-top:1px solid var(--hair)}
+.foot .top{display:flex;flex-wrap:wrap;gap:32px 64px;justify-content:space-between}
+.foot .brand{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 80;font-size:28px;letter-spacing:-.015em;margin:0}
+.foot .tag{font-family:var(--display);font-style:italic;font-size:16px;color:var(--ink-2);margin:8px 0 0}
+.foot nav{display:flex;flex-wrap:wrap;gap:4px 28px;align-items:flex-start}
+.foot nav a{display:inline-flex;align-items:center;min-height:44px;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);text-decoration:none}
+.foot nav a:hover{color:var(--accent)}
+.foot .fine{font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin:40px 0 0}
+.foot .fine a{color:inherit}
+
+/* mobile */
+@media (max-width:640px){
+  body{font-size:18px}
+  .shell{padding:0 16px}
+  .masthead{padding:40px 0 32px}
+  .sec{padding-top:64px}.sec.ruled{margin-top:64px;padding-top:48px}
+  .ednote{padding-top:64px}
+  .bleed{margin-left:-16px;margin-right:-16px;width:calc(100% + 32px)}
+  .hero{padding-top:32px}
+  .nav{gap:22px}
+  .good,.ws{grid-template-columns:1fr}
+  .lines li,.arch li{grid-template-columns:minmax(0,1fr)}
+  .grid{grid-template-columns:1fr}
+  .foot{margin-top:96px;padding:40px 16px 48px}
+}
+@media print{
+  html,body{background:#fff}
+  .nav,.skip{display:none}
+  body{font-size:15pt}
+  *{break-inside:avoid-page}
+  .kicker,.rule-short{color:var(--accent)!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="shell">
+<header>
+  <div class="strip">
+    <span>Sunday, September 13, 2026 · Los Angeles</span>
+    
+    <span>Sunday edition · No. 2</span>
   </div>
-  <div class="mast-name"><h1>The Gayzette</h1></div>
-  <p class="mast-sub">A newspaper if news was actually real</p>
-  <div class="mast-row2"><b>Sunday Edition</b><span>No. 2</span><span>thegayzette.news</span></div>
+  <div class="masthead">
+    <a href="/"><h1>The Gayzette</h1></a>
+    <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
+  </div>
+  <nav class="nav" aria-label="Sections">
+    <a href="#front" class="on" aria-current="page">Front Page</a><a href="#beat-0">Sections</a><a href="#briefly">Briefly</a><a href="#calendar">Calendar</a><a href="/">Daily</a>
+  </nav>
 </header>
-<nav class="toc" aria-label="Sections"><div class="index-box"><h2>Today's Receipts</h2><div class="index-list"><a href="#lead"><span>The lead</span><span>&rarr;</span></a><a href="#beat-0"><span>Consciousness &amp; The Nonphysical</span><span>&rarr;</span></a><a href="#beat-1"><span>The Dance World</span><span>&rarr;</span></a><a href="#beat-2"><span>Comedy, Puppetry &amp; TV</span><span>&rarr;</span></a><a href="#beat-3"><span>Books &amp; Publishing</span><span>&rarr;</span></a><a href="#beat-4"><span>The Operator</span><span>&rarr;</span></a><a href="#beat-5"><span>The AI Builder</span><span>&rarr;</span></a><a href="#beat-6"><span>Music &amp; Guitar</span><span>&rarr;</span></a><a href="#beat-7"><span>Human Flourishing</span><span>&rarr;</span></a><a href="#briefly"><span>Briefly</span><span>&rarr;</span></a><a href="#calendar"><span>Calendar</span><span>&rarr;</span></a></div></div></nav>
 
+<main id="main">
+
+
+  
+  <article class="hero sunday" id="front" data-beat="The Universe">
+  
+  <div class="txt">
+    <p class="kicker">Sunday &middot; The Universe</p>
+    <h2 class="h-hero hl"><a href="https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/" target="_blank" rel="noopener">Ten thousand AI agents proved a million-dollar math problem</a></h2>
+    <p class="deck">OpenAI ran a swarm of autonomous agents for 88 hours and came back with a Millennium Prize answer that a machine then checked line by line.</p>
+    <p class="byline">The Gayzette &middot; Wonder <span aria-label="5 of 5">◆◆◆◆◆</span></p>
+    <div class="body wide hero-body"><p>Two definitions first, because the whole thing turns on them. The Navier-Stokes equations are the math that describes how fluids move, the rules behind smoke curling off a match and water shoving past a bridge piling. A singularity, or a &#34;blow-up,&#34; is the moment those equations stop describing anything at all, when a quantity like the speed of the fluid runs to infinity at a point and the math throws up its hands. For twenty-five years, one of the Clay Mathematics Institute&#39;s seven Millennium Prize Problems, each carrying a $1 million purse, has asked whether blow-up can actually happen in three-dimensional fluid flow.</p><p>It can. Quanta Magazine reported on September 8 that OpenAI ran roughly 10,000 autonomous AI agents for 88 hours and produced a proof that it can.</p><p>Here is the part that makes this a receipt rather than a press release. The proof was then translated into Lean, a verification language in which every step of an argument has to be spelled out in a form a computer can check, and the machine checked it for 17 more hours. Lean does not care who wrote the argument or how confident they sound. It either closes or it does not. This one closed.</p><p>And a human team got there too. Mathematicians Tristan Buckmaster and Levent Alpöge independently produced blow-up proofs in the same window, for the Euler equations and an easier Navier-Stokes variant rather than the identical full problem, and both efforts built on the same underlying strategy from Diego Cordoba and Luis Martinez-Zoroa. Two groups, two routes, one answer.</p><p>The caveat: this resolves one of the seven Millennium problems, not the version of the fluid question that mathematicians consider the crown jewel, and the corroboration detail comes from the same Quanta piece rather than two independent write-ups.</p></div>
+    <aside class="desk"><p class="label">On our desk</p>Universe Year is math plus biology, and this is the cleanest possible demonstration of what your math half is actually for. A twenty-five-year-old open question fell to a swarm of agents, and then a proof checker with no opinions confirmed it. That is the shape of evidence you keep asking De Stefano&#39;s claims to have.</aside>
+    <span class="srcline"><a href="https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/" target="_blank" rel="noopener">Read the original at Quanta Magazine: AI has solved one of math&#39;s $1 million Millennium Prize problems →</a></span>
+    
+  </div>
+</article>
+  
 <section class="ednote" aria-label="Editor's note">
-  <p class="byline">From the editor&#x27;s desk</p>
-  <p>Two leads this week, and they are the same story told in two languages. OpenAI ran ten thousand agents for 88 hours and came back with a proof that fluid equations can blow up in three dimensions, one of the seven million-dollar Millennium Prize problems, and then a machine checked the proof line by line for another 17 hours. And in China, installed solar capacity passed installed coal capacity for the first time, by a margin so thin it is almost a rounding error, in the country that burns more coal than anywhere on Earth. A math problem fell. A chart crossed. Both have dates.</p><p>Elsewhere: a 15-year cardiac-arrest study says near-death experiences may share one shape across four countries, though that one rests on a single report so we have said so in the headline. A lab published a psi experiment that failed, and then published the strange thing that happened anyway. Brian Henson is taking 80 puppets on the road for the first time in 15 years. A YouTube game show booked 61 movie theaters.</p><p>On feedback: nothing had been saved on the page yet, no reactions and no beat decisions, so all nine standing beats ran unchanged this week and the six proposed beats are still sitting there waiting for you to tap one.</p><p>The calendar at the bottom is unusually full through mid-October. Four Puppet Up! cities, the Booker shortlist, the National Book Awards longlists, and a rocket on Monday. Pick two.</p>
+  <p class="kicker">Editor's note</p>
+  <p class="byline">From the editor&#39;s desk</p>
+  <p class="t">Two leads this week, and they are the same story told in two languages. OpenAI ran ten thousand agents for 88 hours and came back with a proof that fluid equations can blow up in three dimensions, one of the seven million-dollar Millennium Prize problems, and then a machine checked the proof line by line for another 17 hours. And in China, installed solar capacity passed installed coal capacity for the first time, by a margin so thin it is almost a rounding error, in the country that burns more coal than anywhere on Earth. A math problem fell. A chart crossed. Both have dates.</p><p class="t">Elsewhere: a 15-year cardiac-arrest study says near-death experiences may share one shape across four countries, though that one rests on a single report so we have said so in the headline. A lab published a psi experiment that failed, and then published the strange thing that happened anyway. Brian Henson is taking 80 puppets on the road for the first time in 15 years. A YouTube game show booked 61 movie theaters.</p><p class="t">On feedback: nothing had been saved on the page yet, no reactions and no beat decisions, so all nine standing beats ran unchanged this week and the six proposed beats are still sitting there waiting for you to tap one.</p><p class="t">The calendar at the bottom is unusually full through mid-October. Four Puppet Up! cities, the Booker shortlist, the National Book Awards longlists, and a rocket on Monday. Pick two.</p>
 </section>
 
-<section id="lead" class="beat">
-  <h3 class="beat-head">The lead</h3>
-  <div class="leads-row">
-<article class="story lead" id="navier-stokes-ai-swarm-proof" data-beat="The Universe">
+
   
-  <div class="eyebrow"><span class="beat-tag">The Universe</span><span class="wonder" aria-label="wonder 5 of 5">◆◆◆◆◆</span></div>
-  <h2>Ten thousand AI agents proved a million-dollar math problem</h2>
-  <p class="dek">OpenAI ran a swarm of autonomous agents for 88 hours and came back with a Millennium Prize answer that a machine then checked line by line.</p>
-  <p>Two definitions first, because the whole thing turns on them. The Navier-Stokes equations are the math that describes how fluids move, the rules behind smoke curling off a match and water shoving past a bridge piling. A singularity, or a &quot;blow-up,&quot; is the moment those equations stop describing anything at all, when a quantity like the speed of the fluid runs to infinity at a point and the math throws up its hands. For twenty-five years, one of the Clay Mathematics Institute&#x27;s seven Millennium Prize Problems, each carrying a $1 million purse, has asked whether blow-up can actually happen in three-dimensional fluid flow.</p><p>It can. Quanta Magazine reported on September 8 that OpenAI ran roughly 10,000 autonomous AI agents for 88 hours and produced a proof that it can.</p><p>Here is the part that makes this a receipt rather than a press release. The proof was then translated into Lean, a verification language in which every step of an argument has to be spelled out in a form a computer can check, and the machine checked it for 17 more hours. Lean does not care who wrote the argument or how confident they sound. It either closes or it does not. This one closed.</p><p>And a human team got there too. Mathematicians Tristan Buckmaster and Levent Alpöge independently produced blow-up proofs in the same window, for the Euler equations and an easier Navier-Stokes variant rather than the identical full problem, and both efforts built on the same underlying strategy from Diego Cordoba and Luis Martinez-Zoroa. Two groups, two routes, one answer.</p><p>The caveat: this resolves one of the seven Millennium problems, not the version of the fluid question that mathematicians consider the crown jewel, and the corroboration detail comes from the same Quanta piece rather than two independent write-ups.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> Universe Year is math plus biology, and this is the cleanest possible demonstration of what your math half is actually for. A twenty-five-year-old open question fell to a swarm of agents, and then a proof checker with no opinions confirmed it. That is the shape of evidence you keep asking De Stefano&#x27;s claims to have. </aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/" target="_blank" rel="noopener">Quanta Magazine: AI has solved one of math&#x27;s $1 million Millennium Prize problems</a> <span class="src-date">2026-09-08</span></li></ul></details>
+  <section class="sec" id="also-leading" aria-label="Second lead">
+    <div class="row">
+      <div class="main">
+        <p class="kicker">Also leading</p>
+        
+
+<article id="china-solar-passes-coal" data-beat="Human Flourishing">
+  
+  
+  <h3 class="h-feature hl" style="margin-top:0;max-width:640px"><a href="https://www.euronews.com/2026/09/01/solar-outpaces-coal-for-the-first-time-in-china-how-does-europe-compare" target="_blank" rel="noopener">China&#39;s solar capacity just passed its coal capacity</a></h3>
+  <p class="deck" style="font-size:21px">By one million kilowatts out of 1.286 billion, the country that burns the most coal on Earth now has more solar than coal installed.</p>
+  <div class="body"><p>Installed capacity is the number to understand here. It means the maximum power a country&#39;s plants could put out if everything ran flat out at once, measured in kilowatts. It is not the same as the electricity actually generated, because a solar panel does nothing at midnight and a coal plant can burn around the clock. Think of it as the size of the kitchen rather than the number of meals served.</p><p>China&#39;s National Energy Administration confirmed that as of the end of July 2026, installed photovoltaic capacity hit 1.286 billion kilowatts, edging past coal-fired capacity at 1.285 billion kilowatts. The margin is one million kilowatts, which on a base that size is a rounding error. Euronews reported the crossover on September 1.</p><p>The margin is not the story. The direction is. This is the first time in history that solar has been the single largest power-source category by installed capacity in the country that burns more coal than anywhere else on the planet, and capacity gets built years before it gets retired. A coal plant that exists still gets used; a solar fleet this size changes what the marginal new kilowatt looks like for the rest of the decade.</p><p>The honest caveat, said plainly: because of that capacity-versus-generation gap, coal still produces far more of China&#39;s actual electricity than solar does. This is a crossover in what has been built, not in what is currently being burned. The second number follows the first, but it follows it with a lag.</p><p>Still, the chart crossed. That happened, it has a date, and it has a source.</p></div>
+  
+  <span class="srcline"><a href="https://www.euronews.com/2026/09/01/solar-outpaces-coal-for-the-first-time-in-china-how-does-europe-compare" target="_blank" rel="noopener">Read the original at Euronews: Solar outpaces coal for the first time in China →</a></span>
   
 </article>
-<article class="story lead" id="china-solar-passes-coal" data-beat="Human Flourishing">
-  
-  <div class="eyebrow"><span class="beat-tag">Human Flourishing</span><span class="wonder" aria-label="wonder 5 of 5">◆◆◆◆◆</span></div>
-  <h2>China&#x27;s solar capacity just passed its coal capacity</h2>
-  <p class="dek">By one million kilowatts out of 1.286 billion, the country that burns the most coal on Earth now has more solar than coal installed.</p>
-  <p>Installed capacity is the number to understand here. It means the maximum power a country&#x27;s plants could put out if everything ran flat out at once, measured in kilowatts. It is not the same as the electricity actually generated, because a solar panel does nothing at midnight and a coal plant can burn around the clock. Think of it as the size of the kitchen rather than the number of meals served.</p><p>China&#x27;s National Energy Administration confirmed that as of the end of July 2026, installed photovoltaic capacity hit 1.286 billion kilowatts, edging past coal-fired capacity at 1.285 billion kilowatts. The margin is one million kilowatts, which on a base that size is a rounding error. Euronews reported the crossover on September 1.</p><p>The margin is not the story. The direction is. This is the first time in history that solar has been the single largest power-source category by installed capacity in the country that burns more coal than anywhere else on the planet, and capacity gets built years before it gets retired. A coal plant that exists still gets used; a solar fleet this size changes what the marginal new kilowatt looks like for the rest of the decade.</p><p>The honest caveat, said plainly: because of that capacity-versus-generation gap, coal still produces far more of China&#x27;s actual electricity than solar does. This is a crossover in what has been built, not in what is currently being burned. The second number follows the first, but it follows it with a lag.</p><p>Still, the chart crossed. That happened, it has a date, and it has a source.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> your whole thesis is that the world is getting more capable and nobody puts it on the front page. This is the chart-not-vibes version of it, and it is the kind of receipt you can hand to the friend who thinks optimism is a personality disorder. </aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.euronews.com/2026/09/01/solar-outpaces-coal-for-the-first-time-in-china-how-does-europe-compare" target="_blank" rel="noopener">Euronews: Solar outpaces coal for the first time in China</a> <span class="src-date">2026-09-01</span></li></ul></details>
-  
-</article></div>
-</section>
 
-<section class="beat" id="beat-0"><h3 class="beat-head">Consciousness &amp; The Nonphysical</h3><div class="cols cols-2"><div class="col">
-<article class="story" id="aware-ii-near-death-shape" data-beat="Consciousness &amp; The Nonphysical">
+      </div>
+    </div>
+  </section>
   
-  <div class="eyebrow"><span class="beat-tag">Consciousness &amp; The Nonphysical</span><span class="wonder" aria-label="wonder 5 of 5">◆◆◆◆◆</span><span class="conf">early reports</span></div>
-  <h2>Early reports: near-death experiences may share one shape worldwide</h2>
-  <p class="dek">A 15-year cardiac-arrest study across four countries found the same structural elements in survivors&#x27; accounts regardless of nationality or religion.</p>
-  <p>AWARE II is a study run out of NYU Langone by Dr. Sam Parnia that does something most consciousness research cannot: it watches people during clinical death. Cardiac arrest is the cleanest natural experiment available, because the heart stops, blood stops reaching the brain, and the person is either resuscitated or not. Over more than 15 years, the study tracked 550 cardiac-arrest survivors across the United States, United Kingdom, Canada and Austria.</p><p>About a quarter of them recalled an experience from the period when they were clinically dead. The interesting finding is not that they recalled something. It is what the recollections had in common. Reported as strikingly consistent structural elements: a sense of detachment from the body, an awareness of the resuscitation happening, a boundary of some kind, and encounters with deceased relatives. That consistency held regardless of the survivor&#x27;s nationality or religious background, which is the opposite of what you would expect if these were culturally scripted stories people tell afterward.</p><p>There is a second result with practical teeth. Survivors whose experiences were clinically acknowledged, rather than waved off as &quot;just a dream,&quot; fared better psychologically than those whose accounts were dismissed. That is a finding about how clinicians should talk to patients, and it stands on its own regardless of what the experience is.</p><p>Now the honest part, and it matters. This comes to us through a single secondary report of the underlying Resuscitation Plus paper, so treat the specifics as early reporting rather than settled. The study itself states it cannot rule out residual brain activity as the explanation. A shared structure is not proof of a shared destination; it may just mean brains fail in similar ways.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> the remote-viewing curriculum is built on honest scoring, and this is the same posture applied to the biggest question in the beat. A large, cross-cultural dataset with the authors naming their own strongest alternative explanation is exactly the kind of source worth putting next to your De Stefano notes. </aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://easternherald.com/2026/08/29/near-death-experience-nde-aware-study-nyu-cardiac-arrest-consciousness/" target="_blank" rel="noopener">Eastern Herald, reporting AWARE II / Resuscitation Plus</a> <span class="src-date">2026-08-29</span></li></ul></details>
-  
-</article></div><div class="col">
-<article class="story" id="uva-obe-trial-null-with-twist" data-beat="Consciousness &amp; The Nonphysical">
-  
-  <div class="eyebrow"><span class="beat-tag">Consciousness &amp; The Nonphysical</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
-  <h2>An out-of-body trial failed its test and found something else</h2>
-  <p class="dek">UVA researchers got chance-level results on the target they set out to test, then two participants described what the scientists were doing behind closed doors.</p>
-  <p>The University of Virginia&#x27;s Division of Perceptual Studies runs the kind of experiment that is easy to do badly. The protocol here was tight: 21 Brazilian participants, each attempting an out-of-body experience and then trying to identify a random object displayed on a laptop in a different room. Pre-registered target, one right answer, no wiggle room about what counts as a hit.</p><p>Accuracy was no better than chance. That is the headline result, and the team published it as such, which is worth pausing on. A null result is a study that found nothing, and in this field nulls have a habit of quietly not getting written up. This one did.</p><p>Then the part they did not plan for. Two participants, unprompted, described the researchers&#x27; locations and what they were doing behind closed doors. That was not the target, not the hypothesis, and not something the protocol was designed to score. The team reported it anyway as an unplanned finding, published in the journal Explore, with the researchers named on the paper: Marina Weiler, Damon Abraham, David J.P. Acunzo and Niffe Hermansson.</p><p>The caveat is the one the researchers themselves imply by calling it unplanned. An anomaly noticed after the fact, in two people out of 21, with no pre-set criteria for what would have counted as a miss, is a lead and not a result. It is the thing you design the next study around, not the thing you conclude from.</p><p>Which is the whole point. This is what the field looks like when it behaves: say what you predicted, report that it failed, and report the odd thing too.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> your CRV curriculum&#x27;s entire premise is honest scoring, including the sessions that miss. This is a lab modeling that discipline in public, and the Division of Perceptual Studies is now worth a standing spot on your source list next to IRVA. </aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.uvahealth.com/news/trial-testing-out-of-body-experiences-yields-unexpected-twist" target="_blank" rel="noopener">UVA Health: Trial testing out-of-body experiences yields unexpected twist</a> <span class="src-date">2026-09-09</span></li></ul></details>
-  
-</article></div></div></section><section class="beat" id="beat-1"><h3 class="beat-head">The Dance World</h3><div class="cols cols-1"><div class="col">
-<article class="story" id="dwts-season-35-two-night-premiere" data-beat="The Dance World">
-  
-  <div class="eyebrow"><span class="beat-tag">The Dance World</span><span class="wonder" aria-label="wonder 3 of 5">◆◆◆◇◇</span></div>
-  <h2>Dancing With the Stars opens season 35 across two nights</h2>
-  <p class="dek">The September 15 and 16 premiere brings in a pro who won her spot on a spinoff competition rather than through the usual pipeline.</p>
-  <p>Season 35 of &quot;Dancing With the Stars&quot; premieres with back-to-back nights on Tuesday September 15 and Wednesday September 16 on ABC and Disney+, then settles into a regular Tuesday 8pm slot. The celebrity side of the cast includes Jenna Dewan, Julia Stiles, chef Giada De Laurentiis and singer Taylor Hanson.</p><p>The interesting casting is on the professional side. Adele Zaikman joins the pro roster after winning &quot;Dancing with the Stars: The Next Pro,&quot; a spinoff competition, and is paired with Conner Leavitt. Longtime pro Sharna Burgess returns after a multi-year hiatus.</p><p>Zaikman&#x27;s route is the part worth noticing. The traditional path onto a show like this runs through competition circuits, conventions, and whoever happens to know a casting producer, which is to say through a network that is mostly invisible from outside. A televised competition for the job makes that pipeline public and legible: here is the standard, here is the audition, here is who cleared it. That is a small structural change in how a closed room gets entered, and it is the same change that shows up whenever any gatekept field publishes its criteria.</p><p>The caveat is that one spinoff does not reroute an industry, and a competition show is still a show, cast for television as much as for technique.</p><p>Still, for a business built on developing dancers, the question of how somebody gets seen is not an abstraction. It is the product.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> Travis came up through exactly this pipeline at SYTYCD, and Travis Wall Studio sells the development half of it. A public, competitive on-ramp to a pro slot is a live case study in how visibility gets manufactured, which is the thing your students are actually buying. <span class="cal-pill">Tue Sep 15 · Dancing With the Stars season 35 premiere, night one</span></aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.goodmorningamerica.com/culture/story/dancing-with-the-stars-season-35-what-to-know-136124082" target="_blank" rel="noopener">Good Morning America: Dancing With the Stars season 35, what to know</a> <span class="src-date">2026-09-02</span></li></ul></details>
-  
-</article></div></div></section><section class="beat" id="beat-2"><h3 class="beat-head">Comedy, Puppetry &amp; TV</h3><div class="cols cols-2"><div class="col">
-<article class="story" id="puppet-up-first-tour-in-15-years" data-beat="Comedy, Puppetry &amp; TV">
-  
-  <div class="eyebrow"><span class="beat-tag">Comedy, Puppetry &amp; TV</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
-  <h2>Brian Henson&#x27;s Puppet Up! tours for the first time in 15 years</h2>
-  <p class="dek">An adults-only improv show with 80-plus Henson puppets sold out Hollywood and is now booking Boston, Philadelphia, DC and New York.</p>
-  <p>Puppet Up! is Brian Henson&#x27;s adults-only improvised puppet show, and the staging is the clever part. More than 80 Jim Henson Company puppets are performed live by puppeteers working at floor level, while cameras capture only the puppets and project that feed onto screens above them. The audience gets both at once: the finished shot, and the sweaty humans making it. It is the reveal and the magic trick running in the same room.</p><p>After a sold-out Hollywood run, the show is going out on the road for the first time in 15 years. Confirmed fall dates are Boston on September 27, Philadelphia on September 29, Washington DC on September 30, and New York&#x27;s Tribeca Performing Arts Center on October 2 and 3, hosted by Patrick Bristow.</p><p>What makes this a story rather than a listing is the economics it demonstrates. Unscripted adult puppet comedy, with no script to license and no post-production, sold out a residency and is now worth the cost of moving 80 puppets and a crew between four cities in a week. The format is repeatable by design, because improv means the show regenerates its own material every night. That is a very different cost structure from scripted comedy, and it is the reason a 15-year gap can close this fast.</p><p>The caveat is scale, not quality: four cities and a handful of dates is a test tour, not a national rollout, and whether it extends past October is not something the announcement says.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> this is the closest working comparable to The Stacy Show anywhere in the market, run by the Henson lineage itself. If you can get to the Tribeca PAC dates on October 2 or 3, that is a night of primary research on how the live format actually plays. <span class="cal-pill">Fri Oct 2 · Puppet Up! at Tribeca PAC, New York (Oct 2-3)</span></aside>
-  <details class="sources"><summary>Receipts (2)</summary><ul><li><a href="https://www.henson.com/its-time-to-puppet-up-brian-hensons-hilarious-stage-show-celebrates-summer-with-eight-must-see-performances/" target="_blank" rel="noopener">The Jim Henson Company: It&#x27;s time to Puppet Up!</a> <span class="src-date">2026-08-19</span></li><li><a href="https://www.broadwayworld.com/philadelphia/article/Brian-Hensons-Stage-Show-PUPPET-UP-Will-Embark-on-Fall-Tour-20260819" target="_blank" rel="noopener">BroadwayWorld: Brian Henson&#x27;s Puppet Up! will embark on fall tour</a> <span class="src-date">2026-08-19</span></li></ul></details>
-  
-</article></div><div class="col">
-<article class="story" id="jet-lag-game-hits-movie-theaters" data-beat="Comedy, Puppetry &amp; TV">
-  
-  <div class="eyebrow"><span class="beat-tag">Comedy, Puppetry &amp; TV</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
-  <h2>A YouTube game show is booking 61 movie theaters</h2>
-  <p class="dek">Nebula is putting the Jet Lag: The Game season finale on Regal, Picturehouse and Cineworld screens across the US and UK on October 3.</p>
-  <p>Nebula is the streaming platform a group of YouTube creators built and own themselves, which matters for what follows. On September 3 it announced it is expanding an existing partnership with Regal, Picturehouse and Cineworld to screen the Season 19 finale of &quot;Jet Lag: The Game&quot; theatrically on October 3, across 28 Regal, 15 Picturehouse and 18 Cineworld locations in the US and UK. Tickets went on sale September 8. The expansion follows a London premiere in August that worked.</p><p>The distribution ladder used to have a missing rung. Theatrical release was gated by studios and distributors who decided what was worth a screen, and a creator-made show was not in the conversation regardless of its audience. What the Nebula deal shows is that the gate now opens on a different question: can you fill the seats on a Saturday. If yes, the chain will book you, because an empty auditorium earns nothing and a creator with a devoted audience is a known quantity in a way a new film is not.</p><p>Sixty-one locations is not a wide release, and that is worth saying plainly. This is an event screening, one night, for people who already watch the show. But the path from &quot;one night&quot; to &quot;a real window&quot; is a path that exists now, and it did not a few years ago.</p><p>The receipt is the specificity. Not a partnership announcement in principle, but a date, a count, and tickets already on sale.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> The Stacy Show is a small property looking for a distribution ladder, and this is somebody else&#x27;s rungs, published with numbers. Nebula&#x27;s press room is worth adding to your watch list; it is breaking this kind of deal before the trades write it up. <span class="cal-pill">Sat Oct 3 · Jet Lag: The Game season finale screens in 61 theaters</span></aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://press.nebula.tv/nebula-and-regal-global-entertainment-expand-partnership-to-bring-jet-lag-the-game-to-the-big-screen/" target="_blank" rel="noopener">Nebula press room: Nebula and Regal Global Entertainment expand partnership</a> <span class="src-date">2026-09-03</span></li></ul></details>
-  
-</article></div></div></section><section class="beat" id="beat-3"><h3 class="beat-head">Books &amp; Publishing</h3><div class="cols cols-1"><div class="col">
-<article class="story" id="getabstract-human-authorship-criteria" data-beat="Books &amp; Publishing">
-  
-  <div class="eyebrow"><span class="beat-tag">Books &amp; Publishing</span><span class="wonder" aria-label="wonder 3 of 5">◆◆◆◇◇</span></div>
-  <h2>A book award now judges on visible human authorship</h2>
-  <p class="dek">The getAbstract International Book Award built &quot;who actually wrote this&quot; into its criteria and longlisted ten titles under it.</p>
-  <p>A longlist is the first public cut in a prize, the stage where a field of submissions narrows to a set of finalists-in-waiting. On August 31, the 26th getAbstract International Book Award for Business Impact revealed its longlist and framed the whole thing around a criterion that did not need stating until recently: that a human wrote the book.</p><p>Ten titles are longlisted in the international category, including &quot;What Is Intelligence?&quot; by Blaise Aguera y Arcas and &quot;Creativity in the Age of AI.&quot; Rights Director Laura Lesum put the reasoning plainly: &quot;at a time when knowledge is increasingly processed by AI systems, making its origins visible matters more than ever.&quot; Winners are announced October 8 at the Frankfurt Book Fair.</p><p>The word doing the work in that quote is &quot;visible.&quot; Not banned, not detected, not policed. Visible. A prize cannot verify how a manuscript was made, and this one is not pretending it can. What it can do is make provenance part of what it rewards, which turns a fuzzy anxiety into a stated value that authors and publishers can point at.</p><p>The caveat: this is one award in one category, and a criterion is not an enforcement mechanism. Nobody is auditing drafts.</p><p>But it is a publishing institution deciding, on the record, that the origin of a book is part of the book&#x27;s worth. That is the kind of quiet institutional signal that tends to precede a norm rather than follow one, and ghostwriting sits in an interesting spot next to it: a discipline that is, by definition, a human voice standing behind somebody else&#x27;s page.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> you are ghostwriting a dance-world memoir, which means you are professionally in the business of invisible human authorship. When the industry starts making provenance a stated value, the question of how a ghostwritten book describes its own making stops being etiquette and starts being positioning. <span class="cal-pill">Thu Oct 8 · getAbstract International Book Award winners announced, Frankfurt</span></aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://publishingperspectives.com/2026/08/recognizing-human-contributions-longlist-revealed-for-the-26th-getabstract-international-book-award-for-business-impact/" target="_blank" rel="noopener">Publishing Perspectives: Longlist revealed for the 26th getAbstract International Book Award</a> <span class="src-date">2026-08-31</span></li></ul></details>
-  
-</article></div></div></section><section class="beat" id="beat-4"><h3 class="beat-head">The Operator</h3><div class="cols cols-1"><div class="col">
-<article class="story" id="squarespace-email-automation-logic" data-beat="The Operator">
-  
-  <div class="eyebrow"><span class="beat-tag">The Operator</span><span class="wonder" aria-label="wonder 3 of 5">◆◆◆◇◇</span></div>
-  <h2>Squarespace email campaigns get tagging, filters and conditions</h2>
-  <p class="dek">Three additions let the same automation treat a waitlisted customer and a paying one differently, without anyone sorting a list by hand.</p>
-  <p>Squarespace&#x27;s August product update, posted August 25, added three things to Email Campaigns that together change what the tool is for.</p><p>Auto-Tagging labels customers automatically based on what they do, like making a purchase or filling out a form. A tag is just a sticky note on a contact record, but an automatic one means the sorting happens at the moment of the behavior rather than in a spreadsheet later. Trigger Filters let you segment an audience by the data people entered in a form response, so the answers to your intake questions become the basis for who gets what. Conditions split an automation into branches, so different customers walk different follow-up paths from the same starting point. The same update added downloadable, branded invoice PDFs.</p><p>None of these is new as a concept; dedicated email platforms have had branching for years. What is new is that they are sitting inside the website builder, one layer away from the form and the checkout that generate the behavior in the first place. The value of that is not features, it is fewer joints. Every integration between two systems is a place where a contact record goes stale or a tag never arrives, and removing a joint removes a class of silent failure.</p><p>The caveat: a branching automation is only as good as the segments you define, and a badly designed condition just delivers the wrong email faster.</p><p>For a small operation, that is still the difference between treating everyone identically and treating people like you noticed what they did.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> Squarespace is the front door of Travis Wall Studio, and premium positioning lives or dies on whether a waitlisted student and an enrolled one get the same email. Conditions plus Trigger Filters is the piece that makes scarcity-based funnels run without you hand-sorting anybody. </aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.squarespace.com/blog/product-updates-august-2026" target="_blank" rel="noopener">Squarespace Product Updates: August 2026</a> <span class="src-date">2026-08-25</span></li></ul></details>
-  
-</article></div></div></section><section class="beat" id="beat-5"><h3 class="beat-head">The AI Builder</h3><div class="cols cols-2"><div class="col">
-<article class="story" id="openai-agents-api-public-beta" data-beat="The AI Builder">
-  
-  <div class="eyebrow"><span class="beat-tag">The AI Builder</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
-  <h2>OpenAI unbundled its coding agent and sold it as an API</h2>
-  <p class="dek">The Agents API exposes the same session, sandbox and subagent machinery behind Codex, with no platform fee on top of tokens.</p>
-  <p>A harness is the unglamorous scaffolding around a model that makes it useful for long jobs: the thing that decides what stays in memory, which tools get offered, where the code actually runs, and what happens when a task takes nine hours instead of nine seconds. Building one is most of the work in building an agent. Until now, if you wanted OpenAI&#x27;s harness, you used their product; you could not rent the plumbing.</p><p>On September 10, OpenAI released the Agents API in public beta. It exposes the same agent, environment and session infrastructure that powers Codex as a standalone service. Three pieces matter for a solo builder. Automatic context compaction means the agent trims its own working memory as a job runs long, instead of hitting a wall. On-demand tool search means it fetches a tool&#x27;s definition only when it needs it, rather than paying tokens to carry every tool description in every request. And native multi-agent delegation means subagents run in parallel, each with its own context, so one long task splits into several short ones.</p><p>Sandboxes, the isolated machines where the agent&#x27;s code actually runs, can be hosted by OpenAI or by nine partner platforms including Cloudflare, Vercel, DigitalOcean and E2B. There is no platform fee. You pay for tokens and tool usage, full stop.</p><p>The caveat is the phrase &quot;public beta,&quot; which in this industry means the interface will change and you should not wire anything load-bearing to it yet without expecting to rewire it.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> you already orchestrate with n8n plus Claude Code, and this is the first credible rented alternative for the long-running, multi-step builds. Worth a weekend test against the repeatable-client-site experiment before you decide whether to keep hand-wiring the harness yourself. </aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://openai.com/index/introducing-the-agents-api/" target="_blank" rel="noopener">OpenAI: Introducing the Agents API</a> <span class="src-date">2026-09-10</span></li></ul></details>
-  
-</article></div><div class="col">
-<article class="story" id="cognition-swe-2-cost-floor" data-beat="The AI Builder">
-  
-  <div class="eyebrow"><span class="beat-tag">The AI Builder</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
-  <h2>A coding model matched the frontier at 64 percent less cost</h2>
-  <p class="dek">Cognition&#x27;s SWE-2 scores within a point of Claude Fable 5.1 on a hard coding benchmark while charging a fraction of the price.</p>
-  <p>The useful way to read a model release is as two numbers that have to move in opposite directions: how well it does the work, and what the work costs. Most releases move one. This one moved both.</p><p>Cognition released SWE-2 on September 10, post-trained from Kimi K3, a base model with 2.8 trillion parameters. Parameters are the tunable weights inside a model, roughly a measure of raw capacity, the way engine displacement is a rough measure of an engine. Post-training is the specialization pass on top of that base, where a general model gets taught to do one job well.</p><p>The scores: 50.0% on FrontierCode 1.1 Main, against 50.9% for Claude Fable 5.1. That is within a single point of a frontier model, at 64% less cost. On Terminal-Bench 2.1, which tests whether a model can actually operate a command line rather than just write code that looks right, it hits 92.8%. Cognition also reports it needs 58% fewer turns than its predecessor SWE-1.7 to land a real edit, which is the number a solo builder feels most directly, because every turn is a round trip you sit through.</p><p>The caveat, and it is a standing one for the whole category: these are the vendor&#x27;s own benchmark disclosures on benchmarks the vendor selected. Cognition publishes them in more detail than most, which is a point in their favor, but a benchmark is not your codebase.</p><p>The trend underneath is the real receipt. The cost floor for agentic coding keeps dropping while capability holds flat or climbs.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> your Model Ladder rule says put the cheap model on the routine rung and save the expensive thinking for when it earns its keep. SWE-2 is a new candidate for that middle rung, and cheap enough that the agent-first client build stops being a decision and becomes a test you just run. </aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://cognition.com/blog/swe-2" target="_blank" rel="noopener">Cognition: SWE-2</a> <span class="src-date">2026-09-10</span></li></ul></details>
-  
-</article></div></div></section><section class="beat" id="beat-6"><h3 class="beat-head">Music &amp; Guitar</h3><div class="cols cols-1"><div class="col">
-<article class="story" id="suno-v6-licensed-training" data-beat="Music &amp; Guitar">
-  
-  <div class="eyebrow"><span class="beat-tag">Music &amp; Guitar</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
-  <h2>Suno rebuilt its AI music models on licensed catalog</h2>
-  <p class="dek">Three new models trained from scratch on catalog from Warner, BMG and Believe, with rightsholders paid per generation, and every older model retired the same day.</p>
-  <p>Training data is the whole fight in AI music. A generator learns by ingesting recordings, and the question nobody had a clean answer to was whether those recordings were licensed. Suno&#x27;s answer, until now, was to argue about it in court.</p><p>On September 9, Suno launched v6, the experimental v6-wild, and the free v6-mini, all trained from scratch on catalog licensed from Warner Music Group, BMG and Believe, including its TuneCore arm, with those rightsholders paid per generation. Per generation is the load-bearing phrase. It means the payment is metered to use, not a one-time settlement, which is the structure a licensing chain needs if it is going to be a business rather than a truce. Every prior Suno model was retired the same day, which is a costly way to say the old ones were not defensible.</p><p>The gap is real. The training data excludes Universal Music Group and Sony Music Entertainment recordings: neither label is among Suno&#x27;s three licensing partners, and both labels&#x27; infringement suits against Suno continue. So this is the first AI music generator with a real, paid rights chain behind part of its catalog, not all of it.</p><p>The practical version for anyone putting generated music under a monetized video: the provenance story is much better than it was last week, and still not complete. Read Suno&#x27;s own output-license terms before you rely on it, because a clean training set and a clean output license are two different documents.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> Suno is already in your toolkit, and the question that actually blocks you is whether a generated cue is safe under a monetized Stacy Show upload. This moves that question from &quot;nobody knows&quot; to &quot;check the output terms,&quot; which is a meaningfully better place to be. </aside>
-  <details class="sources"><summary>Receipts (2)</summary><ul><li><a href="https://techcrunch.com/2026/09/09/suno-replaces-its-ai-models-with-a-new-one-trained-on-licensed-music-as-copyright-suits-pile-up/" target="_blank" rel="noopener">TechCrunch: Suno replaces its AI models with a new one trained on licensed music</a> <span class="src-date">2026-09-09</span></li><li><a href="https://www.musicbusinessworldwide.com/suno-v6-ai-music-models-launch-in-partnership-with-wmg-bmg-and-believe/" target="_blank" rel="noopener">Music Business Worldwide: Suno v6 AI music models launch in partnership with WMG, BMG and Believe</a> <span class="src-date">2026-09-09</span></li></ul></details>
-  
-</article></div></div></section><section class="beat" id="beat-7"><h3 class="beat-head">Human Flourishing</h3><div class="cols cols-1"><div class="col">
-<article class="story" id="fda-approves-sevabertinib-lung-cancer" data-beat="Human Flourishing">
-  
-  <div class="eyebrow"><span class="beat-tag">Human Flourishing</span><span class="wonder" aria-label="wonder 4 of 5">◆◆◆◆◇</span></div>
-  <h2>FDA approves an oral pill for a hard lung cancer subgroup</h2>
-  <p class="dek">Sevabertinib produced a 75 percent response rate in previously untreated patients with a specific HER2 mutation.</p>
-  <p>Targeted therapy means a drug aimed at a specific broken part rather than at fast-dividing cells in general. The broken part here is HER2, also written ERBB2, a gene that codes for a protein sitting on the cell surface that tells the cell when to grow. Certain mutations in the part of that protein called the tyrosine kinase domain jam the signal permanently on, and the cell divides because it has been told to, forever.</p><p>On September 9 the FDA granted accelerated approval to sevabertinib, brand name Hyrnuo, for locally advanced or metastatic non-squamous non-small cell lung cancer carrying those HER2 activating mutations. In the SOHO-01 study of 69 previously untreated patients, the objective response rate, meaning the share of patients whose tumors measurably shrank, was 75%. Of those who responded, 73% were still responding at six months and 38% at twelve months.</p><p>Two caveats worth holding together. Accelerated approval is a conditional pathway: the FDA clears a drug based on a measure likely to predict benefit, like tumor shrinkage, while confirmatory trials run. It can be withdrawn. And 69 patients is a small trial, which is typical for a narrow genetic subgroup and still a small trial.</p><p>What makes it a receipt anyway is the shape of it. Sequence the tumor, find a specific mutation, take a pill twice a day. That is a workflow that barely existed fifteen years ago for lung cancer, and the patients in this subgroup previously had few good options.</p>
-  <aside class="desk"><span class="desk-label">On your desk</span> the paper&#x27;s job is to find the week&#x27;s evidence that the world got more capable, and precision oncology is where that shows up most reliably. File it next to the CRISPR cholesterol result from Issue 001 as the same story told twice: read the specific defect, aim at the specific defect. </aside>
-  <details class="sources"><summary>Receipts (1)</summary><ul><li><a href="https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-sevabertinib-locally-advanced-or-metastatic-non-squamous-non-small" target="_blank" rel="noopener">FDA: Accelerated approval to sevabertinib for locally advanced or metastatic non-squamous NSCLC</a> <span class="src-date">2026-09-09</span></li></ul></details>
-  
-</article></div></div></section>
 
-<section class="receipt" id="briefly">
-  <h3>Briefly &middot; 18 items</h3>
-  <ul><li><span class="b-date">Thu Sep 10</span><span class="b-beat">The Universe</span><span class="b-line">The four-color theorem got a rare new proof: an algorithm running in n·log(n) steps instead of the 1997 proof&#x27;s n², built by identifying 8,202 map configurations checkable in parallel rather than one at a time. <a href="https://www.quantamagazine.org/the-four-color-theorem-gets-a-rare-new-proof-20260910/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Fri Aug 14</span><span class="b-beat">The Universe</span><span class="b-line">MIT&#x27;s Ming Guo filmed epithelial cells for up to 30 hours and found they pulse collectively in roughly hour-long cycles, with malignant cells staying synchronized about twice as long as healthy ones. <a href="https://news.mit.edu/2026/cells-pulse-together-malignant-cells-pulse-longest-0814" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Sun Sep 13</span><span class="b-beat">The Universe</span><span class="b-line">Starship Flight 14 is targeting no earlier than September 15 after Booster 21&#x27;s full-duration static fire on August 28, but this flight will not attempt a tower catch; Ship 41 is planned to splash down in the Indian Ocean. <a href="https://en.wikipedia.org/wiki/Starship_flight_test_14" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Thu Sep 10</span><span class="b-beat">Consciousness &amp; The Nonphysical</span><span class="b-line">Optimi Health got Health Canada authorization for a Phase 2 trial of a single supervised dose of its own psilocybin for major depressive disorder, enrolling up to 200 participants, with dosing planned to start in the first half of 2027. <a href="https://www.globenewswire.com/news-release/2026/09/10/3359517/0/en/optimi-health-to-initiate-phase-2-clinical-trial-evaluating-psilocybin-assisted-therapy-for-major-depressive-disorder.html" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Wed Aug 12</span><span class="b-beat">Consciousness &amp; The Nonphysical</span><span class="b-line">ODNI guidance dated July 31 directs the Department of War and the Intelligence Community to let current and former employees report UAP information to designated &quot;PURSUE&quot; representatives notwithstanding prior non-disclosure agreements; one legal summary so far, and it is a month old. <a href="https://www.dlapiper.com/en-us/insights/publications/2026/08/odni-issues-preliminary-guidance-on-disclosure-of-unidentified-anomalous-phenomena" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Wed Aug 19</span><span class="b-beat">Consciousness &amp; The Nonphysical</span><span class="b-line">IRVA&#x27;s annual conference runs October 1-4 in Dayton, Ohio, near Wright-Patterson AFB, with Stargate-era figures Dale Graff and Paul H. Smith plus co-founder Lyn Buchanan speaking, live target sessions, and a Zoom option for remote attendees. <a href="https://natlawreview.com/press-releases/international-remote-viewing-association-irva-announces-annual-conference" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Thu Sep 10</span><span class="b-beat">The Dance World</span><span class="b-line">&quot;Beyond the Stardust,&quot; directed and choreographed by Niegel Smith with 12 original songs performed live by The Illustrious Blacks, opened at The Flea Theater on September 10 and runs through October 18, with the audience dancing across two stages rather than sitting. <a href="https://dancemagazine.com/beyond-the-stardust/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Tue Sep 1</span><span class="b-beat">The Dance World</span><span class="b-line">The Asian American Ballet Project opened its first-ever Open Call for Choreographers, running September 1 through October 13, with $1,000 stipends and two-week residencies of 15 rehearsal hours leading to summer 2027 performances. <a href="https://asianamericanballetproject.org/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Fri Aug 14</span><span class="b-beat">The Dance World</span><span class="b-line">Dance/USA&#x27;s new executive director Michele Kumi Baer says membership revenue has fallen roughly 50% since 2018, leaving 4.5 staff and a $1.6M budget, and is rebuilding the org as a &quot;field catalyst&quot; rather than a grant passthrough. <a href="https://dancemagazine.com/dance-usa-new-executive-director/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Wed Sep 9</span><span class="b-beat">Comedy, Puppetry &amp; TV</span><span class="b-line">SNL&#x27;s Season 52 premieres September 26, its earliest start since 2012, with Jalen Brunson hosting the debut, then Dakota Johnson on October 3, Shane Gillis on October 10 and Inde Navarrette on Halloween. <a href="https://hollywoodlife.com/2026/09/09/saturday-night-love-2026-hosts-season-52/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Mon Sep 14</span><span class="b-beat">Comedy, Puppetry &amp; TV</span><span class="b-line">Slamdance&#x27;s late deadline for Features, Shorts, Episodic and DIG entries closes September 14, with an extended window September 15 to October 6 at $90 for shorts, episodic and DIG and $130 for features; notifications December 17. <a href="https://slamdance.com/festival-submit/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Fri Sep 4</span><span class="b-beat">Books &amp; Publishing</span><span class="b-line">A NielsenIQ BookData and Federation of Indian Publishers report puts India&#x27;s publishing sector at roughly $10.1B in print, $700M digital and $500M in scholarly journals for 2025-26, employing about 375,534 people, and projects $21 billion by 2030-31. <a href="https://publishingperspectives.com/2026/09/new-report-explores-indias-growing-publishing-market/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Tue Sep 1</span><span class="b-beat">The Operator</span><span class="b-line">n8n release 2.38 stopped counting error-workflow executions against quota on all plans, so handling a failed run no longer eats execution credits on top of the failure; you still have to attach an error workflow in settings. <a href="https://docs.n8n.io/changelog" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Thu Sep 3</span><span class="b-beat">The Operator</span><span class="b-line">Resend shipped an automatic Link Checker in its Broadcast and Template editors that flags four link problems before publish: 404s, missing or empty URLs, placeholders like example.com, and anchor links that fail in most email clients. <a href="https://resend.com/changelog/link-checker" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Thu Aug 13</span><span class="b-beat">The AI Builder</span><span class="b-line">Gemini 3.7 Flash runs $0.75 and $3.75 per million input and output tokens through December 31, reverting to $1.50 and $7.50 on January 1, and scores 65.3% on DeepSWE v1.1 against the prior 49.0%. <a href="https://antigravity.google/blog/gemini-3-7-flash-in-google-antigravity" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Thu Sep 10</span><span class="b-beat">The AI Builder</span><span class="b-line">OpenAI&#x27;s GPT-Live-1 listens and speaks at the same time, handles interruptions in real time, ships with 12 voices at $0.05 per minute for the voice layer alone, and OpenAI reports it cuts unwanted interruptions by nearly 80% versus prior systems. <a href="https://www.testingcatalog.com/openai-launches-gpt-live-1-for-full-duplex-voice-agents/" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Sat Sep 5</span><span class="b-beat">Music &amp; Guitar</span><span class="b-line">Google released Lyria 3.5 into the Gemini app, AI Studio and the Gemini API worldwide, generating full stereo songs up to three minutes with real verse, chorus and bridge structure; Google has not disclosed what it was trained on. <a href="https://weraveyou.com/2026/09/google-lyria-3-5-gemini-ai-music-generation" target="_blank" rel="noopener">source</a></span></li><li><span class="b-date">Wed Aug 19</span><span class="b-beat">Human Flourishing</span><span class="b-line">The FDA approved GENGLYCOS, the first gene therapy for Glycogen Storage Disease Type Ia, which affects an estimated 1,500-2,500 Americans who otherwise eat cornstarch every few hours around the clock; the 46-person Phase 3 trial showed a significant drop in cornstarch need at 48 weeks (p&lt;0.001). <a href="https://ir.ultragenyx.com/news-releases/news-release-details/ultragenyx-announces-us-fda-approval-genglycostm-gene-therapy" target="_blank" rel="noopener">source</a></span></li></ul>
-  <p class="total"><span>Stories this issue</span><span>13 &middot; 15 receipts</span></p>
-</section>
+  
+  <section class="sec ruled" id="beat-0" aria-labelledby="beat-0-h">
+    <div class="sec-head">
+      <p class="kicker">Section</p>
+      <h2 class="h-sec" id="beat-0-h">Consciousness &amp; The Nonphysical</h2>
+    </div>
+    <div class="grid" style="margin-top:48px">
+      
 
-<section class="calendar" id="calendar">
-  <h3 class="beat-head">On the calendar</h3>
-  <p class="intro">Dated things from this week's reporting. Pacific unless noted.</p>
-  <ul><li><span class="c-date">Mon Sep 14</span><span class="c-label">FDA public hearing on psychedelic therapy</span><span class="c-beat">Consciousness &amp; The Nonphysical</span></li><li><span class="c-date">Mon Sep 14</span><span class="c-label">Slamdance late deadline closes for features, shorts, episodic and DIG</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Tue Sep 15</span><span class="c-label">Starship Flight 14 launch window opens, no catch attempt</span><span class="c-beat">The Universe</span></li><li><span class="c-date">Tue Sep 15</span><span class="c-label">Dancing With the Stars season 35 premiere, night one</span><span class="c-beat">The Dance World</span></li><li><span class="c-date">Tue Sep 15</span><span class="c-label">National Book Awards longlists begin rolling out (Sept 15-17)</span><span class="c-beat">Books &amp; Publishing</span></li><li><span class="c-date">Wed Sep 16</span><span class="c-label">Dancing With the Stars season 35 premiere, night two</span><span class="c-beat">The Dance World</span></li><li><span class="c-date">Wed Sep 16</span><span class="c-label">The Joyce Theater&#x27;s Fall 2026/Winter 2027 season opens</span><span class="c-beat">The Dance World</span></li><li><span class="c-date">Tue Sep 22</span><span class="c-label">Booker Prize shortlist announced, Southbank Centre, livestreamed</span><span class="c-beat">Books &amp; Publishing</span></li><li><span class="c-date">Sat Sep 26</span><span class="c-label">SNL Season 52 premiere with host Jalen Brunson</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Sun Sep 27</span><span class="c-label">Puppet Up! tour opens in Boston</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Tue Sep 29</span><span class="c-label">Puppet Up! in Philadelphia</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Wed Sep 30</span><span class="c-label">Puppet Up! in Washington DC</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Thu Oct 1</span><span class="c-label">IRVA annual conference, Dayton, Ohio (Oct 1-4, Zoom option)</span><span class="c-beat">Consciousness &amp; The Nonphysical</span></li><li><span class="c-date">Fri Oct 2</span><span class="c-label">Puppet Up! at Tribeca PAC, New York (Oct 2-3)</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Sat Oct 3</span><span class="c-label">Jet Lag: The Game season finale screens in 61 theaters</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Mon Oct 5</span><span class="c-label">FDA written comments close on psychedelic therapy hearing</span><span class="c-beat">Consciousness &amp; The Nonphysical</span></li><li><span class="c-date">Tue Oct 6</span><span class="c-label">Limon Dance Company&#x27;s 80th anniversary at the Joyce (Oct 6-11)</span><span class="c-beat">The Dance World</span></li><li><span class="c-date">Tue Oct 6</span><span class="c-label">Slamdance extended submission window closes</span><span class="c-beat">Comedy, Puppetry &amp; TV</span></li><li><span class="c-date">Thu Oct 8</span><span class="c-label">getAbstract Book Award winners announced at Frankfurt Book Fair</span><span class="c-beat">Books &amp; Publishing</span></li><li><span class="c-date">Tue Oct 13</span><span class="c-label">Asian American Ballet Project Open Call for Choreographers closes</span><span class="c-beat">The Dance World</span></li></ul>
-</section>
+<article class="card" id="aware-ii-near-death-shape" data-beat="Consciousness &amp; The Nonphysical">
+  
+  <p class="kicker">Consciousness &amp; The Nonphysical<span class="chip">early reports</span></p>
+  <h3 class="h-card hl" style=""><a href="https://easternherald.com/2026/08/29/near-death-experience-nde-aware-study-nyu-cardiac-arrest-consciousness/" target="_blank" rel="noopener">Early reports: near-death experiences may share one shape worldwide</a></h3>
+  <p class="deck" style="font-size:19px">A 15-year cardiac-arrest study across four countries found the same structural elements in survivors&#39; accounts regardless of nationality or religion.</p>
+  <div class="body"><p>AWARE II is a study run out of NYU Langone by Dr. Sam Parnia that does something most consciousness research cannot: it watches people during clinical death. Cardiac arrest is the cleanest natural experiment available, because the heart stops, blood stops reaching the brain, and the person is either resuscitated or not. Over more than 15 years, the study tracked 550 cardiac-arrest survivors across the United States, United Kingdom, Canada and Austria.</p><p>About a quarter of them recalled an experience from the period when they were clinically dead. The interesting finding is not that they recalled something. It is what the recollections had in common. Reported as strikingly consistent structural elements: a sense of detachment from the body, an awareness of the resuscitation happening, a boundary of some kind, and encounters with deceased relatives. That consistency held regardless of the survivor&#39;s nationality or religious background, which is the opposite of what you would expect if these were culturally scripted stories people tell afterward.</p><p>There is a second result with practical teeth. Survivors whose experiences were clinically acknowledged, rather than waved off as &#34;just a dream,&#34; fared better psychologically than those whose accounts were dismissed. That is a finding about how clinicians should talk to patients, and it stands on its own regardless of what the experience is.</p><p>Now the honest part, and it matters. This comes to us through a single secondary report of the underlying Resuscitation Plus paper, so treat the specifics as early reporting rather than settled. The study itself states it cannot rule out residual brain activity as the explanation. A shared structure is not proof of a shared destination; it may just mean brains fail in similar ways.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>the remote-viewing curriculum is built on honest scoring, and this is the same posture applied to the biggest question in the beat. A large, cross-cultural dataset with the authors naming their own strongest alternative explanation is exactly the kind of source worth putting next to your De Stefano notes.</aside>
+  <span class="srcline"><a href="https://easternherald.com/2026/08/29/near-death-experience-nde-aware-study-nyu-cardiac-arrest-consciousness/" target="_blank" rel="noopener">Read the original at Eastern Herald, reporting AWARE II / Resuscitation Plus →</a></span>
+  
+</article>
 
 
+<article class="card" id="uva-obe-trial-null-with-twist" data-beat="Consciousness &amp; The Nonphysical">
+  
+  <p class="kicker">Consciousness &amp; The Nonphysical</p>
+  <h3 class="h-card hl" style=""><a href="https://www.uvahealth.com/news/trial-testing-out-of-body-experiences-yields-unexpected-twist" target="_blank" rel="noopener">An out-of-body trial failed its test and found something else</a></h3>
+  <p class="deck" style="font-size:19px">UVA researchers got chance-level results on the target they set out to test, then two participants described what the scientists were doing behind closed doors.</p>
+  <div class="body"><p>The University of Virginia&#39;s Division of Perceptual Studies runs the kind of experiment that is easy to do badly. The protocol here was tight: 21 Brazilian participants, each attempting an out-of-body experience and then trying to identify a random object displayed on a laptop in a different room. Pre-registered target, one right answer, no wiggle room about what counts as a hit.</p><p>Accuracy was no better than chance. That is the headline result, and the team published it as such, which is worth pausing on. A null result is a study that found nothing, and in this field nulls have a habit of quietly not getting written up. This one did.</p><p>Then the part they did not plan for. Two participants, unprompted, described the researchers&#39; locations and what they were doing behind closed doors. That was not the target, not the hypothesis, and not something the protocol was designed to score. The team reported it anyway as an unplanned finding, published in the journal Explore, with the researchers named on the paper: Marina Weiler, Damon Abraham, David J.P. Acunzo and Niffe Hermansson.</p><p>The caveat is the one the researchers themselves imply by calling it unplanned. An anomaly noticed after the fact, in two people out of 21, with no pre-set criteria for what would have counted as a miss, is a lead and not a result. It is the thing you design the next study around, not the thing you conclude from.</p><p>Which is the whole point. This is what the field looks like when it behaves: say what you predicted, report that it failed, and report the odd thing too.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>your CRV curriculum&#39;s entire premise is honest scoring, including the sessions that miss. This is a lab modeling that discipline in public, and the Division of Perceptual Studies is now worth a standing spot on your source list next to IRVA.</aside>
+  <span class="srcline"><a href="https://www.uvahealth.com/news/trial-testing-out-of-body-experiences-yields-unexpected-twist" target="_blank" rel="noopener">Read the original at UVA Health: Trial testing out-of-body experiences yields unexpected twist →</a></span>
+  
+</article>
+
+    </div>
+    
+  </section>
+  
+  <section class="sec ruled" id="beat-1" aria-labelledby="beat-1-h">
+    <div class="sec-head">
+      <p class="kicker">Section</p>
+      <h2 class="h-sec" id="beat-1-h">The Dance World</h2>
+    </div>
+    <div class="grid" style="margin-top:48px">
+      
+
+<article class="card" id="dwts-season-35-two-night-premiere" data-beat="The Dance World">
+  
+  <p class="kicker">The Dance World</p>
+  <h3 class="h-card hl" style=""><a href="https://www.goodmorningamerica.com/culture/story/dancing-with-the-stars-season-35-what-to-know-136124082" target="_blank" rel="noopener">Dancing With the Stars opens season 35 across two nights</a></h3>
+  <p class="deck" style="font-size:19px">The September 15 and 16 premiere brings in a pro who won her spot on a spinoff competition rather than through the usual pipeline.</p>
+  <div class="body"><p>Season 35 of &#34;Dancing With the Stars&#34; premieres with back-to-back nights on Tuesday September 15 and Wednesday September 16 on ABC and Disney+, then settles into a regular Tuesday 8pm slot. The celebrity side of the cast includes Jenna Dewan, Julia Stiles, chef Giada De Laurentiis and singer Taylor Hanson.</p><p>The interesting casting is on the professional side. Adele Zaikman joins the pro roster after winning &#34;Dancing with the Stars: The Next Pro,&#34; a spinoff competition, and is paired with Conner Leavitt. Longtime pro Sharna Burgess returns after a multi-year hiatus.</p><p>Zaikman&#39;s route is the part worth noticing. The traditional path onto a show like this runs through competition circuits, conventions, and whoever happens to know a casting producer, which is to say through a network that is mostly invisible from outside. A televised competition for the job makes that pipeline public and legible: here is the standard, here is the audition, here is who cleared it. That is a small structural change in how a closed room gets entered, and it is the same change that shows up whenever any gatekept field publishes its criteria.</p><p>The caveat is that one spinoff does not reroute an industry, and a competition show is still a show, cast for television as much as for technique.</p><p>Still, for a business built on developing dancers, the question of how somebody gets seen is not an abstraction. It is the product.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>Travis came up through exactly this pipeline at SYTYCD, and Travis Wall Studio sells the development half of it. A public, competitive on-ramp to a pro slot is a live case study in how visibility gets manufactured, which is the thing your students are actually buying.<br><span class="cal-pill">Tue Sep 15 · Dancing With the Stars season 35 premiere, night one</span></aside>
+  <span class="srcline"><a href="https://www.goodmorningamerica.com/culture/story/dancing-with-the-stars-season-35-what-to-know-136124082" target="_blank" rel="noopener">Read the original at Good Morning America: Dancing With the Stars season 35, what to know →</a></span>
+  
+</article>
+
+    </div>
+    
+  </section>
+  
+  <section class="sec ruled" id="beat-2" aria-labelledby="beat-2-h">
+    <div class="sec-head">
+      <p class="kicker">Section</p>
+      <h2 class="h-sec" id="beat-2-h">Comedy, Puppetry &amp; TV</h2>
+    </div>
+    <div class="grid" style="margin-top:48px">
+      
+
+<article class="card" id="puppet-up-first-tour-in-15-years" data-beat="Comedy, Puppetry &amp; TV">
+  
+  <p class="kicker">Comedy, Puppetry &amp; TV</p>
+  <h3 class="h-card hl" style=""><a href="https://www.henson.com/its-time-to-puppet-up-brian-hensons-hilarious-stage-show-celebrates-summer-with-eight-must-see-performances/" target="_blank" rel="noopener">Brian Henson&#39;s Puppet Up! tours for the first time in 15 years</a></h3>
+  <p class="deck" style="font-size:19px">An adults-only improv show with 80-plus Henson puppets sold out Hollywood and is now booking Boston, Philadelphia, DC and New York.</p>
+  <div class="body"><p>Puppet Up! is Brian Henson&#39;s adults-only improvised puppet show, and the staging is the clever part. More than 80 Jim Henson Company puppets are performed live by puppeteers working at floor level, while cameras capture only the puppets and project that feed onto screens above them. The audience gets both at once: the finished shot, and the sweaty humans making it. It is the reveal and the magic trick running in the same room.</p><p>After a sold-out Hollywood run, the show is going out on the road for the first time in 15 years. Confirmed fall dates are Boston on September 27, Philadelphia on September 29, Washington DC on September 30, and New York&#39;s Tribeca Performing Arts Center on October 2 and 3, hosted by Patrick Bristow.</p><p>What makes this a story rather than a listing is the economics it demonstrates. Unscripted adult puppet comedy, with no script to license and no post-production, sold out a residency and is now worth the cost of moving 80 puppets and a crew between four cities in a week. The format is repeatable by design, because improv means the show regenerates its own material every night. That is a very different cost structure from scripted comedy, and it is the reason a 15-year gap can close this fast.</p><p>The caveat is scale, not quality: four cities and a handful of dates is a test tour, not a national rollout, and whether it extends past October is not something the announcement says.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>this is the closest working comparable to The Stacy Show anywhere in the market, run by the Henson lineage itself. If you can get to the Tribeca PAC dates on October 2 or 3, that is a night of primary research on how the live format actually plays.<br><span class="cal-pill">Fri Oct 2 · Puppet Up! at Tribeca PAC, New York (Oct 2-3)</span></aside>
+  <span class="srcline"><a href="https://www.henson.com/its-time-to-puppet-up-brian-hensons-hilarious-stage-show-celebrates-summer-with-eight-must-see-performances/" target="_blank" rel="noopener">Read the original at The Jim Henson Company: It&#39;s time to Puppet Up! →</a></span>
+  <details class="sources"><summary>Receipts (2)</summary>
+<ul><li><a href="https://www.henson.com/its-time-to-puppet-up-brian-hensons-hilarious-stage-show-celebrates-summer-with-eight-must-see-performances/" target="_blank" rel="noopener">The Jim Henson Company: It&#39;s time to Puppet Up!</a> <span class="d">2026-08-19</span></li><li><a href="https://www.broadwayworld.com/philadelphia/article/Brian-Hensons-Stage-Show-PUPPET-UP-Will-Embark-on-Fall-Tour-20260819" target="_blank" rel="noopener">BroadwayWorld: Brian Henson&#39;s Puppet Up! will embark on fall tour</a> <span class="d">2026-08-19</span></li></ul></details>
+</article>
+
+
+<article class="card" id="jet-lag-game-hits-movie-theaters" data-beat="Comedy, Puppetry &amp; TV">
+  
+  <p class="kicker">Comedy, Puppetry &amp; TV</p>
+  <h3 class="h-card hl" style=""><a href="https://press.nebula.tv/nebula-and-regal-global-entertainment-expand-partnership-to-bring-jet-lag-the-game-to-the-big-screen/" target="_blank" rel="noopener">A YouTube game show is booking 61 movie theaters</a></h3>
+  <p class="deck" style="font-size:19px">Nebula is putting the Jet Lag: The Game season finale on Regal, Picturehouse and Cineworld screens across the US and UK on October 3.</p>
+  <div class="body"><p>Nebula is the streaming platform a group of YouTube creators built and own themselves, which matters for what follows. On September 3 it announced it is expanding an existing partnership with Regal, Picturehouse and Cineworld to screen the Season 19 finale of &#34;Jet Lag: The Game&#34; theatrically on October 3, across 28 Regal, 15 Picturehouse and 18 Cineworld locations in the US and UK. Tickets went on sale September 8. The expansion follows a London premiere in August that worked.</p><p>The distribution ladder used to have a missing rung. Theatrical release was gated by studios and distributors who decided what was worth a screen, and a creator-made show was not in the conversation regardless of its audience. What the Nebula deal shows is that the gate now opens on a different question: can you fill the seats on a Saturday. If yes, the chain will book you, because an empty auditorium earns nothing and a creator with a devoted audience is a known quantity in a way a new film is not.</p><p>Sixty-one locations is not a wide release, and that is worth saying plainly. This is an event screening, one night, for people who already watch the show. But the path from &#34;one night&#34; to &#34;a real window&#34; is a path that exists now, and it did not a few years ago.</p><p>The receipt is the specificity. Not a partnership announcement in principle, but a date, a count, and tickets already on sale.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>The Stacy Show is a small property looking for a distribution ladder, and this is somebody else&#39;s rungs, published with numbers. Nebula&#39;s press room is worth adding to your watch list; it is breaking this kind of deal before the trades write it up.<br><span class="cal-pill">Sat Oct 3 · Jet Lag: The Game season finale screens in 61 theaters</span></aside>
+  <span class="srcline"><a href="https://press.nebula.tv/nebula-and-regal-global-entertainment-expand-partnership-to-bring-jet-lag-the-game-to-the-big-screen/" target="_blank" rel="noopener">Read the original at Nebula press room: Nebula and Regal Global Entertainment expand partnership →</a></span>
+  
+</article>
+
+    </div>
+    
+  </section>
+  
+  <section class="sec ruled" id="beat-3" aria-labelledby="beat-3-h">
+    <div class="sec-head">
+      <p class="kicker">Section</p>
+      <h2 class="h-sec" id="beat-3-h">Books &amp; Publishing</h2>
+    </div>
+    <div class="grid" style="margin-top:48px">
+      
+
+<article class="card" id="getabstract-human-authorship-criteria" data-beat="Books &amp; Publishing">
+  
+  <p class="kicker">Books &amp; Publishing</p>
+  <h3 class="h-card hl" style=""><a href="https://publishingperspectives.com/2026/08/recognizing-human-contributions-longlist-revealed-for-the-26th-getabstract-international-book-award-for-business-impact/" target="_blank" rel="noopener">A book award now judges on visible human authorship</a></h3>
+  <p class="deck" style="font-size:19px">The getAbstract International Book Award built &#34;who actually wrote this&#34; into its criteria and longlisted ten titles under it.</p>
+  <div class="body"><p>A longlist is the first public cut in a prize, the stage where a field of submissions narrows to a set of finalists-in-waiting. On August 31, the 26th getAbstract International Book Award for Business Impact revealed its longlist and framed the whole thing around a criterion that did not need stating until recently: that a human wrote the book.</p><p>Ten titles are longlisted in the international category, including &#34;What Is Intelligence?&#34; by Blaise Aguera y Arcas and &#34;Creativity in the Age of AI.&#34; Rights Director Laura Lesum put the reasoning plainly: &#34;at a time when knowledge is increasingly processed by AI systems, making its origins visible matters more than ever.&#34; Winners are announced October 8 at the Frankfurt Book Fair.</p><p>The word doing the work in that quote is &#34;visible.&#34; Not banned, not detected, not policed. Visible. A prize cannot verify how a manuscript was made, and this one is not pretending it can. What it can do is make provenance part of what it rewards, which turns a fuzzy anxiety into a stated value that authors and publishers can point at.</p><p>The caveat: this is one award in one category, and a criterion is not an enforcement mechanism. Nobody is auditing drafts.</p><p>But it is a publishing institution deciding, on the record, that the origin of a book is part of the book&#39;s worth. That is the kind of quiet institutional signal that tends to precede a norm rather than follow one, and ghostwriting sits in an interesting spot next to it: a discipline that is, by definition, a human voice standing behind somebody else&#39;s page.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>you are ghostwriting a dance-world memoir, which means you are professionally in the business of invisible human authorship. When the industry starts making provenance a stated value, the question of how a ghostwritten book describes its own making stops being etiquette and starts being positioning.<br><span class="cal-pill">Thu Oct 8 · getAbstract International Book Award winners announced, Frankfurt</span></aside>
+  <span class="srcline"><a href="https://publishingperspectives.com/2026/08/recognizing-human-contributions-longlist-revealed-for-the-26th-getabstract-international-book-award-for-business-impact/" target="_blank" rel="noopener">Read the original at Publishing Perspectives: Longlist revealed for the 26th getAbstract International Book Award →</a></span>
+  
+</article>
+
+    </div>
+    
+  </section>
+  
+  <section class="sec ruled" id="beat-4" aria-labelledby="beat-4-h">
+    <div class="sec-head">
+      <p class="kicker">Section</p>
+      <h2 class="h-sec" id="beat-4-h">The Operator</h2>
+    </div>
+    <div class="grid" style="margin-top:48px">
+      
+
+<article class="card" id="squarespace-email-automation-logic" data-beat="The Operator">
+  
+  <p class="kicker">The Operator</p>
+  <h3 class="h-card hl" style=""><a href="https://www.squarespace.com/blog/product-updates-august-2026" target="_blank" rel="noopener">Squarespace email campaigns get tagging, filters and conditions</a></h3>
+  <p class="deck" style="font-size:19px">Three additions let the same automation treat a waitlisted customer and a paying one differently, without anyone sorting a list by hand.</p>
+  <div class="body"><p>Squarespace&#39;s August product update, posted August 25, added three things to Email Campaigns that together change what the tool is for.</p><p>Auto-Tagging labels customers automatically based on what they do, like making a purchase or filling out a form. A tag is just a sticky note on a contact record, but an automatic one means the sorting happens at the moment of the behavior rather than in a spreadsheet later. Trigger Filters let you segment an audience by the data people entered in a form response, so the answers to your intake questions become the basis for who gets what. Conditions split an automation into branches, so different customers walk different follow-up paths from the same starting point. The same update added downloadable, branded invoice PDFs.</p><p>None of these is new as a concept; dedicated email platforms have had branching for years. What is new is that they are sitting inside the website builder, one layer away from the form and the checkout that generate the behavior in the first place. The value of that is not features, it is fewer joints. Every integration between two systems is a place where a contact record goes stale or a tag never arrives, and removing a joint removes a class of silent failure.</p><p>The caveat: a branching automation is only as good as the segments you define, and a badly designed condition just delivers the wrong email faster.</p><p>For a small operation, that is still the difference between treating everyone identically and treating people like you noticed what they did.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>Squarespace is the front door of Travis Wall Studio, and premium positioning lives or dies on whether a waitlisted student and an enrolled one get the same email. Conditions plus Trigger Filters is the piece that makes scarcity-based funnels run without you hand-sorting anybody.</aside>
+  <span class="srcline"><a href="https://www.squarespace.com/blog/product-updates-august-2026" target="_blank" rel="noopener">Read the original at Squarespace Product Updates: August 2026 →</a></span>
+  
+</article>
+
+    </div>
+    
+  </section>
+  
+  <section class="sec ruled" id="beat-5" aria-labelledby="beat-5-h">
+    <div class="sec-head">
+      <p class="kicker">Section</p>
+      <h2 class="h-sec" id="beat-5-h">The AI Builder</h2>
+    </div>
+    <div class="grid" style="margin-top:48px">
+      
+
+<article class="card" id="openai-agents-api-public-beta" data-beat="The AI Builder">
+  
+  <p class="kicker">The AI Builder</p>
+  <h3 class="h-card hl" style=""><a href="https://openai.com/index/introducing-the-agents-api/" target="_blank" rel="noopener">OpenAI unbundled its coding agent and sold it as an API</a></h3>
+  <p class="deck" style="font-size:19px">The Agents API exposes the same session, sandbox and subagent machinery behind Codex, with no platform fee on top of tokens.</p>
+  <div class="body"><p>A harness is the unglamorous scaffolding around a model that makes it useful for long jobs: the thing that decides what stays in memory, which tools get offered, where the code actually runs, and what happens when a task takes nine hours instead of nine seconds. Building one is most of the work in building an agent. Until now, if you wanted OpenAI&#39;s harness, you used their product; you could not rent the plumbing.</p><p>On September 10, OpenAI released the Agents API in public beta. It exposes the same agent, environment and session infrastructure that powers Codex as a standalone service. Three pieces matter for a solo builder. Automatic context compaction means the agent trims its own working memory as a job runs long, instead of hitting a wall. On-demand tool search means it fetches a tool&#39;s definition only when it needs it, rather than paying tokens to carry every tool description in every request. And native multi-agent delegation means subagents run in parallel, each with its own context, so one long task splits into several short ones.</p><p>Sandboxes, the isolated machines where the agent&#39;s code actually runs, can be hosted by OpenAI or by nine partner platforms including Cloudflare, Vercel, DigitalOcean and E2B. There is no platform fee. You pay for tokens and tool usage, full stop.</p><p>The caveat is the phrase &#34;public beta,&#34; which in this industry means the interface will change and you should not wire anything load-bearing to it yet without expecting to rewire it.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>you already orchestrate with n8n plus Claude Code, and this is the first credible rented alternative for the long-running, multi-step builds. Worth a weekend test against the repeatable-client-site experiment before you decide whether to keep hand-wiring the harness yourself.</aside>
+  <span class="srcline"><a href="https://openai.com/index/introducing-the-agents-api/" target="_blank" rel="noopener">Read the original at OpenAI: Introducing the Agents API →</a></span>
+  
+</article>
+
+
+<article class="card" id="cognition-swe-2-cost-floor" data-beat="The AI Builder">
+  
+  <p class="kicker">The AI Builder</p>
+  <h3 class="h-card hl" style=""><a href="https://cognition.com/blog/swe-2" target="_blank" rel="noopener">A coding model matched the frontier at 64 percent less cost</a></h3>
+  <p class="deck" style="font-size:19px">Cognition&#39;s SWE-2 scores within a point of Claude Fable 5.1 on a hard coding benchmark while charging a fraction of the price.</p>
+  <div class="body"><p>The useful way to read a model release is as two numbers that have to move in opposite directions: how well it does the work, and what the work costs. Most releases move one. This one moved both.</p><p>Cognition released SWE-2 on September 10, post-trained from Kimi K3, a base model with 2.8 trillion parameters. Parameters are the tunable weights inside a model, roughly a measure of raw capacity, the way engine displacement is a rough measure of an engine. Post-training is the specialization pass on top of that base, where a general model gets taught to do one job well.</p><p>The scores: 50.0% on FrontierCode 1.1 Main, against 50.9% for Claude Fable 5.1. That is within a single point of a frontier model, at 64% less cost. On Terminal-Bench 2.1, which tests whether a model can actually operate a command line rather than just write code that looks right, it hits 92.8%. Cognition also reports it needs 58% fewer turns than its predecessor SWE-1.7 to land a real edit, which is the number a solo builder feels most directly, because every turn is a round trip you sit through.</p><p>The caveat, and it is a standing one for the whole category: these are the vendor&#39;s own benchmark disclosures on benchmarks the vendor selected. Cognition publishes them in more detail than most, which is a point in their favor, but a benchmark is not your codebase.</p><p>The trend underneath is the real receipt. The cost floor for agentic coding keeps dropping while capability holds flat or climbs.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>your Model Ladder rule says put the cheap model on the routine rung and save the expensive thinking for when it earns its keep. SWE-2 is a new candidate for that middle rung, and cheap enough that the agent-first client build stops being a decision and becomes a test you just run.</aside>
+  <span class="srcline"><a href="https://cognition.com/blog/swe-2" target="_blank" rel="noopener">Read the original at Cognition: SWE-2 →</a></span>
+  
+</article>
+
+    </div>
+    
+  </section>
+  
+  <section class="sec ruled" id="beat-6" aria-labelledby="beat-6-h">
+    <div class="sec-head">
+      <p class="kicker">Section</p>
+      <h2 class="h-sec" id="beat-6-h">Music &amp; Guitar</h2>
+    </div>
+    <div class="grid" style="margin-top:48px">
+      
+
+<article class="card" id="suno-v6-licensed-training" data-beat="Music &amp; Guitar">
+  
+  <p class="kicker">Music &amp; Guitar</p>
+  <h3 class="h-card hl" style=""><a href="https://techcrunch.com/2026/09/09/suno-replaces-its-ai-models-with-a-new-one-trained-on-licensed-music-as-copyright-suits-pile-up/" target="_blank" rel="noopener">Suno rebuilt its AI music models on licensed catalog</a></h3>
+  <p class="deck" style="font-size:19px">Three new models trained from scratch on catalog from Warner, BMG and Believe, with rightsholders paid per generation, and every older model retired the same day.</p>
+  <div class="body"><p>Training data is the whole fight in AI music. A generator learns by ingesting recordings, and the question nobody had a clean answer to was whether those recordings were licensed. Suno&#39;s answer, until now, was to argue about it in court.</p><p>On September 9, Suno launched v6, the experimental v6-wild, and the free v6-mini, all trained from scratch on catalog licensed from Warner Music Group, BMG and Believe, including its TuneCore arm, with those rightsholders paid per generation. Per generation is the load-bearing phrase. It means the payment is metered to use, not a one-time settlement, which is the structure a licensing chain needs if it is going to be a business rather than a truce. Every prior Suno model was retired the same day, which is a costly way to say the old ones were not defensible.</p><p>The gap is real. The training data excludes Universal Music Group and Sony Music Entertainment recordings: neither label is among Suno&#39;s three licensing partners, and both labels&#39; infringement suits against Suno continue. So this is the first AI music generator with a real, paid rights chain behind part of its catalog, not all of it.</p><p>The practical version for anyone putting generated music under a monetized video: the provenance story is much better than it was last week, and still not complete. Read Suno&#39;s own output-license terms before you rely on it, because a clean training set and a clean output license are two different documents.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>Suno is already in your toolkit, and the question that actually blocks you is whether a generated cue is safe under a monetized Stacy Show upload. This moves that question from &#34;nobody knows&#34; to &#34;check the output terms,&#34; which is a meaningfully better place to be.</aside>
+  <span class="srcline"><a href="https://techcrunch.com/2026/09/09/suno-replaces-its-ai-models-with-a-new-one-trained-on-licensed-music-as-copyright-suits-pile-up/" target="_blank" rel="noopener">Read the original at TechCrunch: Suno replaces its AI models with a new one trained on licensed music →</a></span>
+  <details class="sources"><summary>Receipts (2)</summary>
+<ul><li><a href="https://techcrunch.com/2026/09/09/suno-replaces-its-ai-models-with-a-new-one-trained-on-licensed-music-as-copyright-suits-pile-up/" target="_blank" rel="noopener">TechCrunch: Suno replaces its AI models with a new one trained on licensed music</a> <span class="d">2026-09-09</span></li><li><a href="https://www.musicbusinessworldwide.com/suno-v6-ai-music-models-launch-in-partnership-with-wmg-bmg-and-believe/" target="_blank" rel="noopener">Music Business Worldwide: Suno v6 AI music models launch in partnership with WMG, BMG and Believe</a> <span class="d">2026-09-09</span></li></ul></details>
+</article>
+
+    </div>
+    
+  </section>
+  
+  <section class="sec ruled" id="beat-7" aria-labelledby="beat-7-h">
+    <div class="sec-head">
+      <p class="kicker">Section</p>
+      <h2 class="h-sec" id="beat-7-h">Human Flourishing</h2>
+    </div>
+    <div class="grid" style="margin-top:48px">
+      
+
+<article class="card" id="fda-approves-sevabertinib-lung-cancer" data-beat="Human Flourishing">
+  
+  <p class="kicker">Human Flourishing</p>
+  <h3 class="h-card hl" style=""><a href="https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-sevabertinib-locally-advanced-or-metastatic-non-squamous-non-small" target="_blank" rel="noopener">FDA approves an oral pill for a hard lung cancer subgroup</a></h3>
+  <p class="deck" style="font-size:19px">Sevabertinib produced a 75 percent response rate in previously untreated patients with a specific HER2 mutation.</p>
+  <div class="body"><p>Targeted therapy means a drug aimed at a specific broken part rather than at fast-dividing cells in general. The broken part here is HER2, also written ERBB2, a gene that codes for a protein sitting on the cell surface that tells the cell when to grow. Certain mutations in the part of that protein called the tyrosine kinase domain jam the signal permanently on, and the cell divides because it has been told to, forever.</p><p>On September 9 the FDA granted accelerated approval to sevabertinib, brand name Hyrnuo, for locally advanced or metastatic non-squamous non-small cell lung cancer carrying those HER2 activating mutations. In the SOHO-01 study of 69 previously untreated patients, the objective response rate, meaning the share of patients whose tumors measurably shrank, was 75%. Of those who responded, 73% were still responding at six months and 38% at twelve months.</p><p>Two caveats worth holding together. Accelerated approval is a conditional pathway: the FDA clears a drug based on a measure likely to predict benefit, like tumor shrinkage, while confirmatory trials run. It can be withdrawn. And 69 patients is a small trial, which is typical for a narrow genetic subgroup and still a small trial.</p><p>What makes it a receipt anyway is the shape of it. Sequence the tumor, find a specific mutation, take a pill twice a day. That is a workflow that barely existed fifteen years ago for lung cancer, and the patients in this subgroup previously had few good options.</p></div>
+  <aside class="desk"><p class="label">On our desk</p>the paper&#39;s job is to find the week&#39;s evidence that the world got more capable, and precision oncology is where that shows up most reliably. File it next to the CRISPR cholesterol result from Issue 001 as the same story told twice: read the specific defect, aim at the specific defect.</aside>
+  <span class="srcline"><a href="https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-sevabertinib-locally-advanced-or-metastatic-non-squamous-non-small" target="_blank" rel="noopener">Read the original at FDA: Accelerated approval to sevabertinib for locally advanced or metastatic non-squamous NSCLC →</a></span>
+  
+</article>
+
+    </div>
+    
+  </section>
+  
+
+  
+
+  
+
+  
+  <section class="sec ruled" id="briefly" aria-labelledby="br-h">
+    <div class="sec-head"><p class="kicker">Briefly</p><h2 class="h-sec" id="br-h">18 more, in a line each</h2></div>
+    <ul class="lines">
+      
+      <li><span class="when">Thu Sep 10</span>
+        <span class="what">The four-color theorem got a rare new proof: an algorithm running in n·log(n) steps instead of the 1997 proof&#39;s n², built by identifying 8,202 map configurations checkable in parallel rather than one at a time. <a href="https://www.quantamagazine.org/the-four-color-theorem-gets-a-rare-new-proof-20260910/" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Universe</span></span></li>
+      
+      <li><span class="when">Fri Aug 14</span>
+        <span class="what">MIT&#39;s Ming Guo filmed epithelial cells for up to 30 hours and found they pulse collectively in roughly hour-long cycles, with malignant cells staying synchronized about twice as long as healthy ones. <a href="https://news.mit.edu/2026/cells-pulse-together-malignant-cells-pulse-longest-0814" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Universe</span></span></li>
+      
+      <li><span class="when">Sun Sep 13</span>
+        <span class="what">Starship Flight 14 is targeting no earlier than September 15 after Booster 21&#39;s full-duration static fire on August 28, but this flight will not attempt a tower catch; Ship 41 is planned to splash down in the Indian Ocean. <a href="https://en.wikipedia.org/wiki/Starship_flight_test_14" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Universe</span></span></li>
+      
+      <li><span class="when">Thu Sep 10</span>
+        <span class="what">Optimi Health got Health Canada authorization for a Phase 2 trial of a single supervised dose of its own psilocybin for major depressive disorder, enrolling up to 200 participants, with dosing planned to start in the first half of 2027. <a href="https://www.globenewswire.com/news-release/2026/09/10/3359517/0/en/optimi-health-to-initiate-phase-2-clinical-trial-evaluating-psilocybin-assisted-therapy-for-major-depressive-disorder.html" target="_blank" rel="noopener">Read the original →</a><span class="tag">Consciousness &amp; The Nonphysical</span></span></li>
+      
+      <li><span class="when">Wed Aug 12</span>
+        <span class="what">ODNI guidance dated July 31 directs the Department of War and the Intelligence Community to let current and former employees report UAP information to designated &#34;PURSUE&#34; representatives notwithstanding prior non-disclosure agreements; one legal summary so far, and it is a month old. <a href="https://www.dlapiper.com/en-us/insights/publications/2026/08/odni-issues-preliminary-guidance-on-disclosure-of-unidentified-anomalous-phenomena" target="_blank" rel="noopener">Read the original →</a><span class="tag">Consciousness &amp; The Nonphysical</span></span></li>
+      
+      <li><span class="when">Wed Aug 19</span>
+        <span class="what">IRVA&#39;s annual conference runs October 1-4 in Dayton, Ohio, near Wright-Patterson AFB, with Stargate-era figures Dale Graff and Paul H. Smith plus co-founder Lyn Buchanan speaking, live target sessions, and a Zoom option for remote attendees. <a href="https://natlawreview.com/press-releases/international-remote-viewing-association-irva-announces-annual-conference" target="_blank" rel="noopener">Read the original →</a><span class="tag">Consciousness &amp; The Nonphysical</span></span></li>
+      
+      <li><span class="when">Thu Sep 10</span>
+        <span class="what">&#34;Beyond the Stardust,&#34; directed and choreographed by Niegel Smith with 12 original songs performed live by The Illustrious Blacks, opened at The Flea Theater on September 10 and runs through October 18, with the audience dancing across two stages rather than sitting. <a href="https://dancemagazine.com/beyond-the-stardust/" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Dance World</span></span></li>
+      
+      <li><span class="when">Tue Sep 1</span>
+        <span class="what">The Asian American Ballet Project opened its first-ever Open Call for Choreographers, running September 1 through October 13, with $1,000 stipends and two-week residencies of 15 rehearsal hours leading to summer 2027 performances. <a href="https://asianamericanballetproject.org/" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Dance World</span></span></li>
+      
+      <li><span class="when">Fri Aug 14</span>
+        <span class="what">Dance/USA&#39;s new executive director Michele Kumi Baer says membership revenue has fallen roughly 50% since 2018, leaving 4.5 staff and a $1.6M budget, and is rebuilding the org as a &#34;field catalyst&#34; rather than a grant passthrough. <a href="https://dancemagazine.com/dance-usa-new-executive-director/" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Dance World</span></span></li>
+      
+      <li><span class="when">Wed Sep 9</span>
+        <span class="what">SNL&#39;s Season 52 premieres September 26, its earliest start since 2012, with Jalen Brunson hosting the debut, then Dakota Johnson on October 3, Shane Gillis on October 10 and Inde Navarrette on Halloween. <a href="https://hollywoodlife.com/2026/09/09/saturday-night-love-2026-hosts-season-52/" target="_blank" rel="noopener">Read the original →</a><span class="tag">Comedy, Puppetry &amp; TV</span></span></li>
+      
+      <li><span class="when">Mon Sep 14</span>
+        <span class="what">Slamdance&#39;s late deadline for Features, Shorts, Episodic and DIG entries closes September 14, with an extended window September 15 to October 6 at $90 for shorts, episodic and DIG and $130 for features; notifications December 17. <a href="https://slamdance.com/festival-submit/" target="_blank" rel="noopener">Read the original →</a><span class="tag">Comedy, Puppetry &amp; TV</span></span></li>
+      
+      <li><span class="when">Fri Sep 4</span>
+        <span class="what">A NielsenIQ BookData and Federation of Indian Publishers report puts India&#39;s publishing sector at roughly $10.1B in print, $700M digital and $500M in scholarly journals for 2025-26, employing about 375,534 people, and projects $21 billion by 2030-31. <a href="https://publishingperspectives.com/2026/09/new-report-explores-indias-growing-publishing-market/" target="_blank" rel="noopener">Read the original →</a><span class="tag">Books &amp; Publishing</span></span></li>
+      
+      <li><span class="when">Tue Sep 1</span>
+        <span class="what">n8n release 2.38 stopped counting error-workflow executions against quota on all plans, so handling a failed run no longer eats execution credits on top of the failure; you still have to attach an error workflow in settings. <a href="https://docs.n8n.io/changelog" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Operator</span></span></li>
+      
+      <li><span class="when">Thu Sep 3</span>
+        <span class="what">Resend shipped an automatic Link Checker in its Broadcast and Template editors that flags four link problems before publish: 404s, missing or empty URLs, placeholders like example.com, and anchor links that fail in most email clients. <a href="https://resend.com/changelog/link-checker" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Operator</span></span></li>
+      
+      <li><span class="when">Thu Aug 13</span>
+        <span class="what">Gemini 3.7 Flash runs $0.75 and $3.75 per million input and output tokens through December 31, reverting to $1.50 and $7.50 on January 1, and scores 65.3% on DeepSWE v1.1 against the prior 49.0%. <a href="https://antigravity.google/blog/gemini-3-7-flash-in-google-antigravity" target="_blank" rel="noopener">Read the original →</a><span class="tag">The AI Builder</span></span></li>
+      
+      <li><span class="when">Thu Sep 10</span>
+        <span class="what">OpenAI&#39;s GPT-Live-1 listens and speaks at the same time, handles interruptions in real time, ships with 12 voices at $0.05 per minute for the voice layer alone, and OpenAI reports it cuts unwanted interruptions by nearly 80% versus prior systems. <a href="https://www.testingcatalog.com/openai-launches-gpt-live-1-for-full-duplex-voice-agents/" target="_blank" rel="noopener">Read the original →</a><span class="tag">The AI Builder</span></span></li>
+      
+      <li><span class="when">Sat Sep 5</span>
+        <span class="what">Google released Lyria 3.5 into the Gemini app, AI Studio and the Gemini API worldwide, generating full stereo songs up to three minutes with real verse, chorus and bridge structure; Google has not disclosed what it was trained on. <a href="https://weraveyou.com/2026/09/google-lyria-3-5-gemini-ai-music-generation" target="_blank" rel="noopener">Read the original →</a><span class="tag">Music &amp; Guitar</span></span></li>
+      
+      <li><span class="when">Wed Aug 19</span>
+        <span class="what">The FDA approved GENGLYCOS, the first gene therapy for Glycogen Storage Disease Type Ia, which affects an estimated 1,500-2,500 Americans who otherwise eat cornstarch every few hours around the clock; the 46-person Phase 3 trial showed a significant drop in cornstarch need at 48 weeks (p&lt;0.001). <a href="https://ir.ultragenyx.com/news-releases/news-release-details/ultragenyx-announces-us-fda-approval-genglycostm-gene-therapy" target="_blank" rel="noopener">Read the original →</a><span class="tag">Human Flourishing</span></span></li>
+      
+    </ul>
+  </section>
+  
+
+  
+  <section class="sec ruled" id="calendar" aria-labelledby="cal-h">
+    <div class="sec-head"><p class="kicker">Calendar</p><h2 class="h-sec" id="cal-h">On the calendar</h2>
+      <p class="sub">Dated things from this week's reporting. Pacific time unless noted.</p></div>
+    <ul class="lines">
+      <li><span class="when">Mon Sep 14</span><span class="what">FDA public hearing on psychedelic therapy<span class="tag">Consciousness &amp; The Nonphysical</span></span></li><li><span class="when">Mon Sep 14</span><span class="what">Slamdance late deadline closes for features, shorts, episodic and DIG<span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Tue Sep 15</span><span class="what">Starship Flight 14 launch window opens, no catch attempt<span class="tag">The Universe</span></span></li><li><span class="when">Tue Sep 15</span><span class="what">Dancing With the Stars season 35 premiere, night one<span class="tag">The Dance World</span></span></li><li><span class="when">Tue Sep 15</span><span class="what">National Book Awards longlists begin rolling out (Sept 15-17)<span class="tag">Books &amp; Publishing</span></span></li><li><span class="when">Wed Sep 16</span><span class="what">Dancing With the Stars season 35 premiere, night two<span class="tag">The Dance World</span></span></li><li><span class="when">Wed Sep 16</span><span class="what">The Joyce Theater&#39;s Fall 2026/Winter 2027 season opens<span class="tag">The Dance World</span></span></li><li><span class="when">Tue Sep 22</span><span class="what">Booker Prize shortlist announced, Southbank Centre, livestreamed<span class="tag">Books &amp; Publishing</span></span></li><li><span class="when">Sat Sep 26</span><span class="what">SNL Season 52 premiere with host Jalen Brunson<span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Sun Sep 27</span><span class="what">Puppet Up! tour opens in Boston<span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Tue Sep 29</span><span class="what">Puppet Up! in Philadelphia<span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Wed Sep 30</span><span class="what">Puppet Up! in Washington DC<span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Thu Oct 1</span><span class="what">IRVA annual conference, Dayton, Ohio (Oct 1-4, Zoom option)<span class="tag">Consciousness &amp; The Nonphysical</span></span></li><li><span class="when">Fri Oct 2</span><span class="what">Puppet Up! at Tribeca PAC, New York (Oct 2-3)<span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Sat Oct 3</span><span class="what">Jet Lag: The Game season finale screens in 61 theaters<span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Mon Oct 5</span><span class="what">FDA written comments close on psychedelic therapy hearing<span class="tag">Consciousness &amp; The Nonphysical</span></span></li><li><span class="when">Tue Oct 6</span><span class="what">Limon Dance Company&#39;s 80th anniversary at the Joyce (Oct 6-11)<span class="tag">The Dance World</span></span></li><li><span class="when">Tue Oct 6</span><span class="what">Slamdance extended submission window closes<span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Thu Oct 8</span><span class="what">getAbstract Book Award winners announced at Frankfurt Book Fair<span class="tag">Books &amp; Publishing</span></span></li><li><span class="when">Tue Oct 13</span><span class="what">Asian American Ballet Project Open Call for Choreographers closes<span class="tag">The Dance World</span></span></li>
+    </ul>
+  </section>
+  
 
 
 
+  <section class="sec ruled made" id="made" aria-labelledby="made-h">
+    <div class="sec-head"><p class="kicker">Behind the paper</p><h2 class="h-sec" id="made-h">How this paper is made</h2></div>
+    <p>A newsroom has a lot of jobs and only a few of them need a big brain. The trick is to give each job the cheapest model that can do it well, and to keep the one that writes and the one that checks separate so the paper never grades its own homework. Here is exactly what ran to make this issue, with the token counts. A token is a chunk of text about three quarters of a word; it&#39;s the unit these models are metered in.</p><p>This was the first edition made entirely by the scheduled task: no live session, no one watching. The one-time vault mapping from Issue 001 did not run again; the editor read your reactions on this page instead (there were none yet).</p>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Stage</th><th>Model</th><th class="num">Tokens</th><th>Plain words</th></tr></thead>
+      <tbody><tr><td>Read the charter and your reactions</td><td>Sonnet (managing editor)</td><td class="num">≈45,000</td><td>Read the Editorial Charter, the scout brief, last issue for dedupe, this week&#39;s seven AI digests, and the reaction and beat collections on this page (both empty).</td></tr><tr><td>Scout the beats</td><td>Sonnet ×9</td><td class="num">≈843,000</td><td>One scout per standing beat, in parallel. Each opened every source to confirm date and facts. 47 leads came back; the AI Builder scout worked from your daily digests and only searched to confirm.</td></tr><tr><td>Write the articles</td><td>Opus ×1</td><td class="num">≈102,000</td><td>Worked only from the scout notes, in the charter&#39;s voice rules: first principles, every term defined, the receipt carries the excitement. 13 articles, 18 briefly, 20 calendar dates.</td></tr><tr><td>Check every claim</td><td>Sonnet ×1, fresh context</td><td class="num">≈103,000</td><td>Never saw the scout notes or the writing. Opened every source, graded 68 claims: 62 OK, 3 wrong, 2 unsupported, 1 unverifiable. 6 fixes applied before publishing (two wrong names, a tenfold margin error, a dosing error, an unsupported attribution, a headline).</td></tr><tr><td>Fix, build, publish, file</td><td>Sonnet (managing editor)</td><td class="num">≈30,000</td><td>Applied the checker&#39;s fixes with small code edits, built the page, republished it here, and filed the issue, scout notes and fact-check in the vault.</td></tr></tbody>
+    </table></div>
+    <p>Total for this edition: about 1.12 million tokens, over the 900,000 target. Nearly all of the overrun is scouting: nine scouts instead of last week&#39;s six, each verifying five to seven leads by opening the pages. Next week&#39;s fix is in the charter already: if scouting is heading past budget, keep the five beats with the most &#39;more&#39; votes. Which means the cheapest way to lower the bill is to tap &#39;more&#39; on the beats you want.</p><p>Fable is not in the weekly loop at all; it shows up only when you want to rethink the paper.</p>
+  </section>
 
 
-
-
-
-
-
-
-
-<section class="made" id="made">
-  <h3 class="beat-head">How this paper is made</h3>
-  <p>A newsroom has a lot of jobs and only a few of them need a big brain. The trick is to give each job the cheapest model that can do it well, and to keep the one that writes and the one that checks separate so the paper never grades its own homework. Here is exactly what ran to make this issue, with the token counts. A token is a chunk of text about three quarters of a word; it&#x27;s the unit these models are metered in.</p><p>This was the first edition made entirely by the scheduled task: no live session, no one watching. The one-time vault mapping from Issue 001 did not run again; the editor read your reactions on this page instead (there were none yet).</p>
-  <div class="tablewrap"><table><thead><tr><th>Stage</th><th>Model</th><th class="num">Tokens (this issue)</th><th>Plain words</th></tr></thead><tbody><tr><td>Read the charter and your reactions</td><td>Sonnet (managing editor)</td><td class="num">≈45,000</td><td>Read the Editorial Charter, the scout brief, last issue for dedupe, this week&#x27;s seven AI digests, and the reaction and beat collections on this page (both empty).</td></tr><tr><td>Scout the beats</td><td>Sonnet ×9</td><td class="num">≈843,000</td><td>One scout per standing beat, in parallel. Each opened every source to confirm date and facts. 47 leads came back; the AI Builder scout worked from your daily digests and only searched to confirm.</td></tr><tr><td>Write the articles</td><td>Opus ×1</td><td class="num">≈102,000</td><td>Worked only from the scout notes, in the charter&#x27;s voice rules: first principles, every term defined, the receipt carries the excitement. 13 articles, 18 briefly, 20 calendar dates.</td></tr><tr><td>Check every claim</td><td>Sonnet ×1, fresh context</td><td class="num">≈103,000</td><td>Never saw the scout notes or the writing. Opened every source, graded 68 claims: 62 OK, 3 wrong, 2 unsupported, 1 unverifiable. 6 fixes applied before publishing (two wrong names, a tenfold margin error, a dosing error, an unsupported attribution, a headline).</td></tr><tr><td>Fix, build, publish, file</td><td>Sonnet (managing editor)</td><td class="num">≈30,000</td><td>Applied the checker&#x27;s fixes with small code edits, built the page, republished it here, and filed the issue, scout notes and fact-check in the vault.</td></tr></tbody></table></div>
-  <p>Total for this edition: about 1.12 million tokens, over the 900,000 target. Nearly all of the overrun is scouting: nine scouts instead of last week&#x27;s six, each verifying five to seven leads by opening the pages. Next week&#x27;s fix is in the charter already: if scouting is heading past budget, keep the five beats with the most &#x27;more&#x27; votes. Which means the cheapest way to lower the bill is to tap &#x27;more&#x27; on the beats you want.</p><p>Fable is not in the weekly loop at all; it shows up only when you want to rethink the paper.</p>
-</section>
-
-<footer>Made by Patrick &amp; Travis. Issue 2 closed 2026-09-13. Every story links to its source; every number was checked by a second model that did not write it. </footer>
-
+</main>
 </div>
-<footer class="site-foot">The Gayzette &middot; Patrick &amp; Travis &middot; Everyone else collects your data to sell you something. We collect your data to empower you.<br><a href="/editions/">Past editions</a></footer>
-</body></html>
+
+<footer class="foot">
+  <div class="top">
+    <div>
+      <p class="brand">The Gayzette</p>
+      <p class="tag">No ads. No pop-ups. No tracking. Just the paper.</p>
+    </div>
+    <nav aria-label="Footer sections">
+      <a href="#front">Front Page</a><a href="#beat-0">Sections</a><a href="#briefly">Briefly</a><a href="#calendar">Calendar</a><a href="/">Daily</a>
+      <a href="/editions/">Past editions</a>
+    </nav>
+  </div>
+  <p class="fine">The Gayzette &middot; Patrick &amp; Travis<br><a href="/editions/">Past editions</a> &middot; Made in Los Angeles &middot; Summaries link to their sources</p>
+</footer>
+</body>
+</html>
