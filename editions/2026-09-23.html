@@ -160,254 +160,237 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* ===== The Gayzette site.css — v2, from the Claude Design Labs look (Magazine Editorial) ===== */
-:root{
-  --paper:#FBF8F1; --paper-2:#F3EEE2; --paper-3:#EDE6D6; --ink:#222222; --ink-2:#6B645A; --ink-3:#6B645A;
-  --hair:#E4DCCB; --rule:#E4DCCB; --rule-2:#CDBF9F; --accent:#C2603C; --accent-2:#A24E2F;
-  --serif:Newsreader,Georgia,serif; --display:Fraunces,Georgia,serif; --label:'DM Sans',system-ui,sans-serif;
-  color-scheme:light;
-}
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
-body{font-family:var(--serif);font-size:19px;line-height:1.65;overflow-wrap:break-word}
-main,.shell{min-width:0}
-a{color:var(--accent)} a:hover{color:var(--accent-2)}
+
+/* ===== The Gayzette site.css v3 (DRAFT 3, 2026-10-19). Every value below is lifted from the Claude Design Labs
+   page ("The Gayzette"): tokens #FBF8F1 paper, #222222 ink, #6B645A muted, #E4DCCB hairline, #C2603C accent. ===== */
+html,body{margin:0;padding:0;background:#FBF8F1;color:#222222;-webkit-font-smoothing:antialiased}
+a{color:#C2603C}a:hover{color:#A24E2F}
 img,svg{max-width:100%}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.skip{position:absolute;left:-9999px;top:16px;z-index:50;background:var(--ink);color:var(--paper);padding:12px 16px;font:500 13px var(--label);letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
-.skip:focus{left:16px;color:var(--paper)}
-.shell{max-width:1200px;margin:0 auto;padding:0 24px}
+.pg{min-height:100vh;background:#FBF8F1;color:#222222;font-family:Newsreader,Georgia,serif;overflow-wrap:break-word}
+.skip{position:absolute;left:-9999px;top:16px;z-index:50;background:#222;color:#FBF8F1;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.skip:focus{left:16px;color:#FBF8F1}
+:focus-visible{outline:2px solid #C2603C;outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
 
-/* labels / kickers */
-.label,.kicker,.byline,.when,.nav a,.chip{font-family:var(--label);font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-.kicker{color:var(--accent);margin:0 0 14px}
-.label{color:var(--ink-2);margin:0 0 8px}
-.byline{color:var(--ink-2);margin:22px 0 0}
-
-/* masthead */
-.strip{display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--hair);font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
-.masthead{padding:64px 0 48px;text-align:center}
-.masthead a{text-decoration:none;color:var(--ink)}
-.masthead h1{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 80;font-optical-sizing:auto;font-size:clamp(52px,9vw,120px);line-height:.95;letter-spacing:-.02em;margin:0}
-.masthead p{font-family:var(--display);font-style:italic;font-weight:400;font-size:19px;color:var(--ink-2);margin:20px 0 0}
-.nav{display:flex;gap:32px;overflow-x:auto;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);scrollbar-width:none;white-space:nowrap}
+/* header */
+.strip{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid #E4DCCB;font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A}
+.mast{padding:72px 0 56px;text-align:left}
+.mast a{text-decoration:none;color:#222222}
+.mast h1{font-family:Fraunces,serif;font-weight:600;font-variation-settings:'SOFT' 80;font-optical-sizing:auto;font-size:clamp(56px,9vw,120px);line-height:.95;letter-spacing:-.02em;margin:0}
+.mast p{font-family:Fraunces,serif;font-style:italic;font-weight:400;font-size:19px;color:#6B645A;margin:20px 0 0}
+.nav{display:flex;gap:32px;overflow-x:auto;border-top:1px solid #E4DCCB;border-bottom:1px solid #E4DCCB;scrollbar-width:none;white-space:nowrap}
 .nav::-webkit-scrollbar{display:none}
-.nav a{display:inline-flex;align-items:center;min-height:48px;padding:0 2px;text-decoration:none;color:var(--ink);border-bottom:2px solid transparent;margin-bottom:-1px}
-.nav a:hover,.nav a.on{color:var(--accent);border-bottom-color:var(--accent)}
+.nav a{display:inline-flex;align-items:center;min-height:48px;padding:0 2px;font-family:'DM Sans',sans-serif;font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:#222222;border-bottom:2px solid transparent;margin-bottom:-1px}
+.nav a.on{color:#C2603C;border-bottom-color:#C2603C}
 
-/* sections */
-main{display:block}
-.sec{padding:96px 0 0}
-.sec.ruled{margin-top:96px;padding-top:72px;border-top:1px solid var(--hair)}
-.sec-head h2,.h-sec{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:clamp(34px,4.5vw,52px);line-height:1.05;letter-spacing:-.015em;margin:0;text-wrap:pretty}
-.sec-head .sub,.deck{font-family:var(--display);font-style:italic;font-weight:400;color:var(--ink-2);text-wrap:pretty}
-.sec-head .sub{font-size:21px;line-height:1.4;margin:16px 0 0;max-width:620px}
-.deck{font-size:22px;line-height:1.35;margin:16px 0 0}
-.rule-short{width:48px;height:2px;background:var(--accent);margin:24px 0 0}
+/* type kit */
+.kick,.lab,.when{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.kick{color:#C2603C;margin:0 0 16px}
+.lab{color:#6B645A;margin:0 0 8px}
+.hd{font-family:Fraunces,serif;font-weight:600;font-variation-settings:'SOFT' 60;margin:0;text-wrap:pretty}
+.hd a,.hl a{text-decoration:none;color:inherit}
+.hd a:hover,.hl a:hover{color:#C2603C}
+.h-hero{font-optical-sizing:auto;font-size:clamp(36px,5vw,64px);line-height:1.04;letter-spacing:-.015em}
+.h-sun{font-size:clamp(40px,6vw,80px);line-height:1;letter-spacing:-.02em}
+.h-3{font-size:36px;line-height:1.1;letter-spacing:-.012em}
+.h-lead{font-size:clamp(30px,3.5vw,42px);line-height:1.08;letter-spacing:-.012em}
+.h-card{font-size:28px;line-height:1.12;letter-spacing:-.01em}
+.h-card2{font-size:26px;line-height:1.15;letter-spacing:-.01em}
+.h-tv{font-size:24px;line-height:1.15;letter-spacing:-.01em}
+.h-4{font-size:22px;line-height:1.2;letter-spacing:-.01em}
+.h-sec{font-size:clamp(36px,4.5vw,52px);line-height:1.05;letter-spacing:-.015em}
+.h-page{font-size:clamp(44px,6vw,72px);line-height:1;letter-spacing:-.02em}
+.deck{font-family:Fraunces,serif;font-style:italic;font-weight:400;font-size:24px;line-height:1.35;color:#6B645A;margin:20px 0 0;text-wrap:pretty}
+.deck.s21{font-size:21px;line-height:1.4;margin:16px 0 0}
+.deck.s26{font-size:26px;margin:24px 0 0}
+.stand{font-family:Fraunces,serif;font-style:italic;font-size:21px;line-height:1.4;color:#6B645A;margin:24px 0 0;max-width:620px}
+.rule{width:48px;height:2px;background:#C2603C;margin:24px 0 0}
+.by{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:24px 0 0}
+.bd{font-family:Newsreader,serif;font-size:19px;line-height:1.65;margin:14px 0 0;max-width:620px}
+.bd.l{max-width:none}
+.bd a{color:#C2603C}
+.src{display:inline-block;margin-top:14px;font-family:Newsreader,serif;font-style:italic;font-size:16px;color:#C2603C;text-decoration:none}
+.src:hover{text-decoration:underline}
+.src.s15{font-size:15px;margin-top:8px}
+.src.m12{margin-top:12px}
+.chip{display:inline-block;margin-left:10px;padding:2px 8px;border:1px solid #E4DCCB;color:#6B645A;font-family:'DM Sans',sans-serif;font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.ph,.pic{display:block;width:100%;object-fit:cover;background:#EDE6D6}
+.pic.fb,.ph{background:#EDE6D6 repeating-linear-gradient(135deg,transparent 0 12px,rgba(34,34,34,.045) 12px 13px)}
+.r32{aspect-ratio:3/2}.r45{aspect-ratio:4/5}
+.flex{display:flex;flex-wrap:wrap;align-items:flex-start}
+@media (max-width:640px){.bleed{margin-left:-24px;margin-right:-24px;width:calc(100% + 48px)}}
 
-/* headlines */
-.h-hero{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-optical-sizing:auto;font-size:clamp(34px,5vw,64px);line-height:1.04;letter-spacing:-.015em;margin:0;text-wrap:pretty}
-.h-feature{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:clamp(28px,3.2vw,36px);line-height:1.1;letter-spacing:-.012em;margin:0;text-wrap:pretty}
-.h-card{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:26px;line-height:1.15;letter-spacing:-.01em;margin:0;text-wrap:pretty}
-.h-small{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:22px;line-height:1.2;letter-spacing:-.01em;margin:0;text-wrap:pretty}
-.hl a{color:inherit;text-decoration:none}
-.hl a:hover{color:var(--accent)}
-
-/* body copy */
-.body p{margin:14px 0 0;max-width:640px}
-.body.wide p{max-width:680px}
-.srcline{display:block;margin-top:14px;font-style:italic;font-size:16px}
-.srcline a{color:var(--accent);text-decoration:none}
-.srcline a:hover{text-decoration:underline}
-.srcline.small{font-size:15px;margin-top:8px}
-.meta{font-family:var(--label);font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
-.chip{display:inline-block;border:1px solid var(--hair);padding:2px 8px;color:var(--ink-2);font-size:11px;margin-left:8px}
-.sources{margin:14px 0 0;font:15px/1.5 var(--serif);color:var(--ink-2)}
-.sources summary{cursor:pointer;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase}
-.sources ul{margin:8px 0 0;padding-left:1.1rem}
-.sources .d{color:var(--ink-2)}
-.more-read{margin:10px 0 0}
-.more-read summary{cursor:pointer;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
-.more-read .body p{max-width:none}
-.desk{margin:22px 0 0;padding:20px 24px;background:var(--paper-2);max-width:640px;font-size:17px;line-height:1.5}
-.desk .label{margin:0 0 6px}
-.cal-pill{display:inline-block;margin-top:8px;font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--rule-2);padding:2px 10px;color:var(--ink-2)}
-
-/* art */
-.art{display:block;width:100%;background:var(--paper-3);line-height:0;margin:0}
-.art svg{display:block;width:100%;height:auto}
-.art.r32{aspect-ratio:auto}
-
-/* hero */
-.hero{padding:56px 0 0}
-.hero .art{margin-bottom:36px}
-.hero .txt{max-width:760px}
-.hero.sunday .h-hero{font-size:clamp(38px,6vw,80px);line-height:1}
-.hero-body{margin-top:12px}
-
-/* editor's note */
-.ednote{max-width:620px;margin:0 auto;padding-top:96px}
-.ednote p.t{margin:16px 0 0}
-.ednote .byline{margin:0 0 18px}
-
-/* flex layouts */
+/* front page blocks */
+main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.s-hero{padding:72px 0 0}
+.hero-in{display:flex;flex-direction:column;flex-wrap:wrap;gap:32px 32px;align-items:stretch}
+.hero-pic{width:100%;min-width:0}
+.hero-txt{flex:1 1 320px;min-width:0;max-width:720px}
+.sec{padding:112px 0 0}
+.sec.rl{margin-top:120px;padding:80px 0 0;border-top:1px solid #E4DCCB}
 .row{display:flex;flex-wrap:wrap;gap:48px 32px;align-items:flex-start}
-.row>.main{flex:2 1 480px;min-width:0}
-.row>.side{flex:1 1 260px;min-width:0}
-.row>.half{flex:1 1 380px;min-width:0}
-.side-list>*{padding:20px 0;border-top:1px solid var(--hair)}
-.side-list>.label{padding:0;border:0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:64px 40px}
-.grid.g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-.card{min-width:0;border-top:1px solid var(--hair);padding-top:28px}
-.card .art{margin-bottom:22px}
+.col-main{flex:2 1 480px;min-width:0}
+.col-side{flex:1 1 260px;min-width:0}
+.col-half{flex:1 1 380px;min-width:0}
+.col-half.t{flex-basis:260px}
+.mt28{margin-top:28px}
+.more{margin-top:0}
+.more .it{padding:20px 0;border-top:1px solid #E4DCCB}
+.more .it h4{margin:0}
+.col-half .more{margin-top:48px}
+.nbr{max-width:620px}
+.brief{margin-top:10px}
+.brief summary{display:inline-block;cursor:pointer;margin-top:8px;font-family:Newsreader,serif;font-style:italic;font-size:15px;color:#6B645A;list-style:none}
+.brief summary::-webkit-details-marker{display:none}
+.brief summary:hover{color:#C2603C}
+.brief[open] summary{margin-bottom:4px}
+.brief .bd{font-size:17px;line-height:1.6;margin:8px 0 0}
+.brief .bd+.bd{margin-top:14px}
+.ctx{margin:14px 0 0;font-family:Newsreader,serif;font-size:17px;line-height:1.55;color:#6B645A;max-width:620px}
+.ctx b,.tag{font-family:'DM Sans',sans-serif;font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#C2603C;margin-right:8px}
+.sides{margin:12px 0 0;padding:0;list-style:none;font-family:Newsreader,serif;font-size:16px;line-height:1.5;color:#6B645A}
+.sides li{padding:6px 0;border-top:1px solid #E4DCCB}
 
-/* good ten */
-.good{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:0 56px}
-.good li{display:flex;gap:24px;padding:24px 0;border-top:1px solid var(--hair);min-width:0}
-.good .n{font:500 13px var(--label);letter-spacing:.08em;color:var(--accent);padding-top:7px;min-width:28px}
-.good .h{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:20px;line-height:1.25;margin:0}
-.good p{margin:6px 0 0;font-size:18px;line-height:1.6}
-.good .meta{display:block;margin-top:2px}
+/* inset comic art (the newsroom's own panel) */
+.illo{margin:32px 0 0;max-width:620px}
+.illo .art{border:1px solid #E4DCCB;background:#FBF8F1}
+.illo svg{display:block;width:100%;height:auto}
+.illo figcaption{font-family:Fraunces,serif;font-style:italic;font-size:15px;color:#6B645A;margin:12px 0 0}
+.illo figcaption span{font-family:'DM Sans',sans-serif;font-style:normal;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
 
-/* world */
-.ws-note{font-family:var(--display);font-style:italic;font-size:19px;line-height:1.45;color:var(--ink-2);margin:18px 0 0;max-width:680px}
-.ws{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:0 56px}
-.ws>li{padding:28px 0;border-top:1px solid var(--hair);min-width:0}
-.ws p{margin:12px 0 0;font-size:18px;line-height:1.6}
-.ws .tag{font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-right:8px}
-.ws .claimed{color:var(--ink-2)}
-.ws ul.sides{list-style:none;margin:14px 0 0;padding:12px 0 0 16px;border-left:2px solid var(--hair)}
-.ws ul.sides li{margin:6px 0;font-size:17px;line-height:1.5}
+/* long text under the hero / in a story */
+.story{max-width:620px;margin:72px 0 0}
+.story .bd{margin:0}
+.story .bd+.bd,.story .illo+.bd{margin-top:28px}
+.desk{margin:48px 0 0;padding:32px;background:#F3EEE2;max-width:620px}
+.desk p.lab{margin:0 0 10px;font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;line-height:1.65;color:#6B645A}
+.desk p{font-family:Newsreader,serif;font-size:19px;line-height:1.5;margin:0}
+.pill{display:inline-block;margin-top:12px;font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#C2603C;border:1px solid #C2603C;padding:3px 10px}
+.rcpt{margin:16px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:16px}
+.rcpt summary{cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A}
+.rcpt ul{margin:10px 0 0;padding:0;list-style:none}
+.rcpt li{padding:6px 0;border-top:1px solid #E4DCCB}
+.rcpt .d{color:#6B645A;font-size:14px;margin-left:6px}
+.note{margin:96px 0 0;padding-top:56px;border-top:1px solid #E4DCCB;max-width:620px}
+.note .t{font-family:Newsreader,serif;font-size:19px;line-height:1.65;margin:20px 0 0}
+.note .by{margin:0}
 
-/* dashed boxes */
-.boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;margin-top:48px;align-items:start}
-.box{border:1.5px dashed var(--rule-2);padding:24px 26px 26px;background:transparent;font-size:17px;line-height:1.55;min-width:0}
-.box.wide{grid-column:1/-1}
-.box h4{margin:0 0 14px;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
-.box h5{margin:16px 0 6px;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
-.box p{margin:8px 0 0}
-.box ul{margin:8px 0 0;padding-left:1.15rem}
-.box li{margin:6px 0}
-.box .src,.box a{font-size:15px}
-.box .empty{color:var(--ink-2);font-style:italic}
-.box .alert{font-weight:600}
-.cols-spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:8px 40px}
-.tvweek{display:grid;grid-template-columns:3.4rem 1fr;gap:6px 14px;margin-top:8px}
-.tvweek .day{font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);padding-top:3px}
-.tvweek .shows div{margin:2px 0 8px}
+/* Good Ten (list) */
+.glist{list-style:none;margin:48px 0 0;padding:0;max-width:620px}
+.glist li{display:flex;gap:24px;padding:24px 0;border-top:1px solid #E4DCCB}
+.glist .n{font-family:'DM Sans',sans-serif;font-weight:500;font-size:13px;letter-spacing:.08em;color:#C2603C;padding-top:7px;min-width:28px}
+.glist li>div{min-width:0}
+.glist h3{margin:0}
+.glist .when{display:block;color:#6B645A;margin:6px 0 0}
+.glist .bd{margin:10px 0 0}
+.gh{max-width:620px}
 
-/* briefly + calendar */
-.lines{list-style:none;margin:32px 0 0;padding:0;max-width:860px}
-.lines li>*{min-width:0}
-.lines li{display:grid;grid-template-columns:96px 1fr;gap:4px 24px;padding:16px 0;border-top:1px solid var(--hair)}
-.lines .when{color:var(--ink-2);padding-top:4px}
-.lines .what{font-size:18px;line-height:1.55}
-.lines .tag{display:block;font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-top:2px}
+/* grids */
+.grid{display:grid;gap:48px 32px;margin-top:48px}
+.g220{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.g280{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:56px 32px;margin-top:40px}
+.g320{grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:72px 32px;margin-top:120px}
+.grid article{min-width:0}
+.grid .kick{margin:24px 0 10px}
+.grid.g220 .lab{margin:20px 0 8px}
+.tb p{font-family:Newsreader,serif;font-size:18px;line-height:1.6;margin:10px 0 0}
+.tb ul{list-style:none;margin:10px 0 0;padding:0}
+.tb li{font-family:Newsreader,serif;font-size:17px;line-height:1.55;padding:10px 0;border-top:1px solid #E4DCCB}
+.tb .empty{color:#6B645A;font-style:italic}
+.tb h5{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:20px 0 0}
+.tb a{color:#C2603C}
+.tb .alert{color:#A24E2F}
+.tvweek{margin-top:10px}
+.tvweek .day{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#C2603C;padding-top:12px;border-top:1px solid #E4DCCB}
+.tvweek .shows div{font-family:Newsreader,serif;font-size:17px;line-height:1.5;padding:2px 0}
 
-/* how it's made */
-.made table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.45}
-.made th,.made td{text-align:left;padding:10px 12px 10px 0;border-bottom:1px solid var(--hair);vertical-align:top}
-.made th{font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
-.made .num{text-align:right;white-space:nowrap}
-.tablewrap{overflow-x:auto;margin:20px 0}
-.made p{max-width:680px;margin:14px 0 0}
+/* section page */
+.s-page{padding:80px 0 0}
+.lead{display:flex;flex-wrap:wrap;gap:40px 32px;align-items:flex-start;margin-top:96px}
+.lead>div{flex:1 1 380px;min-width:0}
+.lead .kick{margin:0 0 12px}
+.empty-sec{margin-top:96px;padding:80px 0;border-top:1px solid #E4DCCB;border-bottom:1px solid #E4DCCB;max-width:620px}
+.earlier{margin-top:120px;padding-top:80px;border-top:1px solid #E4DCCB;max-width:760px}
+.earlier .e{display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between;align-items:baseline;padding:20px 0;border-top:1px solid #E4DCCB}
+.earlier .e h4{flex:1 1 320px;margin:0}
 
-/* archive */
-.arch{list-style:none;margin:40px 0 0;padding:0;max-width:860px}
-.arch li{display:grid;grid-template-columns:120px 1fr;gap:4px 24px;padding:18px 0;border-top:1px solid var(--hair);align-items:baseline}
-.arch .when{color:var(--ink-2)}
-.arch .h-small a{color:inherit;text-decoration:none}.arch .h-small a:hover{color:var(--accent)}
-.arch .kind{display:block;font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-top:4px}
-.month{margin:56px 0 0;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+/* lists (Sunday lines, archive) */
+.lines{list-style:none;margin:40px 0 0;padding:0;max-width:760px}
+.lines li{display:grid;grid-template-columns:88px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #E4DCCB}
+.lines .when{color:#6B645A;padding-top:5px;font-size:13px}
+.lines .what{font-family:Newsreader,serif;font-size:18px;line-height:1.6}
+.lines .tag{margin:0 0 0 10px;color:#6B645A}
+.lines a{font-style:italic;font-size:15px;color:#C2603C;text-decoration:none}
+.lines a:hover{text-decoration:underline}
+.month{font-family:'DM Sans',sans-serif;font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#C2603C;margin:64px 0 8px}
+.arch{list-style:none;margin:0;padding:0;max-width:760px}
+.arch li{display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between;align-items:baseline;padding:20px 0;border-top:1px solid #E4DCCB}
+.arch li>div{flex:1 1 320px}
+.arch h4{margin:0}
+.arch .when{color:#6B645A;order:2}
+.arch .kind{display:block;margin-top:4px;font-family:Fraunces,serif;font-style:italic;font-size:16px;color:#6B645A}
+.spec h3{margin:48px 0 0}
+.spec ul{list-style:none;margin:8px 0 0;padding:0;max-width:760px}
+.spec li{padding:20px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:18px;line-height:1.6}
+.spec li a{font-style:italic;font-size:15px;color:#C2603C;text-decoration:none}
+.spec .empty{color:#6B645A;font-style:italic}
+.made{max-width:760px}
+.made p{font-family:Newsreader,serif;font-size:19px;line-height:1.65;margin:20px 0 0}
+.made table{width:100%;border-collapse:collapse;margin-top:24px;font-family:Newsreader,serif;font-size:16px}
+.made th{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;text-align:left;padding:8px 8px 8px 0;border-bottom:1px solid #E4DCCB}
+.made td{padding:10px 8px 10px 0;border-top:1px solid #E4DCCB;vertical-align:top}
+.made .num{text-align:right}
+.tablewrap{overflow-x:auto}
 
 /* footer */
-.foot{max-width:1200px;margin:140px auto 0;padding:48px 24px 64px;border-top:1px solid var(--hair)}
+.foot{max-width:1200px;margin:160px auto 0;padding:48px 24px 64px;box-sizing:border-box;border-top:1px solid #E4DCCB}
 .foot .top{display:flex;flex-wrap:wrap;gap:32px 64px;justify-content:space-between}
-.foot .brand{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 80;font-size:28px;letter-spacing:-.015em;margin:0}
-.foot .tag{font-family:var(--display);font-style:italic;font-size:16px;color:var(--ink-2);margin:8px 0 0}
-.foot nav{display:flex;flex-wrap:wrap;gap:4px 28px;align-items:flex-start}
-.foot nav a{display:inline-flex;align-items:center;min-height:44px;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);text-decoration:none}
-.foot nav a:hover{color:var(--accent)}
-.foot .fine{font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin:40px 0 0}
-.foot .fine a{color:inherit}
+.foot .brand{font-family:Fraunces,serif;font-weight:600;font-variation-settings:'SOFT' 80;font-size:28px;letter-spacing:-.015em;margin:0}
+.foot .tagl{font-family:Fraunces,serif;font-style:italic;font-size:16px;color:#6B645A;margin:8px 0 0}
+.foot nav{display:flex;flex-wrap:wrap;gap:16px 28px}
+.foot nav a{display:inline-flex;align-items:center;min-height:44px;font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;text-decoration:none}
+.foot nav a:hover{color:#C2603C}
+.foot .fine{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:48px 0 0;line-height:1.8}
+.foot .fine a{color:#6B645A}
 
-/* mobile */
-@media (max-width:640px){
-  body{font-size:18px}
-  .shell{padding:0 16px}
-  .masthead{padding:40px 0 32px}
-  .sec{padding-top:64px}.sec.ruled{margin-top:64px;padding-top:48px}
-  .ednote{padding-top:64px}
-  .bleed{margin-left:-16px;margin-right:-16px;width:calc(100% + 32px)}
-  .hero{padding-top:32px}
-  .nav{gap:22px}
-  .good,.ws{grid-template-columns:1fr}
-  .lines li,.arch li{grid-template-columns:minmax(0,1fr)}
-  .grid{grid-template-columns:1fr}
-  .foot{margin-top:96px;padding:40px 16px 48px}
-}
 @media print{
   html,body{background:#fff}
-  .nav,.skip{display:none}
-  body{font-size:15pt}
-  *{break-inside:avoid-page}
-  .kicker,.rule-short{color:var(--accent)!important}
-}
-
-/* ===== DRAFT 2 (2026-10-19): wide-screen layout, 1024px and up. Phone/tablet below stays as DRAFT 1. ===== */
-@media (min-width:1024px){
-  /* hero beside: comic panel left, headline + deck + first paragraphs right, rest in a centered reading column */
-  article.hero{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,9fr);gap:0 56px;align-items:start}
-  .hero .txt{display:contents}
-  .hero .art{grid-column:1;grid-row:1;margin-bottom:0}
-  .hero .txt-top{grid-column:2;grid-row:1}
-  .hero .txt-top .h-hero{font-size:clamp(32px,3.5vw,46px);line-height:1.06}
-  .hero.sunday .txt-top .h-hero{font-size:clamp(34px,3.9vw,52px);line-height:1.04}
-  .hero .txt-top .deck{font-size:20px}
-  .hero .txt-top .byline{margin-top:16px}
-  .hero .txt-top .body p{font-size:18px;line-height:1.6}
-  .hero .txt-rest{grid-column:1/-1;grid-row:2;width:100%;max-width:680px;margin:56px auto 0}
-  .hero .txt-rest .desk{max-width:none}
-  /* editor's note: one labeled column, same 680px column as the rest of the lead, with a rule above */
-  .ednote{max-width:680px;margin:88px auto 0;padding:32px 0 0;border-top:1px solid var(--rule-2)}
-  .ednote .kicker{font-size:13px;margin-bottom:6px}
-  /* AI and Spirit: two columns */
-  .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 56px;align-items:start}
-  .row>.main:only-child{grid-column:1/-1;max-width:760px}
-  /* Good Ten: two columns. World Straight: one 680px column */
-  .good{grid-template-columns:repeat(2,minmax(0,1fr))}
-  #world .sec-head,#world .ws-note,#world .ws{max-width:680px;margin-left:auto;margin-right:auto}
-  .ws{grid-template-columns:minmax(0,1fr)}
-  /* sidebars: 2-up */
-  .boxes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nav,.skip{display:none !important}
+  .ph{background:#f2f2f2 !important}
+  article,.it,li{break-inside:avoid-page}
 }
 </style>
 </head>
 <body>
+<div class="pg">
 <a class="skip" href="#main">Skip to content</a>
-<div class="shell">
-<header>
-  <div class="strip">
-    <span>Wednesday, September 23, 2026 · Los Angeles</span>
-    <span>Los Angeles · first week of fall</span>
-    <span>Daily edition</span>
-  </div>
-  <div class="masthead">
+<header class="wrap">
+  <div class="strip"><span>Wednesday, September 23, 2026</span><span>Edition No. 4</span></div>
+  <div class="mast">
     <a href="/"><h1>The Gayzette</h1></a>
     <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
   </div>
   <nav class="nav" aria-label="Sections">
-    <a href="#front" class="on" aria-current="page">Front Page</a><a href="#ai">AI</a><a href="#spirit">Spirit</a><a href="#feel-good">Feel-Good</a><a href="#world">World</a><a href="#tv">TV</a><a href="/editions/2026-10-18.html">Sunday</a>
+    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
   </nav>
 </header>
 
 <main id="main">
 
-
+<section class="s-hero" id="front" data-beat="The AI Builder">
   
-  <article class="hero" id="front" data-beat="The AI Builder">
-  <div class="art bleed"><div class="illo"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+  <div class="hero-in">
+    <div class="hero-pic bleed"><img class="pic r32" src="https://images.unsplash.com/photo-1763568258605-6783d4fad7b5?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Claude Opus 5.5 lands: near-top quality, about 40% cheaper" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')"></div>
+    <div class="hero-txt">
+      <p class="kick">Front page · AI</p>
+      <h2 class="hd h-hero"><a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener">Claude Opus 5.5 lands: near-top quality, about 40% cheaper</a></h2>
+      <p class="deck">Anthropic&#39;s newest Opus model performs at the level of its top model on most work, and Anthropic says it costs about 40% less to run than Opus 5.</p>
+      <p class="by">By The Gayzette, with Claude · 2 min read · Wonder ◆◆◆◇◇</p>
+    </div>
+  </div>
+  
+  <div class="story">
+    <p class="bd">Anthropic released Claude Opus 5.5 yesterday, priced at $4 per million input tokens and $20 per million output tokens — tokens being the chunks of text a model reads and writes, billed by the million. Anthropic says it&#39;s &#34;40% less expensive&#34; to run than Opus 5 on typical workloads, while performing &#34;at the level of Claude Fable 5.1 on most work&#34; and generating output 30% faster.</p><figure class="illo"><div class="art"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <pattern id="dots-lead" width="10" height="10" patternUnits="userSpaceOnUse">
 <circle cx="2" cy="2" r="1.5" fill="#000"/>
@@ -426,40 +409,29 @@ main{display:block}
 <text x="252" y="88" font-size="18" text-anchor="middle" font-family="monospace" fill="#000">$4</text>
 <rect x="20" y="30" width="100" height="40" rx="10" fill="#fff" stroke="#000" stroke-width="3"/>
 <text x="70" y="55" font-size="13" text-anchor="middle" font-family="sans-serif" fill="#000">40% less!</text>
-</svg></div></div>
-  <div class="txt">
-    <div class="txt-top">
-      <p class="kicker">Front page &middot; The AI Builder</p>
-      <h2 class="h-hero hl"><a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener">Claude Opus 5.5 lands: near-top quality, about 40% cheaper</a></h2>
-      <p class="deck">Anthropic&#39;s newest Opus model performs at the level of its top model on most work, and Anthropic says it costs about 40% less to run than Opus 5.</p>
-      <p class="byline">The Gayzette &middot; Wonder <span aria-label="3 of 5">◆◆◆◇◇</span></p>
-      <div class="body wide hero-body"><p>Anthropic released Claude Opus 5.5 yesterday, priced at $4 per million input tokens and $20 per million output tokens — tokens being the chunks of text a model reads and writes, billed by the million. Anthropic says it&#39;s &#34;40% less expensive&#34; to run than Opus 5 on typical workloads, while performing &#34;at the level of Claude Fable 5.1 on most work&#34; and generating output 30% faster.</p><p>The gains show up on harder tests too. On Terminal-Bench 4.0, which grades how well a model handles real command-line tasks, Opus 5 scored 52.3%; Opus 5.5 jumped to 66.4%. GitHub&#39;s product chief, Mario Rodriguez, is quoted on Anthropic&#39;s launch page: &#34;In VS Code, it solved more terminal tasks than Opus 5 in less than half the steps.&#34; Internal safety testing also found it 85% less likely than Opus 5 or Mythos 5.1 to try to bypass its own guardrails — the boundaries it&#39;s meant to stay inside.</p></div>
-    </div>
-    <div class="txt-rest">
-      <div class="body wide"><p>Trading firm Optiver, an early tester, said Opus 5.5 &#34;matched Opus 5&#39;s quality in about half the turns, time and output tokens, cutting the cost of that workload by 40 to 50%.&#34; GitHub Copilot turned it on the same day for Pro+, Max, Business and Enterprise plans, reporting early tests that &#34;resolved tasks comparably to Claude Opus 5 while using significantly fewer steps and tokens.&#34;</p></div>
-      <aside class="desk"><p class="label">On our desk</p>Every Claude Code and Cowork job Patrick runs, from vault clean-ups to the TWS tool stack, is billed by the token, so a model that finishes the same work in fewer steps makes more of those jobs worth automating for a two-person shop.</aside>
-      <span class="srcline"><a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener">Read the original at Introducing Claude Opus 5.5 →</a></span>
-      <details class="sources"><summary>Receipts (3)</summary>
-<ul><li><a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener">Introducing Claude Opus 5.5</a> <span class="d">2026-09-22</span></li><li><a href="https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/09/22/anthropic-unveils-claude-opus-55/" target="_blank" rel="noopener">Anthropic unveils Claude Opus 5.5 — BNN Bloomberg</a> <span class="d">2026-09-22</span></li><li><a href="https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/" target="_blank" rel="noopener">Claude Opus 5.5 is now available in GitHub Copilot</a> <span class="d">2026-09-22</span></li></ul></details>
-    </div>
+</svg></div><figcaption><span>Illustration · The Gayzette</span></figcaption></figure><p class="bd">The gains show up on harder tests too. On Terminal-Bench 4.0, which grades how well a model handles real command-line tasks, Opus 5 scored 52.3%; Opus 5.5 jumped to 66.4%. GitHub&#39;s product chief, Mario Rodriguez, is quoted on Anthropic&#39;s launch page: &#34;In VS Code, it solved more terminal tasks than Opus 5 in less than half the steps.&#34; Internal safety testing also found it 85% less likely than Opus 5 or Mythos 5.1 to try to bypass its own guardrails — the boundaries it&#39;s meant to stay inside.</p><p class="bd">Trading firm Optiver, an early tester, said Opus 5.5 &#34;matched Opus 5&#39;s quality in about half the turns, time and output tokens, cutting the cost of that workload by 40 to 50%.&#34; GitHub Copilot turned it on the same day for Pro+, Max, Business and Enterprise plans, reporting early tests that &#34;resolved tasks comparably to Claude Opus 5 while using significantly fewer steps and tokens.&#34;</p>
+    <aside class="desk"><p class="lab">On our desk</p><p>Every Claude Code and Cowork job Patrick runs, from vault clean-ups to the TWS tool stack, is billed by the token, so a model that finishes the same work in fewer steps makes more of those jobs worth automating for a two-person shop.</p></aside>
+    <a class="src " href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener">Read the original at Introducing Claude Opus 5.5 →</a>
+    <details class="rcpt"><summary>Receipts (3)</summary>
+<ul><li><a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener">Introducing Claude Opus 5.5</a><span class="d">2026-09-22</span></li><li><a href="https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/09/22/anthropic-unveils-claude-opus-55/" target="_blank" rel="noopener">Anthropic unveils Claude Opus 5.5 — BNN Bloomberg</a><span class="d">2026-09-22</span></li><li><a href="https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/" target="_blank" rel="noopener">Claude Opus 5.5 is now available in GitHub Copilot</a><span class="d">2026-09-22</span></li></ul></details>
   </div>
-</article>
-  
-<section class="ednote" aria-label="Editor's note">
-  <p class="kicker">Editor's note</p>
-  <p class="byline">From the managing editor · Wednesday, Sept. 23</p>
+</section>
+<section class="note" aria-label="Editor's note">
+  <p class="kick">Editor's note</p>
+  <p class="by">From the managing editor · Wednesday, Sept. 23</p>
   <p class="t">Good morning, you two. This is the first daily Gayzette. The lead is Anthropic&#39;s new Claude Opus 5.5, which landed yesterday alongside a price cut from OpenAI, so it was a good day to be a solo builder with a token bill. Spirit was quiet, so both of its items are from early September. The Good Ten runs from a surgery done over 500 km of cable in Nigeria to a new wild cat in Bolivia, and The World, Straight covers the first days of the UN General Assembly.</p><p class="t">No reactions or beat decisions have been saved on the page yet, so every section ran at its standard size. Tap More or Less on anything and tomorrow&#39;s edition will lean that way.</p><p class="t">Some changes and admissions. The On the Couch box is off today: the TV scout&#39;s schedule check turned up last year&#39;s listings, and I&#39;d rather print nothing than a wrong air time. The research ran well over the 300k-token budget, so Sonnet wrote the lead instead of Opus. A separate fact-checker opened every source and caught 14 wording and quote slips, all fixed before you&#39;re reading this. Your Human Design transits come straight from the HD Toolkit.</p><p class="t">This edition also ran late. It came out in the middle of the morning, not at 6am.</p>
 </section>
 
 
-  <section class="sec" id="ai" aria-labelledby="ai-h">
-    <div class="row">
-      <div class="main">
-        <p class="kicker" id="ai-h">AI Builder</p>
-        
-
-<article id="ai-1" data-beat="The AI Builder">
-  <div class="art bleed"><div class="illo"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+<section class="sec" id="ai" data-screen-label="AI">
+  <div class="row">
+    <div class="col-main">
+      <div class="bleed"><img class="pic r32" src="https://images.unsplash.com/photo-1763568258286-721c164171e0?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="OpenAI cuts prices with new GPT-6 Sol and Luna" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')"></div>
+      <article id="ai-1" data-beat="The AI Builder">
+  <p class="kick" style="margin:28px 0 12px">AI</p>
+  <h3 class="hd h-3" style="max-width:620px"><a href="https://www.marktechpost.com/2026/09/22/openai-releases-gpt-6-sol-and-luna-50-cheaper-api-pricing-and-benchmarks/" target="_blank" rel="noopener">OpenAI cuts prices with new GPT-6 Sol and Luna</a></h3>
+  
+  <p class="bd">OpenAI released two new API-only models the same day as Opus 5.5: GPT-6 Sol, priced at $2.00 per million input tokens and $10.00 per million output tokens, and GPT-6 Luna, at $0.10 and $0.50. Both are for developers building tools, not for chatting directly. OpenAI says &#34;Luna at max beats GPT-5.6 Sol at medium for 1/10 of the cost,&#34; and Sol scored 68.8% on DeepSWE v1.1, a coding benchmark. Cached input reads — reusing text the model has already seen — get discounts of up to 90%.</p><figure class="illo"><div class="art"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <pattern id="dots-ai1" width="10" height="10" patternUnits="userSpaceOnUse">
 <circle cx="2" cy="2" r="1.5" fill="#000"/>
@@ -475,54 +447,43 @@ main{display:block}
 <path d="M225 70 A40 40 0 1 0 225 150 A32 32 0 1 1 225 70 Z" fill="#118ab2" stroke="#000" stroke-width="4"/>
 <rect x="15" y="20" width="130" height="36" rx="10" fill="#fff" stroke="#000" stroke-width="3"/>
 <text x="80" y="43" font-size="13" text-anchor="middle" font-family="sans-serif" fill="#000">Cheaper tokens!</text>
-</svg></div></div>
+</svg></div><figcaption><span>Illustration · The Gayzette</span></figcaption></figure><p class="bd">This is one source so far, so take the specifics lightly. On your desk: a cheap, fast model like Luna is exactly the kind of workhorse that could run repetitive n8n steps without burning real money.</p>
   
-  <h3 class="h-feature hl" style="margin-top:24px;max-width:640px"><a href="https://www.marktechpost.com/2026/09/22/openai-releases-gpt-6-sol-and-luna-50-cheaper-api-pricing-and-benchmarks/" target="_blank" rel="noopener">OpenAI cuts prices with new GPT-6 Sol and Luna</a></h3>
-  
-  <div class="body"><p>OpenAI released two new API-only models the same day as Opus 5.5: GPT-6 Sol, priced at $2.00 per million input tokens and $10.00 per million output tokens, and GPT-6 Luna, at $0.10 and $0.50. Both are for developers building tools, not for chatting directly. OpenAI says &#34;Luna at max beats GPT-5.6 Sol at medium for 1/10 of the cost,&#34; and Sol scored 68.8% on DeepSWE v1.1, a coding benchmark. Cached input reads — reusing text the model has already seen — get discounts of up to 90%.</p><p>This is one source so far, so take the specifics lightly. On your desk: a cheap, fast model like Luna is exactly the kind of workhorse that could run repetitive n8n steps without burning real money.</p></div>
-  
-  <span class="srcline"><a href="https://www.marktechpost.com/2026/09/22/openai-releases-gpt-6-sol-and-luna-50-cheaper-api-pricing-and-benchmarks/" target="_blank" rel="noopener">Read the original at OpenAI Releases GPT-6 Sol and Luna — MarkTechPost →</a></span>
+  <a class="src " href="https://www.marktechpost.com/2026/09/22/openai-releases-gpt-6-sol-and-luna-50-cheaper-api-pricing-and-benchmarks/" target="_blank" rel="noopener">Read the original at OpenAI Releases GPT-6 Sol and Luna — MarkTechPost →</a>
   
 </article>
-
-      </div>
-      
-      <aside class="side side-list" aria-label="More in AI">
-        <p class="label">More in AI</p>
-        
-
-<article id="ai-2" data-beat="The AI Builder">
-  <h4 class="h-small hl"><a href="https://openrouter.ai/blog/announcements/batch-api/" target="_blank" rel="noopener">OpenRouter&#39;s new Batch API runs jobs at half price</a></h4>
-  
-  
-  <details class="more-read"><summary>Read the brief</summary><div class="body"><p>OpenRouter, a service that routes API calls to whichever AI model you pick, launched a Batch API where providers &#34;generally charge 50% (and sometimes less) of their normal per-token price&#34; across more than 70 models. Jobs get a 24-hour window to finish, but the median job finishes in about 7 minutes, and 90% land within an hour — the tradeoff is you send a batch and wait instead of getting an instant reply.</p><p>On your desk: this is built for exactly the kind of non-urgent bulk work Patrick already runs — vault processing, batch content passes — at roughly half the usual price.</p></div></details>
-  <span class="srcline small"><a href="https://openrouter.ai/blog/announcements/batch-api/" target="_blank" rel="noopener">Read the original at OpenRouter Batch API: half-price inference by bundling requests →</a></span>
-  
-</article>
-
-
-<article id="ai-3" data-beat="The AI Builder">
-  <h4 class="h-small hl"><a href="https://technode.com/2026/09/22/xiaomi-open-sources-mimo-v2-6-models-after-scaling-reinforcement-learning/" target="_blank" rel="noopener">Xiaomi&#39;s open model tops the open-weight leaderboard</a></h4>
-  
-  
-  <details class="more-read"><summary>Read the brief</summary><div class="body"><p>Xiaomi open-sourced MiMo-V2.6-Pro, an open-weight model — one whose underlying settings anyone can download and run themselves, rather than only reach through an API. It scored 46 on the Artificial Analysis Intelligence Index, the highest of any open-weight model so far (Kimi K3 scored 44, GLM-5.3 scored 45; top proprietary models sit around 53). Xiaomi trained it with reinforcement learning in under six days on roughly 750,000 practice trajectories, for about $2.62 million, and it ships with 3D spatial reasoning, multimodal perception, computer-use abilities and a desktop client.</p><p>This is one source so far, and the license terms weren&#39;t stated. On your desk: not a tool Patrick would run today, but a sign of how fast the gap between open and closed models is closing.</p></div></details>
-  <span class="srcline small"><a href="https://technode.com/2026/09/22/xiaomi-open-sources-mimo-v2-6-models-after-scaling-reinforcement-learning/" target="_blank" rel="noopener">Read the original at Xiaomi open-sources MiMo-V2.6 models — TechNode →</a></span>
-  
-</article>
-
-      </aside>
-      
     </div>
-  </section>
+    
+    <aside class="col-side more" aria-label="More in AI">
+      <p class="lab">More in AI</p>
+      <div class="it" id="ai-2">
+  <h4 class="hd h-4"><a href="https://openrouter.ai/blog/announcements/batch-api/" target="_blank" rel="noopener">OpenRouter&#39;s new Batch API runs jobs at half price</a></h4>
+  <details class="brief"><summary>Read the brief</summary><p class="bd">OpenRouter, a service that routes API calls to whichever AI model you pick, launched a Batch API where providers &#34;generally charge 50% (and sometimes less) of their normal per-token price&#34; across more than 70 models. Jobs get a 24-hour window to finish, but the median job finishes in about 7 minutes, and 90% land within an hour — the tradeoff is you send a batch and wait instead of getting an instant reply.</p><p class="bd">On your desk: this is built for exactly the kind of non-urgent bulk work Patrick already runs — vault processing, batch content passes — at roughly half the usual price.</p></details>
+  <br><a class="src s15" href="https://openrouter.ai/blog/announcements/batch-api/" target="_blank" rel="noopener">Read the original at OpenRouter Batch API: half-price inference by bundling requests →</a>
+  
+</div><div class="it" id="ai-3">
+  <h4 class="hd h-4"><a href="https://technode.com/2026/09/22/xiaomi-open-sources-mimo-v2-6-models-after-scaling-reinforcement-learning/" target="_blank" rel="noopener">Xiaomi&#39;s open model tops the open-weight leaderboard</a></h4>
+  <details class="brief"><summary>Read the brief</summary><p class="bd">Xiaomi open-sourced MiMo-V2.6-Pro, an open-weight model — one whose underlying settings anyone can download and run themselves, rather than only reach through an API. It scored 46 on the Artificial Analysis Intelligence Index, the highest of any open-weight model so far (Kimi K3 scored 44, GLM-5.3 scored 45; top proprietary models sit around 53). Xiaomi trained it with reinforcement learning in under six days on roughly 750,000 practice trajectories, for about $2.62 million, and it ships with 3D spatial reasoning, multimodal perception, computer-use abilities and a desktop client.</p><p class="bd">This is one source so far, and the license terms weren&#39;t stated. On your desk: not a tool Patrick would run today, but a sign of how fast the gap between open and closed models is closing.</p></details>
+  <br><a class="src s15" href="https://technode.com/2026/09/22/xiaomi-open-sources-mimo-v2-6-models-after-scaling-reinforcement-learning/" target="_blank" rel="noopener">Read the original at Xiaomi open-sources MiMo-V2.6 models — TechNode →</a>
+  
+</div>
+    </aside>
+    
+  </div>
+</section>
 
-  <section class="sec" id="spirit" aria-labelledby="spirit-h">
-    <div class="row">
-      <div class="main">
-        <p class="kicker" id="spirit-h">Spirit</p>
+
+
+<section class="sec" id="spirit" data-screen-label="Spirit">
+  <div class="row" style="gap:40px 32px">
+    <div class="col-half bleed"><img class="pic r45" src="https://images.unsplash.com/photo-1561212856-44e9bae482aa?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Same trip, different brains: three psychedelics, three circuits" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')"></div>
+    <div class="col-half">
+      
+      <article id="spirit-1" data-beat="Consciousness &amp; The Nonphysical">
+        <p class="kick" style="margin:0 0 12px">Spirit</p>
+        <h3 class="hd h-3"><a href="https://www.eurekalert.org/news-releases/1142586" target="_blank" rel="noopener">Same trip, different brains: three psychedelics, three circuits</a></h3>
         
-
-<article id="spirit-1" data-beat="Consciousness &amp; The Nonphysical">
-  <div class="art bleed"><div class="illo"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+        <p class="bd">The spirit beat was quiet this week, so both items here reach back to early September — the charter allows up to 30 days when there isn&#39;t much new. A University of Southern Denmark study, published in Nature Communications, PET-scanned rats given LSD, psilocybin or 2C-B, both during the acute high and a week later. Lead researcher Frederik Gudmundsen found each drug lit up its own separate brain networks: &#34;2C-B mainly affected areas linked to reward, LSD affected areas linked to habits and motivation, while psilocybin stood out by primarily affecting areas involved in emotions.&#34; Associate Professor Mikael Palner added, &#34;Each drug appears to affect its own networks, and that is new knowledge.&#34;</p><figure class="illo"><div class="art"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <pattern id="dots-spirit1" width="10" height="10" patternUnits="userSpaceOnUse">
 <circle cx="2" cy="2" r="1.5" fill="#000"/>
@@ -540,236 +501,254 @@ main{display:block}
 <circle cx="230" cy="125" r="18" fill="#06d6a0" stroke="#000" stroke-width="3" opacity="0.8"/>
 <rect x="150" y="25" width="150" height="36" rx="10" fill="#fff" stroke="#000" stroke-width="3"/>
 <text x="225" y="48" font-size="13" text-anchor="middle" font-family="sans-serif" fill="#000">Different circuits!</text>
-</svg></div></div>
+</svg></div><figcaption><span>Illustration · The Gayzette</span></figcaption></figure><p class="bd">It&#39;s a rat study, so human confirmation is still needed. On your desk: a useful footnote for anyone tracking altered states alongside meditation and remote-viewing work.</p>
+        
+        <a class="src " href="https://www.eurekalert.org/news-releases/1142586" target="_blank" rel="noopener">Read the original at New study shows that psychedelic drugs affect the brain differently — EurekAlert / University of Southern Denmark →</a>
+        
+      </article>
+      
+      
+      <div class="more" style="margin-top:48px" aria-label="More in Spirit">
+        <p class="lab">More in Spirit</p>
+        <div class="it" id="spirit-2">
+  <h4 class="hd h-4"><a href="https://news.wm.edu/2026/09/02/new-contemplative-studies-major-explores-mind-body-and-consciousness/" target="_blank" rel="noopener">William &amp; Mary launches a contemplative studies major</a></h4>
+  <details class="brief"><summary>Read the brief</summary><p class="bd">Also from early September: William &amp; Mary launched a new Contemplative Studies major, an interdisciplinary program spanning neuroscience, psychology, philosophy, religious studies, education and the arts, built around a &#34;Meditation &amp; Wellness&#34; course that includes meditation labs at the campus Wellness Center. Professor Mark McLaughlin called it &#34;an exciting new field that bridges disciplines... to explore fundamental questions of self and one&#39;s being in the world,&#34; and Professor Patton Burchett added, &#34;If you&#39;re studying something that&#39;s about consciousness, then you need to not just study it from a third-person perspective.&#34;</p><p class="bd">On your desk: Patrick just started his own Meditation Lab, logging sessions — this is the same territory, just with a syllabus attached.</p></details>
+  <br><a class="src s15" href="https://news.wm.edu/2026/09/02/new-contemplative-studies-major-explores-mind-body-and-consciousness/" target="_blank" rel="noopener">Read the original at New contemplative studies major explores mind, body and consciousness — W&amp;M News →</a>
   
-  <h3 class="h-feature hl" style="margin-top:24px;max-width:640px"><a href="https://www.eurekalert.org/news-releases/1142586" target="_blank" rel="noopener">Same trip, different brains: three psychedelics, three circuits</a></h3>
-  
-  <div class="body"><p>The spirit beat was quiet this week, so both items here reach back to early September — the charter allows up to 30 days when there isn&#39;t much new. A University of Southern Denmark study, published in Nature Communications, PET-scanned rats given LSD, psilocybin or 2C-B, both during the acute high and a week later. Lead researcher Frederik Gudmundsen found each drug lit up its own separate brain networks: &#34;2C-B mainly affected areas linked to reward, LSD affected areas linked to habits and motivation, while psilocybin stood out by primarily affecting areas involved in emotions.&#34; Associate Professor Mikael Palner added, &#34;Each drug appears to affect its own networks, and that is new knowledge.&#34;</p><p>It&#39;s a rat study, so human confirmation is still needed. On your desk: a useful footnote for anyone tracking altered states alongside meditation and remote-viewing work.</p></div>
-  
-  <span class="srcline"><a href="https://www.eurekalert.org/news-releases/1142586" target="_blank" rel="noopener">Read the original at New study shows that psychedelic drugs affect the brain differently — EurekAlert / University of Southern Denmark →</a></span>
-  
-</article>
-
+</div>
       </div>
       
-      <aside class="side side-list" aria-label="More in Spirit">
-        <p class="label">More in Spirit</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="sec" id="world" data-screen-label="World">
+  <div class="row" style="gap:40px 32px">
+    <div class="bleed" style="flex:2 1 480px;min-width:0;order:2"><img class="pic r32" src="https://images.unsplash.com/photo-1486299267070-83823f5448dd?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Trump warns he could &#34;annihilate&#34; Iran; delegation walks out" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')"></div>
+    <div class="col-half t" style="order:1">
+      
+      <article id="world-1">
+        <p class="kick" style="margin:0 0 12px">World</p>
+        <h3 class="hd h-3"><a href="https://spectrumlocalnews.com/us/snplus/politics/2026/09/22/trump-un-speech-september-22-iran-war" target="_blank" rel="noopener">Trump warns he could &#34;annihilate&#34; Iran; delegation walks out</a></h3>
+        <p class="bd"><span class="tag">Confirmed</span>Trump addressed the UN General Assembly&#39;s opening day on Sept. 22, defended the US war on Iran, and said, &#34;As president of the most extraordinary nation in history, I have no interest in leaving dangers to grow for another day.&#34; He said he might &#34;annihilate&#34; Iran without a deal, and Iran&#39;s delegation walked out. Hours later, Trump said envoys Steve Witkoff and Jared Kushner held a three-hour meeting with Iranian officials, saying it &#34;went very well.&#34;</p>
+        <p class="bd" style="margin-top:12px"><span class="tag">Claimed by Trump</span>that Iran is delaying talks until after the US midterms</p>
+        <ul class="sides"><li><strong>Iran&#39;s foreign minister:</strong> Set conditions for reopening the Strait of Hormuz: an end to the US naval blockade, release of frozen Iranian assets, and an end to fighting across what Iran calls &#34;resistance&#34; fronts.</li></ul>
+        <a class="src " href="https://spectrumlocalnews.com/us/snplus/politics/2026/09/22/trump-un-speech-september-22-iran-war" target="_blank" rel="noopener">Read the original at Trump UN speech — Spectrum News →</a>
+        <details class="rcpt"><summary>Receipts (2)</summary>
+<ul><li><a href="https://spectrumlocalnews.com/us/snplus/politics/2026/09/22/trump-un-speech-september-22-iran-war" target="_blank" rel="noopener">Trump UN speech — Spectrum News</a><span class="d">2026-09-22</span></li><li><a href="https://www.timesofisrael.com/liveblog-september-22-2026/" target="_blank" rel="noopener">Times of Israel liveblog Sept 22</a><span class="d">2026-09-22</span></li></ul></details>
+      </article>
+      
+      
+      <div class="more" style="margin-top:48px" aria-label="More in World">
+        <p class="lab">More in World</p>
         
-
-<article id="spirit-2" data-beat="Consciousness &amp; The Nonphysical">
-  <h4 class="h-small hl"><a href="https://news.wm.edu/2026/09/02/new-contemplative-studies-major-explores-mind-body-and-consciousness/" target="_blank" rel="noopener">William &amp; Mary launches a contemplative studies major</a></h4>
-  
-  
-  <details class="more-read"><summary>Read the brief</summary><div class="body"><p>Also from early September: William &amp; Mary launched a new Contemplative Studies major, an interdisciplinary program spanning neuroscience, psychology, philosophy, religious studies, education and the arts, built around a &#34;Meditation &amp; Wellness&#34; course that includes meditation labs at the campus Wellness Center. Professor Mark McLaughlin called it &#34;an exciting new field that bridges disciplines... to explore fundamental questions of self and one&#39;s being in the world,&#34; and Professor Patton Burchett added, &#34;If you&#39;re studying something that&#39;s about consciousness, then you need to not just study it from a third-person perspective.&#34;</p><p>On your desk: Patrick just started his own Meditation Lab, logging sessions — this is the same territory, just with a syllabus attached.</p></div></details>
-  <span class="srcline small"><a href="https://news.wm.edu/2026/09/02/new-contemplative-studies-major-explores-mind-body-and-consciousness/" target="_blank" rel="noopener">Read the original at New contemplative studies major explores mind, body and consciousness — W&amp;M News →</a></span>
-  
-</article>
-
-      </aside>
+        <div class="it" id="world-2">
+          <h4 class="hd h-4"><a href="https://www.aljazeera.com/news/2026/9/23/us-iran-hold-mediated-unga-talks-on-ending-war-opening-strait-of-hormuz" target="_blank" rel="noopener">Qatar and Oman mediate US-Iran talks on ending war</a></h4>
+          <details class="brief"><summary>What is known</summary>
+            <p class="bd"><span class="tag">Confirmed</span>On the UN General Assembly&#39;s sidelines Sept. 22–23, Qatar and Oman mediated indirect US-Iran talks; Qatar&#39;s prime minister, Sheikh Mohammed bin Abdulrahman, met Iran&#39;s foreign minister, Abbas Araghchi, on Sept. 23. Tehran said it could reopen the Strait of Hormuz &#34;within seven days&#34; if Washington eased military pressure and lifted its blockade. Mediators committed to continuing talks.</p>
+            <p class="bd"><span class="tag">Claimed by Special envoy Steve Witkoff</span>that mediators &#34;shuttled between&#34; delegations, describing the talks as indirect — a description at odds with Trump&#39;s account of a direct three-hour meeting</p>
+            <ul class="sides"><li><strong>Trump:</strong> Says there is &#34;a lot of momentum&#34; toward an agreement.</li><li><strong>Iran:</strong> Says reopening the strait is conditional on the US easing military pressure first.</li></ul>
+          </details>
+          <br><a class="src s15" href="https://www.aljazeera.com/news/2026/9/23/us-iran-hold-mediated-unga-talks-on-ending-war-opening-strait-of-hormuz" target="_blank" rel="noopener">Read the original at US, Iran hold mediated UNGA talks — Al Jazeera →</a>
+          
+        </div>
+        
+        <div class="it" id="world-3">
+          <h4 class="hd h-4"><a href="https://www.aljazeera.com/news/2026/9/23/zelenskyy-says-ukraine-ready-for-energy-truce-with-russia-after-trump-talks" target="_blank" rel="noopener">Zelenskyy offers mutual halt to energy strikes</a></h4>
+          <details class="brief"><summary>What is known</summary>
+            <p class="bd"><span class="tag">Confirmed</span>Zelenskyy and Trump met for 40 minutes at the UN on Sept. 22; both said they want the war ended before winter. Zelenskyy said, &#34;If they don&#39;t want us to attack their diesel and refineries...we are ready – if they will not attack our energy system.&#34; He asked Trump for more Patriot missiles; Trump had not agreed as of reporting. Overnight into Sept. 22, according to Ukraine&#39;s air force, Russia launched 212 drones and four cruise missiles, plus other missiles, at Dnipropetrovsk, Poltava and Chernihiv regions, killing at least three and wounding six in Dnipro; nearly 100,000 lost power in the Chernihiv region. Ukrainian drones struck Russia&#39;s Samara region, killing one and injuring four, according to local Russian authorities.</p>
+            <p class="bd"><span class="tag">Claimed by Zelenskyy</span>that Russian intelligence indicates Moscow is preparing &#34;a new massive attack&#34;</p>
+            <ul class="sides"><li><strong>Ukraine:</strong> Wants reciprocal de-escalation plus continued sanctions and air defense support.</li><li><strong>Kremlin:</strong> No response found in sourced reporting.</li></ul>
+          </details>
+          <br><a class="src s15" href="https://www.aljazeera.com/news/2026/9/23/zelenskyy-says-ukraine-ready-for-energy-truce-with-russia-after-trump-talks" target="_blank" rel="noopener">Read the original at Zelenskyy says Ukraine ready for energy truce — Al Jazeera →</a>
+          <details class="rcpt"><summary>Receipts (2)</summary>
+<ul><li><a href="https://www.aljazeera.com/news/2026/9/23/zelenskyy-says-ukraine-ready-for-energy-truce-with-russia-after-trump-talks" target="_blank" rel="noopener">Zelenskyy says Ukraine ready for energy truce — Al Jazeera</a><span class="d">2026-09-23</span></li><li><a href="https://www.aljazeera.com/news/2026/9/22/russian-strikes-on-ukraine-kill-three-as-zelenskyy-in-us-for-un-summit" target="_blank" rel="noopener">Russian strikes on Ukraine kill three — Al Jazeera</a><span class="d">2026-09-22</span></li></ul></details>
+        </div>
+        
+        <div class="it" id="world-4">
+          <h4 class="hd h-4"><a href="https://www.aljazeera.com/news/2026/9/22/un-general-assembly-2026-when-is-it-who-is-speaking-and-when" target="_blank" rel="noopener">UN General Assembly opens; Abbas speaks by video</a></h4>
+          <details class="brief"><summary>What is known</summary>
+            <p class="bd"><span class="tag">Confirmed</span>The UN General Assembly&#39;s 81st general debate opened Sept. 22, with nearly 130 heads of state or government expected through Sept. 26. For a second year, the US denied Palestinian President Mahmoud Abbas a visa; member states voted to let him address the chamber by prerecorded video. French President Macron called Gaza &#34;a spectacle that shames us all,&#34; saying humanitarian deliveries remain blocked despite the declared ceasefire.</p>
+            <p class="bd"><span class="tag">Claimed by Turkish President Erdogan</span>said &#34;over the past three years, we have lost 74,000 of our brothers and sisters, most of them women and children&#34;; separately, the UN said the visa denial &#34;violates the Host Country Agreement&#34;</p>
+            <ul class="sides"><li><strong>France, Turkey, Qatar and Jordan:</strong> Say the ceasefire is unenforced and aid access remains blocked.</li><li><strong>Israel:</strong> Response not found in sourced reporting.</li></ul>
+          </details>
+          <br><a class="src s15" href="https://www.aljazeera.com/news/2026/9/22/un-general-assembly-2026-when-is-it-who-is-speaking-and-when" target="_blank" rel="noopener">Read the original at UN General Assembly 2026: who is speaking and when — Al Jazeera →</a>
+          <details class="rcpt"><summary>Receipts (2)</summary>
+<ul><li><a href="https://www.aljazeera.com/news/2026/9/22/un-general-assembly-2026-when-is-it-who-is-speaking-and-when" target="_blank" rel="noopener">UN General Assembly 2026: who is speaking and when — Al Jazeera</a><span class="d">2026-09-22</span></li><li><a href="https://www.timesofisrael.com/liveblog-september-22-2026/" target="_blank" rel="noopener">Times of Israel liveblog Sept 22</a><span class="d">2026-09-22</span></li></ul></details>
+        </div>
+        
+      </div>
       
     </div>
-    <div class="boxes"><aside class="box" id="crop-circle-watch" aria-label="Crop Circle Watch">
-  <h4>Crop Circle Watch</h4>
+  </div>
+</section>
+
+
+
+<section class="sec rl" id="feel-good" data-screen-label="Good Ten" aria-labelledby="good-h">
+  <div class="gh">
+    <p class="kick">Feel-Good</p>
+    <h2 class="hd h-sec" id="good-h">The Good Ten</h2>
+    <p class="deck s21">Small, true, and from this week.</p>
+  </div>
+  <ol class="glist">
+    <li id="good-1">
+      <span class="n">01</span>
+      <div>
+        <h3 class="hd h-4">Surgeon in Nigeria removes a kidney tumor from 500 km away</h3>
+        <span class="when">Wed Sep 23</span>
+        <p class="bd">Prof. Obi Davies-Ekwenna performed West Africa&#39;s first tele-robotic surgery, a robot-assisted kidney-tumor removal, operating the Toumai console at Redeemer&#39;s Health Village, Ogun State, on a patient at Nisa Premier Hospital, Abuja, over 500 km away.</p>
+        <a class="src s15" href="https://www.bellanaija.com/2026/09/nigeria-first-tele-robotic-surgery-redeemers-health-village/" target="_blank" rel="noopener">Read the original at BellaNaija →</a>
+      </div>
+    </li><li id="good-2">
+      <span class="n">02</span>
+      <div>
+        <h3 class="hd h-4">U.S. cancer deaths keep falling, led by lung cancer</h3>
+        <span class="when">Tue Sep 22</span>
+        <p class="bd">A CDC report finds the male lung-cancer death rate fell 52% (70.3 to 34 per 100,000) from 2004 to 2023, while adult smoking prevalence dropped from 22.6% to 9.9% between 2001 and 2024. Five-year lung-cancer survival roughly doubled to 30.1%.</p>
+        <a class="src s15" href="https://www.news4jax.com/news/local/2026/09/22/lung-cancer-progress-drives-decline-in-us-cancer-deaths-cdc-report-finds/" target="_blank" rel="noopener">Read the original at News4Jax →</a>
+      </div>
+    </li><li id="good-3">
+      <span class="n">03</span>
+      <div>
+        <h3 class="hd h-4">First new wild cat species in over a century, found in Bolivia</h3>
+        <span class="when">Fri Sep 18</span>
+        <p class="bd">A team led by Explorer Paola Nogales Ascarrunz identified Leopardus tilcayo, a roughly 3-pound cat of Bolivia&#39;s Yungas cloud forest; genome sequencing showed South America&#39;s &#34;tiger cats&#34; are actually five distinct species. National Geographic called it &#34;the first new cat species described in more than 100 years.&#34;</p>
+        <a class="src s15" href="https://news.nationalgeographic.org/photos-new-wild-cat-species/" target="_blank" rel="noopener">Read the original at National Geographic →</a>
+      </div>
+    </li><li id="good-4">
+      <span class="n">04</span>
+      <div>
+        <h3 class="hd h-4">$2.1M in grants for next-generation coral-reef restoration</h3>
+        <span class="when">Mon Sep 21</span>
+        <p class="bd">The National Fish and Wildlife Foundation awarded 9 grants ($2.1M direct, $3.3M total impact) across Florida, Hawaiʻi, American Samoa and the U.S. Virgin Islands. Since 2000 the fund has given over $28M to 446 coral projects.</p>
+        <a class="src s15" href="https://www.globenewswire.com/news-release/2026/09/21/3365606/0/en/nfwf-awards-2-1-million-to-advance-next-generation-of-coral-reef-restoration.html" target="_blank" rel="noopener">Read the original at GlobeNewswire (NFWF) →</a>
+      </div>
+    </li><li id="good-5">
+      <span class="n">05</span>
+      <div>
+        <h3 class="hd h-4">New England offshore wind farm finishes all 65 turbines</h3>
+        <span class="when">Fri Sep 18</span>
+        <p class="bd">Revolution Wind, a $6.2 billion, 704 MW project serving Rhode Island and Connecticut, completed all 65 turbines. Full output is expected later in 2026.</p>
+        <a class="src s15" href="https://ctmirror.org/2026/09/18/revolution-wind-completed-orsted/" target="_blank" rel="noopener">Read the original at CT Mirror →</a>
+      </div>
+    </li><li id="good-6">
+      <span class="n">06</span>
+      <div>
+        <h3 class="hd h-4">Illinois solar farm built only for income-eligible households</h3>
+        <span class="when">Tue Sep 22</span>
+        <p class="bd">PureSky Energy&#39;s 1.98 MW McLean 1 Community Solar project near Bloomington-Normal serves only income-eligible households, guaranteeing savings equal to 50% of solar credit value, through Illinois Solar for All.</p>
+        <a class="src s15" href="https://now.solar/2026/09/22/puresky-energy-builds-illinois-community-solar-project-for-low-income-residents-solar-power-world/" target="_blank" rel="noopener">Read the original at Solar Power World →</a>
+      </div>
+    </li><li id="good-7">
+      <span class="n">07</span>
+      <div>
+        <h3 class="hd h-4">Vermont furniture store turns 100, still run by the same family</h3>
+        <span class="when">Wed Sep 23</span>
+        <p class="bd">Godnick&#39;s Grand Furniture, founded in 1926 by Irving Godnick in downtown Rutland, is four generations on and celebrates its centennial Sept. 26. Brian Godnick recalled his grandfather let customers &#34;pay like $5 a week, $2 a week.&#34;</p>
+        <a class="src s15" href="https://mountaintimes.info/2026/09/23/four-generations-100-years-godnicks-grand-furniture-celebrates-a-rutland-milestone/" target="_blank" rel="noopener">Read the original at Mountain Times →</a>
+      </div>
+    </li><li id="good-8">
+      <span class="n">08</span>
+      <div>
+        <h3 class="hd h-4">Boston&#39;s Dance Complex opens its 35th season</h3>
+        <span class="when">Thu Sep 17</span>
+        <p class="bd">The Central Square, Boston venue opened the season with a free &#34;Fall Into Dance&#34; celebration Sept. 18, followed on Sept. 25 by &#34;HALF,&#34; a Kathak collaboration between Anjali Nath and Labonee Mohanta. Artistic director Peter DiMuro called it &#34;that place beyond home and work where people find one another, discover themselves, take risks, create something together.&#34;</p>
+        <a class="src s15" href="https://danceinforma.us/fall-performances-highlight-regional-dance-artistry-in-the-dance-complexs-35th-anniversary-year" target="_blank" rel="noopener">Read the original at Dance Informa →</a>
+      </div>
+    </li><li id="good-9">
+      <span class="n">09</span>
+      <div>
+        <h3 class="hd h-4">Booker Prize shortlist names six novels</h3>
+        <span class="when">Tue Sep 22</span>
+        <p class="bd">Judges chaired by Mary Beard named a six-novel shortlist from 13 longlisted books, including Marlon James&#39; The Disappearers, Elizabeth Strout&#39;s The Things We Never Say, and Douglas Stuart&#39;s John of John. The winner is announced Nov. 9, taking home £50,000.</p>
+        <a class="src s15" href="https://lithub.com/heres-the-shortlist-for-the-2026-booker-prize/" target="_blank" rel="noopener">Read the original at Literary Hub →</a>
+      </div>
+    </li><li id="good-10">
+      <span class="n">10</span>
+      <div>
+        <h3 class="hd h-4">Virginia Symphony plays a free concert in Portsmouth</h3>
+        <span class="when">Thu Sep 17</span>
+        <p class="bd">The Virginia Symphony Orchestra, led by conductor Adam Turner, played a free &#34;Musical Mosaic&#34; concert at Portsmouth Pavilion on Friday, Sept. 18, spanning John Williams film scores to musical theater.</p>
+        <a class="src s15" href="https://www.whro.org/arts-culture/2026-09-17/the-virginia-symphony-will-perform-a-free-concert-friday-in-portsmouth" target="_blank" rel="noopener">Read the original at WHRO →</a>
+      </div>
+    </li>
+  </ol>
+</section>
+
+
+
+<section class="sec rl" id="tv" data-screen-label="TV" aria-labelledby="tv-h">
+  <p class="kick">TV and the sky</p>
+  <h2 class="hd h-sec" id="tv-h">Tonight, and overhead</h2>
+  <div class="grid g220">
+
+
+<article class="tb" id="storm-watch">
+  <img class="pic r45" src="https://images.unsplash.com/photo-1454789476662-53eb23ba5907?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Storm watch" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+  <p class="lab">Weather</p>
+  <h3 class="hd h-tv">Storm Watch</h3>
+  <p><b>Los Angeles:</b> Los Angeles · first week of fall</p>
+  <ul><li><b>Hurricane Polo</b> (Eastern Pacific) &mdash; Category 4 · 150 mph peak · 922 mb. About 165 miles south of Zihuatanejo, Mexico, as of the 5:00am PT Wednesday advisory Tropical-storm conditions possible along Mexico&#39;s coast; 3-6 inches of rain (isolated 8) over Guerrero and Michoacán could bring life-threatening flooding and mudslides. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP2+shtml/231135.shtml" target="_blank" rel="noopener">NHC Intermediate Advisory 11A, Hurricane Polo</a></li><li><b>Hurricane Odalys</b> (Eastern Pacific) &mdash; Category 1 · 75 mph peak · 989 mb. About 1,295 miles west-southwest of the southern tip of Baja California, as of 2:00am PT Wednesday No coastal watches or warnings in effect. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP1+shtml/230840.shtml" target="_blank" rel="noopener">NHC Public Advisory 13, Hurricane Odalys</a></li></ul>
   
+  <p><b>Winter outlook:</b> NOAA&#39;s Climate Prediction Center put the odds of a very strong El Niño this fall and winter at over 90% in its Sept 10 ENSO discussion (no newer discussion yet; next due Oct 8). History is a mixed guide for LA: the strong 1997-98 El Niño brought heavy rain and mudslides, while the similarly strong 2015-16 event underdelivered here, so above-average odds, not a guarantee.</p>
+  <p><a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">NOAA CPC ENSO Diagnostic Discussion, Sept 10 2026</a> &middot; <a href="https://elninoguide.com/articles/el-nino-california" target="_blank" rel="noopener">El Niño Guide: Southern California rain &amp; flood risk</a></p>
+</article>
+
+
+<article class="tb" id="sky">
+  <img class="pic r45" src="https://images.unsplash.com/photo-1765476608471-c30c09564def?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="The sky tonight" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+  <p class="lab">Overhead</p>
+  <h3 class="hd h-tv">Sky</h3>
+  <p><b>Moon:</b> Waxing Gibbous (90% illuminated)</p>
+  <p><b>Tonight's sky:</b> The moon is about 90% lit and heads for full on Saturday, Sept 26. Saturn is up in the evening sky, and Jupiter crosses from Cancer into Leo today, per Griffith Observatory&#39;s September Sky Report. <a href="https://theskylive.com/moon/2026-09-23" target="_blank" rel="noopener">TheSkyLive: Moon phase, Sept 23 2026</a> &middot; <a href="https://griffithobservatory.lacity.gov/explore/observing-the-sky/sky-report/" target="_blank" rel="noopener">Griffith Observatory Sky Report</a></p>
+  <h5>Human Design transits</h5>
+  <ul><li><b>Patrick:</b> Per the HD Toolkit&#39;s run for today: Saturn on your own gate 21 (The Hunter, Heart) and Uranus on your own gate 20 (The Now, Throat) both run through Thursday 9/24, completing your 21-45 and 20-34 channels; the North Node on your gate 30 (Recognition of Feelings) ends the same day.</li><li><b>Travis:</b> Per the HD Toolkit&#39;s run for today: Neptune on your own gate 25 (The Spirit of the Self, G center) runs through Thursday 9/24.</li></ul>
+</article>
+
+
+<article class="tb" id="crop-circle-watch">
+  <img class="pic r45" src="https://images.unsplash.com/photo-1781332150560-5b4d1f59b1b4?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Crop circle watch" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+  <p class="lab">Notebook</p>
+  <h3 class="hd h-tv">Crop Circle Watch</h3>
   <p><b>Wanborough Plain formation</b> &mdash; Tue Jul 21 &middot; near Liddington, Wiltshire, England. A traditional-style geometric formation at grid reference SU2283380804. Aerial imagery credited to Stonehenge Dronescapes Photography and researcher Hugh Newman.</p>
   
   <ul><li>No new formations logged since July 21, per Crop Circle Connector&#39;s 2026 index.</li><li>The formation sits at grid reference SU2283380804, near Liddington, Wiltshire.</li></ul>
   <p><em>From the history: In 1991, Doug Bower and Dave Chorley took credit for more than 200 crop circles made across England from 1978 on, demonstrating their technique with a plank, a rope and a cap fitted with a wire loop for walking straight lines.</em></p>
-  <p class="src"><a href="https://www.cropcircleconnector.com/2026/Wanborough/Wanborough2026a.html" target="_blank" rel="noopener">Crop Circle at Wanborough Plain — Crop Circle Connector</a> &middot; <a href="https://en.wikipedia.org/wiki/Crop_circle" target="_blank" rel="noopener">Crop circle — Wikipedia</a></p>
-</aside></div>
-  </section>
+  <p><a href="https://www.cropcircleconnector.com/2026/Wanborough/Wanborough2026a.html" target="_blank" rel="noopener">Crop Circle at Wanborough Plain — Crop Circle Connector</a> &middot; <a href="https://en.wikipedia.org/wiki/Crop_circle" target="_blank" rel="noopener">Crop circle — Wikipedia</a></p>
+</article>
 
-  <section class="sec ruled" id="feel-good" aria-labelledby="good-h">
-    <div class="sec-head">
-      <p class="kicker">Feel-Good</p>
-      <h2 class="h-sec" id="good-h">The Good Ten</h2>
-      <p class="sub">Ten people doing excellent, verified work in their fields this week.</p>
-    </div>
-    <ol class="good">
-      <li id="good-1">
-  <span class="n">01</span>
-  <div>
-    <h3 class="h">Surgeon in Nigeria removes a kidney tumor from 500 km away</h3>
-    <span class="meta">Wed Sep 23</span>
-    <p>Prof. Obi Davies-Ekwenna performed West Africa&#39;s first tele-robotic surgery, a robot-assisted kidney-tumor removal, operating the Toumai console at Redeemer&#39;s Health Village, Ogun State, on a patient at Nisa Premier Hospital, Abuja, over 500 km away.</p>
-    <span class="srcline small"><a href="https://www.bellanaija.com/2026/09/nigeria-first-tele-robotic-surgery-redeemers-health-village/" target="_blank" rel="noopener">Read the original at BellaNaija →</a></span>
-  </div>
-</li><li id="good-2">
-  <span class="n">02</span>
-  <div>
-    <h3 class="h">U.S. cancer deaths keep falling, led by lung cancer</h3>
-    <span class="meta">Tue Sep 22</span>
-    <p>A CDC report finds the male lung-cancer death rate fell 52% (70.3 to 34 per 100,000) from 2004 to 2023, while adult smoking prevalence dropped from 22.6% to 9.9% between 2001 and 2024. Five-year lung-cancer survival roughly doubled to 30.1%.</p>
-    <span class="srcline small"><a href="https://www.news4jax.com/news/local/2026/09/22/lung-cancer-progress-drives-decline-in-us-cancer-deaths-cdc-report-finds/" target="_blank" rel="noopener">Read the original at News4Jax →</a></span>
-  </div>
-</li><li id="good-3">
-  <span class="n">03</span>
-  <div>
-    <h3 class="h">First new wild cat species in over a century, found in Bolivia</h3>
-    <span class="meta">Fri Sep 18</span>
-    <p>A team led by Explorer Paola Nogales Ascarrunz identified Leopardus tilcayo, a roughly 3-pound cat of Bolivia&#39;s Yungas cloud forest; genome sequencing showed South America&#39;s &#34;tiger cats&#34; are actually five distinct species. National Geographic called it &#34;the first new cat species described in more than 100 years.&#34;</p>
-    <span class="srcline small"><a href="https://news.nationalgeographic.org/photos-new-wild-cat-species/" target="_blank" rel="noopener">Read the original at National Geographic →</a></span>
-  </div>
-</li><li id="good-4">
-  <span class="n">04</span>
-  <div>
-    <h3 class="h">$2.1M in grants for next-generation coral-reef restoration</h3>
-    <span class="meta">Mon Sep 21</span>
-    <p>The National Fish and Wildlife Foundation awarded 9 grants ($2.1M direct, $3.3M total impact) across Florida, Hawaiʻi, American Samoa and the U.S. Virgin Islands. Since 2000 the fund has given over $28M to 446 coral projects.</p>
-    <span class="srcline small"><a href="https://www.globenewswire.com/news-release/2026/09/21/3365606/0/en/nfwf-awards-2-1-million-to-advance-next-generation-of-coral-reef-restoration.html" target="_blank" rel="noopener">Read the original at GlobeNewswire (NFWF) →</a></span>
-  </div>
-</li><li id="good-5">
-  <span class="n">05</span>
-  <div>
-    <h3 class="h">New England offshore wind farm finishes all 65 turbines</h3>
-    <span class="meta">Fri Sep 18</span>
-    <p>Revolution Wind, a $6.2 billion, 704 MW project serving Rhode Island and Connecticut, completed all 65 turbines. Full output is expected later in 2026.</p>
-    <span class="srcline small"><a href="https://ctmirror.org/2026/09/18/revolution-wind-completed-orsted/" target="_blank" rel="noopener">Read the original at CT Mirror →</a></span>
-  </div>
-</li><li id="good-6">
-  <span class="n">06</span>
-  <div>
-    <h3 class="h">Illinois solar farm built only for income-eligible households</h3>
-    <span class="meta">Tue Sep 22</span>
-    <p>PureSky Energy&#39;s 1.98 MW McLean 1 Community Solar project near Bloomington-Normal serves only income-eligible households, guaranteeing savings equal to 50% of solar credit value, through Illinois Solar for All.</p>
-    <span class="srcline small"><a href="https://now.solar/2026/09/22/puresky-energy-builds-illinois-community-solar-project-for-low-income-residents-solar-power-world/" target="_blank" rel="noopener">Read the original at Solar Power World →</a></span>
-  </div>
-</li><li id="good-7">
-  <span class="n">07</span>
-  <div>
-    <h3 class="h">Vermont furniture store turns 100, still run by the same family</h3>
-    <span class="meta">Wed Sep 23</span>
-    <p>Godnick&#39;s Grand Furniture, founded in 1926 by Irving Godnick in downtown Rutland, is four generations on and celebrates its centennial Sept. 26. Brian Godnick recalled his grandfather let customers &#34;pay like $5 a week, $2 a week.&#34;</p>
-    <span class="srcline small"><a href="https://mountaintimes.info/2026/09/23/four-generations-100-years-godnicks-grand-furniture-celebrates-a-rutland-milestone/" target="_blank" rel="noopener">Read the original at Mountain Times →</a></span>
-  </div>
-</li><li id="good-8">
-  <span class="n">08</span>
-  <div>
-    <h3 class="h">Boston&#39;s Dance Complex opens its 35th season</h3>
-    <span class="meta">Thu Sep 17</span>
-    <p>The Central Square, Boston venue opened the season with a free &#34;Fall Into Dance&#34; celebration Sept. 18, followed on Sept. 25 by &#34;HALF,&#34; a Kathak collaboration between Anjali Nath and Labonee Mohanta. Artistic director Peter DiMuro called it &#34;that place beyond home and work where people find one another, discover themselves, take risks, create something together.&#34;</p>
-    <span class="srcline small"><a href="https://danceinforma.us/fall-performances-highlight-regional-dance-artistry-in-the-dance-complexs-35th-anniversary-year" target="_blank" rel="noopener">Read the original at Dance Informa →</a></span>
-  </div>
-</li><li id="good-9">
-  <span class="n">09</span>
-  <div>
-    <h3 class="h">Booker Prize shortlist names six novels</h3>
-    <span class="meta">Tue Sep 22</span>
-    <p>Judges chaired by Mary Beard named a six-novel shortlist from 13 longlisted books, including Marlon James&#39; The Disappearers, Elizabeth Strout&#39;s The Things We Never Say, and Douglas Stuart&#39;s John of John. The winner is announced Nov. 9, taking home £50,000.</p>
-    <span class="srcline small"><a href="https://lithub.com/heres-the-shortlist-for-the-2026-booker-prize/" target="_blank" rel="noopener">Read the original at Literary Hub →</a></span>
-  </div>
-</li><li id="good-10">
-  <span class="n">10</span>
-  <div>
-    <h3 class="h">Virginia Symphony plays a free concert in Portsmouth</h3>
-    <span class="meta">Thu Sep 17</span>
-    <p>The Virginia Symphony Orchestra, led by conductor Adam Turner, played a free &#34;Musical Mosaic&#34; concert at Portsmouth Pavilion on Friday, Sept. 18, spanning John Williams film scores to musical theater.</p>
-    <span class="srcline small"><a href="https://www.whro.org/arts-culture/2026-09-17/the-virginia-symphony-will-perform-a-free-concert-friday-in-portsmouth" target="_blank" rel="noopener">Read the original at WHRO →</a></span>
-  </div>
-</li>
-    </ol>
-  </section>
-
-  <section class="sec ruled" id="world" aria-labelledby="world-h">
-    <div class="sec-head">
-      <p class="kicker">World</p>
-      <h2 class="h-sec" id="world-h">The World, Straight</h2>
-    </div>
-    <p class="ws-note">Facts first. What is known versus what is claimed, named sources, each side's framing in one neutral line, no persuasive adjectives. If there is no verified fact, it does not run.</p>
-    <ul class="ws">
-      <li id="world-1">
-  <h3 class="h-small hl"><a href="https://spectrumlocalnews.com/us/snplus/politics/2026/09/22/trump-un-speech-september-22-iran-war" target="_blank" rel="noopener">Trump warns he could &#34;annihilate&#34; Iran; delegation walks out</a></h3>
-  <p><span class="tag">Confirmed</span>Trump addressed the UN General Assembly&#39;s opening day on Sept. 22, defended the US war on Iran, and said, &#34;As president of the most extraordinary nation in history, I have no interest in leaving dangers to grow for another day.&#34; He said he might &#34;annihilate&#34; Iran without a deal, and Iran&#39;s delegation walked out. Hours later, Trump said envoys Steve Witkoff and Jared Kushner held a three-hour meeting with Iranian officials, saying it &#34;went very well.&#34;</p>
-  <p class="claimed"><span class="tag">Claimed by Trump</span>that Iran is delaying talks until after the US midterms</p>
-  <ul class="sides"><li><strong>Iran&#39;s foreign minister:</strong> Set conditions for reopening the Strait of Hormuz: an end to the US naval blockade, release of frozen Iranian assets, and an end to fighting across what Iran calls &#34;resistance&#34; fronts.</li></ul>
-  <span class="srcline small"><a href="https://spectrumlocalnews.com/us/snplus/politics/2026/09/22/trump-un-speech-september-22-iran-war" target="_blank" rel="noopener">Read the original at Trump UN speech — Spectrum News →</a></span>
-  <details class="sources"><summary>Receipts (2)</summary>
-<ul><li><a href="https://spectrumlocalnews.com/us/snplus/politics/2026/09/22/trump-un-speech-september-22-iran-war" target="_blank" rel="noopener">Trump UN speech — Spectrum News</a> <span class="d">2026-09-22</span></li><li><a href="https://www.timesofisrael.com/liveblog-september-22-2026/" target="_blank" rel="noopener">Times of Israel liveblog Sept 22</a> <span class="d">2026-09-22</span></li></ul></details>
-</li><li id="world-2">
-  <h3 class="h-small hl"><a href="https://www.aljazeera.com/news/2026/9/23/us-iran-hold-mediated-unga-talks-on-ending-war-opening-strait-of-hormuz" target="_blank" rel="noopener">Qatar and Oman mediate US-Iran talks on ending war</a></h3>
-  <p><span class="tag">Confirmed</span>On the UN General Assembly&#39;s sidelines Sept. 22–23, Qatar and Oman mediated indirect US-Iran talks; Qatar&#39;s prime minister, Sheikh Mohammed bin Abdulrahman, met Iran&#39;s foreign minister, Abbas Araghchi, on Sept. 23. Tehran said it could reopen the Strait of Hormuz &#34;within seven days&#34; if Washington eased military pressure and lifted its blockade. Mediators committed to continuing talks.</p>
-  <p class="claimed"><span class="tag">Claimed by Special envoy Steve Witkoff</span>that mediators &#34;shuttled between&#34; delegations, describing the talks as indirect — a description at odds with Trump&#39;s account of a direct three-hour meeting</p>
-  <ul class="sides"><li><strong>Trump:</strong> Says there is &#34;a lot of momentum&#34; toward an agreement.</li><li><strong>Iran:</strong> Says reopening the strait is conditional on the US easing military pressure first.</li></ul>
-  <span class="srcline small"><a href="https://www.aljazeera.com/news/2026/9/23/us-iran-hold-mediated-unga-talks-on-ending-war-opening-strait-of-hormuz" target="_blank" rel="noopener">Read the original at US, Iran hold mediated UNGA talks — Al Jazeera →</a></span>
-  
-</li><li id="world-3">
-  <h3 class="h-small hl"><a href="https://www.aljazeera.com/news/2026/9/23/zelenskyy-says-ukraine-ready-for-energy-truce-with-russia-after-trump-talks" target="_blank" rel="noopener">Zelenskyy offers mutual halt to energy strikes</a></h3>
-  <p><span class="tag">Confirmed</span>Zelenskyy and Trump met for 40 minutes at the UN on Sept. 22; both said they want the war ended before winter. Zelenskyy said, &#34;If they don&#39;t want us to attack their diesel and refineries...we are ready – if they will not attack our energy system.&#34; He asked Trump for more Patriot missiles; Trump had not agreed as of reporting. Overnight into Sept. 22, according to Ukraine&#39;s air force, Russia launched 212 drones and four cruise missiles, plus other missiles, at Dnipropetrovsk, Poltava and Chernihiv regions, killing at least three and wounding six in Dnipro; nearly 100,000 lost power in the Chernihiv region. Ukrainian drones struck Russia&#39;s Samara region, killing one and injuring four, according to local Russian authorities.</p>
-  <p class="claimed"><span class="tag">Claimed by Zelenskyy</span>that Russian intelligence indicates Moscow is preparing &#34;a new massive attack&#34;</p>
-  <ul class="sides"><li><strong>Ukraine:</strong> Wants reciprocal de-escalation plus continued sanctions and air defense support.</li><li><strong>Kremlin:</strong> No response found in sourced reporting.</li></ul>
-  <span class="srcline small"><a href="https://www.aljazeera.com/news/2026/9/23/zelenskyy-says-ukraine-ready-for-energy-truce-with-russia-after-trump-talks" target="_blank" rel="noopener">Read the original at Zelenskyy says Ukraine ready for energy truce — Al Jazeera →</a></span>
-  <details class="sources"><summary>Receipts (2)</summary>
-<ul><li><a href="https://www.aljazeera.com/news/2026/9/23/zelenskyy-says-ukraine-ready-for-energy-truce-with-russia-after-trump-talks" target="_blank" rel="noopener">Zelenskyy says Ukraine ready for energy truce — Al Jazeera</a> <span class="d">2026-09-23</span></li><li><a href="https://www.aljazeera.com/news/2026/9/22/russian-strikes-on-ukraine-kill-three-as-zelenskyy-in-us-for-un-summit" target="_blank" rel="noopener">Russian strikes on Ukraine kill three — Al Jazeera</a> <span class="d">2026-09-22</span></li></ul></details>
-</li><li id="world-4">
-  <h3 class="h-small hl"><a href="https://www.aljazeera.com/news/2026/9/22/un-general-assembly-2026-when-is-it-who-is-speaking-and-when" target="_blank" rel="noopener">UN General Assembly opens; Abbas speaks by video</a></h3>
-  <p><span class="tag">Confirmed</span>The UN General Assembly&#39;s 81st general debate opened Sept. 22, with nearly 130 heads of state or government expected through Sept. 26. For a second year, the US denied Palestinian President Mahmoud Abbas a visa; member states voted to let him address the chamber by prerecorded video. French President Macron called Gaza &#34;a spectacle that shames us all,&#34; saying humanitarian deliveries remain blocked despite the declared ceasefire.</p>
-  <p class="claimed"><span class="tag">Claimed by Turkish President Erdogan</span>said &#34;over the past three years, we have lost 74,000 of our brothers and sisters, most of them women and children&#34;; separately, the UN said the visa denial &#34;violates the Host Country Agreement&#34;</p>
-  <ul class="sides"><li><strong>France, Turkey, Qatar and Jordan:</strong> Say the ceasefire is unenforced and aid access remains blocked.</li><li><strong>Israel:</strong> Response not found in sourced reporting.</li></ul>
-  <span class="srcline small"><a href="https://www.aljazeera.com/news/2026/9/22/un-general-assembly-2026-when-is-it-who-is-speaking-and-when" target="_blank" rel="noopener">Read the original at UN General Assembly 2026: who is speaking and when — Al Jazeera →</a></span>
-  <details class="sources"><summary>Receipts (2)</summary>
-<ul><li><a href="https://www.aljazeera.com/news/2026/9/22/un-general-assembly-2026-when-is-it-who-is-speaking-and-when" target="_blank" rel="noopener">UN General Assembly 2026: who is speaking and when — Al Jazeera</a> <span class="d">2026-09-22</span></li><li><a href="https://www.timesofisrael.com/liveblog-september-22-2026/" target="_blank" rel="noopener">Times of Israel liveblog Sept 22</a> <span class="d">2026-09-22</span></li></ul></details>
-</li>
-    </ul>
-  </section>
-
-  
-  <section class="sec ruled" id="tv" aria-labelledby="tv-h">
-    <div class="sec-head">
-      <p class="kicker">TV and the sky</p>
-      <h2 class="h-sec" id="tv-h">Tonight, and overhead</h2>
-    </div>
-    <div class="boxes">
-      
-      <aside class="box" id="storm-watch" aria-label="Storm Watch">
-  <h4>Storm Watch</h4>
-  
-  <ul><li><b>Hurricane Polo</b> (Eastern Pacific) &mdash; Category 4 · 150 mph peak · 922 mb. About 165 miles south of Zihuatanejo, Mexico, as of the 5:00am PT Wednesday advisory Tropical-storm conditions possible along Mexico&#39;s coast; 3-6 inches of rain (isolated 8) over Guerrero and Michoacán could bring life-threatening flooding and mudslides. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP2+shtml/231135.shtml" target="_blank" rel="noopener">NHC Intermediate Advisory 11A, Hurricane Polo</a></li><li><b>Hurricane Odalys</b> (Eastern Pacific) &mdash; Category 1 · 75 mph peak · 989 mb. About 1,295 miles west-southwest of the southern tip of Baja California, as of 2:00am PT Wednesday No coastal watches or warnings in effect. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP1+shtml/230840.shtml" target="_blank" rel="noopener">NHC Public Advisory 13, Hurricane Odalys</a></li></ul>
-  
-  <p><b>Winter outlook:</b> NOAA&#39;s Climate Prediction Center put the odds of a very strong El Niño this fall and winter at over 90% in its Sept 10 ENSO discussion (no newer discussion yet; next due Oct 8). History is a mixed guide for LA: the strong 1997-98 El Niño brought heavy rain and mudslides, while the similarly strong 2015-16 event underdelivered here, so above-average odds, not a guarantee.</p>
-  <p class="src"><a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">NOAA CPC ENSO Diagnostic Discussion, Sept 10 2026</a> &middot; <a href="https://elninoguide.com/articles/el-nino-california" target="_blank" rel="noopener">El Niño Guide: Southern California rain &amp; flood risk</a></p>
-</aside>
-      <aside class="box" id="sky" aria-label="Sky">
-  <h4>Sky</h4>
-  <p><b>Moon:</b> Waxing Gibbous (90% illuminated)</p>
-  <p><b>Tonight's sky:</b> The moon is about 90% lit and heads for full on Saturday, Sept 26. Saturn is up in the evening sky, and Jupiter crosses from Cancer into Leo today, per Griffith Observatory&#39;s September Sky Report. <span class="src"><a href="https://theskylive.com/moon/2026-09-23" target="_blank" rel="noopener">TheSkyLive: Moon phase, Sept 23 2026</a> &middot; <a href="https://griffithobservatory.lacity.gov/explore/observing-the-sky/sky-report/" target="_blank" rel="noopener">Griffith Observatory Sky Report</a></span></p>
-  
-  <h5>Human Design transits</h5>
-  <ul><li><b>Patrick:</b> Per the HD Toolkit&#39;s run for today: Saturn on your own gate 21 (The Hunter, Heart) and Uranus on your own gate 20 (The Now, Throat) both run through Thursday 9/24, completing your 21-45 and 20-34 channels; the North Node on your gate 30 (Recognition of Feelings) ends the same day.</li><li><b>Travis:</b> Per the HD Toolkit&#39;s run for today: Neptune on your own gate 25 (The Spirit of the Self, G center) runs through Thursday 9/24.</li></ul>
-  
-</aside>
-    </div>
-  </section>
-  
+</div>
+</section>
 
 
-
-
-  <section class="sec ruled made" id="made" aria-labelledby="made-h">
-    <div class="sec-head"><p class="kicker">Behind the paper</p><h2 class="h-sec" id="made-h">How this paper is made</h2></div>
-    <p>Who made today&#39;s paper, and roughly what it cost in tokens (the chunks of text models read and write).</p>
-    <div class="tablewrap"><table>
-      <thead><tr><th>Stage</th><th>Model</th><th class="num">Tokens</th><th>Plain words</th></tr></thead>
-      <tbody><tr><td>Scouts ×5 (AI, Spirit, Good Ten, World, TV/Almanac)</td><td>Sonnet</td><td class="num">≈503k</td><td>Searched and opened every source; Good Ten and Spirit ran long</td></tr><tr><td>Writer (incl. lead)</td><td>Sonnet</td><td class="num">≈85k</td><td>Opus lead dropped: budget already exceeded</td></tr><tr><td>Fact-checker, fresh context</td><td>Sonnet</td><td class="num">≈134k</td><td>154 claims: 139 OK, 13 wrong, 1 unsupported, 1 unverifiable; all fixed or cut</td></tr><tr><td>Managing editor</td><td>Opus (routine&#39;s configured model)</td><td class="num">not metered here</td><td>Planned, applied fixes, built, published, filed</td></tr></tbody>
-    </table></div>
-    <p>Total for subagents ≈722k tokens, well over the 300k daily target. Next time: tighter tool-call caps on the scouts.</p>
-  </section>
-
+<section class="sec rl made" id="made" aria-labelledby="made-h">
+  <p class="kick">Behind the paper</p><h2 class="hd h-sec" id="made-h">How this paper is made</h2>
+  <p>Who made today&#39;s paper, and roughly what it cost in tokens (the chunks of text models read and write).</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Stage</th><th>Model</th><th class="num">Tokens</th><th>Plain words</th></tr></thead>
+    <tbody><tr><td>Scouts ×5 (AI, Spirit, Good Ten, World, TV/Almanac)</td><td>Sonnet</td><td class="num">≈503k</td><td>Searched and opened every source; Good Ten and Spirit ran long</td></tr><tr><td>Writer (incl. lead)</td><td>Sonnet</td><td class="num">≈85k</td><td>Opus lead dropped: budget already exceeded</td></tr><tr><td>Fact-checker, fresh context</td><td>Sonnet</td><td class="num">≈134k</td><td>154 claims: 139 OK, 13 wrong, 1 unsupported, 1 unverifiable; all fixed or cut</td></tr><tr><td>Managing editor</td><td>Opus (routine&#39;s configured model)</td><td class="num">not metered here</td><td>Planned, applied fixes, built, published, filed</td></tr></tbody>
+  </table></div>
+  <p>Total for subagents ≈722k tokens, well over the 300k daily target. Next time: tighter tool-call caps on the scouts.</p>
+</section>
 
 </main>
-</div>
 
 <footer class="foot">
   <div class="top">
     <div>
       <p class="brand">The Gayzette</p>
-      <p class="tag">No ads. No pop-ups. No tracking. Just the paper.</p>
+      <p class="tagl">No ads. No pop-ups. No tracking. Just the paper.</p>
     </div>
     <nav aria-label="Footer sections">
-      <a href="#front">Front Page</a><a href="#ai">AI</a><a href="#spirit">Spirit</a><a href="#feel-good">Feel-Good</a><a href="#world">World</a><a href="#tv">TV</a><a href="/editions/2026-10-18.html">Sunday</a>
+      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
       <a href="/editions/">Past editions</a>
     </nav>
   </div>
-  <p class="fine">The Gayzette &middot; Patrick &amp; Travis<br><a href="/editions/">Past editions</a> &middot; Made in Los Angeles &middot; Summaries link to their sources</p>
+  <p class="fine">The Gayzette &middot; Patrick &amp; Travis<br><a href="/editions/">Past editions</a> &middot; Made in Los Angeles &middot; Edition No. 4 &middot; Summaries link to their sources</p>
 </footer>
+</div>
 </body>
 </html>

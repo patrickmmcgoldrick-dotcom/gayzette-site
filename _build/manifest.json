@@ -1,195 +1,222 @@
 {
   "domain": "thegayzette.news",
-  "built": "2026-10-20T02:22:26",
+  "built": "2026-10-20T02:54:39",
   "editions": [
     {
       "date": "2026-10-19",
       "kind": "Daily",
       "headline": "A 501-billion-parameter coding model, free to download, with a permissive license",
       "source": "gayzette-daily-2026-10-19.json",
-      "path": "editions/2026-10-19.html"
+      "path": "editions/2026-10-19.html",
+      "no": 27
     },
     {
       "date": "2026-10-18",
       "kind": "Sunday",
       "headline": "Webb finds a record-distance lensing galaxy cluster",
       "source": "issue-007.json",
-      "path": "editions/2026-10-18.html"
+      "path": "editions/2026-10-18.html",
+      "no": 26
     },
     {
       "date": "2026-10-17",
       "kind": "Daily",
       "headline": "Claude Code 2.1.302 says standalone Claude Design closes by December 14",
       "source": "gayzette-daily-2026-10-17.json",
-      "path": "editions/2026-10-17.html"
+      "path": "editions/2026-10-17.html",
+      "no": 25
     },
     {
       "date": "2026-10-16",
       "kind": "Daily",
       "headline": "Fast mode for Claude Opus 5.5 is now open on the API",
       "source": "gayzette-daily-2026-10-16.json",
-      "path": "editions/2026-10-16.html"
+      "path": "editions/2026-10-16.html",
+      "no": 24
     },
     {
       "date": "2026-10-15",
       "kind": "Daily",
       "headline": "Claude API now shows its work in tracing tools",
       "source": "gayzette-daily-2026-10-15.json",
-      "path": "editions/2026-10-15.html"
+      "path": "editions/2026-10-15.html",
+      "no": 23
     },
     {
       "date": "2026-10-14",
       "kind": "Daily",
       "headline": "Google's Gemini 4 Argon is now open to everyone, at half price for now",
       "source": "gayzette-daily-2026-10-14.json",
-      "path": "editions/2026-10-14.html"
+      "path": "editions/2026-10-14.html",
+      "no": 22
     },
     {
       "date": "2026-10-13",
       "kind": "Daily",
       "headline": "Meta launches two new AI models aimed at coding agents",
       "source": "gayzette-daily-2026-10-13.json",
-      "path": "editions/2026-10-13.html"
+      "path": "editions/2026-10-13.html",
+      "no": 21
     },
     {
       "date": "2026-10-12",
       "kind": "Daily",
       "headline": "Claude's Docs, Slides and Design leave beta and go free on every plan",
       "source": "gayzette-daily-2026-10-12.json",
-      "path": "editions/2026-10-12.html"
+      "path": "editions/2026-10-12.html",
+      "no": 20
     },
     {
       "date": "2026-10-11",
       "kind": "Sunday",
       "headline": "Webb traces a far-off radio flash to a surprisingly tiny galaxy",
       "source": "issue-006.json",
-      "path": "editions/2026-10-11.html"
+      "path": "editions/2026-10-11.html",
+      "no": 19
     },
     {
       "date": "2026-10-10",
       "kind": "Daily",
       "headline": "Claude Managed Agents can now write and run their own workflows",
       "source": "gayzette-daily-2026-10-10.json",
-      "path": "editions/2026-10-10.html"
+      "path": "editions/2026-10-10.html",
+      "no": 18
     },
     {
       "date": "2026-10-09",
       "kind": "Daily",
       "headline": "Claude Haiku 5.5 arrives at one-tenth the old Haiku price",
       "source": "gayzette-daily-2026-10-09.json",
-      "path": "editions/2026-10-09.html"
+      "path": "editions/2026-10-09.html",
+      "no": 17
     },
     {
       "date": "2026-10-08",
       "kind": "Daily",
       "headline": "Google's new free search model fits on a laptop",
       "source": "gayzette-daily-2026-10-08.json",
-      "path": "editions/2026-10-08.html"
+      "path": "editions/2026-10-08.html",
+      "no": 16
     },
     {
       "date": "2026-10-07",
       "kind": "Daily",
       "headline": "OpenAI shares new math results many with Lean-checked proofs",
       "source": "gayzette-daily-2026-10-07.json",
-      "path": "editions/2026-10-07.html"
+      "path": "editions/2026-10-07.html",
+      "no": 15
     },
     {
       "date": "2026-10-05",
       "kind": "Daily",
       "headline": "OpenAI's GPT-6 guide covers model sizes, caching and prompting",
       "source": "gayzette-daily-2026-10-05.json",
-      "path": "editions/2026-10-05.html"
+      "path": "editions/2026-10-05.html",
+      "no": 14
     },
     {
       "date": "2026-10-04",
       "kind": "Sunday",
       "headline": "FDA approves the first heart valve that grows with the child",
       "source": "issue-005.json",
-      "path": "editions/2026-10-04.html"
+      "path": "editions/2026-10-04.html",
+      "no": 13
     },
     {
       "date": "2026-10-03",
       "kind": "Daily",
       "headline": "Claude Code mods: tiny TypeScript functions that reshape the tool",
       "source": "gayzette-daily-2026-10-03.json",
-      "path": "editions/2026-10-03.html"
+      "path": "editions/2026-10-03.html",
+      "no": 12
     },
     {
       "date": "2026-10-01",
       "kind": "Daily",
       "headline": "FTC opens a broad probe into AI agent risks",
       "source": "gayzette-daily-2026-10-01.json",
-      "path": "editions/2026-10-01.html"
+      "path": "editions/2026-10-01.html",
+      "no": 11
     },
     {
       "date": "2026-09-30",
       "kind": "Daily",
       "headline": "Nvidia releases free tools to keep AI agents on a leash",
       "source": "gayzette-daily-2026-09-30.json",
-      "path": "editions/2026-09-30.html"
+      "path": "editions/2026-09-30.html",
+      "no": 10
     },
     {
       "date": "2026-09-28",
       "kind": "Daily",
       "headline": "OpenAI pauses training after agents overreach on gov sites",
       "source": "gayzette-daily-2026-09-28.json",
-      "path": "editions/2026-09-28.html"
+      "path": "editions/2026-09-28.html",
+      "no": 9
     },
     {
       "date": "2026-09-27",
       "kind": "Sunday",
       "headline": "Astronomers pick up radio signals from a planet 64 light-years away",
       "source": "issue-004.json",
-      "path": "editions/2026-09-27.html"
+      "path": "editions/2026-09-27.html",
+      "no": 8
     },
     {
       "date": "2026-09-26",
       "kind": "Daily",
       "headline": "OpenAI-Built Agents Reached Australian Medicare Data, Researchers Say",
       "source": "gayzette-daily-2026-09-26.json",
-      "path": "editions/2026-09-26.html"
+      "path": "editions/2026-09-26.html",
+      "no": 7
     },
     {
       "date": "2026-09-25",
       "kind": "Daily",
       "headline": "Claude Agents Uncover Novel CRISPR-Like Enzyme System",
       "source": "gayzette-daily-2026-09-25.json",
-      "path": "editions/2026-09-25.html"
+      "path": "editions/2026-09-25.html",
+      "no": 6
     },
     {
       "date": "2026-09-24",
       "kind": "Daily",
       "headline": "Amazon Lets Outside AI Agents Run Seller Tools",
       "source": "gayzette-daily-2026-09-24.json",
-      "path": "editions/2026-09-24.html"
+      "path": "editions/2026-09-24.html",
+      "no": 5
     },
     {
       "date": "2026-09-23",
       "kind": "Daily",
       "headline": "Claude Opus 5.5 lands: near-top quality, about 40% cheaper",
       "source": "gayzette-daily-2026-09-23.json",
-      "path": "editions/2026-09-23.html"
+      "path": "editions/2026-09-23.html",
+      "no": 4
     },
     {
       "date": "2026-09-20",
       "kind": "Sunday",
       "headline": "The Pentagon just made it legal to talk about UFOs",
       "source": "issue-003.json",
-      "path": "editions/2026-09-20.html"
+      "path": "editions/2026-09-20.html",
+      "no": 3
     },
     {
       "date": "2026-09-13",
       "kind": "Sunday",
       "headline": "Ten thousand AI agents proved a million-dollar math problem",
       "source": "issue-002.json",
-      "path": "editions/2026-09-13.html"
+      "path": "editions/2026-09-13.html",
+      "no": 2
     },
     {
       "date": "2026-09-07",
       "kind": "Sunday",
       "headline": "Life on Earth may have started twice, from the same chemistry",
       "source": "issue-001.json",
-      "path": "editions/2026-09-07.html"
+      "path": "editions/2026-09-07.html",
+      "no": 1
     }
   ]
 }

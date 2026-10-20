@@ -160,573 +160,560 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* ===== The Gayzette site.css — v2, from the Claude Design Labs look (Magazine Editorial) ===== */
-:root{
-  --paper:#FBF8F1; --paper-2:#F3EEE2; --paper-3:#EDE6D6; --ink:#222222; --ink-2:#6B645A; --ink-3:#6B645A;
-  --hair:#E4DCCB; --rule:#E4DCCB; --rule-2:#CDBF9F; --accent:#C2603C; --accent-2:#A24E2F;
-  --serif:Newsreader,Georgia,serif; --display:Fraunces,Georgia,serif; --label:'DM Sans',system-ui,sans-serif;
-  color-scheme:light;
-}
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
-body{font-family:var(--serif);font-size:19px;line-height:1.65;overflow-wrap:break-word}
-main,.shell{min-width:0}
-a{color:var(--accent)} a:hover{color:var(--accent-2)}
+
+/* ===== The Gayzette site.css v3 (DRAFT 3, 2026-10-19). Every value below is lifted from the Claude Design Labs
+   page ("The Gayzette"): tokens #FBF8F1 paper, #222222 ink, #6B645A muted, #E4DCCB hairline, #C2603C accent. ===== */
+html,body{margin:0;padding:0;background:#FBF8F1;color:#222222;-webkit-font-smoothing:antialiased}
+a{color:#C2603C}a:hover{color:#A24E2F}
 img,svg{max-width:100%}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.skip{position:absolute;left:-9999px;top:16px;z-index:50;background:var(--ink);color:var(--paper);padding:12px 16px;font:500 13px var(--label);letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
-.skip:focus{left:16px;color:var(--paper)}
-.shell{max-width:1200px;margin:0 auto;padding:0 24px}
+.pg{min-height:100vh;background:#FBF8F1;color:#222222;font-family:Newsreader,Georgia,serif;overflow-wrap:break-word}
+.skip{position:absolute;left:-9999px;top:16px;z-index:50;background:#222;color:#FBF8F1;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.skip:focus{left:16px;color:#FBF8F1}
+:focus-visible{outline:2px solid #C2603C;outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
 
-/* labels / kickers */
-.label,.kicker,.byline,.when,.nav a,.chip{font-family:var(--label);font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-.kicker{color:var(--accent);margin:0 0 14px}
-.label{color:var(--ink-2);margin:0 0 8px}
-.byline{color:var(--ink-2);margin:22px 0 0}
-
-/* masthead */
-.strip{display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--hair);font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
-.masthead{padding:64px 0 48px;text-align:center}
-.masthead a{text-decoration:none;color:var(--ink)}
-.masthead h1{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 80;font-optical-sizing:auto;font-size:clamp(52px,9vw,120px);line-height:.95;letter-spacing:-.02em;margin:0}
-.masthead p{font-family:var(--display);font-style:italic;font-weight:400;font-size:19px;color:var(--ink-2);margin:20px 0 0}
-.nav{display:flex;gap:32px;overflow-x:auto;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);scrollbar-width:none;white-space:nowrap}
+/* header */
+.strip{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid #E4DCCB;font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A}
+.mast{padding:72px 0 56px;text-align:left}
+.mast a{text-decoration:none;color:#222222}
+.mast h1{font-family:Fraunces,serif;font-weight:600;font-variation-settings:'SOFT' 80;font-optical-sizing:auto;font-size:clamp(56px,9vw,120px);line-height:.95;letter-spacing:-.02em;margin:0}
+.mast p{font-family:Fraunces,serif;font-style:italic;font-weight:400;font-size:19px;color:#6B645A;margin:20px 0 0}
+.nav{display:flex;gap:32px;overflow-x:auto;border-top:1px solid #E4DCCB;border-bottom:1px solid #E4DCCB;scrollbar-width:none;white-space:nowrap}
 .nav::-webkit-scrollbar{display:none}
-.nav a{display:inline-flex;align-items:center;min-height:48px;padding:0 2px;text-decoration:none;color:var(--ink);border-bottom:2px solid transparent;margin-bottom:-1px}
-.nav a:hover,.nav a.on{color:var(--accent);border-bottom-color:var(--accent)}
+.nav a{display:inline-flex;align-items:center;min-height:48px;padding:0 2px;font-family:'DM Sans',sans-serif;font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:#222222;border-bottom:2px solid transparent;margin-bottom:-1px}
+.nav a.on{color:#C2603C;border-bottom-color:#C2603C}
 
-/* sections */
-main{display:block}
-.sec{padding:96px 0 0}
-.sec.ruled{margin-top:96px;padding-top:72px;border-top:1px solid var(--hair)}
-.sec-head h2,.h-sec{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:clamp(34px,4.5vw,52px);line-height:1.05;letter-spacing:-.015em;margin:0;text-wrap:pretty}
-.sec-head .sub,.deck{font-family:var(--display);font-style:italic;font-weight:400;color:var(--ink-2);text-wrap:pretty}
-.sec-head .sub{font-size:21px;line-height:1.4;margin:16px 0 0;max-width:620px}
-.deck{font-size:22px;line-height:1.35;margin:16px 0 0}
-.rule-short{width:48px;height:2px;background:var(--accent);margin:24px 0 0}
+/* type kit */
+.kick,.lab,.when{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.kick{color:#C2603C;margin:0 0 16px}
+.lab{color:#6B645A;margin:0 0 8px}
+.hd{font-family:Fraunces,serif;font-weight:600;font-variation-settings:'SOFT' 60;margin:0;text-wrap:pretty}
+.hd a,.hl a{text-decoration:none;color:inherit}
+.hd a:hover,.hl a:hover{color:#C2603C}
+.h-hero{font-optical-sizing:auto;font-size:clamp(36px,5vw,64px);line-height:1.04;letter-spacing:-.015em}
+.h-sun{font-size:clamp(40px,6vw,80px);line-height:1;letter-spacing:-.02em}
+.h-3{font-size:36px;line-height:1.1;letter-spacing:-.012em}
+.h-lead{font-size:clamp(30px,3.5vw,42px);line-height:1.08;letter-spacing:-.012em}
+.h-card{font-size:28px;line-height:1.12;letter-spacing:-.01em}
+.h-card2{font-size:26px;line-height:1.15;letter-spacing:-.01em}
+.h-tv{font-size:24px;line-height:1.15;letter-spacing:-.01em}
+.h-4{font-size:22px;line-height:1.2;letter-spacing:-.01em}
+.h-sec{font-size:clamp(36px,4.5vw,52px);line-height:1.05;letter-spacing:-.015em}
+.h-page{font-size:clamp(44px,6vw,72px);line-height:1;letter-spacing:-.02em}
+.deck{font-family:Fraunces,serif;font-style:italic;font-weight:400;font-size:24px;line-height:1.35;color:#6B645A;margin:20px 0 0;text-wrap:pretty}
+.deck.s21{font-size:21px;line-height:1.4;margin:16px 0 0}
+.deck.s26{font-size:26px;margin:24px 0 0}
+.stand{font-family:Fraunces,serif;font-style:italic;font-size:21px;line-height:1.4;color:#6B645A;margin:24px 0 0;max-width:620px}
+.rule{width:48px;height:2px;background:#C2603C;margin:24px 0 0}
+.by{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:24px 0 0}
+.bd{font-family:Newsreader,serif;font-size:19px;line-height:1.65;margin:14px 0 0;max-width:620px}
+.bd.l{max-width:none}
+.bd a{color:#C2603C}
+.src{display:inline-block;margin-top:14px;font-family:Newsreader,serif;font-style:italic;font-size:16px;color:#C2603C;text-decoration:none}
+.src:hover{text-decoration:underline}
+.src.s15{font-size:15px;margin-top:8px}
+.src.m12{margin-top:12px}
+.chip{display:inline-block;margin-left:10px;padding:2px 8px;border:1px solid #E4DCCB;color:#6B645A;font-family:'DM Sans',sans-serif;font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.ph,.pic{display:block;width:100%;object-fit:cover;background:#EDE6D6}
+.pic.fb,.ph{background:#EDE6D6 repeating-linear-gradient(135deg,transparent 0 12px,rgba(34,34,34,.045) 12px 13px)}
+.r32{aspect-ratio:3/2}.r45{aspect-ratio:4/5}
+.flex{display:flex;flex-wrap:wrap;align-items:flex-start}
+@media (max-width:640px){.bleed{margin-left:-24px;margin-right:-24px;width:calc(100% + 48px)}}
 
-/* headlines */
-.h-hero{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-optical-sizing:auto;font-size:clamp(34px,5vw,64px);line-height:1.04;letter-spacing:-.015em;margin:0;text-wrap:pretty}
-.h-feature{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:clamp(28px,3.2vw,36px);line-height:1.1;letter-spacing:-.012em;margin:0;text-wrap:pretty}
-.h-card{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:26px;line-height:1.15;letter-spacing:-.01em;margin:0;text-wrap:pretty}
-.h-small{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:22px;line-height:1.2;letter-spacing:-.01em;margin:0;text-wrap:pretty}
-.hl a{color:inherit;text-decoration:none}
-.hl a:hover{color:var(--accent)}
-
-/* body copy */
-.body p{margin:14px 0 0;max-width:640px}
-.body.wide p{max-width:680px}
-.srcline{display:block;margin-top:14px;font-style:italic;font-size:16px}
-.srcline a{color:var(--accent);text-decoration:none}
-.srcline a:hover{text-decoration:underline}
-.srcline.small{font-size:15px;margin-top:8px}
-.meta{font-family:var(--label);font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
-.chip{display:inline-block;border:1px solid var(--hair);padding:2px 8px;color:var(--ink-2);font-size:11px;margin-left:8px}
-.sources{margin:14px 0 0;font:15px/1.5 var(--serif);color:var(--ink-2)}
-.sources summary{cursor:pointer;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase}
-.sources ul{margin:8px 0 0;padding-left:1.1rem}
-.sources .d{color:var(--ink-2)}
-.more-read{margin:10px 0 0}
-.more-read summary{cursor:pointer;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
-.more-read .body p{max-width:none}
-.desk{margin:22px 0 0;padding:20px 24px;background:var(--paper-2);max-width:640px;font-size:17px;line-height:1.5}
-.desk .label{margin:0 0 6px}
-.cal-pill{display:inline-block;margin-top:8px;font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--rule-2);padding:2px 10px;color:var(--ink-2)}
-
-/* art */
-.art{display:block;width:100%;background:var(--paper-3);line-height:0;margin:0}
-.art svg{display:block;width:100%;height:auto}
-.art.r32{aspect-ratio:auto}
-
-/* hero */
-.hero{padding:56px 0 0}
-.hero .art{margin-bottom:36px}
-.hero .txt{max-width:760px}
-.hero.sunday .h-hero{font-size:clamp(38px,6vw,80px);line-height:1}
-.hero-body{margin-top:12px}
-
-/* editor's note */
-.ednote{max-width:620px;margin:0 auto;padding-top:96px}
-.ednote p.t{margin:16px 0 0}
-.ednote .byline{margin:0 0 18px}
-
-/* flex layouts */
+/* front page blocks */
+main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.s-hero{padding:72px 0 0}
+.hero-in{display:flex;flex-direction:column;flex-wrap:wrap;gap:32px 32px;align-items:stretch}
+.hero-pic{width:100%;min-width:0}
+.hero-txt{flex:1 1 320px;min-width:0;max-width:720px}
+.sec{padding:112px 0 0}
+.sec.rl{margin-top:120px;padding:80px 0 0;border-top:1px solid #E4DCCB}
 .row{display:flex;flex-wrap:wrap;gap:48px 32px;align-items:flex-start}
-.row>.main{flex:2 1 480px;min-width:0}
-.row>.side{flex:1 1 260px;min-width:0}
-.row>.half{flex:1 1 380px;min-width:0}
-.side-list>*{padding:20px 0;border-top:1px solid var(--hair)}
-.side-list>.label{padding:0;border:0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:64px 40px}
-.grid.g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-.card{min-width:0;border-top:1px solid var(--hair);padding-top:28px}
-.card .art{margin-bottom:22px}
+.col-main{flex:2 1 480px;min-width:0}
+.col-side{flex:1 1 260px;min-width:0}
+.col-half{flex:1 1 380px;min-width:0}
+.col-half.t{flex-basis:260px}
+.mt28{margin-top:28px}
+.more{margin-top:0}
+.more .it{padding:20px 0;border-top:1px solid #E4DCCB}
+.more .it h4{margin:0}
+.col-half .more{margin-top:48px}
+.nbr{max-width:620px}
+.brief{margin-top:10px}
+.brief summary{display:inline-block;cursor:pointer;margin-top:8px;font-family:Newsreader,serif;font-style:italic;font-size:15px;color:#6B645A;list-style:none}
+.brief summary::-webkit-details-marker{display:none}
+.brief summary:hover{color:#C2603C}
+.brief[open] summary{margin-bottom:4px}
+.brief .bd{font-size:17px;line-height:1.6;margin:8px 0 0}
+.brief .bd+.bd{margin-top:14px}
+.ctx{margin:14px 0 0;font-family:Newsreader,serif;font-size:17px;line-height:1.55;color:#6B645A;max-width:620px}
+.ctx b,.tag{font-family:'DM Sans',sans-serif;font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#C2603C;margin-right:8px}
+.sides{margin:12px 0 0;padding:0;list-style:none;font-family:Newsreader,serif;font-size:16px;line-height:1.5;color:#6B645A}
+.sides li{padding:6px 0;border-top:1px solid #E4DCCB}
 
-/* good ten */
-.good{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:0 56px}
-.good li{display:flex;gap:24px;padding:24px 0;border-top:1px solid var(--hair);min-width:0}
-.good .n{font:500 13px var(--label);letter-spacing:.08em;color:var(--accent);padding-top:7px;min-width:28px}
-.good .h{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 60;font-size:20px;line-height:1.25;margin:0}
-.good p{margin:6px 0 0;font-size:18px;line-height:1.6}
-.good .meta{display:block;margin-top:2px}
+/* inset comic art (the newsroom's own panel) */
+.illo{margin:32px 0 0;max-width:620px}
+.illo .art{border:1px solid #E4DCCB;background:#FBF8F1}
+.illo svg{display:block;width:100%;height:auto}
+.illo figcaption{font-family:Fraunces,serif;font-style:italic;font-size:15px;color:#6B645A;margin:12px 0 0}
+.illo figcaption span{font-family:'DM Sans',sans-serif;font-style:normal;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
 
-/* world */
-.ws-note{font-family:var(--display);font-style:italic;font-size:19px;line-height:1.45;color:var(--ink-2);margin:18px 0 0;max-width:680px}
-.ws{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:0 56px}
-.ws>li{padding:28px 0;border-top:1px solid var(--hair);min-width:0}
-.ws p{margin:12px 0 0;font-size:18px;line-height:1.6}
-.ws .tag{font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-right:8px}
-.ws .claimed{color:var(--ink-2)}
-.ws ul.sides{list-style:none;margin:14px 0 0;padding:12px 0 0 16px;border-left:2px solid var(--hair)}
-.ws ul.sides li{margin:6px 0;font-size:17px;line-height:1.5}
+/* long text under the hero / in a story */
+.story{max-width:620px;margin:72px 0 0}
+.story .bd{margin:0}
+.story .bd+.bd,.story .illo+.bd{margin-top:28px}
+.desk{margin:48px 0 0;padding:32px;background:#F3EEE2;max-width:620px}
+.desk p.lab{margin:0 0 10px;font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;line-height:1.65;color:#6B645A}
+.desk p{font-family:Newsreader,serif;font-size:19px;line-height:1.5;margin:0}
+.pill{display:inline-block;margin-top:12px;font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#C2603C;border:1px solid #C2603C;padding:3px 10px}
+.rcpt{margin:16px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:16px}
+.rcpt summary{cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A}
+.rcpt ul{margin:10px 0 0;padding:0;list-style:none}
+.rcpt li{padding:6px 0;border-top:1px solid #E4DCCB}
+.rcpt .d{color:#6B645A;font-size:14px;margin-left:6px}
+.note{margin:96px 0 0;padding-top:56px;border-top:1px solid #E4DCCB;max-width:620px}
+.note .t{font-family:Newsreader,serif;font-size:19px;line-height:1.65;margin:20px 0 0}
+.note .by{margin:0}
 
-/* dashed boxes */
-.boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;margin-top:48px;align-items:start}
-.box{border:1.5px dashed var(--rule-2);padding:24px 26px 26px;background:transparent;font-size:17px;line-height:1.55;min-width:0}
-.box.wide{grid-column:1/-1}
-.box h4{margin:0 0 14px;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
-.box h5{margin:16px 0 6px;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
-.box p{margin:8px 0 0}
-.box ul{margin:8px 0 0;padding-left:1.15rem}
-.box li{margin:6px 0}
-.box .src,.box a{font-size:15px}
-.box .empty{color:var(--ink-2);font-style:italic}
-.box .alert{font-weight:600}
-.cols-spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:8px 40px}
-.tvweek{display:grid;grid-template-columns:3.4rem 1fr;gap:6px 14px;margin-top:8px}
-.tvweek .day{font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);padding-top:3px}
-.tvweek .shows div{margin:2px 0 8px}
+/* Good Ten (list) */
+.glist{list-style:none;margin:48px 0 0;padding:0;max-width:620px}
+.glist li{display:flex;gap:24px;padding:24px 0;border-top:1px solid #E4DCCB}
+.glist .n{font-family:'DM Sans',sans-serif;font-weight:500;font-size:13px;letter-spacing:.08em;color:#C2603C;padding-top:7px;min-width:28px}
+.glist li>div{min-width:0}
+.glist h3{margin:0}
+.glist .when{display:block;color:#6B645A;margin:6px 0 0}
+.glist .bd{margin:10px 0 0}
+.gh{max-width:620px}
 
-/* briefly + calendar */
-.lines{list-style:none;margin:32px 0 0;padding:0;max-width:860px}
-.lines li>*{min-width:0}
-.lines li{display:grid;grid-template-columns:96px 1fr;gap:4px 24px;padding:16px 0;border-top:1px solid var(--hair)}
-.lines .when{color:var(--ink-2);padding-top:4px}
-.lines .what{font-size:18px;line-height:1.55}
-.lines .tag{display:block;font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-top:2px}
+/* grids */
+.grid{display:grid;gap:48px 32px;margin-top:48px}
+.g220{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.g280{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:56px 32px;margin-top:40px}
+.g320{grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:72px 32px;margin-top:120px}
+.grid article{min-width:0}
+.grid .kick{margin:24px 0 10px}
+.grid.g220 .lab{margin:20px 0 8px}
+.tb p{font-family:Newsreader,serif;font-size:18px;line-height:1.6;margin:10px 0 0}
+.tb ul{list-style:none;margin:10px 0 0;padding:0}
+.tb li{font-family:Newsreader,serif;font-size:17px;line-height:1.55;padding:10px 0;border-top:1px solid #E4DCCB}
+.tb .empty{color:#6B645A;font-style:italic}
+.tb h5{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:20px 0 0}
+.tb a{color:#C2603C}
+.tb .alert{color:#A24E2F}
+.tvweek{margin-top:10px}
+.tvweek .day{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#C2603C;padding-top:12px;border-top:1px solid #E4DCCB}
+.tvweek .shows div{font-family:Newsreader,serif;font-size:17px;line-height:1.5;padding:2px 0}
 
-/* how it's made */
-.made table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.45}
-.made th,.made td{text-align:left;padding:10px 12px 10px 0;border-bottom:1px solid var(--hair);vertical-align:top}
-.made th{font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
-.made .num{text-align:right;white-space:nowrap}
-.tablewrap{overflow-x:auto;margin:20px 0}
-.made p{max-width:680px;margin:14px 0 0}
+/* section page */
+.s-page{padding:80px 0 0}
+.lead{display:flex;flex-wrap:wrap;gap:40px 32px;align-items:flex-start;margin-top:96px}
+.lead>div{flex:1 1 380px;min-width:0}
+.lead .kick{margin:0 0 12px}
+.empty-sec{margin-top:96px;padding:80px 0;border-top:1px solid #E4DCCB;border-bottom:1px solid #E4DCCB;max-width:620px}
+.earlier{margin-top:120px;padding-top:80px;border-top:1px solid #E4DCCB;max-width:760px}
+.earlier .e{display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between;align-items:baseline;padding:20px 0;border-top:1px solid #E4DCCB}
+.earlier .e h4{flex:1 1 320px;margin:0}
 
-/* archive */
-.arch{list-style:none;margin:40px 0 0;padding:0;max-width:860px}
-.arch li{display:grid;grid-template-columns:120px 1fr;gap:4px 24px;padding:18px 0;border-top:1px solid var(--hair);align-items:baseline}
-.arch .when{color:var(--ink-2)}
-.arch .h-small a{color:inherit;text-decoration:none}.arch .h-small a:hover{color:var(--accent)}
-.arch .kind{display:block;font:500 11px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-top:4px}
-.month{margin:56px 0 0;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+/* lists (Sunday lines, archive) */
+.lines{list-style:none;margin:40px 0 0;padding:0;max-width:760px}
+.lines li{display:grid;grid-template-columns:88px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #E4DCCB}
+.lines .when{color:#6B645A;padding-top:5px;font-size:13px}
+.lines .what{font-family:Newsreader,serif;font-size:18px;line-height:1.6}
+.lines .tag{margin:0 0 0 10px;color:#6B645A}
+.lines a{font-style:italic;font-size:15px;color:#C2603C;text-decoration:none}
+.lines a:hover{text-decoration:underline}
+.month{font-family:'DM Sans',sans-serif;font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#C2603C;margin:64px 0 8px}
+.arch{list-style:none;margin:0;padding:0;max-width:760px}
+.arch li{display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between;align-items:baseline;padding:20px 0;border-top:1px solid #E4DCCB}
+.arch li>div{flex:1 1 320px}
+.arch h4{margin:0}
+.arch .when{color:#6B645A;order:2}
+.arch .kind{display:block;margin-top:4px;font-family:Fraunces,serif;font-style:italic;font-size:16px;color:#6B645A}
+.spec h3{margin:48px 0 0}
+.spec ul{list-style:none;margin:8px 0 0;padding:0;max-width:760px}
+.spec li{padding:20px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:18px;line-height:1.6}
+.spec li a{font-style:italic;font-size:15px;color:#C2603C;text-decoration:none}
+.spec .empty{color:#6B645A;font-style:italic}
+.made{max-width:760px}
+.made p{font-family:Newsreader,serif;font-size:19px;line-height:1.65;margin:20px 0 0}
+.made table{width:100%;border-collapse:collapse;margin-top:24px;font-family:Newsreader,serif;font-size:16px}
+.made th{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;text-align:left;padding:8px 8px 8px 0;border-bottom:1px solid #E4DCCB}
+.made td{padding:10px 8px 10px 0;border-top:1px solid #E4DCCB;vertical-align:top}
+.made .num{text-align:right}
+.tablewrap{overflow-x:auto}
 
 /* footer */
-.foot{max-width:1200px;margin:140px auto 0;padding:48px 24px 64px;border-top:1px solid var(--hair)}
+.foot{max-width:1200px;margin:160px auto 0;padding:48px 24px 64px;box-sizing:border-box;border-top:1px solid #E4DCCB}
 .foot .top{display:flex;flex-wrap:wrap;gap:32px 64px;justify-content:space-between}
-.foot .brand{font-family:var(--display);font-weight:600;font-variation-settings:'SOFT' 80;font-size:28px;letter-spacing:-.015em;margin:0}
-.foot .tag{font-family:var(--display);font-style:italic;font-size:16px;color:var(--ink-2);margin:8px 0 0}
-.foot nav{display:flex;flex-wrap:wrap;gap:4px 28px;align-items:flex-start}
-.foot nav a{display:inline-flex;align-items:center;min-height:44px;font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);text-decoration:none}
-.foot nav a:hover{color:var(--accent)}
-.foot .fine{font:500 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin:40px 0 0}
-.foot .fine a{color:inherit}
+.foot .brand{font-family:Fraunces,serif;font-weight:600;font-variation-settings:'SOFT' 80;font-size:28px;letter-spacing:-.015em;margin:0}
+.foot .tagl{font-family:Fraunces,serif;font-style:italic;font-size:16px;color:#6B645A;margin:8px 0 0}
+.foot nav{display:flex;flex-wrap:wrap;gap:16px 28px}
+.foot nav a{display:inline-flex;align-items:center;min-height:44px;font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;text-decoration:none}
+.foot nav a:hover{color:#C2603C}
+.foot .fine{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:48px 0 0;line-height:1.8}
+.foot .fine a{color:#6B645A}
 
-/* mobile */
-@media (max-width:640px){
-  body{font-size:18px}
-  .shell{padding:0 16px}
-  .masthead{padding:40px 0 32px}
-  .sec{padding-top:64px}.sec.ruled{margin-top:64px;padding-top:48px}
-  .ednote{padding-top:64px}
-  .bleed{margin-left:-16px;margin-right:-16px;width:calc(100% + 32px)}
-  .hero{padding-top:32px}
-  .nav{gap:22px}
-  .good,.ws{grid-template-columns:1fr}
-  .lines li,.arch li{grid-template-columns:minmax(0,1fr)}
-  .grid{grid-template-columns:1fr}
-  .foot{margin-top:96px;padding:40px 16px 48px}
-}
 @media print{
   html,body{background:#fff}
-  .nav,.skip{display:none}
-  body{font-size:15pt}
-  *{break-inside:avoid-page}
-  .kicker,.rule-short{color:var(--accent)!important}
-}
-
-/* ===== DRAFT 2 (2026-10-19): wide-screen layout, 1024px and up. Phone/tablet below stays as DRAFT 1. ===== */
-@media (min-width:1024px){
-  /* hero beside: comic panel left, headline + deck + first paragraphs right, rest in a centered reading column */
-  article.hero{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,9fr);gap:0 56px;align-items:start}
-  .hero .txt{display:contents}
-  .hero .art{grid-column:1;grid-row:1;margin-bottom:0}
-  .hero .txt-top{grid-column:2;grid-row:1}
-  .hero .txt-top .h-hero{font-size:clamp(32px,3.5vw,46px);line-height:1.06}
-  .hero.sunday .txt-top .h-hero{font-size:clamp(34px,3.9vw,52px);line-height:1.04}
-  .hero .txt-top .deck{font-size:20px}
-  .hero .txt-top .byline{margin-top:16px}
-  .hero .txt-top .body p{font-size:18px;line-height:1.6}
-  .hero .txt-rest{grid-column:1/-1;grid-row:2;width:100%;max-width:680px;margin:56px auto 0}
-  .hero .txt-rest .desk{max-width:none}
-  /* editor's note: one labeled column, same 680px column as the rest of the lead, with a rule above */
-  .ednote{max-width:680px;margin:88px auto 0;padding:32px 0 0;border-top:1px solid var(--rule-2)}
-  .ednote .kicker{font-size:13px;margin-bottom:6px}
-  /* AI and Spirit: two columns */
-  .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 56px;align-items:start}
-  .row>.main:only-child{grid-column:1/-1;max-width:760px}
-  /* Good Ten: two columns. World Straight: one 680px column */
-  .good{grid-template-columns:repeat(2,minmax(0,1fr))}
-  #world .sec-head,#world .ws-note,#world .ws{max-width:680px;margin-left:auto;margin-right:auto}
-  .ws{grid-template-columns:minmax(0,1fr)}
-  /* sidebars: 2-up */
-  .boxes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nav,.skip{display:none !important}
+  .ph{background:#f2f2f2 !important}
+  article,.it,li{break-inside:avoid-page}
 }
 </style>
 </head>
 <body>
+<div class="pg">
 <a class="skip" href="#main">Skip to content</a>
-<div class="shell">
-<header>
-  <div class="strip">
-    <span>Saturday, October 17, 2026 · Los Angeles</span>
-    <span>Sunny, high near 90, low around 67 · heat advisory until 8 PM PDT today · East L.A. (NWS)</span>
-    <span>Daily edition</span>
-  </div>
-  <div class="masthead">
+<header class="wrap">
+  <div class="strip"><span>Saturday, October 17, 2026</span><span>Edition No. 25</span></div>
+  <div class="mast">
     <a href="/"><h1>The Gayzette</h1></a>
     <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
   </div>
   <nav class="nav" aria-label="Sections">
-    <a href="#front" class="on" aria-current="page">Front Page</a><a href="#ai">AI</a><a href="#spirit">Spirit</a><a href="#feel-good">Feel-Good</a><a href="#world">World</a><a href="#tv">TV</a><a href="/editions/2026-10-18.html">Sunday</a>
+    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
   </nav>
 </header>
 
 <main id="main">
 
-
+<section class="s-hero" id="front" data-beat="The AI Builder">
   
-  <article class="hero" id="front" data-beat="The AI Builder">
-  <div class="art bleed"><div class="illo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="hl1" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.6" fill="#000"/></pattern></defs><rect width="320" height="200" fill="#fff6dc"/><rect width="320" height="200" fill="url(#hl1)" opacity=".12"/><g stroke="#000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="70" y="40" width="130" height="130" rx="6" fill="#fff"/><rect x="70" y="40" width="130" height="34" rx="6" fill="#f4b942"/><rect x="70" y="60" width="130" height="14" fill="#f4b942"/><path d="M95 30v22M175 30v22"/><text x="135" y="64" font-size="16" font-weight="bold" text-anchor="middle" fill="#000" stroke="none" font-family="Comic Sans MS,sans-serif">DEC</text><text x="135" y="136" font-size="48" font-weight="bold" text-anchor="middle" fill="#000" stroke="none" font-family="Comic Sans MS,sans-serif">14</text><path d="M215 110l30-18v70l-30-18z" fill="#7fb8d6"/><path d="M245 92l40 10v50l-40 10" fill="#7fb8d6"/><path d="M255 118h20" /></g><g></g></svg></div></div>
-  <div class="txt">
-    <div class="txt-top">
-      <p class="kicker">Front page &middot; The AI Builder</p>
-      <h2 class="h-hero hl"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Claude Code 2.1.302 says standalone Claude Design closes by December 14</a></h2>
+  <div class="hero-in">
+    <div class="hero-pic bleed"><img class="pic r32" src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Claude Code 2.1.302 says standalone Claude Design closes by December 14" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')"></div>
+    <div class="hero-txt">
+      <p class="kick">Front page · AI</p>
+      <h2 class="hd h-hero"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Claude Code 2.1.302 says standalone Claude Design closes by December 14</a></h2>
       <p class="deck">A small version bump carries one deadline and three useful settings, including a banner for failed routine runs.</p>
-      <p class="byline">The Gayzette &middot; Wonder <span aria-label="3 of 5">◆◆◆◇◇</span></p>
-      <div class="body wide hero-body"><p>The Claude Code changelog for version 2.1.302 (the running list of what changed in each release, dated October 16) adds a notice to two commands, /design-sync and /design-login. The notice says that standalone Claude Design, the separate site at claude.ai/design, closes by December 14, 2026. The changelog gives no detail about a replacement, so we cannot say what to move to. Treat it as a calendar reminder, not a plan.</p><p>Three other changes ride along. CLAUDE_CODE_AUTO_MODE_MODEL picks the model for the auto-mode classifier, the judge that decides whether an action may run without asking you; it affects the client side only. /config gains an &#34;Idle compaction&#34; row to switch off the automatic summarizing of idle sessions. And cloud sessions get a banner on a routine&#39;s page saying why its last run did not start, for example when an organization hits its limit on concurrent cloud sessions.</p></div>
-    </div>
-    <div class="txt-rest">
-      <div class="body wide"><p>On your desk: the scheduled routines that build this very paper are exactly where that banner helps. If an edition ever fails to start, the routine&#39;s page should now say why, such as a concurrent-session limit. And if you or Travis use claude.ai/design, plan around mid-December.</p></div>
-      <aside class="desk"><p class="label">On our desk</p>A hard December 14 deadline plus a new way to see why a scheduled routine did not start.</aside>
-      <span class="srcline"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Read the original at Claude Code changelog (v2.1.302), Claude Code docs →</a></span>
-      
+      <p class="by">By The Gayzette, with Claude · 1 min read · Wonder ◆◆◆◇◇</p>
     </div>
   </div>
-</article>
   
-<section class="ednote" aria-label="Editor's note">
-  <p class="kicker">Editor's note</p>
-  <p class="byline">The Managing Editor</p>
+  <div class="story">
+    <p class="bd">The Claude Code changelog for version 2.1.302 (the running list of what changed in each release, dated October 16) adds a notice to two commands, /design-sync and /design-login. The notice says that standalone Claude Design, the separate site at claude.ai/design, closes by December 14, 2026. The changelog gives no detail about a replacement, so we cannot say what to move to. Treat it as a calendar reminder, not a plan.</p><figure class="illo"><div class="art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="hl1" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.6" fill="#000"/></pattern></defs><rect width="320" height="200" fill="#fff6dc"/><rect width="320" height="200" fill="url(#hl1)" opacity=".12"/><g stroke="#000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="70" y="40" width="130" height="130" rx="6" fill="#fff"/><rect x="70" y="40" width="130" height="34" rx="6" fill="#f4b942"/><rect x="70" y="60" width="130" height="14" fill="#f4b942"/><path d="M95 30v22M175 30v22"/><text x="135" y="64" font-size="16" font-weight="bold" text-anchor="middle" fill="#000" stroke="none" font-family="Comic Sans MS,sans-serif">DEC</text><text x="135" y="136" font-size="48" font-weight="bold" text-anchor="middle" fill="#000" stroke="none" font-family="Comic Sans MS,sans-serif">14</text><path d="M215 110l30-18v70l-30-18z" fill="#7fb8d6"/><path d="M245 92l40 10v50l-40 10" fill="#7fb8d6"/><path d="M255 118h20" /></g><g></g></svg></div><figcaption><span>Illustration · The Gayzette</span></figcaption></figure><p class="bd">Three other changes ride along. CLAUDE_CODE_AUTO_MODE_MODEL picks the model for the auto-mode classifier, the judge that decides whether an action may run without asking you; it affects the client side only. /config gains an &#34;Idle compaction&#34; row to switch off the automatic summarizing of idle sessions. And cloud sessions get a banner on a routine&#39;s page saying why its last run did not start, for example when an organization hits its limit on concurrent cloud sessions.</p><p class="bd">On your desk: the scheduled routines that build this very paper are exactly where that banner helps. If an edition ever fails to start, the routine&#39;s page should now say why, such as a concurrent-session limit. And if you or Travis use claude.ai/design, plan around mid-December.</p>
+    <aside class="desk"><p class="lab">On our desk</p><p>A hard December 14 deadline plus a new way to see why a scheduled routine did not start.</p></aside>
+    <a class="src " href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Read the original at Claude Code changelog (v2.1.302), Claude Code docs →</a>
+    
+  </div>
+</section>
+<section class="note" aria-label="Editor's note">
+  <p class="kick">Editor's note</p>
+  <p class="by">The Managing Editor</p>
   <p class="t">Today&#39;s lead is the Claude Code 2.1.302 changelog, with a December 14 closing date for standalone Claude Design and a new banner explaining failed routine runs. Behind it come two ChatGPT updates and an n8n release, then two science stories from the Spirit Desk.</p><p class="t">You voted more for the giant pumpkin, the bike story, the Roman temple and the wildlife photos, and less for the statins study, so today&#39;s Good Ten leans toward records, discoveries and nature, with no drug studies.</p><p class="t">Droplet Desk and Grant Watch were quiet today, and the crop circle watch has no new formations since 21 July. World, Straight has five items, and the Hormuz one rests on a thin live blog, so read it as a snapshot.</p><p class="t">Today&#39;s lead was written by Sonnet, not Opus: scouting used up the token budget. The run still came in over the 300k target; the Good Ten stayed at ten because the scouting was already paid for.</p>
 </section>
 
 
-  <section class="sec" id="ai" aria-labelledby="ai-h">
-    <div class="row">
-      <div class="main">
-        <p class="kicker" id="ai-h">AI Builder</p>
-        
-
-<article id="ai-gpt6pro-agents" data-beat="The AI Builder">
-  <div class="art bleed"><div class="illo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="hl2" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.6" fill="#000"/></pattern></defs><rect width="320" height="200" fill="#fff6dc"/><rect width="320" height="200" fill="url(#hl2)" opacity=".12"/><g stroke="#000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="115" y="130" width="90" height="42" rx="6" fill="#f4b942"/><path d="M130 150h60M130 160h40"/><path d="M70 85L140 130M160 80V130M250 85L180 130" fill="none"/><circle cx="70" cy="68" r="20" fill="#7fb8d6"/><circle cx="160" cy="58" r="20" fill="#7fb8d6"/><circle cx="250" cy="68" r="20" fill="#7fb8d6"/><circle cx="63" cy="64" r="3" fill="#000"/><circle cx="77" cy="64" r="3" fill="#000"/><circle cx="153" cy="54" r="3" fill="#000"/><circle cx="167" cy="54" r="3" fill="#000"/><circle cx="243" cy="64" r="3" fill="#000"/><circle cx="257" cy="64" r="3" fill="#000"/><path d="M62 74q8 6 16 0M152 64q8 6 16 0M242 74q8 6 16 0" fill="none"/><rect x="218" y="144" width="80" height="34" rx="12" fill="#fff"/><path d="M225 178l-6 12 16-12"  fill="#fff"/><text x="258" y="166" font-size="14" text-anchor="middle" fill="#000" stroke="none" font-family="Comic Sans MS,sans-serif">Divide up!</text></g></svg></div></div>
+<section class="sec" id="ai" data-screen-label="AI">
+  <div class="row">
+    <div class="col-main">
+      <div class="bleed"><img class="pic r32" src="https://images.unsplash.com/photo-1763568258605-6783d4fad7b5?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="GPT-6 Pro in ChatGPT can now split a task among parallel agents" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')"></div>
+      <article id="ai-gpt6pro-agents" data-beat="The AI Builder">
+  <p class="kick" style="margin:28px 0 12px">AI</p>
+  <h3 class="hd h-3" style="max-width:620px"><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">GPT-6 Pro in ChatGPT can now split a task among parallel agents</a></h3>
+  <p class="deck s21" style="max-width:620px">OpenAI&#39;s October 16 release notes describe faster replies and several agents working at once.</p>
+  <p class="bd">OpenAI&#39;s ChatGPT release notes for October 16 list an update to GPT-6 Pro in the chat tab. It brings faster responses, better use of plugins and tools, and multiple agents that can work on parts of a task in parallel. Picture a kitchen where several cooks each take a dish.</p><figure class="illo"><div class="art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="hl2" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.6" fill="#000"/></pattern></defs><rect width="320" height="200" fill="#fff6dc"/><rect width="320" height="200" fill="url(#hl2)" opacity=".12"/><g stroke="#000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="115" y="130" width="90" height="42" rx="6" fill="#f4b942"/><path d="M130 150h60M130 160h40"/><path d="M70 85L140 130M160 80V130M250 85L180 130" fill="none"/><circle cx="70" cy="68" r="20" fill="#7fb8d6"/><circle cx="160" cy="58" r="20" fill="#7fb8d6"/><circle cx="250" cy="68" r="20" fill="#7fb8d6"/><circle cx="63" cy="64" r="3" fill="#000"/><circle cx="77" cy="64" r="3" fill="#000"/><circle cx="153" cy="54" r="3" fill="#000"/><circle cx="167" cy="54" r="3" fill="#000"/><circle cx="243" cy="64" r="3" fill="#000"/><circle cx="257" cy="64" r="3" fill="#000"/><path d="M62 74q8 6 16 0M152 64q8 6 16 0M242 74q8 6 16 0" fill="none"/><rect x="218" y="144" width="80" height="34" rx="12" fill="#fff"/><path d="M225 178l-6 12 16-12"  fill="#fff"/><text x="258" y="166" font-size="14" text-anchor="middle" fill="#000" stroke="none" font-family="Comic Sans MS,sans-serif">Divide up!</text></g></svg></div><figcaption><span>Illustration · The Gayzette</span></figcaption></figure><p class="bd">The note says it is rolling out to eligible Pro users, so not everyone sees it yet. The entry is short, and it gives no benchmarks or details on how many agents run at once, so how much better it feels in practice is unknown.</p><p class="bd">On your desk: you build with scheduled Claude routines, so this is a useful comparison point. Parallel helpers are becoming normal in chat apps too.</p>
   
-  <h3 class="h-feature hl" style="margin-top:24px;max-width:640px"><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">GPT-6 Pro in ChatGPT can now split a task among parallel agents</a></h3>
-  <p class="deck" style="font-size:21px">OpenAI&#39;s October 16 release notes describe faster replies and several agents working at once.</p>
-  <div class="body"><p>OpenAI&#39;s ChatGPT release notes for October 16 list an update to GPT-6 Pro in the chat tab. It brings faster responses, better use of plugins and tools, and multiple agents that can work on parts of a task in parallel. Picture a kitchen where several cooks each take a dish.</p><p>The note says it is rolling out to eligible Pro users, so not everyone sees it yet. The entry is short, and it gives no benchmarks or details on how many agents run at once, so how much better it feels in practice is unknown.</p><p>On your desk: you build with scheduled Claude routines, so this is a useful comparison point. Parallel helpers are becoming normal in chat apps too.</p></div>
-  
-  <span class="srcline"><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">Read the original at ChatGPT release notes, OpenAI Help Center →</a></span>
+  <a class="src " href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">Read the original at ChatGPT release notes, OpenAI Help Center →</a>
   
 </article>
+    </div>
+    
+    <aside class="col-side more" aria-label="More in AI">
+      <p class="lab">More in AI</p>
+      <div class="it" id="ai-chatgpt-slides">
+  <h4 class="hd h-4"><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT adds Slides you can co-edit and present</a></h4>
+  <details class="brief"><summary>Read the brief</summary><p class="ctx" style="margin-top:8px">Also in the October 16 release notes: presentations made inside ChatGPT.</p><p class="bd">The same OpenAI release notes announce Slides in ChatGPT. You can create presentations, edit them with teammates in real time (like a shared Google Doc, where everyone sees changes as they happen), and present or export them.</p><p class="bd">It is rolling out to eligible Pro, Business and Enterprise users who have Space access. A Space is a shared workspace inside ChatGPT, so some people on those plans may not have it yet. On the web, the notes say you can export to PowerPoint, PDF or Google Slides.</p><p class="bd">On your desk: Travis runs a studio, and studios run on decks. If his team is on an eligible plan with a Space, it could be a place to draft a first pass and edit together. Treat it as a test, not a switch.</p></details>
+  <br><a class="src s15" href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">Read the original at ChatGPT release notes, OpenAI Help Center →</a>
+  
+</div><div class="it" id="ai-n8n-2437">
+  <h4 class="hd h-4"><a href="https://github.com/n8n-io/n8n/releases" target="_blank" rel="noopener">n8n 2.43.7 stops killing running jobs when a worker shuts down</a></h4>
+  <details class="brief"><summary>Read the brief</summary><p class="ctx" style="margin-top:8px">The latest release suspends in-flight production executions at worker shutdown.</p><p class="bd">n8n&#39;s GitHub releases page marks version 2.43.7, dated October 16, as the latest. Its one listed feature is &#34;Suspend in-flight production executions at worker shutdown.&#34; A worker is the process that actually runs your workflows, and an in-flight execution is a run that has started but not finished.</p><p class="bd">Picture a cashier whose shift ends mid-sale: the old way, the sale might be dropped; the new way, it is paused so it can be picked up. The release line says suspend, and the page does not spell out how or where the run resumes, so check the notes before relying on it.</p><p class="bd">On your desk: if your n8n runs in queue mode (workers separate from the main app), restarts and deploys should now be less risky for long workflows.</p></details>
+  <br><a class="src s15" href="https://github.com/n8n-io/n8n/releases" target="_blank" rel="noopener">Read the original at n8n releases, GitHub →</a>
+  
+</div>
+    </aside>
+    
+  </div>
+</section>
 
+
+
+<section class="sec" id="spirit" data-screen-label="Spirit">
+  <div class="row" style="gap:40px 32px">
+    <div class="col-half bleed"><img class="pic r45" src="https://images.unsplash.com/photo-1601922046210-41e129a3e64a?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Small Oregon study tests cheaper group psilocybin for low-income depression" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')"></div>
+    <div class="col-half">
+      
+      <article id="sp-psilocybin-group" data-beat="Consciousness &amp; The Nonphysical">
+        <p class="kick" style="margin:0 0 12px">Spirit</p>
+        <h3 class="hd h-3"><a href="https://www.psypost.org/psilocybin-therapy-has-mostly-reached-the-well-off-a-small-oregon-study-tested-a-cheaper-group-model-for-low-income-patients/" target="_blank" rel="noopener">Small Oregon study tests cheaper group psilocybin for low-income depression</a></h3>
+        <p class="deck s21">Nineteen of twenty people finished, and their depression scores fell, but there was no comparison group.</p>
+        <p class="bd">PsyPost reports on a Journal of Psychedelic Studies paper noting psilocybin therapy has mostly reached the well-off. Matthew Hicks and colleagues tested a group model inside Oregon&#39;s state-regulated program: two online prep sessions, two group dosing sessions a week apart, then online integration, talking the experience through afterward.</p><figure class="illo"><div class="art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="hl3" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.6" fill="#000"/></pattern></defs><rect width="320" height="200" fill="#fff6dc"/><rect width="320" height="200" fill="url(#hl3)" opacity=".12"/><g stroke="#000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><circle cx="160" cy="100" r="26" fill="#f4b942"/><path d="M160 58v-12M160 142v12M118 100h-12M202 100h12M130 70l-8-8M190 70l8-8M130 130l-8 8M190 130l8 8" fill="none"/><circle cx="160" cy="100" r="26" fill="url(#hl3)"/><circle cx="62" cy="100" r="18" fill="#9bd3a5"/><circle cx="258" cy="100" r="18" fill="#9bd3a5"/><circle cx="110" cy="40" r="18" fill="#9bd3a5"/><circle cx="210" cy="40" r="18" fill="#9bd3a5"/><circle cx="110" cy="160" r="18" fill="#9bd3a5"/><circle cx="210" cy="160" r="18" fill="#9bd3a5"/><path d="M44 125q18 18 36 0M240 125q18 18 36 0" fill="none"/></g></svg></div><figcaption><span>Illustration · The Gayzette</span></figcaption></figure><p class="bd">Participants had major depression and incomes at or below 200% of the federal poverty line. Twenty began, 19 finished. Attendance was 98%, no severe adverse events occurred, and satisfaction was 4.8 of 5. On the Hamilton Depression Rating Scale, the average went from 22.21 to 8.79 two days after the second dosing, and 11.89 at three months.</p><p class="bd">The caveat is big: this was a single-arm feasibility study, with no control group and no blinding. As PsyPost reports, it is not possible to say how much of the improvement came from psilocybin itself.</p><p class="bd">On your desk: a prompt for your consciousness reading about how group and setting may shape what a substance appears to do.</p>
+        
+        <a class="src " href="https://www.psypost.org/psilocybin-therapy-has-mostly-reached-the-well-off-a-small-oregon-study-tested-a-cheaper-group-model-for-low-income-patients/" target="_blank" rel="noopener">Read the original at PsyPost: Psilocybin therapy has mostly reached the well-off →</a>
+        
+      </article>
+      
+      
+      <div class="more" style="margin-top:48px" aria-label="More in Spirit">
+        <p class="lab">More in Spirit</p>
+        <div class="it" id="sp-anesthesia-language">
+  <h4 class="hd h-4"><a href="https://www.sciencedaily.com/releases/2026/10/261015003440.htm" target="_blank" rel="noopener">Under anesthesia, the brain&#39;s memory hub still tracks the words it hears</a></h4>
+  <details class="brief"><summary>Read the brief</summary><p class="ctx" style="margin-top:8px">A Baylor team recorded single neurons in epilepsy-surgery patients; the results appeared in Nature.</p><p class="bd">Baylor College of Medicine researchers recorded the hippocampus, a brain region tied to memory, in epilepsy-surgery patients under general anesthesia, using Neuropixels probes (very fine electrodes that record many single neurons at once). Per ScienceDaily, neurons responded differently to unexpected tones, and discrimination improved over the session, which is a sign of plasticity, the brain adjusting with experience.</p><p class="bd">During short stories, activity carried information about word category (nouns, verbs, adjectives) and predicted upcoming words. Senior author Sameer Sheth said, &#34;This work pushes us to rethink what it means to be conscious.&#34;</p><p class="bd">Caveats: one anesthetic type, hippocampus only, and the authors say patients likely did not consciously understand the stories. The patient count was not stated in the article, and we read the release, not the Nature paper.</p><p class="bd">On your desk: it is a neat data point for your meditation questions. Processing something is not the same as experiencing it.</p></details>
+  <br><a class="src s15" href="https://www.sciencedaily.com/releases/2026/10/261015003440.htm" target="_blank" rel="noopener">Read the original at ScienceDaily: Baylor College of Medicine release →</a>
+  
+</div>
       </div>
       
-      <aside class="side side-list" aria-label="More in AI">
-        <p class="label">More in AI</p>
-        
-
-<article id="ai-chatgpt-slides" data-beat="The AI Builder">
-  <h4 class="h-small hl"><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT adds Slides you can co-edit and present</a></h4>
-  <p class="deck" style="font-size:17px;margin-top:8px">Also in the October 16 release notes: presentations made inside ChatGPT.</p>
-  
-  <details class="more-read"><summary>Read the brief</summary><div class="body"><p>The same OpenAI release notes announce Slides in ChatGPT. You can create presentations, edit them with teammates in real time (like a shared Google Doc, where everyone sees changes as they happen), and present or export them.</p><p>It is rolling out to eligible Pro, Business and Enterprise users who have Space access. A Space is a shared workspace inside ChatGPT, so some people on those plans may not have it yet. On the web, the notes say you can export to PowerPoint, PDF or Google Slides.</p><p>On your desk: Travis runs a studio, and studios run on decks. If his team is on an eligible plan with a Space, it could be a place to draft a first pass and edit together. Treat it as a test, not a switch.</p></div></details>
-  <span class="srcline small"><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">Read the original at ChatGPT release notes, OpenAI Help Center →</a></span>
-  
-</article>
+    </div>
+  </div>
+</section>
 
 
-<article id="ai-n8n-2437" data-beat="The AI Builder">
-  <h4 class="h-small hl"><a href="https://github.com/n8n-io/n8n/releases" target="_blank" rel="noopener">n8n 2.43.7 stops killing running jobs when a worker shuts down</a></h4>
-  <p class="deck" style="font-size:17px;margin-top:8px">The latest release suspends in-flight production executions at worker shutdown.</p>
-  
-  <details class="more-read"><summary>Read the brief</summary><div class="body"><p>n8n&#39;s GitHub releases page marks version 2.43.7, dated October 16, as the latest. Its one listed feature is &#34;Suspend in-flight production executions at worker shutdown.&#34; A worker is the process that actually runs your workflows, and an in-flight execution is a run that has started but not finished.</p><p>Picture a cashier whose shift ends mid-sale: the old way, the sale might be dropped; the new way, it is paused so it can be picked up. The release line says suspend, and the page does not spell out how or where the run resumes, so check the notes before relying on it.</p><p>On your desk: if your n8n runs in queue mode (workers separate from the main app), restarts and deploys should now be less risky for long workflows.</p></div></details>
-  <span class="srcline small"><a href="https://github.com/n8n-io/n8n/releases" target="_blank" rel="noopener">Read the original at n8n releases, GitHub →</a></span>
-  
-</article>
 
-      </aside>
+<section class="sec" id="world" data-screen-label="World">
+  <div class="row" style="gap:40px 32px">
+    <div class="bleed" style="flex:2 1 480px;min-width:0;order:2"><img class="pic r32" src="https://images.unsplash.com/photo-1511898634545-c01af8a54dd5?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Russian strikes hit nine Ukrainian regions; power cut to over a million" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')"></div>
+    <div class="col-half t" style="order:1">
       
-    </div>
-  </section>
-
-  <section class="sec" id="spirit" aria-labelledby="spirit-h">
-    <div class="row">
-      <div class="main">
-        <p class="kicker" id="spirit-h">Spirit</p>
+      <article id="w-ukraine-strikes">
+        <p class="kick" style="margin:0 0 12px">World</p>
+        <h3 class="hd h-3"><a href="https://www.aljazeera.com/news/2026/10/17/russian-attacks-in-ukraine-kill-at-least-8-cut-power-to-1-million" target="_blank" rel="noopener">Russian strikes hit nine Ukrainian regions; power cut to over a million</a></h3>
+        <p class="bd"><span class="tag">Confirmed</span>Al Jazeera, reporting with Reuters, says the strikes killed at least 8 people and injured 60 across nine regions. Confirmed: Kharkiv Governor Oleh Syniehubov said 2 people were killed and 12 wounded. Volyn Governor Roman Romaniuk said a drone strike on a food plant killed 1 and wounded 8. Rivne Governor Oleksandr Koval said 1 was killed and 7 wounded at a shopping centre. Confirmed: Ukraine&#39;s Energy Ministry said power was restored to more than a million people who lost it Friday. Lutsk Mayor Andriy Razumovskyi said the city&#39;s blackout could last at least 24 hours. Confirmed: Danielle Bell, head of the UN human rights monitoring mission, said the first two weeks of October were among the deadliest periods for civilians in years. UN figures: 328 civilians killed in September 2026.</p>
+        <p class="bd" style="margin-top:12px"><span class="tag">Claimed by Russia&#39;s military</span>he told President Putin that assets had been allocated to press the aerial campaign on Ukraine&#39;s energy system, per Al Jazeera and Reuters. The article carries no Russian statement on the targets of the October 17 strikes.</p>
+        <ul class="sides"><li><strong>Ukraine:</strong> Regional and national officials report civilian deaths and power outages.</li><li><strong>Russia:</strong> Its military chief told Putin the energy-system campaign is being pressed, per Reuters.</li></ul>
+        <a class="src " href="https://www.aljazeera.com/news/2026/10/17/russian-attacks-in-ukraine-kill-at-least-8-cut-power-to-1-million" target="_blank" rel="noopener">Read the original at Al Jazeera (with Reuters), October 17 →</a>
         
-
-<article id="sp-psilocybin-group" data-beat="Consciousness &amp; The Nonphysical">
-  <div class="art bleed"><div class="illo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="hl3" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.6" fill="#000"/></pattern></defs><rect width="320" height="200" fill="#fff6dc"/><rect width="320" height="200" fill="url(#hl3)" opacity=".12"/><g stroke="#000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><circle cx="160" cy="100" r="26" fill="#f4b942"/><path d="M160 58v-12M160 142v12M118 100h-12M202 100h12M130 70l-8-8M190 70l8-8M130 130l-8 8M190 130l8 8" fill="none"/><circle cx="160" cy="100" r="26" fill="url(#hl3)"/><circle cx="62" cy="100" r="18" fill="#9bd3a5"/><circle cx="258" cy="100" r="18" fill="#9bd3a5"/><circle cx="110" cy="40" r="18" fill="#9bd3a5"/><circle cx="210" cy="40" r="18" fill="#9bd3a5"/><circle cx="110" cy="160" r="18" fill="#9bd3a5"/><circle cx="210" cy="160" r="18" fill="#9bd3a5"/><path d="M44 125q18 18 36 0M240 125q18 18 36 0" fill="none"/></g></svg></div></div>
-  
-  <h3 class="h-feature hl" style="margin-top:24px;max-width:640px"><a href="https://www.psypost.org/psilocybin-therapy-has-mostly-reached-the-well-off-a-small-oregon-study-tested-a-cheaper-group-model-for-low-income-patients/" target="_blank" rel="noopener">Small Oregon study tests cheaper group psilocybin for low-income depression</a></h3>
-  <p class="deck" style="font-size:21px">Nineteen of twenty people finished, and their depression scores fell, but there was no comparison group.</p>
-  <div class="body"><p>PsyPost reports on a Journal of Psychedelic Studies paper noting psilocybin therapy has mostly reached the well-off. Matthew Hicks and colleagues tested a group model inside Oregon&#39;s state-regulated program: two online prep sessions, two group dosing sessions a week apart, then online integration, talking the experience through afterward.</p><p>Participants had major depression and incomes at or below 200% of the federal poverty line. Twenty began, 19 finished. Attendance was 98%, no severe adverse events occurred, and satisfaction was 4.8 of 5. On the Hamilton Depression Rating Scale, the average went from 22.21 to 8.79 two days after the second dosing, and 11.89 at three months.</p><p>The caveat is big: this was a single-arm feasibility study, with no control group and no blinding. As PsyPost reports, it is not possible to say how much of the improvement came from psilocybin itself.</p><p>On your desk: a prompt for your consciousness reading about how group and setting may shape what a substance appears to do.</p></div>
-  
-  <span class="srcline"><a href="https://www.psypost.org/psilocybin-therapy-has-mostly-reached-the-well-off-a-small-oregon-study-tested-a-cheaper-group-model-for-low-income-patients/" target="_blank" rel="noopener">Read the original at PsyPost: Psilocybin therapy has mostly reached the well-off →</a></span>
-  
-</article>
-
-      </div>
+      </article>
       
-      <aside class="side side-list" aria-label="More in Spirit">
-        <p class="label">More in Spirit</p>
+      
+      <div class="more" style="margin-top:48px" aria-label="More in World">
+        <p class="lab">More in World</p>
         
-
-<article id="sp-anesthesia-language" data-beat="Consciousness &amp; The Nonphysical">
-  <h4 class="h-small hl"><a href="https://www.sciencedaily.com/releases/2026/10/261015003440.htm" target="_blank" rel="noopener">Under anesthesia, the brain&#39;s memory hub still tracks the words it hears</a></h4>
-  <p class="deck" style="font-size:17px;margin-top:8px">A Baylor team recorded single neurons in epilepsy-surgery patients; the results appeared in Nature.</p>
-  
-  <details class="more-read"><summary>Read the brief</summary><div class="body"><p>Baylor College of Medicine researchers recorded the hippocampus, a brain region tied to memory, in epilepsy-surgery patients under general anesthesia, using Neuropixels probes (very fine electrodes that record many single neurons at once). Per ScienceDaily, neurons responded differently to unexpected tones, and discrimination improved over the session, which is a sign of plasticity, the brain adjusting with experience.</p><p>During short stories, activity carried information about word category (nouns, verbs, adjectives) and predicted upcoming words. Senior author Sameer Sheth said, &#34;This work pushes us to rethink what it means to be conscious.&#34;</p><p>Caveats: one anesthetic type, hippocampus only, and the authors say patients likely did not consciously understand the stories. The patient count was not stated in the article, and we read the release, not the Nature paper.</p><p>On your desk: it is a neat data point for your meditation questions. Processing something is not the same as experiencing it.</p></div></details>
-  <span class="srcline small"><a href="https://www.sciencedaily.com/releases/2026/10/261015003440.htm" target="_blank" rel="noopener">Read the original at ScienceDaily: Baylor College of Medicine release →</a></span>
-  
-</article>
-
-      </aside>
-      
-    </div>
-    <div class="boxes"><aside class="box" id="crop-circle-watch" aria-label="Crop Circle Watch">
-  <h4>Crop Circle Watch</h4>
-  
-  <p><b>Latest formation</b> &mdash; Tue Jul 21 &middot; Fox Hill, Wiltshire, England. Listed by Temporary Temples with photos and a title only; no description of the design is given. It follows Roundway on 18 July, Wayland&#39;s Smithy in Oxfordshire on 16 July, Avebury on 14 July and Milk Hill on 12 July.</p>
-  
-  <ul><li>Neither site lists a formation after 21 July (Crop Circle Connector&#39;s counts were last dated 11 August).</li><li>Crop Circle Connector&#39;s 2026 index counts 6 formations for January to June, 10 for July to December and none for August to December (the page&#39;s update date reads &#34;00/00/2026&#34;).</li></ul>
-  <p><em>From the history: The Mowing-Devil (1678): an English woodcut pamphlet from Hertfordshire. A farmer refused a worker&#39;s price to mow his oat field and said the Devil could mow it. That night the field seemed on fire, and by morning it was mowed so cleanly that &#34;no mortal man was able to do the like.&#34; Researchers often cite it as an early possible crop-circle report, though Jim Schnabel rejects the link because the pamphlet describes cut stalks, not bent ones.</em></p>
-  <p class="src"><a href="https://temporarytemples.co.uk/crop-circles/2026-crop-circles" target="_blank" rel="noopener">Temporary Temples: 2026 crop circles</a> &middot; <a href="https://www.cropcircleconnector.com/2026/2026.html" target="_blank" rel="noopener">Crop Circle Connector: 2026</a> &middot; <a href="https://en.wikipedia.org/wiki/Mowing-Devil" target="_blank" rel="noopener">Mowing-Devil, Wikipedia</a></p>
-</aside></div>
-  </section>
-
-  <section class="sec ruled" id="feel-good" aria-labelledby="good-h">
-    <div class="sec-head">
-      <p class="kicker">Feel-Good</p>
-      <h2 class="h-sec" id="good-h">The Good Ten</h2>
-      <p class="sub">Ten people doing excellent, verified work in their fields this week.</p>
-    </div>
-    <ol class="good">
-      <li id="gt-overpass">
-  <span class="n">01</span>
-  <div>
-    <h3 class="h">Colorado&#39;s wildlife overpass cuts animal collisions by 91%</h3>
-    <span class="meta">Fri Oct 16</span>
-    <p>A bridge over Interstate 25 near Larkspur is called the largest wildlife bridge structure in North America. Wildlife-vehicle collisions on the corridor fell 91%, from about one a day, and it logged the first recorded pronghorn crossing in 30 years.</p>
-    <span class="srcline small"><a href="https://www.goodnewsnetwork.org/north-americas-largest-wildlife-overpass-is-working-animal-collisions-on-i-25-down-91/" target="_blank" rel="noopener">Read the original at Good News Network →</a></span>
-  </div>
-</li><li id="gt-crisis-connect">
-  <span class="n">02</span>
-  <div>
-    <h3 class="h">A 17-year-old in Istanbul builds a Bluetooth app for disasters</h3>
-    <span class="meta">Fri Oct 16</span>
-    <p>Emirhan Duman made Crisis Connect after the February 2023 Turkey and Syria earthquakes. Phones relay messages to each other over Bluetooth when cell networks fail, and the app is free and open-source. He says it won&#39;t replace satellite, radio or official warnings.</p>
-    <span class="srcline small"><a href="https://www.goodnewsnetwork.org/teens-disaster-messaging-app-can-hop-across-bluetooth-when-cellular-networks-collapse/" target="_blank" rel="noopener">Read the original at Good News Network →</a></span>
-  </div>
-</li><li id="gt-roman-fort-wales">
-  <span class="n">03</span>
-  <div>
-    <h3 class="h">Archaeologist finds possible Roman fort in Wales while on a bike ride</h3>
-    <span class="meta">Fri Oct 16</span>
-    <p>Oxford&#39;s Mark Merrony first spotted the Frenni Fawr site in 2024 while cycling. The fort may have housed about 500 soldiers and dates to roughly 74 to 78 C.E. A link to Magnus Maximus, the emperor of Welsh legend, is described as possible, not proven.</p>
-    <span class="srcline small"><a href="https://www.smithsonianmag.com/smart-news/legend-has-it-that-this-roman-emperor-established-camp-wales-newly-discovered-fort-may-offer-proof-that-it-really-existed-180989702/" target="_blank" rel="noopener">Read the original at Smithsonian Magazine →</a></span>
-  </div>
-</li><li id="gt-sentinel-3c">
-  <span class="n">04</span>
-  <div>
-    <h3 class="h">Europe&#39;s new Sentinel-3C satellite sends its first images</h3>
-    <span class="meta">Thu Oct 15</span>
-    <p>The third satellite in the Copernicus Sentinel-3 series returned pictures of Italy, the Canadian Arctic and the Caribbean two weeks after launch. Its radar altimeter also measured the height of the Greenland ice sheet. Commissioning will take another five months.</p>
-    <span class="srcline small"><a href="https://www.goodnewsnetwork.org/esas-new-sentinel-3c-satellite-makes-its-debut-with-sumptuous-images-of-italy-and-the-arctic/" target="_blank" rel="noopener">Read the original at Good News Network →</a></span>
-  </div>
-</li><li id="gt-plant-armor">
-  <span class="n">05</span>
-  <div>
-    <h3 class="h">A 3D fabric lifts strawberry yields up to 3.56 times in tests</h3>
-    <span class="meta">Fri Oct 16</span>
-    <p>NC State researchers draped a textile over strawberry plants to keep insects off. In tunnel field tests yields rose as much as 3.56 times, and plants fruited earlier. It could cut pesticide and water use; it began as a spinoff of mosquito-resistant uniform research.</p>
-    <span class="srcline small"><a href="https://www.goodnewsnetwork.org/drape-some-of-this-plant-armor-fabric-over-a-strawberry-patch-to-triple-yields-with-less-pesticides/" target="_blank" rel="noopener">Read the original at Good News Network →</a></span>
-  </div>
-</li><li id="gt-rewilding-art">
-  <span class="n">06</span>
-  <div>
-    <h3 class="h">An artist paints nine UK rewilding projects</h3>
-    <span class="meta">Tue Oct 13</span>
-    <p>Rebecca Howard&#39;s show &#34;A Year in the Wild&#34; at Knepp in Sussex runs until Sunday, October 18. Her paintings cover sites from a Ribble saltmarsh to Devon beavers. Proceeds from cards and limited prints support Rewilding Britain.</p>
-    <span class="srcline small"><a href="https://www.positive.news/environment/the-in-awe-artist-painting-a-wilder-britain/" target="_blank" rel="noopener">Read the original at Positive News →</a></span>
-  </div>
-</li><li id="gt-texas-park">
-  <span class="n">07</span>
-  <div>
-    <h3 class="h">A Texas family sells 650 acres to become a state park</h3>
-    <span class="meta">Mon Oct 12</span>
-    <p>The Pollard family owned the land on Lake Palestine for 80 years. It is the longest remaining stretch of the lake&#39;s shore. The Texas Parks and Wildlife Foundation paid $1 million and holds it until the state can buy it in late 2027.</p>
-    <span class="srcline small"><a href="https://www.goodnewsnetwork.org/family-sells-650-acres-on-east-texas-lake-to-become-state-park-saying-land-is-part-of-my-soul/" target="_blank" rel="noopener">Read the original at Good News Network →</a></span>
-  </div>
-</li><li id="gt-portrait-of-mai">
-  <span class="n">08</span>
-  <div>
-    <h3 class="h">Reynolds&#39; Portrait of Mai reaches the U.S. for the first time</h3>
-    <span class="meta">Fri Oct 16</span>
-    <p>The nearly eight-foot painting of Mai, the first Polynesian to visit Britain, is on view at the Getty Museum in Los Angeles through March 14, 2027. The National Portrait Gallery in London and the J. Paul Getty Trust bought it jointly in 2023, each paying half of roughly $62 million.</p>
-    <span class="srcline small"><a href="https://www.smithsonianmag.com/smart-news/a-monumental-18th-century-portrait-of-a-young-polynesian-man-a-supreme-work-of-art-visits-the-us-for-the-first-time-180989699/" target="_blank" rel="noopener">Read the original at Smithsonian Magazine →</a></span>
-  </div>
-</li><li id="gt-library-access">
-  <span class="n">09</span>
-  <div>
-    <h3 class="h">Rural libraries let card holders in when no staff are on duty</h3>
-    <span class="meta">Thu Oct 15</span>
-    <p>Washington&#39;s Timberland Regional Library says more than 63,000 people used their cards to enter unstaffed branches between September 2023 and August 2026. In Wyoming, Minnesota, usage is up 66% since April. Minimum ages run from 14 to 18, and staff say they still want more staffed hours.</p>
-    <span class="srcline small"><a href="https://reasonstobecheerful.world/the-library-is-closed-feel-free-to-come-in/" target="_blank" rel="noopener">Read the original at Reasons to be Cheerful →</a></span>
-  </div>
-</li><li id="gt-diary-dump">
-  <span class="n">10</span>
-  <div>
-    <h3 class="h">A WWI diary found in a dump becomes a book</h3>
-    <span class="meta">Thu Oct 15</span>
-    <p>Twelve-year-old Alan Southall found Australian Corporal Claude Nuttall&#39;s 1918 diary at a dump in England in 1965. Nuttall died on August 13, 1918. A former museum curator researched him for decades, and a book, &#34;The Digger&#39;s Diary,&#34; is due this fall.</p>
-    <span class="srcline small"><a href="https://www.smithsonianmag.com/smart-news/this-soldier-kept-a-diary-in-the-trenches-of-world-war-i-a-child-found-it-at-the-dump-decades-later-pierced-by-a-bullet-and-stained-with-blood-180989696/" target="_blank" rel="noopener">Read the original at Smithsonian Magazine →</a></span>
-  </div>
-</li>
-    </ol>
-  </section>
-
-  <section class="sec ruled" id="world" aria-labelledby="world-h">
-    <div class="sec-head">
-      <p class="kicker">World</p>
-      <h2 class="h-sec" id="world-h">The World, Straight</h2>
-    </div>
-    <p class="ws-note">Facts first. What is known versus what is claimed, named sources, each side's framing in one neutral line, no persuasive adjectives. If there is no verified fact, it does not run.</p>
-    <ul class="ws">
-      <li id="w-ukraine-strikes">
-  <h3 class="h-small hl"><a href="https://www.aljazeera.com/news/2026/10/17/russian-attacks-in-ukraine-kill-at-least-8-cut-power-to-1-million" target="_blank" rel="noopener">Russian strikes hit nine Ukrainian regions; power cut to over a million</a></h3>
-  <p><span class="tag">Confirmed</span>Al Jazeera, reporting with Reuters, says the strikes killed at least 8 people and injured 60 across nine regions. Confirmed: Kharkiv Governor Oleh Syniehubov said 2 people were killed and 12 wounded. Volyn Governor Roman Romaniuk said a drone strike on a food plant killed 1 and wounded 8. Rivne Governor Oleksandr Koval said 1 was killed and 7 wounded at a shopping centre. Confirmed: Ukraine&#39;s Energy Ministry said power was restored to more than a million people who lost it Friday. Lutsk Mayor Andriy Razumovskyi said the city&#39;s blackout could last at least 24 hours. Confirmed: Danielle Bell, head of the UN human rights monitoring mission, said the first two weeks of October were among the deadliest periods for civilians in years. UN figures: 328 civilians killed in September 2026.</p>
-  <p class="claimed"><span class="tag">Claimed by Russia&#39;s military</span>he told President Putin that assets had been allocated to press the aerial campaign on Ukraine&#39;s energy system, per Al Jazeera and Reuters. The article carries no Russian statement on the targets of the October 17 strikes.</p>
-  <ul class="sides"><li><strong>Ukraine:</strong> Regional and national officials report civilian deaths and power outages.</li><li><strong>Russia:</strong> Its military chief told Putin the energy-system campaign is being pressed, per Reuters.</li></ul>
-  <span class="srcline small"><a href="https://www.aljazeera.com/news/2026/10/17/russian-attacks-in-ukraine-kill-at-least-8-cut-power-to-1-million" target="_blank" rel="noopener">Read the original at Al Jazeera (with Reuters), October 17 →</a></span>
-  
-</li><li id="w-bend-shooting">
-  <h3 class="h-small hl"><a href="https://www.aljazeera.com/news/2026/10/17/oregon-school-shooter-was-former-special-needs-student-police-say" target="_blank" rel="noopener">Bend, Oregon: four dead in an elementary school shooting</a></h3>
-  <p><span class="tag">Confirmed</span>Al Jazeera reports a shooting at Silver Rail Elementary in Bend on October 16. Police say the gunman was 16 years old. Confirmed: Three children aged 5, 8 and 11 and a 25-year-old teacher, Meghan Lambert, were killed. Two people, a 7-year-old and a 54-year-old teacher, were critically injured. Confirmed: Bend Police Chief Mike Krantz said a 12-gauge shotgun was fired through locked doors, as many as 15 shots, and that how the shooter got it is under investigation. Confirmed: The shooter was killed by a parent, 36-year-old Kaylub Giamanco, per the report. Superintendent Steven Cook said the shooter was not enrolled in the district at the time.</p>
-  <p class="claimed"><span class="tag">Claimed by President Donald Trump</span>of the parent, he said &#34;It&#39;s a terrible thing, but thank goodness for a man that had a gun and knew how to use it.&#34; Al Jazeera, citing AP, USA Today and a Northeastern University database, calls this the 28th mass killing in the US this year.</p>
-  
-  <span class="srcline small"><a href="https://www.aljazeera.com/news/2026/10/17/oregon-school-shooter-was-former-special-needs-student-police-say" target="_blank" rel="noopener">Read the original at Al Jazeera, October 17 →</a></span>
-  
-</li><li id="w-albania-protests">
-  <h3 class="h-small hl"><a href="https://www.aljazeera.com/news/2026/10/16/albanian-pm-blames-foreign-hands-for-unrest-as-student-protests-intensify" target="_blank" rel="noopener">Albania: fourth day of student-led protests, 160 detained</a></h3>
-  <p><span class="tag">Confirmed</span>Al Jazeera, with AFP and Reuters, reports a fourth consecutive day of clashes, with thousands marching in Tirana Friday and unrest spreading to Elbasan, Shkodra and Korca. Confirmed: Police used water cannon and tear gas, and police said 160 people were detained over alleged violence Thursday evening. Confirmed: The report says protesters set fires, including at the prime minister&#39;s office.</p>
-  <p class="claimed"><span class="tag">Claimed by Prime Minister Edi Rama</span>&#34;This is not a student phenomenon.&#34; He blamed &#34;foreign hands that do not wish for Albania to be at peace,&#34; rejected calls to resign and said he would discuss rising education costs.</p>
-  <ul class="sides"><li><strong>Protesters:</strong> Mostly young; they demand Rama&#39;s resignation and electoral and education reforms. Per the report, the protests began over the sale of part of the coastline to a luxury resort linked to Jared Kushner.</li><li><strong>Government:</strong> Denies corruption and says outside forces are behind the unrest.</li></ul>
-  <span class="srcline small"><a href="https://www.aljazeera.com/news/2026/10/16/albanian-pm-blames-foreign-hands-for-unrest-as-student-protests-intensify" target="_blank" rel="noopener">Read the original at Al Jazeera (AFP/Reuters), October 16 →</a></span>
-  
-</li><li id="w-norte-fire">
-  <h3 class="h-small hl"><a href="https://www.aljazeera.com/news/2026/10/17/southern-california-wildfire-engulfs-homes-prompts-evacuation-orders" target="_blank" rel="noopener">Norte Fire in Orange County prompts evacuation orders for about 16,000 people</a></h3>
-  <p><span class="tag">Confirmed</span>Al Jazeera, citing the Orange County Fire Authority (OCFA) and Cal Fire, reports the Norte Fire near San Juan Capistrano. OCFA gave about 465 acres Friday; Cal Fire gave about 570 acres by evening. Confirmed: At least six homes were damaged or destroyed, and about 6,000 homes, roughly 16,000 residents, are under evacuation orders. Containment was not reported. Confirmed: Per Cal Fire, the Henderson Fire in San Diego County is about 2,080 acres and 20% contained, and affected Camp Pendleton and closed freeways. The Bryson Fire in Los Angeles County, near Malibu, is about 147 acres and 17% contained. Note: these are Friday-evening figures and may have changed.</p>
-  <p class="claimed"><span class="tag">Claimed</span>No competing claims are reported. The cause is not given in the notes.</p>
-  
-  <span class="srcline small"><a href="https://www.aljazeera.com/news/2026/10/17/southern-california-wildfire-engulfs-homes-prompts-evacuation-orders" target="_blank" rel="noopener">Read the original at Al Jazeera, October 17 →</a></span>
-  
-</li><li id="w-hormuz-tankers">
-  <h3 class="h-small hl"><a href="https://www.aljazeera.com/news/liveblog/2026/10/17/draft-2" target="_blank" rel="noopener">Hormuz: three tankers reported hit since Friday; Iran and US make competing claims</a></h3>
-  <p><span class="tag">Confirmed</span>Al Jazeera&#39;s live blog reports three tankers have been reported hit since Friday. The UK Maritime Trade Operations (UKMTO) said one was hit by a rocket-propelled grenade fired from a small boat; the page does not say who fired. Confirmed: Seatrade Maritime reported on October 13 that UKMTO issued four reports of attacks on October 11, on three tankers and a container ship; the container ship was &#34;struck by unknown projectile.&#34; The live blog was thin and lacked timestamps.</p>
-  <p class="claimed"><span class="tag">Claimed by Iran&#39;s IRGC Navy and President Trump</span>the Strait of Hormuz is &#34;closed,&#34; and one tanker carrying about two million barrels of crude was on an &#34;unauthorised&#34; route. Claimed by President Trump: the US Navy&#39;s &#34;effective&#34; blockade has stopped all Iranian ships from transiting Hormuz. Neither claim is independently verified here.</p>
-  <ul class="sides"><li><strong>Iran (IRGC Navy):</strong> Says the strait is &#34;closed&#34; and that one tanker was on an &#34;unauthorised&#34; route.</li><li><strong>United States (Trump):</strong> Says its blockade has halted Iranian shipping.</li><li><strong>UKMTO:</strong> Reports incidents without naming who is responsible.</li></ul>
-  <span class="srcline small"><a href="https://www.aljazeera.com/news/liveblog/2026/10/17/draft-2" target="_blank" rel="noopener">Read the original at Al Jazeera live blog, October 17 →</a></span>
-  <details class="sources"><summary>Receipts (2)</summary>
+        <div class="it" id="w-bend-shooting">
+          <h4 class="hd h-4"><a href="https://www.aljazeera.com/news/2026/10/17/oregon-school-shooter-was-former-special-needs-student-police-say" target="_blank" rel="noopener">Bend, Oregon: four dead in an elementary school shooting</a></h4>
+          <details class="brief"><summary>What is known</summary>
+            <p class="bd"><span class="tag">Confirmed</span>Al Jazeera reports a shooting at Silver Rail Elementary in Bend on October 16. Police say the gunman was 16 years old. Confirmed: Three children aged 5, 8 and 11 and a 25-year-old teacher, Meghan Lambert, were killed. Two people, a 7-year-old and a 54-year-old teacher, were critically injured. Confirmed: Bend Police Chief Mike Krantz said a 12-gauge shotgun was fired through locked doors, as many as 15 shots, and that how the shooter got it is under investigation. Confirmed: The shooter was killed by a parent, 36-year-old Kaylub Giamanco, per the report. Superintendent Steven Cook said the shooter was not enrolled in the district at the time.</p>
+            <p class="bd"><span class="tag">Claimed by President Donald Trump</span>of the parent, he said &#34;It&#39;s a terrible thing, but thank goodness for a man that had a gun and knew how to use it.&#34; Al Jazeera, citing AP, USA Today and a Northeastern University database, calls this the 28th mass killing in the US this year.</p>
+            
+          </details>
+          <br><a class="src s15" href="https://www.aljazeera.com/news/2026/10/17/oregon-school-shooter-was-former-special-needs-student-police-say" target="_blank" rel="noopener">Read the original at Al Jazeera, October 17 →</a>
+          
+        </div>
+        
+        <div class="it" id="w-albania-protests">
+          <h4 class="hd h-4"><a href="https://www.aljazeera.com/news/2026/10/16/albanian-pm-blames-foreign-hands-for-unrest-as-student-protests-intensify" target="_blank" rel="noopener">Albania: fourth day of student-led protests, 160 detained</a></h4>
+          <details class="brief"><summary>What is known</summary>
+            <p class="bd"><span class="tag">Confirmed</span>Al Jazeera, with AFP and Reuters, reports a fourth consecutive day of clashes, with thousands marching in Tirana Friday and unrest spreading to Elbasan, Shkodra and Korca. Confirmed: Police used water cannon and tear gas, and police said 160 people were detained over alleged violence Thursday evening. Confirmed: The report says protesters set fires, including at the prime minister&#39;s office.</p>
+            <p class="bd"><span class="tag">Claimed by Prime Minister Edi Rama</span>&#34;This is not a student phenomenon.&#34; He blamed &#34;foreign hands that do not wish for Albania to be at peace,&#34; rejected calls to resign and said he would discuss rising education costs.</p>
+            <ul class="sides"><li><strong>Protesters:</strong> Mostly young; they demand Rama&#39;s resignation and electoral and education reforms. Per the report, the protests began over the sale of part of the coastline to a luxury resort linked to Jared Kushner.</li><li><strong>Government:</strong> Denies corruption and says outside forces are behind the unrest.</li></ul>
+          </details>
+          <br><a class="src s15" href="https://www.aljazeera.com/news/2026/10/16/albanian-pm-blames-foreign-hands-for-unrest-as-student-protests-intensify" target="_blank" rel="noopener">Read the original at Al Jazeera (AFP/Reuters), October 16 →</a>
+          
+        </div>
+        
+        <div class="it" id="w-norte-fire">
+          <h4 class="hd h-4"><a href="https://www.aljazeera.com/news/2026/10/17/southern-california-wildfire-engulfs-homes-prompts-evacuation-orders" target="_blank" rel="noopener">Norte Fire in Orange County prompts evacuation orders for about 16,000 people</a></h4>
+          <details class="brief"><summary>What is known</summary>
+            <p class="bd"><span class="tag">Confirmed</span>Al Jazeera, citing the Orange County Fire Authority (OCFA) and Cal Fire, reports the Norte Fire near San Juan Capistrano. OCFA gave about 465 acres Friday; Cal Fire gave about 570 acres by evening. Confirmed: At least six homes were damaged or destroyed, and about 6,000 homes, roughly 16,000 residents, are under evacuation orders. Containment was not reported. Confirmed: Per Cal Fire, the Henderson Fire in San Diego County is about 2,080 acres and 20% contained, and affected Camp Pendleton and closed freeways. The Bryson Fire in Los Angeles County, near Malibu, is about 147 acres and 17% contained. Note: these are Friday-evening figures and may have changed.</p>
+            <p class="bd"><span class="tag">Claimed</span>No competing claims are reported. The cause is not given in the notes.</p>
+            
+          </details>
+          <br><a class="src s15" href="https://www.aljazeera.com/news/2026/10/17/southern-california-wildfire-engulfs-homes-prompts-evacuation-orders" target="_blank" rel="noopener">Read the original at Al Jazeera, October 17 →</a>
+          
+        </div>
+        
+        <div class="it" id="w-hormuz-tankers">
+          <h4 class="hd h-4"><a href="https://www.aljazeera.com/news/liveblog/2026/10/17/draft-2" target="_blank" rel="noopener">Hormuz: three tankers reported hit since Friday; Iran and US make competing claims</a></h4>
+          <details class="brief"><summary>What is known</summary>
+            <p class="bd"><span class="tag">Confirmed</span>Al Jazeera&#39;s live blog reports three tankers have been reported hit since Friday. The UK Maritime Trade Operations (UKMTO) said one was hit by a rocket-propelled grenade fired from a small boat; the page does not say who fired. Confirmed: Seatrade Maritime reported on October 13 that UKMTO issued four reports of attacks on October 11, on three tankers and a container ship; the container ship was &#34;struck by unknown projectile.&#34; The live blog was thin and lacked timestamps.</p>
+            <p class="bd"><span class="tag">Claimed by Iran&#39;s IRGC Navy and President Trump</span>the Strait of Hormuz is &#34;closed,&#34; and one tanker carrying about two million barrels of crude was on an &#34;unauthorised&#34; route. Claimed by President Trump: the US Navy&#39;s &#34;effective&#34; blockade has stopped all Iranian ships from transiting Hormuz. Neither claim is independently verified here.</p>
+            <ul class="sides"><li><strong>Iran (IRGC Navy):</strong> Says the strait is &#34;closed&#34; and that one tanker was on an &#34;unauthorised&#34; route.</li><li><strong>United States (Trump):</strong> Says its blockade has halted Iranian shipping.</li><li><strong>UKMTO:</strong> Reports incidents without naming who is responsible.</li></ul>
+          </details>
+          <br><a class="src s15" href="https://www.aljazeera.com/news/liveblog/2026/10/17/draft-2" target="_blank" rel="noopener">Read the original at Al Jazeera live blog, October 17 →</a>
+          <details class="rcpt"><summary>Receipts (2)</summary>
 <ul><li><a href="https://www.aljazeera.com/news/liveblog/2026/10/17/draft-2" target="_blank" rel="noopener">Al Jazeera live blog, October 17</a></li><li><a href="https://seatrade-maritime.com/security/ukmto-issues-four-hormuz-attack-reports-iran-claims-adnoc-tanker-strike" target="_blank" rel="noopener">Seatrade Maritime, October 13</a></li></ul></details>
-</li>
-    </ul>
-  </section>
-
-  
-  <section class="sec ruled" id="tv" aria-labelledby="tv-h">
-    <div class="sec-head">
-      <p class="kicker">TV and the sky</p>
-      <h2 class="h-sec" id="tv-h">Tonight, and overhead</h2>
+        </div>
+        
+      </div>
+      
     </div>
-    <div class="boxes">
-      <aside class="box" id="on-the-couch" aria-label="On the Couch">
-  <h4>On the Couch</h4>
+  </div>
+</section>
+
+
+
+<section class="sec rl" id="feel-good" data-screen-label="Good Ten" aria-labelledby="good-h">
+  <div class="gh">
+    <p class="kick">Feel-Good</p>
+    <h2 class="hd h-sec" id="good-h">The Good Ten</h2>
+    <p class="deck s21">Small, true, and from this week.</p>
+  </div>
+  <ol class="glist">
+    <li id="gt-overpass">
+      <span class="n">01</span>
+      <div>
+        <h3 class="hd h-4">Colorado&#39;s wildlife overpass cuts animal collisions by 91%</h3>
+        <span class="when">Fri Oct 16</span>
+        <p class="bd">A bridge over Interstate 25 near Larkspur is called the largest wildlife bridge structure in North America. Wildlife-vehicle collisions on the corridor fell 91%, from about one a day, and it logged the first recorded pronghorn crossing in 30 years.</p>
+        <a class="src s15" href="https://www.goodnewsnetwork.org/north-americas-largest-wildlife-overpass-is-working-animal-collisions-on-i-25-down-91/" target="_blank" rel="noopener">Read the original at Good News Network →</a>
+      </div>
+    </li><li id="gt-crisis-connect">
+      <span class="n">02</span>
+      <div>
+        <h3 class="hd h-4">A 17-year-old in Istanbul builds a Bluetooth app for disasters</h3>
+        <span class="when">Fri Oct 16</span>
+        <p class="bd">Emirhan Duman made Crisis Connect after the February 2023 Turkey and Syria earthquakes. Phones relay messages to each other over Bluetooth when cell networks fail, and the app is free and open-source. He says it won&#39;t replace satellite, radio or official warnings.</p>
+        <a class="src s15" href="https://www.goodnewsnetwork.org/teens-disaster-messaging-app-can-hop-across-bluetooth-when-cellular-networks-collapse/" target="_blank" rel="noopener">Read the original at Good News Network →</a>
+      </div>
+    </li><li id="gt-roman-fort-wales">
+      <span class="n">03</span>
+      <div>
+        <h3 class="hd h-4">Archaeologist finds possible Roman fort in Wales while on a bike ride</h3>
+        <span class="when">Fri Oct 16</span>
+        <p class="bd">Oxford&#39;s Mark Merrony first spotted the Frenni Fawr site in 2024 while cycling. The fort may have housed about 500 soldiers and dates to roughly 74 to 78 C.E. A link to Magnus Maximus, the emperor of Welsh legend, is described as possible, not proven.</p>
+        <a class="src s15" href="https://www.smithsonianmag.com/smart-news/legend-has-it-that-this-roman-emperor-established-camp-wales-newly-discovered-fort-may-offer-proof-that-it-really-existed-180989702/" target="_blank" rel="noopener">Read the original at Smithsonian Magazine →</a>
+      </div>
+    </li><li id="gt-sentinel-3c">
+      <span class="n">04</span>
+      <div>
+        <h3 class="hd h-4">Europe&#39;s new Sentinel-3C satellite sends its first images</h3>
+        <span class="when">Thu Oct 15</span>
+        <p class="bd">The third satellite in the Copernicus Sentinel-3 series returned pictures of Italy, the Canadian Arctic and the Caribbean two weeks after launch. Its radar altimeter also measured the height of the Greenland ice sheet. Commissioning will take another five months.</p>
+        <a class="src s15" href="https://www.goodnewsnetwork.org/esas-new-sentinel-3c-satellite-makes-its-debut-with-sumptuous-images-of-italy-and-the-arctic/" target="_blank" rel="noopener">Read the original at Good News Network →</a>
+      </div>
+    </li><li id="gt-plant-armor">
+      <span class="n">05</span>
+      <div>
+        <h3 class="hd h-4">A 3D fabric lifts strawberry yields up to 3.56 times in tests</h3>
+        <span class="when">Fri Oct 16</span>
+        <p class="bd">NC State researchers draped a textile over strawberry plants to keep insects off. In tunnel field tests yields rose as much as 3.56 times, and plants fruited earlier. It could cut pesticide and water use; it began as a spinoff of mosquito-resistant uniform research.</p>
+        <a class="src s15" href="https://www.goodnewsnetwork.org/drape-some-of-this-plant-armor-fabric-over-a-strawberry-patch-to-triple-yields-with-less-pesticides/" target="_blank" rel="noopener">Read the original at Good News Network →</a>
+      </div>
+    </li><li id="gt-rewilding-art">
+      <span class="n">06</span>
+      <div>
+        <h3 class="hd h-4">An artist paints nine UK rewilding projects</h3>
+        <span class="when">Tue Oct 13</span>
+        <p class="bd">Rebecca Howard&#39;s show &#34;A Year in the Wild&#34; at Knepp in Sussex runs until Sunday, October 18. Her paintings cover sites from a Ribble saltmarsh to Devon beavers. Proceeds from cards and limited prints support Rewilding Britain.</p>
+        <a class="src s15" href="https://www.positive.news/environment/the-in-awe-artist-painting-a-wilder-britain/" target="_blank" rel="noopener">Read the original at Positive News →</a>
+      </div>
+    </li><li id="gt-texas-park">
+      <span class="n">07</span>
+      <div>
+        <h3 class="hd h-4">A Texas family sells 650 acres to become a state park</h3>
+        <span class="when">Mon Oct 12</span>
+        <p class="bd">The Pollard family owned the land on Lake Palestine for 80 years. It is the longest remaining stretch of the lake&#39;s shore. The Texas Parks and Wildlife Foundation paid $1 million and holds it until the state can buy it in late 2027.</p>
+        <a class="src s15" href="https://www.goodnewsnetwork.org/family-sells-650-acres-on-east-texas-lake-to-become-state-park-saying-land-is-part-of-my-soul/" target="_blank" rel="noopener">Read the original at Good News Network →</a>
+      </div>
+    </li><li id="gt-portrait-of-mai">
+      <span class="n">08</span>
+      <div>
+        <h3 class="hd h-4">Reynolds&#39; Portrait of Mai reaches the U.S. for the first time</h3>
+        <span class="when">Fri Oct 16</span>
+        <p class="bd">The nearly eight-foot painting of Mai, the first Polynesian to visit Britain, is on view at the Getty Museum in Los Angeles through March 14, 2027. The National Portrait Gallery in London and the J. Paul Getty Trust bought it jointly in 2023, each paying half of roughly $62 million.</p>
+        <a class="src s15" href="https://www.smithsonianmag.com/smart-news/a-monumental-18th-century-portrait-of-a-young-polynesian-man-a-supreme-work-of-art-visits-the-us-for-the-first-time-180989699/" target="_blank" rel="noopener">Read the original at Smithsonian Magazine →</a>
+      </div>
+    </li><li id="gt-library-access">
+      <span class="n">09</span>
+      <div>
+        <h3 class="hd h-4">Rural libraries let card holders in when no staff are on duty</h3>
+        <span class="when">Thu Oct 15</span>
+        <p class="bd">Washington&#39;s Timberland Regional Library says more than 63,000 people used their cards to enter unstaffed branches between September 2023 and August 2026. In Wyoming, Minnesota, usage is up 66% since April. Minimum ages run from 14 to 18, and staff say they still want more staffed hours.</p>
+        <a class="src s15" href="https://reasonstobecheerful.world/the-library-is-closed-feel-free-to-come-in/" target="_blank" rel="noopener">Read the original at Reasons to be Cheerful →</a>
+      </div>
+    </li><li id="gt-diary-dump">
+      <span class="n">10</span>
+      <div>
+        <h3 class="hd h-4">A WWI diary found in a dump becomes a book</h3>
+        <span class="when">Thu Oct 15</span>
+        <p class="bd">Twelve-year-old Alan Southall found Australian Corporal Claude Nuttall&#39;s 1918 diary at a dump in England in 1965. Nuttall died on August 13, 1918. A former museum curator researched him for decades, and a book, &#34;The Digger&#39;s Diary,&#34; is due this fall.</p>
+        <a class="src s15" href="https://www.smithsonianmag.com/smart-news/this-soldier-kept-a-diary-in-the-trenches-of-world-war-i-a-child-found-it-at-the-dump-decades-later-pierced-by-a-bullet-and-stained-with-blood-180989696/" target="_blank" rel="noopener">Read the original at Smithsonian Magazine →</a>
+      </div>
+    </li>
+  </ol>
+</section>
+
+
+
+<section class="sec rl" id="tv" data-screen-label="TV" aria-labelledby="tv-h">
+  <p class="kick">TV and the sky</p>
+  <h2 class="hd h-sec" id="tv-h">Tonight, and overhead</h2>
+  <div class="grid g220">
+
+<article class="tb" id="on-the-couch">
+  <img class="pic r45" src="https://images.unsplash.com/photo-1593784991251-92ded75ea290?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="On the couch" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+  <p class="lab">TV</p>
+  <h3 class="hd h-tv">On the Couch</h3>
   
     <p class="empty">Nothing on tonight.</p>
     <p>No new Saturday Night Live tonight: the show is taking a two-week break after Oct 10 (Shane Gillis hosting, Rosalía musical guest). It returns Oct 31 with host Inde Navarrette and musical guest Gracie Abrams. <a class="src" href="https://www.tvline.com/2279834/is-snl-new-tonight-october-10-2026-host-musical-guest-watch-details/" target="_blank" rel="noopener">TVLine: Is SNL New Tonight (October 10, 2026)?</a></p>
   
-</aside>
-      <aside class="box" id="storm-watch" aria-label="Storm Watch">
-  <h4>Storm Watch</h4>
-  
+</article>
+
+
+<article class="tb" id="storm-watch">
+  <img class="pic r45" src="https://images.unsplash.com/photo-1776739835684-4078f7419f74?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Storm watch" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+  <p class="lab">Weather</p>
+  <h3 class="hd h-tv">Storm Watch</h3>
+  <p><b>Los Angeles:</b> Sunny, high near 90, low around 67 · heat advisory until 8 PM PDT today · East L.A. (NWS)</p>
   <ul><li><b>Hurricane Trudy</b> (Eastern Pacific) &mdash; Category 1 hurricane (90 mph) · 90 mph peak · 979 mb. 16.0N 103.4W, about 240 mi WSW of Acapulco and 215 mi SSE of Manzanillo, moving NW at about 8 mph Hurricane Warning for the Mexican coast from Manzanillo north to Cabo Corrientes; Hurricane Watch from south of Manzanillo to Punta San Telmo; Tropical Storm Warning south of Manzanillo to Zihuatanejo and north of Cabo Corrientes to Punta Mita; Tropical Storm Watch north of Punta Mita to San Blas and Las Islas Marias. Rain of 4-8 in (isolated 15 in) in Michoacan, Colima and Jalisco; flooding and mudslides possible; life-threatening surf spreading north. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP1+shtml/170840.shtml" target="_blank" rel="noopener">NHC Public Advisory 16, 3:00 AM CST Oct 17</a></li></ul>
   
   <p><b>Winter outlook:</b> CPC&#39;s October 8 discussion is still the latest: El Nino Advisory, with a strong to very strong El Nino likely through January-March 2027 (above 83% chance). Next update due Nov 12.</p>
-  <p class="src"><a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO diagnostic discussion</a> &middot; <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a> &middot; <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP5+shtml/170840.shtml" target="_blank" rel="noopener">NHC final advisory 38 on Simon (dissipated, 2:00 PM MST Oct 16)</a></p>
-</aside>
-      <aside class="box" id="sky" aria-label="Sky">
-  <h4>Sky</h4>
+  <p><a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO diagnostic discussion</a> &middot; <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a> &middot; <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP5+shtml/170840.shtml" target="_blank" rel="noopener">NHC final advisory 38 on Simon (dissipated, 2:00 PM MST Oct 16)</a></p>
+</article>
+
+
+<article class="tb" id="sky">
+  <img class="pic r45" src="https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="The sky tonight" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+  <p class="lab">Overhead</p>
+  <h3 class="hd h-tv">Sky</h3>
   <p><b>Moon:</b> Waxing crescent (41% illuminated)</p>
-  <p><b>Tonight's sky:</b> Saturn is up in the evening and Uranus rises mid-evening; Mars and Jupiter rise after midnight. First quarter moon is Oct 18 and full moon Oct 25. The Orionid meteor shower is active but peaks the night of Oct 21-22, with moonlight interfering. <span class="src"><a href="https://www.moongiant.com/phase/10/17/2026/" target="_blank" rel="noopener">Moongiant: moon phase Oct 17, 2026</a> &middot; <a href="https://griffithobservatory.lacity.gov/?p=949" target="_blank" rel="noopener">Griffith Observatory Sky Report, October 2026</a></span></p>
-  
+  <p><b>Tonight's sky:</b> Saturn is up in the evening and Uranus rises mid-evening; Mars and Jupiter rise after midnight. First quarter moon is Oct 18 and full moon Oct 25. The Orionid meteor shower is active but peaks the night of Oct 21-22, with moonlight interfering. <a href="https://www.moongiant.com/phase/10/17/2026/" target="_blank" rel="noopener">Moongiant: moon phase Oct 17, 2026</a> &middot; <a href="https://griffithobservatory.lacity.gov/?p=949" target="_blank" rel="noopener">Griffith Observatory Sky Report, October 2026</a></p>
   <h5>Human Design transits</h5>
   <ul><li><b>Patrick:</b> Saturn sits in your own Gate 21 (The Hunter, Heart), completing your 21–45 channel, and Uranus in your own Gate 20 (The Now, Throat) completes 20–34. The North Node is in your Gate 30 (Recognition of Feelings). Neptune in Gate 25 and Pluto in Gate 41 would complete your 25–51 and 30–41 channels.</li><li><b>Travis:</b> Neptune sits in your own Gate 25 (The Spirit of the Self, G centre).</li></ul>
+</article>
+
+
+<article class="tb" id="crop-circle-watch">
+  <img class="pic r45" src="https://images.unsplash.com/photo-1639088654641-0cb5b28e349e?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Crop circle watch" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+  <p class="lab">Notebook</p>
+  <h3 class="hd h-tv">Crop Circle Watch</h3>
+  <p><b>Latest formation</b> &mdash; Tue Jul 21 &middot; Fox Hill, Wiltshire, England. Listed by Temporary Temples with photos and a title only; no description of the design is given. It follows Roundway on 18 July, Wayland&#39;s Smithy in Oxfordshire on 16 July, Avebury on 14 July and Milk Hill on 12 July.</p>
   
-</aside>
-    </div>
-  </section>
-  
+  <ul><li>Neither site lists a formation after 21 July (Crop Circle Connector&#39;s counts were last dated 11 August).</li><li>Crop Circle Connector&#39;s 2026 index counts 6 formations for January to June, 10 for July to December and none for August to December (the page&#39;s update date reads &#34;00/00/2026&#34;).</li></ul>
+  <p><em>From the history: The Mowing-Devil (1678): an English woodcut pamphlet from Hertfordshire. A farmer refused a worker&#39;s price to mow his oat field and said the Devil could mow it. That night the field seemed on fire, and by morning it was mowed so cleanly that &#34;no mortal man was able to do the like.&#34; Researchers often cite it as an early possible crop-circle report, though Jim Schnabel rejects the link because the pamphlet describes cut stalks, not bent ones.</em></p>
+  <p><a href="https://temporarytemples.co.uk/crop-circles/2026-crop-circles" target="_blank" rel="noopener">Temporary Temples: 2026 crop circles</a> &middot; <a href="https://www.cropcircleconnector.com/2026/2026.html" target="_blank" rel="noopener">Crop Circle Connector: 2026</a> &middot; <a href="https://en.wikipedia.org/wiki/Mowing-Devil" target="_blank" rel="noopener">Mowing-Devil, Wikipedia</a></p>
+</article>
+
+</div>
+</section>
 
 
-
-
-  <section class="sec ruled made" id="made" aria-labelledby="made-h">
-    <div class="sec-head"><p class="kicker">Behind the paper</p><h2 class="h-sec" id="made-h">How this paper is made</h2></div>
-    <p>Who made today&#39;s paper, and roughly what it cost in tokens (the chunks of text models read and write).</p>
-    <div class="tablewrap"><table>
-      <thead><tr><th>Stage</th><th>Model</th><th class="num">Tokens</th><th>Plain words</th></tr></thead>
-      <tbody><tr><td>Scouts ×5 (AI, Spirit + Crop Circle + Droplet + Grant, Good Ten, World, TV/Almanac)</td><td>Sonnet</td><td class="num">≈403k</td><td>Droplet and Grant quiet; BBC/AP/Guardian blocked to the World scout</td></tr><tr><td>Writer (incl. lead)</td><td>Sonnet</td><td class="num">≈82k</td><td>Opus lead dropped: budget already spent after scouting</td></tr><tr><td>Fact-checkers, fresh context (main + almanac boxes)</td><td>Sonnet</td><td class="num">≈140k</td><td>~165 claims: 3 wrong, 2 unsupported, 3 unverifiable; all fixed</td></tr><tr><td>Managing editor (plan, HD transits, fixes, build, publish, file, email)</td><td>Opus 5.5 session</td><td class="num">≈110k</td><td></td></tr></tbody>
-    </table></div>
-    <p>Total ≈735k tokens, over the 300k daily target. Scouting is still where the budget goes.</p>
-  </section>
-
+<section class="sec rl made" id="made" aria-labelledby="made-h">
+  <p class="kick">Behind the paper</p><h2 class="hd h-sec" id="made-h">How this paper is made</h2>
+  <p>Who made today&#39;s paper, and roughly what it cost in tokens (the chunks of text models read and write).</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Stage</th><th>Model</th><th class="num">Tokens</th><th>Plain words</th></tr></thead>
+    <tbody><tr><td>Scouts ×5 (AI, Spirit + Crop Circle + Droplet + Grant, Good Ten, World, TV/Almanac)</td><td>Sonnet</td><td class="num">≈403k</td><td>Droplet and Grant quiet; BBC/AP/Guardian blocked to the World scout</td></tr><tr><td>Writer (incl. lead)</td><td>Sonnet</td><td class="num">≈82k</td><td>Opus lead dropped: budget already spent after scouting</td></tr><tr><td>Fact-checkers, fresh context (main + almanac boxes)</td><td>Sonnet</td><td class="num">≈140k</td><td>~165 claims: 3 wrong, 2 unsupported, 3 unverifiable; all fixed</td></tr><tr><td>Managing editor (plan, HD transits, fixes, build, publish, file, email)</td><td>Opus 5.5 session</td><td class="num">≈110k</td><td></td></tr></tbody>
+  </table></div>
+  <p>Total ≈735k tokens, over the 300k daily target. Scouting is still where the budget goes.</p>
+</section>
 
 </main>
-</div>
 
 <footer class="foot">
   <div class="top">
     <div>
       <p class="brand">The Gayzette</p>
-      <p class="tag">No ads. No pop-ups. No tracking. Just the paper.</p>
+      <p class="tagl">No ads. No pop-ups. No tracking. Just the paper.</p>
     </div>
     <nav aria-label="Footer sections">
-      <a href="#front">Front Page</a><a href="#ai">AI</a><a href="#spirit">Spirit</a><a href="#feel-good">Feel-Good</a><a href="#world">World</a><a href="#tv">TV</a><a href="/editions/2026-10-18.html">Sunday</a>
+      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
       <a href="/editions/">Past editions</a>
     </nav>
   </div>
-  <p class="fine">The Gayzette &middot; Patrick &amp; Travis<br><a href="/editions/">Past editions</a> &middot; Made in Los Angeles &middot; Summaries link to their sources</p>
+  <p class="fine">The Gayzette &middot; Patrick &amp; Travis<br><a href="/editions/">Past editions</a> &middot; Made in Los Angeles &middot; Edition No. 25 &middot; Summaries link to their sources</p>
 </footer>
+</div>
 </body>
 </html>
