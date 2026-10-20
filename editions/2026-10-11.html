@@ -354,6 +354,34 @@ main{display:block}
   *{break-inside:avoid-page}
   .kicker,.rule-short{color:var(--accent)!important}
 }
+
+/* ===== DRAFT 2 (2026-10-19): wide-screen layout, 1024px and up. Phone/tablet below stays as DRAFT 1. ===== */
+@media (min-width:1024px){
+  /* hero beside: comic panel left, headline + deck + first paragraphs right, rest in a centered reading column */
+  article.hero{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,9fr);gap:0 56px;align-items:start}
+  .hero .txt{display:contents}
+  .hero .art{grid-column:1;grid-row:1;margin-bottom:0}
+  .hero .txt-top{grid-column:2;grid-row:1}
+  .hero .txt-top .h-hero{font-size:clamp(32px,3.5vw,46px);line-height:1.06}
+  .hero.sunday .txt-top .h-hero{font-size:clamp(34px,3.9vw,52px);line-height:1.04}
+  .hero .txt-top .deck{font-size:20px}
+  .hero .txt-top .byline{margin-top:16px}
+  .hero .txt-top .body p{font-size:18px;line-height:1.6}
+  .hero .txt-rest{grid-column:1/-1;grid-row:2;width:100%;max-width:680px;margin:56px auto 0}
+  .hero .txt-rest .desk{max-width:none}
+  /* editor's note: one labeled column, same 680px column as the rest of the lead, with a rule above */
+  .ednote{max-width:680px;margin:88px auto 0;padding:32px 0 0;border-top:1px solid var(--rule-2)}
+  .ednote .kicker{font-size:13px;margin-bottom:6px}
+  /* AI and Spirit: two columns */
+  .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 56px;align-items:start}
+  .row>.main:only-child{grid-column:1/-1;max-width:760px}
+  /* Good Ten: two columns. World Straight: one 680px column */
+  .good{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #world .sec-head,#world .ws-note,#world .ws{max-width:680px;margin-left:auto;margin-right:auto}
+  .ws{grid-template-columns:minmax(0,1fr)}
+  /* sidebars: 2-up */
+  .boxes{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 </style>
 </head>
 <body>
@@ -379,16 +407,21 @@ main{display:block}
 
   
   <article class="hero sunday" id="front" data-beat="The Universe">
-  
+  <div class="art bleed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="A Sunday morning: coffee and the newspaper under a bright sun"><defs><pattern id="sunhl" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#e63946"/></pattern></defs><rect x="12" y="12" width="296" height="176" fill="#fff7e0" stroke="#111" stroke-width="3"/><rect x="12" y="12" width="296" height="176" fill="url(#sunhl)"/><g stroke="#111" stroke-width="4" stroke-linecap="round"><path d="M240 20v10M240 100v10M195 65h-10M285 65h10M208 33l-7-7M272 33l7-7M208 97l-7 7M272 97l7 7"/></g><circle cx="240" cy="65" r="30" fill="#ffd23f" stroke="#111" stroke-width="4"/><rect x="38" y="92" width="150" height="82" fill="#fff" stroke="#111" stroke-width="4"/><rect x="46" y="100" width="134" height="16" fill="#111"/><text x="113" y="113" font-family="Georgia,serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#ffd23f">THE GAYZETTE</text><rect x="46" y="124" width="56" height="30" fill="#e63946" stroke="#111" stroke-width="3"/><g stroke="#111" stroke-width="3" stroke-linecap="round"><path d="M110 126h64M110 136h64M110 146h64M46 162h128"/></g><path d="M113 92v82" stroke="#111" stroke-width="2" stroke-dasharray="3 4"/><g fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"><path d="M226 112c-6-8 6-12 0-20M242 112c-6-8 6-12 0-20"/></g><path d="M268 130h8a10 10 0 0 1 0 22h-8" fill="none" stroke="#111" stroke-width="4"/><rect x="212" y="118" width="58" height="56" rx="8" fill="#e63946" stroke="#111" stroke-width="4"/><rect x="220" y="126" width="42" height="9" rx="4" fill="#7a3b1d" stroke="#111" stroke-width="2"/><rect x="196" y="172" width="90" height="8" rx="4" fill="#ffd23f" stroke="#111" stroke-width="3"/><rect x="30" y="26" width="120" height="26" rx="8" fill="#fff" stroke="#111" stroke-width="3"/><text x="90" y="44" font-family="Comic Sans MS,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">Sunday Edition</text></svg></div>
   <div class="txt">
-    <p class="kicker">Sunday &middot; The Universe</p>
-    <h2 class="h-hero hl"><a href="https://science.nasa.gov/missions/webb/webb-measures-distance-to-farthest-fast-radio-burst-suggesting-origin/" target="_blank" rel="noopener">Webb traces a far-off radio flash to a surprisingly tiny galaxy</a></h2>
-    <p class="deck">A burst caught on March 4, 2024 left its galaxy about 3 billion years after the Big Bang, and the galaxy is about 1,000 times smaller than expected.</p>
-    <p class="byline">The Gayzette &middot; Wonder <span aria-label="5 of 5">◆◆◆◆◆</span></p>
-    <div class="body wide hero-body"><p>Imagine someone flicks a flashlight once from the far side of a city at night, and you have to work out which window it came from. That is the problem with a fast radio burst, or FRB: a sudden, very brief flash of radio waves from deep space. Tracing it home is the hard part.</p><p>On March 4, 2024, the MeerTRAP team, using the MeerKAT radio telescope, caught one now called FRB 20240304B. The largest ground-based telescopes saw no galaxy at the spot. Webb did. NASA reported on Oct 8 that the burst sits at a redshift of 2.148. Redshift is how much the expanding universe has stretched light on its way to us, a kind of cosmic odometer, and this reading means the flash left its galaxy about 3 billion years after the Big Bang. It may be the most distant FRB seen so far.</p><p>The surprise is the home. It is a small, actively star-forming dwarf galaxy, about 1,000 times less massive than the team expected. That matters for what makes these bursts. One suspect is two neutron stars (the collapsed cores of dead stars) merging; another is a magnetar, a neutron star with an enormous magnetic field. A young, busy little galaxy points toward the magnetar. &#34;Our work suggests that it&#39;s very unlikely that this FRB was produced by a merger,&#34; said Manisha Caleb of the University of Sydney, who led the study in Science.</p><p>On its long trip, the signal also picked up fingerprints of what it passed through, revealing a previously unknown galaxy cluster about 3.5 billion light-years away and the Virgo Cluster about 54 million light-years away. &#34;A fast radio burst is almost like a cosmic flashlight,&#34; said J. Xavier Prochaska. The team estimates MeerKAT could pin down several FRBs a year at redshift above 1.0.</p><p>The caveat: this is one burst, and the magnetar answer is favored, not proven.</p></div>
-    <aside class="desk"><p class="label">On our desk</p>it is a clean &#34;how do we know that?&#34; for the Universe Year, one flash read like a cosmic flashlight to find both where it started and what it passed through on the way.</aside>
-    <span class="srcline"><a href="https://science.nasa.gov/missions/webb/webb-measures-distance-to-farthest-fast-radio-burst-suggesting-origin/" target="_blank" rel="noopener">Read the original at NASA Science: Webb measures distance to farthest fast radio burst →</a></span>
-    
+    <div class="txt-top">
+      <p class="kicker">Sunday &middot; The Universe</p>
+      <h2 class="h-hero hl"><a href="https://science.nasa.gov/missions/webb/webb-measures-distance-to-farthest-fast-radio-burst-suggesting-origin/" target="_blank" rel="noopener">Webb traces a far-off radio flash to a surprisingly tiny galaxy</a></h2>
+      <p class="deck">A burst caught on March 4, 2024 left its galaxy about 3 billion years after the Big Bang, and the galaxy is about 1,000 times smaller than expected.</p>
+      <p class="byline">The Gayzette &middot; Wonder <span aria-label="5 of 5">◆◆◆◆◆</span></p>
+      <div class="body wide hero-body"><p>Imagine someone flicks a flashlight once from the far side of a city at night, and you have to work out which window it came from. That is the problem with a fast radio burst, or FRB: a sudden, very brief flash of radio waves from deep space. Tracing it home is the hard part.</p><p>On March 4, 2024, the MeerTRAP team, using the MeerKAT radio telescope, caught one now called FRB 20240304B. The largest ground-based telescopes saw no galaxy at the spot. Webb did. NASA reported on Oct 8 that the burst sits at a redshift of 2.148. Redshift is how much the expanding universe has stretched light on its way to us, a kind of cosmic odometer, and this reading means the flash left its galaxy about 3 billion years after the Big Bang. It may be the most distant FRB seen so far.</p></div>
+    </div>
+    <div class="txt-rest">
+      <div class="body wide"><p>The surprise is the home. It is a small, actively star-forming dwarf galaxy, about 1,000 times less massive than the team expected. That matters for what makes these bursts. One suspect is two neutron stars (the collapsed cores of dead stars) merging; another is a magnetar, a neutron star with an enormous magnetic field. A young, busy little galaxy points toward the magnetar. &#34;Our work suggests that it&#39;s very unlikely that this FRB was produced by a merger,&#34; said Manisha Caleb of the University of Sydney, who led the study in Science.</p><p>On its long trip, the signal also picked up fingerprints of what it passed through, revealing a previously unknown galaxy cluster about 3.5 billion light-years away and the Virgo Cluster about 54 million light-years away. &#34;A fast radio burst is almost like a cosmic flashlight,&#34; said J. Xavier Prochaska. The team estimates MeerKAT could pin down several FRBs a year at redshift above 1.0.</p><p>The caveat: this is one burst, and the magnetar answer is favored, not proven.</p></div>
+      <aside class="desk"><p class="label">On our desk</p>it is a clean &#34;how do we know that?&#34; for the Universe Year, one flash read like a cosmic flashlight to find both where it started and what it passed through on the way.</aside>
+      <span class="srcline"><a href="https://science.nasa.gov/missions/webb/webb-measures-distance-to-farthest-fast-radio-burst-suggesting-origin/" target="_blank" rel="noopener">Read the original at NASA Science: Webb measures distance to farthest fast radio burst →</a></span>
+      
+    </div>
   </div>
 </article>
   

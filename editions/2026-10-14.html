@@ -354,6 +354,34 @@ main{display:block}
   *{break-inside:avoid-page}
   .kicker,.rule-short{color:var(--accent)!important}
 }
+
+/* ===== DRAFT 2 (2026-10-19): wide-screen layout, 1024px and up. Phone/tablet below stays as DRAFT 1. ===== */
+@media (min-width:1024px){
+  /* hero beside: comic panel left, headline + deck + first paragraphs right, rest in a centered reading column */
+  article.hero{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,9fr);gap:0 56px;align-items:start}
+  .hero .txt{display:contents}
+  .hero .art{grid-column:1;grid-row:1;margin-bottom:0}
+  .hero .txt-top{grid-column:2;grid-row:1}
+  .hero .txt-top .h-hero{font-size:clamp(32px,3.5vw,46px);line-height:1.06}
+  .hero.sunday .txt-top .h-hero{font-size:clamp(34px,3.9vw,52px);line-height:1.04}
+  .hero .txt-top .deck{font-size:20px}
+  .hero .txt-top .byline{margin-top:16px}
+  .hero .txt-top .body p{font-size:18px;line-height:1.6}
+  .hero .txt-rest{grid-column:1/-1;grid-row:2;width:100%;max-width:680px;margin:56px auto 0}
+  .hero .txt-rest .desk{max-width:none}
+  /* editor's note: one labeled column, same 680px column as the rest of the lead, with a rule above */
+  .ednote{max-width:680px;margin:88px auto 0;padding:32px 0 0;border-top:1px solid var(--rule-2)}
+  .ednote .kicker{font-size:13px;margin-bottom:6px}
+  /* AI and Spirit: two columns */
+  .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 56px;align-items:start}
+  .row>.main:only-child{grid-column:1/-1;max-width:760px}
+  /* Good Ten: two columns. World Straight: one 680px column */
+  .good{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #world .sec-head,#world .ws-note,#world .ws{max-width:680px;margin-left:auto;margin-right:auto}
+  .ws{grid-template-columns:minmax(0,1fr)}
+  /* sidebars: 2-up */
+  .boxes{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 </style>
 </head>
 <body>
@@ -381,15 +409,20 @@ main{display:block}
   <article class="hero" id="front" data-beat="The AI Builder">
   <div class="art bleed"><div class="illo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="h" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#e63946"/></pattern></defs><g stroke="#000" stroke-width="3" stroke-linejoin="round"><rect x="12" y="12" width="296" height="176" fill="#ffd23f"/><rect x="12" y="12" width="296" height="176" fill="url(#h)" stroke="none"/><rect x="30" y="22" width="126" height="28" rx="8" fill="#fff"/><polygon points="60,50 76,50 66,64" fill="#fff"/><text x="93.0" y="41" font-size="13" font-family="sans-serif" font-weight="bold" text-anchor="middle" stroke="none" fill="#000">Test it by Nov 30</text><polygon points="100,85 210,85 235,118 210,151 100,151" fill="#fff"/><circle cx="114" cy="118" r="6" fill="#ffd23f"/><text x="132" y="134" font-size="38" font-family="sans-serif" font-weight="bold" stroke="none" fill="#000">$2</text><rect x="244" y="24" width="52" height="48" fill="#fff"/><rect x="244" y="24" width="52" height="14" fill="#e63946"/><text x="270" y="62" font-size="20" font-family="sans-serif" font-weight="bold" text-anchor="middle" stroke="none" fill="#000">30</text></g></svg></div></div>
   <div class="txt">
-    <p class="kicker">Front page &middot; The AI Builder</p>
-    <h2 class="h-hero hl"><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Google&#39;s Gemini 4 Argon is now open to everyone, at half price for now</a></h2>
-    <p class="deck">Google&#39;s newest model left limited access on October 13, with a launch price that doubles on December 1.</p>
-    <p class="byline">The Gayzette &middot; Wonder <span aria-label="3 of 5">◆◆◆◇◇</span></p>
-    <div class="body wide hero-body"><p>Google moved its newest model, Gemini 4 Argon, into general availability on October 13, according to its own changelog (the public list of what changed). Google calls it its most capable model for complex coding, agent work (software that takes several steps on its own), math and science. The models page lists it as stable, with a 1M-token context window, meaning it can hold about a million small chunks of text in view at once.</p><p>The price is the story. Through November 30, Standard use costs $2.00 per million input tokens and $10.00 per million output tokens, including its thinking steps. From December 1 that becomes $4 and $20. Batch and Flex (slower, cheaper queues) are half of Standard until November 30. There is no free tier, and it is not part of the Google AI Pro plan. These numbers come from Google&#39;s own pages, and we have not seen outside testing.</p><p>On your desk: if any of your n8n (the automation tool) workflows use a Gemini node, run one real job through Argon before November 30, and put the December 1 doubling on the calendar.</p></div>
-    <aside class="desk"><p class="label">On our desk</p>A top-tier model at a launch price with a known end date is easy to test cheaply now and budget for later.</aside>
-    <span class="srcline"><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Read the original at Gemini API changelog →</a></span>
-    <details class="sources"><summary>Receipts (3)</summary>
+    <div class="txt-top">
+      <p class="kicker">Front page &middot; The AI Builder</p>
+      <h2 class="h-hero hl"><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Google&#39;s Gemini 4 Argon is now open to everyone, at half price for now</a></h2>
+      <p class="deck">Google&#39;s newest model left limited access on October 13, with a launch price that doubles on December 1.</p>
+      <p class="byline">The Gayzette &middot; Wonder <span aria-label="3 of 5">◆◆◆◇◇</span></p>
+      <div class="body wide hero-body"><p>Google moved its newest model, Gemini 4 Argon, into general availability on October 13, according to its own changelog (the public list of what changed). Google calls it its most capable model for complex coding, agent work (software that takes several steps on its own), math and science. The models page lists it as stable, with a 1M-token context window, meaning it can hold about a million small chunks of text in view at once.</p><p>The price is the story. Through November 30, Standard use costs $2.00 per million input tokens and $10.00 per million output tokens, including its thinking steps. From December 1 that becomes $4 and $20. Batch and Flex (slower, cheaper queues) are half of Standard until November 30. There is no free tier, and it is not part of the Google AI Pro plan. These numbers come from Google&#39;s own pages, and we have not seen outside testing.</p></div>
+    </div>
+    <div class="txt-rest">
+      <div class="body wide"><p>On your desk: if any of your n8n (the automation tool) workflows use a Gemini node, run one real job through Argon before November 30, and put the December 1 doubling on the calendar.</p></div>
+      <aside class="desk"><p class="label">On our desk</p>A top-tier model at a launch price with a known end date is easy to test cheaply now and budget for later.</aside>
+      <span class="srcline"><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Read the original at Gemini API changelog →</a></span>
+      <details class="sources"><summary>Receipts (3)</summary>
 <ul><li><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Gemini API changelog</a> <span class="d">2026-10-13</span></li><li><a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener">Gemini API pricing</a> <span class="d">2026-10-13</span></li><li><a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener">Gemini API models page</a> <span class="d">2026-10-13</span></li></ul></details>
+    </div>
   </div>
 </article>
   

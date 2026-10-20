@@ -354,6 +354,34 @@ main{display:block}
   *{break-inside:avoid-page}
   .kicker,.rule-short{color:var(--accent)!important}
 }
+
+/* ===== DRAFT 2 (2026-10-19): wide-screen layout, 1024px and up. Phone/tablet below stays as DRAFT 1. ===== */
+@media (min-width:1024px){
+  /* hero beside: comic panel left, headline + deck + first paragraphs right, rest in a centered reading column */
+  article.hero{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,9fr);gap:0 56px;align-items:start}
+  .hero .txt{display:contents}
+  .hero .art{grid-column:1;grid-row:1;margin-bottom:0}
+  .hero .txt-top{grid-column:2;grid-row:1}
+  .hero .txt-top .h-hero{font-size:clamp(32px,3.5vw,46px);line-height:1.06}
+  .hero.sunday .txt-top .h-hero{font-size:clamp(34px,3.9vw,52px);line-height:1.04}
+  .hero .txt-top .deck{font-size:20px}
+  .hero .txt-top .byline{margin-top:16px}
+  .hero .txt-top .body p{font-size:18px;line-height:1.6}
+  .hero .txt-rest{grid-column:1/-1;grid-row:2;width:100%;max-width:680px;margin:56px auto 0}
+  .hero .txt-rest .desk{max-width:none}
+  /* editor's note: one labeled column, same 680px column as the rest of the lead, with a rule above */
+  .ednote{max-width:680px;margin:88px auto 0;padding:32px 0 0;border-top:1px solid var(--rule-2)}
+  .ednote .kicker{font-size:13px;margin-bottom:6px}
+  /* AI and Spirit: two columns */
+  .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 56px;align-items:start}
+  .row>.main:only-child{grid-column:1/-1;max-width:760px}
+  /* Good Ten: two columns. World Straight: one 680px column */
+  .good{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #world .sec-head,#world .ws-note,#world .ws{max-width:680px;margin-left:auto;margin-right:auto}
+  .ws{grid-template-columns:minmax(0,1fr)}
+  /* sidebars: 2-up */
+  .boxes{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 </style>
 </head>
 <body>
@@ -381,14 +409,19 @@ main{display:block}
   <article class="hero" id="front" data-beat="ai">
   <div class="art bleed"><div class="illo"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="ht-lead" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.5" fill="#111"/></pattern></defs><rect width="320" height="200" fill="#fff4cc"/><rect width="320" height="200" fill="url(#ht-lead)" opacity=".18"/><rect x="80" y="55" width="160" height="95" rx="6" fill="#fff" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M60 150h200l-14 14H74z" fill="#2a6fdb" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><g fill="#2a6fdb" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><circle cx="110" cy="85" r="7"/><circle cx="128" cy="100" r="7"/><circle cx="118" cy="120" r="7"/></g><g fill="#ff5a5f" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><circle cx="180" cy="80" r="7"/><circle cx="200" cy="96" r="7"/></g><circle cx="215" cy="118" r="24" fill="#fff" fill-opacity=".6" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M233 136l26 26" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-width="6"/><path d="M24 14h96a8 8 0 0 1 8 8v16a8 8 0 0 1-8 8H60l-14 12v-12H24a8 8 0 0 1-8-8V22a8 8 0 0 1 8-8z" fill="#fff" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><text x="34" y="36" font-family="Comic Sans MS,sans-serif" font-size="14" font-weight="bold" fill="#111">Found it!</text></svg></div></div>
   <div class="txt">
-    <p class="kicker">Front page &middot; ai</p>
-    <h2 class="h-hero hl"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/" target="_blank" rel="noopener">Google&#39;s new free search model fits on a laptop</a></h2>
-    <p class="deck">EmbeddingGemma 2 lets a small, free model search text, code, images, video and audio by meaning.</p>
-    <p class="byline">The Gayzette &middot; Wonder <span aria-label="4 of 5">◆◆◆◆◇</span></p>
-    <div class="body wide hero-body"><p>Google released EmbeddingGemma 2 on October 6. An embedding model turns a piece of content into a list of numbers, so things with similar meaning end up with similar numbers. That is what lets a computer search by meaning instead of exact words. This one puts text, code, images, video and audio into the same shared list format, so a sentence can find a matching picture or clip.</p><p>The size is the news. The full model has 740M parameters (the adjustable settings inside a model), under an Apache 2.0 license, which is an open license anyone can read. Text-only use needs as few as 270M parameters; the vision (170M) and audio (300M) parts are optional add-ons. With quantization, which means storing the model&#39;s numbers in a smaller form, the text-only weights use about 191MB of memory on a Pixel 11 Pro phone. Each item&#39;s list can also be trimmed from 768 numbers to 512, 256 or 128, for up to 6x less storage.</p><p>Google also reports its code-search score on MTEB Code, a standard benchmark, rose from 68.76 to 78.68. Caveat: that is Google&#39;s own announcement, and we have not seen outside tests. The weights are on Hugging Face and Kaggle and work with Ollama, LM Studio, llama.cpp, sentence-transformers and Qdrant.</p><p>On your desk: this is the missing piece for searching your Obsidian vault by meaning, including images and the dance-class audio and video, with no API bill because it runs on your own machine. Worth an afternoon of trying it on a small folder first.</p></div>
-    <aside class="desk"><p class="label">On our desk</p>A search tool that small and free means your own notes and class recordings can become searchable without paying anyone per query.</aside>
-    <span class="srcline"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/" target="_blank" rel="noopener">Read the original at Google blog: EmbeddingGemma 2 →</a></span>
-    
+    <div class="txt-top">
+      <p class="kicker">Front page &middot; ai</p>
+      <h2 class="h-hero hl"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/" target="_blank" rel="noopener">Google&#39;s new free search model fits on a laptop</a></h2>
+      <p class="deck">EmbeddingGemma 2 lets a small, free model search text, code, images, video and audio by meaning.</p>
+      <p class="byline">The Gayzette &middot; Wonder <span aria-label="4 of 5">◆◆◆◆◇</span></p>
+      <div class="body wide hero-body"><p>Google released EmbeddingGemma 2 on October 6. An embedding model turns a piece of content into a list of numbers, so things with similar meaning end up with similar numbers. That is what lets a computer search by meaning instead of exact words. This one puts text, code, images, video and audio into the same shared list format, so a sentence can find a matching picture or clip.</p><p>The size is the news. The full model has 740M parameters (the adjustable settings inside a model), under an Apache 2.0 license, which is an open license anyone can read. Text-only use needs as few as 270M parameters; the vision (170M) and audio (300M) parts are optional add-ons. With quantization, which means storing the model&#39;s numbers in a smaller form, the text-only weights use about 191MB of memory on a Pixel 11 Pro phone. Each item&#39;s list can also be trimmed from 768 numbers to 512, 256 or 128, for up to 6x less storage.</p></div>
+    </div>
+    <div class="txt-rest">
+      <div class="body wide"><p>Google also reports its code-search score on MTEB Code, a standard benchmark, rose from 68.76 to 78.68. Caveat: that is Google&#39;s own announcement, and we have not seen outside tests. The weights are on Hugging Face and Kaggle and work with Ollama, LM Studio, llama.cpp, sentence-transformers and Qdrant.</p><p>On your desk: this is the missing piece for searching your Obsidian vault by meaning, including images and the dance-class audio and video, with no API bill because it runs on your own machine. Worth an afternoon of trying it on a small folder first.</p></div>
+      <aside class="desk"><p class="label">On our desk</p>A search tool that small and free means your own notes and class recordings can become searchable without paying anyone per query.</aside>
+      <span class="srcline"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/" target="_blank" rel="noopener">Read the original at Google blog: EmbeddingGemma 2 →</a></span>
+      
+    </div>
   </div>
 </article>
   

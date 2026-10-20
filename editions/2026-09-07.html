@@ -354,6 +354,34 @@ main{display:block}
   *{break-inside:avoid-page}
   .kicker,.rule-short{color:var(--accent)!important}
 }
+
+/* ===== DRAFT 2 (2026-10-19): wide-screen layout, 1024px and up. Phone/tablet below stays as DRAFT 1. ===== */
+@media (min-width:1024px){
+  /* hero beside: comic panel left, headline + deck + first paragraphs right, rest in a centered reading column */
+  article.hero{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,9fr);gap:0 56px;align-items:start}
+  .hero .txt{display:contents}
+  .hero .art{grid-column:1;grid-row:1;margin-bottom:0}
+  .hero .txt-top{grid-column:2;grid-row:1}
+  .hero .txt-top .h-hero{font-size:clamp(32px,3.5vw,46px);line-height:1.06}
+  .hero.sunday .txt-top .h-hero{font-size:clamp(34px,3.9vw,52px);line-height:1.04}
+  .hero .txt-top .deck{font-size:20px}
+  .hero .txt-top .byline{margin-top:16px}
+  .hero .txt-top .body p{font-size:18px;line-height:1.6}
+  .hero .txt-rest{grid-column:1/-1;grid-row:2;width:100%;max-width:680px;margin:56px auto 0}
+  .hero .txt-rest .desk{max-width:none}
+  /* editor's note: one labeled column, same 680px column as the rest of the lead, with a rule above */
+  .ednote{max-width:680px;margin:88px auto 0;padding:32px 0 0;border-top:1px solid var(--rule-2)}
+  .ednote .kicker{font-size:13px;margin-bottom:6px}
+  /* AI and Spirit: two columns */
+  .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 56px;align-items:start}
+  .row>.main:only-child{grid-column:1/-1;max-width:760px}
+  /* Good Ten: two columns. World Straight: one 680px column */
+  .good{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #world .sec-head,#world .ws-note,#world .ws{max-width:680px;margin-left:auto;margin-right:auto}
+  .ws{grid-template-columns:minmax(0,1fr)}
+  /* sidebars: 2-up */
+  .boxes{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 </style>
 </head>
 <body>
@@ -379,16 +407,21 @@ main{display:block}
 
   
   <article class="hero sunday" id="front" data-beat="The Universe">
-  
+  <div class="art bleed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="A Sunday morning: coffee and the newspaper under a bright sun"><defs><pattern id="sunhl" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#e63946"/></pattern></defs><rect x="12" y="12" width="296" height="176" fill="#fff7e0" stroke="#111" stroke-width="3"/><rect x="12" y="12" width="296" height="176" fill="url(#sunhl)"/><g stroke="#111" stroke-width="4" stroke-linecap="round"><path d="M240 20v10M240 100v10M195 65h-10M285 65h10M208 33l-7-7M272 33l7-7M208 97l-7 7M272 97l7 7"/></g><circle cx="240" cy="65" r="30" fill="#ffd23f" stroke="#111" stroke-width="4"/><rect x="38" y="92" width="150" height="82" fill="#fff" stroke="#111" stroke-width="4"/><rect x="46" y="100" width="134" height="16" fill="#111"/><text x="113" y="113" font-family="Georgia,serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#ffd23f">THE GAYZETTE</text><rect x="46" y="124" width="56" height="30" fill="#e63946" stroke="#111" stroke-width="3"/><g stroke="#111" stroke-width="3" stroke-linecap="round"><path d="M110 126h64M110 136h64M110 146h64M46 162h128"/></g><path d="M113 92v82" stroke="#111" stroke-width="2" stroke-dasharray="3 4"/><g fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"><path d="M226 112c-6-8 6-12 0-20M242 112c-6-8 6-12 0-20"/></g><path d="M268 130h8a10 10 0 0 1 0 22h-8" fill="none" stroke="#111" stroke-width="4"/><rect x="212" y="118" width="58" height="56" rx="8" fill="#e63946" stroke="#111" stroke-width="4"/><rect x="220" y="126" width="42" height="9" rx="4" fill="#7a3b1d" stroke="#111" stroke-width="2"/><rect x="196" y="172" width="90" height="8" rx="4" fill="#ffd23f" stroke="#111" stroke-width="3"/><rect x="30" y="26" width="120" height="26" rx="8" fill="#fff" stroke="#111" stroke-width="3"/><text x="90" y="44" font-family="Comic Sans MS,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">Sunday Edition</text></svg></div>
   <div class="txt">
-    <p class="kicker">Sunday &middot; The Universe</p>
-    <h2 class="h-hero hl"><a href="https://www.sciencedaily.com/releases/2026/08/260811011134.htm" target="_blank" rel="noopener">Life on Earth may have started twice, from the same chemistry</a></h2>
-    <p class="deck">A map of 420 ancient reactions suggests the first cells left half the job to rocks, and two lineages finished it separately.</p>
-    <p class="byline">The Gayzette &middot; Wonder <span aria-label="5 of 5">◆◆◆◆◆</span></p>
-    <div class="body wide hero-body"><p>Start with a definition, because the whole story hangs on it. An enzyme is a protein that speeds up a chemical reaction, the way a matchmaker speeds up a marriage that could technically happen on its own but almost never does. Cells run on thousands of them. LUCA, the last universal common ancestor, is the single population of cells every living thing on Earth descends from, the trunk of the tree before the branches.</p><p>Natalia Mrnjavac and William Martin&#39;s team at Heinrich Heine University Dusseldorf mapped 420 metabolic reactions that the earliest cells needed to stay alive, then asked a simple question: did LUCA actually have enzymes for all of them? It had enzymes for about half. The other half appear to have been catalyzed by plain metal in hydrothermal vents, the cracks on the seafloor where hot mineral-rich water pours out. Iron and nickel sitting in vent rock will nudge certain reactions along by themselves. No protein required. The rock was doing the matchmaking.</p><p>Here is the part that lands. Bacteria and archaea, the two great domains of single-celled life, later evolved enzymes to take over that leftover half, and their enzymes are structurally different. Not variations on one design, but two designs. Which means free-living cellular life may have crossed the finish line twice, independently, on two chemical routes, from one shared genetic starting point. Published in Science Advances on August 12.</p><p>The caveat worth keeping: this is inference from comparing modern genomes backward, not a fossil. But it is a testable claim, and it makes the origin of life look less like one impossible lightning strike and more like a slope that chemistry will roll down if you give it warm water and rock.</p></div>
-    <aside class="desk"><p class="label">On our desk</p>Universe Year Unit 1 asks what life is, built on atoms, bonds, water and carbon. This is that unit&#39;s answer in the wild, and it hands you a first-principles opener you can explain to a twelve-year-old: before cells had tools, the rocks were the tools.</aside>
-    <span class="srcline"><a href="https://www.sciencedaily.com/releases/2026/08/260811011134.htm" target="_blank" rel="noopener">Read the original at Science Advances study via ScienceDaily (Heinrich Heine University Dusseldorf, DOI 10.1126/sciadv.aef3128) →</a></span>
-    
+    <div class="txt-top">
+      <p class="kicker">Sunday &middot; The Universe</p>
+      <h2 class="h-hero hl"><a href="https://www.sciencedaily.com/releases/2026/08/260811011134.htm" target="_blank" rel="noopener">Life on Earth may have started twice, from the same chemistry</a></h2>
+      <p class="deck">A map of 420 ancient reactions suggests the first cells left half the job to rocks, and two lineages finished it separately.</p>
+      <p class="byline">The Gayzette &middot; Wonder <span aria-label="5 of 5">◆◆◆◆◆</span></p>
+      <div class="body wide hero-body"><p>Start with a definition, because the whole story hangs on it. An enzyme is a protein that speeds up a chemical reaction, the way a matchmaker speeds up a marriage that could technically happen on its own but almost never does. Cells run on thousands of them. LUCA, the last universal common ancestor, is the single population of cells every living thing on Earth descends from, the trunk of the tree before the branches.</p><p>Natalia Mrnjavac and William Martin&#39;s team at Heinrich Heine University Dusseldorf mapped 420 metabolic reactions that the earliest cells needed to stay alive, then asked a simple question: did LUCA actually have enzymes for all of them? It had enzymes for about half. The other half appear to have been catalyzed by plain metal in hydrothermal vents, the cracks on the seafloor where hot mineral-rich water pours out. Iron and nickel sitting in vent rock will nudge certain reactions along by themselves. No protein required. The rock was doing the matchmaking.</p></div>
+    </div>
+    <div class="txt-rest">
+      <div class="body wide"><p>Here is the part that lands. Bacteria and archaea, the two great domains of single-celled life, later evolved enzymes to take over that leftover half, and their enzymes are structurally different. Not variations on one design, but two designs. Which means free-living cellular life may have crossed the finish line twice, independently, on two chemical routes, from one shared genetic starting point. Published in Science Advances on August 12.</p><p>The caveat worth keeping: this is inference from comparing modern genomes backward, not a fossil. But it is a testable claim, and it makes the origin of life look less like one impossible lightning strike and more like a slope that chemistry will roll down if you give it warm water and rock.</p></div>
+      <aside class="desk"><p class="label">On our desk</p>Universe Year Unit 1 asks what life is, built on atoms, bonds, water and carbon. This is that unit&#39;s answer in the wild, and it hands you a first-principles opener you can explain to a twelve-year-old: before cells had tools, the rocks were the tools.</aside>
+      <span class="srcline"><a href="https://www.sciencedaily.com/releases/2026/08/260811011134.htm" target="_blank" rel="noopener">Read the original at Science Advances study via ScienceDaily (Heinrich Heine University Dusseldorf, DOI 10.1126/sciadv.aef3128) →</a></span>
+      
+    </div>
   </div>
 </article>
   

@@ -354,6 +354,34 @@ main{display:block}
   *{break-inside:avoid-page}
   .kicker,.rule-short{color:var(--accent)!important}
 }
+
+/* ===== DRAFT 2 (2026-10-19): wide-screen layout, 1024px and up. Phone/tablet below stays as DRAFT 1. ===== */
+@media (min-width:1024px){
+  /* hero beside: comic panel left, headline + deck + first paragraphs right, rest in a centered reading column */
+  article.hero{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,9fr);gap:0 56px;align-items:start}
+  .hero .txt{display:contents}
+  .hero .art{grid-column:1;grid-row:1;margin-bottom:0}
+  .hero .txt-top{grid-column:2;grid-row:1}
+  .hero .txt-top .h-hero{font-size:clamp(32px,3.5vw,46px);line-height:1.06}
+  .hero.sunday .txt-top .h-hero{font-size:clamp(34px,3.9vw,52px);line-height:1.04}
+  .hero .txt-top .deck{font-size:20px}
+  .hero .txt-top .byline{margin-top:16px}
+  .hero .txt-top .body p{font-size:18px;line-height:1.6}
+  .hero .txt-rest{grid-column:1/-1;grid-row:2;width:100%;max-width:680px;margin:56px auto 0}
+  .hero .txt-rest .desk{max-width:none}
+  /* editor's note: one labeled column, same 680px column as the rest of the lead, with a rule above */
+  .ednote{max-width:680px;margin:88px auto 0;padding:32px 0 0;border-top:1px solid var(--rule-2)}
+  .ednote .kicker{font-size:13px;margin-bottom:6px}
+  /* AI and Spirit: two columns */
+  .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 56px;align-items:start}
+  .row>.main:only-child{grid-column:1/-1;max-width:760px}
+  /* Good Ten: two columns. World Straight: one 680px column */
+  .good{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #world .sec-head,#world .ws-note,#world .ws{max-width:680px;margin-left:auto;margin-right:auto}
+  .ws{grid-template-columns:minmax(0,1fr)}
+  /* sidebars: 2-up */
+  .boxes{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 </style>
 </head>
 <body>
@@ -381,15 +409,20 @@ main{display:block}
   <article class="hero" id="front" data-beat="ai">
   <div class="art bleed"><div class="illo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="ht1" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.6" fill="#f2b705"/></pattern></defs><rect x="4" y="4" width="312" height="192" fill="#fff6dc" stroke="#000" stroke-width="4"/><rect x="4" y="100" width="312" height="96" fill="url(#ht1)"/><path d="M110 70 Q90 90 95 140 Q100 175 160 175 Q220 175 225 140 Q230 90 210 70 Z" fill="#e8504a" stroke="#000" stroke-width="4"/><rect x="120" y="55" width="80" height="18" rx="5" fill="#fff" stroke="#000" stroke-width="4"/><rect x="145" y="105" width="30" height="36" fill="#fff6dc" stroke="#000" stroke-width="3"/><text x="160" y="131" font-family="Comic Sans MS,cursive" font-size="20" font-weight="bold" text-anchor="middle">1/10</text><circle cx="250" cy="150" r="14" fill="#f2b705" stroke="#000" stroke-width="3"/><circle cx="275" cy="168" r="14" fill="#f2b705" stroke="#000" stroke-width="3"/><path d="M30 25 h95 a8 8 0 0 1 8 8 v22 a8 8 0 0 1 -8 8 h-60 l-15 14 v-14 h-20 a8 8 0 0 1 -8 -8 v-22 a8 8 0 0 1 8 -8z" fill="#fff" stroke="#000" stroke-width="3"/><text x="78" y="52" font-family="Comic Sans MS,cursive" font-size="16" font-weight="bold" text-anchor="middle">Small price!</text></svg></div></div>
   <div class="txt">
-    <p class="kicker">Front page &middot; ai</p>
-    <h2 class="h-hero hl"><a href="https://www.anthropic.com/claude-haiku-5-5" target="_blank" rel="noopener">Claude Haiku 5.5 arrives at one-tenth the old Haiku price</a></h2>
-    <p class="deck">Anthropic&#39;s small, fast model drops to $0.10 per million input tokens.</p>
-    <p class="byline">The Gayzette &middot; Wonder <span aria-label="4 of 5">◆◆◆◆◇</span></p>
-    <div class="body wide hero-body"><p>Anthropic released Claude Haiku 5.5 on October 7. Haiku is its small, quick model tier, and Anthropic calls this one &#34;the cheapest, fastest, and most capable small model we&#39;ve ever released.&#34; For prompts up to 100,000 tokens (a token is a chunk of text, roughly a word or part of one), it costs $0.10 per million input tokens and $0.50 per million output tokens. Haiku 4.5 was $1 and $5.</p><p>Anthropic says that is around 75% less to run on average. LLM Stats, an outside tracking site, adds two catches: a new tokenizer (the tool that chops text into tokens) makes the same text about 30% more tokens, and crossing 100,000 tokens raises the price of the whole request. LLM Stats also claims a 1M-token context window (how much text the model can read at once); Anthropic&#39;s page names no size. The scores are Anthropic&#39;s own, not independently tested: OSWorld 2.1 (offline subset, a computer-use test) 72.4% versus 15.7% for Haiku 4.5.</p><p>Anthropic pitches it for summaries, database queries and classification, as a helper beside Sonnet 5.5 and Opus 5.5, which it says stay better at complex coding.</p><p>On your desk: this is the model to try for bulk n8n jobs, such as summarizing Plaud transcripts, sorting the studio inbox, or running the Gayzette&#39;s own scouts, where thousands of small calls add up. Test a batch against your current model before switching.</p></div>
-    <aside class="desk"><p class="label">On our desk</p>Cheap, fast calls are what make big batches of small jobs (summaries, sorting, tagging) affordable to automate.</aside>
-    <span class="srcline"><a href="https://www.anthropic.com/claude-haiku-5-5" target="_blank" rel="noopener">Read the original at Anthropic: Claude Haiku 5.5 →</a></span>
-    <details class="sources"><summary>Receipts (2)</summary>
+    <div class="txt-top">
+      <p class="kicker">Front page &middot; ai</p>
+      <h2 class="h-hero hl"><a href="https://www.anthropic.com/claude-haiku-5-5" target="_blank" rel="noopener">Claude Haiku 5.5 arrives at one-tenth the old Haiku price</a></h2>
+      <p class="deck">Anthropic&#39;s small, fast model drops to $0.10 per million input tokens.</p>
+      <p class="byline">The Gayzette &middot; Wonder <span aria-label="4 of 5">◆◆◆◆◇</span></p>
+      <div class="body wide hero-body"><p>Anthropic released Claude Haiku 5.5 on October 7. Haiku is its small, quick model tier, and Anthropic calls this one &#34;the cheapest, fastest, and most capable small model we&#39;ve ever released.&#34; For prompts up to 100,000 tokens (a token is a chunk of text, roughly a word or part of one), it costs $0.10 per million input tokens and $0.50 per million output tokens. Haiku 4.5 was $1 and $5.</p><p>Anthropic says that is around 75% less to run on average. LLM Stats, an outside tracking site, adds two catches: a new tokenizer (the tool that chops text into tokens) makes the same text about 30% more tokens, and crossing 100,000 tokens raises the price of the whole request. LLM Stats also claims a 1M-token context window (how much text the model can read at once); Anthropic&#39;s page names no size. The scores are Anthropic&#39;s own, not independently tested: OSWorld 2.1 (offline subset, a computer-use test) 72.4% versus 15.7% for Haiku 4.5.</p></div>
+    </div>
+    <div class="txt-rest">
+      <div class="body wide"><p>Anthropic pitches it for summaries, database queries and classification, as a helper beside Sonnet 5.5 and Opus 5.5, which it says stay better at complex coding.</p><p>On your desk: this is the model to try for bulk n8n jobs, such as summarizing Plaud transcripts, sorting the studio inbox, or running the Gayzette&#39;s own scouts, where thousands of small calls add up. Test a batch against your current model before switching.</p></div>
+      <aside class="desk"><p class="label">On our desk</p>Cheap, fast calls are what make big batches of small jobs (summaries, sorting, tagging) affordable to automate.</aside>
+      <span class="srcline"><a href="https://www.anthropic.com/claude-haiku-5-5" target="_blank" rel="noopener">Read the original at Anthropic: Claude Haiku 5.5 →</a></span>
+      <details class="sources"><summary>Receipts (2)</summary>
 <ul><li><a href="https://www.anthropic.com/claude-haiku-5-5" target="_blank" rel="noopener">Anthropic: Claude Haiku 5.5</a> <span class="d">2026-10-07</span></li><li><a href="https://llm-stats.com/blog/research/claude-haiku-5-5-launch" target="_blank" rel="noopener">LLM Stats: Claude Haiku 5.5 launch</a> <span class="d">2026-10-07</span></li></ul></details>
+    </div>
   </div>
 </article>
   

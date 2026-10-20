@@ -354,6 +354,34 @@ main{display:block}
   *{break-inside:avoid-page}
   .kicker,.rule-short{color:var(--accent)!important}
 }
+
+/* ===== DRAFT 2 (2026-10-19): wide-screen layout, 1024px and up. Phone/tablet below stays as DRAFT 1. ===== */
+@media (min-width:1024px){
+  /* hero beside: comic panel left, headline + deck + first paragraphs right, rest in a centered reading column */
+  article.hero{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,9fr);gap:0 56px;align-items:start}
+  .hero .txt{display:contents}
+  .hero .art{grid-column:1;grid-row:1;margin-bottom:0}
+  .hero .txt-top{grid-column:2;grid-row:1}
+  .hero .txt-top .h-hero{font-size:clamp(32px,3.5vw,46px);line-height:1.06}
+  .hero.sunday .txt-top .h-hero{font-size:clamp(34px,3.9vw,52px);line-height:1.04}
+  .hero .txt-top .deck{font-size:20px}
+  .hero .txt-top .byline{margin-top:16px}
+  .hero .txt-top .body p{font-size:18px;line-height:1.6}
+  .hero .txt-rest{grid-column:1/-1;grid-row:2;width:100%;max-width:680px;margin:56px auto 0}
+  .hero .txt-rest .desk{max-width:none}
+  /* editor's note: one labeled column, same 680px column as the rest of the lead, with a rule above */
+  .ednote{max-width:680px;margin:88px auto 0;padding:32px 0 0;border-top:1px solid var(--rule-2)}
+  .ednote .kicker{font-size:13px;margin-bottom:6px}
+  /* AI and Spirit: two columns */
+  .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 56px;align-items:start}
+  .row>.main:only-child{grid-column:1/-1;max-width:760px}
+  /* Good Ten: two columns. World Straight: one 680px column */
+  .good{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #world .sec-head,#world .ws-note,#world .ws{max-width:680px;margin-left:auto;margin-right:auto}
+  .ws{grid-template-columns:minmax(0,1fr)}
+  /* sidebars: 2-up */
+  .boxes{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 </style>
 </head>
 <body>
@@ -381,14 +409,19 @@ main{display:block}
   <article class="hero" id="front" data-beat="The AI Builder">
   <div class="art bleed"><div class="illo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="hl1" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.6" fill="#000"/></pattern></defs><rect width="320" height="200" fill="#fff6dc"/><rect width="320" height="200" fill="url(#hl1)" opacity=".12"/><g stroke="#000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="70" y="40" width="130" height="130" rx="6" fill="#fff"/><rect x="70" y="40" width="130" height="34" rx="6" fill="#f4b942"/><rect x="70" y="60" width="130" height="14" fill="#f4b942"/><path d="M95 30v22M175 30v22"/><text x="135" y="64" font-size="16" font-weight="bold" text-anchor="middle" fill="#000" stroke="none" font-family="Comic Sans MS,sans-serif">DEC</text><text x="135" y="136" font-size="48" font-weight="bold" text-anchor="middle" fill="#000" stroke="none" font-family="Comic Sans MS,sans-serif">14</text><path d="M215 110l30-18v70l-30-18z" fill="#7fb8d6"/><path d="M245 92l40 10v50l-40 10" fill="#7fb8d6"/><path d="M255 118h20" /></g><g></g></svg></div></div>
   <div class="txt">
-    <p class="kicker">Front page &middot; The AI Builder</p>
-    <h2 class="h-hero hl"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Claude Code 2.1.302 says standalone Claude Design closes by December 14</a></h2>
-    <p class="deck">A small version bump carries one deadline and three useful settings, including a banner for failed routine runs.</p>
-    <p class="byline">The Gayzette &middot; Wonder <span aria-label="3 of 5">◆◆◆◇◇</span></p>
-    <div class="body wide hero-body"><p>The Claude Code changelog for version 2.1.302 (the running list of what changed in each release, dated October 16) adds a notice to two commands, /design-sync and /design-login. The notice says that standalone Claude Design, the separate site at claude.ai/design, closes by December 14, 2026. The changelog gives no detail about a replacement, so we cannot say what to move to. Treat it as a calendar reminder, not a plan.</p><p>Three other changes ride along. CLAUDE_CODE_AUTO_MODE_MODEL picks the model for the auto-mode classifier, the judge that decides whether an action may run without asking you; it affects the client side only. /config gains an &#34;Idle compaction&#34; row to switch off the automatic summarizing of idle sessions. And cloud sessions get a banner on a routine&#39;s page saying why its last run did not start, for example when an organization hits its limit on concurrent cloud sessions.</p><p>On your desk: the scheduled routines that build this very paper are exactly where that banner helps. If an edition ever fails to start, the routine&#39;s page should now say why, such as a concurrent-session limit. And if you or Travis use claude.ai/design, plan around mid-December.</p></div>
-    <aside class="desk"><p class="label">On our desk</p>A hard December 14 deadline plus a new way to see why a scheduled routine did not start.</aside>
-    <span class="srcline"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Read the original at Claude Code changelog (v2.1.302), Claude Code docs →</a></span>
-    
+    <div class="txt-top">
+      <p class="kicker">Front page &middot; The AI Builder</p>
+      <h2 class="h-hero hl"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Claude Code 2.1.302 says standalone Claude Design closes by December 14</a></h2>
+      <p class="deck">A small version bump carries one deadline and three useful settings, including a banner for failed routine runs.</p>
+      <p class="byline">The Gayzette &middot; Wonder <span aria-label="3 of 5">◆◆◆◇◇</span></p>
+      <div class="body wide hero-body"><p>The Claude Code changelog for version 2.1.302 (the running list of what changed in each release, dated October 16) adds a notice to two commands, /design-sync and /design-login. The notice says that standalone Claude Design, the separate site at claude.ai/design, closes by December 14, 2026. The changelog gives no detail about a replacement, so we cannot say what to move to. Treat it as a calendar reminder, not a plan.</p><p>Three other changes ride along. CLAUDE_CODE_AUTO_MODE_MODEL picks the model for the auto-mode classifier, the judge that decides whether an action may run without asking you; it affects the client side only. /config gains an &#34;Idle compaction&#34; row to switch off the automatic summarizing of idle sessions. And cloud sessions get a banner on a routine&#39;s page saying why its last run did not start, for example when an organization hits its limit on concurrent cloud sessions.</p></div>
+    </div>
+    <div class="txt-rest">
+      <div class="body wide"><p>On your desk: the scheduled routines that build this very paper are exactly where that banner helps. If an edition ever fails to start, the routine&#39;s page should now say why, such as a concurrent-session limit. And if you or Travis use claude.ai/design, plan around mid-December.</p></div>
+      <aside class="desk"><p class="label">On our desk</p>A hard December 14 deadline plus a new way to see why a scheduled routine did not start.</aside>
+      <span class="srcline"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Read the original at Claude Code changelog (v2.1.302), Claude Code docs →</a></span>
+      
+    </div>
   </div>
 </article>
   

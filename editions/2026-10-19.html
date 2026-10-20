@@ -354,6 +354,34 @@ main{display:block}
   *{break-inside:avoid-page}
   .kicker,.rule-short{color:var(--accent)!important}
 }
+
+/* ===== DRAFT 2 (2026-10-19): wide-screen layout, 1024px and up. Phone/tablet below stays as DRAFT 1. ===== */
+@media (min-width:1024px){
+  /* hero beside: comic panel left, headline + deck + first paragraphs right, rest in a centered reading column */
+  article.hero{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,9fr);gap:0 56px;align-items:start}
+  .hero .txt{display:contents}
+  .hero .art{grid-column:1;grid-row:1;margin-bottom:0}
+  .hero .txt-top{grid-column:2;grid-row:1}
+  .hero .txt-top .h-hero{font-size:clamp(32px,3.5vw,46px);line-height:1.06}
+  .hero.sunday .txt-top .h-hero{font-size:clamp(34px,3.9vw,52px);line-height:1.04}
+  .hero .txt-top .deck{font-size:20px}
+  .hero .txt-top .byline{margin-top:16px}
+  .hero .txt-top .body p{font-size:18px;line-height:1.6}
+  .hero .txt-rest{grid-column:1/-1;grid-row:2;width:100%;max-width:680px;margin:56px auto 0}
+  .hero .txt-rest .desk{max-width:none}
+  /* editor's note: one labeled column, same 680px column as the rest of the lead, with a rule above */
+  .ednote{max-width:680px;margin:88px auto 0;padding:32px 0 0;border-top:1px solid var(--rule-2)}
+  .ednote .kicker{font-size:13px;margin-bottom:6px}
+  /* AI and Spirit: two columns */
+  .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 56px;align-items:start}
+  .row>.main:only-child{grid-column:1/-1;max-width:760px}
+  /* Good Ten: two columns. World Straight: one 680px column */
+  .good{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #world .sec-head,#world .ws-note,#world .ws{max-width:680px;margin-left:auto;margin-right:auto}
+  .ws{grid-template-columns:minmax(0,1fr)}
+  /* sidebars: 2-up */
+  .boxes{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 </style>
 </head>
 <body>
@@ -381,14 +409,19 @@ main{display:block}
   <article class="hero" id="front" data-beat="The AI Builder">
   <div class="art bleed"><div class="illo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="hl1" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#e63946"/></pattern></defs><rect x="12" y="12" width="296" height="176" fill="#fff7e0" stroke="#111" stroke-width="3"/><rect x="12" y="12" width="296" height="176" fill="url(#hl1)"/><rect x="60" y="70" width="150" height="95" rx="6" fill="#ffd23f" stroke="#111" stroke-width="4"/><rect x="72" y="82" width="126" height="60" fill="#111"/><text x="82" y="104" font-family="monospace" font-size="13" fill="#ffd23f">$ beam run</text><text x="82" y="126" font-family="monospace" font-size="13" fill="#ffd23f">&gt; done_</text><path d="M110 165 h50 l8 10 h-66z" fill="#e63946" stroke="#111" stroke-width="3"/><polygon points="215,25 250,25 285,150 235,150" fill="#e63946" stroke="#111" stroke-width="3"/><rect x="30" y="26" width="120" height="26" rx="8" fill="#fff" stroke="#111" stroke-width="3"/><text x="90.0" y="44" font-family="Comic Sans MS,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">Apache 2.0</text></svg></div></div>
   <div class="txt">
-    <p class="kicker">Front page &middot; The AI Builder</p>
-    <h2 class="h-hero hl"><a href="https://reflection.ai/blog/beam-is-available" target="_blank" rel="noopener">A 501-billion-parameter coding model, free to download, with a permissive license</a></h2>
-    <p class="deck">Reflection&#39;s Beam is its first open-weight model, and you can try it today through Ollama or OpenRouter.</p>
-    <p class="byline">The Gayzette &middot; Wonder <span aria-label="4 of 5">◆◆◆◆◇</span></p>
-    <div class="body wide hero-body"><p>Reflection, an AI lab, published the weights of a coding model called Beam on Hugging Face on October 16, under the Apache 2.0 license, which lets you use, change and sell things built on it. &#34;Open-weight&#34; means the finished model file is yours to download, like being handed the baked cake instead of just a slice at a restaurant. It is Reflection&#39;s first.</p><p>Beam is a sparse mixture-of-experts model. It has 501 billion parameters (the adjustable dials set during training) but uses only 23 billion on any given step, a bit like a big writers&#39; room where only the few writers who know the subject speak up on each joke. It targets coding, reasoning and long-running agent tasks. Weights come in three number formats (BF16, FP8 and NVFP4, each progressively more compact), plus a helper &#34;drafter&#34; model for speed. You can reach it through Reflection&#39;s API (free to start, in public beta), OpenRouter, Ollama, AWS, Google Cloud, Microsoft Foundry, Together AI and Fireworks.</p><p>The caveat: this is the vendor&#39;s own announcement. The post gives no benchmark numbers (it points to a separate model card) and no minimum hardware, and the release is about three days old, so treat the performance story as unproven until others test it.</p><p>On your desk: Patrick, try Beam through OpenRouter or Ollama as the model behind one of your n8n workflows, and see whether a coding model with no vendor lock-in can do a job your Claude Code routines handle today.</p></div>
-    <aside class="desk"><p class="label">On our desk</p>A permissively licensed, agent-focused model a solo builder can try today without lock-in.</aside>
-    <span class="srcline"><a href="https://reflection.ai/blog/beam-is-available" target="_blank" rel="noopener">Read the original at Reflection: Beam is available →</a></span>
-    
+    <div class="txt-top">
+      <p class="kicker">Front page &middot; The AI Builder</p>
+      <h2 class="h-hero hl"><a href="https://reflection.ai/blog/beam-is-available" target="_blank" rel="noopener">A 501-billion-parameter coding model, free to download, with a permissive license</a></h2>
+      <p class="deck">Reflection&#39;s Beam is its first open-weight model, and you can try it today through Ollama or OpenRouter.</p>
+      <p class="byline">The Gayzette &middot; Wonder <span aria-label="4 of 5">◆◆◆◆◇</span></p>
+      <div class="body wide hero-body"><p>Reflection, an AI lab, published the weights of a coding model called Beam on Hugging Face on October 16, under the Apache 2.0 license, which lets you use, change and sell things built on it. &#34;Open-weight&#34; means the finished model file is yours to download, like being handed the baked cake instead of just a slice at a restaurant. It is Reflection&#39;s first.</p><p>Beam is a sparse mixture-of-experts model. It has 501 billion parameters (the adjustable dials set during training) but uses only 23 billion on any given step, a bit like a big writers&#39; room where only the few writers who know the subject speak up on each joke. It targets coding, reasoning and long-running agent tasks. Weights come in three number formats (BF16, FP8 and NVFP4, each progressively more compact), plus a helper &#34;drafter&#34; model for speed. You can reach it through Reflection&#39;s API (free to start, in public beta), OpenRouter, Ollama, AWS, Google Cloud, Microsoft Foundry, Together AI and Fireworks.</p></div>
+    </div>
+    <div class="txt-rest">
+      <div class="body wide"><p>The caveat: this is the vendor&#39;s own announcement. The post gives no benchmark numbers (it points to a separate model card) and no minimum hardware, and the release is about three days old, so treat the performance story as unproven until others test it.</p><p>On your desk: Patrick, try Beam through OpenRouter or Ollama as the model behind one of your n8n workflows, and see whether a coding model with no vendor lock-in can do a job your Claude Code routines handle today.</p></div>
+      <aside class="desk"><p class="label">On our desk</p>A permissively licensed, agent-focused model a solo builder can try today without lock-in.</aside>
+      <span class="srcline"><a href="https://reflection.ai/blog/beam-is-available" target="_blank" rel="noopener">Read the original at Reflection: Beam is available →</a></span>
+      
+    </div>
   </div>
 </article>
   

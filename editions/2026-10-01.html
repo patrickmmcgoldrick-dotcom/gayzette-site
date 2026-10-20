@@ -354,6 +354,34 @@ main{display:block}
   *{break-inside:avoid-page}
   .kicker,.rule-short{color:var(--accent)!important}
 }
+
+/* ===== DRAFT 2 (2026-10-19): wide-screen layout, 1024px and up. Phone/tablet below stays as DRAFT 1. ===== */
+@media (min-width:1024px){
+  /* hero beside: comic panel left, headline + deck + first paragraphs right, rest in a centered reading column */
+  article.hero{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,9fr);gap:0 56px;align-items:start}
+  .hero .txt{display:contents}
+  .hero .art{grid-column:1;grid-row:1;margin-bottom:0}
+  .hero .txt-top{grid-column:2;grid-row:1}
+  .hero .txt-top .h-hero{font-size:clamp(32px,3.5vw,46px);line-height:1.06}
+  .hero.sunday .txt-top .h-hero{font-size:clamp(34px,3.9vw,52px);line-height:1.04}
+  .hero .txt-top .deck{font-size:20px}
+  .hero .txt-top .byline{margin-top:16px}
+  .hero .txt-top .body p{font-size:18px;line-height:1.6}
+  .hero .txt-rest{grid-column:1/-1;grid-row:2;width:100%;max-width:680px;margin:56px auto 0}
+  .hero .txt-rest .desk{max-width:none}
+  /* editor's note: one labeled column, same 680px column as the rest of the lead, with a rule above */
+  .ednote{max-width:680px;margin:88px auto 0;padding:32px 0 0;border-top:1px solid var(--rule-2)}
+  .ednote .kicker{font-size:13px;margin-bottom:6px}
+  /* AI and Spirit: two columns */
+  .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 56px;align-items:start}
+  .row>.main:only-child{grid-column:1/-1;max-width:760px}
+  /* Good Ten: two columns. World Straight: one 680px column */
+  .good{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #world .sec-head,#world .ws-note,#world .ws{max-width:680px;margin-left:auto;margin-right:auto}
+  .ws{grid-template-columns:minmax(0,1fr)}
+  /* sidebars: 2-up */
+  .boxes{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 </style>
 </head>
 <body>
@@ -381,14 +409,19 @@ main{display:block}
   <article class="hero" id="front" data-beat="ai">
   <div class="art bleed"><div class="illo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="hl" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.6" fill="#e63946"/></pattern></defs><rect x="12" y="12" width="296" height="176" fill="#fdf3d0" stroke="#111" stroke-width="4"/><rect x="12" y="120" width="296" height="68" fill="url(#hl)"/><g stroke="#111" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><path d="M160 70V150M110 150H210" fill="none"/><path d="M80 80H240" fill="none"/><path d="M80 80L60 115H100Z" fill="#457b9d"/><path d="M240 80L220 115H260Z" fill="#fff"/><rect x="68" y="98" width="24" height="17" fill="#e63946"/><circle cx="160" cy="70" r="9" fill="#fff"/><rect x="112" y="24" width="96" height="30" rx="10" fill="#fff"/><text x="160.0" y="45" font-family="Comic Sans MS,sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#111" stroke="none">Who pays?</text></g></svg></div></div>
   <div class="txt">
-    <p class="kicker">Front page &middot; ai</p>
-    <h2 class="h-hero hl"><a href="https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/09/30/ftc-opens-probe-into-ai-giants-including-anthropic-and-openai/" target="_blank" rel="noopener">FTC opens a broad probe into AI agent risks</a></h2>
-    <p class="deck">The US consumer watchdog is asking who is responsible when software agents cause harm, with Anthropic, OpenAI and the research group METR named.</p>
-    <p class="byline">The Gayzette &middot; Wonder <span aria-label="3 of 5">◆◆◆◇◇</span></p>
-    <div class="body wide hero-body"><p>The US Federal Trade Commission, the agency that polices unfair and deceptive business practices, is running an industry-wide investigation into possible consumer dangers from agentic AI. That means AI that does tasks on its own, such as clicking, coding and sending things, instead of just chatting. Anthropic, OpenAI and METR, a research group that tests AI models, are named.</p><p>A senior FTC official told Reuters the agency plans to &#34;issue formal demands for information and compel testimony from executives at top AI developers.&#34; The trigger cited is an incident in which OpenAI agents hacked the open-source platform Hugging Face. Chairman Andrew Ferguson suggested that developers who instruct AI agents in cybersecurity tests that result in hacks &#34;should be liable for any harm they cause.&#34;</p><p>One detail worth knowing: the FTC is using its existing authority over unfair and deceptive practices, not a new AI law. The New York Post broke the story first, and Reuters confirmed it. Nothing has been decided yet; this is the opening step of an inquiry.</p><p>On your desk: you build agents in Claude Code, Cowork and n8n, and you are about to teach people to do the same in your Skool courses. &#34;Who is liable when the agent acts&#34; is now a live question. A short module on logging what your automations do, and on keeping a human approval step before anything irreversible, would be useful for students and for you.</p></div>
-    <aside class="desk"><p class="label">On our desk</p>The people who build and instruct agents may be held responsible for what those agents do, which touches anyone running automations.</aside>
-    <span class="srcline"><a href="https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/09/30/ftc-opens-probe-into-ai-giants-including-anthropic-and-openai/" target="_blank" rel="noopener">Read the original at BNN Bloomberg (Reuters): FTC opens probe into AI giants →</a></span>
-    
+    <div class="txt-top">
+      <p class="kicker">Front page &middot; ai</p>
+      <h2 class="h-hero hl"><a href="https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/09/30/ftc-opens-probe-into-ai-giants-including-anthropic-and-openai/" target="_blank" rel="noopener">FTC opens a broad probe into AI agent risks</a></h2>
+      <p class="deck">The US consumer watchdog is asking who is responsible when software agents cause harm, with Anthropic, OpenAI and the research group METR named.</p>
+      <p class="byline">The Gayzette &middot; Wonder <span aria-label="3 of 5">◆◆◆◇◇</span></p>
+      <div class="body wide hero-body"><p>The US Federal Trade Commission, the agency that polices unfair and deceptive business practices, is running an industry-wide investigation into possible consumer dangers from agentic AI. That means AI that does tasks on its own, such as clicking, coding and sending things, instead of just chatting. Anthropic, OpenAI and METR, a research group that tests AI models, are named.</p><p>A senior FTC official told Reuters the agency plans to &#34;issue formal demands for information and compel testimony from executives at top AI developers.&#34; The trigger cited is an incident in which OpenAI agents hacked the open-source platform Hugging Face. Chairman Andrew Ferguson suggested that developers who instruct AI agents in cybersecurity tests that result in hacks &#34;should be liable for any harm they cause.&#34;</p></div>
+    </div>
+    <div class="txt-rest">
+      <div class="body wide"><p>One detail worth knowing: the FTC is using its existing authority over unfair and deceptive practices, not a new AI law. The New York Post broke the story first, and Reuters confirmed it. Nothing has been decided yet; this is the opening step of an inquiry.</p><p>On your desk: you build agents in Claude Code, Cowork and n8n, and you are about to teach people to do the same in your Skool courses. &#34;Who is liable when the agent acts&#34; is now a live question. A short module on logging what your automations do, and on keeping a human approval step before anything irreversible, would be useful for students and for you.</p></div>
+      <aside class="desk"><p class="label">On our desk</p>The people who build and instruct agents may be held responsible for what those agents do, which touches anyone running automations.</aside>
+      <span class="srcline"><a href="https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/09/30/ftc-opens-probe-into-ai-giants-including-anthropic-and-openai/" target="_blank" rel="noopener">Read the original at BNN Bloomberg (Reuters): FTC opens probe into AI giants →</a></span>
+      
+    </div>
   </div>
 </article>
   

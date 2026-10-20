@@ -354,6 +354,34 @@ main{display:block}
   *{break-inside:avoid-page}
   .kicker,.rule-short{color:var(--accent)!important}
 }
+
+/* ===== DRAFT 2 (2026-10-19): wide-screen layout, 1024px and up. Phone/tablet below stays as DRAFT 1. ===== */
+@media (min-width:1024px){
+  /* hero beside: comic panel left, headline + deck + first paragraphs right, rest in a centered reading column */
+  article.hero{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,9fr);gap:0 56px;align-items:start}
+  .hero .txt{display:contents}
+  .hero .art{grid-column:1;grid-row:1;margin-bottom:0}
+  .hero .txt-top{grid-column:2;grid-row:1}
+  .hero .txt-top .h-hero{font-size:clamp(32px,3.5vw,46px);line-height:1.06}
+  .hero.sunday .txt-top .h-hero{font-size:clamp(34px,3.9vw,52px);line-height:1.04}
+  .hero .txt-top .deck{font-size:20px}
+  .hero .txt-top .byline{margin-top:16px}
+  .hero .txt-top .body p{font-size:18px;line-height:1.6}
+  .hero .txt-rest{grid-column:1/-1;grid-row:2;width:100%;max-width:680px;margin:56px auto 0}
+  .hero .txt-rest .desk{max-width:none}
+  /* editor's note: one labeled column, same 680px column as the rest of the lead, with a rule above */
+  .ednote{max-width:680px;margin:88px auto 0;padding:32px 0 0;border-top:1px solid var(--rule-2)}
+  .ednote .kicker{font-size:13px;margin-bottom:6px}
+  /* AI and Spirit: two columns */
+  .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 56px;align-items:start}
+  .row>.main:only-child{grid-column:1/-1;max-width:760px}
+  /* Good Ten: two columns. World Straight: one 680px column */
+  .good{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #world .sec-head,#world .ws-note,#world .ws{max-width:680px;margin-left:auto;margin-right:auto}
+  .ws{grid-template-columns:minmax(0,1fr)}
+  /* sidebars: 2-up */
+  .boxes{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 </style>
 </head>
 <body>
@@ -379,16 +407,21 @@ main{display:block}
 
   
   <article class="hero sunday" id="front" data-beat="The Universe">
-  
+  <div class="art bleed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="A Sunday morning: coffee and the newspaper under a bright sun"><defs><pattern id="sunhl" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#e63946"/></pattern></defs><rect x="12" y="12" width="296" height="176" fill="#fff7e0" stroke="#111" stroke-width="3"/><rect x="12" y="12" width="296" height="176" fill="url(#sunhl)"/><g stroke="#111" stroke-width="4" stroke-linecap="round"><path d="M240 20v10M240 100v10M195 65h-10M285 65h10M208 33l-7-7M272 33l7-7M208 97l-7 7M272 97l7 7"/></g><circle cx="240" cy="65" r="30" fill="#ffd23f" stroke="#111" stroke-width="4"/><rect x="38" y="92" width="150" height="82" fill="#fff" stroke="#111" stroke-width="4"/><rect x="46" y="100" width="134" height="16" fill="#111"/><text x="113" y="113" font-family="Georgia,serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#ffd23f">THE GAYZETTE</text><rect x="46" y="124" width="56" height="30" fill="#e63946" stroke="#111" stroke-width="3"/><g stroke="#111" stroke-width="3" stroke-linecap="round"><path d="M110 126h64M110 136h64M110 146h64M46 162h128"/></g><path d="M113 92v82" stroke="#111" stroke-width="2" stroke-dasharray="3 4"/><g fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"><path d="M226 112c-6-8 6-12 0-20M242 112c-6-8 6-12 0-20"/></g><path d="M268 130h8a10 10 0 0 1 0 22h-8" fill="none" stroke="#111" stroke-width="4"/><rect x="212" y="118" width="58" height="56" rx="8" fill="#e63946" stroke="#111" stroke-width="4"/><rect x="220" y="126" width="42" height="9" rx="4" fill="#7a3b1d" stroke="#111" stroke-width="2"/><rect x="196" y="172" width="90" height="8" rx="4" fill="#ffd23f" stroke="#111" stroke-width="3"/><rect x="30" y="26" width="120" height="26" rx="8" fill="#fff" stroke="#111" stroke-width="3"/><text x="90" y="44" font-family="Comic Sans MS,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">Sunday Edition</text></svg></div>
   <div class="txt">
-    <p class="kicker">Sunday &middot; The Universe</p>
-    <h2 class="h-hero hl"><a href="https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/" target="_blank" rel="noopener">Ten thousand AI agents proved a million-dollar math problem</a></h2>
-    <p class="deck">OpenAI ran a swarm of autonomous agents for 88 hours and came back with a Millennium Prize answer that a machine then checked line by line.</p>
-    <p class="byline">The Gayzette &middot; Wonder <span aria-label="5 of 5">◆◆◆◆◆</span></p>
-    <div class="body wide hero-body"><p>Two definitions first, because the whole thing turns on them. The Navier-Stokes equations are the math that describes how fluids move, the rules behind smoke curling off a match and water shoving past a bridge piling. A singularity, or a &#34;blow-up,&#34; is the moment those equations stop describing anything at all, when a quantity like the speed of the fluid runs to infinity at a point and the math throws up its hands. For twenty-five years, one of the Clay Mathematics Institute&#39;s seven Millennium Prize Problems, each carrying a $1 million purse, has asked whether blow-up can actually happen in three-dimensional fluid flow.</p><p>It can. Quanta Magazine reported on September 8 that OpenAI ran roughly 10,000 autonomous AI agents for 88 hours and produced a proof that it can.</p><p>Here is the part that makes this a receipt rather than a press release. The proof was then translated into Lean, a verification language in which every step of an argument has to be spelled out in a form a computer can check, and the machine checked it for 17 more hours. Lean does not care who wrote the argument or how confident they sound. It either closes or it does not. This one closed.</p><p>And a human team got there too. Mathematicians Tristan Buckmaster and Levent Alpöge independently produced blow-up proofs in the same window, for the Euler equations and an easier Navier-Stokes variant rather than the identical full problem, and both efforts built on the same underlying strategy from Diego Cordoba and Luis Martinez-Zoroa. Two groups, two routes, one answer.</p><p>The caveat: this resolves one of the seven Millennium problems, not the version of the fluid question that mathematicians consider the crown jewel, and the corroboration detail comes from the same Quanta piece rather than two independent write-ups.</p></div>
-    <aside class="desk"><p class="label">On our desk</p>Universe Year is math plus biology, and this is the cleanest possible demonstration of what your math half is actually for. A twenty-five-year-old open question fell to a swarm of agents, and then a proof checker with no opinions confirmed it. That is the shape of evidence you keep asking De Stefano&#39;s claims to have.</aside>
-    <span class="srcline"><a href="https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/" target="_blank" rel="noopener">Read the original at Quanta Magazine: AI has solved one of math&#39;s $1 million Millennium Prize problems →</a></span>
-    
+    <div class="txt-top">
+      <p class="kicker">Sunday &middot; The Universe</p>
+      <h2 class="h-hero hl"><a href="https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/" target="_blank" rel="noopener">Ten thousand AI agents proved a million-dollar math problem</a></h2>
+      <p class="deck">OpenAI ran a swarm of autonomous agents for 88 hours and came back with a Millennium Prize answer that a machine then checked line by line.</p>
+      <p class="byline">The Gayzette &middot; Wonder <span aria-label="5 of 5">◆◆◆◆◆</span></p>
+      <div class="body wide hero-body"><p>Two definitions first, because the whole thing turns on them. The Navier-Stokes equations are the math that describes how fluids move, the rules behind smoke curling off a match and water shoving past a bridge piling. A singularity, or a &#34;blow-up,&#34; is the moment those equations stop describing anything at all, when a quantity like the speed of the fluid runs to infinity at a point and the math throws up its hands. For twenty-five years, one of the Clay Mathematics Institute&#39;s seven Millennium Prize Problems, each carrying a $1 million purse, has asked whether blow-up can actually happen in three-dimensional fluid flow.</p><p>It can. Quanta Magazine reported on September 8 that OpenAI ran roughly 10,000 autonomous AI agents for 88 hours and produced a proof that it can.</p></div>
+    </div>
+    <div class="txt-rest">
+      <div class="body wide"><p>Here is the part that makes this a receipt rather than a press release. The proof was then translated into Lean, a verification language in which every step of an argument has to be spelled out in a form a computer can check, and the machine checked it for 17 more hours. Lean does not care who wrote the argument or how confident they sound. It either closes or it does not. This one closed.</p><p>And a human team got there too. Mathematicians Tristan Buckmaster and Levent Alpöge independently produced blow-up proofs in the same window, for the Euler equations and an easier Navier-Stokes variant rather than the identical full problem, and both efforts built on the same underlying strategy from Diego Cordoba and Luis Martinez-Zoroa. Two groups, two routes, one answer.</p><p>The caveat: this resolves one of the seven Millennium problems, not the version of the fluid question that mathematicians consider the crown jewel, and the corroboration detail comes from the same Quanta piece rather than two independent write-ups.</p></div>
+      <aside class="desk"><p class="label">On our desk</p>Universe Year is math plus biology, and this is the cleanest possible demonstration of what your math half is actually for. A twenty-five-year-old open question fell to a swarm of agents, and then a proof checker with no opinions confirmed it. That is the shape of evidence you keep asking De Stefano&#39;s claims to have.</aside>
+      <span class="srcline"><a href="https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/" target="_blank" rel="noopener">Read the original at Quanta Magazine: AI has solved one of math&#39;s $1 million Millennium Prize problems →</a></span>
+      
+    </div>
   </div>
 </article>
   

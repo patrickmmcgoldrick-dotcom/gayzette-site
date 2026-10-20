@@ -354,6 +354,34 @@ main{display:block}
   *{break-inside:avoid-page}
   .kicker,.rule-short{color:var(--accent)!important}
 }
+
+/* ===== DRAFT 2 (2026-10-19): wide-screen layout, 1024px and up. Phone/tablet below stays as DRAFT 1. ===== */
+@media (min-width:1024px){
+  /* hero beside: comic panel left, headline + deck + first paragraphs right, rest in a centered reading column */
+  article.hero{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,9fr);gap:0 56px;align-items:start}
+  .hero .txt{display:contents}
+  .hero .art{grid-column:1;grid-row:1;margin-bottom:0}
+  .hero .txt-top{grid-column:2;grid-row:1}
+  .hero .txt-top .h-hero{font-size:clamp(32px,3.5vw,46px);line-height:1.06}
+  .hero.sunday .txt-top .h-hero{font-size:clamp(34px,3.9vw,52px);line-height:1.04}
+  .hero .txt-top .deck{font-size:20px}
+  .hero .txt-top .byline{margin-top:16px}
+  .hero .txt-top .body p{font-size:18px;line-height:1.6}
+  .hero .txt-rest{grid-column:1/-1;grid-row:2;width:100%;max-width:680px;margin:56px auto 0}
+  .hero .txt-rest .desk{max-width:none}
+  /* editor's note: one labeled column, same 680px column as the rest of the lead, with a rule above */
+  .ednote{max-width:680px;margin:88px auto 0;padding:32px 0 0;border-top:1px solid var(--rule-2)}
+  .ednote .kicker{font-size:13px;margin-bottom:6px}
+  /* AI and Spirit: two columns */
+  .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 56px;align-items:start}
+  .row>.main:only-child{grid-column:1/-1;max-width:760px}
+  /* Good Ten: two columns. World Straight: one 680px column */
+  .good{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #world .sec-head,#world .ws-note,#world .ws{max-width:680px;margin-left:auto;margin-right:auto}
+  .ws{grid-template-columns:minmax(0,1fr)}
+  /* sidebars: 2-up */
+  .boxes{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 </style>
 </head>
 <body>
@@ -381,14 +409,19 @@ main{display:block}
   <article class="hero" id="front" data-beat="The AI Builder">
   <div class="art bleed"><div class="illo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="hl" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.7" fill="#e8a33d"/></pattern></defs><rect x="0" y="0" width="320" height="200" fill="#fff6e0"/><rect x="20" y="160" width="280" height="20" fill="url(#hl)" stroke="#111" stroke-width="3.5" stroke-linejoin="round"/><rect x="110" y="50" width="90" height="110" fill="#2a7fb8" stroke="#111" stroke-width="3.5" stroke-linejoin="round"/><polygon points="110,50 70,66 70,150 110,160" fill="#e8a33d" stroke="#111" stroke-width="3.5" stroke-linejoin="round"/><rect x="110" y="50" width="90" height="110" fill="url(#hl)" opacity="0.5"/><circle cx="82" cy="108" r="5" fill="#111"/><path d="M215 90 l30 0 M215 110 l40 0 M215 130 l30 0" stroke="#111" stroke-width="4" fill="none" stroke-linecap="round"/><rect x="200" y="24" width="100" height="34" rx="10" fill="#fff" stroke="#111" stroke-width="3.5" stroke-linejoin="round"/><text x="250" y="46" font-family="Comic Sans MS, Chalkboard SE, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#111">No key needed</text></svg></div></div>
   <div class="txt">
-    <p class="kicker">Front page &middot; The AI Builder</p>
-    <h2 class="h-hero hl"><a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank" rel="noopener">Fast mode for Claude Opus 5.5 is now open on the API</a></h2>
-    <p class="deck">Anthropic took it out of research preview, so nobody has to ask for access anymore.</p>
-    <p class="byline">The Gayzette &middot; Wonder <span aria-label="2 of 5">◆◆◇◇◇</span></p>
-    <div class="body wide hero-body"><p>Yesterday, Anthropic&#39;s platform release notes said fast mode for Claude Opus 5.5 has left &#34;research preview,&#34; which is the label for a feature that&#39;s still being tested with a limited group. You no longer need to request access.</p><p>Two small changes come with it. Requests used to carry a beta header, a little label a program attaches to say &#34;I&#39;d like the experimental version.&#34; For Opus 5.5 that label, `fast-mode-2026-02-01`, is no longer needed, though requests that still send it keep working. Opus 5.5 also now has a default fast-mode rate limit, meaning a built-in cap on requests per minute, in the Start, Build and Scale tiers. Fast mode for Opus 5 and Opus 4.8 is still in preview and still needs the header, and Opus 5.5 fast mode also runs on Claude in Microsoft Foundry for Azure deployments. One caveat: the page doesn&#39;t say what fast mode costs or how much faster it is, so check before you flip it on everywhere.</p><p>On your desk: any n8n Anthropic node in Travis Wall Studio&#39;s automations, or a Gayzette script, can ask for fast Opus 5.5 without a permission request first.</p></div>
-    <aside class="desk"><p class="label">On our desk</p>Anything you wire to the Claude API can now use fast Opus 5.5 with no access request.</aside>
-    <span class="srcline"><a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank" rel="noopener">Read the original at Claude Platform release notes →</a></span>
-    
+    <div class="txt-top">
+      <p class="kicker">Front page &middot; The AI Builder</p>
+      <h2 class="h-hero hl"><a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank" rel="noopener">Fast mode for Claude Opus 5.5 is now open on the API</a></h2>
+      <p class="deck">Anthropic took it out of research preview, so nobody has to ask for access anymore.</p>
+      <p class="byline">The Gayzette &middot; Wonder <span aria-label="2 of 5">◆◆◇◇◇</span></p>
+      <div class="body wide hero-body"><p>Yesterday, Anthropic&#39;s platform release notes said fast mode for Claude Opus 5.5 has left &#34;research preview,&#34; which is the label for a feature that&#39;s still being tested with a limited group. You no longer need to request access.</p><p>Two small changes come with it. Requests used to carry a beta header, a little label a program attaches to say &#34;I&#39;d like the experimental version.&#34; For Opus 5.5 that label, `fast-mode-2026-02-01`, is no longer needed, though requests that still send it keep working. Opus 5.5 also now has a default fast-mode rate limit, meaning a built-in cap on requests per minute, in the Start, Build and Scale tiers. Fast mode for Opus 5 and Opus 4.8 is still in preview and still needs the header, and Opus 5.5 fast mode also runs on Claude in Microsoft Foundry for Azure deployments. One caveat: the page doesn&#39;t say what fast mode costs or how much faster it is, so check before you flip it on everywhere.</p></div>
+    </div>
+    <div class="txt-rest">
+      <div class="body wide"><p>On your desk: any n8n Anthropic node in Travis Wall Studio&#39;s automations, or a Gayzette script, can ask for fast Opus 5.5 without a permission request first.</p></div>
+      <aside class="desk"><p class="label">On our desk</p>Anything you wire to the Claude API can now use fast Opus 5.5 with no access request.</aside>
+      <span class="srcline"><a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank" rel="noopener">Read the original at Claude Platform release notes →</a></span>
+      
+    </div>
   </div>
 </article>
   

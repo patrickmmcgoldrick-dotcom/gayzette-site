@@ -354,6 +354,34 @@ main{display:block}
   *{break-inside:avoid-page}
   .kicker,.rule-short{color:var(--accent)!important}
 }
+
+/* ===== DRAFT 2 (2026-10-19): wide-screen layout, 1024px and up. Phone/tablet below stays as DRAFT 1. ===== */
+@media (min-width:1024px){
+  /* hero beside: comic panel left, headline + deck + first paragraphs right, rest in a centered reading column */
+  article.hero{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,9fr);gap:0 56px;align-items:start}
+  .hero .txt{display:contents}
+  .hero .art{grid-column:1;grid-row:1;margin-bottom:0}
+  .hero .txt-top{grid-column:2;grid-row:1}
+  .hero .txt-top .h-hero{font-size:clamp(32px,3.5vw,46px);line-height:1.06}
+  .hero.sunday .txt-top .h-hero{font-size:clamp(34px,3.9vw,52px);line-height:1.04}
+  .hero .txt-top .deck{font-size:20px}
+  .hero .txt-top .byline{margin-top:16px}
+  .hero .txt-top .body p{font-size:18px;line-height:1.6}
+  .hero .txt-rest{grid-column:1/-1;grid-row:2;width:100%;max-width:680px;margin:56px auto 0}
+  .hero .txt-rest .desk{max-width:none}
+  /* editor's note: one labeled column, same 680px column as the rest of the lead, with a rule above */
+  .ednote{max-width:680px;margin:88px auto 0;padding:32px 0 0;border-top:1px solid var(--rule-2)}
+  .ednote .kicker{font-size:13px;margin-bottom:6px}
+  /* AI and Spirit: two columns */
+  .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 56px;align-items:start}
+  .row>.main:only-child{grid-column:1/-1;max-width:760px}
+  /* Good Ten: two columns. World Straight: one 680px column */
+  .good{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #world .sec-head,#world .ws-note,#world .ws{max-width:680px;margin-left:auto;margin-right:auto}
+  .ws{grid-template-columns:minmax(0,1fr)}
+  /* sidebars: 2-up */
+  .boxes{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 </style>
 </head>
 <body>
@@ -381,14 +409,19 @@ main{display:block}
   <article class="hero" id="front" data-beat="The AI Builder">
   <div class="art bleed"><div class="illo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="dots-lead" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#2b6f8f" opacity="0.4"/></pattern></defs><rect width="320" height="200" fill="#fbf6ea"/><rect x="4" y="4" width="312" height="192" fill="url(#dots-lead)" stroke="#000" stroke-width="4"/><path d="M60 150 Q80 60 100 150 Q120 60 140 150" stroke="#2b6f8f" stroke-width="5" fill="none"/><circle cx="80" cy="90" r="6" fill="#d94f3d" stroke="#000" stroke-width="2"/><circle cx="120" cy="110" r="6" fill="#d94f3d" stroke="#000" stroke-width="2"/><circle cx="100" cy="70" r="6" fill="#f2c14e" stroke="#000" stroke-width="2"/><circle cx="220" cy="100" r="30" fill="none" stroke="#000" stroke-width="4"/><line x1="242" y1="122" x2="265" y2="145" stroke="#000" stroke-width="6"/><rect x="150" y="30" width="130" height="36" rx="8" fill="#fff" stroke="#000" stroke-width="3"/><text x="215" y="53" font-size="14" text-anchor="middle" font-family="sans-serif" font-weight="bold">NEW ENZYME!</text></svg></div></div>
   <div class="txt">
-    <p class="kicker">Front page &middot; The AI Builder</p>
-    <h2 class="h-hero hl"><a href="https://www.anthropic.com/news/claude-discovers-novel-enzyme-system" target="_blank" rel="noopener">Claude Agents Uncover Novel CRISPR-Like Enzyme System</a></h2>
-    <p class="deck">Anthropic&#39;s life-sciences research group ran about 950 Claude agents for 21 hours through 200,000 candidate enzymes and surfaced a previously unknown CRISPR-like system, with CRISPR pioneer Feng Zhang calling the finding intriguing.</p>
-    <p class="byline">The Gayzette &middot; Wonder <span aria-label="4 of 5">◆◆◆◆◇</span></p>
-    <div class="body wide hero-body"><p>Anthropic&#39;s newly launched life-sciences research group set about 950 Claude agents loose for 21 hours — roughly 210 million tokens of work — scanning 200,000 reverse transcriptases (enzymes that copy RNA into DNA) for anything unusual. The agents narrowed that pool to 3,500 candidates, then to a short list of just 20 systems worth a closer look.</p><p>Among those 20, the agents flagged a previously uncharacterized bacteriophage (a virus that infects bacteria) enzyme family they&#39;re calling &#34;array-associated reverse transcriptases,&#34; or ART — built with a CRISPR-array-like structure, the same repeating-sequence architecture CRISPR gene-editing tools are built on. A technical preprint accompanied the announcement, and CRISPR pioneer Feng Zhang called the finding &#34;genuinely intriguing.&#34;</p><p>On your desk: it&#39;s the same many-agents-one-coordinator pattern behind your own n8n and Claude Code automations — a huge pool narrowed down to a short list — just running for a research team over a full day instead of a single build over an afternoon.</p></div>
-    <aside class="desk"><p class="label">On our desk</p>Same many-agents-one-coordinator orchestration idea behind Patrick&#39;s own n8n and Claude Code builds, shown here at a research scale.</aside>
-    <span class="srcline"><a href="https://www.anthropic.com/news/claude-discovers-novel-enzyme-system" target="_blank" rel="noopener">Read the original at Anthropic →</a></span>
-    
+    <div class="txt-top">
+      <p class="kicker">Front page &middot; The AI Builder</p>
+      <h2 class="h-hero hl"><a href="https://www.anthropic.com/news/claude-discovers-novel-enzyme-system" target="_blank" rel="noopener">Claude Agents Uncover Novel CRISPR-Like Enzyme System</a></h2>
+      <p class="deck">Anthropic&#39;s life-sciences research group ran about 950 Claude agents for 21 hours through 200,000 candidate enzymes and surfaced a previously unknown CRISPR-like system, with CRISPR pioneer Feng Zhang calling the finding intriguing.</p>
+      <p class="byline">The Gayzette &middot; Wonder <span aria-label="4 of 5">◆◆◆◆◇</span></p>
+      <div class="body wide hero-body"><p>Anthropic&#39;s newly launched life-sciences research group set about 950 Claude agents loose for 21 hours — roughly 210 million tokens of work — scanning 200,000 reverse transcriptases (enzymes that copy RNA into DNA) for anything unusual. The agents narrowed that pool to 3,500 candidates, then to a short list of just 20 systems worth a closer look.</p><p>Among those 20, the agents flagged a previously uncharacterized bacteriophage (a virus that infects bacteria) enzyme family they&#39;re calling &#34;array-associated reverse transcriptases,&#34; or ART — built with a CRISPR-array-like structure, the same repeating-sequence architecture CRISPR gene-editing tools are built on. A technical preprint accompanied the announcement, and CRISPR pioneer Feng Zhang called the finding &#34;genuinely intriguing.&#34;</p></div>
+    </div>
+    <div class="txt-rest">
+      <div class="body wide"><p>On your desk: it&#39;s the same many-agents-one-coordinator pattern behind your own n8n and Claude Code automations — a huge pool narrowed down to a short list — just running for a research team over a full day instead of a single build over an afternoon.</p></div>
+      <aside class="desk"><p class="label">On our desk</p>Same many-agents-one-coordinator orchestration idea behind Patrick&#39;s own n8n and Claude Code builds, shown here at a research scale.</aside>
+      <span class="srcline"><a href="https://www.anthropic.com/news/claude-discovers-novel-enzyme-system" target="_blank" rel="noopener">Read the original at Anthropic →</a></span>
+      
+    </div>
   </div>
 </article>
   

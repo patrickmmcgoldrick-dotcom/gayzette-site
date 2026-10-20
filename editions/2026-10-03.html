@@ -354,6 +354,34 @@ main{display:block}
   *{break-inside:avoid-page}
   .kicker,.rule-short{color:var(--accent)!important}
 }
+
+/* ===== DRAFT 2 (2026-10-19): wide-screen layout, 1024px and up. Phone/tablet below stays as DRAFT 1. ===== */
+@media (min-width:1024px){
+  /* hero beside: comic panel left, headline + deck + first paragraphs right, rest in a centered reading column */
+  article.hero{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,9fr);gap:0 56px;align-items:start}
+  .hero .txt{display:contents}
+  .hero .art{grid-column:1;grid-row:1;margin-bottom:0}
+  .hero .txt-top{grid-column:2;grid-row:1}
+  .hero .txt-top .h-hero{font-size:clamp(32px,3.5vw,46px);line-height:1.06}
+  .hero.sunday .txt-top .h-hero{font-size:clamp(34px,3.9vw,52px);line-height:1.04}
+  .hero .txt-top .deck{font-size:20px}
+  .hero .txt-top .byline{margin-top:16px}
+  .hero .txt-top .body p{font-size:18px;line-height:1.6}
+  .hero .txt-rest{grid-column:1/-1;grid-row:2;width:100%;max-width:680px;margin:56px auto 0}
+  .hero .txt-rest .desk{max-width:none}
+  /* editor's note: one labeled column, same 680px column as the rest of the lead, with a rule above */
+  .ednote{max-width:680px;margin:88px auto 0;padding:32px 0 0;border-top:1px solid var(--rule-2)}
+  .ednote .kicker{font-size:13px;margin-bottom:6px}
+  /* AI and Spirit: two columns */
+  .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 56px;align-items:start}
+  .row>.main:only-child{grid-column:1/-1;max-width:760px}
+  /* Good Ten: two columns. World Straight: one 680px column */
+  .good{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #world .sec-head,#world .ws-note,#world .ws{max-width:680px;margin-left:auto;margin-right:auto}
+  .ws{grid-template-columns:minmax(0,1fr)}
+  /* sidebars: 2-up */
+  .boxes{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 </style>
 </head>
 <body>
@@ -381,14 +409,19 @@ main{display:block}
   <article class="hero" id="front" data-beat="ai">
   <div class="art bleed"><div class="illo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="hmod" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.6" fill="#457b9d"/></pattern></defs><rect x="12" y="12" width="296" height="176" fill="#fdf3d0" stroke="#111" stroke-width="4"/><rect x="12" y="130" width="296" height="58" fill="url(#hmod)"/><g stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><rect x="60" y="62" width="200" height="90" rx="8" fill="#fff"/><path d="M60 86H260" fill="none"/><circle cx="76" cy="74" r="5" fill="#e63946"/><circle cx="94" cy="74" r="5" fill="#f4c542"/><path d="M82 108L100 120L82 132M116 134H150" fill="none"/><rect x="190" y="100" width="50" height="36" fill="#e63946"/><path d="M200 100V90M230 100V90" fill="none"/><rect x="100" y="20" width="120" height="30" rx="10" fill="#fff"/><text x="160.0" y="40" font-family="Comic Sans MS,sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#111" stroke="none">Snap it on!</text></g></svg></div></div>
   <div class="txt">
-    <p class="kicker">Front page &middot; ai</p>
-    <h2 class="h-hero hl"><a href="https://claude.com/blog/claude-code-mods" target="_blank" rel="noopener">Claude Code mods: tiny TypeScript functions that reshape the tool</a></h2>
-    <p class="deck">Anthropic&#39;s new &#34;mods&#34; let you intercept what Claude Code does and rewrite it, add buttons, or add guardrails, mid-session.</p>
-    <p class="byline">The Gayzette &middot; Wonder <span aria-label="4 of 5">◆◆◆◆◇</span></p>
-    <div class="body wide hero-body"><p>Anthropic launched &#34;mods&#34; on Oct. 1: small TypeScript functions (TypeScript is a popular web programming language) that change how Claude Code behaves. Per the announcement, a mod can &#34;rewrite a prompt, add new UI, replace a built-in feature, or add entirely new functionality.&#34; They are available today in the Claude Code CLI and desktop app.</p><p>The trick is events. Every Claude Code action sends out an event, a little signal a mod can catch. A mod can edit a prompt before it reaches the model, block or rewrite a tool call, handle a permission request, or change parts of the interface. Examples include redacting secrets from tool output and adding custom buttons. Mods from different creators stack, and they hot-reload, meaning they update mid-session. Install them through plugins from the Claude directory or with /plugin.</p><p>The fine print: mods are not sandboxed, so treat each like software with real reach. Enterprise accounts get a built-in sec-default mod that stops user mods from overriding permission rules.</p><p>On your desk: your Gayzette and Stacy Show offices both run on Claude Code and Cowork. A small mod that logs each tool call into the day&#39;s handoff note, or one that redacts secrets from tool output before you paste a transcript into a Skool lesson, is a few lines of TypeScript.</p></div>
-    <aside class="desk"><p class="label">On our desk</p>The tool you already live in can now be bent to your workflow with a few lines of code, including guardrails and auto-logging.</aside>
-    <span class="srcline"><a href="https://claude.com/blog/claude-code-mods" target="_blank" rel="noopener">Read the original at Claude blog: Claude Code Mods →</a></span>
-    
+    <div class="txt-top">
+      <p class="kicker">Front page &middot; ai</p>
+      <h2 class="h-hero hl"><a href="https://claude.com/blog/claude-code-mods" target="_blank" rel="noopener">Claude Code mods: tiny TypeScript functions that reshape the tool</a></h2>
+      <p class="deck">Anthropic&#39;s new &#34;mods&#34; let you intercept what Claude Code does and rewrite it, add buttons, or add guardrails, mid-session.</p>
+      <p class="byline">The Gayzette &middot; Wonder <span aria-label="4 of 5">◆◆◆◆◇</span></p>
+      <div class="body wide hero-body"><p>Anthropic launched &#34;mods&#34; on Oct. 1: small TypeScript functions (TypeScript is a popular web programming language) that change how Claude Code behaves. Per the announcement, a mod can &#34;rewrite a prompt, add new UI, replace a built-in feature, or add entirely new functionality.&#34; They are available today in the Claude Code CLI and desktop app.</p><p>The trick is events. Every Claude Code action sends out an event, a little signal a mod can catch. A mod can edit a prompt before it reaches the model, block or rewrite a tool call, handle a permission request, or change parts of the interface. Examples include redacting secrets from tool output and adding custom buttons. Mods from different creators stack, and they hot-reload, meaning they update mid-session. Install them through plugins from the Claude directory or with /plugin.</p></div>
+    </div>
+    <div class="txt-rest">
+      <div class="body wide"><p>The fine print: mods are not sandboxed, so treat each like software with real reach. Enterprise accounts get a built-in sec-default mod that stops user mods from overriding permission rules.</p><p>On your desk: your Gayzette and Stacy Show offices both run on Claude Code and Cowork. A small mod that logs each tool call into the day&#39;s handoff note, or one that redacts secrets from tool output before you paste a transcript into a Skool lesson, is a few lines of TypeScript.</p></div>
+      <aside class="desk"><p class="label">On our desk</p>The tool you already live in can now be bent to your workflow with a few lines of code, including guardrails and auto-logging.</aside>
+      <span class="srcline"><a href="https://claude.com/blog/claude-code-mods" target="_blank" rel="noopener">Read the original at Claude blog: Claude Code Mods →</a></span>
+      
+    </div>
   </div>
 </article>
   

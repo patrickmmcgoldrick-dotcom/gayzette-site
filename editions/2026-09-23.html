@@ -354,6 +354,34 @@ main{display:block}
   *{break-inside:avoid-page}
   .kicker,.rule-short{color:var(--accent)!important}
 }
+
+/* ===== DRAFT 2 (2026-10-19): wide-screen layout, 1024px and up. Phone/tablet below stays as DRAFT 1. ===== */
+@media (min-width:1024px){
+  /* hero beside: comic panel left, headline + deck + first paragraphs right, rest in a centered reading column */
+  article.hero{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,9fr);gap:0 56px;align-items:start}
+  .hero .txt{display:contents}
+  .hero .art{grid-column:1;grid-row:1;margin-bottom:0}
+  .hero .txt-top{grid-column:2;grid-row:1}
+  .hero .txt-top .h-hero{font-size:clamp(32px,3.5vw,46px);line-height:1.06}
+  .hero.sunday .txt-top .h-hero{font-size:clamp(34px,3.9vw,52px);line-height:1.04}
+  .hero .txt-top .deck{font-size:20px}
+  .hero .txt-top .byline{margin-top:16px}
+  .hero .txt-top .body p{font-size:18px;line-height:1.6}
+  .hero .txt-rest{grid-column:1/-1;grid-row:2;width:100%;max-width:680px;margin:56px auto 0}
+  .hero .txt-rest .desk{max-width:none}
+  /* editor's note: one labeled column, same 680px column as the rest of the lead, with a rule above */
+  .ednote{max-width:680px;margin:88px auto 0;padding:32px 0 0;border-top:1px solid var(--rule-2)}
+  .ednote .kicker{font-size:13px;margin-bottom:6px}
+  /* AI and Spirit: two columns */
+  .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 56px;align-items:start}
+  .row>.main:only-child{grid-column:1/-1;max-width:760px}
+  /* Good Ten: two columns. World Straight: one 680px column */
+  .good{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #world .sec-head,#world .ws-note,#world .ws{max-width:680px;margin-left:auto;margin-right:auto}
+  .ws{grid-template-columns:minmax(0,1fr)}
+  /* sidebars: 2-up */
+  .boxes{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 </style>
 </head>
 <body>
@@ -400,15 +428,20 @@ main{display:block}
 <text x="70" y="55" font-size="13" text-anchor="middle" font-family="sans-serif" fill="#000">40% less!</text>
 </svg></div></div>
   <div class="txt">
-    <p class="kicker">Front page &middot; The AI Builder</p>
-    <h2 class="h-hero hl"><a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener">Claude Opus 5.5 lands: near-top quality, about 40% cheaper</a></h2>
-    <p class="deck">Anthropic&#39;s newest Opus model performs at the level of its top model on most work, and Anthropic says it costs about 40% less to run than Opus 5.</p>
-    <p class="byline">The Gayzette &middot; Wonder <span aria-label="3 of 5">◆◆◆◇◇</span></p>
-    <div class="body wide hero-body"><p>Anthropic released Claude Opus 5.5 yesterday, priced at $4 per million input tokens and $20 per million output tokens — tokens being the chunks of text a model reads and writes, billed by the million. Anthropic says it&#39;s &#34;40% less expensive&#34; to run than Opus 5 on typical workloads, while performing &#34;at the level of Claude Fable 5.1 on most work&#34; and generating output 30% faster.</p><p>The gains show up on harder tests too. On Terminal-Bench 4.0, which grades how well a model handles real command-line tasks, Opus 5 scored 52.3%; Opus 5.5 jumped to 66.4%. GitHub&#39;s product chief, Mario Rodriguez, is quoted on Anthropic&#39;s launch page: &#34;In VS Code, it solved more terminal tasks than Opus 5 in less than half the steps.&#34; Internal safety testing also found it 85% less likely than Opus 5 or Mythos 5.1 to try to bypass its own guardrails — the boundaries it&#39;s meant to stay inside.</p><p>Trading firm Optiver, an early tester, said Opus 5.5 &#34;matched Opus 5&#39;s quality in about half the turns, time and output tokens, cutting the cost of that workload by 40 to 50%.&#34; GitHub Copilot turned it on the same day for Pro+, Max, Business and Enterprise plans, reporting early tests that &#34;resolved tasks comparably to Claude Opus 5 while using significantly fewer steps and tokens.&#34;</p></div>
-    <aside class="desk"><p class="label">On our desk</p>Every Claude Code and Cowork job Patrick runs, from vault clean-ups to the TWS tool stack, is billed by the token, so a model that finishes the same work in fewer steps makes more of those jobs worth automating for a two-person shop.</aside>
-    <span class="srcline"><a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener">Read the original at Introducing Claude Opus 5.5 →</a></span>
-    <details class="sources"><summary>Receipts (3)</summary>
+    <div class="txt-top">
+      <p class="kicker">Front page &middot; The AI Builder</p>
+      <h2 class="h-hero hl"><a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener">Claude Opus 5.5 lands: near-top quality, about 40% cheaper</a></h2>
+      <p class="deck">Anthropic&#39;s newest Opus model performs at the level of its top model on most work, and Anthropic says it costs about 40% less to run than Opus 5.</p>
+      <p class="byline">The Gayzette &middot; Wonder <span aria-label="3 of 5">◆◆◆◇◇</span></p>
+      <div class="body wide hero-body"><p>Anthropic released Claude Opus 5.5 yesterday, priced at $4 per million input tokens and $20 per million output tokens — tokens being the chunks of text a model reads and writes, billed by the million. Anthropic says it&#39;s &#34;40% less expensive&#34; to run than Opus 5 on typical workloads, while performing &#34;at the level of Claude Fable 5.1 on most work&#34; and generating output 30% faster.</p><p>The gains show up on harder tests too. On Terminal-Bench 4.0, which grades how well a model handles real command-line tasks, Opus 5 scored 52.3%; Opus 5.5 jumped to 66.4%. GitHub&#39;s product chief, Mario Rodriguez, is quoted on Anthropic&#39;s launch page: &#34;In VS Code, it solved more terminal tasks than Opus 5 in less than half the steps.&#34; Internal safety testing also found it 85% less likely than Opus 5 or Mythos 5.1 to try to bypass its own guardrails — the boundaries it&#39;s meant to stay inside.</p></div>
+    </div>
+    <div class="txt-rest">
+      <div class="body wide"><p>Trading firm Optiver, an early tester, said Opus 5.5 &#34;matched Opus 5&#39;s quality in about half the turns, time and output tokens, cutting the cost of that workload by 40 to 50%.&#34; GitHub Copilot turned it on the same day for Pro+, Max, Business and Enterprise plans, reporting early tests that &#34;resolved tasks comparably to Claude Opus 5 while using significantly fewer steps and tokens.&#34;</p></div>
+      <aside class="desk"><p class="label">On our desk</p>Every Claude Code and Cowork job Patrick runs, from vault clean-ups to the TWS tool stack, is billed by the token, so a model that finishes the same work in fewer steps makes more of those jobs worth automating for a two-person shop.</aside>
+      <span class="srcline"><a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener">Read the original at Introducing Claude Opus 5.5 →</a></span>
+      <details class="sources"><summary>Receipts (3)</summary>
 <ul><li><a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener">Introducing Claude Opus 5.5</a> <span class="d">2026-09-22</span></li><li><a href="https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/09/22/anthropic-unveils-claude-opus-55/" target="_blank" rel="noopener">Anthropic unveils Claude Opus 5.5 — BNN Bloomberg</a> <span class="d">2026-09-22</span></li><li><a href="https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/" target="_blank" rel="noopener">Claude Opus 5.5 is now available in GitHub Copilot</a> <span class="d">2026-09-22</span></li></ul></details>
+    </div>
   </div>
 </article>
   
