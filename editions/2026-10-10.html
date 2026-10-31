@@ -359,6 +359,27 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   .ph{background:#f2f2f2 !important}
   article,.it,li{break-inside:avoid-page}
 }
+
+/* classroom */
+.cls-wrap{max-width:660px}
+.cls-meets{margin:40px 0 0;max-width:620px}
+.cls-meets p.lab,.cls-hw .lab,.cls-quiz p.lab,.cls-next p.lab,p.lab.cls-grp{font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:0 0 10px}
+.cls-meets ul{list-style:none;margin:0;padding:0}
+.cls-meets li{padding:14px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-meets li a{color:#C2603C;font-family:Fraunces,serif;font-weight:500;text-decoration:none;border-bottom:1px solid #C2603C}
+.cls-meets .why{display:block;margin-top:4px;color:#3a352e}
+.cls-hw{margin:28px 0 0;font-family:Newsreader,serif;font-size:19px;line-height:1.5;max-width:620px}
+.cls-hw .lab{display:inline-block;margin:0 8px 0 0;color:#C2603C}
+.cls-go{font-family:Fraunces,serif;font-style:italic;color:#6B645A;margin:20px 0 0}
+.cls-src{font-family:"DM Sans",sans-serif;font-size:13px;color:#6B645A;margin:14px 0 0}
+.cls-src a{color:inherit}
+.cls-ideas{margin:24px 0 0;padding-left:22px;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-ideas li{margin:0 0 16px}
+.cls-ideas strong{font-family:Fraunces,serif;font-weight:500}
+.cls-quiz,.cls-next{margin:36px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-quiz ol{padding-left:22px}
+.cls-next .bd{margin-top:0}
+.desk+.cls-hw,.desk+.cls-next{margin-top:28px}
 </style>
 </head>
 <body>
@@ -371,7 +392,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
     <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
   </div>
   <nav class="nav" aria-label="Sections">
-    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
   </nav>
 </header>
 
@@ -599,9 +620,11 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <p class="lab">Weather</p>
   <h3 class="hd h-tv">Storm Watch</h3>
   <p><b>Los Angeles:</b> New moon tonight · LA forecast not verified this morning</p>
-  <ul><li><b>Hurricane Simon</b> (Eastern Pacific) &mdash; Cat 4 (by its 150 mph winds) · 150 mph peak · 938 mb. 17.3N 104.8W, off southwest Mexico Hurricane warnings are up for part of the coast. <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a></li><li><b>Tropical Storm Rachel</b> (Eastern Pacific) &mdash; Tropical storm · 60 mph peak · 992 mb. 24.6N 120.5W Moving toward Baja California. <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a></li><li><b>Post-Tropical Cyclone Isaias</b> (Atlantic) &mdash; Post-tropical · 35 mph peak · 1002 mb. 32.0N 86.5W, over Alabama Flash flooding risk continues; NHC issued its final advisory and WPC has taken over. <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a></li></ul>
+  <ul><li><b>Hurricane Simon</b> (Eastern Pacific) &mdash; Cat 4 (by its 150 mph winds) · 150 mph peak · 938 mb. 17.3N 104.8W, off southwest Mexico Hurricane warnings are up for part of the coast. <span class="when">(as of 2026-10-10, 6:00 am CST advisory)</span> <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a></li><li><b>Tropical Storm Rachel</b> (Eastern Pacific) &mdash; Tropical storm · 60 mph peak · 992 mb. 24.6N 120.5W Moving toward Baja California. <span class="when">(as of 2026-10-10, 5:00 am PDT advisory)</span> <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a></li><li><b>Post-Tropical Cyclone Isaias</b> (Atlantic) &mdash; Post-tropical · 35 mph peak · 1002 mb. 32.0N 86.5W, over Alabama Flash flooding risk continues; NHC issued its final advisory and WPC has taken over. <span class="when">(as of 2026-10-10, 4:00 am CDT advisory)</span> <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a></li></ul>
   
   <p><b>Winter outlook:</b> CPC&#39;s Oct 8 discussion: El Niño keeps strengthening, and a strong-to-very-strong event is likely through Jan-Mar 2027 (greater than 83% chance).</p>
+  <p class="when">Outlook from the CPC discussion dated 2026-10-08.</p>
+  
   <p><a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a> &middot; <a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">NOAA CPC ENSO Diagnostic Discussion</a></p>
 </article>
 
@@ -612,6 +635,9 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <h3 class="hd h-tv">Sky</h3>
   <p><b>Moon:</b> New Moon (0% illuminated)</p>
   <p><b>Tonight's sky:</b> A moonless, dark sky. The Southern Taurids meteor shower peaks tonight at up to about one meteor every 10 minutes, and Saturn, past its Oct 4 opposition, is up all night near its brightest. The Orionids peak Oct 21-22. <a href="https://www.goodnewsnetwork.org/a-swarm-of-seven-meteor-showers-will-light-up-the-night-skies-all-october-long/" target="_blank" rel="noopener">Good News Network: seven October meteor showers</a> &middot; <a href="https://astrobackyard.com/october-2026-astronomy/" target="_blank" rel="noopener">AstroBackyard: October 2026 night sky</a></p>
+  
+  
+  
   <h5>Human Design transits</h5>
   <ul><li><b>Patrick:</b> From the HD Toolkit: Saturn is in your own Gate 21 (The Hunter, Heart), completing your 21-45 channel; Uranus in your Gate 20 (The Now) completes 20-34; Neptune in Gate 25 completes 25-51; Pluto in Gate 41 completes 30-41; and the North Node sits in your Gate 30 (Recognition of Feelings), where it has been since July 25. The toolkit shows each of these windows closing Oct 11.</li><li><b>Travis:</b> From the HD Toolkit: Neptune is in Gate 25 (The Spirit of the Self, G centre), one of your own gates, where it has been since Sept 5, 2025; the toolkit shows that window closing Oct 11.</li></ul>
 </article>
@@ -651,7 +677,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
       <p class="tagl">No ads. No pop-ups. No tracking. Just the paper.</p>
     </div>
     <nav aria-label="Footer sections">
-      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
       <a href="/editions/">Past editions</a>
     </nav>
   </div>

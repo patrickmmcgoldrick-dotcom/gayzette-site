@@ -359,6 +359,27 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   .ph{background:#f2f2f2 !important}
   article,.it,li{break-inside:avoid-page}
 }
+
+/* classroom */
+.cls-wrap{max-width:660px}
+.cls-meets{margin:40px 0 0;max-width:620px}
+.cls-meets p.lab,.cls-hw .lab,.cls-quiz p.lab,.cls-next p.lab,p.lab.cls-grp{font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:0 0 10px}
+.cls-meets ul{list-style:none;margin:0;padding:0}
+.cls-meets li{padding:14px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-meets li a{color:#C2603C;font-family:Fraunces,serif;font-weight:500;text-decoration:none;border-bottom:1px solid #C2603C}
+.cls-meets .why{display:block;margin-top:4px;color:#3a352e}
+.cls-hw{margin:28px 0 0;font-family:Newsreader,serif;font-size:19px;line-height:1.5;max-width:620px}
+.cls-hw .lab{display:inline-block;margin:0 8px 0 0;color:#C2603C}
+.cls-go{font-family:Fraunces,serif;font-style:italic;color:#6B645A;margin:20px 0 0}
+.cls-src{font-family:"DM Sans",sans-serif;font-size:13px;color:#6B645A;margin:14px 0 0}
+.cls-src a{color:inherit}
+.cls-ideas{margin:24px 0 0;padding-left:22px;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-ideas li{margin:0 0 16px}
+.cls-ideas strong{font-family:Fraunces,serif;font-weight:500}
+.cls-quiz,.cls-next{margin:36px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-quiz ol{padding-left:22px}
+.cls-next .bd{margin-top:0}
+.desk+.cls-hw,.desk+.cls-next{margin-top:28px}
 </style>
 </head>
 <body>
@@ -371,7 +392,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
     <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
   </div>
   <nav class="nav" aria-label="Sections">
-    <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/" class="on" aria-current="page">Sunday</a>
+    <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/" class="on" aria-current="page">Sunday</a>
   </nav>
 </header>
 
@@ -730,9 +751,11 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <p class="lab">Weather</p>
   <h3 class="hd h-tv">Storm Watch</h3>
   
-  <ul><li><b>Hurricane Rachel</b> (Eastern Pacific) &mdash; Hurricane (category not stated in the advisory text read) · 105 mph peak · 965 mb. About 340 miles southwest of the southern tip of Baja California (20.1N 114.3W), moving west at 6 mph No coastal watches or warnings; swells will keep affecting Baja California through Monday (surf and rip currents). Expected to slowly weaken from Monday. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP3+shtml/040845_MIATCPEP3.shtml" target="_blank" rel="noopener">NHC - Hurricane Rachel Public Advisory</a></li></ul>
+  <ul><li><b>Hurricane Rachel</b> (Eastern Pacific) &mdash; Hurricane (category not stated in the advisory text read) · 105 mph peak · 965 mb. About 340 miles southwest of the southern tip of Baja California (20.1N 114.3W), moving west at 6 mph No coastal watches or warnings; swells will keep affecting Baja California through Monday (surf and rip currents). Expected to slowly weaken from Monday. <span class="when">(as of 2026-10-04)</span> <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP3+shtml/040845_MIATCPEP3.shtml" target="_blank" rel="noopener">NHC - Hurricane Rachel Public Advisory</a></li></ul>
   
   <p><b>Winter outlook:</b> No active Atlantic tropical cyclones (NHC, Oct 4). Central Pacific Hurricane Nolo (110 mph, 963 mb) was forecast by NHC to cross the International Date Line on Sunday Oct 4. NHC&#39;s East Pacific outlook gives a broad low south of the Gulf of Tehuantepec a 30% (48-hour) and 90% (7-day) chance of becoming a tropical depression mid-to-late week, drifting offshore of Mexico&#39;s southern and southwestern coast. Polo, last edition&#39;s big one, peaked as a Category 5 (180 mph, 892 mb), weakened under wind shear and caused limited damage in southwestern Mexico; it is no longer active (Wikipedia; exact dissipation date not found). Winter outlook unchanged: NOAA CPC&#39;s latest ENSO discussion is still the Sept 10 one (no newer one posted as of Oct 4; next due Oct 8). It keeps an El Niño Advisory with a greater than 90% chance of a very strong event this fall and winter. The discussion itself makes no Southern California rain call.</p>
+  <p class="when">Outlook from the CPC discussion dated 2026-09-10.</p>
+  
   <p><a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC - Active tropical cyclones, Oct 4 2026</a> &middot; <a href="https://www.nhc.noaa.gov/text/refresh/MIATWOEP+shtml/040500_MIATWOEP.shtml" target="_blank" rel="noopener">NHC - East Pacific Tropical Weather Outlook</a> &middot; <a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">NOAA CPC - ENSO Diagnostic Discussion</a> &middot; <a href="https://en.wikipedia.org/wiki/Hurricane_Polo" target="_blank" rel="noopener">Wikipedia - Hurricane Polo</a></p>
 </article>
 
@@ -743,6 +766,9 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <h3 class="hd h-tv">Sky</h3>
   <p><b>Moon:</b> Waning Crescent (23.08 days old) (40.1% illuminated)</p>
   <p><b>Tonight's sky:</b> The crescent rises late at night, so the evening sky is dark early. This week: the Moon passes in front of the Beehive cluster M44 on Oct 5; the Draconids peak Oct 8-9 under almost no moon (New Moon Oct 10), but they are a weak shower (about 5 per hour at best) best watched in the evening with Draco high; Mars passes M44 on Oct 11; Mercury is low in the west-southwest at sunset early in the month. Orionids peak Oct 21-22 but with a 74% moon (AMS). AMS calendar page did not list the Draconids; that date is from Space.com. <a href="https://theskylive.com/moon/2026-10-04" target="_blank" rel="noopener">TheSkyLive - Moon phase Oct 4 2026</a> &middot; <a href="https://griffithobservatory.lacity.gov/explore/observing-the-sky/sky-report/" target="_blank" rel="noopener">Griffith Observatory - Sky Report</a> &middot; <a href="https://www.amsmeteors.org/meteor-showers/meteor-shower-calendar/" target="_blank" rel="noopener">American Meteor Society - calendar</a> &middot; <a href="https://www.space.com/draconid-meteor-shower-2026-guide-where-when-how-to-see-draconids" target="_blank" rel="noopener">Space.com - Draconids 2026</a></p>
+  
+  
+  
   <h5>Human Design transits</h5>
   <ul><li><b>Patrick:</b> Saturn in Gate 21 (The Hunter, one of your own gates) completes your 21–45 channel (in since 4 May 2026); Uranus in Gate 20 (The Now, also yours) completes 20–34 (since 30 Aug 2025); Pluto in Gate 41 (Contraction) completes 30–41 (since 5 Dec 2025); Neptune in Gate 25 (The Spirit of the Self) completes 25–51 (since 30 Aug 2025); the North Node sits in your Gate 30 (Recognition of Feelings, since 25 Jul 2026). Same picture as last Sunday: nothing shifted this week. Mechanics per the HD Toolkit run today — meanings not interpreted here.</li><li><b>Travis:</b> Neptune in Gate 25 (The Spirit of the Self), one of your own gates, in place since 30 Aug 2025 — no channel completed by transit today. Mechanics per the HD Toolkit run today — meanings not interpreted here.</li></ul>
 </article>
@@ -814,7 +840,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
       <p class="tagl">No ads. No pop-ups. No tracking. Just the paper.</p>
     </div>
     <nav aria-label="Footer sections">
-      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
       <a href="/editions/">Past editions</a>
     </nav>
   </div>

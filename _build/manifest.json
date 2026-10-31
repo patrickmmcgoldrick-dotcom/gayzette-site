@@ -1,7 +1,87 @@
 {
   "domain": "thegayzette.news",
-  "built": "2026-10-20T02:54:39",
+  "built": "2026-10-31T22:23:14",
   "editions": [
+    {
+      "date": "2026-10-31",
+      "kind": "Daily",
+      "headline": "Gemini's Computer Use tool leaves preview: an AI that works a screen",
+      "source": "gayzette-daily-2026-10-31.json",
+      "path": "editions/2026-10-31.html",
+      "no": 37
+    },
+    {
+      "date": "2026-10-29",
+      "kind": "Daily",
+      "headline": "Copilot Fusion picks the AI model for you, at half the cost",
+      "source": "gayzette-daily-2026-10-29.json",
+      "path": "editions/2026-10-29.html",
+      "no": 36
+    },
+    {
+      "date": "2026-10-28",
+      "kind": "Daily",
+      "headline": "Google ships gemini-api, one command-line tool for coding agents",
+      "source": "gayzette-daily-2026-10-28.json",
+      "path": "editions/2026-10-28.html",
+      "no": 35
+    },
+    {
+      "date": "2026-10-27",
+      "kind": "Daily",
+      "headline": "OpenAI releases GPT-6.1 Terra, a cheaper model that codes in terminals far better",
+      "source": "gayzette-daily-2026-10-27.json",
+      "path": "editions/2026-10-27.html",
+      "no": 34
+    },
+    {
+      "date": "2026-10-25",
+      "kind": "Sunday",
+      "headline": "An AI-made proof of the quasi-Riemann hypothesis meets its human readers",
+      "source": "issue-008.json",
+      "path": "editions/2026-10-25.html",
+      "no": 33
+    },
+    {
+      "date": "2026-10-24",
+      "kind": "Daily",
+      "headline": "Anthropic API adds webhooks, user profiles and a web-fetch off switch",
+      "source": "gayzette-daily-2026-10-24.json",
+      "path": "editions/2026-10-24.html",
+      "no": 32
+    },
+    {
+      "date": "2026-10-23",
+      "kind": "Daily",
+      "headline": "OpenAI's Decisions API goes GA: 400 typed questions per request",
+      "source": "gayzette-daily-2026-10-23.json",
+      "path": "editions/2026-10-23.html",
+      "no": 31
+    },
+    {
+      "date": "2026-10-22",
+      "kind": "Daily",
+      "headline": "Anthropic's new API version and SDK majors break old code",
+      "source": "gayzette-daily-2026-10-22.json",
+      "path": "editions/2026-10-22.html",
+      "no": 30
+    },
+    {
+      "date": "2026-10-21",
+      "kind": "Daily",
+      "headline": "Anthropic opens a waitlist for Claude Duet, a text-it personal agent",
+      "source": "gayzette-daily-2026-10-21.json",
+      "path": "editions/2026-10-21.html",
+      "no": 29
+    },
+    {
+      "date": "2026-10-20",
+      "kind": "Daily",
+      "headline": "MiniMax says its small, fast model just got 3x faster",
+      "source": "gayzette-daily-2026-10-20.json",
+      "path": "editions/2026-10-20.html",
+      "no": 28
+    },
     {
       "date": "2026-10-19",
       "kind": "Daily",

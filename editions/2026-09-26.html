@@ -359,6 +359,27 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   .ph{background:#f2f2f2 !important}
   article,.it,li{break-inside:avoid-page}
 }
+
+/* classroom */
+.cls-wrap{max-width:660px}
+.cls-meets{margin:40px 0 0;max-width:620px}
+.cls-meets p.lab,.cls-hw .lab,.cls-quiz p.lab,.cls-next p.lab,p.lab.cls-grp{font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:0 0 10px}
+.cls-meets ul{list-style:none;margin:0;padding:0}
+.cls-meets li{padding:14px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-meets li a{color:#C2603C;font-family:Fraunces,serif;font-weight:500;text-decoration:none;border-bottom:1px solid #C2603C}
+.cls-meets .why{display:block;margin-top:4px;color:#3a352e}
+.cls-hw{margin:28px 0 0;font-family:Newsreader,serif;font-size:19px;line-height:1.5;max-width:620px}
+.cls-hw .lab{display:inline-block;margin:0 8px 0 0;color:#C2603C}
+.cls-go{font-family:Fraunces,serif;font-style:italic;color:#6B645A;margin:20px 0 0}
+.cls-src{font-family:"DM Sans",sans-serif;font-size:13px;color:#6B645A;margin:14px 0 0}
+.cls-src a{color:inherit}
+.cls-ideas{margin:24px 0 0;padding-left:22px;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-ideas li{margin:0 0 16px}
+.cls-ideas strong{font-family:Fraunces,serif;font-weight:500}
+.cls-quiz,.cls-next{margin:36px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-quiz ol{padding-left:22px}
+.cls-next .bd{margin-top:0}
+.desk+.cls-hw,.desk+.cls-next{margin-top:28px}
 </style>
 </head>
 <body>
@@ -371,7 +392,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
     <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
   </div>
   <nav class="nav" aria-label="Sections">
-    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
   </nav>
 </header>
 
@@ -576,9 +597,11 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <p class="lab">Weather</p>
   <h3 class="hd h-tv">Storm Watch</h3>
   <p><b>Los Angeles:</b> LA · forecast not checked today</p>
-  <ul><li><b>Polo</b> (Eastern Pacific) &mdash; Hurricane - Category 5 · 175 mph peak · 911 mb. ~355 mi SW of Cabo Corrientes, Mexico (~380 mi S of Cabo San Lucas) Hurricane Watch from Punta Eugenia southward to Santa Fe, Baja California Sur; hurricane conditions possible there by Monday evening; 4–8 in. of rain (up to 10) with possible flooding and mudslides. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP2+shtml/260255.shtml" target="_blank" rel="noopener">NHC Hurricane Polo Advisory #22</a></li><li><b>Odalys</b> (Eastern Pacific) &mdash; Hurricane - Category 3 · 120 mph peak · 952 mb. ~930 mi WSW of the southern tip of Baja California No coastal watches or warnings in effect. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP1+shtml/260252.shtml" target="_blank" rel="noopener">NHC Hurricane Odalys Advisory #25</a></li><li><b>Gonzalo</b> (Atlantic) &mdash; Tropical Storm · 45 mph peak. Near 16.9N 22.5W, eastern Atlantic Per NHC summary; full advisory not reviewed. <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a></li><li><b>Fay</b> (Atlantic) &mdash; Tropical Storm · 40 mph peak. Near 29.9N 43.4W, open Atlantic Per NHC summary; full advisory not reviewed. <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a></li></ul>
+  <ul><li><b>Polo</b> (Eastern Pacific) &mdash; Hurricane - Category 5 · 175 mph peak · 911 mb. ~355 mi SW of Cabo Corrientes, Mexico (~380 mi S of Cabo San Lucas) Hurricane Watch from Punta Eugenia southward to Santa Fe, Baja California Sur; hurricane conditions possible there by Monday evening; 4–8 in. of rain (up to 10) with possible flooding and mudslides. <span class="when">(as of Advisory #22, Fri 2026-09-25 8:00 PM MST)</span> <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP2+shtml/260255.shtml" target="_blank" rel="noopener">NHC Hurricane Polo Advisory #22</a></li><li><b>Odalys</b> (Eastern Pacific) &mdash; Hurricane - Category 3 · 120 mph peak · 952 mb. ~930 mi WSW of the southern tip of Baja California No coastal watches or warnings in effect. <span class="when">(as of Advisory #25, Fri 2026-09-25 8:00 PM PDT)</span> <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP1+shtml/260252.shtml" target="_blank" rel="noopener">NHC Hurricane Odalys Advisory #25</a></li><li><b>Gonzalo</b> (Atlantic) &mdash; Tropical Storm · 45 mph peak. Near 16.9N 22.5W, eastern Atlantic Per NHC summary; full advisory not reviewed. <span class="when">(as of Advisory #5, 2026-09-25/26)</span> <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a></li><li><b>Fay</b> (Atlantic) &mdash; Tropical Storm · 40 mph peak. Near 29.9N 43.4W, open Atlantic Per NHC summary; full advisory not reviewed. <span class="when">(as of Advisory #24, 2026-09-25/26)</span> <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a></li></ul>
   
   <p><b>Winter outlook:</b> CPC&#39;s Sep 10 ENSO discussion: greater than 90% chance of a very strong El Nino this fall/winter, with a 75% chance of a historic event (Nino-3.4 possibly exceeding +2.5C) - the discussion itself gives no LA/SoCal-specific numbers. (A newer September discussion may have posted; not yet confirmed.)</p>
+  <p class="when">Outlook from the CPC discussion dated 2026-09-10.</p>
+  
   <p><a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO Discussion</a> &middot; <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a></p>
 </article>
 
@@ -589,6 +612,9 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <h3 class="hd h-tv">Sky</h3>
   <p><b>Moon:</b> Full Moon (99.9% illuminated)</p>
   <p><b>Tonight's sky:</b> Full Moon tonight — Griffith&#39;s September report lists it as full on the 26th. Saturn and Neptune rise in the evening; Mars and Jupiter are up in the east-northeast before dawn. <a href="https://theskylive.com/moon/2026-09-26" target="_blank" rel="noopener">TheSkyLive: Moon on September 26, 2026</a> &middot; <a href="https://www.griffithmedia.org/skyreport/2026/09/01/griffith-observatory-sky-report-through-september-2026/" target="_blank" rel="noopener">Griffith Observatory Sky Report - September 2026</a></p>
+  
+  
+  
   <h5>Human Design transits</h5>
   <ul><li><b>Patrick:</b> Saturn in Gate 21 (The Hunter, one of your own gates) completes your 21–45 channel (in since 4 May); Uranus in Gate 20 (The Now, also yours) completes 20–34; Pluto in 41 completes 30–41 and Neptune in 25 completes 25–51; the North Node sits in your Gate 30. Mechanics per the HD Toolkit — meanings not interpreted here.</li><li><b>Travis:</b> Neptune in Gate 25 (The Spirit of the Self), one of your own gates, in place since August 2025. Mechanics per the HD Toolkit — meanings not interpreted here.</li></ul>
 </article>
@@ -628,7 +654,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
       <p class="tagl">No ads. No pop-ups. No tracking. Just the paper.</p>
     </div>
     <nav aria-label="Footer sections">
-      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
       <a href="/editions/">Past editions</a>
     </nav>
   </div>

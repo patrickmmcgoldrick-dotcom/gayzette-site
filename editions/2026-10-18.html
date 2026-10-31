@@ -359,6 +359,27 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   .ph{background:#f2f2f2 !important}
   article,.it,li{break-inside:avoid-page}
 }
+
+/* classroom */
+.cls-wrap{max-width:660px}
+.cls-meets{margin:40px 0 0;max-width:620px}
+.cls-meets p.lab,.cls-hw .lab,.cls-quiz p.lab,.cls-next p.lab,p.lab.cls-grp{font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:0 0 10px}
+.cls-meets ul{list-style:none;margin:0;padding:0}
+.cls-meets li{padding:14px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-meets li a{color:#C2603C;font-family:Fraunces,serif;font-weight:500;text-decoration:none;border-bottom:1px solid #C2603C}
+.cls-meets .why{display:block;margin-top:4px;color:#3a352e}
+.cls-hw{margin:28px 0 0;font-family:Newsreader,serif;font-size:19px;line-height:1.5;max-width:620px}
+.cls-hw .lab{display:inline-block;margin:0 8px 0 0;color:#C2603C}
+.cls-go{font-family:Fraunces,serif;font-style:italic;color:#6B645A;margin:20px 0 0}
+.cls-src{font-family:"DM Sans",sans-serif;font-size:13px;color:#6B645A;margin:14px 0 0}
+.cls-src a{color:inherit}
+.cls-ideas{margin:24px 0 0;padding-left:22px;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-ideas li{margin:0 0 16px}
+.cls-ideas strong{font-family:Fraunces,serif;font-weight:500}
+.cls-quiz,.cls-next{margin:36px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-quiz ol{padding-left:22px}
+.cls-next .bd{margin-top:0}
+.desk+.cls-hw,.desk+.cls-next{margin-top:28px}
 </style>
 </head>
 <body>
@@ -371,7 +392,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
     <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
   </div>
   <nav class="nav" aria-label="Sections">
-    <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/" class="on" aria-current="page">Sunday</a>
+    <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/" class="on" aria-current="page">Sunday</a>
   </nav>
 </header>
 
@@ -725,9 +746,11 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <p class="lab">Weather</p>
   <h3 class="hd h-tv">Storm Watch</h3>
   
-  <ul><li><b>Hurricane Trudy</b> (Eastern Pacific) &mdash; Hurricane; the advisory gives no numeric category (100 mph would be Cat 2 on Saffir-Simpson by our scout&#39;s reading, not NHC wording) · 100 mph peak · 974 mb. About 180 mi WNW of Manzanillo, Mexico and about 105 mi SW of Cabo Corrientes; center 19.5N 107.0W, moving NW at 6 mph Expected to weaken rapidly tonight. All Mexican coastal warnings and Islas Marias warnings discontinued; no watches or warnings in effect. Forecast to move away from the mainland and pass south of Baja California Sur Mon-Tue. 1-4 in of additional rain in Jalisco (flash flood and mudslide risk); dangerous surf and rip currents along southwestern and west-central Mexico for 2-3 days. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP1+shtml/182041.shtml" target="_blank" rel="noopener">NHC Public Advisory #22, Hurricane Trudy, 2 PM MST (2 PM PDT) Sun Oct 18</a></li></ul>
+  <ul><li><b>Hurricane Trudy</b> (Eastern Pacific) &mdash; Hurricane; the advisory gives no numeric category (100 mph would be Cat 2 on Saffir-Simpson by our scout&#39;s reading, not NHC wording) · 100 mph peak · 974 mb. About 180 mi WNW of Manzanillo, Mexico and about 105 mi SW of Cabo Corrientes; center 19.5N 107.0W, moving NW at 6 mph Expected to weaken rapidly tonight. All Mexican coastal warnings and Islas Marias warnings discontinued; no watches or warnings in effect. Forecast to move away from the mainland and pass south of Baja California Sur Mon-Tue. 1-4 in of additional rain in Jalisco (flash flood and mudslide risk); dangerous surf and rip currents along southwestern and west-central Mexico for 2-3 days. <span class="when">(as of 2026-10-18)</span> <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP1+shtml/182041.shtml" target="_blank" rel="noopener">NHC Public Advisory #22, Hurricane Trudy, 2 PM MST (2 PM PDT) Sun Oct 18</a></li></ul>
   
   <p><b>Winter outlook:</b> Atlantic: no tropical cyclones (NHC main page, updated Oct 18, 22:02 UTC). Winter: unchanged since Oct 8. CPC&#39;s El Nino Advisory is in effect, with a strong-to-very-strong El Nino likely through Jan-Mar 2027 and 83% odds of a historic event (RONI +2.5 or higher) for Oct-Dec. CPC says impacts are more likely, not certain, and its discussion gives no regional rain numbers; the usual El Nino tilt toward a wetter-than-normal SoCal winter is general background, our framing rather than CPC&#39;s. The next discussion is due about Nov 12.</p>
+  <p class="when">Outlook from the CPC discussion dated 2026-10-08.</p>
+  
   <p><a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO Diagnostic Discussion, issued 8 Oct 2026</a> &middot; <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center main page, 2026-10-18</a></p>
 </article>
 
@@ -738,6 +761,9 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <h3 class="hd h-tv">Sky</h3>
   <p><b>Moon:</b> First Quarter (tonight, Oct 18); Full Moon Sun Oct 25 (50% illuminated)</p>
   <p><b>Tonight's sky:</b> The Moon is at First Quarter tonight (about 50% lit by definition of the phase; no source gave a percentage). The Orionids, debris from Halley&#39;s Comet, peak the night of Oct 21-22, but the waxing gibbous moon interferes, so expect only as many as 15 to 20 meteors per hour at best; Space.com says wait until about 2 am for the darkest 3.5 hours, with the radiant in Orion rising after 11 pm. Planets, per Griffith&#39;s October report: Saturn rises in the evening (in Cetus); Jupiter and Mars are morning objects (Mars in Cancer, Jupiter in Leo); Venus is lost in the Sun&#39;s glare and Mercury is sinking into it (too close to the Sun after Oct 22). Full Moon is Oct 25. No comet named. <a href="https://griffithobservatory.lacity.gov/explore/observing-the-sky/sky-report/" target="_blank" rel="noopener">Griffith Observatory Sky Report - October 2026</a> &middot; <a href="https://theskylive.com/moon-info" target="_blank" rel="noopener">TheSkyLive Moon info (First Quarter, age 7.37 days, Oct 18 2026)</a> &middot; <a href="https://www.space.com/stargazing/meteor-showers/how-to-see-the-orionid-meteor-shower-2026-peak-this-week-and-when-to-look" target="_blank" rel="noopener">How to see the Orionid meteor shower 2026 peak - Space.com</a></p>
+  
+  
+  
   <h5>Human Design transits</h5>
   <ul><li><b>Patrick:</b> From the HD Toolkit, for the week of Oct 19: Saturn in Gate 21 (The Hunter, one of your own gates) completes your 21–45 channel (in since 4 May 2026); Uranus in Gate 20 (The Now, also yours) completes 20–34 (since 13 Sep 2025); Neptune in Gate 25 (The Spirit of the Self) completes 25–51 (since 13 Sep 2025); Pluto in Gate 41 (Contraction) completes 30–41 (since 5 Dec 2025); the North Node sits in Gate 30 (Recognition of Feelings, yours) since 25 Jul 2026. No slow-planet gate change in the next eight days. Mechanics only; meanings are interpretation.</li><li><b>Travis:</b> From the HD Toolkit, for the week of Oct 19: Neptune in Gate 25 (The Spirit of the Self, one of your own gates), in since 13 Sep 2025; it completes no channel. No slow-planet gate change in the next eight days. Mechanics only; meanings are interpretation.</li></ul>
 </article>
@@ -809,7 +835,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
       <p class="tagl">No ads. No pop-ups. No tracking. Just the paper.</p>
     </div>
     <nav aria-label="Footer sections">
-      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
       <a href="/editions/">Past editions</a>
     </nav>
   </div>

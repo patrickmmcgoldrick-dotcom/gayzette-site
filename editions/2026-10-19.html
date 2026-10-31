@@ -359,6 +359,27 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   .ph{background:#f2f2f2 !important}
   article,.it,li{break-inside:avoid-page}
 }
+
+/* classroom */
+.cls-wrap{max-width:660px}
+.cls-meets{margin:40px 0 0;max-width:620px}
+.cls-meets p.lab,.cls-hw .lab,.cls-quiz p.lab,.cls-next p.lab,p.lab.cls-grp{font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:0 0 10px}
+.cls-meets ul{list-style:none;margin:0;padding:0}
+.cls-meets li{padding:14px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-meets li a{color:#C2603C;font-family:Fraunces,serif;font-weight:500;text-decoration:none;border-bottom:1px solid #C2603C}
+.cls-meets .why{display:block;margin-top:4px;color:#3a352e}
+.cls-hw{margin:28px 0 0;font-family:Newsreader,serif;font-size:19px;line-height:1.5;max-width:620px}
+.cls-hw .lab{display:inline-block;margin:0 8px 0 0;color:#C2603C}
+.cls-go{font-family:Fraunces,serif;font-style:italic;color:#6B645A;margin:20px 0 0}
+.cls-src{font-family:"DM Sans",sans-serif;font-size:13px;color:#6B645A;margin:14px 0 0}
+.cls-src a{color:inherit}
+.cls-ideas{margin:24px 0 0;padding-left:22px;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-ideas li{margin:0 0 16px}
+.cls-ideas strong{font-family:Fraunces,serif;font-weight:500}
+.cls-quiz,.cls-next{margin:36px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-quiz ol{padding-left:22px}
+.cls-next .bd{margin-top:0}
+.desk+.cls-hw,.desk+.cls-next{margin-top:28px}
 </style>
 </head>
 <body>
@@ -371,7 +392,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
     <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
   </div>
   <nav class="nav" aria-label="Sections">
-    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
   </nav>
 </header>
 
@@ -633,9 +654,11 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <p class="lab">Weather</p>
   <h3 class="hd h-tv">Storm Watch</h3>
   <p><b>Los Angeles:</b> Sunny, high near 83, low around 62 · Los Angeles (NWS forecast)</p>
-  <ul><li><b>Tropical Storm Trudy</b> (Eastern Pacific) &mdash; Tropical storm, weakening · 60 mph peak · 999 mb. About 155 miles WSW of Cabo Corrientes, Mexico (19.7N 108.0W), moving west at 6 mph. No watches or warnings. Life-threatening surf and rip currents on the southwest and west-central Mexico coast through today. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP1+shtml/190831.shtml" target="_blank" rel="noopener">NHC Public Advisory 24, Tropical Storm Trudy</a></li></ul>
+  <ul><li><b>Tropical Storm Trudy</b> (Eastern Pacific) &mdash; Tropical storm, weakening · 60 mph peak · 999 mb. About 155 miles WSW of Cabo Corrientes, Mexico (19.7N 108.0W), moving west at 6 mph. No watches or warnings. Life-threatening surf and rip currents on the southwest and west-central Mexico coast through today. <span class="when">(as of 2026-10-19)</span> <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP1+shtml/190831.shtml" target="_blank" rel="noopener">NHC Public Advisory 24, Tropical Storm Trudy</a></li></ul>
   
   <p><b>Winter outlook:</b> CPC&#39;s Oct 8 discussion: an El Niño Advisory is in effect; a strong-to-very-strong El Niño is likely through Jan-Mar 2027 (over 83%), with about a 70% chance of a historic event (3-month RONI of +2.5C or more) for Nov-Jan, and it should keep strengthening through year-end.</p>
+  <p class="when">Outlook from the CPC discussion dated 2026-10-08.</p>
+  
   <p><a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP1+shtml/190831.shtml" target="_blank" rel="noopener">NHC Public Advisory 24, Tropical Storm Trudy</a> &middot; <a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO Diagnostic Discussion</a></p>
 </article>
 
@@ -646,6 +669,9 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <h3 class="hd h-tv">Sky</h3>
   <p><b>Moon:</b> Waxing gibbous (59% illuminated)</p>
   <p><b>Tonight's sky:</b> The bright moon is up much of the night (full Oct 26). The Orionid meteor shower peaks about 18 UTC on Oct 21 (EarthSky, citing RASC), at 10 to 20 meteors an hour at best; the best viewing is before dawn after moonset, and moon glare will hurt. <a href="https://www.moongiant.com/phase/10/19/2026/" target="_blank" rel="noopener">Moon Giant, Oct 19 2026</a> &middot; <a href="https://earthsky.org/astronomy-essentials/everything-you-need-to-know-orionid-meteor-shower" target="_blank" rel="noopener">EarthSky: Orionid meteor shower</a></p>
+  
+  
+  
   <h5>Human Design transits</h5>
   <ul><li><b>Patrick:</b> Today&#39;s transits (Oct 19, noon UT): Saturn sits in gate 21 (The Hunter, Heart centre), one of his own gates, completing his channel 21-45; Uranus sits in gate 20 (The Now, Throat), also his own, completing channel 20-34. Neptune in gate 25 (The Spirit of the Self) and Pluto in gate 41 (Contraction) would complete his 25-51 and 30-41 channels. The North Node sits in his own gate 30 (Recognition of Feelings).</li><li><b>Travis:</b> Today&#39;s transits (Oct 19, noon UT): Neptune sits in gate 25 (The Spirit of the Self, G centre), one of his own gates, and completes no channel.</li></ul>
 </article>
@@ -677,7 +703,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
       <p class="tagl">No ads. No pop-ups. No tracking. Just the paper.</p>
     </div>
     <nav aria-label="Footer sections">
-      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
       <a href="/editions/">Past editions</a>
     </nav>
   </div>

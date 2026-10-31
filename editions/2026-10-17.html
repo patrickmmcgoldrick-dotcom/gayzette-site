@@ -359,6 +359,27 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   .ph{background:#f2f2f2 !important}
   article,.it,li{break-inside:avoid-page}
 }
+
+/* classroom */
+.cls-wrap{max-width:660px}
+.cls-meets{margin:40px 0 0;max-width:620px}
+.cls-meets p.lab,.cls-hw .lab,.cls-quiz p.lab,.cls-next p.lab,p.lab.cls-grp{font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:0 0 10px}
+.cls-meets ul{list-style:none;margin:0;padding:0}
+.cls-meets li{padding:14px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-meets li a{color:#C2603C;font-family:Fraunces,serif;font-weight:500;text-decoration:none;border-bottom:1px solid #C2603C}
+.cls-meets .why{display:block;margin-top:4px;color:#3a352e}
+.cls-hw{margin:28px 0 0;font-family:Newsreader,serif;font-size:19px;line-height:1.5;max-width:620px}
+.cls-hw .lab{display:inline-block;margin:0 8px 0 0;color:#C2603C}
+.cls-go{font-family:Fraunces,serif;font-style:italic;color:#6B645A;margin:20px 0 0}
+.cls-src{font-family:"DM Sans",sans-serif;font-size:13px;color:#6B645A;margin:14px 0 0}
+.cls-src a{color:inherit}
+.cls-ideas{margin:24px 0 0;padding-left:22px;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-ideas li{margin:0 0 16px}
+.cls-ideas strong{font-family:Fraunces,serif;font-weight:500}
+.cls-quiz,.cls-next{margin:36px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-quiz ol{padding-left:22px}
+.cls-next .bd{margin-top:0}
+.desk+.cls-hw,.desk+.cls-next{margin-top:28px}
 </style>
 </head>
 <body>
@@ -371,7 +392,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
     <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
   </div>
   <nav class="nav" aria-label="Sections">
-    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
   </nav>
 </header>
 
@@ -656,9 +677,11 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <p class="lab">Weather</p>
   <h3 class="hd h-tv">Storm Watch</h3>
   <p><b>Los Angeles:</b> Sunny, high near 90, low around 67 · heat advisory until 8 PM PDT today · East L.A. (NWS)</p>
-  <ul><li><b>Hurricane Trudy</b> (Eastern Pacific) &mdash; Category 1 hurricane (90 mph) · 90 mph peak · 979 mb. 16.0N 103.4W, about 240 mi WSW of Acapulco and 215 mi SSE of Manzanillo, moving NW at about 8 mph Hurricane Warning for the Mexican coast from Manzanillo north to Cabo Corrientes; Hurricane Watch from south of Manzanillo to Punta San Telmo; Tropical Storm Warning south of Manzanillo to Zihuatanejo and north of Cabo Corrientes to Punta Mita; Tropical Storm Watch north of Punta Mita to San Blas and Las Islas Marias. Rain of 4-8 in (isolated 15 in) in Michoacan, Colima and Jalisco; flooding and mudslides possible; life-threatening surf spreading north. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP1+shtml/170840.shtml" target="_blank" rel="noopener">NHC Public Advisory 16, 3:00 AM CST Oct 17</a></li></ul>
+  <ul><li><b>Hurricane Trudy</b> (Eastern Pacific) &mdash; Category 1 hurricane (90 mph) · 90 mph peak · 979 mb. 16.0N 103.4W, about 240 mi WSW of Acapulco and 215 mi SSE of Manzanillo, moving NW at about 8 mph Hurricane Warning for the Mexican coast from Manzanillo north to Cabo Corrientes; Hurricane Watch from south of Manzanillo to Punta San Telmo; Tropical Storm Warning south of Manzanillo to Zihuatanejo and north of Cabo Corrientes to Punta Mita; Tropical Storm Watch north of Punta Mita to San Blas and Las Islas Marias. Rain of 4-8 in (isolated 15 in) in Michoacan, Colima and Jalisco; flooding and mudslides possible; life-threatening surf spreading north. <span class="when">(as of 2026-10-17)</span> <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP1+shtml/170840.shtml" target="_blank" rel="noopener">NHC Public Advisory 16, 3:00 AM CST Oct 17</a></li></ul>
   
   <p><b>Winter outlook:</b> CPC&#39;s October 8 discussion is still the latest: El Nino Advisory, with a strong to very strong El Nino likely through January-March 2027 (above 83% chance). Next update due Nov 12.</p>
+  <p class="when">Outlook from the CPC discussion dated 2026-10-08.</p>
+  
   <p><a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO diagnostic discussion</a> &middot; <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a> &middot; <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP5+shtml/170840.shtml" target="_blank" rel="noopener">NHC final advisory 38 on Simon (dissipated, 2:00 PM MST Oct 16)</a></p>
 </article>
 
@@ -669,6 +692,9 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <h3 class="hd h-tv">Sky</h3>
   <p><b>Moon:</b> Waxing crescent (41% illuminated)</p>
   <p><b>Tonight's sky:</b> Saturn is up in the evening and Uranus rises mid-evening; Mars and Jupiter rise after midnight. First quarter moon is Oct 18 and full moon Oct 25. The Orionid meteor shower is active but peaks the night of Oct 21-22, with moonlight interfering. <a href="https://www.moongiant.com/phase/10/17/2026/" target="_blank" rel="noopener">Moongiant: moon phase Oct 17, 2026</a> &middot; <a href="https://griffithobservatory.lacity.gov/?p=949" target="_blank" rel="noopener">Griffith Observatory Sky Report, October 2026</a></p>
+  
+  
+  
   <h5>Human Design transits</h5>
   <ul><li><b>Patrick:</b> Saturn sits in your own Gate 21 (The Hunter, Heart), completing your 21–45 channel, and Uranus in your own Gate 20 (The Now, Throat) completes 20–34. The North Node is in your Gate 30 (Recognition of Feelings). Neptune in Gate 25 and Pluto in Gate 41 would complete your 25–51 and 30–41 channels.</li><li><b>Travis:</b> Neptune sits in your own Gate 25 (The Spirit of the Self, G centre).</li></ul>
 </article>
@@ -708,7 +734,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
       <p class="tagl">No ads. No pop-ups. No tracking. Just the paper.</p>
     </div>
     <nav aria-label="Footer sections">
-      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
       <a href="/editions/">Past editions</a>
     </nav>
   </div>

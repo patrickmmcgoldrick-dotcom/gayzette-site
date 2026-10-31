@@ -359,6 +359,27 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   .ph{background:#f2f2f2 !important}
   article,.it,li{break-inside:avoid-page}
 }
+
+/* classroom */
+.cls-wrap{max-width:660px}
+.cls-meets{margin:40px 0 0;max-width:620px}
+.cls-meets p.lab,.cls-hw .lab,.cls-quiz p.lab,.cls-next p.lab,p.lab.cls-grp{font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:0 0 10px}
+.cls-meets ul{list-style:none;margin:0;padding:0}
+.cls-meets li{padding:14px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-meets li a{color:#C2603C;font-family:Fraunces,serif;font-weight:500;text-decoration:none;border-bottom:1px solid #C2603C}
+.cls-meets .why{display:block;margin-top:4px;color:#3a352e}
+.cls-hw{margin:28px 0 0;font-family:Newsreader,serif;font-size:19px;line-height:1.5;max-width:620px}
+.cls-hw .lab{display:inline-block;margin:0 8px 0 0;color:#C2603C}
+.cls-go{font-family:Fraunces,serif;font-style:italic;color:#6B645A;margin:20px 0 0}
+.cls-src{font-family:"DM Sans",sans-serif;font-size:13px;color:#6B645A;margin:14px 0 0}
+.cls-src a{color:inherit}
+.cls-ideas{margin:24px 0 0;padding-left:22px;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-ideas li{margin:0 0 16px}
+.cls-ideas strong{font-family:Fraunces,serif;font-weight:500}
+.cls-quiz,.cls-next{margin:36px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-quiz ol{padding-left:22px}
+.cls-next .bd{margin-top:0}
+.desk+.cls-hw,.desk+.cls-next{margin-top:28px}
 </style>
 </head>
 <body>
@@ -371,7 +392,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
     <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
   </div>
   <nav class="nav" aria-label="Sections">
-    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
   </nav>
 </header>
 
@@ -611,9 +632,11 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <p class="lab">Weather</p>
   <h3 class="hd h-tv">Storm Watch</h3>
   <p><b>Los Angeles:</b> High near 90, morning fog then clearing, LA (NWS)</p>
-  <ul><li><b>Hurricane Isaias</b> (Atlantic (Gulf of Mexico)) &mdash; Hurricane · 110 mph peak · 963 mb. Gulf of Mexico, 26.4N 88.0W Land threat not confirmed in this morning&#39;s check; see NHC for current watches and warnings. <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC, Public Advisory #11, 4:00 AM CDT Oct 9</a></li><li><b>Hurricane Simon</b> (Eastern Pacific) &mdash; Hurricane · 90 mph peak · 978 mb. Off southwestern Mexico, 15.8N 104.5W, moving northwest at 5 mph See NHC for current watches and warnings. <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC, Public Advisory #8, 3:00 AM CST Oct 9</a></li><li><b>Tropical Storm Rachel</b> (Eastern Pacific) &mdash; Tropical storm · 50 mph peak · 994 mb. Open Pacific, 22.7N 124.9W No land threat stated. <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC, Public Advisory #49, 2:00 AM PDT Oct 9</a></li></ul>
+  <ul><li><b>Hurricane Isaias</b> (Atlantic (Gulf of Mexico)) &mdash; Hurricane · 110 mph peak · 963 mb. Gulf of Mexico, 26.4N 88.0W Land threat not confirmed in this morning&#39;s check; see NHC for current watches and warnings. <span class="when">(as of 2026-10-09)</span> <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC, Public Advisory #11, 4:00 AM CDT Oct 9</a></li><li><b>Hurricane Simon</b> (Eastern Pacific) &mdash; Hurricane · 90 mph peak · 978 mb. Off southwestern Mexico, 15.8N 104.5W, moving northwest at 5 mph See NHC for current watches and warnings. <span class="when">(as of 2026-10-09)</span> <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC, Public Advisory #8, 3:00 AM CST Oct 9</a></li><li><b>Tropical Storm Rachel</b> (Eastern Pacific) &mdash; Tropical storm · 50 mph peak · 994 mb. Open Pacific, 22.7N 124.9W No land threat stated. <span class="when">(as of 2026-10-09)</span> <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC, Public Advisory #49, 2:00 AM PDT Oct 9</a></li></ul>
   
   <p><b>Winter outlook:</b> New CPC discussion (Oct 8): El Niño keeps strengthening, and a strong-to-very-strong event is likely through Jan-Mar 2027 (greater than 83% chance). CPC puts the chance of a historic-strength event at 83% for Oct-Dec.</p>
+  <p class="when">Outlook from the CPC discussion dated 2026-10-08.</p>
+  
   <p><a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO Diagnostic Discussion, Oct 8 2026</a> &middot; <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a></p>
 </article>
 
@@ -622,6 +645,9 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <img class="pic r45" src="https://images.unsplash.com/photo-1760373831985-aa42cc6f3b0c?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="The sky tonight" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
   <p class="lab">Overhead</p>
   <h3 class="hd h-tv">Sky</h3>
+  
+  
+  
   
   
   <h5>Human Design transits</h5>
@@ -663,7 +689,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
       <p class="tagl">No ads. No pop-ups. No tracking. Just the paper.</p>
     </div>
     <nav aria-label="Footer sections">
-      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
       <a href="/editions/">Past editions</a>
     </nav>
   </div>

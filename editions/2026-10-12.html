@@ -359,6 +359,27 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   .ph{background:#f2f2f2 !important}
   article,.it,li{break-inside:avoid-page}
 }
+
+/* classroom */
+.cls-wrap{max-width:660px}
+.cls-meets{margin:40px 0 0;max-width:620px}
+.cls-meets p.lab,.cls-hw .lab,.cls-quiz p.lab,.cls-next p.lab,p.lab.cls-grp{font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:0 0 10px}
+.cls-meets ul{list-style:none;margin:0;padding:0}
+.cls-meets li{padding:14px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-meets li a{color:#C2603C;font-family:Fraunces,serif;font-weight:500;text-decoration:none;border-bottom:1px solid #C2603C}
+.cls-meets .why{display:block;margin-top:4px;color:#3a352e}
+.cls-hw{margin:28px 0 0;font-family:Newsreader,serif;font-size:19px;line-height:1.5;max-width:620px}
+.cls-hw .lab{display:inline-block;margin:0 8px 0 0;color:#C2603C}
+.cls-go{font-family:Fraunces,serif;font-style:italic;color:#6B645A;margin:20px 0 0}
+.cls-src{font-family:"DM Sans",sans-serif;font-size:13px;color:#6B645A;margin:14px 0 0}
+.cls-src a{color:inherit}
+.cls-ideas{margin:24px 0 0;padding-left:22px;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-ideas li{margin:0 0 16px}
+.cls-ideas strong{font-family:Fraunces,serif;font-weight:500}
+.cls-quiz,.cls-next{margin:36px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-quiz ol{padding-left:22px}
+.cls-next .bd{margin-top:0}
+.desk+.cls-hw,.desk+.cls-next{margin-top:28px}
 </style>
 </head>
 <body>
@@ -371,7 +392,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
     <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
   </div>
   <nav class="nav" aria-label="Sections">
-    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
   </nav>
 </header>
 
@@ -635,9 +656,11 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <p class="lab">Weather</p>
   <h3 class="hd h-tv">Storm Watch</h3>
   <p><b>Los Angeles:</b> Showers likely, high 63, LA (NWS)</p>
-  <ul><li><b>Hurricane Simon</b> (Eastern Pacific) &mdash; Cat 2 (110 mph winds) · 110 mph peak · 962 mb. About 55 miles WSW of Cabo Corrientes, Mexico, and about 215 miles south of Mazatlan, moving northwest at about 3 mph. Weakening somewhat today, with strengthening possible again Tuesday and Wednesday; it stays a hurricane through midweek. Hurricane Warning for Las Islas Marias, Hurricane Watch north of Cabo Corrientes to Bahia Tempehuaya, and a Tropical Storm Warning from Playa Perula to Cabo Corrientes. It turns northeast and nears the west-central Mexico coast Wednesday to Thursday, with up to 30 inches of rain locally in Michoacan, Colima and Jalisco, plus surge and mudslides. No US threat. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP5+shtml/121100_MIATCPEP5.shtml" target="_blank" rel="noopener">NHC Public Advisory, Hurricane Simon #21</a></li><li><b>Remnants of Rachel</b> (Eastern Pacific) &mdash; Post-tropical remnants · 35 mph peak · 994 mb. Near 35.8N 114.6W, about 255 miles NNE of San Diego, moving NNE at about 29 mph (final advisory #58, Sunday Oct 11). Rain of 1 to 3 inches, locally 5, from Southern California to the Great Basin, and high surf and coastal flooding in Southern California for several days (NHC). <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP3+shtml/121100_MIATCPEP3.shtml" target="_blank" rel="noopener">NHC Public Advisory, Remnants of Rachel #58</a></li></ul>
+  <ul><li><b>Hurricane Simon</b> (Eastern Pacific) &mdash; Cat 2 (110 mph winds) · 110 mph peak · 962 mb. About 55 miles WSW of Cabo Corrientes, Mexico, and about 215 miles south of Mazatlan, moving northwest at about 3 mph. Weakening somewhat today, with strengthening possible again Tuesday and Wednesday; it stays a hurricane through midweek. Hurricane Warning for Las Islas Marias, Hurricane Watch north of Cabo Corrientes to Bahia Tempehuaya, and a Tropical Storm Warning from Playa Perula to Cabo Corrientes. It turns northeast and nears the west-central Mexico coast Wednesday to Thursday, with up to 30 inches of rain locally in Michoacan, Colima and Jalisco, plus surge and mudslides. No US threat. <span class="when">(as of 2026-10-12)</span> <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP5+shtml/121100_MIATCPEP5.shtml" target="_blank" rel="noopener">NHC Public Advisory, Hurricane Simon #21</a></li><li><b>Remnants of Rachel</b> (Eastern Pacific) &mdash; Post-tropical remnants · 35 mph peak · 994 mb. Near 35.8N 114.6W, about 255 miles NNE of San Diego, moving NNE at about 29 mph (final advisory #58, Sunday Oct 11). Rain of 1 to 3 inches, locally 5, from Southern California to the Great Basin, and high surf and coastal flooding in Southern California for several days (NHC). <span class="when">(as of 2026-10-11)</span> <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP3+shtml/121100_MIATCPEP3.shtml" target="_blank" rel="noopener">NHC Public Advisory, Remnants of Rachel #58</a></li></ul>
   
   <p><b>Winter outlook:</b> CPC&#39;s El Nino Advisory (Oct 8): El Nino continues to strengthen, and a strong-to-very-strong event is likely through Jan-Mar 2027 (over an 83% chance). The chance of a historic event (RONI of +2.5C or more) is 83% for Oct-Dec and 70% for Nov-Jan. The discussion makes no specific statement about Southern California or US rain, only that El Nino-consistent impacts are more likely with an event this size, though not guaranteed. Separately, NHC gives a broad low (EP93) south-southwest of Guatemala 80% odds of forming within 48 hours, expected well south of southern Mexico.</p>
+  <p class="when">Outlook from the CPC discussion dated 2026-10-08.</p>
+  
   <p><a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO Diagnostic Discussion</a> &middot; <a href="https://www.nhc.noaa.gov/text/refresh/MIATWOEP+shtml/121200_MIATWOEP.shtml" target="_blank" rel="noopener">NHC Tropical Weather Outlook, Eastern Pacific</a> &middot; <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC</a></p>
 </article>
 
@@ -648,6 +671,9 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <h3 class="hd h-tv">Sky</h3>
   <p><b>Moon:</b> Waxing crescent (% illuminated)</p>
   <p><b>Tonight's sky:</b> A thin crescent hangs low in the west after sunset (6:23 pm). Saturn is up most of the night (Griffith&#39;s report gave a 6:48 pm rise on Oct 1). The Orionid meteor shower is active but does not peak until the night of Oct 21-22 (10 to 20 an hour, with moonlight interfering). Griffith Observatory is closed today; its Star Party is Saturday, Oct 17, 2 to 9:45 pm. <a href="https://griffithobservatory.lacity.gov/explore/observing-the-sky/sky-report/" target="_blank" rel="noopener">Griffith Observatory Sky Report</a> &middot; <a href="https://www.theskylive.com/moon-info" target="_blank" rel="noopener">TheSkyLive Moon info</a></p>
+  
+  
+  
   <h5>Human Design transits</h5>
   <ul><li><b>Patrick:</b> Saturn is in Gate 21, The Hunter (Heart), one of your own gates, completing your 21-45 channel (since May 4). Uranus is in your Gate 20, The Now (Throat), completing 20-34. Neptune in Gate 25 completes your 25-51, Pluto in Gate 41 completes your 30-41, and the North Node sits in your Gate 30, Recognition of Feelings. Mechanics only, from the HD Toolkit.</li><li><b>Travis:</b> Neptune is in Gate 25, The Spirit of the Self (G centre), one of Travis&#39;s own gates, since Sep 7, 2025. Mechanics only, from the HD Toolkit.</li></ul>
 </article>
@@ -687,7 +713,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
       <p class="tagl">No ads. No pop-ups. No tracking. Just the paper.</p>
     </div>
     <nav aria-label="Footer sections">
-      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
       <a href="/editions/">Past editions</a>
     </nav>
   </div>

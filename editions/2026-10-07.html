@@ -359,6 +359,27 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   .ph{background:#f2f2f2 !important}
   article,.it,li{break-inside:avoid-page}
 }
+
+/* classroom */
+.cls-wrap{max-width:660px}
+.cls-meets{margin:40px 0 0;max-width:620px}
+.cls-meets p.lab,.cls-hw .lab,.cls-quiz p.lab,.cls-next p.lab,p.lab.cls-grp{font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:0 0 10px}
+.cls-meets ul{list-style:none;margin:0;padding:0}
+.cls-meets li{padding:14px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-meets li a{color:#C2603C;font-family:Fraunces,serif;font-weight:500;text-decoration:none;border-bottom:1px solid #C2603C}
+.cls-meets .why{display:block;margin-top:4px;color:#3a352e}
+.cls-hw{margin:28px 0 0;font-family:Newsreader,serif;font-size:19px;line-height:1.5;max-width:620px}
+.cls-hw .lab{display:inline-block;margin:0 8px 0 0;color:#C2603C}
+.cls-go{font-family:Fraunces,serif;font-style:italic;color:#6B645A;margin:20px 0 0}
+.cls-src{font-family:"DM Sans",sans-serif;font-size:13px;color:#6B645A;margin:14px 0 0}
+.cls-src a{color:inherit}
+.cls-ideas{margin:24px 0 0;padding-left:22px;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-ideas li{margin:0 0 16px}
+.cls-ideas strong{font-family:Fraunces,serif;font-weight:500}
+.cls-quiz,.cls-next{margin:36px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-quiz ol{padding-left:22px}
+.cls-next .bd{margin-top:0}
+.desk+.cls-hw,.desk+.cls-next{margin-top:28px}
 </style>
 </head>
 <body>
@@ -371,7 +392,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
     <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
   </div>
   <nav class="nav" aria-label="Sections">
-    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
   </nav>
 </header>
 
@@ -648,9 +669,11 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <p class="lab">Weather</p>
   <h3 class="hd h-tv">Storm Watch</h3>
   <p><b>Los Angeles:</b> Sunny and hot, high near 97F; NWS Extreme Heat Warning for inland LA County through Oct 8, 8 PM PDT</p>
-  <ul><li><b>Hurricane Rachel</b> (Eastern Pacific) &mdash; Category 1 · 80 mph peak · 979 mb. About 740 mi west of southern Baja California (20.6N 121.2W), moving WNW at 7 mph None; no coastal watches/warnings; open water, expected to turn northeast by week&#39;s end. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP3+shtml/070859.shtml" target="_blank" rel="noopener">NHC Public Advisory #41, 2:00 AM PDT Oct 7</a></li><li><b>Tropical Storm Isaias</b> (Atlantic) &mdash; Tropical storm · 40 mph peak · 1004 mb. About 285 mi west of Progreso, Mexico, (22.0N 94.1W), moving ENE at 8 mph Hurricane Watch likely for part of the northern US Gulf coast later today; 3-6 in rain (isolated 10 in) Fri through the weekend across northern Gulf Coast/Southeast; Yucatan gusts Thursday; 2-4 in Bay of Campeche. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPAT4+shtml/070852.shtml" target="_blank" rel="noopener">NHC Public Advisory #3, 4:00 AM CDT Oct 7</a></li></ul>
+  <ul><li><b>Hurricane Rachel</b> (Eastern Pacific) &mdash; Category 1 · 80 mph peak · 979 mb. About 740 mi west of southern Baja California (20.6N 121.2W), moving WNW at 7 mph None; no coastal watches/warnings; open water, expected to turn northeast by week&#39;s end. <span class="when">(as of 2026-10-07)</span> <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP3+shtml/070859.shtml" target="_blank" rel="noopener">NHC Public Advisory #41, 2:00 AM PDT Oct 7</a></li><li><b>Tropical Storm Isaias</b> (Atlantic) &mdash; Tropical storm · 40 mph peak · 1004 mb. About 285 mi west of Progreso, Mexico, (22.0N 94.1W), moving ENE at 8 mph Hurricane Watch likely for part of the northern US Gulf coast later today; 3-6 in rain (isolated 10 in) Fri through the weekend across northern Gulf Coast/Southeast; Yucatan gusts Thursday; 2-4 in Bay of Campeche. <span class="when">(as of 2026-10-07)</span> <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPAT4+shtml/070852.shtml" target="_blank" rel="noopener">NHC Public Advisory #3, 4:00 AM CDT Oct 7</a></li></ul>
   
   <p><b>Winter outlook:</b> El Nino Advisory in effect: NOAA CPC says &#34;El Nino is strengthening, with a greater than 90% chance of a very strong event during the Northern Hemisphere fall and winter 2026-27,&#34; and gives a 75% chance Oct-Dec exceeds any El Nino since 1950. (Still the Sept 10 discussion; no newer one posted as of this morning.)</p>
+  <p class="when">Outlook from the CPC discussion dated 2026-09-10.</p>
+  
   <p><a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC</a> &middot; <a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO Diagnostic Discussion, issued 10 Sep 2026</a></p>
 </article>
 
@@ -661,6 +684,9 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <h3 class="hd h-tv">Sky</h3>
   <p><b>Moon:</b> Waning crescent (new moon Oct 10) (% illuminated)</p>
   <p><b>Tonight's sky:</b> Thin waning crescent moon, so dark skies; Saturn up in the evening, Mars and Jupiter rise pre-dawn (Mars about 1:20 am, Jupiter about 2:35 am, per Griffith). Griffith&#39;s report does not mention the Draconids. <a href="https://griffithobservatory.lacity.gov/explore/observing-the-sky/sky-report/" target="_blank" rel="noopener">Griffith Observatory Sky Report</a> &middot; <a href="https://theskylive.com/moon-info" target="_blank" rel="noopener">TheSkyLive Moon Info</a></p>
+  
+  
+  
   <h5>Human Design transits</h5>
   <ul><li><b>Patrick:</b> From the HD Toolkit: Saturn is in your own Gate 21 (The Hunter, Heart) since May 4, completing your 21-45 channel; Uranus sits in your Gate 20 (The Now), completing 20-34; Neptune in Gate 25 completes 25-51, Pluto in Gate 41 completes 30-41, and the North Node is in your Gate 30.</li><li><b>Travis:</b> From the HD Toolkit: Neptune has been in Gate 25 (The Spirit of the Self, G centre), one of your own gates, since Sept 2, 2025.</li></ul>
 </article>
@@ -700,7 +726,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
       <p class="tagl">No ads. No pop-ups. No tracking. Just the paper.</p>
     </div>
     <nav aria-label="Footer sections">
-      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
       <a href="/editions/">Past editions</a>
     </nav>
   </div>

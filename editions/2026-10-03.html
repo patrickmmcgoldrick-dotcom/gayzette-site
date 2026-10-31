@@ -359,6 +359,27 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   .ph{background:#f2f2f2 !important}
   article,.it,li{break-inside:avoid-page}
 }
+
+/* classroom */
+.cls-wrap{max-width:660px}
+.cls-meets{margin:40px 0 0;max-width:620px}
+.cls-meets p.lab,.cls-hw .lab,.cls-quiz p.lab,.cls-next p.lab,p.lab.cls-grp{font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:0 0 10px}
+.cls-meets ul{list-style:none;margin:0;padding:0}
+.cls-meets li{padding:14px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-meets li a{color:#C2603C;font-family:Fraunces,serif;font-weight:500;text-decoration:none;border-bottom:1px solid #C2603C}
+.cls-meets .why{display:block;margin-top:4px;color:#3a352e}
+.cls-hw{margin:28px 0 0;font-family:Newsreader,serif;font-size:19px;line-height:1.5;max-width:620px}
+.cls-hw .lab{display:inline-block;margin:0 8px 0 0;color:#C2603C}
+.cls-go{font-family:Fraunces,serif;font-style:italic;color:#6B645A;margin:20px 0 0}
+.cls-src{font-family:"DM Sans",sans-serif;font-size:13px;color:#6B645A;margin:14px 0 0}
+.cls-src a{color:inherit}
+.cls-ideas{margin:24px 0 0;padding-left:22px;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-ideas li{margin:0 0 16px}
+.cls-ideas strong{font-family:Fraunces,serif;font-weight:500}
+.cls-quiz,.cls-next{margin:36px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-quiz ol{padding-left:22px}
+.cls-next .bd{margin-top:0}
+.desk+.cls-hw,.desk+.cls-next{margin-top:28px}
 </style>
 </head>
 <body>
@@ -371,7 +392,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
     <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
   </div>
   <nav class="nav" aria-label="Sections">
-    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
   </nav>
 </header>
 
@@ -635,9 +656,11 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <p class="lab">Weather</p>
   <h3 class="hd h-tv">Storm Watch</h3>
   <p><b>Los Angeles:</b> Los Angeles today: sunny and hot, high 99F, low 78F, light NE wind turning SW; Extreme Heat Warning until Oct 8, 8 PM PDT.</p>
-  <ul><li><b>Hurricane Rachel</b> (Eastern Pacific) &mdash; Cat 2 · 85 mph peak · 973 mb. 19.6N 112.1W, moving WNW at 3 mph No land threat stated in fetched summary. <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC</a></li><li><b>Hurricane Nolo</b> (Central Pacific) &mdash; Cat 2/3 borderline · 110 mph peak · 963 mb. 23.1N 171.2W, moving W at 14 mph (open ocean, far NW of Hawaii) No land threat stated. <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC</a></li></ul>
+  <ul><li><b>Hurricane Rachel</b> (Eastern Pacific) &mdash; Cat 2 · 85 mph peak · 973 mb. 19.6N 112.1W, moving WNW at 3 mph No land threat stated in fetched summary. <span class="when">(as of Advisory #26, 8:00 AM MST Sat Oct 3, 2026)</span> <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC</a></li><li><b>Hurricane Nolo</b> (Central Pacific) &mdash; Cat 2/3 borderline · 110 mph peak · 963 mb. 23.1N 171.2W, moving W at 14 mph (open ocean, far NW of Hawaii) No land threat stated. <span class="when">(as of Advisory #52, 5:00 AM HST Sat Oct 3, 2026)</span> <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC</a></li></ul>
   
   <p><b>Winter outlook:</b> El Nino Advisory: El Nino is strengthening, with greater than 90% chance of a very strong event in fall/winter 2026-27 (Nino-3.4 index +1.8C). The Sept. 10 discussion also gives a 75% chance that Oct-Dec conditions exceed the strength of any El Nino since 1950. No tropical cyclones in the Atlantic.</p>
+  <p class="when">Outlook from the CPC discussion dated 2026-09-10.</p>
+  
   <p><a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC</a> &middot; <a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO Diagnostic Discussion</a></p>
 </article>
 
@@ -648,6 +671,9 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <h3 class="hd h-tv">Sky</h3>
   <p><b>Moon:</b> Third Quarter (last quarter) (48.3% illuminated)</p>
   <p><b>Tonight's sky:</b> Last-quarter Moon rises around midnight; new moon Oct 10. Saturn rises about 6:48 PM (Oct 1); Mars rises about 1:28 AM (Oct 1) in Cancer; Orionids active through Nov 7, peak Oct 21-22. <a href="https://theskylive.com/moon-today" target="_blank" rel="noopener">TheSkyLive Moon Today</a> &middot; <a href="https://griffithobservatory.lacity.gov/sky-report/" target="_blank" rel="noopener">Griffith Observatory Sky Report (Oct 2026)</a></p>
+  
+  
+  
   <h5>Human Design transits</h5>
   <ul><li><b>Patrick:</b> Five slow transits sit on Patrick&#39;s chart today: Saturn in Gate 21 (The Hunter, since May 4) completes his 21-45 channel; Uranus in Gate 20 (The Now) completes 20-34; Neptune in Gate 25 (The Spirit of the Self) completes 25-51; Pluto in Gate 41 (Contraction) completes 30-41; and the North Node sits in Gate 30 (Recognition of Feelings), one of his own gates.</li><li><b>Travis:</b> Neptune has been in Gate 25 (The Spirit of the Self), one of Travis&#39;s own gates, since Aug 29, 2025.</li></ul>
 </article>
@@ -687,7 +713,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
       <p class="tagl">No ads. No pop-ups. No tracking. Just the paper.</p>
     </div>
     <nav aria-label="Footer sections">
-      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
       <a href="/editions/">Past editions</a>
     </nav>
   </div>

@@ -359,6 +359,27 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   .ph{background:#f2f2f2 !important}
   article,.it,li{break-inside:avoid-page}
 }
+
+/* classroom */
+.cls-wrap{max-width:660px}
+.cls-meets{margin:40px 0 0;max-width:620px}
+.cls-meets p.lab,.cls-hw .lab,.cls-quiz p.lab,.cls-next p.lab,p.lab.cls-grp{font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:0 0 10px}
+.cls-meets ul{list-style:none;margin:0;padding:0}
+.cls-meets li{padding:14px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-meets li a{color:#C2603C;font-family:Fraunces,serif;font-weight:500;text-decoration:none;border-bottom:1px solid #C2603C}
+.cls-meets .why{display:block;margin-top:4px;color:#3a352e}
+.cls-hw{margin:28px 0 0;font-family:Newsreader,serif;font-size:19px;line-height:1.5;max-width:620px}
+.cls-hw .lab{display:inline-block;margin:0 8px 0 0;color:#C2603C}
+.cls-go{font-family:Fraunces,serif;font-style:italic;color:#6B645A;margin:20px 0 0}
+.cls-src{font-family:"DM Sans",sans-serif;font-size:13px;color:#6B645A;margin:14px 0 0}
+.cls-src a{color:inherit}
+.cls-ideas{margin:24px 0 0;padding-left:22px;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-ideas li{margin:0 0 16px}
+.cls-ideas strong{font-family:Fraunces,serif;font-weight:500}
+.cls-quiz,.cls-next{margin:36px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-quiz ol{padding-left:22px}
+.cls-next .bd{margin-top:0}
+.desk+.cls-hw,.desk+.cls-next{margin-top:28px}
 </style>
 </head>
 <body>
@@ -371,7 +392,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
     <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
   </div>
   <nav class="nav" aria-label="Sections">
-    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
   </nav>
 </header>
 
@@ -588,9 +609,11 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <p class="lab">Weather</p>
   <h3 class="hd h-tv">Storm Watch</h3>
   <p><b>Los Angeles:</b> Los Angeles today: sunny and hot, high near 102F, low 78F; NWS Extreme Heat Warning until Oct 8, 8 PM PDT.</p>
-  <ul><li><b>Hurricane Rachel</b> (Eastern Pacific) &mdash; Hurricane · 105 mph peak · 965 mb. 20.1N 114.3W, well offshore west of Baja California, moving W at 6 mph Moving west, away from the coast. <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a></li><li><b>Hurricane Nolo</b> (Central Pacific) &mdash; Hurricane · 115 mph peak · 959 mb. 24.2N 180.0E, at the International Dateline, moving W at 17 mph Crossing into the Western Pacific; final advisory from this center. <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a></li></ul>
+  <ul><li><b>Hurricane Rachel</b> (Eastern Pacific) &mdash; Hurricane · 105 mph peak · 965 mb. 20.1N 114.3W, well offshore west of Baja California, moving W at 6 mph Moving west, away from the coast. <span class="when">(as of Advisory #31, 2:00 PM MST Sun Oct 4, 2026)</span> <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a></li><li><b>Hurricane Nolo</b> (Central Pacific) &mdash; Hurricane · 115 mph peak · 959 mb. 24.2N 180.0E, at the International Dateline, moving W at 17 mph Crossing into the Western Pacific; final advisory from this center. <span class="when">(as of Advisory #57, 11:00 AM HST Sun Oct 4, 2026)</span> <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a></li></ul>
   
   <p><b>Winter outlook:</b> El Nino Advisory in effect: NOAA CPC says &#34;El Nino is strengthening, with a greater than 90% chance of a very strong event during fall and winter 2026-27,&#34; and gives a 75% chance Oct-Dec exceeds any El Nino since 1950. Next CPC update due Oct 8. No Atlantic tropical cyclones.</p>
+  <p class="when">Outlook from the CPC discussion dated 2026-09-10.</p>
+  
   <p><a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC</a> &middot; <a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO Diagnostic Discussion</a></p>
 </article>
 
@@ -601,6 +624,9 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <h3 class="hd h-tv">Sky</h3>
   <p><b>Moon:</b> Waning crescent (31.6% illuminated)</p>
   <p><b>Tonight's sky:</b> Dark evening skies this week: the Moon is a thinning morning crescent, with new moon Sat Oct 10. Mars passes in front of the Beehive cluster (M44) on Oct 11, and the Orionid meteors peak Oct 21-22. <a href="https://theskylive.com/moon-today" target="_blank" rel="noopener">TheSkyLive Moon Today</a> &middot; <a href="https://griffithobservatory.lacity.gov/explore/observing-the-sky/sky-report/" target="_blank" rel="noopener">Griffith Observatory Sky Report (Oct 2026)</a></p>
+  
+  
+  
   <h5>Human Design transits</h5>
   <ul><li><b>Patrick:</b> Five slow transits sit on Patrick&#39;s chart today, per the HD Toolkit: Saturn in Gate 21 (The Hunter, since May 4) completes his 21-45 channel; Uranus in Gate 20 (The Now) completes 20-34; Neptune in Gate 25 (The Spirit of the Self) completes 25-51; Pluto in Gate 41 (Contraction) completes 30-41; and the North Node sits in Gate 30 (Recognition of Feelings), one of his own gates.</li><li><b>Travis:</b> Neptune is in Gate 25 (The Spirit of the Self), one of Travis&#39;s own gates, as it has been since Aug 31, 2025, per the HD Toolkit.</li></ul>
 </article>
@@ -639,7 +665,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
       <p class="tagl">No ads. No pop-ups. No tracking. Just the paper.</p>
     </div>
     <nav aria-label="Footer sections">
-      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
       <a href="/editions/">Past editions</a>
     </nav>
   </div>

@@ -359,6 +359,27 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   .ph{background:#f2f2f2 !important}
   article,.it,li{break-inside:avoid-page}
 }
+
+/* classroom */
+.cls-wrap{max-width:660px}
+.cls-meets{margin:40px 0 0;max-width:620px}
+.cls-meets p.lab,.cls-hw .lab,.cls-quiz p.lab,.cls-next p.lab,p.lab.cls-grp{font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:0 0 10px}
+.cls-meets ul{list-style:none;margin:0;padding:0}
+.cls-meets li{padding:14px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-meets li a{color:#C2603C;font-family:Fraunces,serif;font-weight:500;text-decoration:none;border-bottom:1px solid #C2603C}
+.cls-meets .why{display:block;margin-top:4px;color:#3a352e}
+.cls-hw{margin:28px 0 0;font-family:Newsreader,serif;font-size:19px;line-height:1.5;max-width:620px}
+.cls-hw .lab{display:inline-block;margin:0 8px 0 0;color:#C2603C}
+.cls-go{font-family:Fraunces,serif;font-style:italic;color:#6B645A;margin:20px 0 0}
+.cls-src{font-family:"DM Sans",sans-serif;font-size:13px;color:#6B645A;margin:14px 0 0}
+.cls-src a{color:inherit}
+.cls-ideas{margin:24px 0 0;padding-left:22px;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-ideas li{margin:0 0 16px}
+.cls-ideas strong{font-family:Fraunces,serif;font-weight:500}
+.cls-quiz,.cls-next{margin:36px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-quiz ol{padding-left:22px}
+.cls-next .bd{margin-top:0}
+.desk+.cls-hw,.desk+.cls-next{margin-top:28px}
 </style>
 </head>
 <body>
@@ -371,7 +392,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
     <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
   </div>
   <nav class="nav" aria-label="Sections">
-    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
   </nav>
 </header>
 
@@ -592,9 +613,11 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <p class="lab">Weather</p>
   <h3 class="hd h-tv">Storm Watch</h3>
   <p><b>Los Angeles:</b> Hot again: NWS Extreme Heat Warning in effect for Los Angeles</p>
-  <ul><li><b>Hurricane Isaias</b> (Atlantic (Gulf of Mexico)) &mdash; Hurricane · 80 mph peak · 979 mb. Central Gulf of Mexico, 23.3N 91.2W NHC urges rushing protection of life and property from storm surge and damaging winds along the Gulf Coast warning area. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPAT4+shtml/080854.shtml" target="_blank" rel="noopener">NHC Public Advisory #7, 4:00 AM CDT Oct 8</a></li><li><b>Tropical Storm Simon</b> (Eastern Pacific) &mdash; Tropical storm · 50 mph peak · 1000 mb. Off southwestern Mexico, 15.4N 103.1W Tropical Storm Watch for the coast of southwestern Mexico. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP5+shtml/080929.shtml" target="_blank" rel="noopener">NHC Public Advisory #4, 3:00 AM CST Oct 8</a></li></ul>
+  <ul><li><b>Hurricane Isaias</b> (Atlantic (Gulf of Mexico)) &mdash; Hurricane · 80 mph peak · 979 mb. Central Gulf of Mexico, 23.3N 91.2W NHC urges rushing protection of life and property from storm surge and damaging winds along the Gulf Coast warning area. <span class="when">(as of 2026-10-08)</span> <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPAT4+shtml/080854.shtml" target="_blank" rel="noopener">NHC Public Advisory #7, 4:00 AM CDT Oct 8</a></li><li><b>Tropical Storm Simon</b> (Eastern Pacific) &mdash; Tropical storm · 50 mph peak · 1000 mb. Off southwestern Mexico, 15.4N 103.1W Tropical Storm Watch for the coast of southwestern Mexico. <span class="when">(as of 2026-10-08)</span> <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP5+shtml/080929.shtml" target="_blank" rel="noopener">NHC Public Advisory #4, 3:00 AM CST Oct 8</a></li></ul>
   
   <p><b>Winter outlook:</b> El Niño Advisory in effect: NOAA CPC says &#34;El Niño is strengthening, with a greater than 90% chance of a very strong event&#34; this fall and winter. (Still the Sept 10 discussion; the October one had not posted at press time.)</p>
+  <p class="when">Outlook from the CPC discussion dated 2026-09-10.</p>
+  
   <p><a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a> &middot; <a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO Diagnostic Discussion, 10 Sep 2026</a></p>
 </article>
 
@@ -605,6 +628,9 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <h3 class="hd h-tv">Sky</h3>
   <p><b>Moon:</b> Waning crescent; new moon Oct 10-11 (sources differ by a day) (% illuminated)</p>
   <p><b>Tonight's sky:</b> The Draconid meteor shower peaks overnight Oct 8-9 under nearly moonless skies. Look in the evening after dark; expect only about 5 meteors an hour, no outburst predicted. <a href="https://www.space.com/draconid-meteor-shower-2026-guide-where-when-how-to-see-draconids" target="_blank" rel="noopener">Space.com: Draconid meteor shower 2026</a> &middot; <a href="https://catalina.lpl.arizona.edu/moon-phases/month/2026-10" target="_blank" rel="noopener">LPL Catalina: Moon phases, October 2026</a></p>
+  
+  
+  
   <h5>Human Design transits</h5>
   <ul><li><b>Patrick:</b> From the HD Toolkit: Saturn is still in your own Gate 21 (The Hunter, Heart), completing your 21-45 channel; Uranus in your Gate 20 (The Now) completes 20-34; Neptune in Gate 25 completes 25-51, Pluto in Gate 41 completes 30-41, and the North Node sits in your Gate 30 (Recognition of Feelings) since July 25.</li><li><b>Travis:</b> From the HD Toolkit: Neptune is still in Gate 25 (The Spirit of the Self, G centre), one of your own gates, where it has been since Sept 3, 2025.</li></ul>
 </article>
@@ -644,7 +670,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
       <p class="tagl">No ads. No pop-ups. No tracking. Just the paper.</p>
     </div>
     <nav aria-label="Footer sections">
-      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
       <a href="/editions/">Past editions</a>
     </nav>
   </div>

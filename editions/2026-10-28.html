@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="The Gayzette, daily edition, 2026-10-28. A personal daily by Patrick and Travis.">
+<title>The Gayzette: Google ships gemini-api, one command-line tool for coding agents</title>
+<link rel="alternate" type="application/rss+xml" title="The Gayzette" href="/feed.xml">
+<style>/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/fonts/DMSans-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/fonts/DMSans-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-italic-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-italic-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-italic-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-italic-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-italic-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-italic-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-normal-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* ===== The Gayzette site.css v3 (DRAFT 3, 2026-10-19). Every value below is lifted from the Claude Design Labs
+   page ("The Gayzette"): tokens #FBF8F1 paper, #222222 ink, #6B645A muted, #E4DCCB hairline, #C2603C accent. ===== */
+html,body{margin:0;padding:0;background:#FBF8F1;color:#222222;-webkit-font-smoothing:antialiased}
+a{color:#C2603C}a:hover{color:#A24E2F}
+img,svg{max-width:100%}
+.pg{min-height:100vh;background:#FBF8F1;color:#222222;font-family:Newsreader,Georgia,serif;overflow-wrap:break-word}
+.skip{position:absolute;left:-9999px;top:16px;z-index:50;background:#222;color:#FBF8F1;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.skip:focus{left:16px;color:#FBF8F1}
+:focus-visible{outline:2px solid #C2603C;outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+
+/* header */
+.strip{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid #E4DCCB;font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A}
+.mast{padding:72px 0 56px;text-align:left}
+.mast a{text-decoration:none;color:#222222}
+.mast h1{font-family:Fraunces,serif;font-weight:600;font-variation-settings:'SOFT' 80;font-optical-sizing:auto;font-size:clamp(56px,9vw,120px);line-height:.95;letter-spacing:-.02em;margin:0}
+.mast p{font-family:Fraunces,serif;font-style:italic;font-weight:400;font-size:19px;color:#6B645A;margin:20px 0 0}
+.nav{display:flex;gap:32px;overflow-x:auto;border-top:1px solid #E4DCCB;border-bottom:1px solid #E4DCCB;scrollbar-width:none;white-space:nowrap}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;min-height:48px;padding:0 2px;font-family:'DM Sans',sans-serif;font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:#222222;border-bottom:2px solid transparent;margin-bottom:-1px}
+.nav a.on{color:#C2603C;border-bottom-color:#C2603C}
+
+/* type kit */
+.kick,.lab,.when{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.kick{color:#C2603C;margin:0 0 16px}
+.lab{color:#6B645A;margin:0 0 8px}
+.hd{font-family:Fraunces,serif;font-weight:600;font-variation-settings:'SOFT' 60;margin:0;text-wrap:pretty}
+.hd a,.hl a{text-decoration:none;color:inherit}
+.hd a:hover,.hl a:hover{color:#C2603C}
+.h-hero{font-optical-sizing:auto;font-size:clamp(36px,5vw,64px);line-height:1.04;letter-spacing:-.015em}
+.h-sun{font-size:clamp(40px,6vw,80px);line-height:1;letter-spacing:-.02em}
+.h-3{font-size:36px;line-height:1.1;letter-spacing:-.012em}
+.h-lead{font-size:clamp(30px,3.5vw,42px);line-height:1.08;letter-spacing:-.012em}
+.h-card{font-size:28px;line-height:1.12;letter-spacing:-.01em}
+.h-card2{font-size:26px;line-height:1.15;letter-spacing:-.01em}
+.h-tv{font-size:24px;line-height:1.15;letter-spacing:-.01em}
+.h-4{font-size:22px;line-height:1.2;letter-spacing:-.01em}
+.h-sec{font-size:clamp(36px,4.5vw,52px);line-height:1.05;letter-spacing:-.015em}
+.h-page{font-size:clamp(44px,6vw,72px);line-height:1;letter-spacing:-.02em}
+.deck{font-family:Fraunces,serif;font-style:italic;font-weight:400;font-size:24px;line-height:1.35;color:#6B645A;margin:20px 0 0;text-wrap:pretty}
+.deck.s21{font-size:21px;line-height:1.4;margin:16px 0 0}
+.deck.s26{font-size:26px;margin:24px 0 0}
+.stand{font-family:Fraunces,serif;font-style:italic;font-size:21px;line-height:1.4;color:#6B645A;margin:24px 0 0;max-width:620px}
+.rule{width:48px;height:2px;background:#C2603C;margin:24px 0 0}
+.by{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:24px 0 0}
+.bd{font-family:Newsreader,serif;font-size:19px;line-height:1.65;margin:14px 0 0;max-width:620px}
+.bd.l{max-width:none}
+.bd a{color:#C2603C}
+.src{display:inline-block;margin-top:14px;font-family:Newsreader,serif;font-style:italic;font-size:16px;color:#C2603C;text-decoration:none}
+.src:hover{text-decoration:underline}
+.src.s15{font-size:15px;margin-top:8px}
+.src.m12{margin-top:12px}
+.chip{display:inline-block;margin-left:10px;padding:2px 8px;border:1px solid #E4DCCB;color:#6B645A;font-family:'DM Sans',sans-serif;font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.ph,.pic{display:block;width:100%;object-fit:cover;background:#EDE6D6}
+.pic.fb,.ph{background:#EDE6D6 repeating-linear-gradient(135deg,transparent 0 12px,rgba(34,34,34,.045) 12px 13px)}
+.r32{aspect-ratio:3/2}.r45{aspect-ratio:4/5}
+.flex{display:flex;flex-wrap:wrap;align-items:flex-start}
+@media (max-width:640px){.bleed{margin-left:-24px;margin-right:-24px;width:calc(100% + 48px)}}
+
+/* front page blocks */
+main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.s-hero{padding:72px 0 0}
+.hero-in{display:flex;flex-direction:column;flex-wrap:wrap;gap:32px 32px;align-items:stretch}
+.hero-pic{width:100%;min-width:0}
+.hero-txt{flex:1 1 320px;min-width:0;max-width:720px}
+.sec{padding:112px 0 0}
+.sec.rl{margin-top:120px;padding:80px 0 0;border-top:1px solid #E4DCCB}
+.row{display:flex;flex-wrap:wrap;gap:48px 32px;align-items:flex-start}
+.col-main{flex:2 1 480px;min-width:0}
+.col-side{flex:1 1 260px;min-width:0}
+.col-half{flex:1 1 380px;min-width:0}
+.col-half.t{flex-basis:260px}
+.mt28{margin-top:28px}
+.more{margin-top:0}
+.more .it{padding:20px 0;border-top:1px solid #E4DCCB}
+.more .it h4{margin:0}
+.col-half .more{margin-top:48px}
+.nbr{max-width:620px}
+.brief{margin-top:10px}
+.brief summary{display:inline-block;cursor:pointer;margin-top:8px;font-family:Newsreader,serif;font-style:italic;font-size:15px;color:#6B645A;list-style:none}
+.brief summary::-webkit-details-marker{display:none}
+.brief summary:hover{color:#C2603C}
+.brief[open] summary{margin-bottom:4px}
+.brief .bd{font-size:17px;line-height:1.6;margin:8px 0 0}
+.brief .bd+.bd{margin-top:14px}
+.ctx{margin:14px 0 0;font-family:Newsreader,serif;font-size:17px;line-height:1.55;color:#6B645A;max-width:620px}
+.ctx b,.tag{font-family:'DM Sans',sans-serif;font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#C2603C;margin-right:8px}
+.sides{margin:12px 0 0;padding:0;list-style:none;font-family:Newsreader,serif;font-size:16px;line-height:1.5;color:#6B645A}
+.sides li{padding:6px 0;border-top:1px solid #E4DCCB}
+
+/* inset comic art (the newsroom's own panel) */
+.illo{margin:32px 0 0;max-width:620px}
+.illo .art{border:1px solid #E4DCCB;background:#FBF8F1}
+.illo svg{display:block;width:100%;height:auto}
+.illo figcaption{font-family:Fraunces,serif;font-style:italic;font-size:15px;color:#6B645A;margin:12px 0 0}
+.illo figcaption span{font-family:'DM Sans',sans-serif;font-style:normal;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+
+/* long text under the hero / in a story */
+.story{max-width:620px;margin:72px 0 0}
+.story .bd{margin:0}
+.story .bd+.bd,.story .illo+.bd{margin-top:28px}
+.desk{margin:48px 0 0;padding:32px;background:#F3EEE2;max-width:620px}
+.desk p.lab{margin:0 0 10px;font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;line-height:1.65;color:#6B645A}
+.desk p{font-family:Newsreader,serif;font-size:19px;line-height:1.5;margin:0}
+.pill{display:inline-block;margin-top:12px;font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#C2603C;border:1px solid #C2603C;padding:3px 10px}
+.rcpt{margin:16px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:16px}
+.rcpt summary{cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A}
+.rcpt ul{margin:10px 0 0;padding:0;list-style:none}
+.rcpt li{padding:6px 0;border-top:1px solid #E4DCCB}
+.rcpt .d{color:#6B645A;font-size:14px;margin-left:6px}
+.note{margin:96px 0 0;padding-top:56px;border-top:1px solid #E4DCCB;max-width:620px}
+.note .t{font-family:Newsreader,serif;font-size:19px;line-height:1.65;margin:20px 0 0}
+.note .by{margin:0}
+
+/* Good Ten (list) */
+.glist{list-style:none;margin:48px 0 0;padding:0;max-width:620px}
+.glist li{display:flex;gap:24px;padding:24px 0;border-top:1px solid #E4DCCB}
+.glist .n{font-family:'DM Sans',sans-serif;font-weight:500;font-size:13px;letter-spacing:.08em;color:#C2603C;padding-top:7px;min-width:28px}
+.glist li>div{min-width:0}
+.glist h3{margin:0}
+.glist .when{display:block;color:#6B645A;margin:6px 0 0}
+.glist .bd{margin:10px 0 0}
+.gh{max-width:620px}
+
+/* grids */
+.grid{display:grid;gap:48px 32px;margin-top:48px}
+.g220{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.g280{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:56px 32px;margin-top:40px}
+.g320{grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:72px 32px;margin-top:120px}
+.grid article{min-width:0}
+.grid .kick{margin:24px 0 10px}
+.grid.g220 .lab{margin:20px 0 8px}
+.tb p{font-family:Newsreader,serif;font-size:18px;line-height:1.6;margin:10px 0 0}
+.tb ul{list-style:none;margin:10px 0 0;padding:0}
+.tb li{font-family:Newsreader,serif;font-size:17px;line-height:1.55;padding:10px 0;border-top:1px solid #E4DCCB}
+.tb .empty{color:#6B645A;font-style:italic}
+.tb h5{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:20px 0 0}
+.tb a{color:#C2603C}
+.tb .alert{color:#A24E2F}
+.tvweek{margin-top:10px}
+.tvweek .day{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#C2603C;padding-top:12px;border-top:1px solid #E4DCCB}
+.tvweek .shows div{font-family:Newsreader,serif;font-size:17px;line-height:1.5;padding:2px 0}
+
+/* section page */
+.s-page{padding:80px 0 0}
+.lead{display:flex;flex-wrap:wrap;gap:40px 32px;align-items:flex-start;margin-top:96px}
+.lead>div{flex:1 1 380px;min-width:0}
+.lead .kick{margin:0 0 12px}
+.empty-sec{margin-top:96px;padding:80px 0;border-top:1px solid #E4DCCB;border-bottom:1px solid #E4DCCB;max-width:620px}
+.earlier{margin-top:120px;padding-top:80px;border-top:1px solid #E4DCCB;max-width:760px}
+.earlier .e{display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between;align-items:baseline;padding:20px 0;border-top:1px solid #E4DCCB}
+.earlier .e h4{flex:1 1 320px;margin:0}
+
+/* lists (Sunday lines, archive) */
+.lines{list-style:none;margin:40px 0 0;padding:0;max-width:760px}
+.lines li{display:grid;grid-template-columns:88px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #E4DCCB}
+.lines .when{color:#6B645A;padding-top:5px;font-size:13px}
+.lines .what{font-family:Newsreader,serif;font-size:18px;line-height:1.6}
+.lines .tag{margin:0 0 0 10px;color:#6B645A}
+.lines a{font-style:italic;font-size:15px;color:#C2603C;text-decoration:none}
+.lines a:hover{text-decoration:underline}
+.month{font-family:'DM Sans',sans-serif;font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#C2603C;margin:64px 0 8px}
+.arch{list-style:none;margin:0;padding:0;max-width:760px}
+.arch li{display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between;align-items:baseline;padding:20px 0;border-top:1px solid #E4DCCB}
+.arch li>div{flex:1 1 320px}
+.arch h4{margin:0}
+.arch .when{color:#6B645A;order:2}
+.arch .kind{display:block;margin-top:4px;font-family:Fraunces,serif;font-style:italic;font-size:16px;color:#6B645A}
+.spec h3{margin:48px 0 0}
+.spec ul{list-style:none;margin:8px 0 0;padding:0;max-width:760px}
+.spec li{padding:20px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:18px;line-height:1.6}
+.spec li a{font-style:italic;font-size:15px;color:#C2603C;text-decoration:none}
+.spec .empty{color:#6B645A;font-style:italic}
+.made{max-width:760px}
+.made p{font-family:Newsreader,serif;font-size:19px;line-height:1.65;margin:20px 0 0}
+.made table{width:100%;border-collapse:collapse;margin-top:24px;font-family:Newsreader,serif;font-size:16px}
+.made th{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;text-align:left;padding:8px 8px 8px 0;border-bottom:1px solid #E4DCCB}
+.made td{padding:10px 8px 10px 0;border-top:1px solid #E4DCCB;vertical-align:top}
+.made .num{text-align:right}
+.tablewrap{overflow-x:auto}
+
+/* footer */
+.foot{max-width:1200px;margin:160px auto 0;padding:48px 24px 64px;box-sizing:border-box;border-top:1px solid #E4DCCB}
+.foot .top{display:flex;flex-wrap:wrap;gap:32px 64px;justify-content:space-between}
+.foot .brand{font-family:Fraunces,serif;font-weight:600;font-variation-settings:'SOFT' 80;font-size:28px;letter-spacing:-.015em;margin:0}
+.foot .tagl{font-family:Fraunces,serif;font-style:italic;font-size:16px;color:#6B645A;margin:8px 0 0}
+.foot nav{display:flex;flex-wrap:wrap;gap:16px 28px}
+.foot nav a{display:inline-flex;align-items:center;min-height:44px;font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;text-decoration:none}
+.foot nav a:hover{color:#C2603C}
+.foot .fine{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:48px 0 0;line-height:1.8}
+.foot .fine a{color:#6B645A}
+
+@media print{
+  html,body{background:#fff}
+  .nav,.skip{display:none !important}
+  .ph{background:#f2f2f2 !important}
+  article,.it,li{break-inside:avoid-page}
+}
+
+/* classroom */
+.cls-wrap{max-width:660px}
+.cls-meets{margin:40px 0 0;max-width:620px}
+.cls-meets p.lab,.cls-hw .lab,.cls-quiz p.lab,.cls-next p.lab,p.lab.cls-grp{font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:0 0 10px}
+.cls-meets ul{list-style:none;margin:0;padding:0}
+.cls-meets li{padding:14px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-meets li a{color:#C2603C;font-family:Fraunces,serif;font-weight:500;text-decoration:none;border-bottom:1px solid #C2603C}
+.cls-meets .why{display:block;margin-top:4px;color:#3a352e}
+.cls-hw{margin:28px 0 0;font-family:Newsreader,serif;font-size:19px;line-height:1.5;max-width:620px}
+.cls-hw .lab{display:inline-block;margin:0 8px 0 0;color:#C2603C}
+.cls-go{font-family:Fraunces,serif;font-style:italic;color:#6B645A;margin:20px 0 0}
+.cls-src{font-family:"DM Sans",sans-serif;font-size:13px;color:#6B645A;margin:14px 0 0}
+.cls-src a{color:inherit}
+.cls-ideas{margin:24px 0 0;padding-left:22px;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-ideas li{margin:0 0 16px}
+.cls-ideas strong{font-family:Fraunces,serif;font-weight:500}
+.cls-quiz,.cls-next{margin:36px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-quiz ol{padding-left:22px}
+.cls-next .bd{margin-top:0}
+.desk+.cls-hw,.desk+.cls-next{margin-top:28px}
+</style>
+</head>
+<body>
+<div class="pg">
+<a class="skip" href="#main">Skip to content</a>
+<header class="wrap">
+  <div class="strip"><span>Wednesday, October 28, 2026</span><span>Edition No. 35</span></div>
+  <div class="mast">
+    <a href="/"><h1>The Gayzette</h1></a>
+    <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
+  </div>
+  <nav class="nav" aria-label="Sections">
+    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="s-hero" id="front" data-beat="The AI Builder">
+  
+  <div class="hero-in">
+    <div class="hero-pic bleed"><img class="pic r32" src="https://images.unsplash.com/photo-1763568258286-721c164171e0?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Google ships gemini-api, one command-line tool for coding agents" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')"></div>
+    <div class="hero-txt">
+      <p class="kick">Front page · AI</p>
+      <h2 class="hd h-hero"><a href="https://ai.google.dev/gemini-api/docs/cli" target="_blank" rel="noopener">Google ships gemini-api, one command-line tool for coding agents</a></h2>
+      <p class="deck">A beta, zero-dependency client that handles images, audio, video, transcription and agent runs from a single binary.</p>
+      <p class="by">By The Gayzette, with Claude · 1 min read · Wonder ◆◆◆◇◇</p>
+    </div>
+  </div>
+  
+  <div class="story">
+    <p class="bd">Google released gemini-api on Oct 27, a command-line client (a program you run by typing commands) now in beta. The page calls it &#34;a stateless, zero-dependency command-line client&#34; for AI coding agents, scripts and CI pipelines (automated build-and-test runs). One binary, installed by curl, PowerShell or `go install`, covers image, tts (text to speech), music, video, generate, analyze (PDFs, images, audio, video, CSV and public YouTube URLs) and transcribe, plus managed-agent commands such as agent run, status and cancel. It needs only a Gemini API key.</p><figure class="illo"><div class="art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200"><defs><pattern id="ld-dots" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#f2b632"/></pattern></defs><rect x="0" y="0" width="320" height="200" fill="#fbf6ea"/><rect x="0" y="0" width="320" height="200" fill="url(#ld-dots)" opacity="0.45"/><rect x="34" y="40" width="170" height="118" rx="8" fill="#1d2b3a" stroke="#111" stroke-width="5"/><rect x="34" y="40" width="170" height="22" rx="8" fill="#3f7cc4" stroke="#111" stroke-width="5"/><circle cx="50" cy="51" r="4" fill="#fbf6ea" stroke="#111" stroke-width="2"/><circle cx="64" cy="51" r="4" fill="#f2b632" stroke="#111" stroke-width="2"/><text x="48" y="88" font-family="Courier New, monospace" font-size="13" font-weight="bold" fill="#f2b632">$ gemini-api run</text><text x="48" y="108" font-family="Courier New, monospace" font-size="12" fill="#fbf6ea">&gt; job 1 ... done</text><text x="48" y="126" font-family="Courier New, monospace" font-size="12" fill="#fbf6ea">&gt; job 2 ... done</text><rect x="48" y="134" width="10" height="13" fill="#f2b632"/><rect x="226" y="102" width="62" height="54" rx="10" fill="#3f7cc4" stroke="#111" stroke-width="5"/><circle cx="244" cy="124" r="6" fill="#fbf6ea" stroke="#111" stroke-width="3"/><circle cx="270" cy="124" r="6" fill="#fbf6ea" stroke="#111" stroke-width="3"/><path d="M244 142 Q257 150 270 142" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/><line x1="257" y1="102" x2="257" y2="88" stroke="#111" stroke-width="4"/><circle cx="257" cy="84" r="6" fill="#f2b632" stroke="#111" stroke-width="3"/><path d="M226 140 L204 132" stroke="#111" stroke-width="6" stroke-linecap="round"/><rect x="214" y="160" width="86" height="12" rx="3" fill="#111"/><rect x="214" y="20" width="92" height="40" rx="14" fill="#fff" stroke="#111" stroke-width="4"/><path d="M240 58 L236 76 L254 58" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round"/><rect x="238" y="55" width="20" height="6" fill="#fff"/><text x="260" y="45" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="13" font-weight="bold" fill="#111">no clicks!</text></svg></div><figcaption><span>Illustration · The Gayzette</span></figcaption></figure><p class="bd">The caveats are Google&#39;s own. It is an open-source beta, and &#34;breaking changes can occur between minor versions,&#34; so pin a release in CI. Inline file inputs cap at 14 MB raw, Files API uploads auto-delete after 48 hours, it is not an interactive coding agent, and the page gives no pricing.</p><p class="bd">On your desk: a Claude Code or Cowork automation could shell out to one command to transcribe a recording or analyze a video, with no SDK code to write. Try it on one small vault chore first.</p>
+    <aside class="desk"><p class="lab">On our desk</p><p>One command that transcribes audio, reads video and generates images means a vault automation can use Gemini without writing any SDK code.</p></aside>
+    <a class="src " href="https://ai.google.dev/gemini-api/docs/cli" target="_blank" rel="noopener">Read the original at Gemini API CLI guide →</a>
+    <details class="rcpt"><summary>Receipts (2)</summary>
+<ul><li><a href="https://ai.google.dev/gemini-api/docs/cli" target="_blank" rel="noopener">Gemini API CLI guide</a></li><li><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Gemini API release notes</a></li></ul></details>
+  </div>
+</section>
+<section class="note" aria-label="Editor's note">
+  <p class="kick">Editor's note</p>
+  <p class="by">The Managing Editor</p>
+  <p class="t">Good morning. Today&#39;s paper has a new command-line tool from Google, a Claude Code fix that matters to your big instruction files, two open models (one for data centers, one for a phone), a small Parkinson&#39;s pilot, and a Washington Ballet birthday.</p><p class="t">The lead was written by Sonnet this morning, because the Opus lead was dropped for budget; the art is Opus&#39;s. The Good Ten runs 8 today for budget. Spirit runs one item: a quiet week, and only one lead was verified. World Straight runs 4, because a markets item was held back for second-hand details.</p><p class="t">Reactions are unchanged since mid-October (no beat crossed a threshold), and no beat decisions were saved. The Human Design transits ran from the toolkit. Grant Watch and the Droplet Desk were quiet.</p><p class="t">Enjoy the sun.</p>
+</section>
+
+
+<section class="sec" id="ai" data-screen-label="AI">
+  <div class="row">
+    <div class="col-main">
+      <div class="bleed"><img class="pic r32" src="https://images.unsplash.com/photo-1763568258605-6783d4fad7b5?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Claude Code 2.1.312 stops overwriting big CLAUDE.md files" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')"></div>
+      <article id="ai-2026-10-28-cc" data-beat="The AI Builder">
+  <p class="kick" style="margin:28px 0 12px">AI</p>
+  <h3 class="hd h-3" style="max-width:620px"><a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">Claude Code 2.1.312 stops overwriting big CLAUDE.md files</a></h3>
+  <p class="deck s21" style="max-width:620px">The Oct 27 release also fixes skills going missing after a cd, and caps hooks at 24.</p>
+  <p class="bd">Disclosure: Anthropic makes Claude, the model that helps make this paper. Claude Code 2.1.312, released Oct 27, fixed a bug where Claude could overwrite a very large CLAUDE.md (the instructions file it reads at the start) or an @-included file after reading only the start of it.</p><p class="bd">It also fixed per-directory and `paths:` skills (packaged instructions Claude loads for certain folders) not being found after a Bash `cd` into a repo subdirectory. And it capped prompt and agent hooks (automatic actions that run at set moments) at 24 running at once per session, subagents included. The caveat: our link is the releases list page, not a version-specific page.</p><p class="bd">On your desk: with the big instruction files in your vault, the overwrite fix is the one to be glad of. If you run many hooks in one session, check you are under 24.</p>
+  
+  <a class="src " href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">Read the original at GitHub: anthropics/claude-code releases (v2.1.312, 27 Oct) →</a>
+  
+</article>
+    </div>
+    
+    <aside class="col-side more" aria-label="More in AI">
+      <p class="lab">More in AI</p>
+      <div class="it" id="ai-2026-10-28-ling">
+  <h4 class="hd h-4"><a href="https://huggingface.co/inclusionAI/Ling-3.1-flash-1019" target="_blank" rel="noopener">Ling 3.1 Flash: an MIT-licensed 560B open model with a 1M-token window</a></h4>
+  <details class="brief"><summary>Read the brief</summary><p class="ctx" style="margin-top:8px">Priced at $0.30 in and $0.90 out per million tokens; the benchmark score is quoted from the vendor&#39;s model card.</p><p class="bd">inclusionAI published Ling-3.1-flash-1019 on Hugging Face. It is a mixture-of-experts model (many specialist sub-networks, only some used per word) with about 560B total and roughly 25B active parameters, a 1M-token context window (how much text it reads at once) and an MIT license, meaning open reuse. The model card reports a score of 44 on the Artificial Analysis Intelligence Index v4.3.2, up from 41 for its predecessor. Latent Space lists pricing of $0.30 in and $0.90 out per million tokens. Weights are on Hugging Face; the card also links ModelScope and OpenRouter pages.</p><p class="bd">The caveats, from the model card: the benchmarks are vendor-reported, the example server commands point to the base `Ling-3.1-flash` path rather than the `-1019` variant, vLLM needs `--trust-remote-code`, and the example runs on 8xH200 GPUs.</p><p class="bd">On your desk: a cheap hosted option through OpenRouter for long-context bulk jobs. Self-hosting is data-center territory.</p></details>
+  <br><a class="src s15" href="https://huggingface.co/inclusionAI/Ling-3.1-flash-1019" target="_blank" rel="noopener">Read the original at Hugging Face: inclusionAI/Ling-3.1-flash-1019 →</a>
+  <details class="rcpt"><summary>Receipts (2)</summary>
+<ul><li><a href="https://huggingface.co/inclusionAI/Ling-3.1-flash-1019" target="_blank" rel="noopener">Hugging Face: inclusionAI/Ling-3.1-flash-1019</a></li><li><a href="https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure" target="_blank" rel="noopener">Latent Space AINews (Oct 28)</a></li></ul></details>
+</div><div class="it" id="ai-2026-10-28-lfm3">
+  <h4 class="hd h-4"><a href="https://huggingface.co/LiquidAI/LFM3-1.7B" target="_blank" rel="noopener">Liquid AI&#39;s LFM3 fits a 1.7B model in about 1 GB</a></h4>
+  <details class="brief"><summary>Read the brief</summary><p class="ctx" style="margin-top:8px">Open weights built for phones and laptops; every speed claim is Liquid&#39;s own.</p><p class="bd">Liquid AI released LFM3, six open-weight models of roughly 2B parameters each (small enough for a phone). The LFM3-1.7B card lists a 256K-token context, 16 languages, about 1 GB at 4-bit (compressed numbers), and GGUF, MLX and ONNX versions; Latent Space says the text model is also on Ollama. Liquid&#39;s tests on an iPhone 17 Pro, Apple M5 Max and Ryzen AI Max+ 395 claim at least 2.5x faster prefill (reading the prompt) and 1.8x faster decode (writing the answer) than comparison models.</p><p class="bd">The caveats are on the card. It is &#34;not recommended for agentic coding or complex multi-step reasoning due to its small size,&#34; it scores 43.40 on SWE-bench Verified against 51.20 for Qwen3.5-9B, all numbers are Liquid&#39;s own, and the license is the LFM Open License v1.0, not Apache or MIT.</p><p class="bd">On your desk: a free on-device model for private jobs like cleaning up transcripts or tagging notes.</p></details>
+  <br><a class="src s15" href="https://huggingface.co/LiquidAI/LFM3-1.7B" target="_blank" rel="noopener">Read the original at Hugging Face: LiquidAI/LFM3-1.7B →</a>
+  <details class="rcpt"><summary>Receipts (2)</summary>
+<ul><li><a href="https://huggingface.co/LiquidAI/LFM3-1.7B" target="_blank" rel="noopener">Hugging Face: LiquidAI/LFM3-1.7B</a></li><li><a href="https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure" target="_blank" rel="noopener">Latent Space AINews (Oct 28)</a></li></ul></details>
+</div>
+    </aside>
+    
+  </div>
+</section>
+
+
+
+<section class="sec" id="spirit" data-screen-label="Spirit">
+  <div class="row" style="gap:40px 32px">
+    <div class="col-half bleed"><img class="pic r45" src="https://images.unsplash.com/photo-1762871627042-280df1a17b98?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Psilocybin lowered inflammation markers in 12 people with Parkinson&#39;s" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')"></div>
+    <div class="col-half">
+      
+      <article id="sp-2026-10-28-psilocybin" data-beat="Consciousness &amp; The Nonphysical">
+        <p class="kick" style="margin:0 0 12px">Spirit</p>
+        <h3 class="hd h-3"><a href="https://www.opb.org/article/2026/10/21/study-hints-at-psychedelics-potential-to-combat-inflammation/" target="_blank" rel="noopener">Psilocybin lowered inflammation markers in 12 people with Parkinson&#39;s</a></h3>
+        <p class="deck s21">A small open-label pilot in JAMA Psychiatry, reported Oct 21; a starting point, not proof.</p>
+        <p class="bd">This is a small open-label pilot (everyone knew they were getting the drug) of 12 people with Parkinson&#39;s disease and mood problems. They got psilocybin in two sessions. Five blood markers of inflammation were significantly lower afterward and stayed lower a month after the last dose. A marker of mitochondrial stress (strain in the cell&#39;s power plants) improved right after dosing but not at longer follow-up.</p><p class="bd">There was no control group, so this is a starting point, and the authors say follow-up studies are needed. Marijuana Moment notes UCSF and Columbia ran it, funded by Silo Pharma and an anonymous donor. This is science reporting, not medical advice or a treatment claim.</p><p class="bd">On your desk: a tidy receipt for the Consciousness University thread that the field is moving from how psychedelics feel to what they measurably do in the body.</p>
+        
+        <a class="src " href="https://www.opb.org/article/2026/10/21/study-hints-at-psychedelics-potential-to-combat-inflammation/" target="_blank" rel="noopener">Read the original at OPB / NPR: Study hints at psychedelics&#39; potential to combat inflammation →</a>
+        <details class="rcpt"><summary>Receipts (2)</summary>
+<ul><li><a href="https://www.opb.org/article/2026/10/21/study-hints-at-psychedelics-potential-to-combat-inflammation/" target="_blank" rel="noopener">OPB / NPR: Study hints at psychedelics&#39; potential to combat inflammation</a></li><li><a href="https://www.marijuanamoment.net/psilocybin-reduces-inflammation-and-mitochondrial-stress-markers-in-people-with-parkinsons-disease-study-shows/" target="_blank" rel="noopener">Marijuana Moment: Psilocybin reduces inflammation and mitochondrial stress markers</a></li></ul></details>
+      </article>
+      
+      
+    </div>
+  </div>
+</section>
+
+
+
+<section class="sec" id="world" data-screen-label="World">
+  <div class="row" style="gap:40px 32px">
+    <div class="bleed" style="flex:2 1 480px;min-width:0;order:2"><img class="pic r32" src="https://images.unsplash.com/photo-1486299267070-83823f5448dd?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Israel&#39;s election count is incomplete; neither bloc is at 61 of 120 seats" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')"></div>
+    <div class="col-half t" style="order:1">
+      
+      <article id="w-israel">
+        <p class="kick" style="margin:0 0 12px">World</p>
+        <h3 class="hd h-3"><a href="https://www.aljazeera.com/news/2026/10/28/five-key-takeaways-from-israels-parliamentary-elections" target="_blank" rel="noopener">Israel&#39;s election count is incomplete; neither bloc is at 61 of 120 seats</a></h3>
+        <p class="bd"><span class="tag">Confirmed</span>voting was held Tue 27 Oct. The Central Elections Committee put turnout at 77.7%, the highest since 1999 and up 7.1 points from 2022. With 76% counted (Wed 11:45 local), reported tallies were Netanyahu bloc 54 seats (7 short of a majority), Eisenkot alliance 47, Arab parties 19. Unofficial exit polls (Channels 12 and 13) had each bloc at 51, Likud 27, Eisenkot&#39;s Yashar 21. A final tally is expected Friday; official results are due Nov 4.</p>
+        <p class="bd" style="margin-top:12px"><span class="tag">Claimed by Benjamin Netanyahu, Gadi Eisenkot, Mansour Abbas (Ra&#39;am)</span>Netanyahu says Likud is &#34;the largest party – nobody can compete with us,&#34; that the right bloc has &#34;a decisive majority,&#34; and that TV channels projected stronger opposition results to discourage his supporters. Eisenkot says &#34;The old era is over, and Israel is starting a new era.&#34; Abbas says he hopes final results give the opposition bloc plus his party 61 seats.</p>
+        <ul class="sides"><li><strong>Netanyahu camp:</strong> Describes a right-wing majority and disputes the exit polls.</li><li><strong>Eisenkot camp:</strong> Describes a vote for change.</li></ul>
+        <a class="src " href="https://www.aljazeera.com/news/2026/10/28/five-key-takeaways-from-israels-parliamentary-elections" target="_blank" rel="noopener">Read the original at Al Jazeera: Five key takeaways from Israel&#39;s parliamentary elections →</a>
+        
+      </article>
+      
+      
+      <div class="more" style="margin-top:48px" aria-label="More in World">
+        <p class="lab">More in World</p>
+        
+        <div class="it" id="w-ebola">
+          <h4 class="hd h-4"><a href="https://www.aljazeera.com/news/2026/10/27/ebola-cases-in-dr-congo-surpass-10000-in-fastest-growing-outbreak" target="_blank" rel="noopener">Ebola in DR Congo passes 10,000 confirmed cases</a></h4>
+          <details class="brief"><summary>What is known</summary>
+            <p class="bd"><span class="tag">Confirmed</span>Confirmed, per the DRC Ministry of Public Health: 10,060 confirmed cases and 4,887 deaths, in 66 health zones across eight provinces. The outbreak, of Bundibugyo virus, was declared 15 May 2026; there is no approved vaccine or treatment, and WHO announced the first vaccine trial on 23 Oct. Al Jazeera calls it the second-largest Ebola outbreak on record, behind West Africa 2014-16 (28,600 infected, over 11,000 dead).</p>
+            <p class="bd"><span class="tag">Claimed by Al Jazeera, Africa CDC, WHO, Uganda&#39;s Health Minister Chris Baryomunsi</span>Al Jazeera reports about 80% of new cases come from outside monitored transmission chains; Africa CDC says at least 95% must come from known contacts for control. WHO says assailants killed a nurse in Bafwasende, Tshopo province, on Saturday. Baryomunsi announced a 21-day quarantine for returning Ugandans. Al Jazeera reports Kenya has nine confirmed cases, two fatal.</p>
+            
+          </details>
+          <br><a class="src s15" href="https://www.aljazeera.com/news/2026/10/27/ebola-cases-in-dr-congo-surpass-10000-in-fastest-growing-outbreak" target="_blank" rel="noopener">Read the original at Al Jazeera: Ebola cases in DR Congo surpass 10,000 →</a>
+          
+        </div>
+        
+        <div class="it" id="w-taraba">
+          <h4 class="hd h-4"><a href="https://www.aljazeera.com/news/2026/10/27/death-toll-from-attack-by-gunmen-in-northeastern-nigeria-rises-to-62" target="_blank" rel="noopener">Taraba, Nigeria: gunmen attack kills at least 62</a></h4>
+          <details class="brief"><summary>What is known</summary>
+            <p class="bd"><span class="tag">Confirmed</span>Confirmed by NEMA, the National Emergency Management Agency: at least 62 people were killed in Binnari village, Taraba state, in an attack on Friday by gunmen described as bandits.</p>
+            <p class="bd"><span class="tag">Claimed by NEMA Taraba head Ladan Ayuba, police spokesperson Victor Mshelizah, Amnesty International Nigeria</span>Ayuba said thousands were displaced. Mshelizah told AP &#34;the more we recover bodies, we will put them in account,&#34; and police said the toll could rise. Amnesty International Nigeria said authorities leave rural communities &#34;at the mercy of gunmen&#34; and called for an impartial investigation. Amnesty International Nigeria reported homes, shops, food supplies and motorcycles were set on fire.</p>
+            <ul class="sides"><li><strong>Police:</strong> Describe ongoing body recovery; the toll may rise.</li><li><strong>Amnesty International Nigeria:</strong> Says authorities fail to protect rural communities and calls for an impartial investigation.</li></ul>
+          </details>
+          <br><a class="src s15" href="https://www.aljazeera.com/news/2026/10/27/death-toll-from-attack-by-gunmen-in-northeastern-nigeria-rises-to-62" target="_blank" rel="noopener">Read the original at Al Jazeera: Death toll from attack by gunmen in northeastern Nigeria rises to 62 →</a>
+          
+        </div>
+        
+        <div class="it" id="w-jordan-syria">
+          <h4 class="hd h-4"><a href="https://www.aljazeera.com/news/2026/10/28/syria-jordan-border-reopens-amid-probe-into-deadly-airstrikes" target="_blank" rel="noopener">Jordan and Syria reopen Nassib crossing and agree to probe the strikes</a></h4>
+          <details class="brief"><summary>What is known</summary>
+            <p class="bd"><span class="tag">Confirmed</span>Confirmed, per Al Jazeera: the Nassib crossing reopens Wednesday morning, according to Syria&#39;s state agency SANA. The two countries agreed to a committee to investigate the strikes and coordinate intelligence. The Karak church shooting on 23 Oct, claimed by ISIL, now stands at at least nine killed and 34 wounded, with three suspects arrested. Jordan&#39;s 26 Oct strikes killed at least seven in Deraa and Suwayda, including five of one family (three children).</p>
+            <p class="bd"><span class="tag">Claimed by Jordan&#39;s Foreign Minister Ayman Safadi; Damascus</span>Safadi says the strikes rested on field intelligence and aimed at &#34;neutralising confirmed threats and imminent terrorist operations,&#34; and were coordinated with Syria. Jordan&#39;s foreign minister also expressed regret for civilian deaths. Damascus says the strikes were not coordinated with it.</p>
+            <ul class="sides"><li><strong>Jordan:</strong> Counterterrorism action, coordinated with Syria, with regret for civilian deaths.</li><li><strong>Damascus:</strong> Disputes that the strikes were coordinated.</li></ul>
+          </details>
+          <br><a class="src s15" href="https://www.aljazeera.com/news/2026/10/28/syria-jordan-border-reopens-amid-probe-into-deadly-airstrikes" target="_blank" rel="noopener">Read the original at Al Jazeera: Syria-Jordan border reopens amid probe into deadly airstrikes →</a>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+<section class="sec rl" id="feel-good" data-screen-label="Good Ten" aria-labelledby="good-h">
+  <div class="gh">
+    <p class="kick">Feel-Good</p>
+    <h2 class="hd h-sec" id="good-h">The Good Ten</h2>
+    <p class="deck s21">Small, true, and from this week.</p>
+  </div>
+  <ol class="glist">
+    <li id="gt-rainforest-trust">
+      <span class="n">01</span>
+      <div>
+        <h3 class="hd h-4">Rainforest Trust passes 70 million acres with a Bolivian river reserve</h3>
+        <span class="when">Tue Oct 27</span>
+        <p class="bd">With Bolivian NGO Faunagua, Rainforest Trust helped create the 715,000-acre Agua Dulce Municipal Wildlife Reserve along the Iténez River, bringing its total to 70 million protected acres. Ten million of those were added in roughly the past seven to eight months. The 780-mile river supports jaguars, giant otters and 260 fish species, 25 found nowhere else.</p>
+        <a class="src s15" href="https://www.goodnewsnetwork.org/ngo-celebrates-70-million-amazon-acres-conserved-after-protecting-are-called-a-link-of-life/" target="_blank" rel="noopener">Read the original at Good News Network →</a>
+      </div>
+    </li><li id="gt-washington-ballet">
+      <span class="n">02</span>
+      <div>
+        <h3 class="hd h-4">Washington Ballet turns 50 with a world premiere set to a go-go band</h3>
+        <span class="when">Mon Oct 26</span>
+        <p class="bd">Edwaard Liang, who took over The Washington Ballet in 2023, talks about its 50th season. The Go-Go 50 program opens at the Warner Theatre on Oct 30 with four works, including Chanel DaSilva&#39;s world premiere An Artist&#39;s Prayer, set to music by go-go band Black Alley. His full-length Dracula premieres in February 2027.</p>
+        <a class="src s15" href="https://pointemagazine.com/edwaard-liang-washington-ballet-50/" target="_blank" rel="noopener">Read the original at Pointe →</a>
+      </div>
+    </li><li id="gt-herts-comedy">
+      <span class="n">03</span>
+      <div>
+        <h3 class="hd h-4">Hertfordshire comedians open four paid-spot comedy clubs</h3>
+        <span class="when">Mon Oct 26</span>
+        <p class="bd">Duncan Hart and Gil Givens launch Absolutely Belting Comedy, monthly nights in Stevenage, Hitchin, Letchworth and Baldock from November, with every main-bill spot paid. It grew out of Herts Comedy Workshop, about 70 members. Hart&#39;s promise: &#34;There will never, EVER be any AI posters!&#34;</p>
+        <a class="src s15" href="https://www.chortle.co.uk/other-news/2026/10/26/61905/hertfordshire_gets_four_new_comedy_clubs" target="_blank" rel="noopener">Read the original at Chortle →</a>
+      </div>
+    </li><li id="gt-lumina">
+      <span class="n">04</span>
+      <div>
+        <h3 class="hd h-4">Lumina simulates the universe&#39;s first 2 billion years on 15,000 GPUs</h3>
+        <span class="when">Tue Oct 27</span>
+        <p class="bd">The Center for Astrophysics | Harvard &amp; Smithsonian released Lumina, published in Monthly Notices of the Royal Astronomical Society. It models a cube about 1.5 billion light-years across, more than 100 times the volume of comparable earlier projects, on more than 15,000 GPUs of the Frontier supercomputer. Results will be compared with Webb and Roman observations.</p>
+        <a class="src s15" href="https://www.sciencedaily.com/releases/2026/10/261026225600.htm" target="_blank" rel="noopener">Read the original at ScienceDaily →</a>
+      </div>
+    </li><li id="gt-sesana">
+      <span class="n">05</span>
+      <div>
+        <h3 class="hd h-4">Botswana honors Roy Sesana, 97, who fought San evictions from the Kalahari</h3>
+        <span class="when">Tue Oct 27</span>
+        <p class="bd">Roy Sesana received an honorary Doctor of Letters from the University of Botswana on Oct 23 for decades of advocacy against removal of San communities from the Central Kalahari Game Reserve, which led to a High Court ruling in their favor nearly 20 years ago. He says the struggle &#34;remains far from over.&#34;</p>
+        <a class="src s15" href="https://news.mongabay.com/short-article/2026/10/botswana-honors-97-year-old-who-fought-eviction-of-indigenous-people-in-kalahari/" target="_blank" rel="noopener">Read the original at Mongabay →</a>
+      </div>
+    </li><li id="gt-otters">
+      <span class="n">06</span>
+      <div>
+        <h3 class="hd h-4">Oregon Zoo&#39;s rescued sea otters dunk mini pumpkins through hoops</h3>
+        <span class="when">Mon Oct 26</span>
+        <p class="bd">Oregon Zoo shared a video Oct 24 of otters Juno, Lincoln and Uni Sushi tossing mini pumpkins through hoops; Juno dribbles by swimming with the ball. The tradition began with Eddie, a rescued otter trained to exercise an arthritic elbow, who died in 2018 at nearly 21.</p>
+        <a class="src s15" href="https://www.goodgoodgood.co/articles/otters-playing-basketball-halloween-pumpkins" target="_blank" rel="noopener">Read the original at Good Good Good →</a>
+      </div>
+    </li><li id="gt-ghana-cocoa">
+      <span class="n">07</span>
+      <div>
+        <h3 class="hd h-4">A 62-year-old Ghanaian cocoa farmer grows profits and 17 jobs under shade trees</h3>
+        <span class="when">Thu Oct 22</span>
+        <p class="bd">Susana Afrifa Ankrah joined the Ghana Cocoa Forest REDD+ Programme after its 2019 launch and adopted shade-grown cocoa. She estimates her profit margins rose about 80%, and she also set up a daycare nursery and bakery employing 17 people.</p>
+        <a class="src s15" href="https://www.positive.news/society/the-farmer-growing-a-future-under-ghanas-trees/" target="_blank" rel="noopener">Read the original at Positive News →</a>
+      </div>
+    </li><li id="gt-durand">
+      <span class="n">08</span>
+      <div>
+        <h3 class="hd h-4">Andrew Durand, 16 straight months of overlapping Broadway and Off-Broadway contracts</h3>
+        <span class="when">Mon Oct 26</span>
+        <p class="bd">Tony nominee Andrew Durand juggled Dead Outlaw, Little Shop of Horrors, The Rocky Horror Show and The Curious Case of Benjamin Button, once rehearsing Rocky Horror for a month while performing in Little Shop. Benjamin Button began Oct 8 at the Public Theater and runs through Dec 20.</p>
+        <a class="src s15" href="https://playbill.com/article/every-moment-counts-andrew-durand-reflects-on-his-3-years-of-nonstop-work" target="_blank" rel="noopener">Read the original at Playbill →</a>
+      </div>
+    </li>
+  </ol>
+</section>
+
+
+
+<section class="sec rl" id="tv" data-screen-label="TV" aria-labelledby="tv-h">
+  <p class="kick">TV and the sky</p>
+  <h2 class="hd h-sec" id="tv-h">Tonight, and overhead</h2>
+  <div class="grid g220">
+
+<article class="tb" id="on-the-couch">
+  <img class="pic r45" src="https://images.unsplash.com/photo-1593784991251-92ded75ea290?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="On the couch" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+  <p class="lab">TV</p>
+  <h3 class="hd h-tv">On the Couch</h3>
+  
+    <ul><li><b>Survivor 51 (Ep 6)</b> &middot; CBS &middot; airs Pacific air time not confirmed: calendarx lists 5:00 PM PDT, no CBS page was checked &middot; streams Streaming not confirmed on any page we opened &mdash; Wed Oct 28; the only source is CalendarX, not a CBS page.</li></ul>
+    
+    
+  
+</article>
+
+
+<article class="tb" id="storm-watch">
+  <img class="pic r45" src="https://images.unsplash.com/photo-1776739835684-4078f7419f74?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Storm watch" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+  <p class="lab">Weather</p>
+  <h3 class="hd h-tv">Storm Watch</h3>
+  <p><b>Los Angeles:</b> Sunny, high 77, light wind turning SW 5-10 mph; tonight mostly clear, low 57 · Los Angeles</p>
+  <ul><li><b>Tropical Storm Vance</b> (Eastern Pacific) &mdash; Tropical storm · 40 mph peak · 1003 mb. 18.6N 108.6W, about 280 mi west of Manzanillo, Mexico, moving N at 12 mph with a turn to NNE expected No watches or warnings. 2-4 in of rain through Thursday over Sinaloa, Durango and Nayarit, with isolated totals up to 7 in in central and southern Sinaloa; flooding and mudslide risk; rip currents on the Mexican Pacific coast and southern Baja. <span class="when">(as of Advisory #28, 2:00 AM MST Wed Oct 28 (0900 UTC))</span> <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP2+shtml/280845.shtml" target="_blank" rel="noopener">NHC Public Advisory #28: Tropical Storm Vance</a></li></ul>
+  
+  <p><b>Winter outlook:</b> No tropical cyclones in the Atlantic or Central Pacific (NHC). Climate Prediction Center, 8 Oct 2026 discussion, still the latest: El Nino is still strengthening, with a greater than 83% chance of strong-to-very-strong El Nino persisting through Jan-Mar 2027. The next discussion is due about Nov 12.</p>
+  <p class="when">Outlook from the CPC discussion dated 2026-10-08.</p>
+  
+  <p><a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO Diagnostic Discussion</a> &middot; <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a></p>
+</article>
+
+
+<article class="tb" id="sky">
+  <img class="pic r45" src="https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="The sky tonight" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+  <p class="lab">Overhead</p>
+  <h3 class="hd h-tv">Sky</h3>
+  <p><b>Moon:</b> Waning Gibbous (92% illuminated)</p>
+  <p><b>Tonight's sky:</b> The Moon is 92% lit, and its glare swamps the Orionids, which peaked Oct 21-22 and stay active through Nov 7. Mars and Jupiter rise after midnight; Griffith gives 12:50 am (Mars) and 1:20 am (Jupiter, in Leo) for Oct 31. Saturn sets about 4:59 am on Oct 31. Mercury and Venus are too near the Sun. <a href="https://www.moongiant.com/phase/10/28/2026/" target="_blank" rel="noopener">Moon Giant: Moon phase Oct 28 2026</a> &middot; <a href="https://griffithobservatory.lacity.gov/explore/observing-the-sky/sky-report/" target="_blank" rel="noopener">Griffith Observatory Sky Report</a></p>
+  
+  
+  
+  <h5>Human Design transits</h5>
+  <ul><li><b>Patrick:</b> Saturn in Gate 21 (The Hunter, Heart) and Uranus in Gate 20 (The Now, Throat) sit on two of your own gates, completing the 21-45 and 20-34 channels; Neptune in Gate 25 and Pluto in Gate 41 complete 25-51 and 30-41 with gates you carry; the North Node is in your Gate 30 (Recognition of Feelings). Mechanics from the HD Toolkit; meanings are interpretation.</li><li><b>Travis:</b> Saturn in Gate 17 (Opinions, Ajna) and Neptune in Gate 25 (The Spirit of the Self, G) both sit on his own gates; neither completes a new channel today. Mechanics from the HD Toolkit; meanings are interpretation.</li></ul>
+</article>
+
+
+<article class="tb" id="crop-circle-watch">
+  <img class="pic r45" src="https://images.unsplash.com/photo-1781332150560-5b4d1f59b1b4?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Crop circle watch" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+  <p class="lab">Notebook</p>
+  <h3 class="hd h-tv">Crop Circle Watch</h3>
+  <p><b>Latest formation</b> &mdash; Tue Jul 21 &middot; Wanborough Plain, near Liddington, Wiltshire, England. The latest formation on the Crop Circle Connector, reported 21 July 2026.</p>
+  
+  <ul><li>No newer formation is logged since 21 July 2026.</li><li>The Connector&#39;s 2026 index shows 16 formations for the year, 10 of them from July to December and none from August to December; the index shows an update date of 11 Aug 2026, so the site may simply be stale.</li></ul>
+  <p><em>From the history: On 9 September 1991 the British paper Today ran a front-page story saying Doug Bower and Dave Chorley had made crop circles since the late 1970s, flattening the crop with planks and ropes, with more than 200 patterns over the previous decade. The confession covers their own work; some believers kept insisting on non-human causes afterward.</em></p>
+  <p><a href="https://cropcircleconnector.com/2026/July2026.html" target="_blank" rel="noopener">Crop Circle Connector: July-December 2026</a> &middot; <a href="https://cropcircleconnector.com/2026/2026.html" target="_blank" rel="noopener">Crop Circle Connector: 2026 index</a> &middot; <a href="https://www.nzherald.co.nz/lifestyle/crop-circles-were-made-by-supernatural-forces-named-doug-and-dave/6IH4GVZCHZUYWXIMLLCOOOVJK4" target="_blank" rel="noopener">NZ Herald (New York Times syndication): Doug and Dave</a></p>
+</article>
+
+</div>
+</section>
+
+
+
+
+</main>
+
+<footer class="foot">
+  <div class="top">
+    <div>
+      <p class="brand">The Gayzette</p>
+      <p class="tagl">No ads. No pop-ups. No tracking. Just the paper.</p>
+    </div>
+    <nav aria-label="Footer sections">
+      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+      <a href="/editions/">Past editions</a>
+    </nav>
+  </div>
+  <p class="fine">The Gayzette &middot; Patrick &amp; Travis<br><a href="/editions/">Past editions</a> &middot; Made in Los Angeles &middot; Edition No. 35 &middot; Summaries link to their sources</p>
+</footer>
+</div>
+</body>
+</html>

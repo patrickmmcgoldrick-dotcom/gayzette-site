@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="The Gayzette, daily edition, 2026-10-31. A personal daily by Patrick and Travis.">
+<title>The Gayzette: Gemini&#39;s Computer Use tool leaves preview: an AI that works a screen</title>
+<link rel="alternate" type="application/rss+xml" title="The Gayzette" href="/feed.xml">
+<style>/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/fonts/DMSans-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/fonts/DMSans-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-italic-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-italic-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-italic-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-italic-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-italic-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-italic-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-normal-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* ===== The Gayzette site.css v3 (DRAFT 3, 2026-10-19). Every value below is lifted from the Claude Design Labs
+   page ("The Gayzette"): tokens #FBF8F1 paper, #222222 ink, #6B645A muted, #E4DCCB hairline, #C2603C accent. ===== */
+html,body{margin:0;padding:0;background:#FBF8F1;color:#222222;-webkit-font-smoothing:antialiased}
+a{color:#C2603C}a:hover{color:#A24E2F}
+img,svg{max-width:100%}
+.pg{min-height:100vh;background:#FBF8F1;color:#222222;font-family:Newsreader,Georgia,serif;overflow-wrap:break-word}
+.skip{position:absolute;left:-9999px;top:16px;z-index:50;background:#222;color:#FBF8F1;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.skip:focus{left:16px;color:#FBF8F1}
+:focus-visible{outline:2px solid #C2603C;outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+
+/* header */
+.strip{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid #E4DCCB;font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A}
+.mast{padding:72px 0 56px;text-align:left}
+.mast a{text-decoration:none;color:#222222}
+.mast h1{font-family:Fraunces,serif;font-weight:600;font-variation-settings:'SOFT' 80;font-optical-sizing:auto;font-size:clamp(56px,9vw,120px);line-height:.95;letter-spacing:-.02em;margin:0}
+.mast p{font-family:Fraunces,serif;font-style:italic;font-weight:400;font-size:19px;color:#6B645A;margin:20px 0 0}
+.nav{display:flex;gap:32px;overflow-x:auto;border-top:1px solid #E4DCCB;border-bottom:1px solid #E4DCCB;scrollbar-width:none;white-space:nowrap}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;min-height:48px;padding:0 2px;font-family:'DM Sans',sans-serif;font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:#222222;border-bottom:2px solid transparent;margin-bottom:-1px}
+.nav a.on{color:#C2603C;border-bottom-color:#C2603C}
+
+/* type kit */
+.kick,.lab,.when{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.kick{color:#C2603C;margin:0 0 16px}
+.lab{color:#6B645A;margin:0 0 8px}
+.hd{font-family:Fraunces,serif;font-weight:600;font-variation-settings:'SOFT' 60;margin:0;text-wrap:pretty}
+.hd a,.hl a{text-decoration:none;color:inherit}
+.hd a:hover,.hl a:hover{color:#C2603C}
+.h-hero{font-optical-sizing:auto;font-size:clamp(36px,5vw,64px);line-height:1.04;letter-spacing:-.015em}
+.h-sun{font-size:clamp(40px,6vw,80px);line-height:1;letter-spacing:-.02em}
+.h-3{font-size:36px;line-height:1.1;letter-spacing:-.012em}
+.h-lead{font-size:clamp(30px,3.5vw,42px);line-height:1.08;letter-spacing:-.012em}
+.h-card{font-size:28px;line-height:1.12;letter-spacing:-.01em}
+.h-card2{font-size:26px;line-height:1.15;letter-spacing:-.01em}
+.h-tv{font-size:24px;line-height:1.15;letter-spacing:-.01em}
+.h-4{font-size:22px;line-height:1.2;letter-spacing:-.01em}
+.h-sec{font-size:clamp(36px,4.5vw,52px);line-height:1.05;letter-spacing:-.015em}
+.h-page{font-size:clamp(44px,6vw,72px);line-height:1;letter-spacing:-.02em}
+.deck{font-family:Fraunces,serif;font-style:italic;font-weight:400;font-size:24px;line-height:1.35;color:#6B645A;margin:20px 0 0;text-wrap:pretty}
+.deck.s21{font-size:21px;line-height:1.4;margin:16px 0 0}
+.deck.s26{font-size:26px;margin:24px 0 0}
+.stand{font-family:Fraunces,serif;font-style:italic;font-size:21px;line-height:1.4;color:#6B645A;margin:24px 0 0;max-width:620px}
+.rule{width:48px;height:2px;background:#C2603C;margin:24px 0 0}
+.by{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:24px 0 0}
+.bd{font-family:Newsreader,serif;font-size:19px;line-height:1.65;margin:14px 0 0;max-width:620px}
+.bd.l{max-width:none}
+.bd a{color:#C2603C}
+.src{display:inline-block;margin-top:14px;font-family:Newsreader,serif;font-style:italic;font-size:16px;color:#C2603C;text-decoration:none}
+.src:hover{text-decoration:underline}
+.src.s15{font-size:15px;margin-top:8px}
+.src.m12{margin-top:12px}
+.chip{display:inline-block;margin-left:10px;padding:2px 8px;border:1px solid #E4DCCB;color:#6B645A;font-family:'DM Sans',sans-serif;font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.ph,.pic{display:block;width:100%;object-fit:cover;background:#EDE6D6}
+.pic.fb,.ph{background:#EDE6D6 repeating-linear-gradient(135deg,transparent 0 12px,rgba(34,34,34,.045) 12px 13px)}
+.r32{aspect-ratio:3/2}.r45{aspect-ratio:4/5}
+.flex{display:flex;flex-wrap:wrap;align-items:flex-start}
+@media (max-width:640px){.bleed{margin-left:-24px;margin-right:-24px;width:calc(100% + 48px)}}
+
+/* front page blocks */
+main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.s-hero{padding:72px 0 0}
+.hero-in{display:flex;flex-direction:column;flex-wrap:wrap;gap:32px 32px;align-items:stretch}
+.hero-pic{width:100%;min-width:0}
+.hero-txt{flex:1 1 320px;min-width:0;max-width:720px}
+.sec{padding:112px 0 0}
+.sec.rl{margin-top:120px;padding:80px 0 0;border-top:1px solid #E4DCCB}
+.row{display:flex;flex-wrap:wrap;gap:48px 32px;align-items:flex-start}
+.col-main{flex:2 1 480px;min-width:0}
+.col-side{flex:1 1 260px;min-width:0}
+.col-half{flex:1 1 380px;min-width:0}
+.col-half.t{flex-basis:260px}
+.mt28{margin-top:28px}
+.more{margin-top:0}
+.more .it{padding:20px 0;border-top:1px solid #E4DCCB}
+.more .it h4{margin:0}
+.col-half .more{margin-top:48px}
+.nbr{max-width:620px}
+.brief{margin-top:10px}
+.brief summary{display:inline-block;cursor:pointer;margin-top:8px;font-family:Newsreader,serif;font-style:italic;font-size:15px;color:#6B645A;list-style:none}
+.brief summary::-webkit-details-marker{display:none}
+.brief summary:hover{color:#C2603C}
+.brief[open] summary{margin-bottom:4px}
+.brief .bd{font-size:17px;line-height:1.6;margin:8px 0 0}
+.brief .bd+.bd{margin-top:14px}
+.ctx{margin:14px 0 0;font-family:Newsreader,serif;font-size:17px;line-height:1.55;color:#6B645A;max-width:620px}
+.ctx b,.tag{font-family:'DM Sans',sans-serif;font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#C2603C;margin-right:8px}
+.sides{margin:12px 0 0;padding:0;list-style:none;font-family:Newsreader,serif;font-size:16px;line-height:1.5;color:#6B645A}
+.sides li{padding:6px 0;border-top:1px solid #E4DCCB}
+
+/* inset comic art (the newsroom's own panel) */
+.illo{margin:32px 0 0;max-width:620px}
+.illo .art{border:1px solid #E4DCCB;background:#FBF8F1}
+.illo svg{display:block;width:100%;height:auto}
+.illo figcaption{font-family:Fraunces,serif;font-style:italic;font-size:15px;color:#6B645A;margin:12px 0 0}
+.illo figcaption span{font-family:'DM Sans',sans-serif;font-style:normal;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+
+/* long text under the hero / in a story */
+.story{max-width:620px;margin:72px 0 0}
+.story .bd{margin:0}
+.story .bd+.bd,.story .illo+.bd{margin-top:28px}
+.desk{margin:48px 0 0;padding:32px;background:#F3EEE2;max-width:620px}
+.desk p.lab{margin:0 0 10px;font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;line-height:1.65;color:#6B645A}
+.desk p{font-family:Newsreader,serif;font-size:19px;line-height:1.5;margin:0}
+.pill{display:inline-block;margin-top:12px;font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#C2603C;border:1px solid #C2603C;padding:3px 10px}
+.rcpt{margin:16px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:16px}
+.rcpt summary{cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A}
+.rcpt ul{margin:10px 0 0;padding:0;list-style:none}
+.rcpt li{padding:6px 0;border-top:1px solid #E4DCCB}
+.rcpt .d{color:#6B645A;font-size:14px;margin-left:6px}
+.note{margin:96px 0 0;padding-top:56px;border-top:1px solid #E4DCCB;max-width:620px}
+.note .t{font-family:Newsreader,serif;font-size:19px;line-height:1.65;margin:20px 0 0}
+.note .by{margin:0}
+
+/* Good Ten (list) */
+.glist{list-style:none;margin:48px 0 0;padding:0;max-width:620px}
+.glist li{display:flex;gap:24px;padding:24px 0;border-top:1px solid #E4DCCB}
+.glist .n{font-family:'DM Sans',sans-serif;font-weight:500;font-size:13px;letter-spacing:.08em;color:#C2603C;padding-top:7px;min-width:28px}
+.glist li>div{min-width:0}
+.glist h3{margin:0}
+.glist .when{display:block;color:#6B645A;margin:6px 0 0}
+.glist .bd{margin:10px 0 0}
+.gh{max-width:620px}
+
+/* grids */
+.grid{display:grid;gap:48px 32px;margin-top:48px}
+.g220{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.g280{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:56px 32px;margin-top:40px}
+.g320{grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:72px 32px;margin-top:120px}
+.grid article{min-width:0}
+.grid .kick{margin:24px 0 10px}
+.grid.g220 .lab{margin:20px 0 8px}
+.tb p{font-family:Newsreader,serif;font-size:18px;line-height:1.6;margin:10px 0 0}
+.tb ul{list-style:none;margin:10px 0 0;padding:0}
+.tb li{font-family:Newsreader,serif;font-size:17px;line-height:1.55;padding:10px 0;border-top:1px solid #E4DCCB}
+.tb .empty{color:#6B645A;font-style:italic}
+.tb h5{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:20px 0 0}
+.tb a{color:#C2603C}
+.tb .alert{color:#A24E2F}
+.tvweek{margin-top:10px}
+.tvweek .day{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#C2603C;padding-top:12px;border-top:1px solid #E4DCCB}
+.tvweek .shows div{font-family:Newsreader,serif;font-size:17px;line-height:1.5;padding:2px 0}
+
+/* section page */
+.s-page{padding:80px 0 0}
+.lead{display:flex;flex-wrap:wrap;gap:40px 32px;align-items:flex-start;margin-top:96px}
+.lead>div{flex:1 1 380px;min-width:0}
+.lead .kick{margin:0 0 12px}
+.empty-sec{margin-top:96px;padding:80px 0;border-top:1px solid #E4DCCB;border-bottom:1px solid #E4DCCB;max-width:620px}
+.earlier{margin-top:120px;padding-top:80px;border-top:1px solid #E4DCCB;max-width:760px}
+.earlier .e{display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between;align-items:baseline;padding:20px 0;border-top:1px solid #E4DCCB}
+.earlier .e h4{flex:1 1 320px;margin:0}
+
+/* lists (Sunday lines, archive) */
+.lines{list-style:none;margin:40px 0 0;padding:0;max-width:760px}
+.lines li{display:grid;grid-template-columns:88px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #E4DCCB}
+.lines .when{color:#6B645A;padding-top:5px;font-size:13px}
+.lines .what{font-family:Newsreader,serif;font-size:18px;line-height:1.6}
+.lines .tag{margin:0 0 0 10px;color:#6B645A}
+.lines a{font-style:italic;font-size:15px;color:#C2603C;text-decoration:none}
+.lines a:hover{text-decoration:underline}
+.month{font-family:'DM Sans',sans-serif;font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#C2603C;margin:64px 0 8px}
+.arch{list-style:none;margin:0;padding:0;max-width:760px}
+.arch li{display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between;align-items:baseline;padding:20px 0;border-top:1px solid #E4DCCB}
+.arch li>div{flex:1 1 320px}
+.arch h4{margin:0}
+.arch .when{color:#6B645A;order:2}
+.arch .kind{display:block;margin-top:4px;font-family:Fraunces,serif;font-style:italic;font-size:16px;color:#6B645A}
+.spec h3{margin:48px 0 0}
+.spec ul{list-style:none;margin:8px 0 0;padding:0;max-width:760px}
+.spec li{padding:20px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:18px;line-height:1.6}
+.spec li a{font-style:italic;font-size:15px;color:#C2603C;text-decoration:none}
+.spec .empty{color:#6B645A;font-style:italic}
+.made{max-width:760px}
+.made p{font-family:Newsreader,serif;font-size:19px;line-height:1.65;margin:20px 0 0}
+.made table{width:100%;border-collapse:collapse;margin-top:24px;font-family:Newsreader,serif;font-size:16px}
+.made th{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;text-align:left;padding:8px 8px 8px 0;border-bottom:1px solid #E4DCCB}
+.made td{padding:10px 8px 10px 0;border-top:1px solid #E4DCCB;vertical-align:top}
+.made .num{text-align:right}
+.tablewrap{overflow-x:auto}
+
+/* footer */
+.foot{max-width:1200px;margin:160px auto 0;padding:48px 24px 64px;box-sizing:border-box;border-top:1px solid #E4DCCB}
+.foot .top{display:flex;flex-wrap:wrap;gap:32px 64px;justify-content:space-between}
+.foot .brand{font-family:Fraunces,serif;font-weight:600;font-variation-settings:'SOFT' 80;font-size:28px;letter-spacing:-.015em;margin:0}
+.foot .tagl{font-family:Fraunces,serif;font-style:italic;font-size:16px;color:#6B645A;margin:8px 0 0}
+.foot nav{display:flex;flex-wrap:wrap;gap:16px 28px}
+.foot nav a{display:inline-flex;align-items:center;min-height:44px;font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;text-decoration:none}
+.foot nav a:hover{color:#C2603C}
+.foot .fine{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:48px 0 0;line-height:1.8}
+.foot .fine a{color:#6B645A}
+
+@media print{
+  html,body{background:#fff}
+  .nav,.skip{display:none !important}
+  .ph{background:#f2f2f2 !important}
+  article,.it,li{break-inside:avoid-page}
+}
+
+/* classroom */
+.cls-wrap{max-width:660px}
+.cls-meets{margin:40px 0 0;max-width:620px}
+.cls-meets p.lab,.cls-hw .lab,.cls-quiz p.lab,.cls-next p.lab,p.lab.cls-grp{font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:0 0 10px}
+.cls-meets ul{list-style:none;margin:0;padding:0}
+.cls-meets li{padding:14px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-meets li a{color:#C2603C;font-family:Fraunces,serif;font-weight:500;text-decoration:none;border-bottom:1px solid #C2603C}
+.cls-meets .why{display:block;margin-top:4px;color:#3a352e}
+.cls-hw{margin:28px 0 0;font-family:Newsreader,serif;font-size:19px;line-height:1.5;max-width:620px}
+.cls-hw .lab{display:inline-block;margin:0 8px 0 0;color:#C2603C}
+.cls-go{font-family:Fraunces,serif;font-style:italic;color:#6B645A;margin:20px 0 0}
+.cls-src{font-family:"DM Sans",sans-serif;font-size:13px;color:#6B645A;margin:14px 0 0}
+.cls-src a{color:inherit}
+.cls-ideas{margin:24px 0 0;padding-left:22px;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-ideas li{margin:0 0 16px}
+.cls-ideas strong{font-family:Fraunces,serif;font-weight:500}
+.cls-quiz,.cls-next{margin:36px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-quiz ol{padding-left:22px}
+.cls-next .bd{margin-top:0}
+.desk+.cls-hw,.desk+.cls-next{margin-top:28px}
+</style>
+</head>
+<body>
+<div class="pg">
+<a class="skip" href="#main">Skip to content</a>
+<header class="wrap">
+  <div class="strip"><span>Saturday, October 31, 2026</span><span>Edition No. 37</span></div>
+  <div class="mast">
+    <a href="/"><h1>The Gayzette</h1></a>
+    <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
+  </div>
+  <nav class="nav" aria-label="Sections">
+    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="s-hero" id="front" data-beat="The AI Builder">
+  
+  <div class="hero-in">
+    <div class="hero-pic bleed"><img class="pic r32" src="https://images.unsplash.com/photo-1763568258286-721c164171e0?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Gemini&#39;s Computer Use tool leaves preview: an AI that works a screen" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')"></div>
+    <div class="hero-txt">
+      <p class="kick">Front page · AI</p>
+      <h2 class="hd h-hero"><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Gemini&#39;s Computer Use tool leaves preview: an AI that works a screen</a></h2>
+      <p class="deck">Google says its screen-driving tool is now generally available, with sandbox warnings attached.</p>
+      <p class="by">By The Gayzette, with Claude · 2 min read · Wonder ◆◆◆◆◇</p>
+    </div>
+  </div>
+  
+  <div class="story">
+    <p class="bd">Google says its Computer Use tool is now generally available (GA, meaning out of preview and open to everyone) in both the Interactions and GenerateContent APIs, per its developer changelog entry dated Oct 30. The tool lets a Gemini model look at a screenshot and answer with the clicks, scrolls and keystrokes it would make. Think of a very patient intern who can see your screen but has no hands: it points, and your own code does the pressing.</p><p class="bd">Your code runs each action, for example with Playwright (a tool that drives a web browser), then sends back a fresh screenshot, and the loop repeats. The docs cover browser, mobile and desktop setups, and Python needs google-genai 2.7.0 or newer. The caveat: Google&#39;s docs say to run it in a sandbox or virtual machine because it &#34;may contain errors and security vulnerabilities,&#34; and the check for prompt injection (a web page sneaking in instructions) is opt-in and off by default.</p><p class="bd">On your desk: a sandboxed browser agent could take over repetitive studio admin for Travis, like checking class-roster or registration portals, and it would make a tidy Skool lesson on an agent with a screen and guardrails. For Patrick&#39;s Claude-agent vault office it is a useful comparison: a helper that acts, but only inside a fenced yard.</p>
+    <aside class="desk"><p class="lab">On our desk</p><p>A tool that can operate any website or app means agents no longer need a special connector for every service, which is why GA matters for builders.</p></aside>
+    <a class="src " href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Read the original at Gemini API changelog: Computer Use generally available (GA), Oct 30 →</a>
+    <details class="rcpt"><summary>Receipts (2)</summary>
+<ul><li><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Gemini API changelog: Computer Use generally available (GA), Oct 30</a></li><li><a href="https://ai.google.dev/gemini-api/docs/computer-use" target="_blank" rel="noopener">Gemini API docs: Computer Use</a></li></ul></details>
+  </div>
+</section>
+<section class="note" aria-label="Editor's note">
+  <p class="kick">Editor's note</p>
+  <p class="by">The Editor</p>
+  <p class="t">Happy Halloween. Today&#39;s paper has Google&#39;s screen-driving AI leaving preview, three more builder items (one of them a talking Halloween haunt), a pair of psychedelic-science stories from a quiet week, and a Good Ten full of janitors, teens and bamboo.</p><p class="t">This edition ran late: the scheduled run fired at 2:33 pm instead of 4:30 am. To stay near budget, the lead was written by the section writer rather than the Opus editor, The Good Ten runs 8 today, and items carry the house art panel instead of new drawings.</p><p class="t">Your reactions are unchanged since Oct 15 (four more, one less on the Good Ten; one less on an awards recap), so the Good Ten keeps leaning human-scale and skips awards and clinical studies.</p><p class="t">New in the Sky box: every Human Design transit now has its dates, its meaning and a &#39;Try this&#39;, for both of you, plus today&#39;s retrogrades in plain words — built from Friday&#39;s voice note.</p>
+</section>
+
+
+<section class="sec" id="ai" data-screen-label="AI">
+  <div class="row">
+    <div class="col-main">
+      <div class="bleed"><img class="pic r32" src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Anthropic adds a Usage and Cost Analytics API in beta" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')"></div>
+      <article id="ai-anthropic-usage-cost-api" data-beat="The AI Builder">
+  <p class="kick" style="margin:28px 0 12px">AI</p>
+  <h3 class="hd h-3" style="max-width:620px"><a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank" rel="noopener">Anthropic adds a Usage and Cost Analytics API in beta</a></h3>
+  
+  <p class="bd">Disclosure: Anthropic makes Claude, the model that helps make this paper.</p><p class="bd">Anthropic&#39;s Claude Platform release notes, dated Oct 29, 2026, announce a Usage and Cost Analytics API in beta. You switch it on with the header analytics-usage-cost-2026-08-24, and two endpoints (web addresses a program can ask) at /v1/organizations/analytics/usage and /v1/organizations/analytics/cost report token usage (tokens are the word-sized chunks an AI reads and writes) and cost. The older Usage and Cost API and four Claude Enterprise Analytics report endpoints are now labeled legacy but still supported. Caveat: these are organization-level endpoints, and the release notes do not say which key type is required.</p><p class="bd">On your desk: have a vault agent pull weekly spend into a note, so you can see what each agent job costs, like a utility bill for the AI office.</p>
+  
+  <a class="src " href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank" rel="noopener">Read the original at Claude Platform release notes (Oct 29, 2026 entry) →</a>
+  
+</article>
+    </div>
+    
+    <aside class="col-side more" aria-label="More in AI">
+      <p class="lab">More in AI</p>
+      <div class="it" id="ai-mistral-large-4">
+  <h4 class="hd h-4"><a href="https://huggingface.co/blog/mistral-large4" target="_blank" rel="noopener">Mistral Large 4 ships with open weights on Hugging Face</a></h4>
+  <details class="brief"><summary>Read the brief</summary><p class="bd">Mistral&#39;s Large 4 model is out with open weights (the trained settings are downloadable, so others can run it), per a Hugging Face post dated Oct 29. The article describes about 1T total parameters with 49B active at a time, in a mixture-of-experts design (many specialist sub-networks, only a few awake per word). It reads text and images. The license limits selling it as a service.</p><p class="bd">Caveats: the page also lists A52B, some benchmark results come from Mistral&#39;s own testing, and the suggested setup is 8x H200 GPUs, so this is not a laptop model.</p><p class="bd">On your desk: an open-weight option you could reach through a hosted provider as a non-Anthropic fallback for vault automation, and an angle for a Skool lesson on open versus closed models.</p></details>
+  <br><a class="src s15" href="https://huggingface.co/blog/mistral-large4" target="_blank" rel="noopener">Read the original at Hugging Face blog: Mistral Large 4 →</a>
+  
+</div><div class="it" id="ai-nvidia-monsterhouse">
+  <h4 class="hd h-4"><a href="https://huggingface.co/blog/nvidia/nemotron-halloween" target="_blank" rel="noopener">NVIDIA&#39;s MonsterHouse is a talking Halloween haunt built on open models</a></h4>
+  <details class="brief"><summary>Read the brief</summary><p class="bd">NVIDIA&#39;s Hugging Face blog, dated Oct 30, shows MonsterHouse, an interactive projection where a voice agent chats with visitors, all running on one workstation. It uses a Bolt E4B response model (4-bit) with a personality trained on 5,000+ multi-turn conversations, plus Magpie TTS Zeroshot, which clones a voice from a short sample in seven moods. NVIDIA reports a median 1.70 seconds from speech to audio reply, and 0.72 seconds for cached responses.</p><p class="bd">Caveats: those speeds are NVIDIA&#39;s own, measured on pro-grade GPUs, and the post says the MonsterHouse code itself is not packaged for release; it points to the Nemotron Voice Agent framework instead.</p><p class="bd">On your desk: a template for a talking character, a seasonal fit today, and a seed for a Stacy-persona voice-bot experiment.</p></details>
+  <br><a class="src s15" href="https://huggingface.co/blog/nvidia/nemotron-halloween" target="_blank" rel="noopener">Read the original at Hugging Face blog (NVIDIA): Nemotron Halloween voice agent →</a>
+  
+</div>
+    </aside>
+    
+  </div>
+</section>
+
+
+
+<section class="sec" id="spirit" data-screen-label="Spirit">
+  <div class="row" style="gap:40px 32px">
+    <div class="col-half bleed"><img class="pic r45" src="https://images.unsplash.com/photo-1767140670872-d5d2dbb700bc?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="FDA, VA and HHS officials outline a pre-approval plan for psychedelic medicines" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')"></div>
+    <div class="col-half">
+      
+      <article id="sp-pre-approval-roadmap" data-beat="Spirit">
+        <p class="kick" style="margin:0 0 12px">Spirit</p>
+        <h3 class="hd h-3"><a href="https://www.lucid.news/federal-health-officials-pre-approval-psychedelic-medicines-horizons/" target="_blank" rel="noopener">FDA, VA and HHS officials outline a pre-approval plan for psychedelic medicines</a></h3>
+        
+        <p class="bd">A quiet week, so this one is from earlier: Lucid News reported on Oct 28 on an Oct 15 forum where HHS, VA, FDA and ARPA-H officials described their planning. HHS Deputy General Counsel Matt Zorn said an April executive order speeds timelines but not standards: &#34;same standards, moving on a faster timeline.&#34; 10 VA medical centers are Phase 1 lead sites, and VA care could begin in Jan-Feb 2027 only if a drug is approved.</p><p class="bd">Compass Pathways expects to submit an NDA (new drug application, the formal request to sell a medicine) for COMP360 this quarter, as speakers described. Caveats: this is officials&#39; statements at one forum, reported by one outlet; no rule or approval has happened, and officials warned against overhyping.</p><p class="bd">On your desk: a lesson on how a consciousness technology becomes legal medicine for the Skool ethics module, where the cautious framing is the teachable part.</p>
+        
+        <a class="src " href="https://www.lucid.news/federal-health-officials-pre-approval-psychedelic-medicines-horizons/" target="_blank" rel="noopener">Read the original at Lucid News: federal health officials on pre-approval psychedelic medicines →</a>
+        
+      </article>
+      
+      
+      <div class="more" style="margin-top:48px" aria-label="More in Spirit">
+        <p class="lab">More in Spirit</p>
+        <div class="it" id="sp-ucsc-psilocybin-synapses">
+  <h4 class="hd h-4"><a href="https://news.ucsc.edu/2026/10/how-psilocybin-reshapes-brain-circuits/" target="_blank" rel="noopener">Psilocybin grows new synapses in mice, separately from the trip signal</a></h4>
+  <details class="brief"><summary>Read the brief</summary><p class="bd">Also from earlier in the quiet week: UC Santa Cruz News released a study on Oct 22, published online Oct 15 in Nature Neuroscience, led by Yi Zuo. In mice, psilocybin made new dendritic spines (tiny bumps where brain cells connect) within 24 hours, fading over about three weeks in healthy mice. In stressed mice, a depression-like model, the surge was larger and loss of existing connections was halted.</p><p class="bd">The effect depended on 5-HT2A receptors in layer 5 pyramidal neurons. Restoring them restored growth without the head-twitch response; deleting them abolished growth but left the twitch intact, so the authors say the pathways are separable. Caveats: mouse data only, no sample sizes in the release, and head-twitch is a rodent proxy, not perception.</p><p class="bd">On your desk: the science behind why peak experiences might change the brain, for consciousness courses, with an honest mice-only label.</p></details>
+  <br><a class="src s15" href="https://news.ucsc.edu/2026/10/how-psilocybin-reshapes-brain-circuits/" target="_blank" rel="noopener">Read the original at UC Santa Cruz News: how psilocybin reshapes brain circuits →</a>
+  
+</div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+<section class="sec" id="world" data-screen-label="World">
+  <div class="row" style="gap:40px 32px">
+    <div class="bleed" style="flex:2 1 480px;min-width:0;order:2"><img class="pic r32" src="https://images.unsplash.com/photo-1768005419000-d53e45851b50?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="US approves possible $2.1bn sale of 500 Patriot missiles to Ukraine" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')"></div>
+    <div class="col-half t" style="order:1">
+      
+      <article id="w-patriot-ukraine">
+        <p class="kick" style="margin:0 0 12px">World</p>
+        <h3 class="hd h-3"><a href="https://www.aljazeera.com/news/2026/10/31/us-greenlights-2-1bn-patriot-missile-sale-to-ukraine" target="_blank" rel="noopener">US approves possible $2.1bn sale of 500 Patriot missiles to Ukraine</a></h3>
+        <p class="bd"><span class="tag">Confirmed</span>The US State Department approved the possible sale of 500 PAC-3 missiles plus parts and support, estimated at $2.1bn, with Lockheed Martin as principal contractor. Funding comes from Canada, Germany and Norway under &#34;US JUMPSTART,&#34; plus national funds financed by the EU Ukraine Support Loan. The missiles are not yet built.</p>
+        <p class="bd" style="margin-top:12px"><span class="tag">Claimed by Two people briefed on the decision, via Reuters/Al Jazeera</span>delivery is not expected until a couple of years into the 2030s. Al Jazeera/Reuters also describe the sale as one of the most significant defensive-arms steps for Kyiv of Trump&#39;s second term, which is the outlet&#39;s characterization.</p>
+        <ul class="sides"><li><strong>United States:</strong> Says it approved the possible sale.</li><li><strong>Ukraine:</strong> President Zelenskyy said on Oct 26 that Kyiv had waited almost a month for Washington&#39;s sign-off on missile supplies.</li></ul>
+        <a class="src " href="https://www.aljazeera.com/news/2026/10/31/us-greenlights-2-1bn-patriot-missile-sale-to-ukraine" target="_blank" rel="noopener">Read the original at Al Jazeera: US greenlights $2.1bn Patriot missile sale to Ukraine →</a>
+        
+      </article>
+      
+      
+      <div class="more" style="margin-top:48px" aria-label="More in World">
+        <p class="lab">More in World</p>
+        
+        <div class="it" id="w-ebola-drc">
+          <h4 class="hd h-4"><a href="https://www.aljazeera.com/news/2026/10/31/ebola-death-toll-in-dr-congo-passes-5000" target="_blank" rel="noopener">Ebola deaths in DR Congo pass 5,000; Saudi Arabia suspends travel from Kenya</a></h4>
+          <details class="brief"><summary>What is known</summary>
+            <p class="bd"><span class="tag">Confirmed</span>DR Congo&#39;s death toll passed 5,000 per government data announced Friday, with more than 10,000 infected since the outbreak was declared in May, across 8 of 26 provinces. It is the Bundibugyo strain, for which there is no approved treatment or vaccine. Nigeria reported its first case last week, and Kenya and Uganda also have cases. The Saudi Press Agency said Saudi Arabia suspended travel to and entry from Kenya, paused visas for Kenyans, and bars anyone who has been in Kenya or another affected country within 21 days.</p>
+            <p class="bd"><span class="tag">Claimed by Al Jazeera</span>this is the deadliest DR Congo outbreak on record and the second-largest Ebola outbreak ever, after West Africa in 2014-16 (over 28,600 infected, over 11,000 dead).</p>
+            
+          </details>
+          <br><a class="src s15" href="https://www.aljazeera.com/news/2026/10/31/ebola-death-toll-in-dr-congo-passes-5000" target="_blank" rel="noopener">Read the original at Al Jazeera: Ebola death toll in DR Congo passes 5,000 →</a>
+          
+        </div>
+        
+        <div class="it" id="w-western-sahara-un">
+          <h4 class="hd h-4"><a href="https://www.aljazeera.com/news/2026/10/31/rival-us-and-russian-resolutions-on-western-sahara-fail-at-un" target="_blank" rel="noopener">UN Security Council rejects both Western Sahara drafts as mission mandate lapses</a></h4>
+          <details class="brief"><summary>What is known</summary>
+            <p class="bd"><span class="tag">Confirmed</span>A US draft was vetoed by Russia despite 11 of 15 members voting in favor, and a Russian draft failed to reach nine votes. The mandate of MINURSO, the UN mission for the referendum in Western Sahara, expires Saturday with no approved extension. The US draft proposed a one-year extension, dropping &#34;referendum&#34; from the mission&#39;s name and making Morocco&#39;s autonomy proposal the sole basis for talks; the Russian draft would renew the mission as is.</p>
+            <p class="bd"><span class="tag">Claimed by US, Russian, Moroccan and Polisario representatives</span>the referendum has been stalled for decades. Claimed by Russian Ambassador Vassily Nebenzia: Moscow opposed the US draft because it favored one side. Claimed by Morocco&#39;s royal palace: it welcomed non-renewal and says UN personnel and equipment should leave the territory. Claimed by Polisario&#39;s UN representative Sidi Omar: the US plan undermines Sahrawi self-determination.</p>
+            <ul class="sides"><li><strong>United States:</strong> Autonomy under Moroccan sovereignty as the basis for talks.</li><li><strong>Russia and Polisario:</strong> Preserve the self-determination track.</li><li><strong>Morocco:</strong> Welcomed non-renewal and wants the UN to leave.</li></ul>
+          </details>
+          <br><a class="src s15" href="https://www.aljazeera.com/news/2026/10/31/rival-us-and-russian-resolutions-on-western-sahara-fail-at-un" target="_blank" rel="noopener">Read the original at Al Jazeera: rival US and Russian resolutions on Western Sahara fail at UN →</a>
+          
+        </div>
+        
+        <div class="it" id="w-somalia-untmis">
+          <h4 class="hd h-4"><a href="https://www.aljazeera.com/news/2026/10/31/un-closes-somalia-mission-ending-three-decades-of-political-engagement" target="_blank" rel="noopener">UN closes its political mission in Somalia after three decades</a></h4>
+          <details class="brief"><summary>What is known</summary>
+            <p class="bd"><span class="tag">Confirmed</span>The UN mission UNTMIS ceased operations on Oct 31 after a two-year transition requested by Somalia&#39;s government, and announced it on X. Its duties move to Somali institutions, UN agencies and the UN office supporting African Union troops (UNSOS) under an agreed roadmap. No replacement for the mission&#39;s election-mediation role has been agreed.</p>
+            <p class="bd"><span class="tag">Claimed by Guterres, Somalia&#39;s deputy PM, and Reuters</span>he welcomed progress and urged continued international support. Claimed by Deputy PM Saleh Ahmed Jama at a Mogadishu ceremony: a &#34;day of victory,&#34; leaving the &#34;era of transition.&#34; Reported by Reuters in September, per the article: a US-backed plan could close UNSOS, ending African Union troop support by December 2027.</p>
+            <ul class="sides"><li><strong>Somali government:</strong> Deputy PM Jama called it a &#34;day of victory.&#34;</li><li><strong>Opposition:</strong> Rejects the government&#39;s position that constitutional changes keep President Hassan Sheikh Mohamud in office until 2027; there is now no mediator.</li></ul>
+          </details>
+          <br><a class="src s15" href="https://www.aljazeera.com/news/2026/10/31/un-closes-somalia-mission-ending-three-decades-of-political-engagement" target="_blank" rel="noopener">Read the original at Al Jazeera: UN closes Somalia mission →</a>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+<section class="sec rl" id="feel-good" data-screen-label="Good Ten" aria-labelledby="good-h">
+  <div class="gh">
+    <p class="kick">Feel-Good</p>
+    <h2 class="hd h-sec" id="good-h">The Good Ten</h2>
+    <p class="deck s21">Small, true, and from this week.</p>
+  </div>
+  <ol class="glist">
+    <li id="gt-miss-marilyn-school">
+      <span class="n">01</span>
+      <div>
+        <h3 class="hd h-4">A Texas school will be named for Miss Marilyn, custodian 39 years</h3>
+        <span class="when">Fri Oct 30</span>
+        <p class="bd">Marilyn Hampton worked 39 years for Aubrey ISD in Texas, and the new K-5 school will be Marilyn Hampton Elementary School. She called it &#34;an honor that I never thought in my lifetime I would have seen,&#34; and at 76 she is still working with infants and toddlers at the district&#39;s Early Bird Learning Center. The school is not open yet.</p>
+        <a class="src s15" href="https://www.goodnewsnetwork.org/new-texas-school-is-named-for-longtime-janitor-miss-marilyn-watch-her-reaction/" target="_blank" rel="noopener">Read the original at Good News Network →</a>
+      </div>
+    </li><li id="gt-emergen-qr">
+      <span class="n">02</span>
+      <div>
+        <h3 class="hd h-4">A 15-year-old built a QR emergency-info tool after a friend fainted</h3>
+        <span class="when">Tue Oct 27</span>
+        <p class="bd">Aanya Mansani of Texas made Emergen after a friend fainted at school and no one knew her medical details. Scan a QR code and it shows allergies, medications, conditions and trusted contacts, with &#34;no app download or login&#34; needed. Her team won the junior division grand prize at the 2026 Technovation World Summit; the access tier for medical professionals is still in development.</p>
+        <a class="src s15" href="https://www.goodgoodgood.co/articles/teen-invention-qr-code-aanya-mansani" target="_blank" rel="noopener">Read the original at Good Good Good →</a>
+      </div>
+    </li><li id="gt-brianna-messina">
+      <span class="n">03</span>
+      <div>
+        <h3 class="hd h-4">A Broadway electrician and volunteer firefighter runs the NYC Marathon</h3>
+        <span class="when">Fri Oct 30</span>
+        <p class="bd">Brianna Messina, on the lighting team of Maybe Happy Ending, runs the NYC Marathon on Nov 1 for Broadway Cares/Equity Fights AIDS. She is about a month past facial feminization surgery (full recovery takes 12 to 18 months) and says, &#34;I&#39;m definitely not going to set a personal record.&#34; She has also been a volunteer firefighter for 17 years.</p>
+        <a class="src s15" href="https://playbill.com/article/meet-brianna-messina-broadway-electrician-firefighter-mother-nyc-marathoner" target="_blank" rel="noopener">Read the original at Playbill →</a>
+      </div>
+    </li><li id="gt-makarova-paquita">
+      <span class="n">04</span>
+      <div>
+        <h3 class="hd h-4">Natalia Makarova, 86, restages Paquita for American Ballet Theatre</h3>
+        <span class="when">Wed Oct 21</span>
+        <p class="bd">Makarova is restaging her Paquita Act III grand divertissement for ABT&#39;s fall season at Lincoln Center, which runs Oct 21-31. In 1980 she chose 15-year-old Nancy Raffa to dance Paquita on Broadway, and Raffa is now ABT&#39;s rehearsal director. The performances are dedicated to Fernando Bujones.</p>
+        <a class="src s15" href="https://pointemagazine.com/natalia-makarova-paquita/" target="_blank" rel="noopener">Read the original at Pointe Magazine →</a>
+      </div>
+    </li><li id="gt-pemba-mpas">
+      <span class="n">05</span>
+      <div>
+        <h3 class="hd h-4">Two community-run marine protected areas open off Pemba, Tanzania</h3>
+        <span class="when">Thu Oct 29</span>
+        <p class="bd">The two areas cover 1,300 sq km and were set up with more than 20 communities and NGOs, with no-take zones and seasonal spawning closures. Blue Alliance reports patrols up more than 50% and illegal activity down about 45%, while an official says it is &#34;too early to tell&#34; about ecosystem recovery.</p>
+        <a class="src s15" href="https://news.mongabay.com/2026/10/pembas-new-marine-protected-areas-show-the-power-of-collaboration-to-meet-30x30-goal/" target="_blank" rel="noopener">Read the original at Mongabay →</a>
+      </div>
+    </li><li id="gt-bamboo-flood-defence">
+      <span class="n">06</span>
+      <div>
+        <h3 class="hd h-4">A Philippine village&#39;s bamboo cribs hold back floods and grow land</h3>
+        <span class="when">Fri Oct 30</span>
+        <p class="bd">Interlocking bamboo cribs cover 14 hectares off Pamarawan in Bulacan. Village secretary Roldan Dayao says, &#34;It has been almost two years now that we have not been flooded.&#34; These are officials&#39; and the designer&#39;s claims, and some residents lost income from the project.</p>
+        <a class="src s15" href="https://news.mongabay.com/2026/10/philippine-village-uses-nature-to-defend-against-floods-with-bamboo-shells-and-husks/" target="_blank" rel="noopener">Read the original at Mongabay →</a>
+      </div>
+    </li><li id="gt-hubble-reionization">
+      <span class="n">07</span>
+      <div>
+        <h3 class="hd h-4">Hubble data question how the early universe cleared its fog</h3>
+        <span class="when">Fri Oct 30</span>
+        <p class="bd">A University of Michigan-led team of nearly 30 scientists used Hubble data on nearby galaxies to study reionization, which began about 13 billion years ago. They found galaxies with the fastest winds let the smallest fraction of ionizing radiation escape, which Cody Carr says means &#34;these photons are escaping before galactic winds form.&#34; It is a press release and does not settle the cause.</p>
+        <a class="src s15" href="https://www.sciencedaily.com/releases/2026/10/261029072113.htm" target="_blank" rel="noopener">Read the original at ScienceDaily →</a>
+      </div>
+    </li><li id="gt-arnhem-bat">
+      <span class="n">08</span>
+      <div>
+        <h3 class="hd h-4">A rare sheath-tailed bat is heard 400 miles from home</h3>
+        <span class="when">Fri Oct 30</span>
+        <p class="bd">Oli Aylen of the Australian Wildlife Conservancy recorded the call at Pungalina-Seven Emu Wildlife Sanctuary while running mist nets, &#34;and just happened to also have my handheld bat detector on.&#34; The species was first described in 1979 and has rarely been recorded on camera since. This is a new detection, not a population increase.</p>
+        <a class="src s15" href="https://www.goodgoodgood.co/articles/endangered-species-microbat-australia" target="_blank" rel="noopener">Read the original at Good Good Good →</a>
+      </div>
+    </li>
+  </ol>
+</section>
+
+
+
+<section class="sec rl" id="tv" data-screen-label="TV" aria-labelledby="tv-h">
+  <p class="kick">TV and the sky</p>
+  <h2 class="hd h-sec" id="tv-h">Tonight, and overhead</h2>
+  <div class="grid g220">
+
+<article class="tb" id="on-the-couch">
+  <img class="pic r45" src="https://images.unsplash.com/photo-1595935736128-db1f0a261263?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="On the couch" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+  <p class="lab">TV</p>
+  <h3 class="hd h-tv">On the Couch</h3>
+  
+    <ul><li><b>Saturday Night Live (host Inde Navarrette, musical guest Gracie Abrams)</b> &middot; NBC &middot; airs 8:30 p.m. PT (11:30 p.m. ET), live; time from TVLine, an entertainment site, not NBC, so check NBC if it matters &middot; streams Full episode on Peacock the next day &mdash; New episode tonight; Navarrette stars in Obsession.</li></ul>
+    
+    
+  
+</article>
+
+
+<article class="tb" id="storm-watch">
+  <img class="pic r45" src="https://images.unsplash.com/photo-1783605662754-1d1e86339db9?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Storm watch" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+  <p class="lab">Weather</p>
+  <h3 class="hd h-tv">Storm Watch</h3>
+  <p><b>Los Angeles:</b> LA tonight: mostly cloudy, 30% chance of showers, low near 59 (NWS)</p>
+  <p class="empty">No active named storms in the Eastern Pacific as of 2026-10-08.</p>
+  <p><b>Winter outlook:</b> The Climate Prediction Center&#39;s Oct 8 discussion keeps an El Niño Advisory in effect: El Niño continues to strengthen, with a strong-to-very-strong El Niño likely through January-March 2027, at a probability above 83%.</p>
+  <p class="when">Outlook from the CPC discussion dated 2026-10-08.</p>
+  <p class="plain"><i>El Niño:</i> a warming of the surface water in the central Pacific Ocean that nudges weather patterns around the world, like a big pot of warm water changing the draft in the kitchen. &middot; <i>El Niño Advisory:</i> the Climate Prediction Center&#39;s formal label that El Niño conditions are present now.</p>
+  <p><a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center</a> &middot; <a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO Diagnostic Discussion</a></p>
+</article>
+
+
+<article class="tb" id="sky">
+  <img class="pic r45" src="https://images.unsplash.com/photo-1528353518104-dbd48bee7bc4?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="The sky tonight" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+  <p class="lab">Overhead</p>
+  <h3 class="hd h-tv">Sky</h3>
+  <p><b>Moon:</b> Waning Gibbous (62% illuminated)</p>
+  <p><b>Tonight's sky:</b> On Oct 31, Uranus (in Taurus) rises at 7:20 p.m., Mars (about 90% lit, in Leo since Oct 30) rises at 12:50 a.m., and Jupiter (in Leo) rises at 1:20 a.m. (Griffith Observatory). The Southern Taurids meteor shower is active through Nov 20, with its fireball-swarm part peaking the night of Nov 4-5 when the Moon is 25% lit (American Meteor Society). <a href="https://griffithobservatory.lacity.gov/explore/observing-the-sky/sky-report/" target="_blank" rel="noopener">Griffith Observatory Sky Report, October 2026</a> &middot; <a href="https://www.amsmeteors.org/calendar/" target="_blank" rel="noopener">American Meteor Society: Meteor Shower Calendar</a></p>
+  <p class="when"><b>As of:</b> 2026-10-31</p>
+  <p class="plain"><i>What that means:</i> Gibbous = more than half lit. Waning = shrinking. The Moon is past full and losing a little light each night; rises after dark and is still up in the morning. Next new moon Nov 9, 2026; next full moon Nov 24, 2026.</p>
+  <h5>Retrogrades right now</h5><ul><li><b>Mercury</b> <span class="when">Oct 24, 2026 to Nov 13, 2026</span>. Looks like it is moving backward until it turns direct on Nov 13, 2026.</li><li><b>Venus</b> <span class="when">Oct 3, 2026 to Nov 14, 2026</span>. Looks like it is moving backward until it turns direct on Nov 14, 2026.</li><li><b>Saturn</b> <span class="when">Jul 26, 2026 to Dec 10, 2026</span>. Looks like it is moving backward until it turns direct on Dec 10, 2026.</li><li><b>Uranus</b> <span class="when">Sep 10, 2026 to Feb 8, 2027</span>. Looks like it is moving backward until it turns direct on Feb 8, 2027.</li><li><b>Neptune</b> <span class="when">Jul 7, 2026 to Dec 12, 2026</span>. Looks like it is moving backward until it turns direct on Dec 12, 2026.</li><li><b>Coming up</b> <span class="when">Mars turns retrograde Jan 10, 2027</span></li></ul><p class="plain"><i>Retrograde, in plain words:</i> Retrograde = from Earth the planet LOOKS like it is drifting backward against the stars for a few weeks, because Earth is overtaking it (or it is overtaking us) on the inside track, like passing a slower car that seems to slide back. Station = the day it appears to stop and turn.</p>
+  <h5>Human Design transits</h5>
+  <p><b>Patrick</b></p><ul><li><b>Uranus in Gate 20 (The Now, Throat centre); one of your own gates; completes your 20-34 channel (Charisma) with your Gate 34</b> <span class="when">Apr 28, 2026 to May 27, 2027 (pass 2 of 2; whole visit Jul 10, 2025 to May 27, 2027, because retrograde loops it back and forth)</span>. <i>What it means:</i> Gate 20: Throat gate of &#39;the now&#39;: awareness that wants to be spoken and acted on in the present moment. Channel 20-34 Charisma: &#34;A design where thoughts must become deeds&#34;: busy, self-powered doing that is seen and heard. <i>Try this:</i> When a transit completes this channel you get a temporary taste of it: momentum to turn a talked-about idea into action. Good window to ship something you have been talking about.</li><li><b>Neptune in Gate 25 (The Spirit of the Self, G centre); completes your 25-51 channel (Initiation) with your Gate 51</b> <span class="when">Aug 22, 2026 to Mar 19, 2027 (pass 3 of 4; whole visit Apr 10, 2024 to Dec 24, 2027, because retrograde loops it back and forth)</span>. <i>What it means:</i> Gate 25: G-centre gate of &#39;the spirit of the self&#39;: innocence and love for all things, not just people. Channel 25-51 Initiation: &#34;A design of needing to be first&#34;: courage to go first and be shocked awake. <i>Try this:</i> Try one thing first, before you feel ready.</li><li><b>Pluto in Gate 41 (Contraction, Root centre); completes your 30-41 channel (Recognition) with your Gate 30</b> <span class="when">Dec 5, 2025 to Feb 24, 2028 (pass 3 of 4; whole visit Apr 11, 2024 to Jan 2, 2029, because retrograde loops it back and forth)</span>. <i>What it means:</i> Gate 41: Root gate of contraction: the pressure to start a new experience, often felt as fantasy or daydream first. Channel 30-41 Recognition: &#34;A design of focused energy&#34;: the fuel of fantasy and desire that starts new experiences. <i>Try this:</i> Name the experience you are hungry for; write it down so the energy has somewhere to go.</li><li><b>North Node in Gate 30 (Recognition of Feelings, Solar centre); one of your own gates</b> <span class="when">Jul 25, 2026 to Nov 24, 2026</span>. <i>What it means:</i> Gate 30: Solar Plexus gate of &#39;recognition of feelings&#39;: deep desire and the fire of wanting. <i>Try this:</i> Let a big feeling ride for a day before acting on it; clarity comes over time, not in the moment.</li><li><b>Sun in Gate 44 (Alertness, Spleen centre); completes your 26-44 channel (Surrender) with your Gate 26</b> <span class="when">Oct 31, 2026 to Nov 5, 2026</span>. <i>What it means:</i> Gate 44: Spleen gate of alertness: instinct for patterns from the past, smelling talent and trouble. Channel 26-44 Surrender: &#34;A design of a transmitter&#34;: instinct for the past paired with the gift of selling the message. <i>Try this:</i> Good day to pitch or present something; lead with what you have already seen work.</li><li><b>Venus in Gate 32 (Continuity, Spleen centre); completes your 32-54 channel (Transformation) with your Gate 54</b> <span class="when">Oct 31, 2026 to Nov 27, 2026 (pass 2 of 2; whole visit Aug 29, 2026 to Nov 27, 2026, because retrograde loops it back and forth)</span>. <i>What it means:</i> Gate 32: Spleen gate of continuity: instinct for what will last and fear of failure. Channel 32-54 Transformation: &#34;A design of being driven&#34;: ambition with the instinct for what will last. <i>Try this:</i> Put effort into the project most likely to still matter in a year.</li><li><b>Coming: North Node enters Gate 49 (Principles) on Nov 24, 2026, one of your own gates</b></li></ul><p><b>Travis</b></p><ul><li><b>Saturn in Gate 17 (Opinions, Ajna centre); one of your own gates</b> <span class="when">Oct 28, 2026 to Jan 22, 2027 (pass 2 of 2; whole visit Mar 18, 2026 to Jan 22, 2027, because retrograde loops it back and forth)</span>. <i>What it means:</i> Gate 17: Ajna gate of opinions: organising ideas into a logical view of how things should go. <i>Try this:</i> Share an opinion as an offer when asked, not as a correction.</li><li><b>Neptune in Gate 25 (The Spirit of the Self, G centre); one of your own gates</b> <span class="when">Aug 22, 2026 to Mar 19, 2027 (pass 3 of 4; whole visit Apr 10, 2024 to Dec 24, 2027, because retrograde loops it back and forth)</span>. <i>What it means:</i> Gate 25: G-centre gate of &#39;the spirit of the self&#39;: innocence and love for all things, not just people. <i>Try this:</i> Do one kind thing with no agenda and no audience.</li><li><b>Sun in Gate 44 (Alertness, Spleen centre); one of your own gates; completes your 26-44 channel (Surrender) with your Gate 26</b> <span class="when">Oct 31, 2026 to Nov 5, 2026</span>. <i>What it means:</i> Gate 44: Spleen gate of alertness: instinct for patterns from the past, smelling talent and trouble. Channel 26-44 Surrender: &#34;A design of a transmitter&#34;: instinct for the past paired with the gift of selling the message. <i>Try this:</i> Good day to pitch or present something; lead with what you have already seen work.</li><li><b>Coming: Jupiter enters Gate 29 (Saying Yes) on Nov 2, 2026, completing 29-46 Discovery</b></li></ul>
+  <p class="src">Planet positions and dates: Swiss Ephemeris via the HD Toolkit (exact). Meanings: Human Design tradition, interpretation. &#39;Try this&#39;: the Gayzette&#39;s suggestion.</p>
+  
+</article>
+
+
+<article class="tb" id="crop-circle-watch">
+  <img class="pic r45" src="https://images.unsplash.com/photo-1781332150560-5b4d1f59b1b4?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Crop circle watch" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+  <p class="lab">Notebook</p>
+  <h3 class="hd h-tv">Crop Circle Watch</h3>
+  <p><b>Latest formation</b> &mdash; Tue Jul 21 &middot; Wanborough Plain, near Liddington, Wiltshire, England. The latest formation logged on the Crop Circle Connector, 21 July 2026.</p>
+  
+  <ul><li>No newer formation is logged: the August to December index shows 0 formations.</li><li>The Crop Circle Connector logged 10 formations between 3 and 21 July 2026.</li></ul>
+  <p><em>From the history: According to the Psi Encyclopedia (Melvyn Willin), reported crop circles went from 112 in 1988 to 305 in 1989 to &#34;almost 1,000&#34; in 1990, the year before Bower and Chorley went public in 1991. Caveat: the counts are the article&#39;s own, and no counting method is given.</em></p>
+  <p><a href="https://www.cropcircleconnector.com/2026/July2026.html" target="_blank" rel="noopener">Crop Circle Connector: July 2026</a> &middot; <a href="https://www.cropcircleconnector.com/2026/Wanborough/Wanborough2026a.html" target="_blank" rel="noopener">Crop Circle Connector: Wanborough 2026</a> &middot; <a href="https://psi-encyclopedia.spr.ac.uk/articles/crop-circles/" target="_blank" rel="noopener">Psi Encyclopedia: Crop Circles</a></p>
+</article>
+
+</div>
+</section>
+
+
+
+
+</main>
+
+<footer class="foot">
+  <div class="top">
+    <div>
+      <p class="brand">The Gayzette</p>
+      <p class="tagl">No ads. No pop-ups. No tracking. Just the paper.</p>
+    </div>
+    <nav aria-label="Footer sections">
+      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+      <a href="/editions/">Past editions</a>
+    </nav>
+  </div>
+  <p class="fine">The Gayzette &middot; Patrick &amp; Travis<br><a href="/editions/">Past editions</a> &middot; Made in Los Angeles &middot; Edition No. 37 &middot; Summaries link to their sources</p>
+</footer>
+</div>
+</body>
+</html>

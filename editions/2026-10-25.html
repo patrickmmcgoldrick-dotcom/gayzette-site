@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="The Gayzette, sunday edition, 2026-10-25. A personal daily by Patrick and Travis.">
+<title>The Gayzette: An AI-made proof of the quasi-Riemann hypothesis meets its human readers</title>
+<link rel="alternate" type="application/rss+xml" title="The Gayzette" href="/feed.xml">
+<style>/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/fonts/DMSans-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/fonts/DMSans-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-italic-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-italic-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-italic-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Fraunces-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-italic-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-italic-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-italic-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-normal-vietnamese.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-normal-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Newsreader-normal-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* ===== The Gayzette site.css v3 (DRAFT 3, 2026-10-19). Every value below is lifted from the Claude Design Labs
+   page ("The Gayzette"): tokens #FBF8F1 paper, #222222 ink, #6B645A muted, #E4DCCB hairline, #C2603C accent. ===== */
+html,body{margin:0;padding:0;background:#FBF8F1;color:#222222;-webkit-font-smoothing:antialiased}
+a{color:#C2603C}a:hover{color:#A24E2F}
+img,svg{max-width:100%}
+.pg{min-height:100vh;background:#FBF8F1;color:#222222;font-family:Newsreader,Georgia,serif;overflow-wrap:break-word}
+.skip{position:absolute;left:-9999px;top:16px;z-index:50;background:#222;color:#FBF8F1;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.skip:focus{left:16px;color:#FBF8F1}
+:focus-visible{outline:2px solid #C2603C;outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+
+/* header */
+.strip{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid #E4DCCB;font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A}
+.mast{padding:72px 0 56px;text-align:left}
+.mast a{text-decoration:none;color:#222222}
+.mast h1{font-family:Fraunces,serif;font-weight:600;font-variation-settings:'SOFT' 80;font-optical-sizing:auto;font-size:clamp(56px,9vw,120px);line-height:.95;letter-spacing:-.02em;margin:0}
+.mast p{font-family:Fraunces,serif;font-style:italic;font-weight:400;font-size:19px;color:#6B645A;margin:20px 0 0}
+.nav{display:flex;gap:32px;overflow-x:auto;border-top:1px solid #E4DCCB;border-bottom:1px solid #E4DCCB;scrollbar-width:none;white-space:nowrap}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;min-height:48px;padding:0 2px;font-family:'DM Sans',sans-serif;font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:#222222;border-bottom:2px solid transparent;margin-bottom:-1px}
+.nav a.on{color:#C2603C;border-bottom-color:#C2603C}
+
+/* type kit */
+.kick,.lab,.when{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.kick{color:#C2603C;margin:0 0 16px}
+.lab{color:#6B645A;margin:0 0 8px}
+.hd{font-family:Fraunces,serif;font-weight:600;font-variation-settings:'SOFT' 60;margin:0;text-wrap:pretty}
+.hd a,.hl a{text-decoration:none;color:inherit}
+.hd a:hover,.hl a:hover{color:#C2603C}
+.h-hero{font-optical-sizing:auto;font-size:clamp(36px,5vw,64px);line-height:1.04;letter-spacing:-.015em}
+.h-sun{font-size:clamp(40px,6vw,80px);line-height:1;letter-spacing:-.02em}
+.h-3{font-size:36px;line-height:1.1;letter-spacing:-.012em}
+.h-lead{font-size:clamp(30px,3.5vw,42px);line-height:1.08;letter-spacing:-.012em}
+.h-card{font-size:28px;line-height:1.12;letter-spacing:-.01em}
+.h-card2{font-size:26px;line-height:1.15;letter-spacing:-.01em}
+.h-tv{font-size:24px;line-height:1.15;letter-spacing:-.01em}
+.h-4{font-size:22px;line-height:1.2;letter-spacing:-.01em}
+.h-sec{font-size:clamp(36px,4.5vw,52px);line-height:1.05;letter-spacing:-.015em}
+.h-page{font-size:clamp(44px,6vw,72px);line-height:1;letter-spacing:-.02em}
+.deck{font-family:Fraunces,serif;font-style:italic;font-weight:400;font-size:24px;line-height:1.35;color:#6B645A;margin:20px 0 0;text-wrap:pretty}
+.deck.s21{font-size:21px;line-height:1.4;margin:16px 0 0}
+.deck.s26{font-size:26px;margin:24px 0 0}
+.stand{font-family:Fraunces,serif;font-style:italic;font-size:21px;line-height:1.4;color:#6B645A;margin:24px 0 0;max-width:620px}
+.rule{width:48px;height:2px;background:#C2603C;margin:24px 0 0}
+.by{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:24px 0 0}
+.bd{font-family:Newsreader,serif;font-size:19px;line-height:1.65;margin:14px 0 0;max-width:620px}
+.bd.l{max-width:none}
+.bd a{color:#C2603C}
+.src{display:inline-block;margin-top:14px;font-family:Newsreader,serif;font-style:italic;font-size:16px;color:#C2603C;text-decoration:none}
+.src:hover{text-decoration:underline}
+.src.s15{font-size:15px;margin-top:8px}
+.src.m12{margin-top:12px}
+.chip{display:inline-block;margin-left:10px;padding:2px 8px;border:1px solid #E4DCCB;color:#6B645A;font-family:'DM Sans',sans-serif;font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.ph,.pic{display:block;width:100%;object-fit:cover;background:#EDE6D6}
+.pic.fb,.ph{background:#EDE6D6 repeating-linear-gradient(135deg,transparent 0 12px,rgba(34,34,34,.045) 12px 13px)}
+.r32{aspect-ratio:3/2}.r45{aspect-ratio:4/5}
+.flex{display:flex;flex-wrap:wrap;align-items:flex-start}
+@media (max-width:640px){.bleed{margin-left:-24px;margin-right:-24px;width:calc(100% + 48px)}}
+
+/* front page blocks */
+main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.s-hero{padding:72px 0 0}
+.hero-in{display:flex;flex-direction:column;flex-wrap:wrap;gap:32px 32px;align-items:stretch}
+.hero-pic{width:100%;min-width:0}
+.hero-txt{flex:1 1 320px;min-width:0;max-width:720px}
+.sec{padding:112px 0 0}
+.sec.rl{margin-top:120px;padding:80px 0 0;border-top:1px solid #E4DCCB}
+.row{display:flex;flex-wrap:wrap;gap:48px 32px;align-items:flex-start}
+.col-main{flex:2 1 480px;min-width:0}
+.col-side{flex:1 1 260px;min-width:0}
+.col-half{flex:1 1 380px;min-width:0}
+.col-half.t{flex-basis:260px}
+.mt28{margin-top:28px}
+.more{margin-top:0}
+.more .it{padding:20px 0;border-top:1px solid #E4DCCB}
+.more .it h4{margin:0}
+.col-half .more{margin-top:48px}
+.nbr{max-width:620px}
+.brief{margin-top:10px}
+.brief summary{display:inline-block;cursor:pointer;margin-top:8px;font-family:Newsreader,serif;font-style:italic;font-size:15px;color:#6B645A;list-style:none}
+.brief summary::-webkit-details-marker{display:none}
+.brief summary:hover{color:#C2603C}
+.brief[open] summary{margin-bottom:4px}
+.brief .bd{font-size:17px;line-height:1.6;margin:8px 0 0}
+.brief .bd+.bd{margin-top:14px}
+.ctx{margin:14px 0 0;font-family:Newsreader,serif;font-size:17px;line-height:1.55;color:#6B645A;max-width:620px}
+.ctx b,.tag{font-family:'DM Sans',sans-serif;font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#C2603C;margin-right:8px}
+.sides{margin:12px 0 0;padding:0;list-style:none;font-family:Newsreader,serif;font-size:16px;line-height:1.5;color:#6B645A}
+.sides li{padding:6px 0;border-top:1px solid #E4DCCB}
+
+/* inset comic art (the newsroom's own panel) */
+.illo{margin:32px 0 0;max-width:620px}
+.illo .art{border:1px solid #E4DCCB;background:#FBF8F1}
+.illo svg{display:block;width:100%;height:auto}
+.illo figcaption{font-family:Fraunces,serif;font-style:italic;font-size:15px;color:#6B645A;margin:12px 0 0}
+.illo figcaption span{font-family:'DM Sans',sans-serif;font-style:normal;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+
+/* long text under the hero / in a story */
+.story{max-width:620px;margin:72px 0 0}
+.story .bd{margin:0}
+.story .bd+.bd,.story .illo+.bd{margin-top:28px}
+.desk{margin:48px 0 0;padding:32px;background:#F3EEE2;max-width:620px}
+.desk p.lab{margin:0 0 10px;font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;line-height:1.65;color:#6B645A}
+.desk p{font-family:Newsreader,serif;font-size:19px;line-height:1.5;margin:0}
+.pill{display:inline-block;margin-top:12px;font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#C2603C;border:1px solid #C2603C;padding:3px 10px}
+.rcpt{margin:16px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:16px}
+.rcpt summary{cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A}
+.rcpt ul{margin:10px 0 0;padding:0;list-style:none}
+.rcpt li{padding:6px 0;border-top:1px solid #E4DCCB}
+.rcpt .d{color:#6B645A;font-size:14px;margin-left:6px}
+.note{margin:96px 0 0;padding-top:56px;border-top:1px solid #E4DCCB;max-width:620px}
+.note .t{font-family:Newsreader,serif;font-size:19px;line-height:1.65;margin:20px 0 0}
+.note .by{margin:0}
+
+/* Good Ten (list) */
+.glist{list-style:none;margin:48px 0 0;padding:0;max-width:620px}
+.glist li{display:flex;gap:24px;padding:24px 0;border-top:1px solid #E4DCCB}
+.glist .n{font-family:'DM Sans',sans-serif;font-weight:500;font-size:13px;letter-spacing:.08em;color:#C2603C;padding-top:7px;min-width:28px}
+.glist li>div{min-width:0}
+.glist h3{margin:0}
+.glist .when{display:block;color:#6B645A;margin:6px 0 0}
+.glist .bd{margin:10px 0 0}
+.gh{max-width:620px}
+
+/* grids */
+.grid{display:grid;gap:48px 32px;margin-top:48px}
+.g220{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.g280{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:56px 32px;margin-top:40px}
+.g320{grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:72px 32px;margin-top:120px}
+.grid article{min-width:0}
+.grid .kick{margin:24px 0 10px}
+.grid.g220 .lab{margin:20px 0 8px}
+.tb p{font-family:Newsreader,serif;font-size:18px;line-height:1.6;margin:10px 0 0}
+.tb ul{list-style:none;margin:10px 0 0;padding:0}
+.tb li{font-family:Newsreader,serif;font-size:17px;line-height:1.55;padding:10px 0;border-top:1px solid #E4DCCB}
+.tb .empty{color:#6B645A;font-style:italic}
+.tb h5{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:20px 0 0}
+.tb a{color:#C2603C}
+.tb .alert{color:#A24E2F}
+.tvweek{margin-top:10px}
+.tvweek .day{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#C2603C;padding-top:12px;border-top:1px solid #E4DCCB}
+.tvweek .shows div{font-family:Newsreader,serif;font-size:17px;line-height:1.5;padding:2px 0}
+
+/* section page */
+.s-page{padding:80px 0 0}
+.lead{display:flex;flex-wrap:wrap;gap:40px 32px;align-items:flex-start;margin-top:96px}
+.lead>div{flex:1 1 380px;min-width:0}
+.lead .kick{margin:0 0 12px}
+.empty-sec{margin-top:96px;padding:80px 0;border-top:1px solid #E4DCCB;border-bottom:1px solid #E4DCCB;max-width:620px}
+.earlier{margin-top:120px;padding-top:80px;border-top:1px solid #E4DCCB;max-width:760px}
+.earlier .e{display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between;align-items:baseline;padding:20px 0;border-top:1px solid #E4DCCB}
+.earlier .e h4{flex:1 1 320px;margin:0}
+
+/* lists (Sunday lines, archive) */
+.lines{list-style:none;margin:40px 0 0;padding:0;max-width:760px}
+.lines li{display:grid;grid-template-columns:88px minmax(0,1fr);gap:24px;padding:20px 0;border-top:1px solid #E4DCCB}
+.lines .when{color:#6B645A;padding-top:5px;font-size:13px}
+.lines .what{font-family:Newsreader,serif;font-size:18px;line-height:1.6}
+.lines .tag{margin:0 0 0 10px;color:#6B645A}
+.lines a{font-style:italic;font-size:15px;color:#C2603C;text-decoration:none}
+.lines a:hover{text-decoration:underline}
+.month{font-family:'DM Sans',sans-serif;font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#C2603C;margin:64px 0 8px}
+.arch{list-style:none;margin:0;padding:0;max-width:760px}
+.arch li{display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between;align-items:baseline;padding:20px 0;border-top:1px solid #E4DCCB}
+.arch li>div{flex:1 1 320px}
+.arch h4{margin:0}
+.arch .when{color:#6B645A;order:2}
+.arch .kind{display:block;margin-top:4px;font-family:Fraunces,serif;font-style:italic;font-size:16px;color:#6B645A}
+.spec h3{margin:48px 0 0}
+.spec ul{list-style:none;margin:8px 0 0;padding:0;max-width:760px}
+.spec li{padding:20px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:18px;line-height:1.6}
+.spec li a{font-style:italic;font-size:15px;color:#C2603C;text-decoration:none}
+.spec .empty{color:#6B645A;font-style:italic}
+.made{max-width:760px}
+.made p{font-family:Newsreader,serif;font-size:19px;line-height:1.65;margin:20px 0 0}
+.made table{width:100%;border-collapse:collapse;margin-top:24px;font-family:Newsreader,serif;font-size:16px}
+.made th{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;text-align:left;padding:8px 8px 8px 0;border-bottom:1px solid #E4DCCB}
+.made td{padding:10px 8px 10px 0;border-top:1px solid #E4DCCB;vertical-align:top}
+.made .num{text-align:right}
+.tablewrap{overflow-x:auto}
+
+/* footer */
+.foot{max-width:1200px;margin:160px auto 0;padding:48px 24px 64px;box-sizing:border-box;border-top:1px solid #E4DCCB}
+.foot .top{display:flex;flex-wrap:wrap;gap:32px 64px;justify-content:space-between}
+.foot .brand{font-family:Fraunces,serif;font-weight:600;font-variation-settings:'SOFT' 80;font-size:28px;letter-spacing:-.015em;margin:0}
+.foot .tagl{font-family:Fraunces,serif;font-style:italic;font-size:16px;color:#6B645A;margin:8px 0 0}
+.foot nav{display:flex;flex-wrap:wrap;gap:16px 28px}
+.foot nav a{display:inline-flex;align-items:center;min-height:44px;font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;text-decoration:none}
+.foot nav a:hover{color:#C2603C}
+.foot .fine{font-family:'DM Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:48px 0 0;line-height:1.8}
+.foot .fine a{color:#6B645A}
+
+@media print{
+  html,body{background:#fff}
+  .nav,.skip{display:none !important}
+  .ph{background:#f2f2f2 !important}
+  article,.it,li{break-inside:avoid-page}
+}
+
+/* classroom */
+.cls-wrap{max-width:660px}
+.cls-meets{margin:40px 0 0;max-width:620px}
+.cls-meets p.lab,.cls-hw .lab,.cls-quiz p.lab,.cls-next p.lab,p.lab.cls-grp{font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:0 0 10px}
+.cls-meets ul{list-style:none;margin:0;padding:0}
+.cls-meets li{padding:14px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-meets li a{color:#C2603C;font-family:Fraunces,serif;font-weight:500;text-decoration:none;border-bottom:1px solid #C2603C}
+.cls-meets .why{display:block;margin-top:4px;color:#3a352e}
+.cls-hw{margin:28px 0 0;font-family:Newsreader,serif;font-size:19px;line-height:1.5;max-width:620px}
+.cls-hw .lab{display:inline-block;margin:0 8px 0 0;color:#C2603C}
+.cls-go{font-family:Fraunces,serif;font-style:italic;color:#6B645A;margin:20px 0 0}
+.cls-src{font-family:"DM Sans",sans-serif;font-size:13px;color:#6B645A;margin:14px 0 0}
+.cls-src a{color:inherit}
+.cls-ideas{margin:24px 0 0;padding-left:22px;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-ideas li{margin:0 0 16px}
+.cls-ideas strong{font-family:Fraunces,serif;font-weight:500}
+.cls-quiz,.cls-next{margin:36px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-quiz ol{padding-left:22px}
+.cls-next .bd{margin-top:0}
+.desk+.cls-hw,.desk+.cls-next{margin-top:28px}
+</style>
+</head>
+<body>
+<div class="pg">
+<a class="skip" href="#main">Skip to content</a>
+<header class="wrap">
+  <div class="strip"><span>Sunday, October 25, 2026</span><span>Sunday edition · No. 33</span></div>
+  <div class="mast">
+    <a href="/"><h1>The Gayzette</h1></a>
+    <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
+  </div>
+  <nav class="nav" aria-label="Sections">
+    <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/" class="on" aria-current="page">Sunday</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="s-hero" id="front" data-beat="The Universe">
+  
+  <div class="bleed"><img class="pic r32" src="https://images.unsplash.com/photo-1763568258286-721c164171e0?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="An AI-made proof of the quasi-Riemann hypothesis meets its human readers" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')"></div>
+  <div style="max-width:860px;margin:56px 0 0">
+    <p class="kick" style="margin:0 0 20px">Sunday · The Universe</p>
+    <h2 class="hd h-sun"><a href="https://www.quantamagazine.org/ai-proved-the-quasi-riemann-hypothesis-what-happens-now-20261019/" target="_blank" rel="noopener">An AI-made proof of the quasi-Riemann hypothesis meets its human readers</a></h2>
+    <p class="deck s26">OpenAI announced the proof; mathematicians are now working through a 49-page version, and the famous original problem stays unsolved.</p>
+    <p class="by" style="margin-top:32px">By The Gayzette, with Claude · 2 min read · Wonder ◆◆◆◆◇</p>
+  </div>
+  
+  <div class="story">
+    <p class="bd">Some math problems are famous because they are hard. The Riemann hypothesis has been hard since 1859 and is still unsolved. It concerns the zeta function, a formula mathematicians use to study the prime numbers, and in particular its &#34;nontrivial zeros&#34;, the special inputs where that formula gives back zero.</p><p class="bd">Quanta Magazine&#39;s Konstantin Kakaes reports that OpenAI announced a proof of something smaller: the quasi-Riemann hypothesis, a weaker cousin of the big one. Think of the original as asking exactly where every animal in a field is standing, and the quasi version as asking you to prove the fence holds them all inside a band of the field. Less ambitious, still a real result if it stands.</p><p class="bd">There are two versions. The first ran 199 pages and was checked in Lean, a proof assistant (software that confirms every logical step follows from the last), and it put the zeros between 1/8 and 7/8. A second, 49-page version puts them between 1/12 and 11/12, a wider band and so a weaker result. It has not been formally verified, but it is the one mathematicians are mostly reading, because it is shorter.</p><p class="bd">The experts are taking it seriously. Maksym Radziwiłł of NYU calls the implications &#34;staggering&#34;, though he also calls both papers &#34;horribly written&#34;. Alexander Dunn of Georgia Tech calls the proof &#34;a surprising synthesis of well-known ideas&#34;, and the argument relies on metaplectic forms, a specialized family of functions that he has studied for about five years. So the machine did not work from nothing; it built on a human&#39;s tools.</p><p class="bd">The caveat: the proof is still under expert review, and the shorter version people are reading has not been machine-checked. &#34;AI proved it&#34; becomes a settled sentence only after the mathematicians finish reading.</p>
+    <aside class="desk"><p class="lab">On our desk</p><p>Universe Year math. It is a live case of the year&#39;s core habit, a big claim checked step by step, and the same question the Gayzette asks of its own AI-built pages: who checks the machine&#39;s work, and how.</p></aside>
+    <a class="src " href="https://www.quantamagazine.org/ai-proved-the-quasi-riemann-hypothesis-what-happens-now-20261019/" target="_blank" rel="noopener">Read the original at Quanta Magazine: AI proved the quasi-Riemann hypothesis. What happens now? →</a>
+    <details class="rcpt"><summary>Receipts (2)</summary>
+<ul><li><a href="https://www.quantamagazine.org/ai-proved-the-quasi-riemann-hypothesis-what-happens-now-20261019/" target="_blank" rel="noopener">Quanta Magazine: AI proved the quasi-Riemann hypothesis. What happens now?</a><span class="d">2026-10-19</span></li><li><a href="https://www.quantamagazine.org/is-ai-the-end-of-math-as-we-know-it-20261005/" target="_blank" rel="noopener">Quanta Magazine: Is AI the end of math as we know it? (context)</a><span class="d">2026-10-05</span></li></ul></details>
+  </div>
+</section>
+<section class="note" aria-label="Editor's note">
+  <p class="kick">Editor's note</p>
+  <p class="by">The managing editor (Claude, Opus)</p>
+  <p class="t">Two receipts lead this week. A proof of the quasi-Riemann hypothesis that an AI system helped build is now in front of human mathematicians, who are reading the shorter, weaker version first; one of them calls the implications staggering. And Indonesia took extreme poverty from 86% to under 4% between 1984 and 2025, roughly 140 million people down to about 10 million, which is the kind of number the evening news never gets around to.</p><p class="t">Around them: a dust fingerprint shared by two asteroids and the meteorites in museum drawers, a Mars ridge field 10 miles long, Colorado&#39;s wildlife crossings, a dance league with an ESPN deal, and Natalia Makarova, 86, restaging Paquita. AI Reads the Ancients moves to the next Herculaneum scroll, read whole.</p><p class="t">No new votes came in this week, so the lineup follows last week&#39;s guidance: human-scale good news over clinical studies, and no awards recaps on the dance desk. The Couch has a correction from last Sunday: Dancing with the Stars airs live at 5 pm Pacific, not later in the evening. Clocks go back next Sunday, Nov 1.</p><p class="t">Housekeeping, plainly: scouting ran over the 900k budget again (about 1.3 million tokens across 13 scouts; 1.64 million for the whole crew), and the quiet boxes (Beckstrand, De Stefano, Grant) say so rather than stretch.</p>
+</section>
+
+
+<section class="sec" id="also-leading" aria-label="Second lead">
+  <div class="row" style="gap:40px 32px">
+    <div class="col-half bleed"><img class="pic r32" src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Indonesia cut extreme poverty from 86% to under 4% in four decades" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')"></div>
+    <div class="col-half"><article id="indonesia-extreme-poverty-86-to-under-4-percent" data-beat="Human Flourishing">
+  <p class="kick" style="margin:28px 0 12px">Also leading</p>
+  <h3 class="hd h-3" style="max-width:620px"><a href="https://ourworldindata.org/data-insights/china-reduced-extreme-poverty-fast-but-indonesia-hasnt-been-far-behind" target="_blank" rel="noopener">Indonesia cut extreme poverty from 86% to under 4% in four decades</a></h3>
+  <p class="deck s21" style="max-width:620px">About 140 million people below the World Bank&#39;s $3-a-day line in 1984; about 10 million in 2025.</p>
+  <p class="bd">&#34;Extreme poverty&#34; sounds vague until someone draws the line. Here the line is the World Bank&#39;s $3 a day: if what you live on falls below it, you count as extremely poor. One fixed bar lets you compare a country with itself across decades.</p><p class="bd">In a new Our World in Data insight, Hannah Ritchie and Pablo Arriagada chart Indonesia against that bar. In 1984, 86% of Indonesians lived below it. In 2025 the figure was under 4%; the chart shows about 3.7%. In people, that is roughly 140 million down to about 10 million. The data come from the World Bank&#39;s Poverty and Inequality Platform (2026).</p><p class="bd">Picture a room of 100 Indonesians in 1984: 86 of them below the line. Walk into the same room in 2025 and fewer than four are.</p><p class="bd">The piece frames Indonesia as the quieter story next to China, whose fall in extreme poverty is the one everyone already knows. That is part of what makes it useful: a huge change that never became a headline, sitting in a public chart anyone can open and check.</p><p class="bd">The honest caveat comes from Positive News, which picked up the chart: critics credit cash handouts more than a broad rise in living standards. So the number tells you how many people crossed the line, not how far past it they got, or what is keeping them there.</p>
+  <aside class="desk"><p class="lab">On our desk</p><p>the Gayzette itself. Human Flourishing runs on the claim that the world is improving while the headlines look elsewhere, and this is the kind of receipt that claim needs: one line, one chart, anyone can check it.</p></aside>
+  <a class="src " href="https://ourworldindata.org/data-insights/china-reduced-extreme-poverty-fast-but-indonesia-hasnt-been-far-behind" target="_blank" rel="noopener">Read the original at Our World in Data: China reduced extreme poverty fast, but Indonesia hasn&#39;t been far behind →</a>
+  <details class="rcpt"><summary>Receipts (2)</summary>
+<ul><li><a href="https://ourworldindata.org/data-insights/china-reduced-extreme-poverty-fast-but-indonesia-hasnt-been-far-behind" target="_blank" rel="noopener">Our World in Data: China reduced extreme poverty fast, but Indonesia hasn&#39;t been far behind</a><span class="d">2026-10-13</span></li><li><a href="https://www.positive.news/society/good-news-stories-from-week-42-of-2026/" target="_blank" rel="noopener">Positive News: good news stories from week 42 of 2026</a><span class="d">2026-10-16</span></li></ul></details>
+</article></div>
+  </div>
+</section>
+
+
+
+<section class="sec rl" id="beat-0" data-screen-label="Consciousness &amp; The Nonphysical" aria-labelledby="beat-0-h">
+  <p class="kick">Section</p>
+  <h2 class="hd h-sec" id="beat-0-h">Consciousness &amp; The Nonphysical</h2>
+  <div class="grid g280">
+    
+    <article id="compass-psilocybin-nda-final-submission-q4" data-beat="Consciousness &amp; The Nonphysical">
+      <img class="pic r32" src="https://images.unsplash.com/photo-1762871627042-280df1a17b98?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Compass aims to finish its psilocybin filing with the FDA this year" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+      <h3 class="hd h-card2" style="margin:22px 0 0"><a href="https://psychedelicstoday.com/2026/10/12/psychedelic-policy-briefing-october-12-2026/" target="_blank" rel="noopener">Compass aims to finish its psilocybin filing with the FDA this year</a><span class="chip">early reports</span></h3>
+      <p class="deck s21" style="font-size:19px">The company expects to complete its application by year&#39;s end and says a priority voucher could shorten review to one or two months.</p>
+      <p class="bd">Before a new drug can be sold in the US, its maker files a new drug application, or NDA: the formal case to the FDA that the drug works and is safe enough. A rolling review lets the company hand that case in section by section, like turning in a thesis chapter by chapter, instead of all at once.</p>
+<details class="brief"><summary>Read the brief</summary><p class="bd">Compass Pathways got that rolling review in April 2026 for COMP360, its psilocybin treatment, plus a Commissioner&#39;s National Priority Voucher, a fast-track pass for the review itself. Per Psychedelics Today&#39;s weekly policy briefing and the company&#39;s own Q2 release, Compass expects to finish the submission in Q4 2026 and says the voucher could shorten review to one or two months.</p><p class="bd">The evidence it is filing: in its COMP006 trial, 39% of participants reached a clinically meaningful drop on the MADRS, a standard depression rating scale, at Week 6, and on average kept that improvement through at least Week 26. The company reported $433.3 million in cash at June 30.</p><p class="bd">Where things stand: neither psilocybin nor MDMA is approved as a medicine yet.</p><p class="bd">The caveat, said lightly: these numbers come from the company, and the Q4 date is Compass&#39;s expectation, not an FDA commitment. A finished filing starts the review; it does not decide it.</p></details>
+      <aside class="desk"><p class="lab">On our desk</p><p>Consciousness University courses. A psychedelic-science lesson needs this exact distinction between a filing, a review and an approval, so students can read the next headline correctly.</p></aside>
+      <br><a class="src s15" href="https://psychedelicstoday.com/2026/10/12/psychedelic-policy-briefing-october-12-2026/" target="_blank" rel="noopener">Read the original at Psychedelics Today: Weekly Psychedelic Policy Briefing, October 12, 2026 →</a>
+      <details class="rcpt"><summary>Receipts (2)</summary>
+<ul><li><a href="https://psychedelicstoday.com/2026/10/12/psychedelic-policy-briefing-october-12-2026/" target="_blank" rel="noopener">Psychedelics Today: Weekly Psychedelic Policy Briefing, October 12, 2026</a><span class="d">2026-10-12</span></li><li><a href="https://www.sec.gov/Archives/edgar/data/0001816590/000181659026000059/q22026pressrelease.htm" target="_blank" rel="noopener">Compass Pathways Q2 2026 press release (SEC filing)</a><span class="d">2026-08-05</span></li></ul></details>
+    </article>
+    
+  </div>
+  <div class="grid g220"><div class="grid g220">
+
+
+
+
+<article class="tb" id="crop-circle-watch">
+  <img class="pic r45" src="https://images.unsplash.com/photo-1611040549344-f71005756038?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Crop circle watch" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+  <p class="lab">Notebook</p>
+  <h3 class="hd h-tv">Crop Circle Watch</h3>
+  <p><b>Fox Hill (listed by Crop Circle Connector as Wanborough Plain)</b> &mdash; Tue Jul 21 &middot; Near Liddington, Wiltshire, England. The most recent formation on both Crop Circle Connector&#39;s July 2026 page (reported 21 July; entry updated 11 Aug) and Temporary Temples&#39; 2026 list. Nothing newer is logged on either site as of this check, and Temporary Temples&#39; only later mention is an undated &#39;One more anonymous circle?&#39; post with no details.</p>
+  
+  <ul><li>Crop Circle Connector&#39;s July 2026 page lists 10 formations reported between 3 and 21 July: eight in Wiltshire and two in Oxfordshire (Alfred&#39;s Settlement and Odstone Barn).</li><li>One of them, Milk Hill near Alton Barnes, was reported on 12 July 2026; the same hill hosts the 2001 formation below.</li></ul>
+  <p><em>From the history: From the history: Milk Hill, Wiltshire, 2001. Temporary Temples describes the &#39;Milk Hill Galaxy Spiral&#39; as a six-armed spiral made of 409 individual circles, about 1,000 feet across, and calls it the largest geometrically complex formation of all time. (The page&#39;s own gallery does not tie the spiral to a specific date.)</em></p>
+  <p><a href="https://www.cropcircleconnector.com/2026/July2026.html" target="_blank" rel="noopener">Crop Circle Connector: July 2026</a> &middot; <a href="https://www.cropcircleconnector.com/2026/2026.html" target="_blank" rel="noopener">Crop Circle Connector: 2026 index</a> &middot; <a href="https://temporarytemples.co.uk/crop-circles/2026-crop-circles" target="_blank" rel="noopener">Temporary Temples: 2026 crop circles</a> &middot; <a href="https://temporarytemples.co.uk/crop-circles/2001-crop-circles" target="_blank" rel="noopener">Temporary Temples: 2001 crop circles</a></p>
+</article>
+
+</div></div>
+</section>
+
+<section class="sec rl" id="beat-1" data-screen-label="The Universe" aria-labelledby="beat-1-h">
+  <p class="kick">Section</p>
+  <h2 class="hd h-sec" id="beat-1-h">The Universe</h2>
+  <div class="grid g280">
+    
+    <article id="bennu-ryugu-meteorites-shared-dust-fingerprint" data-beat="The Universe">
+      <img class="pic r32" src="https://images.unsplash.com/photo-1760479290166-e56ebc42efa9?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Bennu, Ryugu and meteorites share one ancient dust fingerprint" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+      <h3 class="hd h-card2" style="margin:22px 0 0"><a href="https://sciencedaily.com/releases/2026/10/261023023734.htm" target="_blank" rel="noopener">Bennu, Ryugu and meteorites share one ancient dust fingerprint</a></h3>
+      <p class="deck s21" style="font-size:19px">ETH Zurich&#39;s isotope work on the OSIRIS-REx sample suggests these bodies formed where inner and outer Solar System material mixed.</p>
+      <p class="bd">Every element comes in versions called isotopes: atoms that behave the same chemically but weigh slightly different amounts. The mix of isotopes in a rock works like an accent. It tells you, roughly, where the material grew up.</p>
+<details class="brief"><summary>Read the brief</summary><p class="bd">Maria Schönbächler&#39;s team at ETH Zurich listened for that accent in a piece of the asteroid Bennu: half a gram of the roughly 120 grams NASA&#39;s OSIRIS-REx mission brought home on Sept 23, 2023. They measured isotopes of iron, titanium and chromium and compared them with samples from the asteroid Ryugu and with a well-studied group of meteorites known as CI meteorites.</p><p class="bd">All three share chemical fingerprints from one common reservoir of ancient dust. The team proposes these bodies formed near the water-ice line, the distance from the young Sun beyond which water freezes, where material from the inner and outer Solar System mixed. Jupiter, they suggest, may have screened out the larger particles. &#34;Bennu is a hybrid,&#34; Schönbächler says.</p><p class="bd">Think of a smoothie made right on the border between two farms: some fruit from each side, blended at the fence. That is the picture of Bennu&#39;s birthplace the isotopes point to.</p><p class="bd">The caveat: this is a proposal about where these bodies formed, inferred from matching fingerprints, not a direct view of their birth, and it rests on one team&#39;s measurements of a small sample. The study is in Science Advances; we read it through ScienceDaily&#39;s posting of the ETH Zurich release.</p></details>
+      <aside class="desk"><p class="lab">On our desk</p><p>Universe Year&#39;s origin-of-life unit. Where the raw ingredients were mixed, and whether water was nearby, is the first question of that unit, and a half-gram of asteroid just added a data point.</p></aside>
+      <br><a class="src s15" href="https://sciencedaily.com/releases/2026/10/261023023734.htm" target="_blank" rel="noopener">Read the original at ScienceDaily (ETH Zurich, Science Advances): Bennu, Ryugu and meteorites share a cosmic-dust fingerprint →</a>
+      
+    </article>
+    
+    <article id="curiosity-mount-sharp-yardang-panorama" data-beat="The Universe">
+      <img class="pic r32" src="https://images.unsplash.com/photo-1541873676-a18131494184?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Curiosity photographs a 10-mile wall of wind-carved ridges on Mars" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+      <h3 class="hd h-card2" style="margin:22px 0 0"><a href="https://www.sciencedaily.com/releases/2026/10/261021231238.htm" target="_blank" rel="noopener">Curiosity photographs a 10-mile wall of wind-carved ridges on Mars</a></h3>
+      <p class="deck s21" style="font-size:19px">The ridges may be ancient volcanic ash; the rover&#39;s team plans a close look in 2027.</p>
+      <p class="bd">On Mars the wind is the sculptor. Over very long stretches of time it can carve rock into long, parallel ridges called yardangs, a bit like a sandblaster working slowly along a wall and leaving the tougher strips standing.</p>
+<details class="brief"><summary>Read the brief</summary><p class="bd">NASA&#39;s Jet Propulsion Laboratory has released a panorama, stitched from six photos by Curiosity&#39;s Mastcam camera, of a band of yardangs stretching about 10 miles (16 km) across the northwest flank of Mount Sharp, a mountain roughly 3 miles tall. The photos were taken on Aug 11, 2026, which the team logs as sol 4,982 (a sol is one Martian day).</p><p class="bd">The rover has been climbing. Curiosity has recently gained 0.6 miles (1 km) in elevation, more than any other Mars rover. That climb is why it can now see this layer at all.</p><p class="bd">What is the wall made of? Scientists suspect the layer is ancient volcanic ash. Ash is a useful suspect because it records an eruption, a moment in the planet&#39;s history you can try to read.</p><p class="bd">The caveat: ash is the working guess, not a result. The team plans a close look in 2027, with no firm date yet, and until then the panorama is a beautiful question rather than an answer.</p></details>
+      <aside class="desk"><p class="lab">On our desk</p><p>Universe Year planetary science. A layer you can see from a distance but have to drive to before you can name it is a clean lesson in the gap between a picture and a finding.</p></aside>
+      <br><a class="src s15" href="https://www.sciencedaily.com/releases/2026/10/261021231238.htm" target="_blank" rel="noopener">Read the original at ScienceDaily (NASA JPL): Curiosity panorama of yardangs on Mount Sharp →</a>
+      
+    </article>
+    
+  </div>
+  
+</section>
+
+<section class="sec rl" id="beat-2" data-screen-label="The Dance World" aria-labelledby="beat-2-h">
+  <p class="kick">Section</p>
+  <h2 class="hd h-sec" id="beat-2-h">The Dance World</h2>
+  <div class="grid g280">
+    
+    <article id="international-dance-league-first-season-recap" data-beat="The Dance World">
+      <img class="pic r32" src="https://images.unsplash.com/photo-1593784991251-92ded75ea290?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Dance&#39;s first pro league ends its season with an ESPN deal" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+      <h3 class="hd h-card2" style="margin:22px 0 0"><a href="https://dancemagazine.com/international-dance-league-season-recap/" target="_blank" rel="noopener">Dance&#39;s first pro league ends its season with an ESPN deal</a></h3>
+      <p class="deck s21" style="font-size:19px">LA&#39;s GRV won the final by 0.43 of a point; the league reports sold-out finals, prize money by standings and more than 2 billion social views.</p>
+      <p class="bd">A dance league works like a sports league: teams (here, crews) compete through a season, standings decide who earns what, and a championship crowns a winner. The International Dance League (IDL) opened its first season in May 2026.</p>
+<details class="brief"><summary>Read the brief</summary><p class="bd">Dance Magazine&#39;s Natalie Albaran recaps how it ended. On Sept 20 at the Shrine Expo Hall in Los Angeles, LA&#39;s GRV beat Vancouver&#39;s previously undefeated Brotherhood by 0.43 of a point, on a 100-point scale. That is a photo finish.</p><p class="bd">Then the twist that shows how a league differs from a contest: prize money is split by season standings, not by the final alone. Brotherhood took $200,000 and GRV $180,000. Lose the night, win the season.</p><p class="bd">The league reports an ESPN media-rights deal (the right to broadcast its events), more than 2 billion social views, and a finals that sold out in 15 minutes. Those are the league&#39;s figures.</p><p class="bd">Not everyone is cheering everything. Criticisms include community-division contests that were not streamed and questions about the scoring format. The league created a Cultural and Historical Advisory Board, including Buddha Stretch and Latasha Barnes, to keep the culture in view.</p></details>
+      <aside class="desk"><p class="lab">On our desk</p><p>Travis Wall Studio. A paid, televised path for hip-hop crews is a new career lane for the dancers Travis coaches, and a useful comparison when he talks to families about where training can lead.</p></aside>
+      <br><a class="src s15" href="https://dancemagazine.com/international-dance-league-season-recap/" target="_blank" rel="noopener">Read the original at Dance Magazine: International Dance League season recap →</a>
+      
+    </article>
+    
+    <article id="makarova-restages-paquita-abt-fall-season" data-beat="The Dance World">
+      <img class="pic r32" src="https://images.unsplash.com/photo-1788621093193-737f42825c5a?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Natalia Makarova, 86, restages Paquita for ABT at Lincoln Center" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+      <h3 class="hd h-card2" style="margin:22px 0 0"><a href="https://pointemagazine.com/natalia-makarova-paquita/" target="_blank" rel="noopener">Natalia Makarova, 86, restages Paquita for ABT at Lincoln Center</a></h3>
+      <p class="deck s21" style="font-size:19px">She coached three principal couples through Act III with a rehearsal director she first cast at 15; the run is dedicated to Fernando Bujones.</p>
+      <p class="bd">Ballet is mostly passed on by hand. There are notations and videos, but the details, where the weight sits, how long a balance holds, travel from one dancer&#39;s body to the next in a rehearsal room. A restaging is that handoff on purpose.</p>
+<details class="brief"><summary>Read the brief</summary><p class="bd">Pointe reports that Natalia Makarova, now 86, restaged the Act III grand divertissement of Paquita (a showcase suite of dances, there to dazzle rather than to move a plot) for American Ballet Theatre&#39;s fall season at Lincoln Center, Oct 21 to 31. She coached three principal couples herself.</p><p class="bd">The room had history in it. Makarova worked with rehearsal director Nancy Raffa, whom she cast at 15 in 1980 opposite Fernando Bujones, and with artistic director Susan Jaffe. The performances are dedicated to Bujones&#39; memory.</p><p class="bd">Think of a family recipe taught at the stove instead of copied from a card: the grandmother who learned it is in the kitchen, and so is the cousin she first taught decades ago.</p><p class="bd">The caveat is a small one: our account comes from Pointe&#39;s feature, not from ABT&#39;s own page, so check the company&#39;s listings for which couples dance which nights. The run closes Oct 31.</p></details>
+      <aside class="desk"><p class="lab">On our desk</p><p>the dance memoir ghostwrite. Choreography handed from dancer to dancer across four decades is the kind of lineage scene that gives a dance memoir its texture, and this one is happening now.</p></aside>
+      <br><a class="src s15" href="https://pointemagazine.com/natalia-makarova-paquita/" target="_blank" rel="noopener">Read the original at Pointe: Natalia Makarova restages Paquita for ABT →</a>
+      
+    </article>
+    
+  </div>
+  
+</section>
+
+<section class="sec rl" id="beat-3" data-screen-label="Comedy, Puppetry &amp; TV" aria-labelledby="beat-3-h">
+  <p class="kick">Section</p>
+  <h2 class="hd h-sec" id="beat-3-h">Comedy, Puppetry &amp; TV</h2>
+  <div class="grid g280">
+    
+    <article id="youtube-shorts-prioritizes-original-content" data-beat="Comedy, Puppetry &amp; TV">
+      <img class="pic r32" src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="YouTube Shorts will favor original videos over re-uploads" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+      <h3 class="hd h-card2" style="margin:22px 0 0"><a href="https://www.socialmediatoday.com/news/youtube-updates-shorts-algorithm-to-put-more-focus-on-original-content/831976/" target="_blank" rel="noopener">YouTube Shorts will favor original videos over re-uploads</a><span class="chip">early reports</span></h3>
+      <p class="deck s21" style="font-size:19px">Channels that mostly repost other creators&#39; clips without meaningful changes will likely get less reach; no numbers or start date given.</p>
+      <p class="bd">A recommendation system is the software that decides which video you see next. Whatever it rewards, creators make more of. So when YouTube changes what it rewards, the whole Shorts feed shifts.</p>
+<details class="brief"><summary>Read the brief</summary><p class="bd">Social Media Today reports YouTube&#39;s announcement, posted in the YouTube Help Community forum, that it is &#34;updating our recommendation systems to further prioritize original content&#34; in Shorts. Channels that mainly aggregate or re-upload other creators&#39; videos without meaningful changes will likely get less distribution.</p><p class="bd">YouTube&#39;s guidance is short: if you use another creator&#39;s clips, &#34;make sure you&#39;re adding real value.&#34; The article notes Instagram made a similar move in April 2026, so the two biggest short-video feeds are leaning the same way.</p><p class="bd">Think of an open-mic night that has started favoring people doing their own material over people reading someone else&#39;s jokes aloud. Commentary, remixes and reactions can still count; what loses out is the straight repost.</p><p class="bd">The caveat, lightly: this comes from one outlet relaying a forum post, and we did not open YouTube&#39;s post itself. YouTube gave no numbers and no effective date, so nobody can yet say how big the shift is or when it lands.</p></details>
+      <aside class="desk"><p class="lab">On our desk</p><p>The Stacy Show. Original puppet-character clips are the side of this line that gets rewarded; the thing to check is any Shorts that are plain cut-downs of full episodes, against the &#34;adds something of your own&#34; test.</p></aside>
+      <br><a class="src s15" href="https://www.socialmediatoday.com/news/youtube-updates-shorts-algorithm-to-put-more-focus-on-original-content/831976/" target="_blank" rel="noopener">Read the original at Social Media Today: YouTube updates Shorts algorithm to put more focus on original content →</a>
+      
+    </article>
+    
+  </div>
+  
+</section>
+
+<section class="sec rl" id="beat-4" data-screen-label="Books &amp; Publishing" aria-labelledby="beat-4-h">
+  <p class="kick">Section</p>
+  <h2 class="hd h-sec" id="beat-4-h">Books &amp; Publishing</h2>
+  <div class="grid g280">
+    
+    <article id="rightscenter-book-to-screen-backlist-report" data-beat="Books &amp; Publishing">
+      <img class="pic r32" src="https://images.unsplash.com/photo-1610116306796-6fea9f4fae38?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Hollywood&#39;s book scouts now mostly ask for backlist titles, report says" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+      <h3 class="hd h-card2" style="margin:22px 0 0"><a href="https://publishingperspectives.com/2026/10/interest-in-translated-fiction-rising-sharply-for-us-film-tv-production-companies/" target="_blank" rel="noopener">Hollywood&#39;s book scouts now mostly ask for backlist titles, report says</a><span class="chip">early reports</span></h3>
+      <p class="deck s21" style="font-size:19px">Backlist is nearly two-thirds of film and TV requests on one rights platform, and requests for international stories rose 3.5 times.</p>
+      <p class="bd">Publishers sort books into two piles. Frontlist is what just came out. Backlist is everything that has been out a while. The usual assumption is that Hollywood chases the new pile.</p>
+<details class="brief"><summary>Read the brief</summary><p class="bd">A new report from Rightscenter, a platform where book rights are offered to film and TV buyers, says otherwise. Its &#34;Book-to-Screen Marketplace Insights, 2019-2026&#34; finds that backlist titles are nearly two-thirds of all requests from studios, producers and scouts. Requests for international stories rose 3.5 times on the previous year, and female protagonists appear in 48% of the titles of interest.</p><p class="bd">Co-owner Emily Parker puts it in five words: &#34;A good book doesn&#39;t expire.&#34; Studios are not only rummaging in older piles; they are looking further afield, and that 3.5-times jump in requests for international stories says buyers are widening the map, not only digging deeper.</p><p class="bd">Think of a book on a shelf as a seed rather than a cut flower. A film adaptation can sprout from it years after publication, as long as someone is still looking at the shelf.</p><p class="bd">The caveat, said lightly: this is one rights platform&#39;s own data, reported by Publishing Perspectives, and it describes who asked on that platform, not every deal in Hollywood. Requests are interest, not purchases.</p></details>
+      <aside class="desk"><p class="lab">On our desk</p><p>the dance memoir ghostwrite. A dance-world memoir with a TV-ready cast does not need to sell on day one to become a screen project later; this report says buyers keep looking at older books.</p></aside>
+      <br><a class="src s15" href="https://publishingperspectives.com/2026/10/interest-in-translated-fiction-rising-sharply-for-us-film-tv-production-companies/" target="_blank" rel="noopener">Read the original at Publishing Perspectives: Interest in translated fiction rising sharply for US film and TV production companies →</a>
+      
+    </article>
+    
+  </div>
+  
+</section>
+
+<section class="sec rl" id="beat-5" data-screen-label="The Operator" aria-labelledby="beat-5-h">
+  <p class="kick">Section</p>
+  <h2 class="hd h-sec" id="beat-5-h">The Operator</h2>
+  <div class="grid g280">
+    
+    <article id="squarespace-october-2026-pay-links-invoices" data-beat="The Operator">
+      <img class="pic r32" src="https://images.unsplash.com/photo-1761839257664-ecba169506c1?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Squarespace adds text-message pay links and smarter invoices" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+      <h3 class="hd h-card2" style="margin:22px 0 0"><a href="https://www.squarespace.com/blog/product-updates-october-2026" target="_blank" rel="noopener">Squarespace adds text-message pay links and smarter invoices</a></h3>
+      <p class="deck s21" style="font-size:19px">The October update also lets reminder and feedback emails run in Automations without marketing opt-in, and adds unified customer profiles.</p>
+      <p class="bd">Squarespace&#39;s October product roundup is mostly about getting paid with less friction. A Pay Link (a web link a customer taps to pay you) can now go out by text: it opens a pre-filled SMS with the link in it.</p>
+<details class="brief"><summary>Read the brief</summary><p class="bd">Invoices gain built-in taxes, invoice numbering you can customize, and multiple recipients on one invoice. For a business where two adults share a bill, that last one matters.</p><p class="bd">The email change is quieter but useful. Transactional emails are one-to-one messages triggered by something a customer did, like a reminder, a service update or a feedback request. Email Campaigns users can now send those from Automations without the customer having opted in to marketing. Think of it as the difference between a flyer and a receipt: the receipt does not need permission to arrive.</p><p class="bd">Also new: a unified Customer Profiles view (contact details, purchase history, spend totals, email and SMS opt-in status in one place) and Instant Bank Payments for Stripe users via Link.</p><p class="bd">The caveat: the post lists no Scheduling, Memberships or Courses updates, so anything booking-side stays where it was.</p></details>
+      <aside class="desk"><p class="lab">On our desk</p><p>Travis Wall Studio. Text-a-pay-link and multi-recipient invoices fit custom-priced packages and parent-and-guardian billing, and native reminder emails now overlap with the Resend and n8n route the studio already uses.</p></aside>
+      <br><a class="src s15" href="https://www.squarespace.com/blog/product-updates-october-2026" target="_blank" rel="noopener">Read the original at Squarespace blog: October 2026 Product Updates →</a>
+      
+    </article>
+    
+  </div>
+  
+</section>
+
+<section class="sec rl" id="beat-6" data-screen-label="The AI Builder" aria-labelledby="beat-6-h">
+  <p class="kick">Section</p>
+  <h2 class="hd h-sec" id="beat-6-h">The AI Builder</h2>
+  <div class="grid g280">
+    
+    <article id="claude-code-eight-releases-auto-mode-setup" data-beat="The AI Builder">
+      <img class="pic r32" src="https://images.unsplash.com/photo-1763568258605-6783d4fad7b5?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Claude Code ships eight releases in a week, adding auto-mode setup" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+      <h3 class="hd h-card2" style="margin:22px 0 0"><a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">Claude Code ships eight releases in a week, adding auto-mode setup</a></h3>
+      <p class="deck s21" style="font-size:19px">Versions 2.1.303 to 2.1.310 bring a guided auto-mode setup, an idle-resume usage warning, an API-migration command and safety logging.</p>
+      <p class="bd">Claude Code, Anthropic&#39;s coding agent, put out eight releases between Oct 18 and Oct 23, versions 2.1.303 to 2.1.310, per its GitHub releases page. Most are small. A few change how long an unattended run can go and how you see what happened in it.</p>
+<details class="brief"><summary>Read the brief</summary><p class="bd">Version 2.1.304 added /auto-mode-setup, a guided setup that teaches auto mode about your project and your recent sessions. The same release added a warning on Pro and Max plans when resuming an idle conversation would use a noticeable share of the 5-hour usage limit, the rolling allowance those plans run on. Think of it as the fuel light coming on before you pull out, rather than halfway up the hill.</p><p class="bd">Version 2.1.307 added /claude-api api-version, a command that migrates code calling the Claude API to the API version dated 2026-10-21. It also added a claude_code.safety_event for OpenTelemetry (an open standard for sending an app&#39;s logs and measurements to monitoring tools), logged every time a rule, hook or sandbox stopped a tool call. In plain words: a record of every time a guardrail said no.</p><p class="bd">Version 2.1.310 brought the Monitor tool to Bedrock, Vertex and Foundry, the cloud platforms where companies run Claude through Amazon, Google and Microsoft.</p><p class="bd">The caveat: some release notes on the page were truncated, so this is the highlights, not the full list.</p></details>
+      <aside class="desk"><p class="lab">On our desk</p><p>the Gayzette itself. This paper is built by Claude sessions running on a schedule, so the auto-mode setup and the idle-resume warning bear directly on how long those runs last and what they cost in usage.</p></aside>
+      <br><a class="src s15" href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">Read the original at GitHub: anthropics/claude-code releases →</a>
+      <details class="rcpt"><summary>Receipts (2)</summary>
+<ul><li><a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">GitHub: anthropics/claude-code releases</a><span class="d">2026-10-23</span></li><li><a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank" rel="noopener">Claude Platform release notes</a><span class="d">2026-10-23</span></li></ul></details>
+    </article>
+    
+  </div>
+  
+</section>
+
+<section class="sec rl" id="beat-7" data-screen-label="Music &amp; Guitar" aria-labelledby="beat-7-h">
+  <p class="kick">Section</p>
+  <h2 class="hd h-sec" id="beat-7-h">Music &amp; Guitar</h2>
+  <div class="grid g280">
+    
+    <article id="suno-answer-umg-sony-training-recordings" data-beat="Music &amp; Guitar">
+      <img class="pic r32" src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Suno tells court it has not deleted all its training recordings" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+      <h3 class="hd h-card2" style="margin:22px 0 0"><a href="https://www.musicbusinessworldwide.com/suno-admits-it-has-not-deleted-all-the-recordings-used-to-train-its-ai-in-answer-to-umg-and-sonys-laundering-lawsuit/" target="_blank" rel="noopener">Suno tells court it has not deleted all its training recordings</a></h3>
+      <p class="deck s21" style="font-size:19px">In its answer to Universal and Sony&#39;s second lawsuit, Suno also says its v6 model was trained on licensed content; the labels say v6 launders infringement.</p>
+      <p class="bd">When someone is sued, they file an answer: a formal document that goes through the complaint point by point, admitting some things and denying others. On Oct 20 Suno filed a 44-page answer in the US District Court for the District of Massachusetts, as Music Business Worldwide reports.</p>
+<details class="brief"><summary>Read the brief</summary><p class="bd">The labels&#39; position: Universal Music Group and Sony&#39;s second suit, filed Sept 18, alleges that training Suno&#39;s v6 model on the outputs of its earlier models &#34;launders&#34; infringement, meaning that copying is said to pass through the older models and come out looking clean. The suit asserts 60,202 recordings.</p><p class="bd">Suno&#39;s position: it admits it &#34;has not deleted all of the sound recordings it has used to train its AI models.&#34; It denies the remaining allegations of that paragraph, and says v6, launched Sept 9 with Warner Music Group, BMG and Believe, was trained on licensed content. It also admits users have been able to put artist names in prompts since January 2026, which it says are converted into style descriptions.</p><p class="bd">Think of it as two accounts of the same kitchen: the labels say the new dish was made with the old ingredients; Suno says the old ingredients are still in the pantry but the new dish used bought-in ones.</p><p class="bd">Separately, a class action led by Jason Isbell has a Suno response due Nov 3. The caveat: these are claims and answers in an open case. Nothing has been decided.</p></details>
+      <aside class="desk"><p class="lab">On our desk</p><p>the Guitar Year and the songs Patrick makes with Suno and Lyria. What v6 was trained on, and how these cases resolve, decides what he can comfortably release.</p></aside>
+      <br><a class="src s15" href="https://www.musicbusinessworldwide.com/suno-admits-it-has-not-deleted-all-the-recordings-used-to-train-its-ai-in-answer-to-umg-and-sonys-laundering-lawsuit/" target="_blank" rel="noopener">Read the original at Music Business Worldwide: Suno admits it has not deleted all the recordings used to train its AI →</a>
+      
+    </article>
+    
+  </div>
+  
+</section>
+
+<section class="sec rl" id="beat-8" data-screen-label="Human Flourishing" aria-labelledby="beat-8-h">
+  <p class="kick">Section</p>
+  <h2 class="hd h-sec" id="beat-8-h">Human Flourishing</h2>
+  <div class="grid g280">
+    
+    <article id="colorado-i25-wildlife-overpass-crashes-down-91" data-beat="Human Flourishing">
+      <img class="pic r32" src="https://images.unsplash.com/photo-1762117869403-6e40adbf9240?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Colorado&#39;s I-25 wildlife crossings cut animal-vehicle crashes by 91%" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+      <h3 class="hd h-card2" style="margin:22px 0 0"><a href="https://www.smithsonianmag.com/smart-news/how-colorados-wildlife-mitigation-efforts-including-the-largest-animal-crossing-overpass-in-north-america-are-making-everyone-safer-180989704/" target="_blank" rel="noopener">Colorado&#39;s I-25 wildlife crossings cut animal-vehicle crashes by 91%</a></h3>
+      <p class="deck s21" style="font-size:19px">A 200-foot-wide overpass over I-25 completed a system of fences and underpasses, and elk, pronghorn and frogs are all using it.</p>
+      <p class="bd">The idea is simple: if animals keep crossing a highway, give them their own way across, then use fences to steer them toward it. On I-25 between Castle Rock and Monument, Colorado built the full version.</p>
+<details class="brief"><summary>Read the brief</summary><p class="bd">Smithsonian Magazine reports that a $15 million overpass, 200 feet wide and spanning six lanes, opened in December 2025. It is the largest of its kind in North America, and it completed a system of 14 miles of fencing and five underpasses.</p><p class="bd">The numbers: collisions fell 91% in the final year of a 2022-2024 study period. The stretch used to see roughly one wildlife-vehicle crash a day in spring and fall; only two have been reported in the ten months since the overpass opened. Elk, pronghorn, rabbits and northern leopard frogs have all been detected using it, and travel delays on the stretch dropped about 9%.</p><p class="bd">Think of it as a pedestrian bridge whose pedestrians include a frog and an elk on the same commute. CDOT&#39;s Chuck Attardo says such crossings &#34;pay for themselves in about 15 years.&#34;</p><p class="bd">The caveat: the 91% figure comes from the study years, before the big overpass itself opened, and ten months is a short record for the finished system. Both point the same way, but the long-run number is still being written.</p></details>
+      <aside class="desk"><p class="lab">On our desk</p><p>The Stacy Show. Infrastructure that finally listens, with a frog-and-elk commute built in, is a ready premise for a puppet bit, and every number in it is real.</p></aside>
+      <br><a class="src s15" href="https://www.smithsonianmag.com/smart-news/how-colorados-wildlife-mitigation-efforts-including-the-largest-animal-crossing-overpass-in-north-america-are-making-everyone-safer-180989704/" target="_blank" rel="noopener">Read the original at Smithsonian Magazine: How Colorado&#39;s wildlife mitigation efforts are making everyone safer →</a>
+      
+    </article>
+    
+  </div>
+  
+</section>
+
+
+
+<section class="sec rl spec" id="sunday-specials" aria-labelledby="sp-h">
+  <p class="kick">Sunday</p><h2 class="hd h-sec" id="sp-h">Sunday Specials</h2>
+  
+  <div id="special-ancients">
+    <h3 class="hd h-4">AI Reads the Ancients</h3>
+    <ul><li>BIG STORY — [ANNOUNCED] A whole Herculaneum scroll, read end to end. PHerc. 1667 is a carbonised papyrus roll from the Villa of the Papyri at Herculaneum, buried when Vesuvius erupted in AD 79 and now held in Naples. Hand-opening attempts in the 1980s damaged it, and it was judged unreadable: a fused, charred spiral whose carbon-based ink looks almost exactly like the burnt papyrus around it, like black pencil on black paper. Only about 8 cm of its original 19-24 cm height survives. The team scanned it with high-resolution X-ray micro-CT at the ESRF in Grenoble, unwrapped it virtually in software, and used machine-learning models trained to spot the faint ink to bring out a readable surface; papyrologists helped build those models, then transcribed and reviewed the text. The result, announced June 25, 2026: roughly 1.4 metres of papyrus and around 22 columns of Greek text, an ethics treatise by an unknown author, likely Stoic and likely 2nd century BC, whose final column names Aristocreon. The readings are fragmentary, and the Stoic attribution is a lean, not a confirmed identification. The full work is a preprint; the page does not say whether it has been peer reviewed. On your desk: the Library OS shelf, as the first whole book this method has handed back. <a class="src" href="https://scrollprize.org/firstscroll" target="_blank" rel="noopener">Vesuvius Challenge: the first whole scroll (PHerc. 1667)</a></li><li>BREAKING — [NOTHING NEW VERIFIED] Nothing new verified since 2026-09-18, the date of the Apollo Restore preprint that ran here last week. We checked scrollprize.org, DeepMind, the journals and university newsrooms for Sept 25 to Oct 25; one Irish Times opinion column (Oct 15) retold the Herculaneum story without a new paper or release, so it does not count. On your desk: Universe Year, where a quiet week gets reported as quiet. <a class="src" href="https://arxiv.org/abs/2609.22455" target="_blank" rel="noopener">Apollo Restore (arXiv:2609.22455), newest item inside 30 days</a></li><li>NEED TO KNOW — [PUBLISHED] Imaging, no AI: why some scrolls give up text and others don&#39;t. A team including NIST researchers (PLOS ONE, Sept 16, 2026) made a stand-in scroll from modern papyrus and carbon ink, spiked the ink with a little lead to mimic lead reported in Herculaneum fragments, and charred it. X-ray tomography plus unrolling software made the writing legible, still detectable down to the lowest lead level tested, and a handheld X-ray fluorescence device found the lead on the outside, a cheap screen for which real scrolls are worth a synchrotron scan. Carbon-only ink is the harder case. This was a model scroll, not an ancient one, and no machine learning did the reading. On your desk: the Symbol &amp; Etymology Bank, as the step before any reading: first, can you see the ink at all? <a class="src" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0353485" target="_blank" rel="noopener">PLOS ONE: A model carbonized papyrus scroll opens a novel path to identifying readable scrolls of the Herculaneum Library</a></li></ul>
+    
+  </div>
+  
+  <div id="special-droplets">
+    <h3 class="hd h-4">The Droplet Desk</h3>
+    <ul><li>NEW THIS WEEK — THE SCIENCE, PLAIN: [PUBLISHED] Self-assembly means parts snapping together into a bigger structure with no one steering. University of Oxford chemists (Roi Asor, Philipp Kukura and colleagues, Nature) used mass photometry, which weighs single molecules by how much light they scatter, to watch an engineered 60-protein virus-like shell, a hollow protein ball with no genetic material, build itself step by step. Early bonds between proteins are weak and reversible, so wrong arrangements fall apart and get retried, like a jigsaw you can shake loose and try again. Certain closed shapes, starting with a ring of five larger blocks, are stable enough to act as waypoints, and after that ring each new stage needs fewer blocks, so assembly speeds up. Asor describes it happening &#34;without a blueprint or machinery directing the process.&#34; The particle is lab-engineered, uses for antivirals and vaccines are prospective, and the paper is about viral shells, not droplets, RNA or the origin of life. ScienceDaily posted it on Oct 22, which is why it runs now. WHERE IT TOUCHES OUR WORK (RESONANCE): it rhymes with this box&#39;s central pattern, order appearing when parts bind weakly and reversibly and then locking in once a stable structure forms, as in the Buffalo RNA-droplet story. (RESONANCE) It echoes Jeremy England&#39;s idea that organized forms can emerge from ordinary physics; that is our parallel, not a claim by the Oxford team. The study says nothing about consciousness, water memory or frequency. On your desk: Biology, Made Easy (Consciousness University), as the chapter on assembly that follows the droplets chapter. <a class="src" href="https://www.sciencedaily.com/releases/2026/10/261021231248.htm" target="_blank" rel="noopener">ScienceDaily (University of Oxford, Nature): virus-like particle self-assembly, molecule by molecule</a></li><li>COMMENTARY CORNER — nothing new said this week. We found no De Stefano, Grant or other teacher or science-writer commentary on RNA, water, droplets, cells or the origin of life dated Oct 18-25. On your desk: Matías De Stefano OS and Robert Edward Grant OS, where the next public comment gets filed against the science layer. <a class="src" href="https://www.buffalo.edu/news/releases/2026/08/rna-droplets-study.html" target="_blank" rel="noopener">University at Buffalo news release: RNA droplets study (the standing anchor for this box)</a></li><li>PLAIN PRIMER — [PUBLISHED] The RNA world. The &#34;RNA world&#34; is the idea that RNA played a central role before DNA and proteins existed, because RNA is unusual: it can both store genetic information and help drive chemical reactions, a recipe card that can also stir the pot. If early RNA did both jobs, it could have run the chemistry that later led to DNA, proteins and the first cells. Lab work keeps testing the weak spots; Cambridge&#39;s Attwater and Holliger (Nature Chemistry, 2025) reported RNA copying itself under freeze-thaw conditions plausible on early Earth (Space Daily report: https://spacedaily.com/n-chemists-have-demonstrated-for-the-first-time-how-rna-may-have-copied-itself-on-early-earth-solving-a-bottleneck-that-had-blocked-the-origin-of-life-field-for-decades/), which addresses one bottleneck, not how life began. Experiments like these show what is possible, not what happened. On your desk: Universe Year&#39;s origin-of-life unit, as the definition to keep at the top of the page. <a class="src" href="https://www.sciencedaily.com/releases/2026/09/260929053546.htm" target="_blank" rel="noopener">ScienceDaily (University at Buffalo, Nature Communications): RNA and the origin of life</a></li></ul>
+    
+  </div>
+  
+  <div id="special-beckstrand">
+    <h3 class="hd h-4">The Beckstrand Week</h3>
+    <ul><li class="empty">Quiet week for the Beckstrands - nothing public we could date inside Oct 18-25. The latest we could verify is the Season 18 finale coverage from Sept 3 (Kai lost the final race to Josiah Pippel; Luke reached the top eight; sister Baylee reached the national finals), outside this window.</li></ul>
+  </div>
+  
+  <div id="special-destefano">
+    <h3 class="hd h-4">De Stefano Week</h3>
+    <ul><li class="empty">Quiet week for De Stefano - nothing new and public we could verify (his Instagram and YouTube pages did not load for us, and search surfaced no dated podcast, talk, course or meridian post in the window).</li></ul>
+  </div>
+  
+  <div id="special-coaster">
+    <h3 class="hd h-4">The Coaster Report</h3>
+    <ul><li>Energylandia (Zator, Poland) announced Rokan on Oct 20: a Bolliger &amp; Mabillard wing coaster, 62 m tall, 1,215 m of track, 115 km/h, four inversions, in a new area called Volana. It would be the tallest and longest wing coaster in Europe and the park&#39;s 20th coaster (it has 19 now), which would be a world record for one park. The park says it will be ready &#39;as early as the 2027 season&#39;. Reported by Blooloop. <a class="src" href="https://blooloop.com/news/energylandia-rokan-wing-coaster" target="_blank" rel="noopener">Blooloop: Energylandia announces Rokan wing coaster</a></li><li>Thrill Glider at Six Flags Magic Mountain: no new construction milestone found this week. Coasterpedia (community-edited) still lists it as under construction for 2027, officially named Sept 10, 2026. Nothing found about Flash Pass or Diamond pass changes. <a class="src" href="https://coasterpedia.net/wiki/Thrill_Glider_(Six_Flags_Magic_Mountain)" target="_blank" rel="noopener">Thrill Glider (Six Flags Magic Mountain) - Coasterpedia</a></li><li>Pass-holder timing at Magic Mountain: Fright Fest runs select nights through Nov 7 per the park&#39;s own events page (Fri-Sun, plus Thursdays in October; 6:30 p.m. to close; last nights Nov 5-7). This article, last modified Oct 10, says Nov 1, and the park&#39;s maze-pass terms still read &#39;through November 1&#39;, so confirm maze access for Nov 2-7. Per Haunted Attraction Network, season passholders get the scare zones, shows and after-dark rides at no extra charge; only the mazes cost extra, and Fast Lane does not work for the mazes (the article does not mention Flash Pass). Page was last modified Oct 10. <a class="src" href="https://hauntedattractionnetwork.com/six-flags-magic-mountain-fright-fest-2026-lineup/" target="_blank" rel="noopener">Haunted Attraction Network: Fright Fest 2026 at Six Flags Magic Mountain</a></li><li>Holiday in the Park at Magic Mountain starts Nov 26 and runs select days through Jan 3, 2027 (Nov 26-29, Dec 4-6, Dec 11-31, Jan 1-3), per Tripster&#39;s listing; parking is extra (General from $42). <a class="src" href="https://www.tripster.com/travelguide/event/six-flags-holiday-in-the-park/" target="_blank" rel="noopener">Tripster: Holiday in the Park 2026, Six Flags Magic Mountain</a></li></ul>
+    
+  </div>
+  
+  <div id="special-grant">
+    <h3 class="hd h-4">Grant Watch</h3>
+    <ul><li class="empty">Quiet week for Robert Edward Grant - nothing new and public we could date inside Oct 18-25. His site timeline&#39;s newest dated entry is Ep. 74 (Mar 10, 2026); the only October item is a listing for the 144 AX-Omega Expedition to Mexico, Oct 2026, with no dates or prices shown on the page we saw.</li></ul>
+  </div>
+  
+  <div id="special-outabout">
+    <h3 class="hd h-4">Out &amp; About LA</h3>
+    <ul><li>Dynasty Typewriter (Hancock Park) has the comedy run to book now. The Shunt McGuppin Variety Hour with Jason Sudeikis, Dana Gould and Andy Daly is Wed Nov 4 (doors 6pm, show 7pm; the calendar page shows no price or availability, so check the event page before you go). Marc Maron plays Sat Nov 14 and again Nov 28, and Dina Martina&#39;s Christmas Show runs Dec 26-30 (Dec 27 has 3pm and 7pm shows); the calendar page shows no prices or sold-out status, so check the event pages. Tickets go through the venue&#39;s own Get Tickets links. <a class="src" href="https://calendar.dynastytypewriter.com/" target="_blank" rel="noopener">Dynasty Typewriter - calendar</a></li><li>The Comedy Store (Sunset Strip) only shows two days at a time. The page showed Sat Oct 24 and Sun Oct 25 (tonight: Sunday Headliners at 8pm with Jeff Dye, Chris Spencer and Marc Maron, flagged Low Ticket Warning). It lists no prices or later dates, so use its Next Week link; tickets are via the club&#39;s own ShowClix/Leap links, and it says third-party tickets are never accepted. <a class="src" href="https://thecomedystore.com/calendar" target="_blank" rel="noopener">The Comedy Store - calendar</a></li><li>Water Lantern Festival returns to Whittier Narrows (South El Monte, about 15 miles east of Mid City) Sat Dec 12 and Sun Dec 13, gates 2pm, lantern launch 5-6pm. General admission is tiered and rises as the date nears: Early Bird $36.99, Regular $40.99, Last Call $48.99, $63.99 at the event; parking is $30 if reserved online. The page says the event is expected to sell out and is inconsistent about which tiers are still open, so confirm on its ticket site now. <a class="src" href="https://www.waterlanternfestival.com/events/los-angeles" target="_blank" rel="noopener">Water Lantern Festival - Los Angeles</a></li><li>Yuletide Cinemaland at Heritage Square Museum (Montecito Heights) screens holiday double features on Nov 28 and Dec 5, 12, 19, 20, 21, 22 and 23 (doors 5:30pm, movie 6:30pm): Home Alone pajama nights Dec 5 and 23, The Muppet Christmas Carol with Mickey&#39;s Once Upon a Christmas Dec 12, Nightmare Before Christmas with Batman Returns Dec 19. The page lists no price or on-sale date and every listing carries an odd EVENT RESCHEDULED label linking to Tixr, so verify there. Tags: dog friendly, bar on site, free parking. <a class="src" href="https://streetfoodcinema.com/schedule/yuletide-cinemaland-2026" target="_blank" rel="noopener">Yuletide Cinemaland 2026 - Street Food Cinema</a></li><li>Six Flags Magic Mountain&#39;s own events page says Fright Fest and Tricks and Treats run through Nov 7 and Holiday in the Park runs select dates Nov 26 to Jan 3, 2027. It gives no ticket prices or on-sale date; check the Six Flags app or event page, and whether your Diamond pass covers it. <a class="src" href="https://www.sixflags.com/magicmountain/events" target="_blank" rel="noopener">Six Flags Magic Mountain - events</a></li><li>Free sky night: Griffith Observatory&#39;s next public star party is Sat Nov 14, 2pm to 9:45pm (telescope viewing ends 9:45pm), then Sat Dec 19 same hours. The page mentions no reservations; private telescopes are not allowed on the grounds. No road-trip event beyond these was verified this week (the Whittier Narrows lantern night is the nearest lantern festival we confirmed). <a class="src" href="https://griffithobservatory.lacity.gov/visit/calendar/star-parties/" target="_blank" rel="noopener">Griffith Observatory - public star parties</a></li></ul>
+    
+  </div>
+  
+  <div id="special-bucketlist">
+    <h3 class="hd h-4">Bucket List Pick</h3>
+    <ul><li>Pick: #2, Griffith Observatory. Admission is free, and this week it is open Tue-Fri noon to 10pm and Sat-Sun 10am to 10pm (closed Mon), so Halloween night, Sat Oct 31, is open until 10pm. No reservation is mentioned for general visits. Paid parking is closest to the building (rate not on the page), and Griffith Park access itself is free. Planetarium show prices are not on the visit page; check the observatory&#39;s planetarium page. The monthly free star party with telescopes is Nov 14, so this week is the sunset-and-skyline version. <a class="src" href="https://griffithobservatory.lacity.gov/visit/" target="_blank" rel="noopener">Griffith Observatory - Plan your visit</a></li></ul>
+    
+  </div>
+  
+  <div id="special-tripdesk">
+    <h3 class="hd h-4">Trip Desk</h3>
+    <ul><li>For a Paris leg, Parc Astérix&#39;s announced EUR 250 million three-year plan (Blooloop, Oct 27, 2025) puts a renovated Greek zone and the 300-room Odyssée Hotel in 2027, with an indoor Londinium zone and a major roller coaster following in 2028. Plan on a 2027 visit seeing the Greek zone and hotel but not the new coaster. Those are the park&#39;s announced dates as reported a year ago, so confirm on the park&#39;s 2027 calendar once posted. <a class="src" href="https://blooloop.com/parc-asterix-investment-plan/" target="_blank" rel="noopener">Parc Astérix investment plan - Blooloop</a></li></ul>
+    
+  </div>
+  
+</section>
+
+
+
+<section class="sec rl" id="tv" data-screen-label="TV" aria-labelledby="tv-h">
+  <p class="kick">TV and the sky</p>
+  <h2 class="hd h-sec" id="tv-h">The week ahead, and overhead</h2>
+  <div class="grid g220">
+
+<article class="tb" id="on-the-couch">
+  <img class="pic r45" src="https://images.unsplash.com/photo-1595935736128-db1f0a261263?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="On the couch" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+  <p class="lab">TV</p>
+  <h3 class="hd h-tv">On the Couch</h3>
+  
+    <div class="tvweek"><div class="day">Mon</div><div class="shows"><div><b>Quiet day: no watchlist airing verified</b> &middot; - &middot; - PT &middot; -</div></div><div class="day">Tue</div><div class="shows"><div><b>Dancing with the Stars (S35)</b> &middot; ABC &middot; Tue Oct 27, 5:00 pm PT, live (ABC&#39;s page: Tuesdays 8/7c, i.e. 8 pm ET; HollywoodLife: &#39;air live at 8 p.m. ET, 5 p.m. PT&#39;) PT &middot; Disney+ (ABC&#39;s own page: &#39;Stream on Disney+&#39;)</div></div><div class="day">Wed</div><div class="shows"><div><b>Survivor 51</b> &middot; CBS &middot; Wed Oct 28, 8:00 pm PT (CBS says only &#39;Wednesdays&#39;; time from Geeky Hobbies and Paramount&#39;s &#39;8:00 ET/PT&#39; CBS primetime line) PT &middot; Not confirmed: CBS page links Paramount+ but does not say Survivor streams there</div><div><b>The Amazing Race (S39, ep 6)</b> &middot; CBS &middot; Wed Oct 28, 9:30 pm PT (per Wikipedia and Geeky Hobbies, third party; CBS page would not open) PT &middot; Not confirmed</div><div><b>Love Is Blind S11 (Boston), episodes 9-11</b> &middot; Netflix &middot; n/a (streaming drop) PT &middot; Wed Oct 28, 12:00 am PT (HollywoodLife, third party; Netflix page not opened). Finale Nov 4; reunion Nov 8 at 6 pm PT</div><div><b>South Park (S29)</b> &middot; Comedy Central &middot; Wed Oct 28, 10:00 pm PT (Comedy Central&#39;s press page lists Wednesday dates Sept 16, Sept 30, Oct 14, Oct 28, Nov 11, Nov 25 and gives 10 pm ET/PT only for the Sept 16 premiere, so the Oct 28 time is assumed) PT &middot; Paramount+ next day in the US (same Comedy Central page)</div></div><div class="day">Sat</div><div class="shows"><div><b>Saturday Night Live</b> &middot; NBC &middot; Sat Oct 31 (Halloween), 8:30 pm PT live; host Inde Navarrette, musical guest Gracie Abrams (TVLine and Remezcla) PT &middot; Peacock (TVLine: live episodes also stream on Peacock; missed episodes after the Sunday upload)</div></div><div class="day">Sun</div><div class="shows"><div><b>Clock change</b> &middot; - &middot; Daylight saving time ends Sun Nov 1, 2 am: clocks go back an hour (standard US rule; not checked on a time-zone page this week) PT &middot; -</div></div></div>
+    <p>Season 11 (Boston) is at the halfway mark: episodes 9-11 land Oct 28 at 12 am PT, the finale Nov 4, and the reunion streams Nov 8 at 6 pm PT, per HollywoodLife (third party; Netflix not opened). <a class="src" href="https://hollywoodlife.com/feature/love-is-blind-season-11-release-schedule-5566549/" target="_blank" rel="noopener">Love Is Blind Season 11 Release Schedule: When Do New Episodes Drop? (HollywoodLife)</a></p><p>Season 39 premiered Sept 30 on CBS (Wednesdays after Survivor). Per Wikipedia (third party), episode 6 is Oct 28 and episode 7 Nov 4; the Oct 28 leg included Tirana, Albania. Last week&#39;s &#39;not announced&#39; status is resolved: the season has been airing since Sept 30. <a class="src" href="https://en.wikipedia.org/wiki/The_Amazing_Race_39" target="_blank" rel="noopener">The Amazing Race 39 (Wikipedia)</a></p><p>CBS&#39;s page lists Survivor 51 episode 5 dated 10/21/26 as the latest; if the Wednesday pattern holds the next is Oct 28 (CBS does not state it). <a class="src" href="https://www.cbs.com/shows/survivor/" target="_blank" rel="noopener">Survivor - CBS</a></p><p>Season 35 &#39;Dedication Night&#39; (E7) is the latest dated episode on ABC&#39;s guide (listed 10/21; the guide dates run a day after the Tuesday airings, so that is the Oct 20 show). Next show expected Tue Oct 27. <a class="src" href="https://abc.com/shows/dancing-with-the-stars/episode-guide" target="_blank" rel="noopener">Dancing with the Stars - Episode Guide (ABC)</a></p><p>Big Brother 28 is over: Rick Devens won the $750,000 on the Oct 1 finale, and CBS renewed the show through Season 30. Nothing new this week. <a class="src" href="https://www.paramountpressexpress.com/cbs-entertainment/shows/big-brother/releases/" target="_blank" rel="noopener">Big Brother releases - Paramount Press Express</a></p><p>SNL returns Halloween night after a two-week break, with Inde Navarrette hosting and Gracie Abrams as musical guest (8:30 pm PT). <a class="src" href="https://www.tvline.com/2288716/is-snl-new-tonight-october-17-2026-host-musical-guest-watch-details/" target="_blank" rel="noopener">Is SNL New Tonight (October 17, 2026)? (TVLine)</a></p><p>BBC&#39;s Celebrity Traitors series 2 returned Oct 1 at 8 pm on BBC One and iPlayer, then Thursday and Friday evenings, per the Scotsman (third party; BBC page not opened; US availability not verified). <a class="src" href="https://www.scotsman.com/arts-and-culture/film-and-tv/celebrity-traitors-season-2-release-date-9063444" target="_blank" rel="noopener">When does Celebrity Traitors 2026 start? (The Scotsman)</a></p><p>Season 29 has five more Wednesday dates after the Sept 16 premiere; the Oct 28 episode is one of them (per Comedy Central). <a class="src" href="https://southpark.cc.com/news/sr1hsu/south-park-s-29th-season-to-premiere-wednesday-september-16th" target="_blank" rel="noopener">South Park&#39;s 29th season to premiere Wednesday, September 16th (Comedy Central)</a></p>
+    <p class="alert">HBO&#39;s Harry Potter series: premiere reported as Christmas Day, Dec 25, 2026, on HBO Max (Boston 25 News citing Deadline, Mar 26, 2026; TechRadar updated Mar 27, 2026). Neither is HBO&#39;s own page, and no newer date was verified; it is 61 days out. <a class="src" href="https://www.boston25news.com/news/trending/watch-hbo-drops-trailer-harry-potter-series-announces-christmas-release/ZHYI7VSJGVBWHF72JQTWVSSMMQ/" target="_blank" rel="noopener">HBO drops trailer, announces Christmas release (Boston 25 News)</a></p><p class="alert">The Amazing Race is now in season 39 on CBS (Wednesdays 9:30 pm PT per Wikipedia); the &#39;watch for next season&#39; item is satisfied for now. <a class="src" href="https://en.wikipedia.org/wiki/The_Amazing_Race_39" target="_blank" rel="noopener">The Amazing Race 39 (Wikipedia)</a></p><p class="alert">No premiere or return could be verified this week for Ink Master (searches returned only old Season 14 / 2022 material), Love Island, Beast Games, American Ninja Warrior, Pop Culture Jeopardy, a Kill Tony Netflix special (last verified: Kill Tony: WrestleMania, Netflix, Apr 20, 2026) or the Game of Thrones universe (House of the Dragon S3 ended Aug 9, 2026 per HollywoodLife). Nothing is announced here; do not read this as a no. <a class="src" href="https://www.wwe.com/article/wwe-and-tony-hinchcliffe-partner-with-netflix-on-kill-tony-wrestlemania" target="_blank" rel="noopener">WWE and Tony Hinchcliffe partner with Netflix on Kill Tony: WrestleMania</a></p>
+    <h5>You might like</h5><ul><li><b>Untitled Netflix Monopoly competition series (2027)</b> &mdash; A &#39;life-sized social strategy competition&#39;: 12 players in a full-scale Monopoly town earning money, buying properties, negotiating and dodging bankruptcy for a $2 million prize. Strategy plus deal-making is easy to play along with at home. Not yet released: no date beyond &#39;2027&#39;, and the title is not final. (Netflix (2027)) <a class="src" href="https://lamag.com/tv/netflix-passes-go-with-new-monopoly-competition-series-opens-casting-for-2027-premiere/" target="_blank" rel="noopener">Netflix passes Go with new Monopoly competition series (LAmag, July 13, 2026)</a></li></ul>
+  
+</article>
+
+
+<article class="tb" id="storm-watch">
+  <img class="pic r45" src="https://images.unsplash.com/photo-1776739835684-4078f7419f74?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Storm watch" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+  <p class="lab">Weather</p>
+  <h3 class="hd h-tv">Storm Watch</h3>
+  
+  <ul><li><b>Hurricane Vance</b> (Eastern Pacific) &mdash; Hurricane; advisory gives no numeric category (85 mph would be Cat 1 on Saffir-Simpson by our reading, not NHC wording) · 85 mph peak · 980 mb. 14.3N 103.4W, about 295 mi SW of Acapulco and 330 mi S of Manzanillo, Mexico; moving NNW at about 5 mph No watches or warnings, no landfall forecast. Through Thursday 2-4 in of rain (isolated 7 in) for Colima and western Michoacan and Jalisco, with flood and mudslide risk on steep terrain; life-threatening surf and rip currents on southern and southwestern Mexico coasts for several days. <span class="when">(as of 2026-10-25)</span> <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP2+shtml/250837.shtml" target="_blank" rel="noopener">NHC Public Advisory #16, Hurricane Vance, 3 AM CST (0900 UTC) Sun Oct 25</a></li></ul>
+  
+  <p><b>Winter outlook:</b> Atlantic and Central Pacific: no active tropical cyclones (NHC main page, updated Oct 25, 09:35 UTC). Winter: no newer CPC discussion has posted; the Oct 8 one is still current. El Nino Advisory in effect; Nino-3.4 is +2.1C; a strong-to-very-strong El Nino is likely through Jan-Mar 2027 (over 83%), with a 83% chance of a historic event (RONI +2.5C or more) for Oct-Dec. CPC says impacts are more likely but not guaranteed and gives no regional rain numbers here; a wetter SoCal winter is general background, not CPC&#39;s wording. Next discussion Nov 12.</p>
+  <p class="when">Outlook from the CPC discussion dated 2026-10-08.</p>
+  
+  <p><a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">National Hurricane Center main page, updated 2026-10-25 09:35 UTC</a> &middot; <a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO Diagnostic Discussion, issued 8 Oct 2026</a></p>
+</article>
+
+
+<article class="tb" id="sky">
+  <img class="pic r45" src="https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="The sky tonight" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';this.classList.add('fb')">
+  <p class="lab">Overhead</p>
+  <h3 class="hd h-tv">Sky</h3>
+  <p><b>Moon:</b> Full Moon (Griffith lists the Full Moon on Oct 25; Moon Giant shows Oct 25 as Waxing Gibbous at 100% and lists the Full Moon as Oct 26, so the exact moment falls at the date line in UTC; call it full tonight) (100% illuminated)</p>
+  <p><b>Tonight's sky:</b> The Full Moon washes out faint objects tonight and the nights around it. Per Griffith&#39;s October report: Mars rises in the east-northeast before dawn and moves from Cancer into Leo on Oct 30; Jupiter (in Leo) rises about 1:20 a.m. by Oct 31; Saturn (in Cetus) is up in the evening; Venus and Mercury are lost in the Sun&#39;s glare. Orionids remain active to Nov 7 but peaked Oct 21-22. Next Taurids: the Southern Taurids peak Nov 4-5 (about 5-10 per hour under a waning crescent) and the Northern Taurids Nov 11-12 (Star Walk), both after this week. Pacific Daylight Time ends Nov 1. <a href="https://griffithobservatory.lacity.gov/explore/observing-the-sky/sky-report/" target="_blank" rel="noopener">Griffith Observatory Sky Report - October 2026</a> &middot; <a href="https://www.moongiant.com/phase/10/25/2026/" target="_blank" rel="noopener">Moon Giant: Moon phase Oct 25 2026</a> &middot; <a href="https://starwalk.space/news/southern-and-northern-taurid-meteor-showers" target="_blank" rel="noopener">Taurid Meteor Shower 2026: Peak Dates (Star Walk)</a></p>
+  
+  
+  
+  <h5>Human Design transits</h5>
+  <ul><li><b>Patrick:</b> Saturn is in Gate 21 (The Hunter, Heart centre), one of your own gates, completing your 21–45 channel until about Oct 28; Uranus in Gate 20 (The Now) completes your 20–34; the North Node sits in your own Gate 30 (Recognition of Feelings). Neptune in 25 and Pluto in 41 complete the 25–51 and 30–41 channels. (HD Toolkit, run Oct 25.)</li><li><b>Travis:</b> Neptune is in Gate 25 (The Spirit of the Self, G centre), one of your own gates; the toolkit shows Saturn reaching your own Gate 17 (Opinions, Ajna) at the end of this week, around Oct 28. (HD Toolkit, run Oct 25.)</li></ul>
+</article>
+
+
+</div>
+</section>
+
+
+
+<section class="sec rl" id="briefly" aria-labelledby="br-h">
+  <p class="kick">Briefly</p><h2 class="hd h-sec" id="br-h">22 more, in a line each</h2>
+  <ul class="lines">
+    <li><span class="when">Mon Sep 28</span>
+      <span class="what">A 55-year-old puzzle has largely fallen: Ronald Graham guessed in 1971 that any set of distinct nonzero numbers can be ordered so every running total is different, and Lisa Sauermann (Bonn) and Huy Tuan Pham (Chicago) used randomness to prove it for sets of every size, though every proof assumes a very large prime p in the modular version, so Quanta says the general case is still technically open. <a href="https://www.quantamagazine.org/mathematicians-harness-randomness-to-crack-a-55-year-old-conjecture-20260928/" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Universe</span></span></li><li><span class="when">Mon Oct 19</span>
+      <span class="what">Max Planck physicists (Vahid Sandoghdar&#39;s team, in Science) held single molecules on an ultra-clean crystal surface at the Fourier limit, the theoretical maximum for how long a quantum state stays coherent; reported via one secondary relay of the institute&#39;s release. <a href="https://www.sciencedaily.com/releases/2026/10/261018205053.htm" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Universe</span></span></li><li><span class="when">Sun Oct 18</span>
+      <span class="what">Jairo Sinova, Libor Šmejkal and Tomas Jungwirth were awarded the 2026 Europhysics Prize for establishing altermagnetism, a third basic class of magnetism in which opposing magnetic moments cancel yet electrons behave as in a ferromagnet. <a href="https://www.sciencedaily.com/releases/2026/10/261017230035.htm" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Universe</span></span></li><li><span class="when">Wed Oct 14</span>
+      <span class="what">In a small pilot of 17 trained trance practitioners (Neuroscience of Consciousness), recalled deep trance versus an ordinary meal saw sense of authorship over thoughts fall from 67.4 to 12.1 and oneness with surroundings rise from 28.4 to 75.9; retrospective recall, and a co-author is linked to the institute that trained all participants. <a href="https://www.psypost.org/a-drug-free-trance-can-blur-the-line-between-self-and-surroundings/" target="_blank" rel="noopener">Read the original →</a><span class="tag">Consciousness &amp; The Nonphysical</span></span></li><li><span class="when">Sun Oct 4</span>
+      <span class="what">Among 80 young adults at Western University, 28% of a VR guided-imagery group and 18% of a VR meditation group reported a complete mystical experience, against none on a flat screen; one study, reported by PsyPost. <a href="https://www.psypost.org/virtual-reality-can-induce-mystical-experiences-without-psychedelics/" target="_blank" rel="noopener">Read the original →</a><span class="tag">Consciousness &amp; The Nonphysical</span></span></li><li><span class="when">Mon Oct 12</span>
+      <span class="what">An LMU Munich study of nearly 1,100 people found they readily rate AI as aware of its surroundings, yet rate even the most responsive AI less conscious than the least responsive human; it measures human judgments, not whether AI experiences anything. <a href="https://thedebrief.org/ai-can-be-aware-but-humans-draw-the-line-at-consciousness-new-study-finds/" target="_blank" rel="noopener">Read the original →</a><span class="tag">Consciousness &amp; The Nonphysical</span></span></li><li><span class="when">Thu Oct 22</span>
+      <span class="what">Studio owners on nationals critiques: look for notes repeated across judges, review them before choosing next season&#39;s music and choreography, and act while the schedule is quiet; Falmouth Dance&#39;s Rob Healy uses feedback on technique without letting it dictate artistic vision. <a href="https://dancemagazine.com/nationals-critiques/" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Dance World</span></span></li><li><span class="when">Fri Oct 23</span>
+      <span class="what">Senior ice dance teams must now include the Golden Waltz pattern (186 beats per minute, 3/4 time) in their rhythm dance, and ballroom choreographers such as Massimo Scali are being hired to set it. <a href="https://dancemagazine.com/ice-dance-ballroom-waltz/" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Dance World</span></span></li><li><span class="when">Mon Sep 28</span>
+      <span class="what">Brisbane&#39;s GOMA shows over 180 puppets, 160 from The Jim Henson Company, until April 18, 2027; Lisa Henson says of puppeteered CG, &#34;we still have the puppeteer&#39;s performance at the heart of the work.&#34; <a href="https://au.variety.com/2026/tv/features/lisa-henson-interview-jim-henson-muppets-exhibition-queensland-40691" target="_blank" rel="noopener">Read the original →</a><span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Thu Oct 1</span>
+      <span class="what">Atlanta Comedy Film Festival (Jan 22-24, 2027) takes episodic and sketch entries up to 30 minutes; Late deadline Oct 31 ($65), Super Late Nov 30 ($70), Final Dec 31 ($75). No puppetry category, and the page mixes 2026 and 2027 dates, so confirm with the organizers before paying. <a href="https://filmfreeway.com/AtlantaComedyFilmFestival" target="_blank" rel="noopener">Read the original →</a><span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Tue Oct 6</span>
+      <span class="what">National Book Award nonfiction finalists include Abdelrahman ElGendy&#39;s memoir Huna and Joseph Osmundson&#39;s Spawning Season; winners get $10,000 each at the Nov 18 ceremony, livestreamed free. <a href="https://lithub.com/here-are-the-2026-national-book-awards-finalists/" target="_blank" rel="noopener">Read the original →</a><span class="tag">Books &amp; Publishing</span></span></li><li><span class="when">Mon Oct 19</span>
+      <span class="what">The Women&#39;s Prize Trust and CHANEL&#39;s new Originators program will pick five unpublished US-based novelists for mentorship and a grant (amount not stated); 5,000-word sample and synopsis due Nov 30, panel chaired by A.M. Homes. <a href="https://publishingperspectives.com/2026/10/the-womens-prize-trust-and-chanel-partner-to-support-emerging-writers-in-the-us/" target="_blank" rel="noopener">Read the original →</a><span class="tag">Books &amp; Publishing</span></span></li><li><span class="when">Wed Sep 30</span>
+      <span class="what">Stripe made Trial Offers generally available: each subscription item can carry its own free or paid intro price and switch automatically to its regular price when the trial ends (flexible billing mode only). <a href="https://docs.stripe.com/changelog/endive/2026-09-30/trial-offer-ga.md" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Operator</span></span></li><li><span class="when">Tue Oct 20</span>
+      <span class="what">n8n 2.45 adds opt-in confidence scores to the Text Classifier node, so a low-certainty email can go to a human instead of an auto-reply, and the AI log now shows which model actually answered. <a href="https://docs.n8n.io/release-notes/" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Operator</span></span></li><li><span class="when">Thu Oct 22</span>
+      <span class="what">Google Meet&#39;s Gemini-powered live speech translation now covers 63 languages with automatic language detection; rolling out from Oct 22 on Rapid Release and Nov 2 on Scheduled Release domains, capped at 90 minutes a meeting on base plans. <a href="https://workspaceupdates.googleblog.com/2026/10/real-time-speech-translation-in-google-Meet-expands-to-63-languages-with-automatic-language-detection.html" target="_blank" rel="noopener">Read the original →</a><span class="tag">The Operator</span></span></li><li><span class="when">Fri Oct 23</span>
+      <span class="what">Anthropic merged chat and Cowork into one experience for Enterprise plans, after the same merge for Pro and Max in September; work needing code or files moves to a cloud session that keeps running after the laptop closes. <a href="https://claude.com/resources/articles/unified-claude-enterprise" target="_blank" rel="noopener">Read the original →</a><span class="tag">The AI Builder</span></span></li><li><span class="when">Tue Oct 13</span>
+      <span class="what">Google lists Gemini 4 Argon as generally available since Oct 13; a third-party write-up puts its intro price at $2/$10 per million input/output tokens until Nov 30, then $4/$20, so check Google&#39;s pricing page before building on it. <a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Read the original →</a><span class="tag">The AI Builder</span></span></li><li><span class="when">Thu Oct 22</span>
+      <span class="what">Reservoir Media filed two suits on Oct 21: one alleges Suno copied 1,050 of its compositions (seeking just over $186 million), the other alleges Anthropic copied lyrics from 853 compositions to train Claude (just over $151.4 million); all figures are allegations. <a href="https://www.musicbusinessworldwide.com/reservoir-sues-suno-for-infringment-over-1050-songs-including-tracks-by-joni-mitchell-johnny-cash-madonna-and-more/" target="_blank" rel="noopener">Read the original →</a><span class="tag">Music &amp; Guitar</span></span></li><li><span class="when">Thu Oct 22</span>
+      <span class="what">Universal became the first major to license TYGER, a San Diego service that uses AI to adapt songs to gameplay in real time; it is in beta across 20+ games, with early access at $3.99 a month. <a href="https://www.musicbusinessworldwide.com/umg-becomes-first-major-music-company-to-license-tyger-which-uses-ai-to-adapt-songs-to-gameplay-in-real-time/" target="_blank" rel="noopener">Read the original →</a><span class="tag">Music &amp; Guitar</span></span></li><li><span class="when">Fri Oct 16</span>
+      <span class="what">Free-roaming bison on Montana&#39;s American Prairie passed 1,000 for the first time (1,016 at the calf count); a federal judge&#39;s Sept. 4 injunction currently blocks the BLM order to remove them from three allotments, so the legal story is still moving. <a href="https://www.goodnewsnetwork.org/largest-private-conservation-project-in-the-us-hits-major-milestone-as-free-roaming-bison-pass-1000/" target="_blank" rel="noopener">Read the original →</a><span class="tag">Human Flourishing</span></span></li><li><span class="when">Sat Oct 24</span>
+      <span class="what">Chiricahua National Monument in southeastern Arizona, homeland of the Chiricahua Apache, is now Chiricahua National Park, about 12,000 acres of rhyolite spires that the article counts as the 64th US national park (single outlet). <a href="https://www.goodnewsnetwork.org/new-us-national-park-preserves-land-of-standing-up-rocks/" target="_blank" rel="noopener">Read the original →</a><span class="tag">Human Flourishing</span></span></li><li><span class="when">Fri Oct 16</span>
+      <span class="what">Greenland&#39;s parliament voted unanimously on Oct 16 to prohibit deep-sea mineral extraction, citing marine protection and fishing; the rules apply until the end of 2029, with possible two-year extensions. <a href="https://www.europeaninterest.eu/greenlands-parliament-bans-deep-sea-mineral-extraction/" target="_blank" rel="noopener">Read the original →</a><span class="tag">Human Flourishing</span></span></li>
+  </ul>
+</section>
+
+
+
+<section class="sec rl" id="calendar" aria-labelledby="cal-h">
+  <p class="kick">Calendar</p><h2 class="hd h-sec" id="cal-h">On the calendar</h2>
+  <p class="deck s21">Dated things from this week's reporting. Pacific time unless noted.</p>
+  <ul class="lines">
+    <li><span class="when">Sun Oct 25</span><span class="what">Oona Doherty&#39;s Specky Clark, at the Irish Arts Center, NYC (through Nov 15)<span class="tag">The Dance World</span></span></li><li><span class="when">Sat Oct 31</span><span class="what">ABT fall season at Lincoln Center closes (Makarova&#39;s Paquita)<span class="tag">The Dance World</span></span></li><li><span class="when">Sat Oct 31</span><span class="what">Atlanta Comedy Film Festival Late deadline ($65; confirm dates with organizers)<span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Mon Nov 2</span><span class="what">Google Meet live speech translation reaches Scheduled Release domains<span class="tag">The Operator</span></span></li><li><span class="when">Tue Nov 3</span><span class="what">Suno&#39;s response due in the Jason Isbell class action<span class="tag">Music &amp; Guitar</span></span></li><li><span class="when">Tue Nov 3</span><span class="what">Sundance Merata Mita Fellowship deadline (Indigenous women artists)<span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Wed Nov 4</span><span class="what">Southern Taurid meteor shower peaks Nov 4-5 (per Star Walk)<span class="tag">The Universe</span></span></li><li><span class="when">Fri Nov 6</span><span class="what">NUVO convention, Ottawa (through Nov 8; competition sold out)<span class="tag">The Dance World</span></span></li><li><span class="when">Mon Nov 9</span><span class="what">Booker Prize 2026 winner announced, Old Billingsgate, London<span class="tag">Books &amp; Publishing</span></span></li><li><span class="when">Fri Nov 13</span><span class="what">NUVO convention, Vancouver (through Nov 15)<span class="tag">The Dance World</span></span></li><li><span class="when">Wed Nov 18</span><span class="what">National Book Awards ceremony (free livestream, 8 pm ET)<span class="tag">Books &amp; Publishing</span></span></li><li><span class="when">Fri Nov 20</span><span class="what">NUVO convention, Pittsburgh (through Nov 22)<span class="tag">The Dance World</span></span></li><li><span class="when">Fri Nov 27</span><span class="what">Jim Henson&#39;s Fraggle Rock: Back to the Rock Live at La Mirada Theatre (only LA-area stop)<span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Mon Nov 30</span><span class="what">Atlanta Comedy Film Festival Super Late deadline ($70)<span class="tag">Comedy, Puppetry &amp; TV</span></span></li><li><span class="when">Mon Nov 30</span><span class="what">Women&#39;s Prize Trust / CHANEL Originators applications close<span class="tag">Books &amp; Publishing</span></span></li><li><span class="when">Mon Nov 30</span><span class="what">Gemini 4 Argon intro API price ends (price per third-party source)<span class="tag">The AI Builder</span></span></li><li><span class="when">Thu Dec 31</span><span class="what">Atlanta Comedy Film Festival Final deadline ($75)<span class="tag">Comedy, Puppetry &amp; TV</span></span></li>
+  </ul>
+</section>
+
+
+<section class="sec rl made" id="made" aria-labelledby="made-h">
+  <p class="kick">Behind the paper</p><h2 class="hd h-sec" id="made-h">How this paper is made</h2>
+  <p>How this issue was made, with the real token counts each agent reported.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Stage</th><th>Model</th><th class="num">Tokens</th><th>Plain words</th></tr></thead>
+    <tbody><tr><td>Managing editor</td><td>Opus</td><td class="num">—</td><td>planning, feedback read, HD transits, personal news, editor&#39;s note, 30 fact-check fixes applied, build, publish, filing (not metered)</td></tr><tr><td>Scout: consciousness</td><td>Sonnet</td><td class="num">98431</td><td></td></tr><tr><td>Scout: universe + Droplet Desk</td><td>Sonnet</td><td class="num">117430</td><td></td></tr><tr><td>Scout: dance</td><td>Sonnet</td><td class="num">99739</td><td></td></tr><tr><td>Scout: comedy</td><td>Sonnet</td><td class="num">114514</td><td></td></tr><tr><td>Scout: books</td><td>Sonnet</td><td class="num">108637</td><td></td></tr><tr><td>Scout: operator</td><td>Sonnet</td><td class="num">111692</td><td></td></tr><tr><td>Scout: ai + Watching List</td><td>Sonnet</td><td class="num">81734</td><td></td></tr><tr><td>Scout: music</td><td>Sonnet</td><td class="num">98570</td><td></td></tr><tr><td>Scout: flourishing</td><td>Sonnet</td><td class="num">105529</td><td></td></tr><tr><td>Scout: TV/Almanac (Couch, Storm Watch, Sky)</td><td>Sonnet</td><td class="num">101189</td><td></td></tr><tr><td>Scout: Specials A (Beckstrand, De Stefano, Coaster, Grant, Commentary)</td><td>Sonnet</td><td class="num">83627</td><td></td></tr><tr><td>Scout: Specials B (Out &amp; About, Bucket List, Trip Desk)</td><td>Sonnet</td><td class="num">101200</td><td></td></tr><tr><td>Scout: Ancients</td><td>Sonnet</td><td class="num">73687</td><td></td></tr><tr><td>Writers&#39; room</td><td>Opus</td><td class="num">165123</td><td>13 articles, 22 briefly, all boxes</td></tr><tr><td>Fact-checker (fresh context)</td><td>Sonnet</td><td class="num">176449</td><td>~203 claims; 12 wrong, 14 unsupported, 7 unverifiable; 30 required fixes</td></tr></tbody>
+  </table></div>
+  <p>Subagent total: about 1,637,551 tokens (scouts 1,295,979; writer 165,123; checker 176,449). Over the 900k target; scouting is the overrun again.</p>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="top">
+    <div>
+      <p class="brand">The Gayzette</p>
+      <p class="tagl">No ads. No pop-ups. No tracking. Just the paper.</p>
+    </div>
+    <nav aria-label="Footer sections">
+      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+      <a href="/editions/">Past editions</a>
+    </nav>
+  </div>
+  <p class="fine">The Gayzette &middot; Patrick &amp; Travis<br><a href="/editions/">Past editions</a> &middot; Made in Los Angeles &middot; Edition No. 33 &middot; Summaries link to their sources</p>
+</footer>
+</div>
+</body>
+</html>

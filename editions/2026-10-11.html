@@ -359,6 +359,27 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   .ph{background:#f2f2f2 !important}
   article,.it,li{break-inside:avoid-page}
 }
+
+/* classroom */
+.cls-wrap{max-width:660px}
+.cls-meets{margin:40px 0 0;max-width:620px}
+.cls-meets p.lab,.cls-hw .lab,.cls-quiz p.lab,.cls-next p.lab,p.lab.cls-grp{font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:0 0 10px}
+.cls-meets ul{list-style:none;margin:0;padding:0}
+.cls-meets li{padding:14px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-meets li a{color:#C2603C;font-family:Fraunces,serif;font-weight:500;text-decoration:none;border-bottom:1px solid #C2603C}
+.cls-meets .why{display:block;margin-top:4px;color:#3a352e}
+.cls-hw{margin:28px 0 0;font-family:Newsreader,serif;font-size:19px;line-height:1.5;max-width:620px}
+.cls-hw .lab{display:inline-block;margin:0 8px 0 0;color:#C2603C}
+.cls-go{font-family:Fraunces,serif;font-style:italic;color:#6B645A;margin:20px 0 0}
+.cls-src{font-family:"DM Sans",sans-serif;font-size:13px;color:#6B645A;margin:14px 0 0}
+.cls-src a{color:inherit}
+.cls-ideas{margin:24px 0 0;padding-left:22px;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-ideas li{margin:0 0 16px}
+.cls-ideas strong{font-family:Fraunces,serif;font-weight:500}
+.cls-quiz,.cls-next{margin:36px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-quiz ol{padding-left:22px}
+.cls-next .bd{margin-top:0}
+.desk+.cls-hw,.desk+.cls-next{margin-top:28px}
 </style>
 </head>
 <body>
@@ -371,7 +392,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
     <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
   </div>
   <nav class="nav" aria-label="Sections">
-    <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/" class="on" aria-current="page">Sunday</a>
+    <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/" class="on" aria-current="page">Sunday</a>
   </nav>
 </header>
 
@@ -709,9 +730,11 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <p class="lab">Weather</p>
   <h3 class="hd h-tv">Storm Watch</h3>
   
-  <ul><li><b>Hurricane Simon</b> (Eastern Pacific) &mdash; Cat 3 (as of 6 pm CST Oct 11, 125 mph, 951 mb) · 125 mph peak · 951 mb. 19.7N 105.8W, about 110 mi WNW of Manzanillo Mexico, moving NW ~5 mph Hurricane Warning Punta San Telmo to El Roblito and Islas Marias; Hurricane Watch north of El Roblito to Bahia Tempehuaya. Isolated rain up to 30 in in Michoacan, Colima, Jalisco (life-threatening flooding, mudslides), dangerous surge. NHC expects a gradual turn north and north-northeast from Tuesday into Wednesday, then back toward the Mexican coast on Wednesday. No threat to California stated. <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP5+shtml/112100_MIATCPEP5.shtml" target="_blank" rel="noopener">NHC - Hurricane Simon Intermediate Advisory 18A</a></li><li><b>Post-Tropical Cyclone Rachel</b> (Eastern Pacific) &mdash; Post-tropical (no category) · 50 mph peak · 990 mb. About 200 mi north of Punta Baja, about 60 mi ENE of San Diego, moving north ~25 mph inland (Advisory 57, 2 am PDT Oct 11) NHC expected dissipation by Sunday afternoon. Hazards: 1-3 in of rain (locally up to 5 in) from Southern California into the Great Basin/Southwest with flash flood risk; life-threatening surf and rip currents plus coastal flooding along SoCal into early this week. Tropical Storm Watch for SoCal coast discontinued. This is the latest Rachel text I could open; check NWS LA for current local alerts. <a href="https://www.nhc.noaa.gov/text/MIATCPEP3.shtml" target="_blank" rel="noopener">NHC - Rachel Advisory 57</a></li></ul>
+  <ul><li><b>Hurricane Simon</b> (Eastern Pacific) &mdash; Cat 3 (as of 6 pm CST Oct 11, 125 mph, 951 mb) · 125 mph peak · 951 mb. 19.7N 105.8W, about 110 mi WNW of Manzanillo Mexico, moving NW ~5 mph Hurricane Warning Punta San Telmo to El Roblito and Islas Marias; Hurricane Watch north of El Roblito to Bahia Tempehuaya. Isolated rain up to 30 in in Michoacan, Colima, Jalisco (life-threatening flooding, mudslides), dangerous surge. NHC expects a gradual turn north and north-northeast from Tuesday into Wednesday, then back toward the Mexican coast on Wednesday. No threat to California stated. <span class="when">(as of 2026-10-11)</span> <a href="https://www.nhc.noaa.gov/text/refresh/MIATCPEP5+shtml/112100_MIATCPEP5.shtml" target="_blank" rel="noopener">NHC - Hurricane Simon Intermediate Advisory 18A</a></li><li><b>Post-Tropical Cyclone Rachel</b> (Eastern Pacific) &mdash; Post-tropical (no category) · 50 mph peak · 990 mb. About 200 mi north of Punta Baja, about 60 mi ENE of San Diego, moving north ~25 mph inland (Advisory 57, 2 am PDT Oct 11) NHC expected dissipation by Sunday afternoon. Hazards: 1-3 in of rain (locally up to 5 in) from Southern California into the Great Basin/Southwest with flash flood risk; life-threatening surf and rip currents plus coastal flooding along SoCal into early this week. Tropical Storm Watch for SoCal coast discontinued. This is the latest Rachel text I could open; check NWS LA for current local alerts. <span class="when">(as of 2026-10-11)</span> <a href="https://www.nhc.noaa.gov/text/MIATCPEP3.shtml" target="_blank" rel="noopener">NHC - Rachel Advisory 57</a></li></ul>
   
   <p><b>Winter outlook:</b> No active Atlantic tropical cyclones (NHC, page updated Oct 11 evening). NHC&#39;s East Pacific outlook (5 am PDT Oct 11): a tropical wave south of southern Mexico has 20% (48-hour) and 80% (7-day) chance of becoming a tropical depression mid-to-late this week. Winter: NOAA CPC&#39;s ENSO Diagnostic Discussion issued Oct 8, 2026 has the ENSO Alert System at El Nino Advisory; chance of a strong event (3-month RONI of +2.5 C or more) is 54% for Sep-Nov, 83% for Oct-Dec and 70% for Nov-Jan, with strong-to-very-strong El Nino through Jan-Mar 2027 remaining greater than an 83% chance. The page I read gave no Southern California rain call (strong El Nino winters tend to favor wetter SoCal, but that is general background, not stated in the discussion).</p>
+  <p class="when">Outlook from the CPC discussion dated 2026-10-08.</p>
+  
   <p><a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC - Active tropical cyclones, Oct 11 2026</a> &middot; <a href="https://www.nhc.noaa.gov/text/MIATWOEP.shtml" target="_blank" rel="noopener">NHC - East Pacific Tropical Weather Outlook</a> &middot; <a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">NOAA CPC - ENSO Diagnostic Discussion, Oct 8 2026</a></p>
 </article>
 
@@ -722,6 +745,9 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <h3 class="hd h-tv">Sky</h3>
   <p><b>Moon:</b> Waxing Crescent (0.74 days old, just after New Moon on Oct 10) (0.6% illuminated)</p>
   <p><b>Tonight's sky:</b> Moon is a hairline sliver, so skies are dark. Per Griffith&#39;s October Sky Report: Mars passes in front of the Beehive cluster M44 on Oct 11; first quarter Oct 18, full Oct 25. Jupiter (Leo) rises in the early morning, Saturn is in Cetus. The Orionids peak the night of Oct 21-22 (about 10-20 per hour) but a bright gibbous moon will interfere. Mercury and Venus are too close to the Sun. <a href="https://theskylive.com/moon/2026-10-11" target="_blank" rel="noopener">TheSkyLive - Moon phase Oct 11 2026</a> &middot; <a href="https://griffithobservatory.lacity.gov/explore/observing-the-sky/sky-report/" target="_blank" rel="noopener">Griffith Observatory - Sky Report</a></p>
+  
+  
+  
   <h5>Human Design transits</h5>
   <ul><li><b>Patrick:</b> From the HD Toolkit, for the week of Oct 12: Saturn in Gate 21 (The Hunter, one of your own gates) completes your 21–45 channel (in since 4 May 2026); Uranus in Gate 20 (The Now, also yours) completes 20–34 (since 7 Sep 2025); Neptune in Gate 25 (The Spirit of the Self) completes 25–51 (since 7 Sep 2025); Pluto in Gate 41 (Contraction) completes 30–41 (since 5 Dec 2025); the North Node sits in Gate 30 (Recognition of Feelings, yours) since 25 Jul 2026. No slow-planet gate change in the next seven days. Mechanics only; meanings are interpretation.</li><li><b>Travis:</b> From the HD Toolkit, for the week of Oct 12: Neptune in Gate 25 (The Spirit of the Self, one of your own gates), in since 7 Sep 2025; it completes no channel. No slow-planet gate change in the next seven days. Mechanics only; meanings are interpretation.</li></ul>
 </article>
@@ -791,7 +817,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
       <p class="tagl">No ads. No pop-ups. No tracking. Just the paper.</p>
     </div>
     <nav aria-label="Footer sections">
-      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
       <a href="/editions/">Past editions</a>
     </nav>
   </div>

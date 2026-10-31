@@ -359,6 +359,27 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   .ph{background:#f2f2f2 !important}
   article,.it,li{break-inside:avoid-page}
 }
+
+/* classroom */
+.cls-wrap{max-width:660px}
+.cls-meets{margin:40px 0 0;max-width:620px}
+.cls-meets p.lab,.cls-hw .lab,.cls-quiz p.lab,.cls-next p.lab,p.lab.cls-grp{font-family:"DM Sans",sans-serif;font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6B645A;margin:0 0 10px}
+.cls-meets ul{list-style:none;margin:0;padding:0}
+.cls-meets li{padding:14px 0;border-top:1px solid #E4DCCB;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-meets li a{color:#C2603C;font-family:Fraunces,serif;font-weight:500;text-decoration:none;border-bottom:1px solid #C2603C}
+.cls-meets .why{display:block;margin-top:4px;color:#3a352e}
+.cls-hw{margin:28px 0 0;font-family:Newsreader,serif;font-size:19px;line-height:1.5;max-width:620px}
+.cls-hw .lab{display:inline-block;margin:0 8px 0 0;color:#C2603C}
+.cls-go{font-family:Fraunces,serif;font-style:italic;color:#6B645A;margin:20px 0 0}
+.cls-src{font-family:"DM Sans",sans-serif;font-size:13px;color:#6B645A;margin:14px 0 0}
+.cls-src a{color:inherit}
+.cls-ideas{margin:24px 0 0;padding-left:22px;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-ideas li{margin:0 0 16px}
+.cls-ideas strong{font-family:Fraunces,serif;font-weight:500}
+.cls-quiz,.cls-next{margin:36px 0 0;max-width:620px;font-family:Newsreader,serif;font-size:19px;line-height:1.5}
+.cls-quiz ol{padding-left:22px}
+.cls-next .bd{margin-top:0}
+.desk+.cls-hw,.desk+.cls-next{margin-top:28px}
 </style>
 </head>
 <body>
@@ -371,7 +392,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
     <p>A personal daily by Patrick and Travis, written with a little help from AI.</p>
   </div>
   <nav class="nav" aria-label="Sections">
-    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+    <a href="/" class="on" aria-current="page">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
   </nav>
 </header>
 
@@ -653,9 +674,11 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <p class="lab">Weather</p>
   <h3 class="hd h-tv">Storm Watch</h3>
   <p><b>Los Angeles:</b> Sunny, high near 80, low near 59 · Los Angeles</p>
-  <ul><li><b>Hurricane Simon</b> (Eastern Pacific) &mdash; Hurricane · 105 mph peak · 969 mb. 19.8N 107.9W, moving SW at 3 mph (page gives no landmark distance) Interests in west-central Mexico and Baja California Sur should monitor. <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC</a></li><li><b>Tropical Storm Trudy</b> (Eastern Pacific) &mdash; Tropical storm · 50 mph peak · 1002 mb. 11.1N 99.0W, moving WNW at 10 mph (no landmark given) Southwestern and west-central Mexico should monitor. <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC</a></li></ul>
+  <ul><li><b>Hurricane Simon</b> (Eastern Pacific) &mdash; Hurricane · 105 mph peak · 969 mb. 19.8N 107.9W, moving SW at 3 mph (page gives no landmark distance) Interests in west-central Mexico and Baja California Sur should monitor. <span class="when">(as of 2026-10-14 (advisory 2:00 AM MST))</span> <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC</a></li><li><b>Tropical Storm Trudy</b> (Eastern Pacific) &mdash; Tropical storm · 50 mph peak · 1002 mb. 11.1N 99.0W, moving WNW at 10 mph (no landmark given) Southwestern and west-central Mexico should monitor. <span class="when">(as of 2026-10-14 (advisory 3:00 AM CST))</span> <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC</a></li></ul>
   
   <p><b>Winter outlook:</b> NOAA&#39;s Climate Prediction Center (Oct 8) has an El Niño Advisory in effect: El Niño is strengthening, and a strong to very strong event is likely through Jan–Mar 2027 (greater than 83% chance). CPC gives no Southern California specifics; it says El Niño-type impacts are more likely with an event this large, but not guaranteed.</p>
+  <p class="when">Outlook from the CPC discussion dated 2026-10-08.</p>
+  
   <p><a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml" target="_blank" rel="noopener">CPC ENSO Diagnostic Discussion</a> &middot; <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NHC</a></p>
 </article>
 
@@ -666,6 +689,9 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
   <h3 class="hd h-tv">Sky</h3>
   <p><b>Moon:</b> Waxing Crescent (16% illuminated)</p>
   <p><b>Tonight's sky:</b> Young crescent Moon sets about 8:42 pm PDT; Saturn rises in the evening in Cetus. Orionids peak Oct 21-22 (Moon 74% waxing gibbous, significant interference). Griffith Observatory open tonight, weather permitting. <a href="https://www.moongiant.com/phase/10/14/2026/" target="_blank" rel="noopener">Moon Giant - Oct 14 2026</a> &middot; <a href="https://griffithobservatory.lacity.gov/explore/observing-the-sky/sky-report/" target="_blank" rel="noopener">Griffith Observatory Sky Report, October 2026</a> &middot; <a href="https://griffithobservatory.lacity.gov/explore/observing-the-sky/whats-in-the-sky/the-moon/2026-moonrise-and-moonset/" target="_blank" rel="noopener">Griffith 2026 Moonrise and Moonset</a> &middot; <a href="https://www.amsmeteors.org/calendar/" target="_blank" rel="noopener">AMS Meteor Shower Calendar</a></p>
+  
+  
+  
   <h5>Human Design transits</h5>
   <ul><li><b>Patrick:</b> Saturn sits in Gate 21 (The Hunter, Heart), one of your own gates, completing your 21–45 channel; Uranus in your Gate 20 (The Now, Throat) completes 20–34; Neptune in Gate 25 and Pluto in Gate 41 complete your 25–51 and 30–41 channels; the North Node is in your Gate 30 (Recognition of Feelings).</li><li><b>Travis:</b> Neptune is in Gate 25 (The Spirit of the Self, G centre), one of your own gates, and has been since Sep 9, 2025.</li></ul>
 </article>
@@ -705,7 +731,7 @@ main{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
       <p class="tagl">No ads. No pop-ups. No tracking. Just the paper.</p>
     </div>
     <nav aria-label="Footer sections">
-      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
+      <a href="/">Front Page</a><a href="/ai/">AI</a><a href="/spirit/">Spirit</a><a href="/classroom/">Classroom</a><a href="/feel-good/">Feel-Good</a><a href="/world/">World</a><a href="/tv/">TV</a><a href="/sunday/">Sunday</a>
       <a href="/editions/">Past editions</a>
     </nav>
   </div>
