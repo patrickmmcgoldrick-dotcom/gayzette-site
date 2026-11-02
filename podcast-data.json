@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "beat": "Podcast Watchlist",
+  "updated_on": "2026-11-01",
+  "stories": [
+    {
+      "id": "spira-melville-goodness-and-the-castaway",
+      "episode_id": "cefscNWTB00",
+      "headline": "What Spira’s ocean of awareness leaves on the shore",
+      "dek": "A question about Moby-Dick opens a larger conversation about unity, goodness and the people we leave behind.",
+      "show": "Rupert Spira",
+      "episode_title": "Is Ultimate Reality Fundamentally Good?",
+      "episode_url": "https://www.youtube.com/watch?v=cefscNWTB00",
+      "published_on": "unknown",
+      "reported_on": "2026-11-01",
+      "angle": "Return the podcast’s literary quotations to their original scenes to examine the ethical question alongside the metaphysical one.",
+      "body": [
+        "The difficult question in Rupert Spira’s short discussion of ultimate reality arrives from a whaling ship. A retreat participant invokes Pip, the young castaway in Moby-Dick, whose encounter with the immensity of the sea leaves his shipmates calling him mad. If seeing beneath ordinary experience can be so overwhelming, the questioner asks, why assume that what lies beneath it is good?",
+        "Spira answers through self-inquiry, the practice of examining experience directly. He says that letting perceptions, sensations and thoughts fall away can initially seem to reveal nothing. In his account, that apparent emptiness still depends on a remembered contrast with something. Beyond the contrast, he says, awareness remains. He associates this undivided presence with love, because it contains no separation between self and other. These are claims within his contemplative philosophy, not measurements establishing the nature of the universe.",
+        "The official archive dates the underlying retreat exchange to March 21, 2026. That is the date of the discussion, not a verified release date for the YouTube clip. Returning to the books invoked in this exchange adds a second way to investigate its question: looking closely at what the literature actually puts on the page.",
+        "Returning to Melville's chapter 93 changes the emphasis. Pip is frightened during a whale hunt and jumps from the boat. After an earlier rescue costs the crew a whale, Stubb warns that he will not retrieve him again. When Pip next jumps, Stubb pursues the whale, apparently expecting the following boats to rescue him. Those boats chase other whales without seeing Pip, and the ship eventually finds him. Before the chapter becomes a meditation on cosmic knowledge, it shows a human being treated as less valuable than the catch.",
+        "That is the complication worth carrying back into the podcast. A reader can ask what Pip has encountered inwardly; a reader can also ask why the people around him failed to protect him. Melville makes room for both. The narrator describes extraordinary depths beneath Pip’s altered condition while preserving the uncomfortable circumstances that produced it. This reading does not settle Spira’s metaphysics. It puts an ethical question next to it: what does recognizing unity require of the person still sitting safely in the boat?",
+        "Spira closes with another literary voice, Milton’s Paradise Lost. The passage comes from the morning hymn in Book V, where Adam and Eve praise creation and its creator. In the poem, that song follows Eve’s troubling dream and Adam’s attempt to comfort her. Read together, the two works offer different scenes for the same large question: one person abandoned in an immense world; two people speaking praise together within it.",
+        "The connection is this article’s interpretation, rather than a claim that Melville or Milton anticipated Spira’s teaching. It suggests a useful way to listen to philosophical podcasts: follow the quotation back into its scene. The surrounding story can complicate an idea without cancelling it. A beautiful sentence about reality becomes more interesting when the frightened child, the worried companion and the difficult choice remain in view."
+      ],
+      "connection": "On your desk: For a reading or writing practice, pair the seven-minute discussion with Moby-Dick chapter 93 and ask how the idea changes when its original scene returns.",
+      "caveat": "Spira’s account of awareness and goodness is his philosophical position. The literary comparison is The Gayzette’s interpretation; neither text provides empirical proof of that position. Episode attribution checked against archived automated captions and the official discussion summary; live playback was unavailable during this review.",
+      "category": "Consciousness & literature",
+      "source_note": "Episode attribution checked against archived automated captions and the official discussion summary; live playback was unavailable during this review.",
+      "sources": [
+        {
+          "title": "Rupert Spira — Is Ultimate Reality Fundamentally Good? (video)",
+          "url": "https://www.youtube.com/watch?v=cefscNWTB00",
+          "date": "unknown",
+          "role": "episode",
+          "verification_method": "archived-primary-captions",
+          "archived_opened_on": "2026-11-01"
+        },
+        {
+          "title": "Rupert Spira — Is Reality Fundamentally Good? (official discussion archive; retreat date)",
+          "url": "https://rupertspira.com/watch-listen/archive/the-second-coming-is-i-am-awakening/is-reality-fundamentally-good/",
+          "date": "2026-03-21",
+          "role": "context"
+        },
+        {
+          "title": "John Milton — Paradise Lost, Book V, 1674 edition (University of Toronto)",
+          "url": "https://rpo.library.utoronto.ca/content/paradise-lost-book-v-1674",
+          "date": "1674",
+          "role": "context"
+        },
+        {
+          "title": "Herman Melville - Moby-Dick, Chapter 93: The Castaway (Project Gutenberg)",
+          "url": "https://www.gutenberg.org/files/2701/2701-h/2701-h.htm",
+          "date": "1851",
+          "role": "context"
+        }
+      ]
+    },
+    {
+      "id": "jacobi-ai-tool-human-judgment",
+      "episode_id": "vUgQv_btWVw",
+      "headline": "Who keeps the judgment when AI does the work?",
+      "dek": "Marina Jacobi’s appeal for human agency meets a concrete research question: how do we keep thinking when a machine supplies the answer?",
+      "show": "Just Tap In with Emilio Ortiz",
+      "episode_title": "“9 Aliens Told Me Why Humanity ALREADY WON” (Censored Laws of Reality) | Marina Jacobi",
+      "episode_url": "https://www.youtube.com/watch?v=vUgQv_btWVw",
+      "published_on": "unknown",
+      "reported_on": "2026-11-01",
+      "angle": "Connect a guest’s appeal for AI agency to empirical research on confidence, critical thinking and deliberate design friction.",
+      "body": [
+        "Late in Marina Jacobi’s conversation with Emilio Ortiz, a practical question emerges from a much more expansive spiritual account: who gets to decide what you believe? Around 1:34:50, Jacobi argues that AI should serve as a tool while people retain their own judgment. Her explanation belongs to her wider metaphysical worldview. The everyday question it raises can also be investigated without accepting that worldview.",
+        "The distinction matters. A speaker’s belief about consciousness is one kind of claim. Evidence about how people use software is another. Putting them into conversation can sharpen a question, but agreement on a practical concern does not make either source evidence for everything the other says. The useful connection here is about agency: the ability to make and own a decision rather than simply receive one.",
+        "A study presented at CHI 2025, the human-computer interaction research conference, gives that question a measurable starting point. Researchers surveyed 319 knowledge workers, people whose work depends on handling information, and gathered 936 examples of using generative AI at work. Higher confidence in the AI was associated with less critical thinking; greater confidence in the worker’s own ability was associated with more. The study also described thinking moving toward checking information, integrating responses and overseeing the task.",
+        "That finding is more precise than saying AI makes people stop thinking. The study concerns reported experiences and associations, not an experiment proving that a chatbot causes lasting loss of reasoning ability. Nor does it show that refusing AI produces better work. It draws attention to where effort goes when producing a first answer becomes easier.",
+        "Another research project tested a possible design response. In a study of 24 participants doing AI-assisted shortlisting tasks, researchers added brief prompts that criticized suggestions or proposed alternatives. They found that these provocations could encourage critical and metacognitive thinking — thinking about how one is thinking. The paper also identifies practical conditions that matter, including urgency, expertise, responsibility and whether a challenge is actionable. A small study in a specific task cannot establish that one intervention works everywhere.",
+        "Together, these studies suggest a better question for the builder than whether to use AI: which part of this decision must remain visible to the person making it? That is this article’s synthesis, not a finding from Jacobi’s interview. If a tool offers three options, for example, the interface could ask which trade-off the user accepts and show the evidence behind each option. The point would be to preserve a reason for the choice, not merely record a click.",
+        "For a reader, the same distinction can change the next conversation with a chatbot. Ask it for a competing explanation, then inspect the underlying sources yourself. Write down what would change your mind before choosing an answer. These are editorial suggestions, not a tested protocol. They turn the broad wish to retain agency into something you can observe: whether you can explain your decision after the fluent answer has disappeared from the screen."
+      ],
+      "connection": "On your desk: In an AI-assisted writing or research workflow, keep the source, the strongest alternative and your reason for choosing beside the final answer.",
+      "caveat": "The research concerns AI-assisted work and does not validate Jacobi’s metaphysical account. The survey is correlational and self-reported; the intervention study has 24 participants. Episode attribution checked against archived automated captions; live playback was unavailable during this review.",
+      "category": "AI & human agency",
+      "source_note": "Episode attribution checked against archived automated captions; live playback was unavailable during this review.",
+      "sources": [
+        {
+          "title": "Just Tap In with Emilio Ortiz — Marina Jacobi conversation (AI discussion around 1:34:50)",
+          "url": "https://www.youtube.com/watch?v=vUgQv_btWVw&t=5690s",
+          "date": "unknown",
+          "role": "episode",
+          "verification_method": "archived-primary-captions",
+          "archived_opened_on": "2026-11-01"
+        },
+        {
+          "title": "Lee et al. — The Impact of Generative AI on Critical Thinking, CHI 2025 (Microsoft Research)",
+          "url": "https://www.microsoft.com/en-us/research/publication/the-impact-of-generative-ai-on-critical-thinking-self-reported-reductions-in-cognitive-effort-and-confidence-effects-from-a-survey-of-knowledge-workers/",
+          "date": "2025-04",
+          "role": "context"
+        },
+        {
+          "title": "Drosos et al. — It makes you think: Provocations Help Restore Critical Thinking to AI-Assisted Knowledge Work",
+          "url": "https://arxiv.org/abs/2501.17247",
+          "date": "2025-01-28",
+          "role": "context"
+        }
+      ]
+    }
+  ]
+}

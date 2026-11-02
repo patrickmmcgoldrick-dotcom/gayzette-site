@@ -1,4 +1,5 @@
 /* The Gayzette — editorial design system, November 2026 */
+.editorial-header nav{flex-wrap:wrap}
 .editorial-main,body>main:not(.editorial-main){padding-left:0!important;padding-right:0!important}
 .wordmark span{display:none!important}
 @media(max-width:700px){.editorial-header nav{flex-wrap:wrap!important;gap:12px 22px!important;overflow:visible!important;justify-content:center!important}.watch-cover h1{font-size:clamp(52px,17vw,76px)!important}.watch-cover h1 em{white-space:nowrap}}

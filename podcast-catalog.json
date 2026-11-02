@@ -1,0 +1,100 @@
+{
+  "verifiedOn": "2026-11-01",
+  "timezone": "America/Los_Angeles",
+  "shows": [
+    {
+      "id": "just-tap-in",
+      "name": "Just Tap In with Emilio Ortiz",
+      "url": "https://podcasts.apple.com/us/podcast/just-tap-in-with-emilio-ortiz/id1569474572",
+      "recentReleaseVerified": true
+    },
+    {
+      "id": "acid-for-squares",
+      "name": "Acid For Squares",
+      "url": "https://www.acidforsquares.com/",
+      "recentReleaseVerified": true
+    },
+    {
+      "id": "tetragrammaton",
+      "name": "Tetragrammaton with Rick Rubin",
+      "url": "https://www.tetragrammaton.com/podcasts",
+      "recentReleaseVerified": true
+    },
+    {
+      "id": "next-level-soul",
+      "name": "Next Level Soul with Alex Ferrari",
+      "url": "https://nextlevelsoul.com/podcast/",
+      "recentReleaseVerified": true
+    },
+    {
+      "id": "rupert-spira",
+      "name": "Rupert Spira",
+      "url": "https://rupertspira.com/watch-listen/",
+      "recentReleaseVerified": false
+    },
+    {
+      "id": "elizabeth-april",
+      "name": "Expand with Elizabeth April",
+      "url": "https://elizabethapril.podbean.com/",
+      "recentReleaseVerified": false,
+      "feedUrl": "https://feed.podbean.com/elizabethapril/feed.xml"
+    }
+  ],
+  "recentReleases": [
+    {
+      "showId": "next-level-soul",
+      "episodeNumber": 739,
+      "title": "Marjorie Woollacott on consciousness",
+      "publishedDate": "2026-10-31",
+      "dateBasis": "Producer episode page and official latest-episodes listing",
+      "durationMinutes": null,
+      "url": "https://nextlevelsoul.com/dr-marjorie-woollacott/",
+      "description": "Woollacott discusses how meditation changed her thinking about the brain and awareness. Her account brings a scientist's personal spiritual journey into conversation with questions about consciousness.",
+      "sourceUrls": [
+        "https://nextlevelsoul.com/dr-marjorie-woollacott/",
+        "https://nextlevelsoul.com/podcast/"
+      ]
+    },
+    {
+      "showId": "just-tap-in",
+      "episodeNumber": 346,
+      "title": "Panache Desai on the pursuit of self-improvement",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T16:11:00Z",
+      "dateBasis": "Producer-supplied Apple Podcasts episode metadata",
+      "durationMinutes": 73,
+      "url": "https://podcasts.apple.com/us/podcast/346-panache-desai-why-raising-your-vibration-might/id1569474572?i=1000798923153",
+      "description": "Desai questions whether chasing a higher spiritual state can become another form of self-rejection. Emilio Ortiz's conversation explores self-acceptance through the guest's teachings.",
+      "sourceUrls": [
+        "https://podcasts.apple.com/us/podcast/346-panache-desai-why-raising-your-vibration-might/id1569474572?i=1000798923153"
+      ]
+    },
+    {
+      "showId": "tetragrammaton",
+      "title": "Rick Rubin in conversation with Jack Kruse",
+      "publishedDate": "2026-10-28",
+      "dateBasis": "Official podcast index dated 10.28.26",
+      "durationMinutes": 126,
+      "url": "https://www.tetragrammaton.com/podcast/jack-kruse",
+      "description": "Rick Rubin sits down with Jack Kruse for an extended conversation. The official Tetragrammaton archive lists the discussion as its October 28 release.",
+      "sourceUrls": [
+        "https://www.tetragrammaton.com/podcasts",
+        "https://www.tetragrammaton.com/podcast/jack-kruse"
+      ]
+    },
+    {
+      "showId": "acid-for-squares",
+      "episodeNumber": 117,
+      "title": "Halloween Cosmic Confessional",
+      "publishedDate": "2026-10-27",
+      "publishedAt": "2026-10-27T08:00:00Z",
+      "dateBasis": "Producer-supplied Apple Podcasts episode metadata",
+      "durationMinutes": 87,
+      "url": "https://podcasts.apple.com/be/podcast/117-halloween-cosmic-confessional-true-terrifying-tales/id1763048673?i=1000798316451&l=nl",
+      "description": "Tanya Dahl and Cody Blue Snider collect twelve listener-submitted paranormal accounts for a Halloween edition, with the audience invited to choose a winner.",
+      "sourceUrls": [
+        "https://podcasts.apple.com/be/podcast/117-halloween-cosmic-confessional-true-terrifying-tales/id1763048673?i=1000798316451&l=nl"
+      ]
+    }
+  ]
+}
